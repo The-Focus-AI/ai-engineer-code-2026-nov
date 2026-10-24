@@ -140,3 +140,11 @@ A build's `explainers/<slug>/` holds `guide.md`, `glossary.json`,
 the bundled `index.html`. The design language is [`design.md`](design.md).
 `page.html` is the source; bundle it with `scripts/bundle-explainer.ts`, validate
 with `scripts/validate-explainer.ts`, then serve. See [`FRAMEWORK.md`](FRAMEWORK.md).
+
+## Atlases
+
+A build's `atlases/<slug>/` holds `atlas.json` (nodes, edges, evidence),
+`page.html` (the composed shell), and the bundled `index.html`. The fixed
+runtime is `atlases/runtime/`. Bundle with `scripts/bundle-atlas.ts`, validate
+with `scripts/validate-atlas.ts`, then serve like an explainer. The validator
+requires a verbatim quote and a real section heading for every claim.

@@ -9,8 +9,8 @@ changed since it started watching.
 
 This repository is the template. It ships the program, contracts, skills, and
 design language, and **no conference data**: `brief/`, `state/`, `talks/`,
-`recordings/inbox/`, `photos/`, `analysis/`, and the editorial artifacts are
-ignored by the “conference build data” block in `.gitignore`.
+`recordings/inbox/`, `photos/`, `analysis/`, `atlases/<slug>/`, and the editorial
+artifacts are ignored by the “conference build data” block in `.gitignore`.
 
 To make a build, fork or clone this repository and run the `new-conference` skill
 in your agent:
@@ -96,6 +96,7 @@ The Prose runtime under `scripts/serve/` is the same TypeScript: `validate-manif
 | `photos/event/<date>/` | Photos from breaks, receptions and the hallway — event-level, not a talk. |
 | `brief/changes.md` | Append-only changelog: added, retitled, retimed, room-changed, speaker-changed, cancelled, venue-changed, archived. |
 | `state/world-model/conference-schedule/` | The canonical structured truth (the source of record). |
+| `atlases/<slug>/` | An argument atlas: an evidence-backed graph of themes, claims, talks, and disagreements. `atlas.json` is the graph, `page.html` the composed shell, `index.html` the bundle. |
 | `runs/` | One directory per wake: compiled topology, source snapshot, `vm.log.md`, receipts. |
 
 An agent-facing index of every path — including the join keys between talks,
@@ -237,7 +238,7 @@ recordings/              inbox: one folder per recording (audio, transcript, met
 talks/                   rendered talks, one folder each
 brief/                   rendered human artifacts
 state/                   durable world-model + receipt ledger
-analysis/  editorial/  notes/  explainers/<slug>/  magazine/<issue>/
+analysis/  editorial/  notes/  explainers/<slug>/  atlases/<slug>/  magazine/<issue>/
 dist/  deps/  runs/      generated — gitignored in both modes
 ```
 

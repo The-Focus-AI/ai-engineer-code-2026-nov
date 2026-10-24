@@ -95,6 +95,13 @@ suggested questions, and a live ask box backed by the agent. The model composes
 fixed runtime and data; `validate-explainer.ts` gates it; `explainer-server.ts`
 answers follow-ups on loopback. One runtime, many designs.
 
+An **argument atlas** maps a theme across talks: nodes for themes, clusters,
+claims, talks, and questions; edges for supports, instantiates, contests,
+refines, and asks. Every claim carries a verbatim quote and timestamp. The model
+composes `page.html` inside [`design.md`](design.md); `bundle-atlas.ts` injects
+the graph and links the fixed runtime; `validate-atlas.ts` checks the evidence
+and the graph.
+
 A **social draft** is the same hook at a different length: a thread, a LinkedIn
 post, a newsletter section. Drafts, never auto-posted; each carries its citation.
 

@@ -47,5 +47,7 @@ node_modules/
 !/editorial/hooks/.gitkeep
 /explainers/*/
 !/explainers/runtime/
+/atlases/*/
+!/atlases/runtime/
 /magazine/*/
 # END conference build data

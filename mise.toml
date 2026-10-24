@@ -56,3 +56,15 @@ run = "bun scripts/validate-explainer.ts ${INDEX:-explainers/example/index.html}
 [tasks.explainer-serve]
 description = "Serve an explainer with live follow-up questions (loopback)"
 run = "bun scripts/explainer-server.ts --root . --dir ${DIR:-explainers/example} --agent \"${AGENT:-claude -p}\""
+
+[tasks.atlas-bundle]
+description = "Bundle a composed atlas page (page.html) with its graph and runtime"
+run = "bun scripts/bundle-atlas.ts ${PAGE:-atlases/example/page.html}"
+
+[tasks.atlas-validate]
+description = "Validate an atlas graph, evidence, and citations"
+run = "bun scripts/validate-atlas.ts ${INDEX:-atlases/example/index.html}"
+
+[tasks.atlas-serve]
+description = "Serve an atlas with live follow-up questions (loopback)"
+run = "bun scripts/explainer-server.ts --root . --dir ${DIR:-atlases/example} --agent \"${AGENT:-claude -p}\""
