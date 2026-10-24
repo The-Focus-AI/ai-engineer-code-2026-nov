@@ -1,0 +1,84 @@
+---
+name: identify-recording-talk
+kind: function
+version: 0.2.0
+---
+
+# Identify Recording Talk
+
+> The judgement call, with the receipts attached. Time narrows the field to a
+> handful of parallel sessions; only the transcript can pick one — and only by
+> quoting something that actually identifies the talk.
+
+### Description
+
+For each new recording, finds the sessions whose slot it could plausibly be,
+reads the transcript for identifying evidence, and returns either a decided match
+with quoted evidence, or a ranked shortlist marked `needs-review`.
+
+### Parameters
+
+- `recordings`: the new recording entries (folder, title, `recorded_at`,
+  `duration_seconds`, path to `transcript.txt`).
+- `program`: the schedule truth — days, sessions, rooms, formats, titles, abstracts.
+- `speakers`: the roster, so an uttered name or company can be resolved.
+
+### Returns
+
+- `matches`: one entry per input recording:
+  `{ recording_id, session_id, confidence, method, evidence, candidates, status }`
+  where `status` is `matched` or `needs-review`.
+- `matched`: the subset with `status: matched`, ready for rendering.
+- `needs_review`: the subset that could not be decided, with why.
+
+### Invariants
+
+- **Evidence or it did not happen.** A `matched` entry quotes at least one verbatim
+  fragment from the transcript that names the talk, the speaker, or the speaker's
+  company. Time and duration alone can never produce `matched`.
+- Quotes are verbatim and short — a phrase or a sentence, never a paragraph, never
+  paraphrased, and never assembled from separate parts of the transcript.
+- Every candidate comes from `program`; no session is invented, and no candidate
+  is dropped for being inconvenient.
+- Two recordings may not both be `matched` to the same session. The longer
+  recording wins; the other becomes `needs-review` with the conflict named.
+- A recording that matches nothing in the program (housekeeping, hallway, side
+  event) returns `needs-review` with an empty `candidates` list and a stated
+  reason — it is genuinely not a talk.
+- The folder `title` (from the m4a `©nam`) is evidence to be verified, not ground
+  truth: look for the name it implies in the transcript before using it.
+
+### Errors
+
+- `program-unavailable`: `program` is empty or missing sessions; identification
+  cannot proceed and must not fall back to guessing.
+
+### Strategies
+
+- when the recording starts 0–5 minutes before a slot: that is the normal pattern;
+  people press record as the talk begins. Do not penalise it.
+- when several sessions share the slot: five-way parallels are the norm at this
+  conference. Duration helps most (18-minute talks vs 60–120-minute workshops).
+- when the emcee speaks first: "please welcome …" is the strongest evidence in the
+  recording — quote it verbatim, including the company.
+- when the speaker self-identifies: "I'm X, I run Y at Z" is nearly as strong.
+- when the folder title is a company ("Air Canada") and the transcript mentions
+  that company: that is corroboration, provided the company appears in the talk
+  itself, not just in a sponsor slide.
+- when two candidates both carry evidence: record both, quote both, and set
+  `needs-review`. Never break a tie by score alone.
+- when the recording is only a minute or two: closing remarks and housekeeping are
+  legitimate non-talks; prefer `needs-review` over forcing a match.
+- when the transcript is mostly questions: match on the questioners' references to
+  the talk topic rather than an introduction that was missed.
+
+### Shape
+
+- `self`: narrow by time and duration, read transcripts, weigh quoted evidence,
+  resolve names against the roster, and record the decision plus its alternatives.
+- `prohibited`: inventing quotes or candidates, editing the transcript, matching
+  across days without evidence, or treating a folder title as proof on its own.
+
+### Runtime
+
+- `persist`: true

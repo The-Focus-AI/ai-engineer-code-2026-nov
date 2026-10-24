@@ -1,0 +1,58 @@
+[tools]
+bun = "latest"
+
+# The Bun side is deliberately dumb: move bytes, write down what they are.
+# Identification, matching, and filing are the Prose program's job
+# (src/recording-intake.prose.md).
+
+[tasks.sync]
+description = "Move new Voice Memos recordings into recordings/inbox/ (needs Full Disk Access)"
+run = "bun scripts/export-voice-memos.ts"
+
+[tasks.export]
+description = "Same as sync — one folder per recording, with audio, transcript, meta, attachments"
+run = "bun scripts/export-voice-memos.ts"
+
+[tasks.dry-run]
+description = "Show which recordings would be moved, with their titles and timestamps"
+run = "bun scripts/export-voice-memos.ts --dry-run"
+
+# Photos: inventory the drop, then let the Prose render file them by talk.
+[tasks.photos]
+description = "Inventory photos/ (UTC filename → conference timezone, hashes, bursts)"
+run = "bun scripts/export-photos.ts"
+
+[tasks.photos-dry]
+description = "Show the photo inventory without writing photos/manifest.json"
+run = "bun scripts/export-photos.ts --dry-run"
+
+# Runtime
+[tasks.validate]
+description = "Validate dist/manifest.active.json and print the trigger plan"
+run = "bun scripts/serve/validate-manifest.ts"
+
+[tasks.typecheck]
+description = "Typecheck the TypeScript toolchain"
+run = "bun x tsc --noEmit"
+
+# Skills: skills-lock.json is the source of truth. experimental_install restores
+# every locked skill into .agents/skills/ (and the agent folders it manages).
+[tasks.skills]
+description = "Restore the skills in skills-lock.json into .agents/skills/"
+run = "npx --yes --cache .npm-cache skills experimental_install"
+
+[tasks.issue]
+description = "Render a magazine issue.md to print-first issue.html"
+run = "bun scripts/render-issue.ts ${ISSUE:-magazine/issue-01/issue.md}"
+
+[tasks.explainer-bundle]
+description = "Bundle a composed explainer page (page.html) with data and runtime"
+run = "bun scripts/bundle-explainer.ts ${PAGE:-explainers/example/page.html}"
+
+[tasks.explainer-validate]
+description = "Validate a bundled explainer page against the design contract"
+run = "bun scripts/validate-explainer.ts ${INDEX:-explainers/example/index.html}"
+
+[tasks.explainer-serve]
+description = "Serve an explainer with live follow-up questions (loopback)"
+run = "bun scripts/explainer-server.ts --root . --dir ${DIR:-explainers/example} --agent \"${AGENT:-claude -p}\""

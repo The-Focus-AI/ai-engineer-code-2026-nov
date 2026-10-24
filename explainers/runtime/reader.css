@@ -1,0 +1,67 @@
+/* Fixed reader-guide defaults. These are fallbacks: the page's own <style>
+   comes after this file and wins. Style the rg-* hooks; do not rewrite them. */
+
+#reader-panel {
+  position: sticky;
+  top: 1.5rem;
+  align-self: start;
+  background: var(--panel, #f2ecdf);
+  border: 1px solid var(--rule, #d6cbb8);
+  border-radius: 6px;
+  max-height: calc(100vh - 3rem);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: var(--ink, #191714);
+}
+
+.rg-tabs { display: flex; border-bottom: 1px solid var(--rule, #d6cbb8); }
+.rg-tab {
+  flex: 1; font: 600 .76rem/1 ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .08em; text-transform: uppercase; padding: .85rem .5rem;
+  background: none; border: 0; cursor: pointer; color: var(--muted, #6d6458);
+}
+.rg-tab[aria-selected="true"] { color: var(--ink, #191714); box-shadow: inset 0 -2px 0 var(--accent, #8a2f1d); }
+.rg-pane { padding: .9rem; overflow: auto; }
+.rg-pane[hidden] { display: none; }
+.rg-search, .rg-input {
+  width: 100%; font: inherit; font-size: .9rem; padding: .5rem .55rem;
+  border: 1px solid var(--rule, #d6cbb8); background: #fffdf8; border-radius: 4px; color: inherit;
+}
+.rg-terms { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .7rem; }
+.rg-term {
+  font: .8rem/1.2 ui-sans-serif, system-ui, sans-serif; padding: .3rem .5rem;
+  border: 1px solid var(--rule, #d6cbb8); background: #fffdf8; border-radius: 999px;
+  cursor: pointer; color: inherit;
+}
+.rg-term:hover { border-color: var(--accent, #8a2f1d); }
+.rg-detail { margin-top: .9rem; font-size: .92rem; line-height: 1.5; }
+.rg-detail h3 { margin: .1rem 0 .35rem; font-size: 1.05rem; }
+.rg-detail .rg-src { font-size: .76rem; color: var(--muted, #6d6458); }
+.rg-detail .rg-see { font-size: .82rem; }
+.rg-hint, .rg-section {
+  font: 600 .68rem/1.4 ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--muted, #6d6458);
+}
+.rg-questions { display: flex; flex-direction: column; gap: .35rem; margin: .6rem 0 .8rem; }
+.rg-question {
+  text-align: left; font: inherit; font-size: .88rem; padding: .45rem .55rem;
+  border: 1px solid var(--rule, #d6cbb8); background: #fffdf8; border-radius: 4px;
+  cursor: pointer; color: inherit;
+}
+.rg-question:hover { border-color: var(--accent, #8a2f1d); }
+.rg-ask {
+  margin-top: .45rem; font: 600 .8rem/1 ui-sans-serif, system-ui, sans-serif;
+  padding: .65rem .9rem; background: var(--ink, #191714); color: var(--paper, #fbf8f1);
+  border: 0; border-radius: 4px; cursor: pointer;
+}
+.rg-answer { margin-top: .8rem; font-size: .9rem; line-height: 1.5; white-space: pre-wrap; }
+.rg-answer .rg-cite { display: block; margin-top: .4rem; font-size: .74rem; color: var(--muted, #6d6458); }
+
+@media (max-width: 980px) {
+  #reader-panel { position: relative; top: 0; max-height: none; }
+}
+@media print {
+  #reader-panel { display: none !important; }
+}
