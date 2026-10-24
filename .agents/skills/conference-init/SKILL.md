@@ -26,8 +26,8 @@ an existing build.
 
 - **Target directory** — default `../<conference-slug>` (a sibling of the master,
   not inside it), e.g. `../ai-engineer-2026-oct`.
-- **Slug** — the event, year, and month: `ai-engineer-2026-oct`, not
-  `nyc-2026`.
+- **Slug** — the event, year, and month: `ai-engineer-2026-oct`, not just a
+  city and a year.
 - **Conference URL** — the schedule page. Never invent it.
 - **Repository** — default `<owner>/<conference-slug>`, private unless the user
   says public, e.g. `The-Focus-AI/ai-engineer-2026-oct`.
