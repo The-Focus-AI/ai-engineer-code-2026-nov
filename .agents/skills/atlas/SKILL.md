@@ -127,3 +127,15 @@ atlases/<slug>/
 ```
 
 The fixed runtime lives at `atlases/runtime/`.
+
+## Through-line mode (target)
+
+The node graph is a **map prototype**. A through-line atlas is a scrollytelling
+story built on top of talk stories: the left is **the stack** (model → harness →
+verification → evidence → organization), talks are chips on the layer they
+address, and each chapter lifts a layer and shows the evidence. See
+[`TALKS.md`](../../../TALKS.md).
+
+Do not build a through-line atlas until at least three talks have
+`talks/<slug>/experience/` pages. The graph can stay as a map mode; it is not
+the through-line.
