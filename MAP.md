@@ -7,7 +7,7 @@ product story is [README.md](README.md); this is where the bytes actually sit.
 > `.agents/skills/`, `fixtures/`, `design.md`, and the READMEs. It has no
 > conference data. `brief/`, `state/`, `talks/`, `recordings/inbox/`, `photos/`,
 > `analysis/`, `notes/inbox/`, `notes/research/`, `editorial/backlog.md`,
-> `editorial/hooks/`, `explainers/<slug>/`, and `magazine/<issue>/` are ignored
+> `editorial/hooks/`, `explainers/<slug>/`, `atlases/<slug>/`, and `magazine/<issue>/` are ignored
 > by the “conference build data” block in `.gitignore`. A build deletes that
 > block; see `.agents/skills/new-conference/SKILL.md`.
 
