@@ -8,15 +8,39 @@ product story is [README.md](README.md); this is where the bytes actually sit.
 > conference data. `brief/`, `state/`, `talks/`, `recordings/inbox/`, `photos/`,
 > `analysis/`, `notes/inbox/`, `notes/research/`, `editorial/backlog.md`,
 > `editorial/hooks/`, `explainers/<slug>/`, `atlases/<slug>/`, and `magazine/<issue>/` are ignored
-> by the “conference build data” block in `.gitignore`. A build deletes that
+> by the "conference build data" block in `.gitignore`. A build deletes that
 > block; see `.agents/skills/conference-init/SKILL.md`.
 
-## Two sources, two places
+## How data flows
 
-| Source | Lands in |
-| --- | --- |
-| **Declared** — the conference page, fetched and extracted by `prose serve` | `state/world-model/conference-schedule/published/` |
-| **Observed** — Voice Memos, moved by `mise run sync`, identified by `recording-intake` | `recordings/inbox/` → `talks/<date>-<slug>/` |
+`src/` is the source of truth for the machinery. `dist/` is compiled and
+disposable. Each row is one node under `src/`: what it reads, the truth it keeps,
+and the files a reader ends up holding.
+
+| Node | Kind | Reads | Maintains | Writes |
+| --- | --- | --- | --- | --- |
+| `schedule-check` | gateway | a cron tick or a manual kick | `check_requests` | — |
+| `conference-schedule` | responsibility | `check_requests` | `event`, `venue`, `program`, `speakers`, `change_log`, `coverage` | `state/world-model/conference-schedule/` |
+| `schedule-brief` | responsibility | the schedule facets | `brief` | `brief/schedule.md`, `brief/changes.md` |
+| `recording-inbox-watch` | gateway | the drop folder, every 15 minutes | `inbox_scans` | — |
+| `recording-intake` | responsibility | `inbox_scans`, `program`, `speakers` | `recordings`, `matches`, `talks`, `attachments` | `talks/<date>-<slug>/transcript.md` |
+| `talk-photos` | responsibility | `program`, `recordings`, `event` | `photos`, `placements`, `event_photos` | `talks/*/photos/`, `photos/event/` |
+| `talk-links` | responsibility | `program`, `speakers`, `talks`, `event` | `people`, `companies`, `resources`, `freshness`, `coverage` | `talks/*/links.md` |
+| `talk-insights` | responsibility | `talks` | `theses`, `claims`, `coverage` | — |
+| `conference-themes` | responsibility | `claims`, `theses`, `coverage`, `talks` | `themes`, `singletons`, `contested`, `corpus` | `analysis/themes.md` |
+| `capture-note` | function | a kind, the text, a time, an optional talk | — | `notes/inbox/<stamp>-<slug>.md` |
+| `append-backlog` | function | a list, an item, a source | — | `editorial/backlog.md` |
+
+Every node also writes its world-model to `state/world-model/<node>/published/`
+and a receipt to `state/world-model/<node>/receipts.jsonl`. A node renders only
+when its contract or an input fingerprint moved, so a row with no new input
+costs nothing. `runs/<id>/` holds the log for one wake.
+
+`/conference-themes`, `/conference-hooks`, `/conference-explainer`,
+`/conference-atlas`, and `/conference-magazine` are skills. They compose
+artifacts. A contract consumes an artifact through a declared input, and
+publishes its own structured truth for anything downstream. See
+[`FRAMEWORK.md`](FRAMEWORK.md#where-skills-and-contracts-meet).
 
 ## Schedule truth
 

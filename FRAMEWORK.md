@@ -17,38 +17,61 @@ capture ──► atoms ──► themes ──► hooks ──► artifacts ─
 
 | Stage | What it is | Where it lives | How it runs |
 | --- | --- | --- | --- |
-| **capture** | notes, questions, links, photos, recordings taken during the event | `notes/inbox/`, `photos/`, `recordings/inbox/` | `/conference-capture`, `mise run sync`, `mise run photos` |
-| **atoms** | one claim per line: quote, speaker, talk, timestamp, topic | derived on demand from `talks/` | `/talk-ask`, `/conference-themes` |
-| **themes** | claims several talks make in different words | `analysis/themes.md` (report) | `/conference-themes` |
+| **capture** | notes, questions, links, photos, recordings taken during the event | `notes/inbox/`, `photos/`, `recordings/inbox/` | `capture-note`, `/conference-capture`, `mise run sync`, `mise run photos` |
+| **atoms** | one claim per line: quote, speaker, talk, timestamp, topic | `state/world-model/talk-insights/` | `talk-insights` |
+| **themes** | claims several talks make in different words | `analysis/themes.md` (report) | `conference-themes`, `/conference-themes` |
 | **hooks** | the editorial shortlist: novel, contrarian, data, practical, tutorial | `editorial/hooks/` + `editorial/backlog.md` | `/conference-hooks` |
 | **artifacts** | a magazine issue, a newsletter, a thread, a talk outline | `magazine/<issue>/` | `/conference-magazine` |
-| **backlog** | what to review and what to digest after the event | `editorial/backlog.md` | `/conference-backlog` |
+| **backlog** | what to review and what to digest after the event | `editorial/backlog.md` | `append-backlog`, `/conference-backlog` |
 
 Skills are the interaction layer. When a stage needs to stay fresh on its own,
 wake on its own inputs, or be subscribed to, it graduates to a
-`kind: responsibility` under `src/` — the way `talk-links` graduated from
-research-only to a node with a settling cadence.
+`kind: responsibility` under `src/`, the way `talk-links` graduated from
+research-only to a node with a settling cadence. Atoms and themes have made that
+move. Hooks have not.
+
+## Where skills and contracts meet
+
+A skill composes an artifact, and a contract can consume it. That works in both
+directions:
+
+- **skill → prose.** The artifact enters as a declared input: a `### Parameters`
+  value for a function, or a `### Requires` facet satisfied by the node that
+  observed it. Something has to fingerprint it, which is why an artifact used as
+  input carries a structured sidecar (`atlas.json`, `glossary.json`,
+  `questions.json`, frontmatter) or gets hashed by an observing node the way
+  `recording-inbox-watch` hashes the drop folder.
+- **prose → skill.** A responsibility publishes structured truth; the skill reads
+  it and selects from it. `/conference-hooks` reads `analysis/themes.md` (or the
+  `themes` facet once it subscribes), and `/conference-themes` reads the claim
+  atoms.
+
+What does not work is free-form prose treated as a subscribed truth. A rendered
+`page.html` or a written `themes.md` is a projection. A contract may read it, but
+the contract publishes its own structured world-model for anything downstream.
+Otherwise a re-render that changed no fact would wake every subscriber.
 
 ## Capture
 
 A note is a file, not a chat message:
 
 ```
-notes/inbox/2026-10-14T1132-fable-war-room.md
+notes/inbox/2026-10-14T1132-demo-caveat.md
 ---
 captured_at: 2026-10-14T11:32:00-04:00
-kind: observation | question | link | quote | todo
+kind: observation
 session_id: null            # set when the time or title matches a session
-talk: 2026-10-13-inside-the-fable-war-room
-tags: [verification, geico]
+talk: 2026-10-13-the-demo
+tags: []
 ---
-The war-room demo ran on the vendor's laptops, not the venue network.
+The demo ran on the vendor's laptops, not the venue network.
 ```
 
-- `/conference-capture` classifies, timestamps in the event timezone, links the
-  session when it can, and writes the file. It never invents a link.
+- `capture-note` classifies, timestamps in the event timezone, links the session
+  when it can, and writes the file. It never invents a link. `/conference-capture`
+  is the same work, run interactively.
 - `kind: todo` also lands in `editorial/backlog.md`, under **Review later** or
-  **Digest later**.
+  **Digest later**, through `append-backlog`.
 - Photos and recordings already land through the movers; a note can reference
   them by path.
 
@@ -59,7 +82,7 @@ A question you ask during the event is itself material. `/talk-ask` and
 you say keep it: the question, the answer, the talks and timestamps it used. That is
 what `/conference-hooks` mines when the raw transcript is too much.
 
-## Hooks — the bullet points
+## Hooks carry their evidence
 
 A hook is one sentence you would say to a colleague who was not there. Every hook
 carries its evidence; a hook without a quote, a talk, and a timestamp is not a
@@ -68,13 +91,13 @@ hook, it is an opinion.
 ```
 editorial/hooks/2026-10-23-verification.md
 ## Hook
-The conference quietly agreed that verification, not capability, is the bottleneck.
+The conference agreed that verification, not capability, is the bottleneck.
 - kind: novel
-- evidence: "Writing code is the fastest part and the slowest part is verifying it." — Who verifies the software factory?, 00:17:33
-- also: Two Sigma, Greptile, Basis, Anthropic
+- evidence: "<a verbatim quote, 30 words or fewer>" — <talk title>, 00:17:33
+- also: <other talks that make the same argument>
 - angle: a 1,200-word essay; the talks as the evidence
-- assets: talks/2026-10-14-who-verifies-the-software-factory/photos/, links.md
-- status: selected
+- assets: talks/<date>-<slug>/photos/, links.md
+- status: draft
 ```
 
 Hook kinds: `novel`, `contrarian`, `data`, `practical`, `tutorial`, `quote`.
@@ -118,11 +141,11 @@ One file, three lists, every item sourced:
 
 ```md
 ## Ideas
-- [ ] Verification is the bottleneck — hooks/2026-10-23-verification.md
+- [ ] The verification bottleneck — editorial/hooks/2026-10-23-verification.md
 ## Review later
-- [ ] Re-watch the Basis demo — the behavior-spec example, not the slides
+- [ ] Re-watch the demo — the behavior spec, not the slides
 ## Digest later
-- [ ] Read the HarnessTax paper before writing the harness piece
+- [ ] Read the paper before writing the harness piece
 ```
 
 `/conference-backlog` adds, triages, and closes items. Statuses: `open`, `doing`,
@@ -153,6 +176,10 @@ One file, three lists, every item sourced:
 | `/conference-backlog` triage | built |
 | `/conference-magazine` — opens, grows, freezes; `render-issue.ts` re-renders | built |
 | `/conference-explainer` — LLM composes against `design.md`; bundle, validate, live ask | built |
+| atoms as a responsibility — [`src/talk-insights.prose.md`](src/talk-insights.prose.md) | built |
+| capture as a function — [`src/capture-note.prose.md`](src/capture-note.prose.md) | built |
+| backlog appends as a function — [`src/append-backlog.prose.md`](src/append-backlog.prose.md) | built |
+| themes as a node over the atoms — [`src/conference-themes.prose.md`](src/conference-themes.prose.md) | built |
+| hooks as a node over the atoms | next |
 | `/social` channel drafts | next |
-| atoms as a responsibility (`talk-insights`) | next |
 | template hardening: config file, fixture conference, tests | later |

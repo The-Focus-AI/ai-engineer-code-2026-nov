@@ -1,18 +1,78 @@
 # Conference Reporter
 
-One build directory, one repo, one conference. This repository is an OpenProse
-program that keeps a single conference's schedule current: every session, speaker, room, and start/end
-time, plus the venue you'll actually walk into — and an append-only record of what
-changed since it started watching.
+One directory, one repo, one conference. This repo is an OpenProse program that
+keeps one conference's schedule current: every session, speaker, room, and start
+time, plus an append-only record of what changed. It also turns the recordings
+you make into talks you can read, cite, and write from.
 
-## Template or conference build
+The schedule comes from the conference's own page. The talks come from Voice
+Memos. Everything else is derived from those two, and every claim keeps its
+citation.
 
-This repository is the template. It ships the program, contracts, skills, and
-design language, and **no conference data**: `brief/`, `state/`, `talks/`,
-`recordings/inbox/`, `photos/`, `analysis/`, `atlases/<slug>/`, and the editorial
-artifacts are ignored by the “conference build data” block in `.gitignore`.
+This directory is the **template**. It ships the program, contracts, skills, and
+design language, and no conference data. `brief/`, `state/`, `talks/`,
+`recordings/inbox/`, `photos/`, `analysis/`, `notes/inbox/`, `editorial/`,
+`explainers/<slug>/`, `atlases/<slug>/`, and `magazine/<issue>/` are ignored by
+the "conference build data" block in `.gitignore`. A build deletes that block.
 
-To make a build, run the `conference-init` skill **from this master clone**:
+## How data flows
+
+```mermaid
+flowchart TB
+  subgraph sources["Sources"]
+    page["Conference page"]
+    memos["Voice Memos"]
+    drop["Photo drop"]
+    you["Your notes"]
+  end
+  subgraph truth["state/world-model, the durable truth"]
+    sched["schedule truth"]
+    intake["intake truth"]
+    media["dossiers and photos"]
+    atoms["claim atoms"]
+  end
+  subgraph files["Rendered files"]
+    brief["brief/"]
+    talks["talks/"]
+    themes["analysis/themes.md"]
+  end
+  subgraph out["Editorial and artifacts"]
+    hooks["editorial/hooks/"]
+    story["story.md and experience/"]
+    atlas["atlases/"]
+    mag["magazine/"]
+  end
+
+  page --> sched --> brief
+  memos --> intake --> talks
+  drop --> media
+  talks --> media
+  talks --> atoms --> themes
+  you --> hooks
+  themes --> hooks --> mag
+  talks --> story --> atlas
+  story --> mag
+```
+
+Four sources feed the program. The conference page is **declared**: it is what
+the event says about itself. Voice Memos and the photo drop are **observed**:
+they are what actually happened in the room. Your notes are **captured** by hand.
+The claim atoms and the themes are **derived** from the talks.
+
+Each node keeps a world-model under `state/world-model/<node>/`. A node renders
+only when its contract or an input fingerprint moved. Every render writes a
+receipt, so `runs/` is the evidence of what woke, what it cost, and what it
+committed.
+
+Every node in that picture is listed in [`MAP.md`](MAP.md), with its inputs and
+the files it writes.
+
+## Start a build
+
+Run the `conference-init` skill **from this master clone**. It clones the
+template into a new sibling directory, removes the ignore block there, sets
+`CONFERENCE_URL`, creates a separate git repo for that directory, and renders the
+schedule.
 
 ```text
 Run the conference-init skill. This is the master template.
@@ -20,248 +80,160 @@ Create the build at ../<conference-slug>, for example
 ../ai-engineer-2026-oct, for <URL>.
 ```
 
-It clones the template into a **new sibling directory**, removes the block there,
-sets `CONFERENCE_URL`, creates a separate git repository for that directory, and
-renders the schedule. One directory = one repo = one conference. A build is not
-a branch.
-
-> **`prose ...` commands run inside your coding agent, not in a shell.** The
-> agent session *is* the OpenProse runtime: `prose serve` loads the compiled
-> intent, registers the cron and HTTP triggers, and runs the reconciler; the Bun
-> adapters under `scripts/serve/` are what it calls for the deterministic parts.
-> There is no `prose` binary on `PATH`, and there is no daemon — the schedules
-> live in the session, so serve runs only while that session stays open.
-
-**From the master** — in your coding agent, run `conference-init`. It clones to a
-new directory, performs the setup below, removes the conference fence, and builds
-the schedule. The steps are here if you want to do them by hand in that new
-directory.
-
-**In the new build directory** — set up:
+The manual steps, if you would rather do them yourself in the new directory:
 
 ```bash
 cp .env.example .env          # set CONFERENCE_URL to the conference page
+mise install
 bun install
 ```
 
-**In your coding agent** (Claude Code, Codex, OpenCode, Amp, DSH, …):
+> **`prose ...` commands run inside your coding agent, not in a shell.** The
+> agent session is the OpenProse runtime. There is no `prose` binary on `PATH`
+> and no daemon, so serve runs only while that session stays open.
+
+## Run the pipeline
+
+In the build directory, from your coding agent:
 
 ```text
-prose compile                 # wire the DAG, compile canonicalizers + validators
+prose compile                 # wire the DAG, compile canonicalizers and validators
 ```
 
-Then promote the compile — the agent can run this, it is a plain file copy:
+Then promote the compile. The agent can do this, it is a file copy:
 
 ```bash
 cp dist/manifest.next.json dist/manifest.active.json
 ```
 
 ```text
-prose serve                   # register triggers; six-hourly ticks + the hourly live window
+prose serve                   # register the triggers and keep the session open
 ```
 
-Or run one wake by hand — also an agent command, and the manual-kick path:
+To run one wake by hand, skip serve and name the node:
 
 ```text
 prose run src/conference-schedule.prose.md
 ```
 
-If the session ends, serve stops with it. Start it again the same way: validate
-the active manifest, register the triggers, keep the session open.
+If the session ends, serve stops with it. Start it again the same way.
+
+## Get the recordings in
+
+The Bun side only moves bytes. `mise run sync` copies each Voice Memos recording
+inside the conference's date window, padded one day either side, into
+`recordings/inbox/<date>_<time>_<label>/` with its audio, transcript, and
+`meta.json`. Override the window with `--since` and `--until`, or with
+`RECORDINGS_SINCE` and `RECORDINGS_UNTIL`. `--all` exports the whole library. It
+needs Full Disk Access.
+
+`mise run photos` does the same for the photo drop: it writes
+`photos/manifest.json` with UTC capture times and file hashes, then `talk-photos`
+files each photo to a talk.
+
+Everything after that is Prose. `recording-intake` decides which session a
+recording captured, quotes its evidence, and writes the transcript. See
+[recordings/README.md](recordings/README.md).
+
+## What you get
+
+| Path | What it is |
+| --- | --- |
+| `brief/schedule.md` | The readable brief: masthead, venue and logistics, then the sessions day by day. |
+| `brief/changes.md` | Append-only changelog: added, retitled, retimed, moved room, cancelled, archived. |
+| `talks/<date>-<slug>/transcript.md` | The cleaned transcript. Evidence, never edited. |
+| `talks/<date>-<slug>/links.md` | The dossier: speakers, companies, verified posts, papers, repos, and videos. |
+| `talks/<date>-<slug>/photos/` | Photos filed to the talk by capture time and recording window. |
+| `talks/<date>-<slug>/story.md` | The reader's cut: chapters, key points, pull quotes, visual cues. |
+| `talks/<date>-<slug>/experience/` | The talk page: visual rail on the left, story on the right. |
+| `analysis/themes.md` | What the talks agree and disagree on, with quotes and timestamps. |
+| `editorial/` | Hooks and the backlog: what to write, review, or digest. |
+| `explainers/<slug>/`, `atlases/<slug>/`, `magazine/<issue>/` | Reader guides, argument maps, and printable issues. |
+| `state/world-model/<node>/` | The structured truth each node maintains. |
+| `runs/` | One directory per wake: compiled topology, `vm.log.md`, receipts. |
+
+`runs/`, `dist/`, and `deps/` are generated and gitignored in both modes. In a
+build, `state/` is committed on purpose: `git diff` between tracking runs is the
+audit trail of what the conference changed.
+
+## Check your work
+
+```bash
+mise run contracts             # lint every contract under src/
+mise run validate              # compiled intent and trigger plan
+mise run typecheck             # tsc --noEmit
+```
+
+```text
+prose test src/test-extract-conference-program.prose.md
+```
+
+The test is offline. It extracts `fixtures/two-day-schedule.md` and asserts the
+day counts, the offset-qualified times, the room mapping, the speaker links, and
+the absence of invented abstracts.
 
 ## Toolchain
 
 Bun, pinned by mise, with TypeScript everywhere. There is no Python in the
 toolchain.
 
-```bash
-mise install                  # bun from mise.toml
-bun install                   # exifr, typescript, bun-types
-mise run validate             # compiled intent + trigger plan
-mise run sync                 # Voice Memos → recordings/inbox (date-windowed)
-mise run photos               # photos/ → photos/manifest.json
-mise run typecheck            # tsc --noEmit
-```
+`scripts/serve/` is the run phase: `validate-manifest.ts`, `scan-inbox.ts`,
+`tick-inbox.ts`, and `http-adapter.ts`, with shared shapes in `types.ts`.
+Canonicalizers and validators under `dist/` are generated JavaScript, not source.
+`deps/` holds the pinned OpenProse standard library, which `prose.lock` names.
 
-The Prose runtime under `scripts/serve/` is the same TypeScript: `validate-manifest.ts`,
-`scan-inbox.ts`, `tick-inbox.ts`, `http-adapter.ts`, with shared shapes in
-`types.ts`. Compiled canonicalizers and validators under `dist/` stay JavaScript
-— they are generated OpenProse artifacts, not source.
+## Staying current after the event
 
-## What it produces
+Conference material keeps appearing after the session ends. The official
+recording goes up days later, the speaker posts a recap, the slides land, a paper
+gets an arXiv id. Dossiers therefore follow the event's lifecycle rather than a
+clock.
 
-| Path | What it is |
-| --- | --- |
-| `brief/schedule.md` | The readable brief: masthead, venue and logistics, day-by-day sessions with times, rooms, speakers, and abstracts; coverage line. |
-| `talks/<date>-<slug>/links.md` | The dossier: speakers with verified profiles, the company, and up to six verified blog posts / papers / repos / videos tied to the talk. |
-| `talks/<date>-<slug>/photos/` | Photos taken during the talk, filed by capture time (UTC filename → event timezone) and matched to the talk's recording window. |
-| `talks/<date>-<slug>/story.md` | The reader's cut of the talk: chapters, key points, pull quotes, visual cues. Derived and cited; the transcript stays the evidence. |
-| `talks/<date>-<slug>/experience/` | The talk page: sticky visual rail, story right, collapsible. |
-| `photos/event/<date>/` | Photos from breaks, receptions and the hallway — event-level, not a talk. |
-| `brief/changes.md` | Append-only changelog: added, retitled, retimed, room-changed, speaker-changed, cancelled, venue-changed, archived. |
-| `state/world-model/conference-schedule/` | The canonical structured truth (the source of record). |
-| `atlases/<slug>/` | An argument atlas: an evidence-backed graph of themes, claims, talks, and disagreements. `atlas.json` is the graph, `page.html` the composed shell, `index.html` the bundle. |
-| `runs/` | One directory per wake: compiled topology, source snapshot, `vm.log.md`, receipts. |
-
-An agent-facing index of every path — including the join keys between talks,
-recordings and sessions, and what a fresh clone is missing — is [`MAP.md`](MAP.md).
-
-## The DAG
-
-Forme wires these by matching `### Requires` → `### Maintains`. Nothing is
-internally autowired; there are no `system` kinds, only subscriptions and calls.
-
-```
-schedule-check  (gateway, external-driven — cron tick + manual kick)
-      │  maintains: check_requests
-      ▼
-conference-schedule  (responsibility — the headline)
-      │  maintains facets: event · venue · program · speakers · change_log · coverage
-      │  calls: fetch-conference-pages → extract-conference-program
-      │         → enrich-speaker-profiles → update-conference-truth
-      ▼
-schedule-brief  (responsibility — the human projection)
-         maintains: brief (paths, section index, included sessions, headline changes)
-         writes: brief/schedule.md, brief/changes.md
-
-recording-inbox-watch  (gateway, every 15 min + manual kick)
-      │  maintains: inbox_scans (folder fingerprint)
-      ▼
-recording-intake  (responsibility — recordings → talks)
-      │  maintains facets: recordings · matches · talks · attachments
-      │  requires: inbox_scans · program · speakers
-      │  calls: scan-recording-inbox → identify-recording-talk
-      │         → clean-talk-transcript → place-talk-attachments
-      ▼
-talks/<date>-<slug>/transcript.md + attachments/
-
-talks/<date>-<slug>/links.md   (talk-links: people · companies · resources)
-talks/<date>-<slug>/photos/    (talk-photos: filed by recording window)
-```
-
-The two pipelines are separate on purpose: the schedule is *declared*, the
-recordings are *observed*, and neither can corrupt the other. `recording-intake`
-reads the schedule truth as input, so a corrected room or speaker propagates into
-the talks on the next render.
-
-Why two responsibilities rather than one: the truth and its rendering have
-different failure modes. A brief that fails to write must not cost you the
-schedule state, and a byte-identical re-render must not look like a schedule
-change. The brief subscribes to facets, so it wakes when the program moves — not
-when a page was merely re-fetched.
-
-## Keeping dossiers current after the talk
-
-Conference material keeps appearing after the session ends: the official
-recording is uploaded days later, the speaker posts a recap, the slides land, a
-paper gets an arXiv id. `talk-links` therefore follows the event's lifecycle
-rather than a fixed cron:
-
-| Window (from `event.ends_on`) | Recheck |
+| Window from `event.ends_on` | Recheck |
 | --- | --- |
 | during the event and the first 72 hours | every 6 hours |
-| 72 hours – 30 days | daily |
-| 30 – 90 days | weekly |
-| after 90 days | `settled` — no self-tick; a manual kick or a new talk still renders |
+| 72 hours to 30 days | daily |
+| 30 to 90 days | weekly |
+| after 90 days | `settled`, no self-tick; a manual kick or a new talk still renders |
 
-A recheck re-verifies the links it already has and spends at most two searches
-per talk looking for material published *after* the talk. A recheck that finds
-nothing new writes only immaterial fields (`last_checked`, `next_check`), so it
-moves no fingerprint and wakes nothing downstream. A resource added by a later
-recheck is labelled with how long after the talk it appeared. Each dossier's
-lifecycle state lives in `state/world-model/talk-links/` (`freshness`).
+A recheck that finds nothing new writes only `last_checked` and `next_check`, so
+it moves no fingerprint and wakes nothing. Photos follow the same idea over a
+shorter window, every 6 hours while the event is live and for 7 days after, so a
+late export is still filed.
 
-Photos use the same idea, more briefly: the drop is scanned every 6 hours while
-the event is live and for 7 days after, so a late export is still filed.
+## Why it is cheap
 
-## Why it is cheap to run
-
-- `content_hash` per source page is the first gate: unchanged page, nothing
+- A `content_hash` per source page is the first gate. An unchanged page is not
   re-extracted.
-- Every facet has a material/immaterial split, so `fetched_at`, page hashes, and
+- Every facet splits material from immaterial, so `fetched_at`, page hashes, and
   cosmetic ordering never move a fingerprint.
-- Speaker enrichment is budgeted (40 pages per render) and resumable through
+- Speaker enrichment is budgeted at 40 pages per render and can resume from
   `coverage.enrichment.pending`.
-- A tick that finds no material change writes an unmoved fingerprint: cost scales
-  with surprise, not with the clock.
+- A tick that finds no material change writes an unmoved fingerprint. Cost
+  scales with surprise, not with the clock.
 
-## Cadence
+## Completeness is auditable
 
-Six-hourly while the event is upcoming; hourly from 72 hours before the start
-through 24 hours after the end; daily once the source goes archived. The rule
-lives in `conference-schedule → ### Continuity`; the dates it reads live in the
-world-model.
+The schedule page usually states its own total, for example "120 sessions". The
+contract requires the parsed count to reconcile with that total and with the
+per-day counts. An unreadable region must be named in `coverage.gaps`. A mismatch
+fails the render with `coverage-gap` rather than publishing a partial schedule as
+if it were whole.
 
-## Completeness is a claim you can audit
+## Where to read next
 
-The schedule page usually states its own total ("120 sessions", for example). The contract
-requires the parsed count to reconcile with that total and with the per-day
-counts, and requires any unreadable region to be named in `coverage.gaps`. A
-mismatch fails the render with `coverage-gap` rather than publishing a partial
-schedule as if it were whole.
+| Doc | Read it for |
+| --- | --- |
+| [`MAP.md`](MAP.md) | Every path, the join keys between talks and sessions, and what a fresh clone is missing. |
+| [`FRAMEWORK.md`](FRAMEWORK.md) | The editorial pipeline: capture, atoms, themes, hooks, artifacts. |
+| [`TALKS.md`](TALKS.md) | Turning a transcript into a story, a talk page, and a through-line. |
+| [`design.md`](design.md) | The visual language for explainers and the magazine. |
+| [`AGENTS.md`](AGENTS.md) | The working agreement for changing this repo. |
 
-## Recordings → talks
+## Two things that are configuration, not source
 
-The Bun side is deliberately dumb: `mise run sync` moves each Voice Memos
-recording **inside the tracked conference's date window** into
-`recordings/inbox/<date>_<time>_<title>/` with its audio, transcript, and
-`meta.json`, and stops there. The window is the event's `starts_on`/`ends_on`
-from the schedule truth, padded one day either side (override with
-`--since/--until` or `RECORDINGS_SINCE`/`RECORDINGS_UNTIL`; `--all` exports the
-whole library). It needs Full Disk Access.
-
-Everything semantic is Prose: `recording-intake` identifies which session a
-recording captured (quoting evidence from the transcript, never guessing),
-renders a cleaned `talks/<date>-<slug>/transcript.md`, and files attachments
-inline or listed. See [recordings/README.md](recordings/README.md).
-
-## Ask the corpus
-
-In a build, the rendered talks are queryable from the agent, without serve
-running:
-
-```text
-/talk-ask    what did a talk say, who said it, which talk covered a topic
-/conference-themes  the patterns across every talk
-```
-
-`/talk-ask` answers from `talks/*/transcript.md` and cites the talk and
-timestamp; `/conference-themes` reads all of them and writes `analysis/themes.md`.
-
-## Layout
-
-```
-src/                     contract source (responsibilities, gateway, functions, test)
-scripts/                 TypeScript movers + the serve runtime (Bun)
-fixtures/                a small schedule page used by the extraction test
-stories/runtime/         fixed visual-rail runtime for talk pages
-prose.lock               dependency lockfile
-package.json / tsconfig.json   Bun + TypeScript toolchain
-
-# a build adds these; the template ignores them
-recordings/              inbox: one folder per recording (audio, transcript, meta)
-talks/                   rendered talks, one folder each
-brief/                   rendered human artifacts
-state/                   durable world-model + receipt ledger
-analysis/  editorial/  notes/  explainers/<slug>/  atlases/<slug>/  magazine/<issue>/
-dist/  deps/  runs/      generated — gitignored in both modes
-```
-
-## Tests
-
-```bash
-prose test src/test-extract-conference-program.prose.md
-```
-
-The test is offline: it extracts `fixtures/two-day-schedule.md` and asserts day
-counts, offset-qualified times, room mapping, speaker linkage, side-event
-handling, and the absence of invented abstracts or affiliations.
-
-## Notes
-
-- The URL is configuration, not source. A new conference is a new directory and
-  repo with a new `CONFERENCE_URL`; the contracts do not change.
-- Archived conferences are still tracked: `event.status` becomes `archived`, the
-  cadence drops to daily, and the brief labels itself an archived record.
-- In a build, `state/` is committed on purpose: `git diff` between tracking runs
-  is the audit trail of what the conference changed.
+- The conference URL. A new conference is a new directory, a new repo, and a new
+  `CONFERENCE_URL`. The contracts do not change.
+- The event lifecycle. An archived conference is still tracked, `event.status`
+  becomes `archived`, the cadence drops to daily, and the brief labels itself an
+  archived record.

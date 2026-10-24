@@ -29,7 +29,7 @@ the source of truth.
 
 Maggie Appleton's `planning-agents` page is the right reference for the *shape*:
 a sticky visual left, scrolling text right, one visual per beat. The difference
-is that the visual is not a baked slide; it is the smallest thing that makes the
+is that the visual is not a baked slide. It is the smallest thing that makes the
 claim legible.
 
 ```
@@ -67,14 +67,9 @@ are on.
 
 ### What the visual is for
 
-The visual should answer a question the paragraph raises:
-
-- **Beyond Done:** the verification loop, the missing half, the script.
-- **Who verifies:** the three layers, the two kinds of gate.
-- **The Machine:** the confidence product, the compounding error curve.
-- **Process Supervision:** the trajectory and the behavior rubric.
-- **Anthropic:** the five-layer agent foundation.
-- **Balancing:** the approval queue and the classifier routing.
+The visual answers a question the paragraph raises. A talk about a loop shows the
+loop. A talk about a stack shows the layers. A talk about two gates shows the
+two gates.
 
 If no artifact exists, draw the mechanism as a small SVG. Do not use a stock
 image or a generic AI illustration.
