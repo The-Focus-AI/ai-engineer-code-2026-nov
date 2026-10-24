@@ -1,7 +1,7 @@
 # Conference Reporter
 
-One clone, one conference. This repository is an OpenProse program that keeps a
-single conference's schedule current: every session, speaker, room, and start/end
+One build directory, one repo, one conference. This repository is an OpenProse
+program that keeps a single conference's schedule current: every session, speaker, room, and start/end
 time, plus the venue you'll actually walk into — and an append-only record of what
 changed since it started watching.
 
@@ -36,7 +36,7 @@ new directory, performs the setup below, removes the conference fence, and build
 the schedule. The steps are here if you want to do them by hand in that new
 directory.
 
-**In a shell** — set up the clone:
+**In the new build directory** — set up:
 
 ```bash
 cp .env.example .env          # set CONFERENCE_URL to the conference page

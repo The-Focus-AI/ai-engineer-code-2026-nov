@@ -1,6 +1,7 @@
 # The conference framework
 
-One clone = one conference. The Prose program already keeps the **truth** current
+One build directory = one repo = one conference. The Prose program already keeps
+the **truth** current
 — the schedule, the talks, the dossiers, the photos. This is the layer above it:
 capture what happens while you are there, turn it into evidence-backed hooks, and
 ship artifacts from them.
