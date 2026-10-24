@@ -35,6 +35,10 @@ run = "bun scripts/serve/validate-manifest.ts"
 description = "Typecheck the TypeScript toolchain"
 run = "bun x tsc --noEmit"
 
+[tasks.contracts]
+description = "Lint the Contract Markdown sources under src/ (structure only, no compiler)"
+run = "bun scripts/validate-contracts.ts"
+
 # Skills: skills-lock.json is the source of truth. experimental_install restores
 # every locked skill into .agents/skills/ (and the agent folders it manages).
 [tasks.skills]

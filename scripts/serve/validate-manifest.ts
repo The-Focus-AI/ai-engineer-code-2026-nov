@@ -81,6 +81,7 @@ const nextPath = join(root, "dist", "manifest.next.json");
 
 let ir: Manifest | undefined;
 let promotion = "unknown";
+let triggers: Triggers | null = null;
 
 function finish(): never {
   const result = {
@@ -95,7 +96,7 @@ function finish(): never {
       edges: ir?.topology.edges.length ?? 0,
       entryPoints: ir?.topology.entry_points.length ?? 0,
     },
-    triggers: typeof triggers === "undefined" ? null : triggers,
+    triggers,
     errors,
     warnings,
     notes,
@@ -381,7 +382,7 @@ interface HttpTrigger { node: string; method: "POST"; path: string; event: strin
 interface SelfClock { node: string; continuity: string[] | null }
 interface Triggers { cron: CronTrigger[]; http: HttpTrigger[]; self_clocks: SelfClock[] }
 
-const triggers: Triggers = { cron: [], http: [], self_clocks: [] };
+const plan: Triggers = { cron: [], http: [], self_clocks: [] };
 for (const id of entryPoints) {
   const src = m.sources.find((s) => s.name === id)?.path;
   const entry = { node: id, source: src ?? null, cron: null as string | null, route: null as string | null, event: null as string | null };
@@ -400,8 +401,8 @@ for (const id of entryPoints) {
     if (!entry.cron) warn(`trigger.${id}`, "entry point declares no cron expression in ### Schedule");
     if (!entry.route) warn(`trigger.${id}`, "entry point declares no POST route in ### Receives");
   }
-  triggers.cron.push({ node: id, expression: entry.cron });
-  if (entry.route) triggers.http.push({ node: id, method: "POST", path: entry.route, event: entry.event });
+  plan.cron.push({ node: id, expression: entry.cron });
+  if (entry.route) plan.http.push({ node: id, method: "POST", path: entry.route, event: entry.event });
 }
 
 for (const id of [...nodeById.keys()].sort()) {
@@ -410,7 +411,8 @@ for (const id of [...nodeById.keys()].sort()) {
   const src = m.sources.find((s) => s.name === id)?.path;
   let continuity: string[] | null = null;
   if (src && existsSync(abs(src))) continuity = sectionList(readFileSync(abs(src), "utf8"), "Continuity");
-  triggers.self_clocks.push({ node: id, continuity });
+  plan.self_clocks.push({ node: id, continuity });
 }
 
+triggers = plan;
 finish();

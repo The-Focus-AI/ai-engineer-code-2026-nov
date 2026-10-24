@@ -35,7 +35,7 @@ finds the patterns across every talk.
 
 | If you are… | Read |
 | --- | --- |
-| changing a contract | [`contract-markdown.md`](.agents/skills/open-prose/contract-markdown.md), then the contract in `src/` |
+| changing a contract | [`contract-markdown.md`](.agents/skills/open-prose/contract-markdown.md), then the contract in `src/`; `mise run contracts` lints the set |
 | running, restarting, or debugging serve | [`scripts/serve/README.md`](scripts/serve/README.md) — tick procedure, policy fencing, receipts |
 | changing the toolchain | [`README.md`](README.md) Toolchain |
 | capturing a note or making an artifact | [`FRAMEWORK.md`](FRAMEWORK.md) — capture, hooks, backlog, magazine |
@@ -59,6 +59,6 @@ finds the patterns across every talk.
 
 ## Done means
 
-`mise run validate` and `mise run typecheck` pass, `git status` shows no
-generated or raw-media files, and any state change has a receipt in
-`state/world-model/<node>/receipts.jsonl`.
+`mise run contracts`, `mise run validate`, and `mise run typecheck` pass,
+`git status` shows no generated or raw-media files, and any state change has a
+receipt in `state/world-model/<node>/receipts.jsonl`.
