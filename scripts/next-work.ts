@@ -77,8 +77,26 @@ function readThemes(): Theme[] {
   return themes;
 }
 
+function readPhotoPlacements(): Map<string, number> {
+  const path = join(root, "state", "world-model", "talk-photos", "published", "world-model.json");
+  const out = new Map<string, number>();
+  if (!existsSync(path)) return out;
+  try {
+    const data = JSON.parse(readFileSync(path, "utf8")) as {
+      placements?: Record<string, { dir?: string; photos?: unknown[] }>;
+    };
+    for (const p of Object.values(data.placements ?? {})) {
+      if (p.dir) out.set(p.dir, p.photos?.length ?? 0);
+    }
+  } catch (_) {
+    /* a malformed photo model is not this script's failure */
+  }
+  return out;
+}
+
 function readTalks(themes: Theme[]): Talk[] {
   if (!existsSync(talksDir)) return [];
+  const placed = readPhotoPlacements();
   const themeBySlug = new Map<string, number[]>();
   for (const t of themes) {
     for (const slug of t.talks) {
@@ -93,9 +111,10 @@ function readTalks(themes: Theme[]): Talk[] {
       const fm = frontmatter(transcript);
       const links = read(join(dir, "links.md"));
       const photosDir = join(dir, "photos");
-      const photos = existsSync(photosDir)
+      const localPhotos = existsSync(photosDir)
         ? readdirSync(photosDir).filter((f) => statSync(join(photosDir, f)).isFile()).length
         : 0;
+      const photos = localPhotos || placed.get(`talks/${slug}/photos`) || 0;
       return {
         slug,
         title: fm.title ?? slug,
