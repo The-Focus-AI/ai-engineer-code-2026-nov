@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talk story — layout fixture</title>
+<link rel="stylesheet" href="../../stories/runtime/talk.css">
+<style>
+  .fixture-note {
+    max-width: 84rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    font: .74rem/1.6 ui-sans-serif, system-ui, sans-serif;
+    color: #8a2f1d;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">Talk story · layout fixture</div>
+  <h1>The demo passed. The data was gone.</h1>
+  <p class="dek">A visual rail on the left, the argument on the right. This fixture exists to test the layout, not to be a talk page.</p>
+  <div class="talk-meta">Nick Nisi, Zack Proser · 56:47 · verification</div>
+  <div class="talk-controls">
+    <button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button>
+  </div>
+</header>
+<div class="fixture-note">Fixture only — no claims here are load-bearing</div>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+      <figure class="talk-visual is-active" data-visual="v1">
+        <blockquote class="quote-card">
+          it did do something to the UI, but we didn't check the other half
+          <cite>Beyond “Done” · 00:04:10</cite>
+        </blockquote>
+        <figcaption>The failure is a green check on the wrong half.</figcaption>
+      </figure>
+      <figure class="talk-visual" data-visual="v2">
+        <div class="diagram-card">
+          <div class="diagram-label">The loop</div>
+          <svg viewBox="0 0 400 220" role="img" aria-label="Act, observe, fail, repair">
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a2f1d"></path>
+              </marker>
+            </defs>
+            <g fill="none" stroke="#8a2f1d" stroke-width="1.5" marker-end="url(#arrow)">
+              <path d="M 110 55 Q 200 20 290 55"></path>
+              <path d="M 290 75 Q 330 115 290 160"></path>
+              <path d="M 270 170 Q 200 205 110 170"></path>
+              <path d="M 90 155 Q 55 115 90 75"></path>
+            </g>
+            <g font-family="ui-sans-serif, system-ui" font-size="12" fill="#191714" text-anchor="middle">
+              <text x="200" y="38">act</text>
+              <text x="330" y="120">observe</text>
+              <text x="200" y="205">fail</text>
+              <text x="65" y="120">repair</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption>A check inside the attempt, not at the end of the release.</figcaption>
+      </figure>
+      <figure class="talk-visual" data-visual="v3">
+        <div class="video-card">
+          <div class="diagram-label">Watch</div>
+          <a href="https://www.youtube.com/watch?v=q4WC4TowkBo" target="_blank" rel="noreferrer">Teach Your Agent to Prove It's Done</a>
+          <span class="time">00:16:07 · the script, not the prompt</span>
+        </div>
+        <figcaption>The recording is an evidence link, not the page.</figcaption>
+      </figure>
+    </div>
+    <p class="talk-rail-caption">The failure is a green check on the wrong half.</p>
+    <div class="talk-rail-progress"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+    <section data-chapter="the-demo" data-visual="v1" data-caption="The failure is a green check on the wrong half.">
+      <div class="chapter">01 · The demo</div>
+      <h2>The page said success. The list was empty.</h2>
+      <p>An agent added an email to a waitlist. The UI said success. The room reloaded, and the list was empty. The agent had checked the half it could see.</p>
+      <p>That is the normal shape of the failure: not a crash, but a green check on the wrong thing.</p>
+      <blockquote>“it did do something to the UI, but we didn't check the other half”<span class="cite">Beyond “Done” · 00:04:10</span></blockquote>
+      <ul class="key-points">
+        <li>Visible success is not stored state.</li>
+        <li>The missing check is the other half of the flow.</li>
+        <li>A false pass is more dangerous than a crash because it ships.</li>
+      </ul>
+    </section>
+
+    <section data-chapter="the-script" data-visual="v2" data-caption="A prompt is a request; a run is a check.">
+      <div class="chapter">02 · The check</div>
+      <h2>A prompt is a request. A run is a check.</h2>
+      <p>A paragraph that says “verify the work” can be forgotten, skipped, or interpreted. A script that exercises the app returns the same observation every time and gives the agent a failure it can repair.</p>
+      <p>The point is not to over-prescribe the path. The point is to give the agent a way to see the result.</p>
+      <blockquote>“have a script that can proof it out in different ways”<span class="cite">Beyond “Done” · 00:16:07</span></blockquote>
+      <ul class="key-points">
+        <li>Deterministic beats descriptive.</li>
+        <li>The check has to see what a person would see.</li>
+        <li>Failure inside the loop is the repair signal.</li>
+      </ul>
+      <p class="watch">Watch: <a href="https://www.youtube.com/watch?v=q4WC4TowkBo" target="_blank" rel="noreferrer">the recording</a> at 00:16:07.</p>
+    </section>
+
+    <section data-chapter="the-proof" data-visual="v3" data-caption="The recording is an evidence link, not the page.">
+      <div class="chapter">03 · The proof</div>
+      <h2>Show the receipt, not the promise.</h2>
+      <p>The end state is a receipt: what ran, against which revision, and what it returned. The talk page should be readable on its own; the recording is where you go to check the wording.</p>
+      <p>This fixture stops here. A real page would continue with the remaining chapters and the exact citations.</p>
+      <ul class="key-points">
+        <li>Evidence carries provenance.</li>
+        <li>The transcript is the source, not the page.</li>
+        <li>Video is a link at a timestamp, not a replacement for the argument.</li>
+      </ul>
+    </section>
+  </main>
+</div>
+
+<footer class="talk-foot">Layout fixture for <code>stories/runtime/talk.js</code> and <code>talk.css</code>. Not a talk page.</footer>
+<script src="../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

@@ -93,6 +93,8 @@ The Prose runtime under `scripts/serve/` is the same TypeScript: `validate-manif
 | `brief/schedule.md` | The readable brief: masthead, venue and logistics, day-by-day sessions with times, rooms, speakers, and abstracts; coverage line. |
 | `talks/<date>-<slug>/links.md` | The dossier: speakers with verified profiles, the company, and up to six verified blog posts / papers / repos / videos tied to the talk. |
 | `talks/<date>-<slug>/photos/` | Photos taken during the talk, filed by capture time (UTC filename → event timezone) and matched to the talk's recording window. |
+| `talks/<date>-<slug>/story.md` | The reader's cut of the talk: chapters, key points, pull quotes, visual cues. Derived and cited; the transcript stays the evidence. |
+| `talks/<date>-<slug>/experience/` | The talk page: sticky visual rail, story right, collapsible. |
 | `photos/event/<date>/` | Photos from breaks, receptions and the hallway — event-level, not a talk. |
 | `brief/changes.md` | Append-only changelog: added, retitled, retimed, room-changed, speaker-changed, cancelled, venue-changed, archived. |
 | `state/world-model/conference-schedule/` | The canonical structured truth (the source of record). |
@@ -230,6 +232,7 @@ timestamp; `/talk-themes` reads all of them and writes `analysis/themes.md`.
 src/                     contract source (responsibilities, gateway, functions, test)
 scripts/                 TypeScript movers + the serve runtime (Bun)
 fixtures/                a small schedule page used by the extraction test
+stories/runtime/         fixed visual-rail runtime for talk pages
 prose.lock               dependency lockfile
 package.json / tsconfig.json   Bun + TypeScript toolchain
 

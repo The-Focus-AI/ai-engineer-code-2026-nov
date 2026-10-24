@@ -88,6 +88,12 @@ the talk, links that go deeper, and a "why it matters". `issue.md` is the source
 `issue.html` is re-rendered from it after every change by
 `scripts/render-issue.ts`. State is `growing` or `frozen`.
 
+A **talk story** turns one transcript into a reading experience: `story.md` is
+the reader's cut (chapters, key points, pull quotes), and
+`talks/<slug>/experience/` is the scrollytelling page with a visual rail. The raw
+transcript is never edited. The pipeline is `next` → `polish-talk` → `talk` →
+through-line `atlas`. See [`TALKS.md`](TALKS.md).
+
 An **explainer site** is a reader guide for one talk, topic, or theme: chapters,
 a side panel that defines a `[[term]]` where the reader meets it, the chapter's
 suggested questions, and a live ask box backed by the agent. The model composes

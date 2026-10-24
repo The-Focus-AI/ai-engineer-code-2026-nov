@@ -37,6 +37,7 @@ patterns across every talk.
 | running, restarting, or debugging serve | [`scripts/serve/README.md`](scripts/serve/README.md) — tick procedure, policy fencing, receipts |
 | changing the toolchain | [`README.md`](README.md) Toolchain |
 | capturing a note or making an artifact | [`FRAMEWORK.md`](FRAMEWORK.md) — capture, hooks, backlog, magazine |
+| turning a talk into a story or page | [`TALKS.md`](TALKS.md) — story, talk page, through-line |
 | changing the visual language | [`design.md`](design.md) — tokens, components, interaction hooks |
 | resolving a photo or a dossier | `src/talk-photos.prose.md`, `src/talk-links.prose.md` |
 

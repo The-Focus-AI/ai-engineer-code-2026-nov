@@ -45,6 +45,8 @@ folder:
 | `talks/<YYYY-MM-DD>-<slug>/transcript.md` | The cleaned transcript. Frontmatter: `title`, `speakers` (name + affiliation), `room`, `starts_at`, `ends_at`, `format`, `recording`, `duration`. Body: `### HH:MM:SS — Section` headings over ASR text. |
 | `talks/<YYYY-MM-DD>-<slug>/links.md` | The dossier: speakers, company, verified resources, gaps. |
 | `talks/<YYYY-MM-DD>-<slug>/photos/` | Photos filed to the talk. Local only, not committed. |
+| `talks/<YYYY-MM-DD>-<slug>/story.md` | The reader's cut: chapters, key points, quotes, visual cues. Derived, cited, not evidence. |
+| `talks/<YYYY-MM-DD>-<slug>/experience/` | The talk page: sticky visual rail and story. |
 
 `ls talks/` is the recorded corpus. `brief/schedule.md` is everything else.
 
