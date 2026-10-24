@@ -12,17 +12,17 @@ design language, and **no conference data**: `brief/`, `state/`, `talks/`,
 `recordings/inbox/`, `photos/`, `analysis/`, `atlases/<slug>/`, and the editorial
 artifacts are ignored by the “conference build data” block in `.gitignore`.
 
-To make a build, fork or clone this repository and run the `conference-init` skill
-in your agent:
+To make a build, run the `conference-init` skill **from this master clone**:
 
 ```text
-Run the conference-init skill. This is a fresh fork of conference-reporter;
-the conference URL is <URL>.
+Run the conference-init skill. This is the master template.
+Create the build at ../conference-<slug> for <URL>.
 ```
 
-It deletes that block so this fork's own data is tracked, sets
-`CONFERENCE_URL`, and renders the schedule. One clone = one conference; never put
-a second conference in the same build.
+It clones the template into a **new sibling directory**, removes the block there,
+sets `CONFERENCE_URL`, creates a separate git repository for that directory, and
+renders the schedule. One directory = one repo = one conference. A build is not
+a branch.
 
 > **`prose ...` commands run inside your coding agent, not in a shell.** The
 > agent session *is* the OpenProse runtime: `prose serve` loads the compiled
@@ -31,9 +31,10 @@ a second conference in the same build.
 > There is no `prose` binary on `PATH`, and there is no daemon — the schedules
 > live in the session, so serve runs only while that session stays open.
 
-**In a fresh template** — in your coding agent, run `conference-init`. It performs
-the setup below, removes the conference fence, and builds the schedule. The
-steps are here if you want to do them by hand.
+**From the master** — in your coding agent, run `conference-init`. It clones to a
+new directory, performs the setup below, removes the conference fence, and builds
+the schedule. The steps are here if you want to do them by hand in that new
+directory.
 
 **In a shell** — set up the clone:
 
@@ -257,8 +258,8 @@ handling, and the absence of invented abstracts or affiliations.
 
 ## Notes
 
-- The URL is configuration, not source. A new conference is a new fork with a
-  new `CONFERENCE_URL`; the contracts do not change.
+- The URL is configuration, not source. A new conference is a new directory and
+  repo with a new `CONFERENCE_URL`; the contracts do not change.
 - Archived conferences are still tracked: `event.status` becomes `archived`, the
   cadence drops to daily, and the brief labels itself an archived record.
 - In a build, `state/` is committed on purpose: `git diff` between tracking runs

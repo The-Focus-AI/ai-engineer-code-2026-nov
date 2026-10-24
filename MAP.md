@@ -87,8 +87,8 @@ Slugs collide across parallel tracks; join on `recording` or on `title` +
 The template tracks `src/`, `scripts/`, `.agents/skills/`, `fixtures/`,
 `design.md`, and the READMEs. It has no conference data.
 
-A build is a fork that has run `conference-init`. It removes the ignore block and
-tracks its own:
+A build is a **separate clone** in its own directory and repo. It has run
+`conference-init`, removed the ignore block, and tracks its own:
 
 - `state/` — the world-model, receipts, and published facets
 - `brief/` — the schedule and changelog
@@ -105,7 +105,7 @@ Missing in both, and how it comes back:
 | `.env` | `cp .env.example .env`, set `CONFERENCE_URL` |
 | `dist/` | `prose compile`, then promote `manifest.next.json` → `manifest.active.json` |
 | `runs/` | the first serve wake |
-| `state/`, `brief/` | `conference-init`, then the schedule render |
+| `state/`, `brief/` | `conference-init` in a new directory, then the schedule render |
 | `talks/` | `recording-intake` after `mise run sync` |
 | `talks/*/photos/`, `photos/event/` | `mise run photos` over the local drop; filed copies stay local |
 | `recordings/**/*.m4a` | `mise run sync` (needs Full Disk Access) |

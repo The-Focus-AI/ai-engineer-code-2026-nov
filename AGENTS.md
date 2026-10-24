@@ -8,11 +8,13 @@ product; this is the working agreement for changing it.
 
 At session start, run `git check-ignore brief/ state/ talks/`. If all three
 print, this is the **template**: it has no conference data and the “conference
-build data” block in `.gitignore` hides one. Do not invent data or edit contracts
-around the absence.
-Run the `conference-init` skill first. A build deletes that block so its own
-`brief/`, `state/`, `talks/`, and artifacts are tracked. One clone = one
-conference.
+build data” block in `.gitignore` hides one. Do not invent data here. From the
+master, run `conference-init`; it clones to a **new sibling directory** and
+creates a separate repo.
+
+If none print, this is a **build**. Work here. A build deletes that block so its
+own `brief/`, `state/`, `talks/`, and artifacts are tracked. A build is never a
+branch: one directory = one repo = one conference.
 
 Two pipelines share one reconciler: **schedule** (`schedule-check` →
 `conference-schedule` → `schedule-brief`) and **recordings**

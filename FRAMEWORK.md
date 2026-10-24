@@ -129,9 +129,9 @@ One file, three lists, every item sourced:
 
 ## A conference, end to end
 
-1. Fork or clone the template, then run the `conference-init` skill. It removes
-   the template's conference fence, sets `CONFERENCE_URL`, dates, timezone, and
-   social handles.
+1. From the master, run the `conference-init` skill. It clones to a new sibling
+   directory, removes the template's conference fence, creates a separate repo,
+   and sets `CONFERENCE_URL`, dates, timezone, and social handles.
 2. `prose compile`, promote, `prose serve` in the coding agent.
 3. Continuously, during: `mise run sync`, `mise run photos`,
    `/conference-capture` for what the mics miss, `/talk-ask` and
