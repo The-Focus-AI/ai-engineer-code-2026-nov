@@ -24,11 +24,13 @@ an existing build.
 
 ## 1. Ask for the build identity
 
-- **Target directory** — default `../conference-<slug>` (a sibling of the
-  master, not inside it).
+- **Target directory** — default `../<conference-slug>` (a sibling of the master,
+  not inside it), e.g. `../ai-engineer-2026-oct`.
+- **Slug** — the event, year, and month: `ai-engineer-2026-oct`, not
+  `nyc-2026`.
 - **Conference URL** — the schedule page. Never invent it.
-- **Repository** — default `<owner>/conference-<slug>`, private unless the user
-  says public.
+- **Repository** — default `<owner>/<conference-slug>`, private unless the user
+  says public, e.g. `The-Focus-AI/ai-engineer-2026-oct`.
 - Timezone and dates only if the source page does not publish them.
 
 ## 2. Clone the template to the new directory
@@ -74,7 +76,7 @@ Do not commit `.env`.
 ## 5. Create the archive repository
 
 ```bash
-gh repo create <owner>/conference-<slug> --private --source=. --remote=origin
+gh repo create <owner>/<conference-slug> --private --source=. --remote=origin
 git add .gitignore .env.example
 git commit -m "conference: initialize <name>"
 git push -u origin main

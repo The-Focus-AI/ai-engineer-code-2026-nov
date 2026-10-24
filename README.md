@@ -16,7 +16,8 @@ To make a build, run the `conference-init` skill **from this master clone**:
 
 ```text
 Run the conference-init skill. This is the master template.
-Create the build at ../conference-<slug> for <URL>.
+Create the build at ../<conference-slug>, for example
+../ai-engineer-2026-oct, for <URL>.
 ```
 
 It clones the template into a **new sibling directory**, removes the block there,
