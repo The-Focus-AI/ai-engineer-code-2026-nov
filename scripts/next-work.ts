@@ -158,6 +158,7 @@ function atlases(): { slug: string; title: string }[] {
   if (!existsSync(dir)) return [];
   return readdirSync(dir)
     .filter((slug) => statSync(join(dir, slug)).isDirectory())
+    .filter((slug) => existsSync(join(dir, slug, "atlas.json")))
     .map((slug) => {
       const data = read(join(dir, slug, "atlas.json"));
       let title = slug;
