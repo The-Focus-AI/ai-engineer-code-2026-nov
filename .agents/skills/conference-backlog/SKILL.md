@@ -1,5 +1,5 @@
 ---
-name: backlog
+name: conference-backlog
 description: Add, triage, or close items in editorial/backlog.md — ideas to write, things to review, things to digest after the conference. Use when the user asks what's left, wants to park something for later, or is working through the post-conference list.
 ---
 

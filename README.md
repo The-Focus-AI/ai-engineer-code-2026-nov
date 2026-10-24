@@ -12,11 +12,11 @@ design language, and **no conference data**: `brief/`, `state/`, `talks/`,
 `recordings/inbox/`, `photos/`, `analysis/`, `atlases/<slug>/`, and the editorial
 artifacts are ignored by the “conference build data” block in `.gitignore`.
 
-To make a build, fork or clone this repository and run the `new-conference` skill
+To make a build, fork or clone this repository and run the `conference-init` skill
 in your agent:
 
 ```text
-Run the new-conference skill. This is a fresh fork of conference-reporter;
+Run the conference-init skill. This is a fresh fork of conference-reporter;
 the conference URL is <URL>.
 ```
 
@@ -31,7 +31,7 @@ a second conference in the same build.
 > There is no `prose` binary on `PATH`, and there is no daemon — the schedules
 > live in the session, so serve runs only while that session stays open.
 
-**In a fresh template** — in your coding agent, run `new-conference`. It performs
+**In a fresh template** — in your coding agent, run `conference-init`. It performs
 the setup below, removes the conference fence, and builds the schedule. The
 steps are here if you want to do them by hand.
 
@@ -219,12 +219,12 @@ In a build, the rendered talks are queryable from the agent, without serve
 running:
 
 ```text
-/ask-talks    what did a talk say, who said it, which talk covered a topic
-/talk-themes  the patterns across every talk
+/talk-ask    what did a talk say, who said it, which talk covered a topic
+/conference-themes  the patterns across every talk
 ```
 
-`/ask-talks` answers from `talks/*/transcript.md` and cites the talk and
-timestamp; `/talk-themes` reads all of them and writes `analysis/themes.md`.
+`/talk-ask` answers from `talks/*/transcript.md` and cites the talk and
+timestamp; `/conference-themes` reads all of them and writes `analysis/themes.md`.
 
 ## Layout
 

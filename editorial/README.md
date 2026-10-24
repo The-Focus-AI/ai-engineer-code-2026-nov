@@ -8,8 +8,8 @@ editorial/
   hooks/              evidence-backed bullets, one file per synthesis
 ```
 
-- `/hooks` writes here from a talk, a theme report, or a research trace.
-- `/backlog` triages what to review and digest after the event.
-- `/magazine` selects from here into an issue.
+- `/conference-hooks` writes here from a talk, a theme report, or a research trace.
+- `/conference-backlog` triages what to review and digest after the event.
+- `/conference-magazine` selects from here into an issue.
 
 A hook without a quote, a talk, and a timestamp is an opinion. Keep it out.

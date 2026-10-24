@@ -10,7 +10,7 @@ At session start, run `git check-ignore brief/ state/ talks/`. If all three
 print, this is the **template**: it has no conference data and the “conference
 build data” block in `.gitignore` hides one. Do not invent data or edit contracts
 around the absence.
-Run the `new-conference` skill first. A build deletes that block so its own
+Run the `conference-init` skill first. A build deletes that block so its own
 `brief/`, `state/`, `talks/`, and artifacts are tracked. One clone = one
 conference.
 
@@ -26,8 +26,8 @@ world-model and signs a receipt.
 [`MAP.md`](MAP.md) indexes it: the schedule truth, a build's talk transcripts,
 dossiers, recordings, the join keys between them, and what the template lacks.
 
-`/ask-talks` answers a question about what a talk said. `/talk-themes` finds the
-patterns across every talk.
+`/talk-ask` answers a question about what a talk said. `/conference-themes`
+finds the patterns across every talk.
 
 ## Read before you edit
 

@@ -16,12 +16,12 @@ capture ──► atoms ──► themes ──► hooks ──► artifacts ─
 
 | Stage | What it is | Where it lives | How it runs |
 | --- | --- | --- | --- |
-| **capture** | notes, questions, links, photos, recordings taken during the event | `notes/inbox/`, `photos/`, `recordings/inbox/` | `/capture`, `mise run sync`, `mise run photos` |
-| **atoms** | one claim per line: quote, speaker, talk, timestamp, topic | derived on demand from `talks/` | `/ask-talks`, `/talk-themes` |
-| **themes** | claims several talks make in different words | `analysis/themes.md` (report) | `/talk-themes` |
-| **hooks** | the editorial shortlist: novel, contrarian, data, practical, tutorial | `editorial/hooks/` + `editorial/backlog.md` | `/hooks` |
-| **artifacts** | a magazine issue, a newsletter, a thread, a talk outline | `magazine/<issue>/` | `/magazine` |
-| **backlog** | what to review and what to digest after the event | `editorial/backlog.md` | `/backlog` |
+| **capture** | notes, questions, links, photos, recordings taken during the event | `notes/inbox/`, `photos/`, `recordings/inbox/` | `/conference-capture`, `mise run sync`, `mise run photos` |
+| **atoms** | one claim per line: quote, speaker, talk, timestamp, topic | derived on demand from `talks/` | `/talk-ask`, `/conference-themes` |
+| **themes** | claims several talks make in different words | `analysis/themes.md` (report) | `/conference-themes` |
+| **hooks** | the editorial shortlist: novel, contrarian, data, practical, tutorial | `editorial/hooks/` + `editorial/backlog.md` | `/conference-hooks` |
+| **artifacts** | a magazine issue, a newsletter, a thread, a talk outline | `magazine/<issue>/` | `/conference-magazine` |
+| **backlog** | what to review and what to digest after the event | `editorial/backlog.md` | `/conference-backlog` |
 
 Skills are the interaction layer. When a stage needs to stay fresh on its own,
 wake on its own inputs, or be subscribed to, it graduates to a
@@ -44,8 +44,8 @@ tags: [verification, geico]
 The war-room demo ran on the vendor's laptops, not the venue network.
 ```
 
-- `/capture` classifies, timestamps in the event timezone, links the session when
-  it can, and writes the file. It never invents a link.
+- `/conference-capture` classifies, timestamps in the event timezone, links the
+  session when it can, and writes the file. It never invents a link.
 - `kind: todo` also lands in `editorial/backlog.md`, under **Review later** or
   **Digest later**.
 - Photos and recordings already land through the movers; a note can reference
@@ -53,10 +53,10 @@ The war-room demo ran on the vendor's laptops, not the venue network.
 
 ## Research traces
 
-A question you ask during the event is itself material. `/ask-talks` and
-`/talk-themes` write their answer to `notes/research/<date>-<slug>.md` when you
-say keep it: the question, the answer, the talks and timestamps it used. That is
-what `/hooks` mines when the raw transcript is too much.
+A question you ask during the event is itself material. `/talk-ask` and
+`/conference-themes` write their answer to `notes/research/<date>-<slug>.md` when
+you say keep it: the question, the answer, the talks and timestamps it used. That is
+what `/conference-hooks` mines when the raw transcript is too much.
 
 ## Hooks — the bullet points
 
@@ -91,8 +91,8 @@ the talk, links that go deeper, and a "why it matters". `issue.md` is the source
 A **talk story** turns one transcript into a reading experience: `story.md` is
 the reader's cut (chapters, key points, pull quotes), and
 `talks/<slug>/experience/` is the scrollytelling page with a visual rail. The raw
-transcript is never edited. The pipeline is `next` → `polish-talk` → `talk` →
-through-line `atlas`. See [`TALKS.md`](TALKS.md).
+transcript is never edited. The pipeline is `conference-next` → `talk-polish` →
+`talk-page` → through-line `atlas`. See [`TALKS.md`](TALKS.md).
 
 An **explainer site** is a reader guide for one talk, topic, or theme: chapters,
 a side panel that defines a `[[term]]` where the reader meets it, the chapter's
@@ -124,19 +124,20 @@ One file, three lists, every item sourced:
 - [ ] Read the HarnessTax paper before writing the harness piece
 ```
 
-`/backlog` adds, triages, and closes items. Statuses: `open`, `doing`, `done`,
-`dropped`. An item without a source and a reason is noise.
+`/conference-backlog` adds, triages, and closes items. Statuses: `open`, `doing`,
+`done`, `dropped`. An item without a source and a reason is noise.
 
 ## A conference, end to end
 
-1. Fork or clone the template, then run the `new-conference` skill. It removes
+1. Fork or clone the template, then run the `conference-init` skill. It removes
    the template's conference fence, sets `CONFERENCE_URL`, dates, timezone, and
    social handles.
 2. `prose compile`, promote, `prose serve` in the coding agent.
-3. Continuously, during: `mise run sync`, `mise run photos`, `/capture` for what
-   the mics miss, `/ask-talks` and `/talk-themes` for questions, `/hooks` after a
-   talk that earns one, `/magazine` to open the issue and append features.
-4. End of each day: `/backlog` triage, then re-render the open issue.
+3. Continuously, during: `mise run sync`, `mise run photos`,
+   `/conference-capture` for what the mics miss, `/talk-ask` and
+   `/conference-themes` for questions, `/conference-hooks` after a talk that
+   earns one, `/conference-magazine` to open the issue and append features.
+4. End of each day: `/conference-backlog` triage, then re-render the open issue.
 5. End of the event: freeze the issue, write its closing page, then channel
    drafts.
 6. The settling cadence keeps dossiers current for 90 days; the backlog is what
@@ -146,11 +147,11 @@ One file, three lists, every item sourced:
 
 | Slice | State |
 | --- | --- |
-| capture + notes + backlog file + `/capture` | built |
-| `/hooks` and the hook schema | built |
-| `/backlog` triage | built |
-| `/magazine` — opens, grows, freezes; `render-issue.ts` re-renders | built |
-| `/explainer` — LLM composes against `design.md`; bundle, validate, live ask | built |
+| capture + notes + backlog file + `/conference-capture` | built |
+| `/conference-hooks` and the hook schema | built |
+| `/conference-backlog` triage | built |
+| `/conference-magazine` — opens, grows, freezes; `render-issue.ts` re-renders | built |
+| `/conference-explainer` — LLM composes against `design.md`; bundle, validate, live ask | built |
 | `/social` channel drafts | next |
 | atoms as a responsibility (`talk-insights`) | next |
 | template hardening: config file, fixture conference, tests | later |

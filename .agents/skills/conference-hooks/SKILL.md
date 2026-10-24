@@ -1,5 +1,5 @@
 ---
-name: hooks
+name: conference-hooks
 description: Turn a talk, a theme report, or a research trace into evidence-backed hooks — the bullet points worth writing about. Use when the user wants ideas, angles, a hook, what's interesting here, or material for an article, thread, tutorial, or magazine.
 ---
 

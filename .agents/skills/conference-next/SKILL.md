@@ -1,5 +1,5 @@
 ---
-name: next
+name: conference-next
 description: Inspect a conference build and recommend what to work on next — which talk to turn into a story, which theme is ready for a through-line, and what is missing. Use when the user asks what is next, where to start, or what to do with the corpus.
 ---
 
@@ -50,11 +50,11 @@ Tell the user:
 - the first theme that will be ready for a through-line;
 - what is missing (no video, no photos, thin transcript, no dossier).
 
-Then ask which talk to take through `/polish-talk`. One at a time.
+Then ask which talk to take through `/talk-polish`. One at a time.
 
 ## Boundaries
 
 - The audit does not write prose, choose quotes, or build pages.
 - A score is not an editorial judgment. If the user wants a different talk, take
   it; the audit is a map, not a manager.
-- Never run `polish-talk` and `talk` in the same turn without the user's choices.
+- Never run `talk-polish` and `talk-page` in the same turn without the user's choices.

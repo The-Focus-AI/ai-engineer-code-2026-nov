@@ -1,6 +1,6 @@
 ---
-name: talk
-description: Design and build a scrollytelling talk experience — visual rail on the left, story on the right, collapsible, with photos, diagrams, quotes, or video stills. Use after /polish-talk, or when a talk should be readable without the raw transcript.
+name: talk-page
+description: Design and build a scrollytelling talk experience — visual rail on the left, story on the right, collapsible, with photos, diagrams, quotes, or video stills. Use after /talk-polish, or when a talk should be readable without the raw transcript.
 ---
 
 # Talk experience
@@ -13,7 +13,7 @@ contract.
 
 ## 1. Start from the story
 
-Require `talks/<slug>/story.md`. If it does not exist, run `/polish-talk` first.
+Require `talks/<slug>/story.md`. If it does not exist, run `/talk-polish` first.
 
 Read the story, the dossier, the photos, and the transcript's section headings.
 Do not compose from the transcript alone.

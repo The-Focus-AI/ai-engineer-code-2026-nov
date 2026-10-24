@@ -13,7 +13,7 @@ atlases/<slug>/
 runtime/         fixed atlas.js + atlas.css
 ```
 
-Build one with `/atlas`. The model composes `page.html` against
+Build one with `/conference-atlas`. The model composes `page.html` against
 [`design.md`](../design.md); the bundle injects the graph and links the runtime:
 
 ```bash

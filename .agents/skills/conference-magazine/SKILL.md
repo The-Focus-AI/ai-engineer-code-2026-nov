@@ -1,5 +1,5 @@
 ---
-name: magazine
+name: conference-magazine
 description: Build and grow a magazine issue from selected hooks, themes, talks and photos — a designed, printable presentation of the conference. Use when opening an issue, adding a feature as talks land, freezing at the end, or re-rendering the printable page.
 ---
 
@@ -38,7 +38,7 @@ reads as a promise, not a placeholder.
 
 A feature enters when it has a headline, a standfirst, at least two cited
 quotes, and a "why it matters". A photo is optional. Take it from
-`editorial/hooks/`; if it is not there yet, run `/hooks` first.
+`editorial/hooks/`; if it is not there yet, run `/conference-hooks` first.
 
 Append the feature just above `## Review / Digest`:
 

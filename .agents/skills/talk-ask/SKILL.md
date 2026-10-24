@@ -1,6 +1,6 @@
 ---
-name: ask-talks
-description: Answer questions about the recorded conference talks from their transcripts and dossiers — what a talk said, who said it, which talk covered a topic, or how two talks compare. Use for talk content; /talk-themes is for patterns across all talks.
+name: talk-ask
+description: Answer questions about the recorded conference talks from their transcripts and dossiers — what a talk said, who said it, which talk covered a topic, or how two talks compare. Use for talk content; /conference-themes is for patterns across all talks.
 ---
 
 # Ask the talks
@@ -62,5 +62,5 @@ The answer is done when every claim carries a talk + timestamp (or a schedule
 
 When the user says keep this, save this, or add it to research, write the
 question, the answer, and the talks + timestamps used to
-`notes/research/<YYYY-MM-DD>-<slug>.md`. `/hooks` mines those traces later; a
+`notes/research/<YYYY-MM-DD>-<slug>.md`. `/conference-hooks` mines those traces later; a
 good answer that stays in the chat is lost.

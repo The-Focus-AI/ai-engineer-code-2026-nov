@@ -1,5 +1,5 @@
 ---
-name: capture
+name: conference-capture
 description: Capture an observation, question, link, quote, or todo from the conference into notes/inbox/. Use when the user says note this, remember this, capture this, log this, or wants something added to review or digest later.
 ---
 

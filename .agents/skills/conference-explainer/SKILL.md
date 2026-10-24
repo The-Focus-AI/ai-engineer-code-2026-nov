@@ -1,5 +1,5 @@
 ---
-name: explainer
+name: conference-explainer
 description: Build an interactive reader guide — an explainer website — for a talk, a topic, or a theme. Use when the user wants to understand a talk, asks for an explainer or reader guide, wants terms defined as they read, or wants follow-up questions answered from the corpus.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: talk-themes
+name: conference-themes
 description: Find the patterns across every recorded talk — recurring themes, consensus, disagreements, and where the conference's attention went. Use when the user asks what the talks had in common, wants a cross-talk synthesis, trends, or a themes report.
 ---
 
@@ -10,7 +10,7 @@ evidence is one **claim**: one speaker, one section, one sentence in their
 words. A recurring word is a lead; it becomes a theme only when talks make the
 same argument with it.
 
-This runs across the corpus. For a question about one talk, use `/ask-talks`.
+This runs across the corpus. For a question about one talk, use `/talk-ask`.
 
 ## 1. Fingerprint the corpus
 
@@ -77,6 +77,6 @@ talks; a claim that cannot is listed as a singleton.
 ## Keep the trace
 
 Write the finished synthesis to `analysis/themes.md` (its existing home) and
-date it. If the user asks for hooks from it, hand it to `/hooks` rather than
+date it. If the user asks for hooks from it, hand it to `/conference-hooks` rather than
 rewriting the synthesis; the theme report is evidence, the hook file is
 editorial.

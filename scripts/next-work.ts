@@ -190,7 +190,7 @@ const payload = { talks: talks.map((t) => ({ ...t, score: score(t), reason: reas
 if (process.argv.includes("--json")) {
   console.log(JSON.stringify(payload, null, 2));
 } else if (!talks.length) {
-  console.log("No talks in this build. Run `new-conference`, then record and intake a talk first.");
+  console.log("No talks in this build. Run `conference-init`, then record and intake a talk first.");
 } else {
   const lines: string[] = [];
   lines.push("# Next work", "");

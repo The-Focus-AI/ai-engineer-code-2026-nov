@@ -1,5 +1,5 @@
 ---
-name: new-conference
+name: conference-init
 description: Turn a fresh template clone into one conference build. Use on first startup when brief/, state/, and talks/ are absent or gitignored, or when the user asks to start a new conference from this template.
 ---
 
@@ -124,8 +124,8 @@ audit trail of what the conference changed.
 
 - Recordings: `mise run sync`, then run `recording-intake`.
 - Photos: `mise run photos`, then run `talk-photos`.
-- Talks: `/ask-talks`; patterns: `/talk-themes`.
-- Artifacts: `/hooks`, `/explainer`, `/magazine`.
+- Talks: `/talk-ask`; patterns: `/conference-themes`.
+- Artifacts: `/conference-hooks`, `/conference-explainer`, `/conference-magazine`.
 - Before calling it done: `mise run validate` and `mise run typecheck` pass.
 
 ## Boundaries

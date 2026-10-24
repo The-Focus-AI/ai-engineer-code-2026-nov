@@ -5,7 +5,7 @@ The transcript is evidence, not an experience. A folder of ASR text with
 should meet first. This is the layer between the two.
 
 ```
-next → polish-talk → talk → through-line atlas
+conference-next → talk-polish → talk-page → through-line atlas
 ```
 
 The atlas is built **on top of** talk stories, not instead of them. A through-line
@@ -102,7 +102,7 @@ least three talks have an `experience/` page.
 
 ## The pipeline
 
-### 1. `next`
+### 1. `conference-next`
 
 Scans the build and recommends:
 
@@ -111,10 +111,10 @@ Scans the build and recommends:
 - themes with enough talk stories to support a through-line;
 - gaps: no video, no photos, thin transcripts, missing dossiers.
 
-Run `bun scripts/next-work.ts` (or `/next`). It writes nothing by default; add
-`--write` to save `editorial/next.md`.
+Run `bun scripts/next-work.ts` (or `/conference-next`). It writes nothing by
+default; add `--write` to save `editorial/next.md`.
 
-### 2. `polish-talk`
+### 2. `talk-polish`
 
 Turns `transcript.md` into `story.md`:
 
@@ -125,7 +125,7 @@ Turns `transcript.md` into `story.md`:
   one or two verbatim quotes, and a visual cue;
 - leaves the transcript untouched.
 
-### 3. `talk`
+### 3. `talk-page`
 
 Builds `talks/<slug>/experience/page.html` from the story:
 
@@ -136,14 +136,14 @@ Builds `talks/<slug>/experience/page.html` from the story:
 
 ### 4. Through-line atlas
 
-After three or more talk pages exist, `/atlas` builds the stack visual and the
-cross-talk essay. The atlas links to the talk pages for the full story.
+After three or more talk pages exist, `/conference-atlas` builds the stack visual
+and the cross-talk essay. The atlas links to the talk pages for the full story.
 
 ## Skills
 
 | Skill | Use |
 | --- | --- |
-| `/next` | What should I work on next? |
-| `/polish-talk` | Turn a transcript into a readable story. |
-| `/talk` | Design and build the talk experience. |
-| `/atlas` | Build the through-line once the talk pages exist. |
+| `/conference-next` | What should I work on next? |
+| `/talk-polish` | Turn a transcript into a readable story. |
+| `/talk-page` | Design and build the talk experience. |
+| `/conference-atlas` | Build the through-line once the talk pages exist. |

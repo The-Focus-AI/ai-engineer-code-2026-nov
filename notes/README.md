@@ -6,10 +6,10 @@ asked, the link someone mentioned, the thing to look up later.
 ```
 notes/
   inbox/        one file per capture
-  research/     an /ask-talks or /talk-themes answer kept on purpose
+  research/     an /talk-ask or /conference-themes answer kept on purpose
 ```
 
-Capture with `/capture`; it timestamps in the event timezone and links the
+Capture with `/conference-capture`; it timestamps in the event timezone and links the
 session when it can. A note is evidence, not a summary: write what was said or
 seen, not what you concluded a week later.
 

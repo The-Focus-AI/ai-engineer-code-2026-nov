@@ -1,6 +1,6 @@
 ---
-name: polish-talk
-description: Turn a raw ASR transcript into a readable talk story — chapters, key points, pull quotes, and visual cues — while keeping the transcript as the untouched evidence. Use after /next, or when a talk is hard to read.
+name: talk-polish
+description: Turn a raw ASR transcript into a readable talk story — chapters, key points, pull quotes, and visual cues — while keeping the transcript as the untouched evidence. Use after /conference-next, or when a talk is hard to read.
 ---
 
 # Polish a talk
@@ -84,5 +84,5 @@ Rules:
 
 ## 4. Hand off
 
-The next step is `/talk`, which designs the page around the story. Do not build
+The next step is `/talk-page`, which designs the page around the story. Do not build
 the page here.

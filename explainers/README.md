@@ -15,7 +15,7 @@ explainers/<slug>/
   index.html        bundled; re-bundle after every edit
 ```
 
-Build one with `/explainer`. The model composes `page.html` against
+Build one with `/conference-explainer`. The model composes `page.html` against
 [`design.md`](../design.md); the bundle injects the fixed runtime and data:
 
 ```bash

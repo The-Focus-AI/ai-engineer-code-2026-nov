@@ -1,5 +1,5 @@
 ---
-name: atlas
+name: conference-atlas
 description: Build an argument atlas — an evidence-backed graph of themes, claims, talks, questions, and disagreements — as an interactive page. Use when the user wants a map, diagram, constellation, or non-linear alternative to a magazine or explainer.
 ---
 
