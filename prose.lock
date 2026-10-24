@@ -1,1 +1,7 @@
-# No external OpenProse dependencies.
+# OpenProse dependencies. `deps/` is a cache, reproducible from this file.
+#
+# The standard library is pinned for authoring: `std/ops/compose` designs new
+# contracts, `std/ops/lint` validates one semantically. Neither is called by a
+# render yet, so no contract declares a `use` for them — add one before relying
+# on `prose install` to re-resolve this pin.
+github.com/openprose/prose 0ab7237ced4ac29ca002c94878e69c5cbf6b1ea6
