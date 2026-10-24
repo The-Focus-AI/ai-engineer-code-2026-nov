@@ -78,10 +78,12 @@ gh repo create <owner>/conference-<slug> --private --source=. --remote=origin
 git add .gitignore .env.example
 git commit -m "conference: initialize <name>"
 git push -u origin main
+git remote remove template
 ```
 
 If the user does not want a remote yet, run `git init` and commit locally; the
-directory is still a separate repo.
+directory is still a separate repo. The archive must not pull the master; its
+`origin` is its own repo.
 
 ## 6. Build the schedule truth
 
