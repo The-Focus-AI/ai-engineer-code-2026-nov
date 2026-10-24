@@ -20,6 +20,9 @@ photos/PXL_*
 photos/event/
 talks/*/photos/
 
+# local harness config
+.claude/
+
 # package-manager caches
 node_modules/
 .bun-cache/
