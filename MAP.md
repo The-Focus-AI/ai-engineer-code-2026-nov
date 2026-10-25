@@ -129,7 +129,7 @@ Missing in both, and how it comes back:
 | `.env` | `cp .env.example .env`, set `CONFERENCE_URL` |
 | `dist/` | `prose compile`, then promote `manifest.next.json` → `manifest.active.json` |
 | `runs/` | the first serve wake |
-| `state/`, `brief/` | `conference-init` in a new directory, then the schedule render |
+| `state/`, `brief/` | the schedule render, in a session opened in the build |
 | `talks/` | `recording-intake` after `mise run sync` |
 | `talks/*/photos/`, `photos/event/` | `mise run photos` over the local drop; filed copies stay local |
 | `recordings/**/*.m4a` | `mise run sync` (needs Full Disk Access) |

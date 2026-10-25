@@ -71,8 +71,8 @@ the files it writes.
 
 Run the `conference-init` skill **from this master clone**. It clones the
 template into a new sibling directory, removes the ignore block there, sets
-`CONFERENCE_URL`, creates a separate git repo for that directory, and renders the
-schedule.
+`CONFERENCE_URL`, and creates a separate git repo. It stops there. Open a new
+session in that directory before compiling or serving.
 
 ```text
 Run the conference-init skill. This is the master template.

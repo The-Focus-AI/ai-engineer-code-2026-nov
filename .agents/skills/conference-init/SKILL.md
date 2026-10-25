@@ -1,6 +1,6 @@
 ---
 name: conference-init
-description: Create a new conference build as a separate directory and repository. Use when starting a new conference from the master template; clones the template to a sibling directory, removes the conference fence, and initializes the archive repo.
+description: Create a new conference build as a separate directory and repository. Use when starting a new conference from the master template. Clones the template to a sibling directory, removes the conference fence, writes .env, and initializes the archive repo. Stops there. The next session is opened in the new directory.
 ---
 
 # New conference build
@@ -31,7 +31,6 @@ an existing build.
 - **Conference URL** — the schedule page. Never invent it.
 - **Repository** — default `<owner>/<conference-slug>`, private unless the user
   says public, e.g. `The-Focus-AI/ai-engineer-2026-oct`.
-- Timezone and dates only if the source page does not publish them.
 
 ## 2. Clone the template to the new directory
 
@@ -63,89 +62,45 @@ Delete the whole block. This is the mode change: this repo now tracks its own
 Do **not** delete the rest of `.gitignore`. `dist/`, `runs/`, `.env`, raw audio,
 raw photos, and package caches stay ignored in every build.
 
-## 4. Configure
+## 4. Write `.env`
 
 ```bash
-cp .env.example .env          # set CONFERENCE_URL
-mise install
-bun install
+cp .env.example .env
 ```
 
-Do not commit `.env`.
+Set `CONFERENCE_URL` to the URL the user gave. Leave the other lines as in the
+example. `.env` stays uncommitted.
 
 ## 5. Create the archive repository
 
 ```bash
 gh repo create <owner>/<conference-slug> --private --source=. --remote=origin
-git add .gitignore .env.example
+git add .gitignore
 git commit -m "conference: initialize <name>"
 git push -u origin main
 git remote remove template
 ```
 
-If the user does not want a remote yet, run `git init` and commit locally; the
-directory is still a separate repo. The archive must not pull the master; its
-`origin` is its own repo.
+If the user does not want a remote yet, commit locally. The directory is still
+a separate repo. Its `origin` is its own archive, not the master.
 
-## 6. Build the schedule truth
+## 6. Stop
 
-In the agent:
+This skill is done when:
 
-```text
-prose compile
-```
+- the target directory exists and is its own git repository
+- the conference fence is gone from its `.gitignore`
+- its `.env` sets `CONFERENCE_URL`
+- `origin` is the new archive, or the commit is local because the user declined a remote
 
-Promote the compile:
-
-```bash
-cp dist/manifest.next.json dist/manifest.active.json
-```
-
-Then run the schedule node, either as one wake or under serve:
-
-```text
-prose run src/conference-schedule.prose.md
-```
-
-or `prose serve` and keep the session open.
-
-This writes `state/world-model/conference-schedule/published/` and
-`brief/schedule.md`.
-
-## 7. Verify before committing data
-
-- `brief/schedule.md` has a masthead, venue, and day-by-day sessions.
-- `state/world-model/conference-schedule/published/event/event.json` has the
-  right name, dates, and timezone.
-- The parsed session count reconciles with the page's stated total. If it does
-  not, stop and report the coverage gap; do not publish a partial schedule as if
-  it were whole.
-
-Then commit the build data:
-
-```bash
-git add brief state
-git commit -m "conference: first schedule render"
-git push
-```
-
-`brief/` and `state/` are tracked on purpose in a build. Their diffs are the
-audit trail of what the conference changed.
-
-## 8. Continue
-
-- Recordings: `mise run sync`, then run `recording-intake`.
-- Photos: `mise run photos`, then run `talk-photos`.
-- Talks: `/talk-ask`; patterns: `/conference-themes`.
-- Artifacts: `/conference-hooks`, `/conference-explainer`, `/conference-magazine`.
-- Talk stories: `/conference-next` → `/talk-polish` → `/talk-page`.
-- Before calling it done: `mise run validate` and `mise run typecheck` pass.
+Tell the user the directory path. The next step is a new session opened in that
+directory. This session ends here. Schedule rendering, `prose compile`, and
+`prose serve` are that later session's work.
 
 ## Boundaries
 
 - No branches for builds. A branch in the master is not an archive.
 - Never initialize a second conference in an existing build; clone again.
-- Do not copy the NYC build into a new conference.
+- Do not copy another conference's build into the new directory.
 - Do not delete `.gitignore`; delete only the marked block.
-- If a step fails, leave the last-good truth standing and report the failed
-  receipt; do not publish a half-built schedule.
+- If a step fails, stop and report which step failed. Leave the directory as it is.

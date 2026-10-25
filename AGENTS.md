@@ -9,8 +9,8 @@ product; this is the working agreement for changing it.
 At session start, run `git check-ignore brief/ state/ talks/`. If all three
 print, this is the **template**: it has no conference data and the “conference
 build data” block in `.gitignore` hides one. Do not invent data here. From the
-master, run `conference-init`; it clones to a **new sibling directory** and
-creates a separate repo.
+master, run `conference-init`; it clones to a **new sibling directory**,
+creates a separate repo, writes `.env`, and stops. Open a new session there.
 
 If none print, this is a **build**. Work here. A build deletes that block so its
 own `brief/`, `state/`, `talks/`, and artifacts are tracked. A build is never a

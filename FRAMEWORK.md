@@ -155,8 +155,8 @@ One file, three lists, every item sourced:
 
 1. From the master, run the `conference-init` skill. It clones to a new sibling
    directory, removes the template's conference fence, creates a separate repo,
-   and sets `CONFERENCE_URL`, dates, timezone, and social handles.
-2. `prose compile`, promote, `prose serve` in the coding agent.
+   and sets `CONFERENCE_URL`. Open a new session in that directory.
+2. In that session: `prose compile`, promote, `prose serve` in the coding agent.
 3. Continuously, during: `mise run sync`, `mise run photos`,
    `/conference-capture` for what the mics miss, `/talk-ask` and
    `/conference-themes` for questions, `/conference-hooks` after a talk that
