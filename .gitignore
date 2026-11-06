@@ -28,29 +28,3 @@ node_modules/
 .bun-cache/
 .npm-cache/
 
-# BEGIN conference build data
-# The upstream template ignores one conference's build. A fork deletes this
-# whole block so its own brief/, state/, talks/ and artifacts are tracked.
-# See .agents/skills/conference-init/SKILL.md.
-/brief/
-/state/
-/talks/
-/recordings/inbox/*
-!/recordings/inbox/.gitkeep
-/photos/*
-!/photos/README.md
-!/photos/.gitkeep
-/analysis/
-/notes/inbox/*
-!/notes/inbox/.gitkeep
-/notes/research/*
-!/notes/research/.gitkeep
-/editorial/backlog.md
-/editorial/hooks/*
-!/editorial/hooks/.gitkeep
-/explainers/*/
-!/explainers/runtime/
-/atlases/*/
-!/atlases/runtime/
-/magazine/*/
-# END conference build data
