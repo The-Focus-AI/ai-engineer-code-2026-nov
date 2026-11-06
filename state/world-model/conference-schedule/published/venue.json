@@ -1,0 +1,57 @@
+{
+  "name": "Hilton San Francisco Union Square",
+  "address": "333 O'Farrell St, San Francisco, CA 94102",
+  "city": "San Francisco",
+  "maps_url": "https://maps.google.com/?q=Hilton+San+Francisco+Union+Square,+333+O%27Farrell+St,+San+Francisco,+CA+94102",
+  "rooms": [
+    {
+      "room_id": "continental-13-workshop-room-1",
+      "name": "Continental 1–3 (Workshop Room 1)",
+      "floor": "Level 2"
+    },
+    {
+      "room_id": "continental-4-workshop-room-2",
+      "name": "Continental 4 (Workshop Room 2)",
+      "floor": "Level 2"
+    },
+    {
+      "room_id": "continental-46-mainstage",
+      "name": "Continental 4–6 (Mainstage)",
+      "floor": "Level 2"
+    },
+    {
+      "room_id": "continental-5-breakfast-lunch",
+      "name": "Continental 5 (Breakfast & Lunch)",
+      "floor": "Level 2"
+    },
+    {
+      "room_id": "continental-6-workshop-room-3",
+      "name": "Continental 6 (Workshop Room 3)",
+      "floor": "Level 2"
+    },
+    {
+      "room_id": "continental-7-token-billionaires-lounge",
+      "name": "Continental 7 (Token Billionaires Lounge)",
+      "floor": "Level 2"
+    },
+    {
+      "room_id": "continental-79-workshop-room-4",
+      "name": "Continental 7–9 (Workshop Room 4)",
+      "floor": "Level 2"
+    },
+    {
+      "room_id": "golden-gate-expo-hall-lunch-reception",
+      "name": "Golden Gate (Expo Hall, Lunch & Reception)",
+      "floor": "Level 1"
+    },
+    {
+      "room_id": "registration-outside-golden-gate",
+      "name": "Registration (outside Golden Gate)",
+      "floor": "Level 1"
+    }
+  ],
+  "transit": null,
+  "accessibility": null,
+  "confirmed": true,
+  "source_url": "https://ai.engineer/code/2026"
+}

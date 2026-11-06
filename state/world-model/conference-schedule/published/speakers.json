@@ -1,0 +1,1125 @@
+{
+  "aamir-shakir": {
+    "name": "Aamir Shakir",
+    "affiliation": "Mixedbread",
+    "bio": "Aamir Shakir is the Founder and CEO of Mixedbread, where he builds retrieval systems for complex, unstructured data. His work spans multimodal search, reranking, and specialized search agents.",
+    "links": [],
+    "talks": [
+      "1373462"
+    ],
+    "source_url": "https://ai.engineer/speakers/aamir-shakir"
+  },
+  "ahmad-osman": {
+    "name": "Ahmad Osman",
+    "affiliation": "Osmantic",
+    "bio": "Ahmad Osman is the Founder & CEO of Osmantic, which builds private AI infrastructure and ODS, the open-source Osmantic Deployment System for local and hybrid AI. His work spans inference, agents, self-hosted deployments, and the hardware behind them. He moderates r/LocalLLaMA, has spoken and led workshops at AI Engineer World's Fair, and has been featured by Latent Space and The Washington Post.",
+    "links": [
+      "https://ahmadosman.com",
+      "https://github.com/theahmadosman",
+      "https://www.linkedin.com/in/theahmadosman",
+      "https://x.com/theahmadosman"
+    ],
+    "talks": [
+      "1381709"
+    ],
+    "source_url": "https://ai.engineer/speakers/ahmad-osman"
+  },
+  "alex-lebedev": {
+    "name": "Alex Lebedev",
+    "affiliation": "PostHog",
+    "bio": "Hey, I'm Alex. I've been building AI products since early GPT-3, most of my code is open source (250+ PRs), and I actively work on putting myself out of a job by improving code generation and code reviews. Today I'm an AI Product Engineer at PostHog, building distributed multi-agent systems from zero. Before that: video analysis for my own startup, Hotjar's first AI features, and working on the scrapy crawling library. Before engineering: 7+ years in marketing and project management. I talk at events a lot, usually with live demos that can fail miserably (but thankfully don't).",
+    "links": [
+      "https://posthog.com/",
+      "https://www.linkedin.com/in/nightowlcoder/",
+      "https://x.com/nightowl_coder"
+    ],
+    "talks": [
+      "1304940"
+    ],
+    "source_url": "https://ai.engineer/speakers/alex-lebedev"
+  },
+  "andrew-finch": {
+    "name": "Andrew Finch",
+    "affiliation": "Sonar",
+    "bio": "Full-stack software engineer and tech lead. Building Gitar. Formerly at Forward, Uber.",
+    "links": [
+      "https://github.com/afincha",
+      "https://www.linkedin.com/in/andrewafinch"
+    ],
+    "talks": [
+      "1373461"
+    ],
+    "source_url": "https://ai.engineer/speakers/andrew-finch"
+  },
+  "ankit-jain": {
+    "name": "Ankit Jain",
+    "affiliation": "Aviator",
+    "bio": "Ankit Jain is a founder and CEO of Aviator, a developer productivity platform used by modern engineering teams to ship AI-generated code at scale — without the review bottlenecks, broken builds, or brittle deployments. He also leads The Hangar, a community of senior engineers and engineering leaders focused on developer experience, and Xoogler, the ex-Google alumni network.",
+    "links": [
+      "https://aviator.co",
+      "https://github.com/jainankit",
+      "https://twitter.com/ankitxg",
+      "https://www.aviator.co/blog/author/ankitjain/page/4",
+      "https://www.linkedin.com/in/ankitjaindce",
+      "https://www.linkedin.com/in/ankitjaindce/",
+      "https://x.com/ankitxg"
+    ],
+    "talks": [
+      "1333169"
+    ],
+    "source_url": "https://ai.engineer/speakers/ankit-jain"
+  },
+  "ankit-mathur": {
+    "name": "Ankit Mathur",
+    "affiliation": "Databricks",
+    "bio": "Ankit Mathur is the engineering lead for AI Infrastructure at Databricks. During his time, he's helping build scalable systems for LLM serving, smart routing, agent deployment, and more.",
+    "links": [],
+    "talks": [
+      "1373459"
+    ],
+    "source_url": "https://ai.engineer/speakers/ankit-mathur"
+  },
+  "armin-ronacher": {
+    "name": "Armin Ronacher",
+    "affiliation": "Earendil",
+    "bio": "Armin Ronacher created Flask and Jinja, foundational tools for building websites in Python, and co-founded Earendil, a public-benefit company developing open, human-directed AI software. After a decade at Sentry, he has become a distinctive voice on coding agents: generating software faster helps only when engineers retain enough understanding to remain responsible for it.",
+    "links": [
+      "https://github.com/mitsuhiko",
+      "https://lucumr.pocoo.org",
+      "https://www.linkedin.com/in/arminronacher",
+      "https://x.com/mitsuhiko"
+    ],
+    "talks": [
+      "1373472"
+    ],
+    "source_url": "https://ai.engineer/speakers/armin-ronacher"
+  },
+  "arsalan-bashir": {
+    "name": "Arsalan Bashir",
+    "affiliation": "Sentry",
+    "bio": "Arsalan Bashir is a Staff Software Engineer, AI at Sentry, building tools that help developers and their AI agents find and fix broken code faster.",
+    "links": [],
+    "talks": [
+      "1379011"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "arundeep-nagaraj": {
+    "name": "Arundeep Nagaraj",
+    "affiliation": "AWS",
+    "bio": "Arundeep is a technologist and engineering leader with 15+ years of progressive responsibility across customer success, solutions architecture, and developer experience at AWS and Cisco. He leads customer success and solutions architecture for Kiro, an agentic engineering solution spanning IDE, CLI, Web, Crew, and Mobile. He has built in-product experiences that drive adoption and owns kiro.dev from content strategy to infrastructure. Outside of work and hiking trails in North Carolina, he enjoys playing sports (Basketball, Tennis and Chess).",
+    "links": [
+      "https://x.com/arun_deepn"
+    ],
+    "talks": [
+      "1375631"
+    ],
+    "source_url": "https://ai.engineer/speakers/arundeep-nagaraj"
+  },
+  "bradford-chang": {
+    "name": "Bradford Chang",
+    "affiliation": "Databricks",
+    "bio": "Bradford Chang is a Senior Solutions Architect at Databricks, helping media and entertainment companies transform their business with data and AI. Previously, he worked in games at AWS and healthcare at Orion Health. He studied Computer Science at the University of Southern California and loves deploying AI agents to solve real problems.",
+    "links": [],
+    "talks": [
+      "1373449"
+    ],
+    "source_url": "https://ai.engineer/speakers/bradford-chang"
+  },
+  "brandon-thomas": {
+    "name": "Brandon Thomas",
+    "affiliation": "ArtCraft",
+    "bio": "Brandon Thomas is a filmmaker and engineer who founded ArtCraft for himself and the people he makes films with. He wanted directors working with AI-generated images and video to be able to place actors and frame a shot before choosing a model to render it.",
+    "links": [
+      "https://brand.io/",
+      "https://github.com/echelon",
+      "https://x.com/echelon"
+    ],
+    "talks": [
+      "1378217"
+    ],
+    "source_url": "https://ai.engineer/speakers/brandon-thomas"
+  },
+  "brandon-waselnuk": {
+    "name": "Brandon Waselnuk",
+    "affiliation": "Unblocked",
+    "bio": "Brandon Waselnuk is Developer Relations at Unblocked, the context layer for agentic software development. He previously led product at Mintlify and co-founded Squire AI, an AI code review platform. A Y Combinator alum (S21) and Venture Partner at Pioneer Fund, Brandon also led product initiatives at IBM, helping create Design Thinking @ IBM and managing portfolio planning for IBM's $1B+ Business Analytics division. He's passionate about building tools that make engineering teams more productive.",
+    "links": [
+      "https://github.com/baell",
+      "https://waselnuk.com/",
+      "https://x.com/brandonwaselnuk"
+    ],
+    "talks": [
+      "1373476"
+    ],
+    "source_url": "https://ai.engineer/speakers/brandon-waselnuk"
+  },
+  "brian-kennedy": {
+    "name": "Brian Kennedy",
+    "affiliation": "ZoomInfo",
+    "bio": "Brian Kennedy is a Principal Engineer at ZoomInfo, leading engineering for the Agentic AI Platform that powers Agent Teams and over a hundred production agents. He has spent the last year on the runtime underneath them: the orchestrator, the gates that decide whether a step counts, and the evals that keep the whole thing honest. Before that he spent a decade at early-stage startups, most recently building generative AI platforms and products.",
+    "links": [
+      "https://www.linkedin.com/in/brianpk/"
+    ],
+    "talks": [
+      "1376197"
+    ],
+    "source_url": "https://ai.engineer/speakers/brian-kennedy"
+  },
+  "cassandra-chin": {
+    "name": "Cassandra Chin",
+    "affiliation": null,
+    "bio": null,
+    "links": [],
+    "talks": [
+      "ai-engineer-kids-day@2026-11-14T12:30:00-08:00"
+    ],
+    "source_url": "https://ai.engineer/code/2026"
+  },
+  "charlie-guo": {
+    "name": "Charlie Guo",
+    "affiliation": "OpenAI",
+    "bio": "Charlie Guo is a Developer Experience Engineer at OpenAI, where he helps developers build with the OpenAI API. He is also the author of Artificial Ignorance, an AI publication at the intersection of engineering and intelligence. Before joining OpenAI, Charlie spent more than a decade building products and internal tools, including as a startup founder. He is based in Berkeley, California.",
+    "links": [
+      "https://www.ignorance.ai/",
+      "https://www.linkedin.com/in/charlierguo",
+      "https://x.com/charlierguo"
+    ],
+    "talks": [
+      "1376183"
+    ],
+    "source_url": "https://ai.engineer/speakers/charlie-guo"
+  },
+  "chibi-vikram": {
+    "name": "Chibi Vikram",
+    "affiliation": "UiPath",
+    "bio": "Chibi Chakaravarthi is an engineer at UiPath building the infrastructure behind its AI agents, from evaluation pipelines to the serverless systems that run them at scale. Chibi’s work focuses on making agentic systems measurable and reliable enough to ship to enterprise customers. Lately, that has meant bringing Jev into flows, extraction, reranking, and internal tools across the product. Chibi enjoys turning research ideas into production systems that real teams depend on.",
+    "links": [
+      "https://www.uipath.com/"
+    ],
+    "talks": [
+      "1374822"
+    ],
+    "source_url": "https://ai.engineer/speakers/chibi-vikram"
+  },
+  "chinmay-goyal": {
+    "name": "Chinmay Goyal",
+    "affiliation": "Glean",
+    "bio": "Chinmay Goyal is a software engineer at Glean, where he works on AI agents and Glean Assistant. His work focuses on building agent experiences and the backend systems that support them.",
+    "links": [
+      "https://www.glean.com/"
+    ],
+    "talks": [
+      "1374818"
+    ],
+    "source_url": "https://ai.engineer/speakers/chinmay-goyal"
+  },
+  "cj-avilla": {
+    "name": "CJ Avilla",
+    "affiliation": "Anthropic",
+    "bio": "CJ Avilla works on platform and developer experience at Anthropic, helping developers build with Claude. His work spans documentation, quickstarts, cookbooks, and SDK examples: the materials developers use to turn an API into a working application.",
+    "links": [
+      "https://github.com/cjavdev",
+      "https://linkedin.com/in/cjavilla/",
+      "https://www.cjav.dev/",
+      "https://x.com/cjav_dev"
+    ],
+    "talks": [
+      "1373448"
+    ],
+    "source_url": "https://ai.engineer/speakers/cj-avilla"
+  },
+  "corey-quinn": {
+    "name": "Corey Quinn",
+    "affiliation": "The Duckbill Group",
+    "bio": "Corey Quinn is the Chief Cloud Economist at Duckbill. His unique brand of snark combines with a deep understanding of AWS's offerings, unlocking a level of insight that's both penetrating and hilarious. He lives in San Francisco with his spouse and daughters.",
+    "links": [
+      "https://www.linkedin.com/in/coquinn/"
+    ],
+    "talks": [
+      "1376240",
+      "1376244",
+      "1376245",
+      "1376246",
+      "1380094",
+      "1380095",
+      "1380097",
+      "1380098"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "dan-kiuna": {
+    "name": "Dan Kiuna",
+    "affiliation": "AWS",
+    "bio": "Dan is a Specialist Solutions Architect at AWS where he works on Kiro, an AI coding tool with an IDE, CLI, Web, and a workspace called Crew. His focus is on integrations through agent plugins, MCP, and Crew apps. Before Kiro, he worked on AWS AppSync and AWS Amplify. In his free time, he enjoys playing guitar, piano, pool, and spending time with his family.",
+    "links": [
+      "https://github.com/nadetastic",
+      "https://nadetastic.com/",
+      "https://www.linkedin.com/in/dan-kiuna/",
+      "https://x.com/nadetastic"
+    ],
+    "talks": [
+      "1375631"
+    ],
+    "source_url": "https://ai.engineer/speakers/dan-kiuna"
+  },
+  "daniel-balsam": {
+    "name": "Daniel Balsam",
+    "affiliation": "Goodfire",
+    "bio": "Daniel Balsam is co-founder and CTO of Goodfire, an AI interpretability company focused on understanding and designing AI systems. He leads Goodfire’s research on interpretability, model steering, and AI safety, and previously served as Head of AI at RippleMatch.",
+    "links": [
+      "https://www.goodfire.com/",
+      "https://www.linkedin.com/in/dbalsam/",
+      "https://x.com/GoodfireAI"
+    ],
+    "talks": [
+      "1356850"
+    ],
+    "source_url": "https://ai.engineer/speakers/daniel-balsam"
+  },
+  "daniel-tao": {
+    "name": "Daniel Tao",
+    "affiliation": "Atlassian",
+    "bio": "Daniel Tao is Lead Principal Engineer for Dev Infra at Atlassian, responsible for technical leadership and development of solutions that power all of Atlassian’s engineering efforts. Dan previously served as Head of Engineering for multiple Atlassian products, including Confluence, Bitbucket, Compass, and DevOps Products. Dan's professional experience prior to Atlassian includes engineering roles at Google, ThoughtWorks, and multiple startups across a diverse set of industries including finance, law, entertainment, education, and retail.",
+    "links": [
+      "https://philosopherdeveloper.com/",
+      "https://www.linkedin.com/in/dantao/"
+    ],
+    "talks": [
+      "1379163"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "devin-gupta": {
+    "name": "Devin Gupta",
+    "affiliation": "Parallel",
+    "bio": "Devin Gupta is a core engineer at Parallel Web Systems, focusing on building out the next generation of web infrastructure for LLMs. In particular, he works on post-training search models and leading the Parallel Decisions API. Before this, he worked in long/short investing at Balyasny and got his physics degree at Stanford.",
+    "links": [
+      "https://devin-gupta.github.io/",
+      "https://www.linkedin.com/in/devin-gupta/",
+      "https://x.com/devingupta_"
+    ],
+    "talks": [
+      "1381580"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "dexter-horthy": {
+    "name": "Dexter Horthy",
+    "affiliation": "HumanLayer",
+    "bio": "Dex is CEO and co-founder at HumanLayer, building an agentic IDE and collaboration platform that helps teams solve hard problems in complex codebases without devolving into slop. Dex coined the term context engineering in April 2025, has keynoted AI Engineer conferences and his practical, no-hype talks on agentic coding have over 1 million views on YouTube. Dex built lunar exploration tooling for NASA researchers in high school, and spent 10+ years in the Kubernetes/Infra space before getting into AI.",
+    "links": [
+      "https://theouterloop.substack.com",
+      "https://twitter.com/dexhorthy",
+      "https://www.linkedin.com/in/dexterihorthy"
+    ],
+    "talks": [
+      "1325061"
+    ],
+    "source_url": "https://ai.engineer/speakers/dex-horthy"
+  },
+  "diogo-almeida": {
+    "name": "Diogo Almeida",
+    "affiliation": "TypeSafe AI",
+    "bio": "Diogo Almeida is co-founder and chief executive of TypeSafe AI, where he is building Jev, an AI model that returns typed decisions and probabilities directly to software. At OpenAI, he coauthored InstructGPT, helping develop the human-feedback training behind conversational AI. His subsequent work tackles a limitation he sees in that approach: a model can produce responses people prefer without being ready to make unattended operational decisions.",
+    "links": [
+      "https://typesafe.ai",
+      "https://www.linkedin.com/in/diogomda",
+      "https://x.com/completeskeptic"
+    ],
+    "talks": [
+      "1373465"
+    ],
+    "source_url": "https://ai.engineer/speakers/diogo-almeida"
+  },
+  "dominik-kundel": {
+    "name": "Dominik Kundel",
+    "affiliation": "OpenAI",
+    "bio": "Dominik Kundel works on developer experience and SDKs at OpenAI, building the infrastructure that turns powerful models into usable, controllable software agents. He co-designed and implemented the OpenAI Agents SDK for TypeScript with Kazuhiro Sera and has contributed to Codex, gpt-oss and a Rust library for rendering the Harmony format.",
+    "links": [
+      "https://dkundel.com",
+      "https://github.com/dkundel",
+      "https://www.linkedin.com/in/dkundel",
+      "https://x.com/dkundel"
+    ],
+    "talks": [
+      "1376183"
+    ],
+    "source_url": "https://ai.engineer/speakers/dominik-kundel"
+  },
+  "doug-clauson": {
+    "name": "Doug Clauson",
+    "affiliation": "AWS",
+    "bio": "Doug Clauson is a Principal Product Manager for Kiro, where he leads Kiro CLI and many core agent capabilities. He has been with AWS for the last 5 years, managing developer tools, and is an active builder. Prior to AWS he was in aerospace building flight simulation software and aircraft technology. Ask him about the time he built real life X wings for Walt Disney World!",
+    "links": [],
+    "talks": [
+      "1375634"
+    ],
+    "source_url": "https://ai.engineer/speakers/doug-clauson"
+  },
+  "elise-gonzales": {
+    "name": "Elise Gonzales",
+    "affiliation": "Databricks",
+    "bio": "Elise Gonzales is the Product Manager for Omnigent at Databricks. Previously, she's worked for Microsoft on HoloLens, Amazon Alexa, and several start-ups in the data space. She went to Carnegie Mellon for Computer Science and enjoys working on complex, data-intensive products.",
+    "links": [],
+    "talks": [
+      "1373449"
+    ],
+    "source_url": "https://ai.engineer/speakers/elise-gonzales"
+  },
+  "erik-hanchett": {
+    "name": "Erik Hanchett",
+    "affiliation": "AWS",
+    "bio": "Erik Hanchett is a Senior Developer Advocate at AWS and creator of Program With Erik, a software development YouTube channel with more than 100,000 subscribers. He has taught developers for over a decade, written two books on web development, and spoken around the world. His recent work focuses on AI agents.",
+    "links": [
+      "https://facebook.com/computation",
+      "https://twitter.com/ErikCH",
+      "https://www.linkedin.com/in/erikhanchett/"
+    ],
+    "talks": [
+      "1375635"
+    ],
+    "source_url": "https://ai.engineer/speakers/erik-hanchett"
+  },
+  "erik-thorelli": {
+    "name": "Erik Thorelli",
+    "affiliation": "CodeRabbit",
+    "bio": "Erik Thorelli is Head of Developer Experience at CodeRabbit, where he works on agent-first products and developer tools. He speaks about Agent Experience (AX), evaluating software with and for LLM agents, patterns and practices of the high-autonomy agentic SDLC, and AI code review. He co-organizes All Things Web, a San Francisco developer community, and previously led mobile and Applied AI teams at Cisco Meraki.",
+    "links": [
+      "https://www.coderabbit.ai",
+      "https://x.com/esthor"
+    ],
+    "talks": [
+      "1380068"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "fabian-hedin": {
+    "name": "Fabian Hedin",
+    "affiliation": "Lovable",
+    "bio": "Fabian Hedin is an accomplished entrepreneur and technology leader with a diverse background in founding and leading innovative companies. As Co-Founder of Lovable, Founder and CEO of Tentium, and Founder and CTO of TenFAST, Fabian has demonstrated a strong ability to drive business growth and technological advancement. Experience as Frontend Lead at Depict and Fullstack Engineer at CurbFood further showcases Fabian's comprehensive skill set in software development and team leadership within the tech industry.",
+    "links": [
+      "https://github.com/fabhed"
+    ],
+    "talks": [
+      "1373469"
+    ],
+    "source_url": "https://ai.engineer/speakers/fabian-hedin"
+  },
+  "francisco-javier-arceo": {
+    "name": "Francisco Javier Arceo",
+    "affiliation": "Baseten",
+    "bio": "Francisco Javier Arceo is a Forward Deployed Engineer at Baseten and a contributor to vLLM Agentic API, connecting coding harnesses and agentic applications to open models across inference engines and serving stacks. He previously worked at Red Hat, Goldman Sachs, and Affirm, and has more than a decade of experience across AI, software engineering, and fintech.",
+    "links": [
+      "https://franciscojavierarceo.dev/",
+      "https://www.linkedin.com/in/franciscojavierarceo/",
+      "https://x.com/franciscojarceo"
+    ],
+    "talks": [
+      "1357839"
+    ],
+    "source_url": "https://ai.engineer/speakers/francisco-javier-arceo"
+  },
+  "frank-coyle": {
+    "name": "Frank Coyle",
+    "affiliation": "UC Berkeley",
+    "bio": "Frank Coyle is a computer science educator with over thirty years of teaching experience, most recently as faculty at SMU and currently teaching Generative AI and Large Language Models at UC Berkeley and the University of Bologna. Frank is the founder of The AI Edge (codesupreme.ai), where he is launching Build to Certify, an eight-week cohort program preparing CS and engineering students for the Claude Certified Architect Foundations exam. His current focus is the practical craft of agentic AI engineering — tool design and MCP integration, context management, prompt engineering, and Claude Code workflows — taught through a hands-on \"MAKE before explain\" pedagogy. He is equally at home explaining tool-use loops to engineers and translating frontier AI concepts for audiences ranging from district attorneys to formerly-incarcerated students learning to code.",
+    "links": [
+      "https://frank-coyle.ai",
+      "https://www.linkedin.com/in/frank-coyle/",
+      "https://x.com/coyle_frankp"
+    ],
+    "talks": [
+      "1302670"
+    ],
+    "source_url": "https://ai.engineer/speakers/frank-coyle"
+  },
+  "george-fraser": {
+    "name": "George Fraser",
+    "affiliation": "Fivetran",
+    "bio": "George Fraser is the CEO and co-founder of Fivetran, the global leader in the modern data movement. George founded Fivetran with Taylor Brown, the company’s Chief Operating Officer, in 2012 after completing the prestigious Y Combinator accelerator program. Under his leadership, Fivetran has grown from a startup into a global enterprise valued at $5.6 billion, serving thousands of companies worldwide to automate data workflows and drive innovation. He holds a PhD in Neurobiology from the University of Pittsburgh and a Bachelor of Science in Cognitive Science and Biology from Carnegie Mellon University.",
+    "links": [
+      "https://www.fivetran.com/",
+      "https://www.linkedin.com/in/george-fraser-a0219230/?isSelfProfile=false",
+      "https://x.com/frasergeorgew?lang=en"
+    ],
+    "talks": [
+      "1356697"
+    ],
+    "source_url": "https://ai.engineer/speakers/george-fraser"
+  },
+  "ishaan-dey": {
+    "name": "Ishaan Dey",
+    "affiliation": "Google DeepMind",
+    "bio": "Ishaan works on design and engineering for Antigravity at Google Deepmind.",
+    "links": [
+      "https://x.com/ishaandey_"
+    ],
+    "talks": [
+      "1376195"
+    ],
+    "source_url": "https://ai.engineer/speakers/ishaan-dey"
+  },
+  "ivan-leo": {
+    "name": "Ivan Leo",
+    "affiliation": "Google DeepMind",
+    "bio": "Ivan works on Developer Experience at Google DeepMind, where he focuses on making it easy to build on Gemini. Previously, he built general-purpose action engines for knowledge work at Manus (acquired by Meta) and worked on open-source libraries like Instructor which made it easy to get reliable structured outputs for language models using Pydantic.",
+    "links": [
+      "https://x.com/ivanleomk"
+    ],
+    "talks": [
+      "1373447",
+      "1373466",
+      "1373612"
+    ],
+    "source_url": "https://ai.engineer/speakers/ivan-leo"
+  },
+  "jacob-prall": {
+    "name": "Jacob Prall",
+    "affiliation": "Render",
+    "bio": "Jacob Prall is a product and engineering leader with experience building developer tools across data infrastructure, cloud platforms, and AI. He is a Lead Developer Experience Engineer at Render and previously led product at SQLite.ai and developer education at Timescale. At Snowflake, he created the open-source AI-ready Data Framework. An educator at heart, he focuses on making complex technical ideas practical and accessible.⁠",
+    "links": [
+      "https://github.com/jacobprall",
+      "https://www.linkedin.com/in/jacob-prall-01abb867"
+    ],
+    "talks": [
+      "1373458"
+    ],
+    "source_url": "https://ai.engineer/speakers/jacob-prall"
+  },
+  "jakub-hojsan": {
+    "name": "Jakub Hojsan",
+    "affiliation": "Exa",
+    "bio": "Jakub Hojsan works on deploying web search in AI agents and production applications. He joined Exa as its first forward deployed engineer in 2025, helping customers integrate search through pre-sales, implementation, and ongoing support. His technical focus addresses a practical weakness in coding assistants: a model can understand a codebase yet lack the newer documentation, library behavior, or breaking changes needed to make a sound decision.",
+    "links": [],
+    "talks": [
+      "1373454"
+    ],
+    "source_url": "https://ai.engineer/speakers/jakub-hojsan"
+  },
+  "james-arthur": {
+    "name": "James Arthur",
+    "affiliation": "Databricks",
+    "bio": "Building Neon at Databricks. Previously CEO & Co-Founder of Electric. Prior to Electric, James co-founded the Post Urban venture builder and was co-founder and CTO of synthetic data company Hazy, digital manufacturing company Opendesk and developed software for companies including Apple and IDEO.",
+    "links": [],
+    "talks": [
+      "1373467"
+    ],
+    "source_url": "https://ai.engineer/speakers/james-arthur"
+  },
+  "jarred-sumner": {
+    "name": "Jarred Sumner",
+    "affiliation": "Anthropic",
+    "bio": "Jarred Sumner created Bun, the open-source JavaScript and TypeScript toolkit that combines a runtime, bundler, package manager, and test runner. What began as an attempt to shorten a 45-second development cycle became infrastructure for distributing coding agents. Jarred and the Bun team joined Anthropic in December 2025; his subsequent work includes directing an AI-assisted Rust rewrite designed to address recurring memory-management defects while preserving Bun’s behavior.",
+    "links": [
+      "https://github.com/Jarred-Sumner"
+    ],
+    "talks": [
+      "1373478"
+    ],
+    "source_url": "https://ai.engineer/speakers/jarred-sumner"
+  },
+  "jason-liu": {
+    "name": "Jason Liu",
+    "affiliation": "OpenAI",
+    "bio": "Jason Liu is the creator of Instructor, the open-source library that turns language-model responses into typed, validated objects, and a developer experience engineer on OpenAI’s Codex team. Instructor lets developers specify the data they need with familiar Python models, check business requirements in code, and return informative errors to the model when a response fails validation.",
+    "links": [
+      "https://github.com/jxnl",
+      "https://jxnl.co",
+      "https://www.linkedin.com/in/jxnlco",
+      "https://x.com/jxnlco"
+    ],
+    "talks": [
+      "1379009"
+    ],
+    "source_url": "https://ai.engineer/speakers/jason-liu"
+  },
+  "jeffrey-pinner": {
+    "name": "Jeffrey Pinner",
+    "affiliation": "Exa",
+    "bio": "Jeff Pinner is chief technology officer of Exa, where he works on search infrastructure for AI agents. His career spans contributions to HTTP/2, marketplace engineering at Lyft, and technology leadership at Robinhood. At Exa, he has highlighted historical web search as a way to backtest models and make evaluations reproducible.",
+    "links": [
+      "https://www.linkedin.com/in/jeff-pinner"
+    ],
+    "talks": [
+      "1373477"
+    ],
+    "source_url": "https://ai.engineer/speakers/jeffrey-pinner"
+  },
+  "justin-mccarthy": {
+    "name": "Justin McCarthy",
+    "affiliation": "Diffusion",
+    "bio": "Justin McCarthy is the founder and CEO of Diffusion. Previously, he co-founded StrongDM and served as CTO, where he built its Software Factory and spent a decade delivering cybersecurity infrastructure for demanding enterprises. He is now defining the frontier of agentic AI through the construction of Software and Demand Factories built for high-consequence settings.",
+    "links": [
+      "https://github.com/jmccarthy",
+      "https://www.linkedin.com/in/justinmccarthy",
+      "https://x.com/builtbyjustin"
+    ],
+    "talks": [
+      "1373480"
+    ],
+    "source_url": "https://ai.engineer/speakers/justin-mccarthy"
+  },
+  "justin-poehnelt": {
+    "name": "Justin Poehnelt",
+    "affiliation": "Helen's Foundry",
+    "bio": "Justin Poehnelt is the founder and CTO of Helen’s Foundry, a startup building tools that help AI agents understand the strategy and intent behind software development. Before that, he spent nearly seven years as a software engineer at Google, where he created the open-source Google Workspace CLI. It went viral and, unexpectedly, got him fired.",
+    "links": [
+      "https://justin.poehnelt.com",
+      "https://www.linkedin.com/in/justin-poehnelt/",
+      "https://x.com/JPoehnelt"
+    ],
+    "talks": [
+      "1357063"
+    ],
+    "source_url": "https://ai.engineer/speakers/justin-poehnelt"
+  },
+  "karan-vaidya": {
+    "name": "Karan Vaidya",
+    "affiliation": "Composio",
+    "bio": "Founder of Composio, building the infra for knowledge work agents",
+    "links": [
+      "https://kvaidya.com/",
+      "https://www.linkedin.com/in/kaavee315/",
+      "https://x.com/KaranVaidya6"
+    ],
+    "talks": [
+      "1341863"
+    ],
+    "source_url": "https://ai.engineer/speakers/karan-vaidya"
+  },
+  "kent-c-dodds": {
+    "name": "Kent C. Dodds",
+    "affiliation": "Independent",
+    "bio": "Kent C. Dodds is the creator of React Testing Library, an independent software engineer and educator who has shaped how developers test applications, build web products, and design AI assistants. His work spans influential JavaScript utilities, developer-education businesses, and Kody, an assistant designed to carry useful capabilities across applications.",
+    "links": [
+      "https://github.com/kentcdodds",
+      "https://kentcdodds.com",
+      "https://www.linkedin.com/in/kentcdodds",
+      "https://x.com/kentcdodds"
+    ],
+    "talks": [
+      "1373453"
+    ],
+    "source_url": "https://ai.engineer/speakers/kent-c-dodds"
+  },
+  "kevin-bernstein": {
+    "name": "Kevin Bernstein",
+    "affiliation": "UiPath",
+    "bio": "Kevin Bernstein is a Solution Architect at UiPath, specializing in agentic AI, enterprise automation, and intelligent orchestration. With over a decade of experience designing and deploying automation solutions, he helps organizations bridge the gap between emerging AI capabilities and real-world business outcomes. His work focuses on building reliable, scalable AI systems that combine autonomous decision-making with deterministic execution and enterprise governance.",
+    "links": [
+      "https://www.uipath.com/"
+    ],
+    "talks": [
+      "1374822"
+    ],
+    "source_url": "https://ai.engineer/speakers/kevin-bernstein"
+  },
+  "khasimul-asif-mohammad": {
+    "name": "Khasimul Asif Mohammad",
+    "affiliation": "Splunk",
+    "bio": "Asif is a Principal Product Manager at Splunk, a Cisco company, where he leads the product roadmap for AI Observability & Resilience (formerly Galileo). His team helps customers evaluate, monitor, guardrail and improve AI agents in production so they can ship reliable, trustworthy AI applications. He has several years of PM experience in scaling developer tools and infrastructure products at AWS, Splunk, and Freshworks, and founded a few startups. He is an angel investor in AI start-ups and a PM mentor.",
+    "links": [
+      "https://www.linkedin.com/in/khasimulasif/"
+    ],
+    "talks": [
+      "1373460"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "killian-carlsen-phelan": {
+    "name": "Killian Carlsen-Phelan",
+    "affiliation": "Sonar",
+    "bio": "Killian Carlsen-Phelan is a software engineer who now works in developer-facing content. He has experience building full-stack apps and has spent a lot of time close to the platform side as well. At Sonar, he creates hands-on technical content for developers: tutorials, sample projects, demos, and blogs that show how to use SonarQube and other offerings in real workflows (IDE, pull requests, and CI pipelines). He likes taking something that feels confusing at first and turning it into clear steps that a developer can follow and trust.",
+    "links": [
+      "https://www.linkedin.com/in/kcarlsen2/"
+    ],
+    "talks": [
+      "1357875"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "lance-martin": {
+    "name": "Lance Martin",
+    "affiliation": "Anthropic",
+    "bio": "Lance Martin is a member of technical staff at Anthropic, where his work includes Claude Managed Agents. Previously part of LangChain’s founding engineering team, he builds research agents, evaluation tools, and teaching materials. His development of open-deep-research captures a defining concern: the workflows that compensate for a model’s weaknesses can become obstacles when its capabilities improve.",
+    "links": [
+      "https://github.com/rlancemartin",
+      "https://rlancemartin.github.io",
+      "https://www.linkedin.com/in/lance-martin-64a33b5",
+      "https://x.com/rlancemartin"
+    ],
+    "talks": [
+      "1379010"
+    ],
+    "source_url": "https://ai.engineer/speakers/lance-martin"
+  },
+  "lauren-tan": {
+    "name": "Lauren Tan",
+    "affiliation": "SpaceXSI (xAI)",
+    "bio": "Lauren is a Principal Engineer at SpaceXSI where she works on Grok Bot and client architecture. She enjoys dropping cheeky memes in chat, playing video games with her partner, learning Korean, and petting her dogs Zelda and Link.",
+    "links": [
+      "https://github.com/poteto",
+      "https://www.linkedin.com/in/laurenelizabethtan"
+    ],
+    "talks": [
+      "1373446"
+    ],
+    "source_url": "https://ai.engineer/speakers/lauren-tan"
+  },
+  "louis-walsh": {
+    "name": "Louis Walsh",
+    "affiliation": "Exa",
+    "bio": "Louis Walsh is a Forward Deployed Engineer at Exa in San Francisco and the developer of Exa for Shopping, a browser extension that uses Exa’s search API to bring price comparisons, retailer alternatives, and independent reviews to shoppers considering a product.",
+    "links": [],
+    "talks": [
+      "1373479"
+    ],
+    "source_url": "https://ai.engineer/speakers/louis-walsh"
+  },
+  "lucas-meijer": {
+    "name": "Lucas Meijer",
+    "affiliation": "AgentsInTheCloud.com",
+    "bio": "Lucas Meijer helped build Unity from a 10-person startup into a 20B public company, as a hacker, an executive and the public face of the engine along the way. He's trying to figure out how to make software in this new world, and wrote agentsinthecloud.com along the way.",
+    "links": [
+      "https://lucasmeijer.com",
+      "https://x.com/lucasmeijer"
+    ],
+    "talks": [
+      "1356771"
+    ],
+    "source_url": "https://ai.engineer/speakers/lucas-meijer"
+  },
+  "luke-alvoeiro": {
+    "name": "Luke Alvoeiro",
+    "affiliation": "Factory",
+    "bio": "Luke Alvoeiro leads core agent at Factory. He builds Droid, the harness behind every Factory surface, and Missions, its multi-agent orchestration system. Before Factory, he co-created goose, Block's open-source AI agent. He focuses on making agents efficient and reliable enough for teams to hand off real work.",
+    "links": [
+      "https://github.com/lukealvoeiro",
+      "https://www.linkedin.com/in/lukealvoeiro"
+    ],
+    "talks": [
+      "1373463"
+    ],
+    "source_url": "https://ai.engineer/speakers/luke-alvoeiro"
+  },
+  "lydia-hallie": {
+    "name": "Lydia Hallie",
+    "affiliation": "Anthropic",
+    "bio": "Lydia Hallie is a Member of Technical Staff at Anthropic, working on developer relations for Claude Code. She creates technical content, talks, and workshops that help developers understand how Claude Code works and how to use it effectively.",
+    "links": [
+      "https://github.com/lydiahallie"
+    ],
+    "talks": [
+      "1373455"
+    ],
+    "source_url": "https://ai.engineer/speakers/lydia-hallie"
+  },
+  "melvin-johnson": {
+    "name": "Melvin Johnson",
+    "affiliation": "Google DeepMind",
+    "bio": "Melvin Johnson is a Vice President of Research at Google DeepMind, where he leads Gemini Post-Training across reinforcement learning, reasoning, alignment, and agentic capabilities for the Gemini model family. Previously at Google Research, he helped build Google’s Neural Machine Translation system and pioneered zero-shot multilingual translation across 100+ languages in Google Translate. He holds an M.S. in Computer Science from Stanford University.",
+    "links": [
+      "https://www.linkedin.com/in/melvinjosej",
+      "https://x.com/melvinjohnsonp"
+    ],
+    "talks": [
+      "1373474"
+    ],
+    "source_url": "https://ai.engineer/speakers/melvin-johnson"
+  },
+  "michael-liendo": {
+    "name": "Michael Liendo",
+    "affiliation": "Auth0",
+    "bio": "As a Staff Developer Advocate at Auth0, I’ve had the opportunity to build applications, develop architectures, and speak around the world as a way to remain customer obsessed. Since my beginnings as a self-taught developer, I’ve been focused on simplifying complex scenarios so the barrier to entry becomes a door easily opened for new developers.",
+    "links": [
+      "https://github.com/FocusOtter",
+      "https://www.focusotter.com/",
+      "https://www.linkedin.com/in/focusotter/",
+      "https://www.youtube.com/@focus_otter",
+      "https://x.com/focusotter"
+    ],
+    "talks": [
+      "1379052"
+    ],
+    "source_url": "https://ai.engineer/speakers/michael-liendo"
+  },
+  "michelle-chen": {
+    "name": "Michelle Chen",
+    "affiliation": "Cloudflare",
+    "bio": "Michelle Chen runs the AI Platform at Cloudflare on the product team. She first started at Cloudflare in 2019 as an intern, took a break to do consulting at McKinsey, and returned to Cloudflare to be Chief of Staff to Dane Knecht (CTO) before starting and taking on the AI Platform. She spends the rest of her time either contemplating design, fashion, literature or hanging out with her dog.",
+    "links": [],
+    "talks": [
+      "1373457"
+    ],
+    "source_url": "https://ai.engineer/speakers/michelle-chen"
+  },
+  "mihail-eric": {
+    "name": "Mihail Eric",
+    "affiliation": "Monaco",
+    "bio": "I’m Head of AI at Monaco, a startup building the future AI-powered revenue platform for GTM teams, backed by Human Capital, Benchmark, and Founders Fund. I'm also an adjunct professor at Stanford, where I created and teach \"The Modern Software Developer\", the university's first course on AI software development. I've trained hundreds of engineers on AI coding principles and have advised dozens of global software teams on AI development. In past lives, I was a technical lead at Amazon Alexa where I built the first LLMs for the organization. I also founded a YC-backed AI coding company. Before that I started Confetti AI, a machine learning education startup that trained thousands of students globally and that I led until its acquisition in 2022. I love teaching. My resources and talks have been viewed 5M+ times on various channels. Some of my past presentations: https://www.youtube.com/watch?v=wEsjK3Smovw",
+    "links": [
+      "http://mihaileric.com",
+      "https://www.linkedin.com/in/mihaileric/",
+      "https://x.com/mihail_eric"
+    ],
+    "talks": [
+      "1334565"
+    ],
+    "source_url": "https://ai.engineer/speakers/mihail-eric"
+  },
+  "natalie-serrino": {
+    "name": "Natalie Serrino",
+    "affiliation": "Gimlet Labs",
+    "bio": "Natalie Serrino is a co-founder of Gimlet Labs and an engineering leader behind KForge, a system that uses AI to generate and optimize the specialized kernels powering machine-learning workloads across different processors. Her work tackles a central obstacle to efficient AI infrastructure: applications increasingly span multiple models, tools, and computational stages, yet adapting their software to unfamiliar accelerators requires scarce systems expertise. Serrino studied computer engineering at Brown University, where she helped establish Spira, an engineering program for high-school girls supported by the National Science Foundation. She subsequently became a founding engineer at Observe and Pixie Labs. Following Pixie’s acquisition by New Relic in 2020, she worked there as a principal engineer, developing infrastructure observability techniques including Kubernetes autoscaling based on application-specific HTTP traffic. At Gimlet, which launched publicly in October 2025, Serrino applies that operational background to heterogeneous inference orchestration: assigning individual stages of agentic applications to processors suited to their distinct computational and memory requirements.",
+    "links": [
+      "https://gimletlabs.ai/blog",
+      "https://www.linkedin.com/in/natalieserrino/",
+      "https://x.com/nserrino"
+    ],
+    "talks": [
+      "1352467"
+    ],
+    "source_url": "https://ai.engineer/speakers/natalie-serrino"
+  },
+  "nikhil-harithas": {
+    "name": "Nikhil Harithas",
+    "affiliation": "Factory",
+    "bio": "Nikhil Harithas led deployed engineering at Factory when he presented its approach to running coding agents on customer infrastructure. His examples come from teams whose policies govern both where code executes and whose credentials an agent can use. Harithas explains how Factory separated Droid’s control plane from the machines doing the work. A gateway and relay let a customer choose its compute, while model keys, snapshots and forks address distinct questions about authorization and what happens to an environment when an agent resumes or branches a task.",
+    "links": [
+      "https://www.linkedin.com/in/hurrythas"
+    ],
+    "talks": [
+      "1373468"
+    ],
+    "source_url": "https://ai.engineer/speakers/nikhil-harithas"
+  },
+  "owen-kephart": {
+    "name": "Owen Kephart",
+    "affiliation": "Vercel",
+    "bio": "Owen Kephart is a Member of Technical Staff at Vercel, where he works on eve, Vercel’s agent framework.",
+    "links": [],
+    "talks": [
+      "1373451"
+    ],
+    "source_url": "https://ai.engineer/speakers/owen-kephart"
+  },
+  "philip-kiely": {
+    "name": "Philip Kiely",
+    "affiliation": "Baseten",
+    "bio": "Philip Kiely is the author of Inference Engineering and works on special projects at Baseten. Outside of work, you'll find Philip practicing martial arts, reading a new book, or cheering for his adopted bay area sports teams.",
+    "links": [
+      "https://linkedin.com/in/philipkiely",
+      "https://philipkiely.com",
+      "https://twitter.com/philipkiely"
+    ],
+    "talks": [
+      "1334659"
+    ],
+    "source_url": "https://ai.engineer/speakers/philip-kiely"
+  },
+  "philipp-schmid": {
+    "name": "Philipp Schmid",
+    "affiliation": "Google DeepMind",
+    "bio": "Philipp Schmid is a Senior AI Developer Relations Engineer at Google DeepMind working on Gemini, Gemma with the mission to help every developer and builder to create and benefit from AI in a responsible way.",
+    "links": [
+      "https://www.linkedin.com/in/philipp-schmid-a6a2bb196/",
+      "https://www.philschmid.de/",
+      "https://x.com/_philschmid"
+    ],
+    "talks": [
+      "1323755",
+      "1373447",
+      "1373612"
+    ],
+    "source_url": "https://ai.engineer/speakers/philipp-schmid"
+  },
+  "quinn-slack": {
+    "name": "Quinn Slack",
+    "affiliation": "Amp",
+    "bio": "Quinn Slack is the co-founder and chief executive of Amp, the coding-agent company, and the co-founder and former chief executive of Sourcegraph, the enterprise code-search business. His career traces the evolution of developer tools from searching unfamiliar codebases to building AI systems that can understand, modify, and evaluate software.",
+    "links": [
+      "https://github.com/sqs",
+      "https://slack.org/",
+      "https://www.linkedin.com/in/quinnslack",
+      "https://x.com/sqs"
+    ],
+    "talks": [
+      "1373481"
+    ],
+    "source_url": "https://ai.engineer/speakers/quinn-slack"
+  },
+  "raz-berman-gold": {
+    "name": "Raz Berman Gold",
+    "affiliation": "Overcut",
+    "bio": "Raz Berman is Co-Founder & CTO of Overcut, building the enterprise control plane for agentic software development. Before Overcut she spent ~10 years at Microsoft, most recently as a Principal Software Engineering Group Manager leading a ~20-person Edge AI team and owning Azure Video Indexer service. She works hands-on with teams rolling AI into their production SDLC — the source of this talk.",
+    "links": [
+      "https://overcut.ai/",
+      "https://www.linkedin.com/in/raz-berman-software-engineering-group-manager"
+    ],
+    "talks": [
+      "1373464"
+    ],
+    "source_url": "https://ai.engineer/speakers/raz-berman-gold"
+  },
+  "richelle-j": {
+    "name": "Richelle J.",
+    "affiliation": "Featherless AI",
+    "bio": null,
+    "links": [],
+    "talks": [
+      "1380080",
+      "1380081"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "ross-cefalu": {
+    "name": "Ross Cefalu",
+    "affiliation": "Factory",
+    "bio": null,
+    "links": [
+      "https://www.linkedin.com/in/rcefalu"
+    ],
+    "talks": [
+      "1373450"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "sajid-mehmood": {
+    "name": "Sajid Mehmood",
+    "affiliation": "Niteshift",
+    "bio": "Sajid Mehmood is the co-founder and CEO of Niteshift, the full-stack cloud for coding agents. Backed by Greylock, Amplify, and BoxGroup, Niteshift lets engineers run any frontier coding agent in the cloud with their full dev environment for end-to-end verification. Previously, Sajid was VP of Engineering at Datadog, where he launched several product lines, including Serverless Monitoring, Network Performance Monitoring, and Cloud Cost Management. He also started and oversaw Datadog's Applied AI group, which trained the state-of-the-art time-series foundation models Toto and Toto 2 and shipped Bits SRE, one of the first developer-facing AI agents, launched in August 2023. Before Datadog, Sajid was the founding CTO of fintech unicorn Taptap Send and a software engineer at Google, where he worked on cross-datacenter networking. He graduated summa cum laude from Princeton with a BSE in Computer Science, where he published research on data visualization and computational biology.",
+    "links": [
+      "https://x.com/smehmood"
+    ],
+    "talks": [
+      "1380927"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "scott-roberts": {
+    "name": "Scott Roberts",
+    "affiliation": "Workday",
+    "bio": "Scott Roberts is scheduled to represent Workday as a keynote speaker at the [2026 AI Engineer Code Summit](https://ai.engineer/code/2026/schedule?session=1376198) in San Francisco in November.",
+    "links": [],
+    "talks": [
+      "1376198"
+    ],
+    "source_url": "https://ai.engineer/speakers/scott-roberts"
+  },
+  "scott-tolinski": {
+    "name": "Scott Tolinski",
+    "affiliation": "Syntax",
+    "bio": null,
+    "links": [],
+    "talks": [
+      "1379134"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "simon-willison": {
+    "name": "Simon Willison",
+    "affiliation": null,
+    "bio": "Simon Willison is the creator of Datasette, a co-creator of the Django web framework, and an independent open-source developer whose work spans data journalism, SQLite, and practical AI engineering. He builds tools that make powerful systems more accessible and inspectable while exposing the security risks of giving language models access to sensitive information.",
+    "links": [
+      "https://github.com/simonw",
+      "https://simonwillison.net",
+      "https://x.com/simonw"
+    ],
+    "talks": [
+      "1376191"
+    ],
+    "source_url": "https://ai.engineer/speakers/simon-willison"
+  },
+  "steve-yegge": {
+    "name": "Steve Yegge",
+    "affiliation": "Independent",
+    "bio": "Steve Yegge is a software engineer, writer, and independent AI adviser who created Beads and Gas Town, open-source tools that preserve coding agents’ work and coordinate their sessions. Earlier, he built Google’s internal code knowledge graph, Grok, and wrote the Platforms Rant. His recent work puts his enthusiasm for autonomous development through the demands of a live multiplayer game: agents must carry assignments across sessions, integrate their changes, and serve players who may not welcome every increase in development speed.",
+    "links": [
+      "https://github.com/steveyegge",
+      "https://www.linkedin.com/in/steveyegge",
+      "https://x.com/steve_yegge",
+      "https://yegge.ai/"
+    ],
+    "talks": [
+      "1373471"
+    ],
+    "source_url": "https://ai.engineer/speakers/steve-yegge"
+  },
+  "sudhir-tonse": {
+    "name": "Sudhir Tonse",
+    "affiliation": "Splunk",
+    "bio": "Sudhir Tonse is a Director of Engineering at Splunk, part of Cisco, where he leads Core Platform & Research for AI Observability and Resilience. His work focuses on helping organizations understand and trust AI systems in production, with an emphasis on the observability, resilience, and security foundations needed to identify risks and build dependable AI applications. Sudhir has more than two decades of experience building engineering teams and platforms across AI/ML, data, cloud infrastructure, and large-scale software. Before joining Splunk, he was Vice President of Engineering at Galileo, an AI startup focused on evaluating and observing generative AI systems that was later acquired by Splunk. At DoorDash, he built and led the Data and AI/ML Platform organization, growing it to more than 100 people and establishing a platform roadmap supporting logistics, recommendations, and other use cases. At Uber, he led engineering in the Marketplace and Data + AI domains during a period of rapid growth. At Netflix, he contributed to the transitions from DVD to streaming and from on-premises systems to the cloud. Sudhir enjoys sharing lessons from building AI platforms through talks and writing, and mentoring engineering leaders.",
+    "links": [],
+    "talks": [
+      "1373460"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "sydney-runkle": {
+    "name": "Sydney Runkle",
+    "affiliation": "LangChain",
+    "bio": null,
+    "links": [],
+    "talks": [
+      "1381496"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "taylor-luttrell-williams": {
+    "name": "Taylor Luttrell-Williams",
+    "affiliation": "Sonar",
+    "bio": "Taylor Luttrell-Williams is a Developer Content Engineer at Sonar, where he leverages a background in full stack software development and DevOps, and a passion for teaching, to produce deep, technical content. He connects Sonar’s products to the global developer community, shaping how practitioners approach code quality and security, through hands-on educational content, such as technical tutorials, blogs, and videos. Taylor is based in Austin, Texas.",
+    "links": [
+      "https://www.linkedin.com/in/taylor-g-l-7043b6186/",
+      "https://www.sonarsource.com/products/sonarqube/"
+    ],
+    "talks": [
+      "1357867",
+      "1357875"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "tejas-kumar": {
+    "name": "Tejas Kumar",
+    "affiliation": "IBM",
+    "bio": "Tejas Kumar is an AI Engineer at IBM, based in Berlin, Germany. He is the best selling author of Fluent React (O'Reilly) and the host of the ConTejas Code podcast. He has been building on the web for over 25 years and has given 80 recorded talks at 64 events since 2012. He speaks on AI engineering, agent harnesses, React and the web platform. Recordings, topics and booking: https://tej.as/speaking",
+    "links": [
+      "https://github.com/tejasq",
+      "https://instagram.com/tejaslikecontagious",
+      "https://tejaskumar.com",
+      "https://www.linkedin.com/in/tejasq",
+      "https://x.com/TejasKumar_",
+      "https://x.com/tejaskumar_"
+    ],
+    "talks": [
+      "1334020"
+    ],
+    "source_url": "https://ai.engineer/speakers/tejas-kumar"
+  },
+  "thariq-shihipar": {
+    "name": "Thariq Shihipar",
+    "affiliation": "Independent",
+    "bio": "Thariq Shihipar is an independent engineer who worked on Claude Code at Anthropic. He left Anthropic in October 2026 after more than a year on the team. His contributions included AskUserQuestion, the tool that presents structured questions when an agent needs to clarify a user's requirements. Before Anthropic, Thariq co-founded scholarly publishing platform PubPub and led gaming company One More Multiverse. His current work explores how tools and interfaces let agents accomplish tasks—and help people understand the decisions made along the way.",
+    "links": [
+      "https://github.com/thariqs",
+      "https://www.linkedin.com/in/thariqshihipar",
+      "https://www.thariq.io",
+      "https://x.com/trq212"
+    ],
+    "talks": [
+      "1373482"
+    ],
+    "source_url": "https://ai.engineer/speakers/thariq-shihipar"
+  },
+  "theodor-marcu": {
+    "name": "Theodor Marcu",
+    "affiliation": "Cognition",
+    "bio": "Theodor Marcu is the Head of Product Growth at Cognition.",
+    "links": [
+      "https://cognition.ai",
+      "https://x.com/theodormarcu"
+    ],
+    "talks": [
+      "1380658"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "thor-schaeff": {
+    "name": "Thor Schaeff",
+    "affiliation": "Google DeepMind",
+    "bio": "Thor Schaeff works on developer experience at Google DeepMind, helping developers build with the Gemini API and Google AI Studio. His work teaches through inspectable applications: semantic search that runs inside a browser, voice agents adapted to model and speech constraints, and conversational interfaces that call tools to generate images or music.",
+    "links": [
+      "https://github.com/thorwebdev",
+      "https://thor.bio",
+      "https://www.linkedin.com/in/thorwebdev",
+      "https://x.com/thorwebdev"
+    ],
+    "talks": [
+      "1373447",
+      "1373612"
+    ],
+    "source_url": "https://ai.engineer/speakers/thor-schaeff"
+  },
+  "utkarsh-shrivastava": {
+    "name": "Utkarsh Shrivastava",
+    "affiliation": "Netflix",
+    "bio": "Utkarsh Shrivastava leads engineering for enterprise AI at Netflix, overseeing enterprise search, internal assistants, and the platforms that support them. His teams build and operate AI agents, with responsibility for integrations, evaluation, and governance. He focuses on scaling AI across the company: setting platform strategy, clarifying ownership, and bringing teams together around shared standards for quality and reliability.",
+    "links": [
+      "https://www.linkedin.com/in/utkarshshrivastava",
+      "https://www.netflix.com/"
+    ],
+    "talks": [
+      "1352199"
+    ],
+    "source_url": "https://ai.engineer/speakers/utkarsh-shrivastava"
+  },
+  "vasek-mlejnsky": {
+    "name": "Vasek Mlejnsky",
+    "affiliation": "E2B",
+    "bio": "Vasek Mlejnsky is the co-founder and CEO of E2B, which builds cloud infrastructure for AI agents. Since co-founding E2B in 2023, he has helped make sandboxes a core part of the agent stack. E2B has launched over two billion sandboxes and powers agent-native companies including Arena, Amp, Genspark, ClickUp, Manus, and Rogo.",
+    "links": [
+      "https://e2b.dev/",
+      "https://linkedin.com/in/mlejva",
+      "https://x.com/mlejva"
+    ],
+    "talks": [
+      "1359774"
+    ],
+    "source_url": "https://ai.engineer/speakers/vasek-mlejnsky"
+  },
+  "walden-yan": {
+    "name": "Walden Yan",
+    "affiliation": "Cognition",
+    "bio": "Walden Yan is a co-founder of Cognition, the company behind Devin, an autonomous software-engineering agent. His work spans neural program synthesis and the design of agents that carry out extended engineering tasks. His writing explains a particular difficulty in that progression: agents can produce individually plausible changes that conflict when combined, because each change carries decisions about how the software should work.",
+    "links": [
+      "https://github.com/walnutwaldo",
+      "https://walnutwaldo.github.io/",
+      "https://x.com/walden_yan"
+    ],
+    "talks": [
+      "1373475"
+    ],
+    "source_url": "https://ai.engineer/speakers/walden-yan"
+  },
+  "yacine-mahdid": {
+    "name": "Yacine Mahdid",
+    "affiliation": "Datadom",
+    "bio": "Yacine Mahdid is the CEO of Datadom and an entrepreneur and researcher with a keen interest in machine learning. He writes \"learning with yacine\", a newsletter untangling deep learning and the brain.",
+    "links": [
+      "https://www.linkedin.com/in/yacinemahdid/",
+      "https://www.yacinemahdid.com/about"
+    ],
+    "talks": [
+      "1376182"
+    ],
+    "source_url": "https://ai.engineer/speakers/yacine-mahdid"
+  },
+  "zach-bruggeman": {
+    "name": "Zach Bruggeman",
+    "affiliation": "Ramp",
+    "bio": "Zach Bruggeman is a Principal Software Engineer at Ramp, leading the efforts on Inspect, Ramp's coding agent. In practice, this means he spends a lot of time talking to robots, but still prefers the humans after all.",
+    "links": [
+      "https://github.com/remixz"
+    ],
+    "talks": [
+      "1373470"
+    ],
+    "source_url": "https://ai.engineer/speakers/zach-bruggeman"
+  },
+  "zach-lloyd": {
+    "name": "Zach Lloyd",
+    "affiliation": "Warp",
+    "bio": "Zach Lloyd is the founder and CEO of Warp, where his work has progressed from redesigning the terminal to helping developers direct, supervise, and improve AI coding agents. A former principal engineer who led Google Sheets and engineering across the Google Docs suite, he emphasizes product-first engineering: judging technical decisions by whether they help people build useful, working software.",
+    "links": [
+      "https://github.com/zachlloyd",
+      "https://www.linkedin.com/in/zachlloyd/",
+      "https://www.warp.dev/",
+      "https://x.com/zachlloydtweets"
+    ],
+    "talks": [
+      "1373473"
+    ],
+    "source_url": "https://ai.engineer/speakers/zach-lloyd"
+  }
+}
