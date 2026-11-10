@@ -16,7 +16,7 @@ back and check it) or `digest` (read, watch, or process it).
 
 ## 2. Timestamp
 
-Read `state/world-model/conference-schedule/published/event/event.json` for the
+Read `state/world-model/conference-schedule/published/event.json` for the
 timezone. Name the file `YYYY-MM-DDTHHMM-<slug>.md` and repeat the time in
 frontmatter:
 

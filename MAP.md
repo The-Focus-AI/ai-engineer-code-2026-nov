@@ -50,7 +50,7 @@ Base: `state/world-model/conference-schedule/published/`.
 | --- | --- |
 | all sessions: title, abstract, room, track, speakers, start/end | `program/sessions.json` |
 | the same, readable | `program/program.md` · `brief/schedule.md` |
-| event name, dates, timezone, status | `event/event.json` |
+| event name, dates, timezone, status | `event.json` |
 | rooms and venue | `venue/venue.json` · `venue/venue.md` |
 | speakers, affiliations, bios, links | `speakers/speakers.json` · `speakers/speakers.md` |
 | what the source page did not publish | `coverage/coverage.md` |
