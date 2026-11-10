@@ -1,8 +1,8 @@
 {
   "inbox_scans": {
-    "folder_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "folder_count": 0,
-    "latest_recorded_at": null,
-    "scanned_at": "2026-11-06T18:17:00-05:00"
+    "folder_fingerprint": "c9b177a065c4e102f7c37788abca1daea6daaf364045224f9f7aba055412d875",
+    "folder_count": 2,
+    "latest_recorded_at": "2026-11-10T09:33:30-08:00",
+    "scanned_at": "2026-11-10T13:01:04-05:00"
   }
 }

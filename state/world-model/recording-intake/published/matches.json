@@ -1,1 +1,74 @@
-{}
+{
+  "2026-11-10_0929_Ankit-Jain": {
+    "session_id": null,
+    "confidence": 0.6,
+    "method": "time+title",
+    "evidence": [
+      "title: \"Ankit Jain\" (folder title names this session's speaker)"
+    ],
+    "candidates": [
+      {
+        "session_id": "1333169",
+        "why": "folder title names Ankit Jain; recorded 09:29:55–09:33:26 at the slot's start; 68 words, none answering a claim in the abstract; the 22½-minute recording 2026-11-10_0933_Ankir-Jain already claims this session (one talk, one recording: the longer wins)",
+        "confidence": 0.6
+      },
+      {
+        "session_id": "1302670",
+        "why": "From Shared Language to Enforceable Contracts, 09:00–09:25, same room: ended five minutes before the recording began",
+        "confidence": 0.05
+      },
+      {
+        "session_id": "1373448",
+        "why": "Machine trust workshop, 09:00–10:00, Continental 4: overlaps the recording; no transcript quote answers its topic",
+        "confidence": 0.05
+      },
+      {
+        "session_id": "1334020",
+        "why": "Build a Coding Agent Harness From an Empty Loop workshop, 09:00–10:00: overlaps the recording; no transcript quote answers its topic",
+        "confidence": 0.05
+      },
+      {
+        "session_id": "1376183",
+        "why": "New Ways of Working with Codex workshop, 09:00–10:00: overlaps the recording; no transcript quote answers its topic",
+        "confidence": 0.05
+      }
+    ],
+    "status": "needs-review"
+  },
+  "2026-11-10_0933_Ankir-Jain": {
+    "session_id": "1333169",
+    "confidence": 0.9,
+    "method": "time+attribution+transcript",
+    "evidence": [
+      "note: notes/inbox/2026-11-10T0944-capturing-intent-and-decisions-agents-argue.md — talk: talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/ (operator named the talk; captured 09:44, inside the recording)",
+      "title: \"Ankir Jain\" (folder title, ASR-style misspelling of the speaker's name)",
+      "transcript: \"I knew I'm gonna be working 100 PRs per week. And now we're doing about 4, right?\" — abstract: \"Our team merges 4x more pull requests than we did a year ago.\"",
+      "transcript: \"We talk about intent. Intent is why are we making a particular change?\" — abstract: \"building a verification layer around *intent*\"",
+      "transcript: \"So what we did was in India, mining one year of our previous comments.\" — abstract: \"how we turned years of recurring review comments into machine-enforceable invariants\"",
+      "transcript: \"Now, these become your invariants\" — abstract: \"encoding team standards as reusable invariants\""
+    ],
+    "candidates": [
+      {
+        "session_id": "1333169",
+        "why": "talk 09:30–09:55 in Continental 1–3; recording 09:33:30 for 22½ min; operator note names it; four transcript quotes answer specific abstract claims",
+        "confidence": 0.9
+      },
+      {
+        "session_id": "1373448",
+        "why": "Machine trust workshop, 09:00–10:00, Continental 4: overlaps the recording; no transcript quote answers its topic",
+        "confidence": 0.05
+      },
+      {
+        "session_id": "1334020",
+        "why": "Build a Coding Agent Harness From an Empty Loop workshop, 09:00–10:00: overlaps the recording; no transcript quote answers its topic",
+        "confidence": 0.05
+      },
+      {
+        "session_id": "1376183",
+        "why": "New Ways of Working with Codex workshop, 09:00–10:00: overlaps the recording; no transcript quote answers its topic",
+        "confidence": 0.05
+      }
+    ],
+    "status": "matched"
+  }
+}

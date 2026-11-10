@@ -1,1 +1,32 @@
-{}
+{
+  "1333169": {
+    "slug": "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
+    "path": "talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/transcript.md",
+    "title": "One team's path to trusting AI generated code",
+    "speakers": [
+      {
+        "name": "Ankit Jain",
+        "affiliation": "Aviator"
+      }
+    ],
+    "room_id": "continental-13-workshop-room-1",
+    "starts_at": "2026-11-10T09:30:00-08:00",
+    "source_recording": "2026-11-10_0933_Ankir-Jain",
+    "sections": [
+      "00:00:00 — Opening",
+      "00:00:30 — What we tried first",
+      "00:02:56 — Code review is not about the code",
+      "00:05:51 — Six steps",
+      "00:07:11 — Argue",
+      "00:08:37 — Capture",
+      "00:10:17 — Codify",
+      "00:13:02 — Verify",
+      "00:14:10 — Debate",
+      "00:17:18 — Own",
+      "00:18:45 — Results",
+      "00:21:08 — Start tomorrow"
+    ],
+    "word_count": 3817,
+    "cleaned_at": "2026-11-10T13:06:37-05:00"
+  }
+}
