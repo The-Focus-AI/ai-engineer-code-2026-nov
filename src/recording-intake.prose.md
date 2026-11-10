@@ -1,7 +1,7 @@
 ---
 name: recording-intake
 kind: responsibility
-version: 0.2.0
+version: 0.3.0
 ---
 
 # Recording Intake
@@ -65,7 +65,8 @@ no entry here is a bug, and the render must fail rather than skip it.
 #### matches
 
 Which session each recording captured, and why. Material: `session_id`,
-`confidence`, `method` (`time`, `time+title`, `time+transcript`, `time+title+transcript`),
+`confidence`, `method` (`time`, `time+title`, `time+transcript`, `time+title+transcript`,
+`time+attribution+transcript`),
 `evidence`, `candidates`, `status`. An entry may exist with `status:
 needs-review` and `session_id: null`; that is a *result*, not a failure — it says
 the recordings is real, the slot is known, and the talk is not decided.
@@ -90,10 +91,21 @@ in the transcript is a real change to the document.
   entry, and every `recordings` entry with `status: cleaned` has one `talks` entry.
   A folder that cannot be read fails the render with `inbox-unreadable`; it is
   never silently dropped.
-- **No evidence, no match**: every `matches` entry with a `session_id` carries at
-  least one verbatim `evidence` quote from that recording's transcript that names
-  the talk, the speaker, or the speaker's company. A match justified only by time
-  and duration cannot reach `cleaned`.
+- **No evidence, no match**: every `matches` entry with a `session_id` carries
+  either
+  - **named**: at least one verbatim `evidence` quote from that recording's
+    transcript that names the talk, the speaker, or the speaker's company; or
+  - **attributed** (`method: time+attribution+transcript`), when the recording
+    never names them: an operator attribution — a note under `notes/inbox/`
+    whose `talk:` is this session's talk, captured inside the recording's span,
+    or the recording's folder title naming this session's speaker — **and** at
+    least two verbatim transcript quotes that each match a specific claim in
+    this session's `abstract`. Each piece is its own `evidence` entry, prefixed
+    `transcript:`, `note:` (with the note path), or `title:`, and the abstract
+    claim a quote answers is named beside it.
+
+  A match justified only by time and duration, or by an attribution without
+  transcript corroboration, cannot reach `cleaned`.
 - **One talk, one recording**: two recordings may not both claim the same
   `session_id`. When they do, the longer recording wins, the other becomes
   `needs-review`, and both are listed.
@@ -114,7 +126,11 @@ in the transcript is a real change to the document.
 
 - `inbox-unreadable`: the inbox directory or a recording folder cannot be read.
 - `transcript-missing`: a recording has audio but no `transcript.txt`; the
-  recording is indexed and marked `failed` rather than transcribed here.
+  recording is indexed and marked `failed` rather than transcribed here. This is
+  expected, not a fault, when Voice Memos had no transcript and the mover
+  deferred local transcription because the machine was on battery power. When
+  `mise run transcribe` later adds the transcript on AC power, the inbox
+  fingerprint moves and the recording is identified on that wake.
 - `talk-write-failed`: a talk file could not be written; the prior talk stands.
 - `attachment-unsafe`: an attachment path escapes the talk folder, or a symlink is
   involved.
@@ -143,6 +159,7 @@ let identified = call identify-recording-talk
   recordings: scan.new
   program: program
   speakers: speakers
+  notes: "notes/inbox/"
 
 # 3. Render each decided talk: frontmatter from the schedule, text from the
 #    transcript, cleaned but never rewritten.
@@ -180,7 +197,7 @@ arrivals.
 - `prohibited`: editing or deleting raw recordings, transcripts, or `meta.json`;
   inventing a talk title, speaker, room, or time instead of reading `program`;
   asserting a match without a quotable excerpt; transcribing audio (that is the
-  mover's job, and Voice Memos already did it); writing outside `talks/`.
+  mover's job: Voice Memos' transcript, or local Qwen3-ASR on AC power); writing outside `talks/`.
 
 ### Invariants
 
@@ -209,6 +226,14 @@ arrivals.
   both with their quotes and set `needs-review`.
 - when a transcript is mostly Q&A or starts mid-sentence: match on the topic and
   the questioners' references rather than an introduction that was never captured.
+- when the introduction was lost and nothing names the talk: look for the
+  operator's attribution (notes captured during the recording that name the
+  talk, then the folder title) and for transcript quotes that answer the
+  abstract's specific claims. Both present → `time+attribution+transcript`;
+  either missing → `needs-review`.
+- when transcription was biased with schedule names (`transcript_source` is a
+  Qwen model): a speaker or company name in the transcript may come from the
+  prompt rather than the audio. Treat it as attributed evidence, not named.
 - when a recording clearly belongs to no session in the program (hallway
   conversation, housekeeping, a side event): `needs-review` with candidates
   empty — it is not a talk.
