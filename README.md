@@ -137,6 +137,50 @@ without a transcript, and never replaces one that exists. `meta.json` records
 which engine wrote it (`transcript_source`) and how fine its timings are
 (`transcript_timing`: `word` for Voice Memos, `segment` for Qwen's ~5 s spans).
 
+### Install Qwen3-ASR
+
+The fallback is optional. Without it, `sync` exports Voice Memos transcripts
+only and says Qwen is unavailable; `mise run transcribe` refuses to run.
+
+1. Install ffmpeg, which decodes the `.m4a` audio for Qwen:
+
+   ```bash
+   brew install ffmpeg
+   ```
+
+2. Clone and build the C implementation. On macOS `make blas` links Apple's
+   Accelerate; on Linux it needs OpenBLAS (`apt install libopenblas-dev`).
+
+   ```bash
+   git clone https://github.com/antirez/qwen-asr ~/src/qwen-asr
+   cd ~/src/qwen-asr && make blas
+   ```
+
+3. Download the 1.7B model (about 4.4 GB from Hugging Face) into
+   `~/src/qwen-asr/qwen3-asr-1.7b`:
+
+   ```bash
+   cd ~/src/qwen-asr && ./download_model.sh --model large
+   ```
+
+   `--model small` fetches the 0.6B model into `qwen3-asr-0.6b` instead. It is
+   a little faster on CPU and a little less accurate; set
+   `QWEN_ASR_MODEL=qwen3-asr-0.6b` to use it.
+
+4. Check it transcribes:
+
+   ```bash
+   ~/src/qwen-asr/qwen_asr -d ~/src/qwen-asr/qwen3-asr-1.7b -i ~/src/qwen-asr/samples/jfk.wav --timestamps --silent
+   ```
+
+   It prints one JSON line per segment. Measured on an Apple Silicon Mac, the 1.7B
+   model runs at about 6× realtime, so a 25-minute talk takes about 4 minutes.
+
+5. If you put it anywhere other than `~/src/qwen-asr`, set `QWEN_ASR_DIR` (and
+   `QWEN_ASR_MODEL` for a model directory with another name) in `.env`.
+   `mise run dry-run` prints `asr auto (local: qwen3-asr-1.7b)` once the export
+   can see it.
+
 `mise run photos` does the same for the photo drop: it writes
 `photos/manifest.json` with UTC capture times and file hashes, then `talk-photos`
 files each photo to a talk.
