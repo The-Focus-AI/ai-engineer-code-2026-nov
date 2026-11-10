@@ -147,6 +147,15 @@ sections that hit. Word counts are build-specific.
 - `/conference-themes` — the patterns across every talk; the first report is
   `analysis/themes.md`.
 
+## The field guide
+
+`mise run site` renders `site/index.html` from the schedule truth through
+`scripts/site/template.html`. Two optional build files feed it:
+`site/map/map.json` (floor plans, room outlines, routes) and
+`site/recommendations.json` (a go, maybe or skip call per session id). The
+render fails if a recommendation names a session no longer in the schedule. A
+viewer's picks live in the published artifact's `plans` collection, not in `state/`.
+
 ## Notes and editorial
 
 | Path | What it is |
