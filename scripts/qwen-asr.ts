@@ -10,6 +10,16 @@
  * Qwen gives timings per segment (about five seconds), not per word. Every word
  * in a segment carries that segment's start and end, and `timing` says so. No
  * finer timing is invented.
+ *
+ * Qwen can echo its prompt as transcript text, typically over trailing silence.
+ * A segment carrying three or more of the prompt's terms is dropped and counted
+ * in `dropped_segments`, so a name in the transcript came from the audio.
+ *
+ * Qwen runs on every CPU core at a few times realtime: a 25-minute talk drains a
+ * laptop battery noticeably. On battery power it is deferred, not run, unless the
+ * caller allows it (`--allow-battery`, or RECORDINGS_ASR_ON_BATTERY=allow). A
+ * deferred recording arrives without a transcript; `mise run transcribe` fills it
+ * in once the machine is on AC power.
  */
 
 import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
@@ -28,6 +38,7 @@ export interface Transcript {
   locale: string | null;
   source: string;
   timing: "word" | "segment";
+  dropped_segments: number;
 }
 
 const expand = (p: string): string => (p.startsWith("~") ? join(homedir(), p.slice(1)) : p);
@@ -38,8 +49,39 @@ export interface QwenSetup {
   name: string;
 }
 
-/** The local install, or null with the reason it is unusable. */
-export function qwenSetup(): QwenSetup | { missing: string } {
+export interface Power {
+  onBattery: boolean | null;
+  percent: number | null;
+}
+
+/** Where power comes from right now. Unknown (not macOS, no pmset) is null. */
+export function powerSource(): Power {
+  try {
+    const run = Bun.spawnSync({ cmd: ["pmset", "-g", "batt"], stdout: "pipe", stderr: "pipe" });
+    if (run.exitCode !== 0) return { onBattery: null, percent: null };
+    const out = run.stdout.toString();
+    const pct = out.match(/(\d+)%/);
+    return {
+      onBattery: out.includes("'Battery Power'") ? true : out.includes("'AC Power'") ? false : null,
+      percent: pct ? Number(pct[1]) : null,
+    };
+  } catch {
+    return { onBattery: null, percent: null };
+  }
+}
+
+/**
+ * The local install, or the reason it cannot run now: not installed, or on
+ * battery power without permission to run there.
+ */
+export function qwenSetup(opts: { allowBattery?: boolean } = {}): QwenSetup | { missing: string } {
+  const allow = opts.allowBattery || process.env.RECORDINGS_ASR_ON_BATTERY === "allow";
+  if (!allow) {
+    const power = powerSource();
+    if (power.onBattery) {
+      return { missing: `on battery power (${power.percent ?? "?"}%); deferred — plug in, or pass --allow-battery` };
+    }
+  }
   const dir = expand(process.env.QWEN_ASR_DIR ?? "~/src/qwen-asr");
   const binary = join(dir, "qwen_asr");
   const modelSetting = process.env.QWEN_ASR_MODEL ?? "qwen3-asr-1.7b";
@@ -51,9 +93,9 @@ export function qwenSetup(): QwenSetup | { missing: string } {
 }
 
 /**
- * A spelling hint from the schedule: the names and titles of sessions that
- * overlap the recording, so speaker and product names come out right. Qwen
- * treats the prompt as a soft bias; it never adds words that were not said.
+ * A spelling hint from the schedule: the speaker names and affiliations of
+ * sessions that overlap the recording, so they come out right. Titles are left
+ * out: they are long, and a long prompt is what Qwen echoes back as text.
  */
 export function schedulePrompt(root: string, recordedAt: Date | null, durationSeconds: number | null): string | null {
   const path = join(root, "state/world-model/conference-schedule/published/world-model.json");
@@ -77,13 +119,28 @@ export function schedulePrompt(root: string, recordedAt: Date | null, durationSe
         if (sp?.name) terms.add(sp.name);
         if (sp?.affiliation) terms.add(sp.affiliation);
       }
-      terms.add(s.title);
     }
     if (!terms.size) return null;
     return `Conference talk transcription. Preserve spelling: ${[...terms].join("; ")}`;
   } catch {
     return null;
   }
+}
+
+const PROMPT_TERMS = "Preserve spelling:";
+
+/** The prompt's spelling terms, lowercased, for echo detection. */
+function promptTerms(prompt: string | null): string[] {
+  if (!prompt) return [];
+  const at = prompt.indexOf(PROMPT_TERMS);
+  if (at < 0) return [];
+  return prompt.slice(at + PROMPT_TERMS.length).split("; ").map((t) => t.trim().toLowerCase()).filter(Boolean);
+}
+
+/** True when a segment reads like the prompt rather than speech. */
+function echoesPrompt(text: string, terms: string[]): boolean {
+  const lower = text.toLowerCase();
+  return terms.filter((t) => lower.includes(t)).length >= 3;
 }
 
 /** Transcribe one audio file. Throws with the tool's own message on failure. */
@@ -104,17 +161,23 @@ export function qwenTranscribe(setup: QwenSetup, audioPath: string, prompt: stri
     const run = Bun.spawnSync({ cmd, stdout: "pipe", stderr: "pipe" });
     if (run.exitCode !== 0) throw new Error(`qwen_asr failed on ${audioPath}: ${run.stderr.toString().trim()}`);
 
+    const terms = promptTerms(prompt);
     const words: Word[] = [];
     const lines: string[] = [];
+    let dropped = 0;
     for (const line of run.stdout.toString().split("\n")) {
       if (!line.trim().startsWith("{")) continue;
       const seg = JSON.parse(line) as { start?: number; end?: number; text?: string };
       const text = (seg.text ?? "").trim();
       if (!text) continue;
+      if (echoesPrompt(text, terms)) {
+        dropped++;
+        continue;
+      }
       lines.push(text);
       for (const w of text.split(/\s+/)) words.push({ w, start: seg.start ?? null, end: seg.end ?? null });
     }
-    return { text: lines.join(" "), words, locale: null, source: setup.name, timing: "segment" };
+    return { text: lines.join(" "), words, locale: null, source: setup.name, timing: "segment", dropped_segments: dropped };
   } finally {
     rmSync(work, { recursive: true, force: true });
   }

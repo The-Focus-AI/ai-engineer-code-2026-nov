@@ -35,8 +35,13 @@
  *     Fill in Qwen3-ASR transcripts for inbox folders that have none. Never
  *     touches a folder that already has transcript.txt. Needs no Full Disk Access.
  *
+ * On battery power Qwen is deferred: sync exports Voice Memos transcripts only,
+ * and --transcribe-missing refuses. --allow-battery (or
+ * RECORDINGS_ASR_ON_BATTERY=allow) runs it anyway.
+ *
  * meta.json records `transcript_source` (voice-memos or the Qwen model name) and
- * `transcript_timing` (word, or segment for Qwen's ~5 s segments).
+ * `transcript_timing` (word, or segment for Qwen's ~5 s segments), and for Qwen
+ * `transcript_dropped_segments` (segments discarded as prompt echo).
  *
  * Needs Full Disk Access (System Settings -> Privacy & Security -> Full Disk
  * Access) for the terminal or app you run it from.
@@ -64,6 +69,7 @@ interface Meta {
   transcript_locale: string | null;
   transcript_source?: string | null;
   transcript_timing?: "word" | "segment" | null;
+  transcript_dropped_segments?: number;
   source_file: string;
   audio_sha256: string;
   exported_at: string;
@@ -86,6 +92,7 @@ interface Args {
   dryRun: boolean;
   asr: "auto" | "apple" | "qwen";
   transcribeMissing: boolean;
+  allowBattery: boolean;
 }
 
 const expand = (p: string): string => (p.startsWith("~") ? join(homedir(), p.slice(1)) : p);
@@ -202,7 +209,7 @@ function tsrpTranscript(data: Buffer): Transcript | null {
     }
   }
   const text = parts.join("").replace(/\s*\n\s*/g, "\n").replace(/[ \t]+/g, " ").trim();
-  return { text, words, locale: obj.locale?.identifier ?? null, source: "voice-memos", timing: "word" };
+  return { text, words, locale: obj.locale?.identifier ?? null, source: "voice-memos", timing: "word", dropped_segments: 0 };
 }
 
 interface Probe {
@@ -262,7 +269,9 @@ function existing(dest: string): Map<string, Meta> {
 }
 
 function conferenceWindow(root: string): { start: string; end: string; tz: string } | null {
-  const event = join(root, "state/world-model/conference-schedule/published/event/event.json");
+  const published = join(root, "state/world-model/conference-schedule/published");
+  // The schedule render writes published/event.json; older builds nested it under event/.
+  const event = [join(published, "event.json"), join(published, "event/event.json")].find(existsSync) ?? join(published, "event.json");
   if (!existsSync(event)) return null;
   try {
     const data = JSON.parse(readFileSync(event, "utf8")) as { starts_on?: string; ends_on?: string; timezone?: string };
@@ -332,7 +341,7 @@ function writeManifest(dest: string, source: string): void {
 }
 
 function needQwen(): QwenSetup {
-  const setup = qwenSetup();
+  const setup = qwenSetup({ allowBattery: args.allowBattery });
   if ("missing" in setup) {
     console.error(`  ✗ Qwen3-ASR is not available: ${setup.missing}`);
     process.exit(2);
@@ -373,6 +382,7 @@ function transcribeMissing(dest: string, dryRun: boolean): void {
       transcript_locale: t.locale,
       transcript_source: t.source,
       transcript_timing: t.timing,
+      transcript_dropped_segments: t.dropped_segments,
     });
     writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n");
     console.log(`    ${t.words.length} words`);
@@ -400,6 +410,7 @@ function parseArgs(argv: string[]): Args {
     dryRun: argv.includes("--dry-run"),
     asr: asrMode(value("asr")),
     transcribeMissing: argv.includes("--transcribe-missing"),
+    allowBattery: argv.includes("--allow-battery"),
   };
 }
 
@@ -409,7 +420,7 @@ if (args.transcribeMissing) {
   transcribeMissing(resolve(args.dest), args.dryRun);
   process.exit(0);
 }
-const qwen = args.asr === "apple" ? null : qwenSetup();
+const qwen = args.asr === "apple" ? null : qwenSetup({ allowBattery: args.allowBattery });
 if (args.asr === "qwen" && qwen && "missing" in qwen) needQwen();
 const window = resolveWindow(args, root);
 const source = findSource(args.source);
@@ -484,6 +495,7 @@ for (const path of audio) {
     transcript_locale: transcript?.locale ?? null,
     transcript_source: transcript?.source ?? null,
     transcript_timing: transcript?.timing ?? null,
+    ...(transcript && transcript.source !== "voice-memos" ? { transcript_dropped_segments: transcript.dropped_segments } : {}),
     source_file: basename(path),
     audio_sha256: digest,
     exported_at: localIso(new Date()),

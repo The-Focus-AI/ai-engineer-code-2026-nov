@@ -140,7 +140,13 @@ export async function scanInbox(opts: ScanOptions): Promise<ScanResult> {
   }
 
   const ids = Object.keys(recordings).sort();
-  const folderFingerprint = sha256(ids.map((id) => `${recordings[id]!.folder}\t${recordings[id]!.audio_sha256}`).join("\n"));
+  // A folder still waiting for its transcript (deferred local ASR) is marked, so
+  // the transcript's arrival moves the fingerprint and wakes recording-intake.
+  // Transcribed folders hash exactly as before.
+  const folderFingerprint = sha256(ids.map((id) => {
+    const r = recordings[id]!;
+    return `${r.folder}\t${r.audio_sha256}${r.status === "failed" ? "\tuntranscribed" : ""}`;
+  }).join("\n"));
   const latest = ids.map((id) => recordings[id]!.recorded_at).filter((x): x is string => Boolean(x)).sort().at(-1) ?? null;
 
   return {

@@ -133,7 +133,11 @@ build (`QWEN_ASR_DIR`, default `~/src/qwen-asr`), biased toward the speaker and
 product names of the sessions around the recording. `--asr apple` turns the
 fallback off; `--asr qwen` uses Qwen for every recording.
 `mise run transcribe` fills in recordings already in the inbox that arrived
-without a transcript, and never replaces one that exists. `meta.json` records
+without a transcript, and never replaces one that exists. Qwen keeps every core
+busy, so on battery power it is deferred: sync exports Voice Memos transcripts
+only, `transcribe` refuses, and the folder waits. Run `mise run transcribe` once
+plugged in; the transcript's arrival wakes `recording-intake`. `--allow-battery`
+(or `RECORDINGS_ASR_ON_BATTERY=allow`) runs it anyway. `meta.json` records
 which engine wrote it (`transcript_source`) and how fine its timings are
 (`transcript_timing`: `word` for Voice Memos, `segment` for Qwen's ~5 s spans).
 

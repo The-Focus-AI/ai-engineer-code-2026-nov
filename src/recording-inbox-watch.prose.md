@@ -34,9 +34,11 @@ version: 0.2.0
 **Canonicalization spec**:
 
 - **Material**: `folder_fingerprint` (a hash over the sorted folder names plus each
-  `audio_sha256`), `folder_count`, and `latest_recorded_at`. A new recording, a
-  replaced audio file, or a deleted folder moves the fingerprint; nothing else
-  does.
+  `audio_sha256`, with an `untranscribed` mark on any folder that has audio but
+  no `transcript.txt` yet), `folder_count`, and `latest_recorded_at`. A new
+  recording, a replaced audio file, a deleted folder, or a deferred transcript
+  arriving moves the fingerprint; nothing else does. A folder that already had
+  its transcript hashes exactly as it did before the mark existed.
 - **Immaterial** (excluded): `scanned_at` and any filesystem mtimes. A tick is not
   a change.
 - The fingerprint is computed by reading the folder, never cached across wakes.

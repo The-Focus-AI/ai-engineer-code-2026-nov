@@ -35,7 +35,8 @@ the whole inbox rather than just this wake's arrivals.
 - Read-only: nothing under the inbox is written, moved, or deleted.
 - A folder is only indexed when it contains `audio.m4a`; a folder with audio but
   no `transcript.txt` is indexed with `status: failed` and reported in the
-  return, never dropped.
+  return, never dropped. On battery power the mover defers local transcription,
+  so this is the normal state of a fresh folder until it is plugged in.
 - `new` means *content* new: a folder whose audio hash and transcript hash match
   the prior entry is not new, even if its mtime changed.
 - The fingerprint is computed over folder names and audio hashes only, so adding
