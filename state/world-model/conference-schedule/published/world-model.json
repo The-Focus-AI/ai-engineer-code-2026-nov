@@ -3242,56 +3242,21 @@
         "url": "https://luma.com/allthings-aie",
         "role": "side-event",
         "content_hash": "c07fba001da65fefb7b2c02e0553378e952cae935700bd85a0dbda514ceba0d6",
-        "byte_length": 141535,
+        "byte_length": 141534,
         "truncated": false
       },
       {
         "url": "https://luma.com/AIECodeSummitHackathon",
         "role": "side-event",
         "content_hash": "7200fd555902bf802d84b370294a61114eeb88f567fecacc44e9cebef8b76103",
-        "byte_length": 200877,
+        "byte_length": 200874,
         "truncated": false
       },
       {
         "url": "https://luma.com/kdtg113c",
         "role": "side-event",
         "content_hash": "097a8979fdf34367afcb611e448721235241f465613e6bdafda41789a115769e",
-        "byte_length": 161036,
-        "truncated": false
-      },
-      {
-        "url": "https://ai.engineer/speakers/quinn-slack",
-        "role": "speaker-profile",
-        "content_hash": "01e909afb83a4102fed76999f783a37aa1bc0be7dfc48c583d563b8427bc5054",
-        "byte_length": 44687,
-        "truncated": false
-      },
-      {
-        "url": "https://ai.engineer/speakers/thor-schaeff",
-        "role": "speaker-profile",
-        "content_hash": "8e382e94a432d36803cd7858937a856cb4c4a051d0b5b988883f96009e2942ab",
-        "byte_length": 64069,
-        "truncated": false
-      },
-      {
-        "url": "https://ai.engineer/speakers/walden-yan",
-        "role": "speaker-profile",
-        "content_hash": "0f49692bdd5344698538ce2573f9fcfcb83686d549ffae5afd840cc80f99452a",
-        "byte_length": 48874,
-        "truncated": false
-      },
-      {
-        "url": "https://ai.engineer/speakers/zach-bruggeman",
-        "role": "speaker-profile",
-        "content_hash": "979280487ab506836951846ed7439b0be255bbbbf3080f196bcf54417800e4c8",
-        "byte_length": 33536,
-        "truncated": false
-      },
-      {
-        "url": "https://ai.engineer/speakers/zach-lloyd",
-        "role": "speaker-profile",
-        "content_hash": "dbbf97b9abdb2ade1516b355abf35a04c6e1b340dd62e5acdc4f66044c388b85",
-        "byte_length": 48763,
+        "byte_length": 161035,
         "truncated": false
       }
     ],
@@ -3330,8 +3295,8 @@
       "unparsed region: entry page FAQ: answers are not in the served page, questions only",
       "unparsed region: venue floorplan images (level-1, level-2-workshop-day, level-2-session-days .avif): not read; room levels come from the map page's area list"
     ],
-    "last_verified_at": "2026-11-06T17:37:13-05:00",
-    "verification_count": 2,
+    "last_verified_at": "2026-11-06T18:33:00-05:00",
+    "verification_count": 3,
     "enrichment": {
       "done": [
         "aamir-shakir",
