@@ -6,7 +6,8 @@
  *
  *   recordings/inbox/2026-10-13_0904_Blackwater/
  *     audio.m4a              the original audio, untouched
- *     transcript.txt         the transcript Voice Memos already made (udta/tsrp)
+ *     transcript.txt         the transcript Voice Memos already made (udta/tsrp),
+ *                            or a local Qwen3-ASR one when Voice Memos has none
  *     transcript.words.json  word and sentence timings
  *     meta.json              title, recorded_at, duration, word count, hashes
  *     attachments/           any sidecar images/PDFs that came with it
@@ -25,6 +26,18 @@
  *   bun scripts/export-voice-memos.ts --since 2026-10-10 --until 2026-10-15
  *   bun scripts/export-voice-memos.ts --all            # the whole library
  *
+ * Transcripts (--asr, or RECORDINGS_ASR):
+ *   auto   (default) Voice Memos' transcript; Qwen3-ASR when there is none
+ *   apple  Voice Memos' transcript only; a recording without one stays without
+ *   qwen   always Qwen3-ASR, ignoring Voice Memos' transcript
+ *
+ *   bun scripts/export-voice-memos.ts --transcribe-missing
+ *     Fill in Qwen3-ASR transcripts for inbox folders that have none. Never
+ *     touches a folder that already has transcript.txt. Needs no Full Disk Access.
+ *
+ * meta.json records `transcript_source` (voice-memos or the Qwen model name) and
+ * `transcript_timing` (word, or segment for Qwen's ~5 s segments).
+ *
  * Needs Full Disk Access (System Settings -> Privacy & Security -> Full Disk
  * Access) for the terminal or app you run it from.
  */
@@ -33,6 +46,7 @@ import { createHash } from "node:crypto";
 import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { basename, join, resolve } from "node:path";
 import { homedir } from "node:os";
+import { qwenSetup, qwenTranscribe, schedulePrompt, type QwenSetup, type Transcript, type Word } from "./qwen-asr.ts";
 
 const AUDIO_EXTS = new Set(["m4a", "mp3", "wav", "aiff", "aif", "caf", "qta"]);
 const SIDECAR_EXTS = new Set(["jpg", "jpeg", "png", "heic", "pdf", "gif", "webp", "mov", "mp4"]);
@@ -41,18 +55,6 @@ const SOURCES = [
   "~/Library/Application Support/com.apple.voicememos/Recordings",
 ];
 
-interface Word {
-  w: string;
-  start: number | null;
-  end: number | null;
-}
-
-interface Transcript {
-  text: string;
-  words: Word[];
-  locale: string | null;
-}
-
 interface Meta {
   title: string;
   recorded_at: string | null;
@@ -60,6 +62,8 @@ interface Meta {
   transcript: string | null;
   transcript_word_count: number;
   transcript_locale: string | null;
+  transcript_source?: string | null;
+  transcript_timing?: "word" | "segment" | null;
   source_file: string;
   audio_sha256: string;
   exported_at: string;
@@ -80,6 +84,8 @@ interface Args {
   padDays: number;
   all: boolean;
   dryRun: boolean;
+  asr: "auto" | "apple" | "qwen";
+  transcribeMissing: boolean;
 }
 
 const expand = (p: string): string => (p.startsWith("~") ? join(homedir(), p.slice(1)) : p);
@@ -196,7 +202,7 @@ function tsrpTranscript(data: Buffer): Transcript | null {
     }
   }
   const text = parts.join("").replace(/\s*\n\s*/g, "\n").replace(/[ \t]+/g, " ").trim();
-  return { text, words, locale: obj.locale?.identifier ?? null };
+  return { text, words, locale: obj.locale?.identifier ?? null, source: "voice-memos", timing: "word" };
 }
 
 interface Probe {
@@ -303,6 +309,82 @@ function sentences(words: Word[]): Array<{ text: string; start: number | null; e
   return out;
 }
 
+function asrMode(v: string | undefined): Args["asr"] {
+  const mode = v ?? process.env.RECORDINGS_ASR ?? "auto";
+  if (mode === "auto" || mode === "apple" || mode === "qwen") return mode;
+  console.error(`  ✗ --asr must be auto, apple, or qwen (got ${mode})`);
+  process.exit(2);
+}
+
+function writeTranscript(folder: string, t: Transcript): void {
+  writeFileSync(join(folder, "transcript.txt"), t.text + "\n");
+  writeFileSync(join(folder, "transcript.words.json"), JSON.stringify({ words: t.words, sentences: sentences(t.words), timing: t.timing }, null, 1) + "\n");
+}
+
+function writeManifest(dest: string, source: string): void {
+  const recordings = readdirSync(dest, { withFileTypes: true })
+    .filter((e) => e.isDirectory())
+    .map((e) => join(dest, e.name, "meta.json"))
+    .filter(existsSync)
+    .sort()
+    .map((p) => ({ ...(JSON.parse(readFileSync(p, "utf8")) as Meta), folder: basename(join(p, "..")) }));
+  writeFileSync(join(dest, "manifest.json"), JSON.stringify({ generated_at: localIso(new Date()), source, recordings }, null, 2) + "\n");
+}
+
+function needQwen(): QwenSetup {
+  const setup = qwenSetup();
+  if ("missing" in setup) {
+    console.error(`  ✗ Qwen3-ASR is not available: ${setup.missing}`);
+    process.exit(2);
+  }
+  return setup;
+}
+
+function transcribeMissing(dest: string, dryRun: boolean): void {
+  if (!existsSync(dest)) {
+    console.log(`  nothing to do: ${dest} does not exist`);
+    return;
+  }
+  const setup = needQwen();
+  let done = 0;
+  let have = 0;
+  for (const entry of readdirSync(dest, { withFileTypes: true }).filter((e) => e.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
+    const folder = join(dest, entry.name);
+    const metaPath = join(folder, "meta.json");
+    if (!existsSync(metaPath)) continue;
+    if (existsSync(join(folder, "transcript.txt"))) {
+      have++;
+      continue;
+    }
+    const audioFile = readdirSync(folder).find((f) => f.startsWith("audio."));
+    if (!audioFile) continue;
+    const meta = JSON.parse(readFileSync(metaPath, "utf8")) as Meta;
+    console.log(`  ${entry.name}  (${meta.duration_seconds ?? "?"}s) → ${setup.name}`);
+    if (dryRun) {
+      done++;
+      continue;
+    }
+    const prompt = schedulePrompt(root, meta.recorded_at ? new Date(meta.recorded_at) : null, meta.duration_seconds);
+    const t = qwenTranscribe(setup, join(folder, audioFile), prompt);
+    writeTranscript(folder, t);
+    Object.assign(meta, {
+      transcript: "transcript.txt",
+      transcript_word_count: t.words.length,
+      transcript_locale: t.locale,
+      transcript_source: t.source,
+      transcript_timing: t.timing,
+    });
+    writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n");
+    console.log(`    ${t.words.length} words`);
+    done++;
+  }
+  if (!dryRun && done) {
+    const prior = existsSync(join(dest, "manifest.json")) ? (JSON.parse(readFileSync(join(dest, "manifest.json"), "utf8")) as { source?: string }).source : undefined;
+    writeManifest(dest, prior ?? "unknown");
+  }
+  console.log(`\n  ${done} transcribed · ${have} already had a transcript${dryRun ? "  (dry run — nothing written)" : ""}`);
+}
+
 function parseArgs(argv: string[]): Args {
   const value = (name: string): string | undefined => {
     const i = argv.indexOf(`--${name}`);
@@ -316,11 +398,19 @@ function parseArgs(argv: string[]): Args {
     padDays: Number(value("pad-days") ?? "1"),
     all: argv.includes("--all"),
     dryRun: argv.includes("--dry-run"),
+    asr: asrMode(value("asr")),
+    transcribeMissing: argv.includes("--transcribe-missing"),
   };
 }
 
 const args = parseArgs(process.argv.slice(2));
 const root = resolve(import.meta.dir, "..");
+if (args.transcribeMissing) {
+  transcribeMissing(resolve(args.dest), args.dryRun);
+  process.exit(0);
+}
+const qwen = args.asr === "apple" ? null : qwenSetup();
+if (args.asr === "qwen" && qwen && "missing" in qwen) needQwen();
 const window = resolveWindow(args, root);
 const source = findSource(args.source);
 const dest = resolve(args.dest);
@@ -333,7 +423,10 @@ const audio = readdirSync(source)
   .map((name) => join(source, name))
   .filter((p) => statSync(p).isFile() && AUDIO_EXTS.has((p.split(".").pop() ?? "").toLowerCase()))
   .sort();
-console.log(`source  ${source}\ndest    ${dest}\nfound   ${audio.length} recording(s)\n`);
+console.log(`source  ${source}\ndest    ${dest}\nfound   ${audio.length} recording(s)`);
+if (qwen && "missing" in qwen) console.log(`asr     ${args.asr} — Qwen3-ASR unavailable (${qwen.missing}); Voice Memos transcripts only`);
+else console.log(`asr     ${args.asr}${qwen ? ` (local: ${qwen.name})` : ""}`);
+console.log("");
 
 let moved = 0;
 let skipped = 0;
@@ -364,7 +457,8 @@ for (const path of audio) {
 
   const data = readFileSync(path);
   const title = m4aTag(data, Buffer.from([0xa9, 0x6e, 0x61, 0x6d])) ?? basename(path, `.${path.split(".").pop()}`);
-  const transcript = tsrpTranscript(data);
+  const apple = args.asr === "qwen" ? null : tsrpTranscript(data);
+  const local = qwen && !("missing" in qwen) && (args.asr === "qwen" || !apple) ? qwen : null;
   const stamp = created ? localStamp(created) : "unknown-date";
 
   const base = `${stamp}_${slug(title)}`;
@@ -373,6 +467,13 @@ for (const path of audio) {
     folder = join(dest, `${base}-${n}`);
   }
 
+  if (local && args.dryRun) {
+    console.log(`  ${basename(folder)}`);
+    console.log(`    recorded ${created ? localIso(created) : null}  duration ${info.duration}s  → ${local.name}`);
+    moved++;
+    continue;
+  }
+  const transcript = local ? qwenTranscribe(local, path, schedulePrompt(root, created, info.duration)) : apple;
   const words = transcript?.words ?? [];
   const meta: Meta = {
     title,
@@ -381,13 +482,15 @@ for (const path of audio) {
     transcript: transcript ? "transcript.txt" : null,
     transcript_word_count: words.length,
     transcript_locale: transcript?.locale ?? null,
+    transcript_source: transcript?.source ?? null,
+    transcript_timing: transcript?.timing ?? null,
     source_file: basename(path),
     audio_sha256: digest,
     exported_at: localIso(new Date()),
   };
 
   console.log(`  ${basename(folder)}`);
-  console.log(`    recorded ${meta.recorded_at}  duration ${meta.duration_seconds}s  words ${words.length}`);
+  console.log(`    recorded ${meta.recorded_at}  duration ${meta.duration_seconds}s  words ${words.length}  [${meta.transcript_source ?? "no transcript"}]`);
   if (args.dryRun) {
     moved++;
     continue;
@@ -395,10 +498,7 @@ for (const path of audio) {
 
   mkdirSync(join(folder, "attachments"), { recursive: true });
   await Bun.write(join(folder, `audio.${(path.split(".").pop() ?? "m4a").toLowerCase()}`), Bun.file(path));
-  if (transcript) {
-    writeFileSync(join(folder, "transcript.txt"), transcript.text + "\n");
-    writeFileSync(join(folder, "transcript.words.json"), JSON.stringify({ words, sentences: sentences(words) }, null, 1) + "\n");
-  }
+  if (transcript) writeTranscript(folder, transcript);
   const stem = basename(path, `.${path.split(".").pop()}`);
   for (const side of readdirSync(source)) {
     const sidePath = join(source, side);
@@ -411,19 +511,7 @@ for (const path of audio) {
   moved++;
 }
 
-if (!args.dryRun && moved) {
-  const recordings = readdirSync(dest, { withFileTypes: true })
-    .filter((e) => e.isDirectory())
-    .map((e) => join(dest, e.name, "meta.json"))
-    .filter(existsSync)
-    .sort()
-    .map((p) => ({ ...(JSON.parse(readFileSync(p, "utf8")) as Meta), folder: basename(join(p, "..")) }));
-  writeFileSync(join(dest, "manifest.json"), JSON.stringify({
-    generated_at: localIso(new Date()),
-    source,
-    recordings,
-  }, null, 2) + "\n");
-}
+if (!args.dryRun && moved) writeManifest(dest, source);
 
 let summary = `\n  ${moved} moved · ${skipped} already present`;
 if (window) summary += ` · ${outOfWindow} outside the window · ${undated} undated (skipped)`;

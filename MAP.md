@@ -133,6 +133,7 @@ Missing in both, and how it comes back:
 | `talks/` | `recording-intake` after `mise run sync` |
 | `talks/*/photos/`, `photos/event/` | `mise run photos` over the local drop; filed copies stay local |
 | `recordings/**/*.m4a` | `mise run sync` (needs Full Disk Access) |
+| `recordings/inbox/*/transcript.txt` with no Voice Memos transcript | `mise run transcribe` (local Qwen3-ASR, `QWEN_ASR_DIR`) |
 
 A built clone answers questions about the talks and the schedule with nothing
 running. Only new observations need serve. The template has no talks to ask

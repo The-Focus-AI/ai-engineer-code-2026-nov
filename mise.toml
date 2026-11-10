@@ -18,6 +18,10 @@ run = "bun scripts/export-voice-memos.ts"
 description = "Show which recordings would be moved, with their titles and timestamps"
 run = "bun scripts/export-voice-memos.ts --dry-run"
 
+[tasks.transcribe]
+description = "Transcribe inbox recordings that have no transcript with local Qwen3-ASR"
+run = "bun scripts/export-voice-memos.ts --transcribe-missing"
+
 # Photos: inventory the drop, then let the Prose render file them by talk.
 [tasks.photos]
 description = "Inventory photos/ (UTC filename → conference timezone, hashes, bursts)"

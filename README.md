@@ -127,6 +127,16 @@ inside the conference's date window, padded one day either side, into
 `RECORDINGS_SINCE` and `RECORDINGS_UNTIL`. `--all` exports the whole library. It
 needs Full Disk Access.
 
+The transcript is the one Voice Memos already made. When a recording has none,
+the export falls back to a local [Qwen3-ASR](https://github.com/antirez/qwen-asr)
+build (`QWEN_ASR_DIR`, default `~/src/qwen-asr`), biased toward the speaker and
+product names of the sessions around the recording. `--asr apple` turns the
+fallback off; `--asr qwen` uses Qwen for every recording.
+`mise run transcribe` fills in recordings already in the inbox that arrived
+without a transcript, and never replaces one that exists. `meta.json` records
+which engine wrote it (`transcript_source`) and how fine its timings are
+(`transcript_timing`: `word` for Voice Memos, `segment` for Qwen's ~5 s spans).
+
 `mise run photos` does the same for the photo drop: it writes
 `photos/manifest.json` with UTC capture times and file hashes, then `talk-photos`
 files each photo to a talk.

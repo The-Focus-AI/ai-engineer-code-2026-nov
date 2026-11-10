@@ -35,11 +35,13 @@ Reads the raw transcript; never rewrites it.
 - **Speaker names come from `program`**, not from the transcript's own noise. A
   mis-heard name in the audio does not get promoted into frontmatter.
 - Frontmatter carries: `title`, `speakers` (name + affiliation), `room`, `starts_at`,
-  `ends_at`, `format`, `recording` (folder name), `duration`, `source:
-  voice-memos-transcript`.
+  `ends_at`, `format`, `recording` (folder name), `duration`, and `source`:
+  `voice-memos-transcript`, or the recording's `meta.json` `transcript_source`
+  when that names another engine (for example `qwen3-asr-1.7b`).
 - Sections carry a start timestamp taken from the word timings, e.g.
   `### 00:04:12 — The vault problem`. Timestamps must come from the timings file,
-  never be estimated.
+  never be estimated. When `transcript_timing` is `segment`, a section starts at
+  the start of the segment holding its first word.
 - Q&A is split only when a genuine audience question is present; otherwise the
   whole text stays one body.
 - Technical terms, product names, and numbers are preserved verbatim, including
