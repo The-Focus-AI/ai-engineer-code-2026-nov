@@ -206,7 +206,7 @@
         ],
         "first_seen": "20261110-141925-902d07",
         "published_at": "2026-10-20",
-        "verified_at": "2026-11-10T14:19:25-05:00"
+        "verified_at": "2026-11-11T09:08:08-08:00"
       },
       {
         "type": "blog",
@@ -218,7 +218,7 @@
         ],
         "first_seen": "20261110-141925-902d07",
         "published_at": "2026-07-21",
-        "verified_at": "2026-11-10T14:19:25-05:00"
+        "verified_at": "2026-11-11T09:08:08-08:00"
       },
       {
         "type": "product",
@@ -230,7 +230,7 @@
         ],
         "first_seen": "20261110-141925-902d07",
         "published_at": null,
-        "verified_at": "2026-11-10T14:19:25-05:00"
+        "verified_at": "2026-11-11T09:08:08-08:00"
       },
       {
         "type": "product",
@@ -243,7 +243,7 @@
         ],
         "first_seen": "20261110-141925-902d07",
         "published_at": null,
-        "verified_at": "2026-11-10T14:19:25-05:00"
+        "verified_at": "2026-11-11T09:08:08-08:00"
       }
     ],
     "1334565": [
@@ -257,7 +257,7 @@
         ],
         "first_seen": "20261110-192903-433767",
         "published_at": "2026-11-08",
-        "verified_at": "2026-11-10T19:29:03-05:00"
+        "verified_at": "2026-11-11T09:08:08-08:00"
       }
     ],
     "1341863": [],
@@ -272,7 +272,7 @@
         ],
         "first_seen": "20261110-183326-bc6e12",
         "published_at": "2026-09-23",
-        "verified_at": "2026-11-10T18:33:26-05:00"
+        "verified_at": "2026-11-11T09:08:08-08:00"
       },
       {
         "type": "youtube",
@@ -284,7 +284,7 @@
         ],
         "first_seen": "20261110-183326-bc6e12",
         "published_at": null,
-        "verified_at": "2026-11-10T18:33:26-05:00"
+        "verified_at": "2026-11-11T09:08:08-08:00"
       }
     ],
     "1356697": [
@@ -299,7 +299,7 @@
         ],
         "first_seen": "20261110-182014-0b317a",
         "published_at": null,
-        "verified_at": "2026-11-10T18:20:14-05:00"
+        "verified_at": "2026-11-11T09:08:08-08:00"
       },
       {
         "type": "blog",
@@ -312,7 +312,7 @@
         ],
         "first_seen": "20261110-182014-0b317a",
         "published_at": null,
-        "verified_at": "2026-11-10T18:20:14-05:00"
+        "verified_at": "2026-11-11T09:08:08-08:00"
       },
       {
         "type": "product",
@@ -325,7 +325,7 @@
         ],
         "first_seen": "20261110-182014-0b317a",
         "published_at": null,
-        "verified_at": "2026-11-10T18:20:14-05:00"
+        "verified_at": "2026-11-11T09:08:08-08:00"
       },
       {
         "type": "product",
@@ -338,7 +338,7 @@
         ],
         "first_seen": "20261110-182014-0b317a",
         "published_at": null,
-        "verified_at": "2026-11-10T18:20:14-05:00"
+        "verified_at": "2026-11-11T09:08:08-08:00"
       }
     ],
     "1379134": [
@@ -354,53 +354,54 @@
         ],
         "first_seen": "20261110-141925-902d07",
         "published_at": null,
-        "verified_at": "2026-11-10T14:19:25-05:00"
+        "verified_at": "2026-11-11T09:08:08-08:00"
       }
     ]
   },
   "freshness": {
     "1333169": {
       "phase": "live",
-      "last_checked": "2026-11-10T22:07:32-05:00",
-      "next_check": "2026-11-11T00:33:26-05:00",
-      "checks": 6
+      "last_checked": "2026-11-11T09:08:08-08:00",
+      "next_check": "2026-11-11T15:08:08-08:00",
+      "checks": 7
     },
     "1334565": {
       "phase": "live",
-      "last_checked": "2026-11-10T22:07:32-05:00",
-      "next_check": "2026-11-11T01:29:03-05:00",
-      "checks": 3
+      "last_checked": "2026-11-11T09:08:08-08:00",
+      "next_check": "2026-11-11T15:08:08-08:00",
+      "checks": 4
     },
     "1341863": {
       "phase": "live",
-      "last_checked": "2026-11-10T22:07:32-05:00",
-      "next_check": "2026-11-11T00:33:26-05:00",
-      "checks": 4
+      "last_checked": "2026-11-11T09:08:08-08:00",
+      "next_check": "2026-11-11T15:08:08-08:00",
+      "checks": 5
     },
     "1352199": {
       "phase": "live",
-      "last_checked": "2026-11-10T22:07:32-05:00",
-      "next_check": "2026-11-11T00:33:26-05:00",
-      "checks": 3
+      "last_checked": "2026-11-11T09:08:08-08:00",
+      "next_check": "2026-11-11T15:08:08-08:00",
+      "checks": 4
     },
     "1356697": {
       "phase": "live",
-      "last_checked": "2026-11-10T22:07:32-05:00",
-      "next_check": "2026-11-11T00:33:26-05:00",
-      "checks": 4
+      "last_checked": "2026-11-11T09:08:08-08:00",
+      "next_check": "2026-11-11T15:08:08-08:00",
+      "checks": 5
     },
     "1379134": {
       "phase": "live",
-      "last_checked": "2026-11-10T22:07:32-05:00",
-      "next_check": "2026-11-11T00:33:26-05:00",
-      "checks": 6
+      "last_checked": "2026-11-11T09:08:08-08:00",
+      "next_check": "2026-11-11T15:08:08-08:00",
+      "checks": 7
     }
   },
   "coverage": {
     "1333169": {
       "searched": [
         "roster links (aviator.co, blog author page, x.com/ankitxg, github.com/jainankit, linkedin.com/in/ankitjaindce)",
-        "web: Aviator intent verification invariants review comments Ankit Jain"
+        "web: Aviator intent verification invariants review comments Ankit Jain",
+        "recheck 20261111-090807-a206f4: web: AI Engineer Code Summit 2026 recording Ankit Jain Aviator; ai.engineer/speakers/ankit-jain; ai.engineer Code 2026 talk videos (none posted yet)"
       ],
       "gaps": [
         "linkedin.com/in/ankitjaindce answered 999 with no page title naming the person; not corroborated, dropped",
@@ -413,7 +414,8 @@
         "roster links (mihaileric.com, linkedin.com/in/mihaileric, x.com/mihail_eric)",
         "monaco.com",
         "web: Latent Space podcast Mihail Eric Monaco",
-        "candidates: latent.space/p/cs146s, latent.space one-million special (duplicate post of the same episode), his site's YouTube links"
+        "candidates: latent.space/p/cs146s, latent.space one-million special (duplicate post of the same episode), his site's YouTube links",
+        "recheck 20261111-090807-a206f4: web: Mihail Eric Monaco agentic GTM AI Engineer talk; ai.engineer Code 2026 talk videos (none posted yet)"
       ],
       "gaps": [
         "the Latent Space episode is published twice (latent.space/p/cs146s and a 'One Million AI Engineer Special' post); one URL is kept",
@@ -425,7 +427,8 @@
     "1341863": {
       "searched": [
         "roster links (kvaidya.com, linkedin.com/in/kaavee315, x.com/KaranVaidya6)",
-        "company site: composio.dev"
+        "company site: composio.dev",
+        "recheck 20261111-090807-a206f4: web: Karan Vaidya Composio agent swarms talk; ai.engineer Code 2026 talk videos (none posted yet)"
       ],
       "gaps": [
         "the recording starts about five minutes in, so whatever the opening named (posts, repos, the harness story in the abstract) is unrecorded",
@@ -440,7 +443,8 @@
         "roster links (linkedin.com/in/utkarshshrivastava, netflix.com)",
         "web: Netflix tech blog internal AI assistant MCP enterprise platform",
         "web: Utkarsh Shrivastava Netflix enterprise AI",
-        "candidates: netflixtechblog.com, about.netflix.com, theorg.com profile, review.firstround.com, claude.com webinar"
+        "candidates: netflixtechblog.com, about.netflix.com, theorg.com profile, review.firstround.com, claude.com webinar",
+        "recheck 20261111-090807-a206f4: web: Utkarsh Shrivastava Netflix shared AI assistant MCP; Utkarsh Shrivastava Netflix github/x profile; ai.engineer Code 2026 talk videos (none posted yet)"
       ],
       "gaps": [
         "netflixtechblog.com answered 403 (bot wall); no Netflix Tech Blog post on the internal assistant or its MCP gating was found",
@@ -455,7 +459,8 @@
         "web: George Fraser Fivetran context AI data team business intelligence",
         "web: Ramp AI data analyst agent blog dbt",
         "web: OpenAI in-house data agent blog",
-        "candidates: fivetran.com/docs/connector-sdk, getdbt.com"
+        "candidates: fivetran.com/docs/connector-sdk, getdbt.com",
+        "recheck 20261111-090807-a206f4: web: George Fraser data team context AI Engineer Code Summit; ai.engineer Code 2026 talk videos (none posted yet)"
       ],
       "gaps": [
         "openai.com/index/inside-our-in-house-data-agent (the in-house agent the talk says OpenAI wrote about) answered 403 to the check; not linked",
@@ -469,7 +474,8 @@
         "roster (no links published)",
         "candidate profiles: scotttolinski.com, x.com/stolinski, github.com/stolinski, syntax.fm, youtube.com/@syntaxfm",
         "web: Scott Tolinski survey developers mental health AI coding Syntax",
-        "web: Syntax YouTube true cost of AI coding mental health video"
+        "web: Syntax YouTube true cost of AI coding mental health video",
+        "recheck 20261111-090807-a206f4: web: Scott Tolinski true cost of AI coding Syntax survey video; ai.engineer Code 2026 talk videos (none posted yet)"
       ],
       "gaps": [
         "the survey the talk reports (\"about 4000 respondents so far\") has no results page found",

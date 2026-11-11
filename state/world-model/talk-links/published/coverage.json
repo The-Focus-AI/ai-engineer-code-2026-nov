@@ -2,7 +2,8 @@
   "1333169": {
     "searched": [
       "roster links (aviator.co, blog author page, x.com/ankitxg, github.com/jainankit, linkedin.com/in/ankitjaindce)",
-      "web: Aviator intent verification invariants review comments Ankit Jain"
+      "web: Aviator intent verification invariants review comments Ankit Jain",
+      "recheck 20261111-090807-a206f4: web: AI Engineer Code Summit 2026 recording Ankit Jain Aviator; ai.engineer/speakers/ankit-jain; ai.engineer Code 2026 talk videos (none posted yet)"
     ],
     "gaps": [
       "linkedin.com/in/ankitjaindce answered 999 with no page title naming the person; not corroborated, dropped",
@@ -15,7 +16,8 @@
       "roster links (mihaileric.com, linkedin.com/in/mihaileric, x.com/mihail_eric)",
       "monaco.com",
       "web: Latent Space podcast Mihail Eric Monaco",
-      "candidates: latent.space/p/cs146s, latent.space one-million special (duplicate post of the same episode), his site's YouTube links"
+      "candidates: latent.space/p/cs146s, latent.space one-million special (duplicate post of the same episode), his site's YouTube links",
+      "recheck 20261111-090807-a206f4: web: Mihail Eric Monaco agentic GTM AI Engineer talk; ai.engineer Code 2026 talk videos (none posted yet)"
     ],
     "gaps": [
       "the Latent Space episode is published twice (latent.space/p/cs146s and a 'One Million AI Engineer Special' post); one URL is kept",
@@ -27,7 +29,8 @@
   "1341863": {
     "searched": [
       "roster links (kvaidya.com, linkedin.com/in/kaavee315, x.com/KaranVaidya6)",
-      "company site: composio.dev"
+      "company site: composio.dev",
+      "recheck 20261111-090807-a206f4: web: Karan Vaidya Composio agent swarms talk; ai.engineer Code 2026 talk videos (none posted yet)"
     ],
     "gaps": [
       "the recording starts about five minutes in, so whatever the opening named (posts, repos, the harness story in the abstract) is unrecorded",
@@ -42,7 +45,8 @@
       "roster links (linkedin.com/in/utkarshshrivastava, netflix.com)",
       "web: Netflix tech blog internal AI assistant MCP enterprise platform",
       "web: Utkarsh Shrivastava Netflix enterprise AI",
-      "candidates: netflixtechblog.com, about.netflix.com, theorg.com profile, review.firstround.com, claude.com webinar"
+      "candidates: netflixtechblog.com, about.netflix.com, theorg.com profile, review.firstround.com, claude.com webinar",
+      "recheck 20261111-090807-a206f4: web: Utkarsh Shrivastava Netflix shared AI assistant MCP; Utkarsh Shrivastava Netflix github/x profile; ai.engineer Code 2026 talk videos (none posted yet)"
     ],
     "gaps": [
       "netflixtechblog.com answered 403 (bot wall); no Netflix Tech Blog post on the internal assistant or its MCP gating was found",
@@ -57,7 +61,8 @@
       "web: George Fraser Fivetran context AI data team business intelligence",
       "web: Ramp AI data analyst agent blog dbt",
       "web: OpenAI in-house data agent blog",
-      "candidates: fivetran.com/docs/connector-sdk, getdbt.com"
+      "candidates: fivetran.com/docs/connector-sdk, getdbt.com",
+      "recheck 20261111-090807-a206f4: web: George Fraser data team context AI Engineer Code Summit; ai.engineer Code 2026 talk videos (none posted yet)"
     ],
     "gaps": [
       "openai.com/index/inside-our-in-house-data-agent (the in-house agent the talk says OpenAI wrote about) answered 403 to the check; not linked",
@@ -71,7 +76,8 @@
       "roster (no links published)",
       "candidate profiles: scotttolinski.com, x.com/stolinski, github.com/stolinski, syntax.fm, youtube.com/@syntaxfm",
       "web: Scott Tolinski survey developers mental health AI coding Syntax",
-      "web: Syntax YouTube true cost of AI coding mental health video"
+      "web: Syntax YouTube true cost of AI coding mental health video",
+      "recheck 20261111-090807-a206f4: web: Scott Tolinski true cost of AI coding Syntax survey video; ai.engineer Code 2026 talk videos (none posted yet)"
     ],
     "gaps": [
       "the survey the talk reports (\"about 4000 respondents so far\") has no results page found",

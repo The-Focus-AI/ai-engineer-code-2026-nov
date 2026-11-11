@@ -1,0 +1,498 @@
+{
+  "photos": {
+    "PXL_20261110_175511716.jpg": {
+      "file": "PXL_20261110_175511716.jpg",
+      "captured_at_utc": "2026-11-10T17:55:11+00:00",
+      "captured_at_local": "2026-11-10T09:55:11-08:00",
+      "sha256": "3c2eab0ff025ce95c7fb70edfbd215c1bf6cfa7136f3ca52015033f9fc5cac0a",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1333169",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_0933_Ankir-Jain (2026-11-10T17:33:30.000Z–2026-11-10T17:56:00.600Z) matched to session 1333169"
+      ],
+      "placed_path": "talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/photos/PXL_20261110_175511716.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_181435938.jpg": {
+      "file": "PXL_20261110_181435938.jpg",
+      "captured_at_utc": "2026-11-10T18:14:35+00:00",
+      "captured_at_local": "2026-11-10T10:14:35-08:00",
+      "sha256": "e7efdcf5cd9971bbd82771afec96db7a061baa73348e7dbdc1e6767e7e5238f7",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_181435938.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_181822800.jpg": {
+      "file": "PXL_20261110_181822800.jpg",
+      "captured_at_utc": "2026-11-10T18:18:22+00:00",
+      "captured_at_local": "2026-11-10T10:18:22-08:00",
+      "sha256": "3961cb11b52a056feb12f5bb7bbc69d4095020d5546a450722019b28ecd3e9a6",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_181822800.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182207872.MP.jpg": {
+      "file": "PXL_20261110_182207872.MP.jpg",
+      "captured_at_utc": "2026-11-10T18:22:07+00:00",
+      "captured_at_local": "2026-11-10T10:22:07-08:00",
+      "sha256": "d0df1e66cd7f6da1cc837965f2fb25db5512d0346670cd111d83d629206c23f2",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1022",
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182207872.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182209724.jpg": {
+      "file": "PXL_20261110_182209724.jpg",
+      "captured_at_utc": "2026-11-10T18:22:09+00:00",
+      "captured_at_local": "2026-11-10T10:22:09-08:00",
+      "sha256": "985293f1ab00ab94e047266d08c37be26718fee35b8678d2a20af68e0daa256f",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1022",
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182209724.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182211766.MP.jpg": {
+      "file": "PXL_20261110_182211766.MP.jpg",
+      "captured_at_utc": "2026-11-10T18:22:11+00:00",
+      "captured_at_local": "2026-11-10T10:22:11-08:00",
+      "sha256": "acf394e676728e21db3d920cff5e976cc5d4977f6e0364eb6cd5c211b80e2d43",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1022",
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182211766.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182817402.jpg": {
+      "file": "PXL_20261110_182817402.jpg",
+      "captured_at_utc": "2026-11-10T18:28:17+00:00",
+      "captured_at_local": "2026-11-10T10:28:17-08:00",
+      "sha256": "31558b141195644957adcaba2273bfbbd06f1d1b4954d73a3193c95033885ad5",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1028",
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182817402.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182819090.jpg": {
+      "file": "PXL_20261110_182819090.jpg",
+      "captured_at_utc": "2026-11-10T18:28:19+00:00",
+      "captured_at_local": "2026-11-10T10:28:19-08:00",
+      "sha256": "654d32140f189a9b8f449470fac46342b2613c77b1ea84bbe8ac664a8e6746b5",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1028",
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182819090.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182820893.jpg": {
+      "file": "PXL_20261110_182820893.jpg",
+      "captured_at_utc": "2026-11-10T18:28:20+00:00",
+      "captured_at_local": "2026-11-10T10:28:20-08:00",
+      "sha256": "4e1554d5ad0ed7ac3a2b54dd42cc0e358002c6fdf8733024349a70cdf04592b2",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1028",
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182820893.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_183242051.jpg": {
+      "file": "PXL_20261110_183242051.jpg",
+      "captured_at_utc": "2026-11-10T18:32:42+00:00",
+      "captured_at_local": "2026-11-10T10:32:42-08:00",
+      "sha256": "474fcc98532a04e2f446a65ca4a399902ca442b3fa53cd789743f37d27f2cc3b",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_183242051.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_220127976.jpg": {
+      "file": "PXL_20261110_220127976.jpg",
+      "captured_at_utc": "2026-11-10T22:01:27+00:00",
+      "captured_at_local": "2026-11-10T14:01:27-08:00",
+      "sha256": "e1316045089a342541ca9e1d2e4a45a7eab66d79c4a276cf84b1f90bf9b2dcd0",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1341863",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1355_Karan-Vaidya (2026-11-10T21:55:07.000Z–2026-11-10T22:05:48.100Z) matched to session 1341863"
+      ],
+      "placed_path": "talks/2026-11-10-from-coding-agents-to-knowledge-work-agents/photos/PXL_20261110_220127976.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_221921464.MP.jpg": {
+      "file": "PXL_20261110_221921464.MP.jpg",
+      "captured_at_utc": "2026-11-10T22:19:21+00:00",
+      "captured_at_local": "2026-11-10T14:19:21-08:00",
+      "sha256": "2d8b4114eb93693edb6f6bf0c71ed0d4268a4fcfdf88ae03f76689418b34c158",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1356697",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1418_George-Fraser (2026-11-10T22:18:17.000Z–2026-11-10T22:46:14.300Z) matched to session 1356697"
+      ],
+      "placed_path": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos/PXL_20261110_221921464.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_222347495.jpg": {
+      "file": "PXL_20261110_222347495.jpg",
+      "captured_at_utc": "2026-11-10T22:23:47+00:00",
+      "captured_at_local": "2026-11-10T14:23:47-08:00",
+      "sha256": "0730b389ea3af219cb8b82386f07c89a3047964c232fbd275436bc888759e359",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1356697",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1418_George-Fraser (2026-11-10T22:18:17.000Z–2026-11-10T22:46:14.300Z) matched to session 1356697"
+      ],
+      "placed_path": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos/PXL_20261110_222347495.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_222825483.jpg": {
+      "file": "PXL_20261110_222825483.jpg",
+      "captured_at_utc": "2026-11-10T22:28:25+00:00",
+      "captured_at_local": "2026-11-10T14:28:25-08:00",
+      "sha256": "7ae8770d77654ddbc5ab387588428587746a1f21672aa6e0571603670fe9e8f4",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1356697",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1418_George-Fraser (2026-11-10T22:18:17.000Z–2026-11-10T22:46:14.300Z) matched to session 1356697"
+      ],
+      "placed_path": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos/PXL_20261110_222825483.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_223052728.MP.jpg": {
+      "file": "PXL_20261110_223052728.MP.jpg",
+      "captured_at_utc": "2026-11-10T22:30:52+00:00",
+      "captured_at_local": "2026-11-10T14:30:52-08:00",
+      "sha256": "3b0423eb8ba9225b2486710bf19df8f7d9f19a6910ce95800beadcfc1ec8af79",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1356697",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1418_George-Fraser (2026-11-10T22:18:17.000Z–2026-11-10T22:46:14.300Z) matched to session 1356697"
+      ],
+      "placed_path": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos/PXL_20261110_223052728.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_223144635.jpg": {
+      "file": "PXL_20261110_223144635.jpg",
+      "captured_at_utc": "2026-11-10T22:31:44+00:00",
+      "captured_at_local": "2026-11-10T14:31:44-08:00",
+      "sha256": "324a1cd36b9b0ab9b334255c0824f3824d8a2020fe117469f885a97713baf157",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1356697",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1418_George-Fraser (2026-11-10T22:18:17.000Z–2026-11-10T22:46:14.300Z) matched to session 1356697"
+      ],
+      "placed_path": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos/PXL_20261110_223144635.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_225748351.jpg": {
+      "file": "PXL_20261110_225748351.jpg",
+      "captured_at_utc": "2026-11-10T22:57:48+00:00",
+      "captured_at_local": "2026-11-10T14:57:48-08:00",
+      "sha256": "4ebf63175cfb0f1eb17a20e417ac9ea7023f2da06b15a6a3f068af255105dfab",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1352199",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1457_Utkarsh (2026-11-10T22:57:27.000Z–2026-11-10T23:24:37.500Z) matched to session 1352199"
+      ],
+      "placed_path": "talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/photos/PXL_20261110_225748351.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_230002960.MP.jpg": {
+      "file": "PXL_20261110_230002960.MP.jpg",
+      "captured_at_utc": "2026-11-10T23:00:02+00:00",
+      "captured_at_local": "2026-11-10T15:00:02-08:00",
+      "sha256": "7529174b62b0add35667a25223cf82e834d9efeb4b8205b0b77f24957c5a88e7",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1352199",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1457_Utkarsh (2026-11-10T22:57:27.000Z–2026-11-10T23:24:37.500Z) matched to session 1352199"
+      ],
+      "placed_path": "talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/photos/PXL_20261110_230002960.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_233809826.MP.jpg": {
+      "file": "PXL_20261110_233809826.MP.jpg",
+      "captured_at_utc": "2026-11-10T23:38:09+00:00",
+      "captured_at_local": "2026-11-10T15:38:09-08:00",
+      "sha256": "826f6a1f0a8c20f916cb2d6bc2101ca0cb377348176d93510920072f7c1f01cb",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_233809826.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_234031965.jpg": {
+      "file": "PXL_20261110_234031965.jpg",
+      "captured_at_utc": "2026-11-10T23:40:31+00:00",
+      "captured_at_local": "2026-11-10T15:40:31-08:00",
+      "sha256": "8b81a540116c8741280eafe19ff0fe5043bc798559b56f34519a3cc04f107bf3",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261110T1540",
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_234031965.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_234049175.jpg": {
+      "file": "PXL_20261110_234049175.jpg",
+      "captured_at_utc": "2026-11-10T23:40:49+00:00",
+      "captured_at_local": "2026-11-10T15:40:49-08:00",
+      "sha256": "114586091c687b9f6c781525bfaf03bd6bc843134e3dc55ae625e80963ff9c8b",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261110T1540",
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_234049175.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_234202157.jpg": {
+      "file": "PXL_20261110_234202157.jpg",
+      "captured_at_utc": "2026-11-10T23:42:02+00:00",
+      "captured_at_local": "2026-11-10T15:42:02-08:00",
+      "sha256": "03c3a2685538ce12882b045e592f9ab72995ddabbfe263c937127ae886cd2857",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_234202157.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_234349286.jpg": {
+      "file": "PXL_20261110_234349286.jpg",
+      "captured_at_utc": "2026-11-10T23:43:49+00:00",
+      "captured_at_local": "2026-11-10T15:43:49-08:00",
+      "sha256": "212481eeff14ae55dcacf301791637469fd27385d4d865001bf0d0db43e63e0e",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_234349286.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_235027064.jpg": {
+      "file": "PXL_20261110_235027064.jpg",
+      "captured_at_utc": "2026-11-10T23:50:27+00:00",
+      "captured_at_local": "2026-11-10T15:50:27-08:00",
+      "sha256": "0721f2bf2b8e07127b3ef88a9819a9db83b531b40ab440dad7587af42fd22fb6",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_235027064.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_235341969.MP.jpg": {
+      "file": "PXL_20261110_235341969.MP.jpg",
+      "captured_at_utc": "2026-11-10T23:53:41+00:00",
+      "captured_at_local": "2026-11-10T15:53:41-08:00",
+      "sha256": "1a32e571f6de6881102f2f6b8f1ace2ccc5eee01d5d14814fa2f5ffed8e9ed66",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_235341969.MP.jpg",
+      "status": "placed"
+    }
+  },
+  "placements": {
+    "1333169": {
+      "dir": "talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/photos",
+      "photos": [
+        "PXL_20261110_175511716.jpg"
+      ]
+    },
+    "1334565": {
+      "dir": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos",
+      "photos": [
+        "PXL_20261110_233809826.MP.jpg",
+        "PXL_20261110_234031965.jpg",
+        "PXL_20261110_234049175.jpg",
+        "PXL_20261110_234202157.jpg",
+        "PXL_20261110_234349286.jpg",
+        "PXL_20261110_235027064.jpg",
+        "PXL_20261110_235341969.MP.jpg"
+      ]
+    },
+    "1341863": {
+      "dir": "talks/2026-11-10-from-coding-agents-to-knowledge-work-agents/photos",
+      "photos": [
+        "PXL_20261110_220127976.jpg"
+      ]
+    },
+    "1352199": {
+      "dir": "talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/photos",
+      "photos": [
+        "PXL_20261110_225748351.jpg",
+        "PXL_20261110_230002960.MP.jpg"
+      ]
+    },
+    "1356697": {
+      "dir": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos",
+      "photos": [
+        "PXL_20261110_221921464.MP.jpg",
+        "PXL_20261110_222347495.jpg",
+        "PXL_20261110_222825483.jpg",
+        "PXL_20261110_223052728.MP.jpg",
+        "PXL_20261110_223144635.jpg"
+      ]
+    },
+    "1379134": {
+      "dir": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos",
+      "photos": [
+        "PXL_20261110_181435938.jpg",
+        "PXL_20261110_181822800.jpg",
+        "PXL_20261110_182207872.MP.jpg",
+        "PXL_20261110_182209724.jpg",
+        "PXL_20261110_182211766.MP.jpg",
+        "PXL_20261110_182817402.jpg",
+        "PXL_20261110_182819090.jpg",
+        "PXL_20261110_182820893.jpg",
+        "PXL_20261110_183242051.jpg"
+      ]
+    }
+  },
+  "event_photos": {},
+  "coverage": {
+    "photos_dir": "photos",
+    "photo_count": 25,
+    "placed_count": 25,
+    "event_count": 0,
+    "review_count": 0,
+    "unplaced_count": 0,
+    "timezone": "America/Los_Angeles",
+    "last_checked": "2026-11-11T09:07:42-08:00",
+    "generated_at": "2026-11-11T09:07:42-08:00"
+  }
+}

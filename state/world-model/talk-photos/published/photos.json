@@ -304,5 +304,124 @@
     ],
     "placed_path": "talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/photos/PXL_20261110_230002960.MP.jpg",
     "status": "placed"
+  },
+  "PXL_20261110_233809826.MP.jpg": {
+    "file": "PXL_20261110_233809826.MP.jpg",
+    "captured_at_utc": "2026-11-10T23:38:09+00:00",
+    "captured_at_local": "2026-11-10T15:38:09-08:00",
+    "sha256": "826f6a1f0a8c20f916cb2d6bc2101ca0cb377348176d93510920072f7c1f01cb",
+    "width": 3000,
+    "height": 4000,
+    "burst_id": null,
+    "session_id": "1334565",
+    "method": "recording-overlap",
+    "confidence": 0.95,
+    "evidence": [
+      "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+    ],
+    "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_233809826.MP.jpg",
+    "status": "placed"
+  },
+  "PXL_20261110_234031965.jpg": {
+    "file": "PXL_20261110_234031965.jpg",
+    "captured_at_utc": "2026-11-10T23:40:31+00:00",
+    "captured_at_local": "2026-11-10T15:40:31-08:00",
+    "sha256": "8b81a540116c8741280eafe19ff0fe5043bc798559b56f34519a3cc04f107bf3",
+    "width": 3000,
+    "height": 4000,
+    "burst_id": "burst-20261110T1540",
+    "session_id": "1334565",
+    "method": "recording-overlap",
+    "confidence": 0.95,
+    "evidence": [
+      "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+    ],
+    "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_234031965.jpg",
+    "status": "placed"
+  },
+  "PXL_20261110_234049175.jpg": {
+    "file": "PXL_20261110_234049175.jpg",
+    "captured_at_utc": "2026-11-10T23:40:49+00:00",
+    "captured_at_local": "2026-11-10T15:40:49-08:00",
+    "sha256": "114586091c687b9f6c781525bfaf03bd6bc843134e3dc55ae625e80963ff9c8b",
+    "width": 3000,
+    "height": 4000,
+    "burst_id": "burst-20261110T1540",
+    "session_id": "1334565",
+    "method": "recording-overlap",
+    "confidence": 0.95,
+    "evidence": [
+      "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+    ],
+    "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_234049175.jpg",
+    "status": "placed"
+  },
+  "PXL_20261110_234202157.jpg": {
+    "file": "PXL_20261110_234202157.jpg",
+    "captured_at_utc": "2026-11-10T23:42:02+00:00",
+    "captured_at_local": "2026-11-10T15:42:02-08:00",
+    "sha256": "03c3a2685538ce12882b045e592f9ab72995ddabbfe263c937127ae886cd2857",
+    "width": 4000,
+    "height": 3000,
+    "burst_id": null,
+    "session_id": "1334565",
+    "method": "recording-overlap",
+    "confidence": 0.95,
+    "evidence": [
+      "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+    ],
+    "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_234202157.jpg",
+    "status": "placed"
+  },
+  "PXL_20261110_234349286.jpg": {
+    "file": "PXL_20261110_234349286.jpg",
+    "captured_at_utc": "2026-11-10T23:43:49+00:00",
+    "captured_at_local": "2026-11-10T15:43:49-08:00",
+    "sha256": "212481eeff14ae55dcacf301791637469fd27385d4d865001bf0d0db43e63e0e",
+    "width": 4000,
+    "height": 3000,
+    "burst_id": null,
+    "session_id": "1334565",
+    "method": "recording-overlap",
+    "confidence": 0.95,
+    "evidence": [
+      "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+    ],
+    "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_234349286.jpg",
+    "status": "placed"
+  },
+  "PXL_20261110_235027064.jpg": {
+    "file": "PXL_20261110_235027064.jpg",
+    "captured_at_utc": "2026-11-10T23:50:27+00:00",
+    "captured_at_local": "2026-11-10T15:50:27-08:00",
+    "sha256": "0721f2bf2b8e07127b3ef88a9819a9db83b531b40ab440dad7587af42fd22fb6",
+    "width": 4000,
+    "height": 3000,
+    "burst_id": null,
+    "session_id": "1334565",
+    "method": "recording-overlap",
+    "confidence": 0.95,
+    "evidence": [
+      "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+    ],
+    "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_235027064.jpg",
+    "status": "placed"
+  },
+  "PXL_20261110_235341969.MP.jpg": {
+    "file": "PXL_20261110_235341969.MP.jpg",
+    "captured_at_utc": "2026-11-10T23:53:41+00:00",
+    "captured_at_local": "2026-11-10T15:53:41-08:00",
+    "sha256": "1a32e571f6de6881102f2f6b8f1ace2ccc5eee01d5d14814fa2f5ffed8e9ed66",
+    "width": 4000,
+    "height": 3000,
+    "burst_id": null,
+    "session_id": "1334565",
+    "method": "recording-overlap",
+    "confidence": 0.95,
+    "evidence": [
+      "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+    ],
+    "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_235341969.MP.jpg",
+    "status": "placed"
   }
 }
