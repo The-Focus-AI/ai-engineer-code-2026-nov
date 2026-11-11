@@ -361,10 +361,18 @@ for (const t of captured) {
   let html = md(stripFront(themesMd).replace(/^# Themes\s*\n/m, ""));
   html = html.replace(/href="\.\.\/talks\/([^/"]+)\/transcript\.md"/g, (_, slug) => `href="talks/${slug}.html#transcript"`);
   html = html.replace(/<h3>([^<]+)<\/h3>/g, (_, name) => `<h3 id="${slugify(name)}">${name}</h3>`);
+  // Through-lines: atlases/<slug>/ with a story.md and a built page.html.
+  const throughLines = list("atlases").filter((d) => exists(`atlases/${d}/page.html`) && exists(`atlases/${d}/story.md`)).map((d) => {
+    const md = read(`atlases/${d}/story.md`);
+    const title = front(md, "title") ?? d;
+    const n = (md.match(/^  - talks\//gm) ?? []).length;
+    return `<a class="theme-card" href="${up}atlases/${d}/page.html"><b>${esc(title.split(":")[0]!)}</b><span>${esc(title.split(":").slice(1).join(":").trim())}</span><span class="mono">${n} talks</span></a>`;
+  }).join("");
   const toc = themes.map((th) => `<a class="theme-card" href="#${th.id}"><b>${esc(th.name)}</b><span>${esc(th.claim)}</span><span class="mono">${th.slugs.size} talks</span></a>`).join("");
   const body = `
   <header class="masthead"><p class="mono agency">${esc(wm.event.name)}</p><h1>Themes</h1><p class="sub">What the talks have in common, with every claim tied to a moment in a transcript.</p></header>
   <div class="marginalia mono"><span>${themes.length} themes · ${thesis.size} talks</span><span>Refreshed when a talk lands</span></div>
+  ${throughLines ? `<section class="view"><div class="view-head"><h2>Through-lines</h2><p class="lede">Stories across several talks.</p></div><div class="themes">${throughLines}</div></section>` : ""}
   <section class="view"><div class="themes">${toc}</div></section>
   <section class="view"><div class="prose wide">${html}</div></section>`;
   write("site/themes.html", shell({ title: "Themes", active: "themes", up, body }));
