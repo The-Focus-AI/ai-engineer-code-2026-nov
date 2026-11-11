@@ -130,7 +130,7 @@ Claims only one talk makes. Often the most distinctive part of a talk.
 ## Limits
 
 - Six talks, all from one room on one day. The themes are a first map, not the conference's.
-- Karan Vaidya's recording covers only the last 11 minutes of his talk, so his opening (how harnesses moved from code to knowledge work) is missing.
+- Karan Vaidya's recording starts about five minutes into the scheduled slot, mid-sentence, and runs to his conclusion (about 11 minutes). Whatever he opened with is missing; the abstract ("How harness evolved from code to Knowledge work") suggests it was how harnesses moved from code to knowledge work.
 - Transcripts are local Qwen3-ASR with misheard words kept as transcribed; prompt insertions ("Databricks" in Scott Tolinski's, "At Composio" in George Fraser's, "Google DeepMind" in Utkarsh Shrivastava's, "Sonar" and "Netflix" in Mihail Eric's) are flagged in each transcript and never quoted here.
 - Clustering used only the extracted claims, not the full transcripts; an argument a talk made but the extraction missed cannot appear.
 - The Monaco talk was first filed from a garbled Voice Memos transcript and re-extracted from its Qwen transcript once the machine was on power; its claims now quote the Qwen text.

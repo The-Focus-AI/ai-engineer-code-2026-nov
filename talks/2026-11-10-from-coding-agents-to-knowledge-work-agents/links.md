@@ -25,7 +25,7 @@ All three come from the conference roster, and each page's title names him.
 
 ## Resources
 
-None verified yet. The recording covers only the last 11 minutes of the talk.
+None verified yet. The recording starts about five minutes into the scheduled slot and runs to his conclusion (about 11 minutes), so anything named in his opening is unrecorded.
 
 ## Gaps
 

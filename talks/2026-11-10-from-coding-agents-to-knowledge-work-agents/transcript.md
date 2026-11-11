@@ -14,7 +14,8 @@ source: qwen3-asr-1.7b
 
 > Filed on the operator's confirmation (notes/inbox/2026-11-10T1519-file-karan-vaidya-recording.md):
 > neither transcript names the speaker unprompted, and the recording starts about five
-> minutes into the talk, mid-sentence. It covers the last 11 minutes.
+> minutes into the scheduled slot, mid-sentence, and runs to his conclusion (about 11
+> minutes, 13:55–14:06).
 >
 > Transcribed locally with Qwen3-ASR 1.7B (timings per ~5 s segment), prompted with the
 > speaker names of overlapping sessions; "Composio" in this transcript may come from that
