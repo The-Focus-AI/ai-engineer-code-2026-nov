@@ -2,12 +2,22 @@
   "title": "overcut",
   "recorded_at": "2026-11-11T12:36:46-08:00",
   "duration_seconds": 1187.5,
-  "transcript": "transcript.txt",
-  "transcript_word_count": 2904,
-  "transcript_locale": "en_US",
-  "transcript_source": "voice-memos",
-  "transcript_timing": "word",
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 2659,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
   "source_file": "20261111 123646.m4a",
   "audio_sha256": "253b33d22a4addaa0aeb33f08326bb4cc027373091adbe5309e96a884189ee76",
-  "exported_at": "2026-11-11T12:56:42-08:00"
+  "exported_at": "2026-11-11T12:56:42-08:00",
+  "transcript_echo_segments": 13,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 2904,
+      "locale": "en_US"
+    }
+  ]
 }

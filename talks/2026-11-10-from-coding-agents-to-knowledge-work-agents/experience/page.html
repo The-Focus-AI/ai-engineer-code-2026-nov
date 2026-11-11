@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swarms on both sides · Karan Vaidya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Tue 10 Nov 2026 · Continental 1–3</div>
+  <h1>Swarms on both sides</h1>
+  <p class="dek">Karan Vaidya runs Composio, which connects agents to the apps companies use. His talk is about running a company's security and operations on swarms of agents, and what the company has to own before that's safe: the access map and the perimeter.</p>
+  <div class="talk-meta">Karan Vaidya, Composio · recording covers the last 11 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual quote-card" data-visual="v1">
+        <p class="quote-big">“Attackers are obviously using agents to attack you.”<span>Karan Vaidya · 00:00:41</span></p>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v2">
+        <div class="lbl">Swarms that watch the company</div>
+        <svg viewBox="0 0 400 240" role="img" aria-label="An outward swarm reads threat feeds every few hours and an inward swarm checks company activity logs every 30 minutes. Both feed a judgment step: clear matches are flagged now; uncertain ones go to a morning review queue for a person.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" text-anchor="middle">
+            <rect x="15" y="20" width="170" height="54" rx="8" fill="var(--card)" stroke="var(--rule)"/>
+            <text x="100" y="42" fill="var(--ink)" font-weight="600">outward swarm</text><text x="100" y="60" fill="var(--muted)" font-size="10">threat feeds · every few hours</text>
+            <rect x="215" y="20" width="170" height="54" rx="8" fill="var(--card)" stroke="var(--rule)"/>
+            <text x="300" y="42" fill="var(--ink)" font-weight="600">inward swarm</text><text x="300" y="60" fill="var(--muted)" font-size="10">company logs · every 30 min</text>
+            <path d="M100 74 L190 112 M300 74 L210 112" stroke="var(--rule)" stroke-width="2" fill="none"/>
+            <rect x="130" y="112" width="140" height="40" rx="8" fill="var(--panel)" stroke="var(--accent)"/><text x="200" y="136" fill="var(--ink)" font-weight="600">match attack patterns</text>
+            <path d="M170 152 L95 186 M230 152 L305 186" stroke="var(--accent)" stroke-width="2" fill="none"/>
+            <rect x="20" y="186" width="150" height="40" rx="8" fill="var(--accent)"/><text x="95" y="210" fill="var(--paper)" font-weight="600">clear: flag now</text>
+            <rect x="230" y="186" width="150" height="40" rx="8" fill="var(--card)" stroke="var(--identity)"/><text x="305" y="204" fill="var(--identity)" font-weight="600">unsure: morning</text><text x="305" y="218" fill="var(--identity)" font-size="10">queue for a person</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:01:56; not his slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="scoped-access.jpg" alt="His slide, Agent swarms need scoped access to nine apps, limited to non-destructive actions: GitHub, Slack, Google Workspace, AWS, Datadog, Sentry, Plain, PagerDuty and Linear, with what the swarms read from each and checks for auth, logs and events. A callout: 106 SaaS apps at the average company, each needing the same three things.">
+        <figcaption>His slide, 2:01 pm (straightened from photos/PXL_20261110_220127976.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v4">
+        <div class="lbl">A firewall on both sides</div>
+        <svg viewBox="0 0 400 220" role="img" aria-label="Untrusted input passes an inbound filter for prompt injection before reaching the agent; the agent's actions pass an outbound check before reaching the apps; scoped credentials sit underneath everything.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" text-anchor="middle" font-weight="600">
+            <rect x="8" y="50" width="68" height="44" rx="8" fill="var(--panel)" stroke="var(--rule)"/><text x="42" y="70" fill="var(--muted)">untrusted</text><text x="42" y="84" fill="var(--muted)">input</text>
+            <rect x="92" y="44" width="62" height="56" rx="8" fill="var(--accent)"/><text x="123" y="68" fill="var(--paper)">inbound</text><text x="123" y="82" fill="var(--paper)">filter</text>
+            <rect x="170" y="50" width="60" height="44" rx="8" fill="var(--card)" stroke="var(--rule)"/><text x="200" y="76" fill="var(--ink)">agent</text>
+            <rect x="246" y="44" width="62" height="56" rx="8" fill="var(--accent)"/><text x="277" y="68" fill="var(--paper)">outbound</text><text x="277" y="82" fill="var(--paper)">check</text>
+            <rect x="324" y="50" width="68" height="44" rx="8" fill="var(--card)" stroke="var(--rule)"/><text x="358" y="76" fill="var(--ink)">apps</text>
+          </g>
+          <g stroke="var(--accent)" stroke-width="2"><path d="M76 72 H92"/><path d="M154 72 H170"/><path d="M230 72 H246"/><path d="M308 72 H324"/></g>
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="var(--muted)">
+            <text x="123" y="118">prompt injection</text><text x="277" y="118">misaligned actions</text>
+          </g>
+          <rect x="8" y="150" width="384" height="40" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+          <text x="200" y="174" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--identity)">scoped credentials underneath everything</text>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:07:15; not his slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v5">
+        <p class="quote-big">“To conclude, attackers already run storms of agents.”<span>Karan Vaidya · 00:09:39</span></p>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="attackers" data-visual="v1" data-caption="Defense has to be agents too">
+      <div class="chapter">The threat</div>
+      <h2>Attackers already run agents</h2>
+      <p>Exploits now arrive before patches do: the time from a patch to an exploit used to be 63 days, and is now far shorter. By his figures, eighty to ninety percent of attacks are now carried out by agents, at a speed and volume no human team can follow.</p>
+      <p>So defense has to be agents too. A security team reading alerts by hand is already behind.</p>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:41 · the recording starts about five minutes into the slot; his opening is missing</p>
+    </section>
+
+    <section data-chapter="swarms-watch" data-visual="v2" data-caption="Around the clock, with a person for the uncertain calls">
+      <div class="chapter">The defense</div>
+      <h2>Swarms that watch the company</h2>
+      <p>One swarm sweeps the outside world every few hours, reading threat feeds, advisories and researchers' posts, and checks whether a new attack pattern matches the company's stack. Another runs every 30 minutes over the company's own activity logs. Clear matches get flagged at once. Anything it isn't sure about goes into a queue a person reviews in the morning, so engineers can sleep.</p>
+      <p>The same pattern runs operations. Most incidents follow a change (a deploy, an environment variable, a config), so each change triggers a swarm that watches error patterns and posts a suggested rollback or fix in Slack within minutes.</p>
+      <blockquote>“We just can't go down.”<span class="cite">00:03:38</span></blockquote>
+      <div class="reading"><b>The reading:</b> the human doesn't disappear; their job changes. Agents handle the volume around the clock, and a person makes the uncertain calls in the morning. The swarm filters so the person only sees what needs judgment.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:56, 00:03:38</p>
+    </section>
+
+    <section data-chapter="scoped-access" data-visual="v3" data-caption="106 apps, each scoped">
+      <div class="chapter">The access</div>
+      <h2>Broad reach, granular access</h2>
+      <p>To find problems before they spread, agents need access to everything the company uses, and the more access, the more useful they are. But it has to be granular: even large swarms can be tricked by prompt injection or simply make mistakes, and broad write access can take down production or leak customer data. The average company uses 106 apps, and getting scoped access right across all of them is a lot of work; that mapping is what Composio sells.</p>
+      <blockquote>“So to be able to do that correctly, you need to give right amount of access to all of these agents.”<span class="cite">00:05:49</span></blockquote>
+      <div class="reading"><b>The reading:</b> access is a layer you own: a deliberate map of who can do what, where, kept as carefully as the data itself.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:05:49</p>
+    </section>
+
+    <section data-chapter="firewall" data-visual="v4" data-caption="Inputs and actions">
+      <div class="chapter">The perimeter</div>
+      <h2>A firewall on both sides</h2>
+      <p>Swarms read unfiltered text, and none of it is fully trustworthy: anything can be used to poison an agent's input. In the deterministic era a web firewall protected applications from known-bad traffic. Agents need the same idea, in both directions.</p>
+      <blockquote>“In case of non-deterministic agents, you want something similar protecting.”<span class="cite">00:07:15</span></blockquote>
+      <p>On the way in, detection layers flag likely prompt injection before it reaches the agent's context; Composio trains small models on the injection patterns it sees across the tool calls on its platform. On the way out, a second check stops misaligned actions, because something can still get through. And credentials are scoped from the start.</p>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:07:15</p>
+    </section>
+
+    <section data-chapter="both-sides" data-visual="v5" data-caption="Own the access map and the perimeter">
+      <div class="chapter">The pattern</div>
+      <h2>Swarms on both sides</h2>
+      <p>His closing patterns: give each swarm its own area so their contexts don't conflict, give them connectivity, and treat a firewall as a must.</p>
+      <div class="reading"><b>The reading:</b> this is the security side of <a href="../../../atlases/own-the-stack/page.html">owning the stack</a>. Besides the data and the checks, a company running on agents owns the access map (who can do what, in which app) and the perimeter (what goes in, what comes out), and keeps a person on the calls the swarm can't make.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:09:39</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room). The recording starts about five minutes into the slot. Quotes are verbatim from the transcript; garbled figures are left out. “The reading” is interpretation, not his words; the two drawn diagrams are illustrative. More on the <a href="../links.md">links page</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

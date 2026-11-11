@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Own the stack · a through-line</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../stories/runtime/talk.css">
+<style>
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  blockquote .who { display: block; font: 600 .7rem/1.4 var(--mono); letter-spacing: .08em; color: var(--muted); font-style: normal; margin-top: .4rem; }
+  blockquote .who a { color: var(--machine); }
+  code { font: .88em var(--mono); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · a through-line across six talks</div>
+  <h1>Own the stack</h1>
+  <p class="dek">Across six talks the same shift shows up from different directions: choosing a model is no longer the decision. The model is the replaceable part. A company has to own everything around it (its data and context, the environment agents work in, the checks, and the people who decide) and build its platform on that.</p>
+  <div class="talk-meta">Netflix · Fivetran · SpaceXSI · Aviator · Monaco · Syntax · the reading across the talk stories, not any one speaker's claim</div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+      <figure class="talk-visual diagram-card" data-visual="v0"><div class="lbl">The stack</div><svg viewBox="0 0 400 320" role="img" aria-label="The stack, bottom to top: model, data and context, harness, verification, organization. Active layer: all.">
+<g font-family="ui-sans-serif, system-ui, sans-serif">
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="40" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="59" font-size="12" font-weight="700" fill="var(--ink)">ORGANIZATION</text><text x="32" y="75" font-size="10" fill="var(--muted)">own the decisions</text>
+<rect x="308" y="54" width="59" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="338" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tolinski</text>
+<rect x="228" y="54" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="265" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="169" y="54" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="196" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="128" y="54" width="36" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="146" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Jain</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="94" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="113" font-size="12" font-weight="700" fill="var(--ink)">VERIFICATION</text><text x="32" y="129" font-size="10" fill="var(--muted)">own the checks</text>
+<rect x="291" y="108" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="329" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="233" y="108" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="260" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="192" y="108" width="36" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="210" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Jain</text>
+<rect x="156" y="108" width="31" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="171" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tan</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="148" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="167" font-size="12" font-weight="700" fill="var(--ink)">HARNESS</text><text x="32" y="183" font-size="10" fill="var(--muted)">own the environment</text>
+<rect x="314" y="162" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="340" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="233" y="162" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="271" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="197" y="162" width="31" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="213" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tan</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="202" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="221" font-size="12" font-weight="700" fill="var(--ink)">DATA AND CONTEXT</text><text x="32" y="237" font-size="10" fill="var(--muted)">own what only you have</text>
+<rect x="291" y="216" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="329" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="233" y="216" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="260" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="181" y="216" width="48" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="204" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Fraser</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="256" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="275" font-size="12" font-weight="700" fill="var(--ink)">MODEL</text><text x="32" y="291" font-size="10" fill="var(--muted)">the replaceable part</text>
+<rect x="314" y="270" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="340" y="283" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+</g>
+<text x="200" y="314" text-anchor="middle" font-size="10" fill="var(--muted)">read bottom to top · chips are the talks on each layer</text></g></svg><figcaption>Five layers a company owns; the talks sit on the layers they address</figcaption></figure>
+      <figure class="talk-visual diagram-card" data-visual="v1"><div class="lbl">Model</div><svg viewBox="0 0 400 320" role="img" aria-label="The stack, bottom to top: model, data and context, harness, verification, organization. Active layer: model.">
+<g font-family="ui-sans-serif, system-ui, sans-serif">
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="40" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="59" font-size="12" font-weight="700" fill="var(--ink)">ORGANIZATION</text><text x="32" y="75" font-size="10" fill="var(--muted)">own the decisions</text>
+<rect x="308" y="54" width="59" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="338" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tolinski</text>
+<rect x="228" y="54" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="265" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="169" y="54" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="196" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="128" y="54" width="36" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="146" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Jain</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="94" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="113" font-size="12" font-weight="700" fill="var(--ink)">VERIFICATION</text><text x="32" y="129" font-size="10" fill="var(--muted)">own the checks</text>
+<rect x="291" y="108" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="329" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="233" y="108" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="260" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="192" y="108" width="36" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="210" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Jain</text>
+<rect x="156" y="108" width="31" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="171" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tan</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="148" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="167" font-size="12" font-weight="700" fill="var(--ink)">HARNESS</text><text x="32" y="183" font-size="10" fill="var(--muted)">own the environment</text>
+<rect x="314" y="162" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="340" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="233" y="162" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="271" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="197" y="162" width="31" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="213" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tan</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="202" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="221" font-size="12" font-weight="700" fill="var(--ink)">DATA AND CONTEXT</text><text x="32" y="237" font-size="10" fill="var(--muted)">own what only you have</text>
+<rect x="291" y="216" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="329" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="233" y="216" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="260" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="181" y="216" width="48" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="204" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Fraser</text>
+</g>
+<g opacity="1" transform="translate(-8,0)"><rect x="20" y="256" width="360" height="46" rx="7" fill="var(--card)" stroke="var(--accent)" stroke-width="2"/>
+<text x="32" y="275" font-size="12" font-weight="700" fill="var(--accent)">MODEL</text><text x="32" y="291" font-size="10" fill="var(--muted)">the replaceable part</text>
+<rect x="314" y="270" width="53" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="340" y="283" text-anchor="middle" font-size="9.5" fill="var(--identity)">Netflix</text>
+</g>
+<text x="200" y="314" text-anchor="middle" font-size="10" fill="var(--muted)">read bottom to top · chips are the talks on each layer</text></g></svg><figcaption>The replaceable part</figcaption></figure>
+      <figure class="talk-visual diagram-card" data-visual="v2"><div class="lbl">Data and context</div><svg viewBox="0 0 400 320" role="img" aria-label="The stack, bottom to top: model, data and context, harness, verification, organization. Active layer: data.">
+<g font-family="ui-sans-serif, system-ui, sans-serif">
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="40" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="59" font-size="12" font-weight="700" fill="var(--ink)">ORGANIZATION</text><text x="32" y="75" font-size="10" fill="var(--muted)">own the decisions</text>
+<rect x="308" y="54" width="59" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="338" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tolinski</text>
+<rect x="228" y="54" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="265" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="169" y="54" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="196" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="128" y="54" width="36" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="146" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Jain</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="94" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="113" font-size="12" font-weight="700" fill="var(--ink)">VERIFICATION</text><text x="32" y="129" font-size="10" fill="var(--muted)">own the checks</text>
+<rect x="291" y="108" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="329" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="233" y="108" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="260" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="192" y="108" width="36" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="210" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Jain</text>
+<rect x="156" y="108" width="31" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="171" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tan</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="148" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="167" font-size="12" font-weight="700" fill="var(--ink)">HARNESS</text><text x="32" y="183" font-size="10" fill="var(--muted)">own the environment</text>
+<rect x="314" y="162" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="340" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="233" y="162" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="271" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="197" y="162" width="31" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="213" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tan</text>
+</g>
+<g opacity="1" transform="translate(-8,0)"><rect x="20" y="202" width="360" height="46" rx="7" fill="var(--card)" stroke="var(--accent)" stroke-width="2"/>
+<text x="32" y="221" font-size="12" font-weight="700" fill="var(--accent)">DATA AND CONTEXT</text><text x="32" y="237" font-size="10" fill="var(--muted)">own what only you have</text>
+<rect x="291" y="216" width="76" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="329" y="229" text-anchor="middle" font-size="9.5" fill="var(--identity)">Vertical AI</text>
+<rect x="233" y="216" width="53" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="260" y="229" text-anchor="middle" font-size="9.5" fill="var(--identity)">Netflix</text>
+<rect x="181" y="216" width="48" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="204" y="229" text-anchor="middle" font-size="9.5" fill="var(--identity)">Fraser</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="256" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="275" font-size="12" font-weight="700" fill="var(--ink)">MODEL</text><text x="32" y="291" font-size="10" fill="var(--muted)">the replaceable part</text>
+<rect x="314" y="270" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="340" y="283" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+</g>
+<text x="200" y="314" text-anchor="middle" font-size="10" fill="var(--muted)">read bottom to top · chips are the talks on each layer</text></g></svg><figcaption>Own what only you have</figcaption></figure>
+      <figure class="talk-visual diagram-card" data-visual="v3"><div class="lbl">Harness</div><svg viewBox="0 0 400 320" role="img" aria-label="The stack, bottom to top: model, data and context, harness, verification, organization. Active layer: harness.">
+<g font-family="ui-sans-serif, system-ui, sans-serif">
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="40" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="59" font-size="12" font-weight="700" fill="var(--ink)">ORGANIZATION</text><text x="32" y="75" font-size="10" fill="var(--muted)">own the decisions</text>
+<rect x="308" y="54" width="59" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="338" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tolinski</text>
+<rect x="228" y="54" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="265" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="169" y="54" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="196" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="128" y="54" width="36" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="146" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Jain</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="94" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="113" font-size="12" font-weight="700" fill="var(--ink)">VERIFICATION</text><text x="32" y="129" font-size="10" fill="var(--muted)">own the checks</text>
+<rect x="291" y="108" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="329" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="233" y="108" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="260" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="192" y="108" width="36" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="210" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Jain</text>
+<rect x="156" y="108" width="31" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="171" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tan</text>
+</g>
+<g opacity="1" transform="translate(-8,0)"><rect x="20" y="148" width="360" height="46" rx="7" fill="var(--card)" stroke="var(--accent)" stroke-width="2"/>
+<text x="32" y="167" font-size="12" font-weight="700" fill="var(--accent)">HARNESS</text><text x="32" y="183" font-size="10" fill="var(--muted)">own the environment</text>
+<rect x="314" y="162" width="53" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="340" y="175" text-anchor="middle" font-size="9.5" fill="var(--identity)">Netflix</text>
+<rect x="233" y="162" width="76" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="271" y="175" text-anchor="middle" font-size="9.5" fill="var(--identity)">Vertical AI</text>
+<rect x="197" y="162" width="31" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="213" y="175" text-anchor="middle" font-size="9.5" fill="var(--identity)">Tan</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="202" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="221" font-size="12" font-weight="700" fill="var(--ink)">DATA AND CONTEXT</text><text x="32" y="237" font-size="10" fill="var(--muted)">own what only you have</text>
+<rect x="291" y="216" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="329" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="233" y="216" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="260" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="181" y="216" width="48" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="204" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Fraser</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="256" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="275" font-size="12" font-weight="700" fill="var(--ink)">MODEL</text><text x="32" y="291" font-size="10" fill="var(--muted)">the replaceable part</text>
+<rect x="314" y="270" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="340" y="283" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+</g>
+<text x="200" y="314" text-anchor="middle" font-size="10" fill="var(--muted)">read bottom to top · chips are the talks on each layer</text></g></svg><figcaption>Own the environment agents work in</figcaption></figure>
+      <figure class="talk-visual diagram-card" data-visual="v4"><div class="lbl">Verification</div><svg viewBox="0 0 400 320" role="img" aria-label="The stack, bottom to top: model, data and context, harness, verification, organization. Active layer: verification.">
+<g font-family="ui-sans-serif, system-ui, sans-serif">
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="40" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="59" font-size="12" font-weight="700" fill="var(--ink)">ORGANIZATION</text><text x="32" y="75" font-size="10" fill="var(--muted)">own the decisions</text>
+<rect x="308" y="54" width="59" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="338" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tolinski</text>
+<rect x="228" y="54" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="265" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="169" y="54" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="196" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="128" y="54" width="36" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="146" y="67" text-anchor="middle" font-size="9.5" fill="var(--muted)">Jain</text>
+</g>
+<g opacity="1" transform="translate(-8,0)"><rect x="20" y="94" width="360" height="46" rx="7" fill="var(--card)" stroke="var(--accent)" stroke-width="2"/>
+<text x="32" y="113" font-size="12" font-weight="700" fill="var(--accent)">VERIFICATION</text><text x="32" y="129" font-size="10" fill="var(--muted)">own the checks</text>
+<rect x="291" y="108" width="76" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="329" y="121" text-anchor="middle" font-size="9.5" fill="var(--identity)">Vertical AI</text>
+<rect x="233" y="108" width="53" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="260" y="121" text-anchor="middle" font-size="9.5" fill="var(--identity)">Netflix</text>
+<rect x="192" y="108" width="36" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="210" y="121" text-anchor="middle" font-size="9.5" fill="var(--identity)">Jain</text>
+<rect x="156" y="108" width="31" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="171" y="121" text-anchor="middle" font-size="9.5" fill="var(--identity)">Tan</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="148" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="167" font-size="12" font-weight="700" fill="var(--ink)">HARNESS</text><text x="32" y="183" font-size="10" fill="var(--muted)">own the environment</text>
+<rect x="314" y="162" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="340" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="233" y="162" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="271" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="197" y="162" width="31" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="213" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tan</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="202" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="221" font-size="12" font-weight="700" fill="var(--ink)">DATA AND CONTEXT</text><text x="32" y="237" font-size="10" fill="var(--muted)">own what only you have</text>
+<rect x="291" y="216" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="329" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="233" y="216" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="260" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="181" y="216" width="48" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="204" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Fraser</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="256" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="275" font-size="12" font-weight="700" fill="var(--ink)">MODEL</text><text x="32" y="291" font-size="10" fill="var(--muted)">the replaceable part</text>
+<rect x="314" y="270" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="340" y="283" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+</g>
+<text x="200" y="314" text-anchor="middle" font-size="10" fill="var(--muted)">read bottom to top · chips are the talks on each layer</text></g></svg><figcaption>Own the checks</figcaption></figure>
+      <figure class="talk-visual diagram-card" data-visual="v5"><div class="lbl">Organization</div><svg viewBox="0 0 400 320" role="img" aria-label="The stack, bottom to top: model, data and context, harness, verification, organization. Active layer: organization.">
+<g font-family="ui-sans-serif, system-ui, sans-serif">
+<g opacity="1" transform="translate(-8,0)"><rect x="20" y="40" width="360" height="46" rx="7" fill="var(--card)" stroke="var(--accent)" stroke-width="2"/>
+<text x="32" y="59" font-size="12" font-weight="700" fill="var(--accent)">ORGANIZATION</text><text x="32" y="75" font-size="10" fill="var(--muted)">own the decisions</text>
+<rect x="308" y="54" width="59" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="338" y="67" text-anchor="middle" font-size="9.5" fill="var(--identity)">Tolinski</text>
+<rect x="228" y="54" width="76" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="265" y="67" text-anchor="middle" font-size="9.5" fill="var(--identity)">Vertical AI</text>
+<rect x="169" y="54" width="53" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="196" y="67" text-anchor="middle" font-size="9.5" fill="var(--identity)">Netflix</text>
+<rect x="128" y="54" width="36" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="146" y="67" text-anchor="middle" font-size="9.5" fill="var(--identity)">Jain</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="94" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="113" font-size="12" font-weight="700" fill="var(--ink)">VERIFICATION</text><text x="32" y="129" font-size="10" fill="var(--muted)">own the checks</text>
+<rect x="291" y="108" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="329" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="233" y="108" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="260" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="192" y="108" width="36" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="210" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Jain</text>
+<rect x="156" y="108" width="31" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="171" y="121" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tan</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="148" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="167" font-size="12" font-weight="700" fill="var(--ink)">HARNESS</text><text x="32" y="183" font-size="10" fill="var(--muted)">own the environment</text>
+<rect x="314" y="162" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="340" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="233" y="162" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="271" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="197" y="162" width="31" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="213" y="175" text-anchor="middle" font-size="9.5" fill="var(--muted)">Tan</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="202" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="221" font-size="12" font-weight="700" fill="var(--ink)">DATA AND CONTEXT</text><text x="32" y="237" font-size="10" fill="var(--muted)">own what only you have</text>
+<rect x="291" y="216" width="76" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="329" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Vertical AI</text>
+<rect x="233" y="216" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="260" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+<rect x="181" y="216" width="48" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="204" y="229" text-anchor="middle" font-size="9.5" fill="var(--muted)">Fraser</text>
+</g>
+<g opacity=".45" transform="translate(0,0)"><rect x="20" y="256" width="360" height="46" rx="7" fill="var(--panel)" stroke="var(--rule)" stroke-width="1"/>
+<text x="32" y="275" font-size="12" font-weight="700" fill="var(--ink)">MODEL</text><text x="32" y="291" font-size="10" fill="var(--muted)">the replaceable part</text>
+<rect x="314" y="270" width="53" height="18" rx="9" fill="none" stroke="var(--rule)"/><text x="340" y="283" text-anchor="middle" font-size="9.5" fill="var(--muted)">Netflix</text>
+</g>
+<text x="200" y="314" text-anchor="middle" font-size="10" fill="var(--muted)">read bottom to top · chips are the talks on each layer</text></g></svg><figcaption>Own the decisions</figcaption></figure>
+      <figure class="talk-visual diagram-card" data-visual="v6"><div class="lbl">Then build the platform</div><svg viewBox="0 0 400 320" role="img" aria-label="The stack, bottom to top: model, data and context, harness, verification, organization, with the platform built on top. Active layer: all.">
+<g font-family="ui-sans-serif, system-ui, sans-serif">
+<rect x="20" y="8" width="360" height="26" rx="6" fill="var(--accent)"/><text x="200" y="26" text-anchor="middle" font-size="12" font-weight="700" fill="var(--paper)">THE PLATFORM YOU BUILD ON TOP</text>
+<g opacity="1" transform="translate(0,0)"><rect x="20" y="40" width="360" height="46" rx="7" fill="var(--card)" stroke="var(--accent)" stroke-width="2"/>
+<text x="32" y="59" font-size="12" font-weight="700" fill="var(--accent)">ORGANIZATION</text><text x="32" y="75" font-size="10" fill="var(--muted)">own the decisions</text>
+<rect x="308" y="54" width="59" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="338" y="67" text-anchor="middle" font-size="9.5" fill="var(--identity)">Tolinski</text>
+<rect x="228" y="54" width="76" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="265" y="67" text-anchor="middle" font-size="9.5" fill="var(--identity)">Vertical AI</text>
+<rect x="169" y="54" width="53" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="196" y="67" text-anchor="middle" font-size="9.5" fill="var(--identity)">Netflix</text>
+<rect x="128" y="54" width="36" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="146" y="67" text-anchor="middle" font-size="9.5" fill="var(--identity)">Jain</text>
+</g>
+<g opacity="1" transform="translate(0,0)"><rect x="20" y="94" width="360" height="46" rx="7" fill="var(--card)" stroke="var(--accent)" stroke-width="2"/>
+<text x="32" y="113" font-size="12" font-weight="700" fill="var(--accent)">VERIFICATION</text><text x="32" y="129" font-size="10" fill="var(--muted)">own the checks</text>
+<rect x="291" y="108" width="76" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="329" y="121" text-anchor="middle" font-size="9.5" fill="var(--identity)">Vertical AI</text>
+<rect x="233" y="108" width="53" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="260" y="121" text-anchor="middle" font-size="9.5" fill="var(--identity)">Netflix</text>
+<rect x="192" y="108" width="36" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="210" y="121" text-anchor="middle" font-size="9.5" fill="var(--identity)">Jain</text>
+<rect x="156" y="108" width="31" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="171" y="121" text-anchor="middle" font-size="9.5" fill="var(--identity)">Tan</text>
+</g>
+<g opacity="1" transform="translate(0,0)"><rect x="20" y="148" width="360" height="46" rx="7" fill="var(--card)" stroke="var(--accent)" stroke-width="2"/>
+<text x="32" y="167" font-size="12" font-weight="700" fill="var(--accent)">HARNESS</text><text x="32" y="183" font-size="10" fill="var(--muted)">own the environment</text>
+<rect x="314" y="162" width="53" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="340" y="175" text-anchor="middle" font-size="9.5" fill="var(--identity)">Netflix</text>
+<rect x="233" y="162" width="76" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="271" y="175" text-anchor="middle" font-size="9.5" fill="var(--identity)">Vertical AI</text>
+<rect x="197" y="162" width="31" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="213" y="175" text-anchor="middle" font-size="9.5" fill="var(--identity)">Tan</text>
+</g>
+<g opacity="1" transform="translate(0,0)"><rect x="20" y="202" width="360" height="46" rx="7" fill="var(--card)" stroke="var(--accent)" stroke-width="2"/>
+<text x="32" y="221" font-size="12" font-weight="700" fill="var(--accent)">DATA AND CONTEXT</text><text x="32" y="237" font-size="10" fill="var(--muted)">own what only you have</text>
+<rect x="291" y="216" width="76" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="329" y="229" text-anchor="middle" font-size="9.5" fill="var(--identity)">Vertical AI</text>
+<rect x="233" y="216" width="53" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="260" y="229" text-anchor="middle" font-size="9.5" fill="var(--identity)">Netflix</text>
+<rect x="181" y="216" width="48" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="204" y="229" text-anchor="middle" font-size="9.5" fill="var(--identity)">Fraser</text>
+</g>
+<g opacity="1" transform="translate(0,0)"><rect x="20" y="256" width="360" height="46" rx="7" fill="var(--card)" stroke="var(--accent)" stroke-width="2"/>
+<text x="32" y="275" font-size="12" font-weight="700" fill="var(--accent)">MODEL</text><text x="32" y="291" font-size="10" fill="var(--muted)">the replaceable part</text>
+<rect x="314" y="270" width="53" height="18" rx="9" fill="none" stroke="var(--identity)"/><text x="340" y="283" text-anchor="middle" font-size="9.5" fill="var(--identity)">Netflix</text>
+</g>
+<text x="200" y="314" text-anchor="middle" font-size="10" fill="var(--muted)">read bottom to top · chips are the talks on each layer</text></g></svg><figcaption>Everything you own, with the platform on top</figcaption></figure>
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="the-stack" data-visual="v0" data-caption="Read bottom to top">
+      <div class="chapter">The through-line</div>
+      <h2>The model is the replaceable part</h2>
+      <p>Read bottom to top, the talks form a stack. At the bottom is the model, the part every talk treats as swappable. Above it, each layer is something a company has to own: its data and context, the environment its agents work in, the checks that verify their work, and the people who decide what's right. The platform is what you build on all of it.</p>
+      <p>Each talk shows up as a chip on the layer it actually addresses. Scroll to move up the stack.</p>
+      <div class="reading"><b>Framing:</b> this is the reading across six talk stories, not a claim any one speaker made. Quotes are verbatim from each talk's machine transcript, with garbles kept.</div>
+    </section>
+
+    <section data-chapter="model" data-visual="v1" data-caption="Netflix">
+      <div class="chapter">Layer 1</div>
+      <h2>Model: the replaceable part</h2>
+      <p>At Netflix, Utkarsh Shrivastava tried to pick a model for an assistant serving 10,000 people, and the choice wouldn't hold still: frontier labs launched enterprise plans, open-weight models gained enterprise support, and new options arrived while they evaluated. He stopped treating the model as the decision. The tool is the tip of an iceberg, and the harness can be swapped between frontier and open-source options.</p>
+      <p>Swappable has a cost: whatever you build has to keep working when the model changes.</p>
+      <blockquote>“And so regressions will need to cover all of their models.”<span class="who">Utkarsh Shrivastava · <a href="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/experience/page.html">Netflix</a> · 00:09:03</span></blockquote>
+      <div class="reading"><b>The reading:</b> the infrastructure itself can now be owned: supported open-weight models run in-house where data can't leave, frontier models where the capability is worth it, and a harness portable across both (<code>analysis/enterprise-ai-deployment-options.md</code>).</div>
+    </section>
+
+    <section data-chapter="data" data-visual="v2" data-caption="Fraser · Netflix · vertical AI">
+      <div class="chapter">Layer 2</div>
+      <h2>Data and context: own what only you have</h2>
+      <p>Every talk that touched data reached the same conclusion: the durable asset is the context you've built, not the model you point at it. George Fraser showed companies pointing their agents at the warehouse they built for business intelligence instead of wiring them into every app, because you can't join across sources through a tool per app. The Netflix talk put it in one line.</p>
+      <blockquote>“The company context is the key here.”<span class="who">Utkarsh Shrivastava · <a href="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/experience/page.html">Netflix</a> · 00:02:11</span></blockquote>
+      <p>The vertical AI lessons add the sharper version: separate the data anyone can buy from the data only your customers generate, and keep it current.</p>
+      <blockquote>“The data team should own your context.”<span class="who">George Fraser · <a href="../../talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/experience/page.html">Fivetran</a> · 00:26:44</span></blockquote>
+    </section>
+
+    <section data-chapter="harness" data-visual="v3" data-caption="Lauren Tan · vertical AI · Netflix">
+      <div class="chapter">Layer 3</div>
+      <h2>Harness: own the environment agents work in</h2>
+      <p>The environment agents work in shapes what they produce. Lauren Tan's framing is that the codebase is the agent's memory: agents copy whatever patterns they find, so the code itself has to be kept clean, with constraints the next agent grows around.</p>
+      <blockquote>“So you want to make your codebase as pristine as possible, so that agents are always copying the right stuff.”<span class="who">Lauren Tan · <a href="../../talks/2026-11-11-all-code-is-slop-except-mine/experience/page.html">SpaceXSI (xAI)</a> · 00:04:26</span></blockquote>
+      <p>The vertical AI lessons make the same point from the product side: the chassis (data, workspace, memory, workflows) is generic and reusable; the effort and the advantage go into filling it with the domain.</p>
+      <blockquote>“I could have pulled this and said this was a talk about insurance.”<span class="who">Mihail Eric · <a href="../../talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/experience/page.html">vertical AI</a> · 00:08:33</span></blockquote>
+    </section>
+
+    <section data-chapter="verification" data-visual="v4" data-caption="Lauren Tan · Ankit Jain · Netflix · vertical AI">
+      <div class="chapter">Layer 4</div>
+      <h2>Verification: own the checks</h2>
+      <p>If you don't trust the model, you trust the checks around it, and you own those. Lauren Tan turns every correction into a deterministic check and reviews verification artifacts instead of code. Ankit Jain mines years of review comments into rules with owners. Netflix runs evaluations in CI on every connector and model change. The vertical AI team traces every agent run and lets domain experts judge the traces.</p>
+      <blockquote>“And so our general principle is that every time we correct our agents, it turns into one of these deterministic checks.”<span class="who">Lauren Tan · <a href="../../talks/2026-11-11-all-code-is-slop-except-mine/experience/page.html">SpaceXSI (xAI)</a> · 00:07:54</span></blockquote>
+      <blockquote>“Absolute correctness is only correctness informed by subject matter experts.”<span class="who">Mihail Eric · <a href="../../talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/experience/page.html">vertical AI</a> · 00:17:41</span></blockquote>
+    </section>
+
+    <section data-chapter="organization" data-visual="v5" data-caption="Ankit Jain · Netflix · vertical AI · Scott Tolinski">
+      <div class="chapter">Layer 5</div>
+      <h2>Organization: own the decisions</h2>
+      <p>At the top of the stack are people: who owns an answer, who owns a rule, who judges. Ankit Jain's version is the cleanest statement of the whole through-line.</p>
+      <blockquote>“So instead of thinking about owning the code. Own the guardrails. Own the rules.”<span class="who">Ankit Jain · <a href="../../talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/experience/page.html">Aviator</a> · 00:17:18</span></blockquote>
+      <p>Netflix settles which of two right answers wins, and for whom, through platform and domain teams together. The vertical AI team puts its best domain expert in charge of deploying agents. And Scott Tolinski's survey is the warning about this layer's limit: more agents means more decisions for the same people, and it wears them out.</p>
+      <blockquote>“Less paralization makes for a calmer mind.”<span class="who">Scott Tolinski · <a href="../../talks/2026-11-10-scott-tolinski-co-host-syntax/experience/page.html">Syntax</a> · 00:19:50</span></blockquote>
+    </section>
+
+    <section data-chapter="platform" data-visual="v6" data-caption="Build on what you own">
+      <div class="chapter">On top</div>
+      <h2>Then build the platform</h2>
+      <p>Put together, the order is the same in every talk: don't start with the model. Own the infrastructure, own your data and context, own the environment, own the checks, and own the decisions. The platform is what you build on that: routing to the right answer, evaluations that survive a model swap, gates by stakes, and experts inside the build.</p>
+      <blockquote>“Then automating that loop just produces more slop.”<span class="who">Lauren Tan · <a href="../../talks/2026-11-11-all-code-is-slop-except-mine/experience/page.html">SpaceXSI (xAI)</a> · 00:16:10</span></blockquote>
+      <div class="reading"><b>The reading, for The Focus:</b> this is the shape of the work to sell. Not "which model", but helping a client own each layer (portable infrastructure, their data brought together, a clean environment, checks they maintain, experts who decide) and then building the platform on top. The model can change underneath without the client starting over.</div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="story.md">the through-line story</a>, which draws on six talk stories and their transcripts (Qwen3-ASR, recorded in the room). Every quote is verbatim and links to its talk page. The stack diagrams are illustrative.
+</footer>
+
+<script src="../../stories/runtime/talk.js"></script>
+</body>
+</html>
