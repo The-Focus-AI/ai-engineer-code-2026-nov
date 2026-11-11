@@ -30,7 +30,7 @@
       const nav = document.createElement("nav");
       nav.className = "topnav in-talk";
       nav.setAttribute("aria-label", "Site");
-      const items = [["AIE Code ’26", "index.html", "brand"], ["Today", "index.html"], ["Schedule", "site/index.html"],
+      const items = [["AIE Code ’26", "index.html", "brand"], ["Today", "index.html"], ["Schedule", "site/schedule.html"],
         ["Talks", "site/talks/index.html", "current"], ["Themes", "site/themes.html"], ["People", "site/people.html"]];
       for (const [label, href, kind] of items) {
         const a = document.createElement("a");

@@ -7,7 +7,8 @@
 //   site/themes.html            Themes: analysis/themes.md, linked back to the hubs
 //   site/people.html            People: every speaker, with follow and write-to links on X
 //
-// The schedule (site/index.html) is rendered by render-site.ts. Everything here
+// The planner and floor maps (site/index.html) are rendered by render-site.ts;
+// the plain timetable (site/schedule.html) is rendered here. Everything here
 // is a derived projection over the schedule truth, the recording intake truth,
 // talks/, notes/inbox/, analysis/ and the receipt ledgers. No model call, no
 // network. Markdown sources are rendered inline so nothing opens as raw text.
@@ -81,11 +82,15 @@ const intakePath = "state/world-model/recording-intake/published/world-model.jso
 const intake = exists(intakePath)
   ? (JSON.parse(read(intakePath)) as { matches: Record<string, { session_id: string | null; status: string }>; talks: Record<string, { slug: string }> })
   : { matches: {}, talks: {} };
+const photosPath = "state/world-model/talk-photos/published/world-model.json";
+const photoPlacements = (exists(photosPath) ? (JSON.parse(read(photosPath)) as { placements?: Record<string, { dir: string }> }).placements : undefined) ?? {};
 const sessionForSlug = (slug: string): Session | null => {
   const fromIntake = Object.entries(intake.talks).find(([, t]) => t.slug === slug)?.[0];
   const fromFiles = ["transcript.md", "links.md", "story.md"].map((f) => `talks/${slug}/${f}`).filter(exists)
     .map((f) => front(read(f), "session_id")).find(Boolean);
-  const id = fromIntake ?? fromFiles;
+  // A photos-only talk (no recording yet) is known by the photo step's placements.
+  const fromPhotos = Object.entries(photoPlacements).find(([, v]) => v.dir === `talks/${slug}/photos`)?.[0];
+  const id = fromIntake ?? fromFiles ?? fromPhotos;
   return (id && sessionById.get(id)) || bySlug.get(slug) || null;
 };
 interface Note { file: string; at: string; kind: string; body: string }
@@ -319,7 +324,7 @@ for (const t of captured) {
 // ===== Talks index =====
 {
   const up = "../../";
-  const cards = captured.map((t) => {
+  const card = (t: Talk): string => {
     const n = builtCount(t);
     return `<article class="card">
       <div class="mono">${esc(whenLine(t.session))}</div>
@@ -331,11 +336,22 @@ for (const t of captured) {
       <div class="pills">${pills(t, up)}</div>
       <div class="card-acts">${pagePath(t.slug) ? `<a class="cta small" href="${talkHref(t.slug, up)}">Read the story →</a><a href="${t.slug}.html">Details</a>` : `<a class="cta small ghost" href="${t.slug}.html">Details →</a>`}</div>
     </article>`;
+  };
+  // Grouped by day, in time order within each day; talks with no session go last.
+  const byDay = new Map<string, Talk[]>();
+  for (const t of captured) {
+    const k = t.session ? t.session.starts_at.slice(0, 10) : "unscheduled";
+    if (!byDay.has(k)) byDay.set(k, []);
+    byDay.get(k)!.push(t);
+  }
+  const cards = [...byDay.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([d, ts]) => {
+    const label = d === "unscheduled" ? "Unscheduled" : new Date(`${d}T12:00:00-08:00`).toLocaleDateString("en-US", { timeZone: TZ, weekday: "long", month: "long", day: "numeric" });
+    return `<section class="view day-group" id="day-${d}"><div class="view-head"><h2>${esc(label)}</h2><p class="lede">${ts.length} talk${ts.length === 1 ? "" : "s"}</p></div><div class="blocks">${ts.map(card).join("\n")}</div></section>`;
   }).join("\n");
   const body = `
   <header class="masthead"><p class="mono agency">${esc(wm.event.name)}</p><h1>Talks</h1><p class="sub">Everything collected from each talk I've been in.</p></header>
   <div class="marginalia mono"><span>${captured.length} talks</span><span>Titles open the story when there is one</span></div>
-  <section class="view"><div class="blocks">${cards}</div></section>`;
+  ${cards}`;
   write("site/talks/index.html", shell({ title: "Talks", active: "talks", up, body }));
 }
 
@@ -372,6 +388,72 @@ for (const t of captured) {
   <section class="view"><div class="view-head"><h2>Everyone else</h2><p class="lede">In schedule order.</p></div>
     <div class="people">${rest.map((id) => personCard(id, up, null)).join("")}</div></section>`;
   write("site/people.html", shell({ title: "People", active: "people", up, body, script: PEOPLE_JS }));
+}
+
+// ===== Schedule: a plain timetable, one tab per day, track rooms as columns =====
+{
+  const up = "../";
+  const LONG = 3 * 3600e3;
+  const short = (s: Session): string => roomName(s).match(/\(([^)]+)\)/)?.[1] ?? (roomName(s) || "TBA");
+  const isTrack = (s: Session): boolean => !!s.room_id && /talk|workshop|keynote/i.test(s.format ?? "talk") && s.format !== "break";
+  const who = (s: Session): string => s.speaker_ids.map((id) => { const p = wm.speakers[id]; return p ? p.name + (p.affiliation ? ` (${p.affiliation})` : "") : ""; }).filter(Boolean).join(", ");
+  const pill = (s: Session): string => {
+    if (slugBySession.has(s.session_id)) return `<span class="pill call-go">captured</span>`;
+    const c = recs[s.session_id]?.call;
+    return c === "go" ? `<span class="pill call-go">go</span>` : c === "maybe" ? `<span class="pill call-maybe">maybe</span>` : c === "skip" ? `<span class="pill call-skip">skip</span>` : s.format === "break" ? `<span class="pill call-skip">break</span>` : "";
+  };
+  const cell = (s: Session, withRoom: boolean): string => {
+    const href = slugBySession.has(s.session_id) ? talkHref(slugBySession.get(s.session_id)!, up) : null;
+    const title = href ? `<a href="${esc(href)}">${esc(s.title)}</a>` : esc(s.title);
+    const meta = `<span class="mono">${esc(clock(new Date(s.starts_at)))}–${esc(clock(new Date(s.ends_at)))}${withRoom ? "" : ` · <span class="rm">${esc(short(s))}</span>`}</span>`;
+    const why = recs[s.session_id]?.why;
+    const more = s.abstract || why ? `<details><summary>About</summary>${why ? `<p class="why"><b>My call:</b> ${esc(why)}</p>` : ""}${s.abstract ? `<p>${esc(s.abstract)}</p>` : ""}</details>` : "";
+    return `<div class="tt-cell" data-start="${s.starts_at}" data-end="${s.ends_at}">${meta}<b class="tt-title">${title}</b>${who(s) ? `<span class="tt-who">${esc(who(s))}</span>` : ""}<div class="tt-foot">${pill(s)}</div>${more}</div>`;
+  };
+  const days = wm.program.days.map((d) => {
+    const all = wm.program.sessions.filter((s) => s.day === d.date).sort((a, b) => a.starts_at.localeCompare(b.starts_at));
+    const allDay = all.filter((s) => Date.parse(s.ends_at) - Date.parse(s.starts_at) > LONG);
+    const timed = all.filter((s) => !allDay.includes(s));
+    const counts = new Map<string, number>();
+    for (const s of timed.filter(isTrack)) counts.set(s.room_id!, (counts.get(s.room_id!) ?? 0) + 1);
+    const rooms = [...counts.entries()].filter(([, n]) => n >= 2).sort((a, b) => b[1] - a[1]).map(([r]) => r);
+    const inTrack = (s: Session): boolean => rooms.includes(s.room_id ?? "");
+    const starts = [...new Set(timed.map((s) => s.starts_at))].sort();
+    const rows = starts.map((t) => {
+      const here = timed.filter((s) => s.starts_at === t);
+      const wide = here.filter((s) => !inTrack(s));
+      const track = here.filter(inTrack);
+      const end = here.map((s) => s.ends_at).sort().at(-1)!;
+      const out: string[] = [];
+      if (track.length) out.push(`<div class="tt-row" data-start="${t}" data-end="${end}" style="--cols:${rooms.length}"><div class="tt-time mono">${esc(clock(new Date(t)))}</div>${rooms.map((r) => { const s = track.find((x) => x.room_id === r); return s ? cell(s, rooms.length > 1) : `<div class="tt-empty" aria-hidden="true"></div>`; }).join("")}</div>`);
+      for (const s of wide) out.push(`<div class="tt-row wide" data-start="${t}" data-end="${s.ends_at}"><div class="tt-time mono">${esc(clock(new Date(t)))}</div>${cell(s, false)}</div>`);
+      return out.join("");
+    }).join("");
+    const head = rooms.length > 1 ? `<div class="tt-head" style="--cols:${rooms.length}"><div></div>${rooms.map((r) => `<div class="mono">${esc(rooms_short(r))}</div>`).join("")}</div>` : "";
+    const ad = allDay.length ? `<p class="minor tt-allday">All day: ${allDay.map((s) => `${esc(s.title)} (${esc(short(s))}, ${esc(clock(new Date(s.starts_at)))}–${esc(clock(new Date(s.ends_at)))})`).join(" · ")}</p>` : "";
+    return { date: d.date, label: day(new Date(`${d.date}T12:00:00-08:00`)), full: d.label ?? "", html: `<section class="tt-day" data-day="${d.date}" hidden>${d.label ? `<p class="lede">${esc(d.label)}</p>` : ""}${ad}${head}${rows || `<p class="lede">No timed sessions this day.</p>`}</section>` };
+  });
+  function rooms_short(r: string): string { const n = rooms.get(r) ?? r; return n.match(/\(([^)]+)\)/)?.[1] ?? n; }
+  const body = `
+  <header class="masthead"><p class="mono agency">${esc(wm.event.name)}</p><h1>Schedule</h1><p class="sub">Every session, by day and time, room by room.</p></header>
+  <div class="marginalia mono"><span class="tt-tabs" role="tablist">${days.map((d) => `<button type="button" role="tab" data-day="${d.date}" title="${esc(d.full)}">${esc(d.label)}</button>`).join("")}</span><a href="index.html">Planner and floor maps →</a></div>
+  <section class="view">${days.map((d) => d.html).join("")}</section>
+  <p class="colophon mono">Times are San Francisco time · go / maybe are my picks · captured links open the talk</p>`;
+  const script = `(function(){
+  var today=new Date().toLocaleDateString('en-CA',{timeZone:${JSON.stringify(TZ)}});
+  var tabs=[].slice.call(document.querySelectorAll('.tt-tabs button'));var dates=tabs.map(function(b){return b.getAttribute('data-day')});
+  var pick=dates.indexOf(today)>=0?today:(today<dates[0]?dates[0]:dates[dates.length-1]);
+  try{var h=location.hash.slice(1);if(dates.indexOf(h)>=0)pick=h}catch(e){}
+  function show(d){tabs.forEach(function(b){b.setAttribute('aria-selected',String(b.getAttribute('data-day')===d))});
+    document.querySelectorAll('.tt-day').forEach(function(s){s.hidden=s.getAttribute('data-day')!==d});mark()}
+  function mark(){var now=Date.now();document.querySelectorAll('.tt-row').forEach(function(r){var a=Date.parse(r.getAttribute('data-start')),b=Date.parse(r.getAttribute('data-end'));
+    r.classList.toggle('past',b<now);r.classList.toggle('cur',a<=now&&now<b)});
+    document.querySelectorAll('.tt-cell').forEach(function(c){var a=Date.parse(c.getAttribute('data-start')),b=Date.parse(c.getAttribute('data-end'));c.classList.toggle('on',a<=now&&now<b)})}
+  document.querySelector('.tt-tabs').addEventListener('click',function(e){var b=e.target.closest('button');if(b){show(b.getAttribute('data-day'));try{history.replaceState(null,'','#'+b.getAttribute('data-day'))}catch(x){}}});
+  show(pick);setInterval(mark,60000);
+  var cur=document.querySelector('.tt-day:not([hidden]) .tt-row.cur');if(cur&&pick===today)cur.scrollIntoView({block:'center'});
+})();`;
+  write("site/schedule.html", shell({ title: "Schedule", active: "schedule", up, body, script }));
 }
 
 // ===== Today =====
@@ -411,7 +493,7 @@ for (const t of captured) {
   const data = JSON.stringify({ plan, allDay, days, tz: TZ }).replace(/</g, "\\u003c");
   const body = `
   <header class="masthead"><p class="mono agency">${esc(wm.event.name)}</p><h1 id="today-title">Today</h1><p class="sub" id="today-sub">Where the day stands.</p></header>
-  <div class="marginalia mono"><span id="dayswitch"></span><a href="site/index.html">Full schedule →</a></div>
+  <div class="marginalia mono"><span id="dayswitch"></span><a href="site/schedule.html">Full schedule →</a></div>
   <section class="view now-next" id="nownext"></section>
   <section class="view"><div class="view-head"><h2>Schedule</h2><p class="lede">Everything on, in time order. GO and maybe are my picks; tap a talk for its abstract.</p>
     <div class="roomfilter" id="roomfilter"><button type="button" data-r="all">Both rooms</button><button type="button" data-r="main">Mainstage only</button></div>

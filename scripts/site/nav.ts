@@ -8,7 +8,7 @@ export type Section = "today" | "schedule" | "talks" | "themes" | "people";
 
 export const SECTIONS: Array<[Section, string, string]> = [
   ["today", "Today", "index.html"],
-  ["schedule", "Schedule", "site/index.html"],
+  ["schedule", "Schedule", "site/schedule.html"],
   ["talks", "Talks", "site/talks/index.html"],
   ["themes", "Themes", "site/themes.html"],
   ["people", "People", "site/people.html"],
