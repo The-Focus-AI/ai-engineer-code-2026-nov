@@ -41,7 +41,11 @@ with quoted evidence, or a ranked shortlist marked `needs-review`.
   operator attribution (a note naming the talk captured inside the recording's
   span, or a folder title naming the speaker) with at least two verbatim
   transcript quotes that each answer a specific claim in the session's abstract
-  (`method: time+attribution+transcript`). Time and duration alone can never
+  (`method: time+attribution+transcript`). When neither holds, an operator
+  confirmation whose session fits the recording's time produces `matched` with
+  `method: time+operator`: a decision note (`kind: decision`, naming the
+  recording and the `session_id`), or a Voice Memos title that exactly names a
+  speaker of that session. Cite the note or the title as evidence. Time and duration alone can never
   produce `matched`, and neither can an attribution alone.
 - Quotes are verbatim and short — a phrase or a sentence, never a paragraph, never
   paraphrased, and never assembled from separate parts of the transcript.
@@ -52,8 +56,10 @@ with quoted evidence, or a ranked shortlist marked `needs-review`.
 - A recording that matches nothing in the program (housekeeping, hallway, side
   event) returns `needs-review` with an empty `candidates` list and a stated
   reason — it is genuinely not a talk.
-- The folder `title` (from the m4a `©nam`) is evidence to be verified, not ground
-  truth: look for the name it implies in the transcript before using it.
+- The folder `title` (from the m4a `©nam`) is typed by the operator. An exact,
+  case-insensitive match to a speaker of a time-fitting session is the
+  operator's confirmation; anything looser is evidence to verify in the
+  transcript, not ground truth.
 
 ### Errors
 
@@ -81,7 +87,10 @@ with quoted evidence, or a ranked shortlist marked `needs-review`.
   transcript against that candidate's abstract. Prefix evidence `note:`,
   `title:`, or `transcript:` so a reader can see which kind each piece is.
 - when the transcript came from Qwen with a schedule prompt: a name it contains
-  may be the prompt talking. Count it as attribution, not as a named quote.
+  may be the prompt talking. Count it as attribution, not as a named quote. If
+  the recording keeps an unprompted Voice Memos transcript in
+  `transcript_alternates`, look there for the speaker or company by name and
+  quote it with its file (`transcript.txt: "…"`); that quote counts as named.
 - when the transcript is mostly questions: match on the questioners' references to
   the talk topic rather than an introduction that was missed.
 

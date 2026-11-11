@@ -67,5 +67,6 @@ finds the patterns across every talk.
 
 `mise run contracts`, `mise run validate`, `mise run fingerprints` (when `dist/`
 exists), and `mise run typecheck` pass,
-`git status` shows no generated or raw-media files, and any state change has a
-receipt in `state/world-model/<node>/receipts.jsonl`.
+`git status` shows no generated or raw-media files, any state change has a
+receipt in `state/world-model/<node>/receipts.jsonl`, and the views are
+refreshed (`mise run views`) so `index.html` and `site/index.html` show it.

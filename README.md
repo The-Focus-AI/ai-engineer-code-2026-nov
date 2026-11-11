@@ -127,17 +127,27 @@ inside the conference's date window, padded one day either side, into
 `RECORDINGS_SINCE` and `RECORDINGS_UNTIL`. `--all` exports the whole library. It
 needs Full Disk Access.
 
-The transcript is the one Voice Memos already made. When a recording has none,
-the export falls back to a local [Qwen3-ASR](https://github.com/antirez/qwen-asr)
-build (`QWEN_ASR_DIR`, default `~/src/qwen-asr`), biased toward the speaker and
-product names of the sessions around the recording. `--asr apple` turns the
-fallback off; `--asr qwen` uses Qwen for every recording.
-`mise run transcribe` fills in recordings already in the inbox that arrived
-without a transcript, and never replaces one that exists. Qwen keeps every core
-busy, so on battery power it is deferred: sync exports Voice Memos transcripts
-only, `transcribe` refuses, and the folder waits. Run `mise run transcribe` once
-plugged in; the transcript's arrival wakes `recording-intake`. `--allow-battery`
-(or `RECORDINGS_ASR_ON_BATTERY=allow`) runs it anyway. `meta.json` records
+Every recording ends up on a local [Qwen3-ASR](https://github.com/antirez/qwen-asr)
+transcript (`QWEN_ASR_DIR`, default `~/src/qwen-asr`), because it is more
+accurate than Voice Memos' (see `analysis/asr-compare-ankit-jain.md`). Sync
+writes the Voice Memos transcript first, then an upgrade pass transcribes each
+recording with Qwen, biased toward the speaker names of the sessions around it,
+and makes that the transcript in force. The Voice Memos one stays beside it in
+`transcript_alternates`. Nothing is overwritten.
+
+Qwen keeps every core busy, so it runs only on AC power or with the battery
+above 50% (`QWEN_ASR_MIN_BATTERY`). Below that it is deferred, not failed: the
+recording keeps its Voice Memos transcript, and the next pass upgrades it. While
+`prose serve` runs, every 15-minute inbox tick does that pass; by hand it is
+`mise run transcribe`. An upgrade wakes `recording-intake`, which re-files the
+talk from the Qwen text. `--asr apple` skips Qwen; `--allow-battery` (or
+`RECORDINGS_ASR_ON_BATTERY=allow`) runs it regardless of power.
+
+Qwen works through a recording in 5-minute chunks (`QWEN_ASR_CHUNK_SECONDS`),
+because one long pass breaks down partway through a talk. Each finished chunk is
+cached in `~/.cache/focus-conference/qwen-asr` (`QWEN_ASR_CACHE`), so a run that
+is killed or loses power resumes at the first unfinished chunk when you run the
+same command again. `meta.json` records
 which engine wrote it (`transcript_source`) and how fine its timings are
 (`transcript_timing`: `word` for Voice Memos, `segment` for Qwen's ~5 s spans).
 

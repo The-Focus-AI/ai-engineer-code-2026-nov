@@ -26,22 +26,26 @@
  *   bun scripts/export-voice-memos.ts --since 2026-10-10 --until 2026-10-15
  *   bun scripts/export-voice-memos.ts --all            # the whole library
  *
- * Transcripts (--asr, or RECORDINGS_ASR):
- *   auto   (default) Voice Memos' transcript; Qwen3-ASR when there is none
- *   apple  Voice Memos' transcript only; a recording without one stays without
- *   qwen   always Qwen3-ASR, ignoring Voice Memos' transcript
+ * Transcripts: the local Qwen3-ASR transcript is the one in force whenever it
+ * can be made, because it is more accurate than Voice Memos'. Export writes the
+ * Voice Memos transcript first (fast, no power needed), then an upgrade pass
+ * transcribes each recording with Qwen and makes that the one meta.json names,
+ * keeping the Voice Memos one beside it in `transcript_alternates`.
  *
+ * Qwen runs on AC power, or on battery above 50% (QWEN_ASR_MIN_BATTERY). Below
+ * that it is deferred, not failed: the recording keeps its Voice Memos
+ * transcript and the next pass (`mise run transcribe`, or the serve inbox tick)
+ * upgrades it. --allow-battery or RECORDINGS_ASR_ON_BATTERY=allow overrides.
+ *
+ *   --asr apple   Voice Memos only; no upgrade pass
  *   bun scripts/export-voice-memos.ts --transcribe-missing
- *     Fill in Qwen3-ASR transcripts for inbox folders that have none. Never
- *     touches a folder that already has transcript.txt. Needs no Full Disk Access.
- *
- * On battery power Qwen is deferred: sync exports Voice Memos transcripts only,
- * and --transcribe-missing refuses. --allow-battery (or
- * RECORDINGS_ASR_ON_BATTERY=allow) runs it anyway.
+ *     Run only the upgrade pass over the inbox. Needs no Full Disk Access.
+ *   bun scripts/export-voice-memos.ts --retranscribe <folder>
+ *     Run the upgrade pass for one recording folder.
  *
  * meta.json records `transcript_source` (voice-memos or the Qwen model name) and
  * `transcript_timing` (word, or segment for Qwen's ~5 s segments), and for Qwen
- * `transcript_dropped_segments` (segments discarded as prompt echo).
+ * `transcript_echo_segments` (segments the echoed prompt was cut from).
  *
  * Needs Full Disk Access (System Settings -> Privacy & Security -> Full Disk
  * Access) for the terminal or app you run it from.
@@ -69,7 +73,7 @@ interface Meta {
   transcript_locale: string | null;
   transcript_source?: string | null;
   transcript_timing?: "word" | "segment" | null;
-  transcript_dropped_segments?: number;
+  transcript_echo_segments?: number;
   source_file: string;
   audio_sha256: string;
   exported_at: string;
@@ -93,6 +97,7 @@ interface Args {
   asr: "auto" | "apple" | "qwen";
   transcribeMissing: boolean;
   allowBattery: boolean;
+  retranscribe?: string;
 }
 
 const expand = (p: string): string => (p.startsWith("~") ? join(homedir(), p.slice(1)) : p);
@@ -209,7 +214,7 @@ function tsrpTranscript(data: Buffer): Transcript | null {
     }
   }
   const text = parts.join("").replace(/\s*\n\s*/g, "\n").replace(/[ \t]+/g, " ").trim();
-  return { text, words, locale: obj.locale?.identifier ?? null, source: "voice-memos", timing: "word", dropped_segments: 0 };
+  return { text, words, locale: obj.locale?.identifier ?? null, source: "voice-memos", timing: "word", echo_segments: 0 };
 }
 
 interface Probe {
@@ -325,9 +330,91 @@ function asrMode(v: string | undefined): Args["asr"] {
   process.exit(2);
 }
 
-function writeTranscript(folder: string, t: Transcript): void {
-  writeFileSync(join(folder, "transcript.txt"), t.text + "\n");
-  writeFileSync(join(folder, "transcript.words.json"), JSON.stringify({ words: t.words, sentences: sentences(t.words), timing: t.timing }, null, 1) + "\n");
+/** Writes `<stem>.txt` and `<stem>.words.json`; the default stem is `transcript`. */
+function writeTranscript(folder: string, t: Transcript, stem = "transcript"): void {
+  writeFileSync(join(folder, `${stem}.txt`), t.text + "\n");
+  writeFileSync(join(folder, `${stem}.words.json`), JSON.stringify({ words: t.words, sentences: sentences(t.words), timing: t.timing }, null, 1) + "\n");
+}
+
+/** True when the transcript in force already came from the local Qwen model. */
+const onQwen = (meta: Meta): boolean => Boolean(meta.transcript_source && meta.transcript_source !== "voice-memos");
+
+/**
+ * Make a local Qwen transcript the one in force for one recording folder.
+ * Nothing is overwritten: with no transcript yet, Qwen's becomes transcript.txt;
+ * with a Voice Memos transcript, Qwen's is written beside it as
+ * `transcript.<model>.txt`, meta.json points at it, and the earlier one is
+ * listed in `transcript_alternates` so the evidence it carried is kept.
+ * Returns false when the folder needs nothing.
+ */
+function upgradeFolder(dest: string, name: string, setup: QwenSetup, dryRun: boolean): boolean {
+  const folder = join(dest, name);
+  const metaPath = join(folder, "meta.json");
+  if (!existsSync(metaPath)) return false;
+  const audioFile = readdirSync(folder).find((f) => f.startsWith("audio."));
+  if (!audioFile) return false;
+  const meta = JSON.parse(readFileSync(metaPath, "utf8")) as Meta & { transcript_alternates?: Array<Record<string, unknown>> };
+  if (onQwen(meta)) return false;
+  const hasTranscript = Boolean(meta.transcript) && existsSync(join(folder, meta.transcript!));
+  const stem = hasTranscript ? `transcript.${setup.name}` : "transcript";
+  if (existsSync(join(folder, `${stem}.txt`)) && stem !== "transcript") return false;
+  console.log(`  ${name}  (${meta.duration_seconds ?? "?"}s) → ${setup.name}`);
+  if (dryRun) return true;
+  const prompt = schedulePrompt(root, meta.recorded_at ? new Date(meta.recorded_at) : null, meta.duration_seconds);
+  const t = qwenTranscribe(setup, join(folder, audioFile), prompt, (l) => console.log(`    ${l}`));
+  writeTranscript(folder, t, stem);
+  const alternates = meta.transcript_alternates ?? [];
+  if (hasTranscript) {
+    alternates.push({
+      file: meta.transcript,
+      source: meta.transcript_source ?? "voice-memos",
+      timing: meta.transcript_timing ?? "word",
+      word_count: meta.transcript_word_count,
+      locale: meta.transcript_locale,
+    });
+  }
+  Object.assign(meta, {
+    transcript: `${stem}.txt`,
+    transcript_word_count: t.words.length,
+    transcript_locale: t.locale,
+    transcript_source: t.source,
+    transcript_timing: t.timing,
+    transcript_echo_segments: t.echo_segments,
+    ...(alternates.length ? { transcript_alternates: alternates } : {}),
+  });
+  writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n");
+  console.log(`    ${t.words.length} words · meta.json now names ${stem}.txt`);
+  return true;
+}
+
+/**
+ * Bring every inbox recording (or just `only`) onto a Qwen transcript. Defers,
+ * without failing, when Qwen can't run now (not installed, or battery at or
+ * below the floor and not plugged in); the next pass picks it up.
+ */
+function upgrade(dest: string, dryRun: boolean, only?: string): number {
+  if (!existsSync(dest)) {
+    console.log(`  nothing to do: ${dest} does not exist`);
+    return 0;
+  }
+  const setup = qwenSetup({ allowBattery: args.allowBattery });
+  const names = (only ? [only] : readdirSync(dest, { withFileTypes: true }).filter((e) => e.isDirectory()).map((e) => e.name)).sort();
+  const waiting = names.filter((n) => {
+    const m = join(dest, n, "meta.json");
+    return existsSync(m) && !onQwen(JSON.parse(readFileSync(m, "utf8")) as Meta);
+  });
+  if ("missing" in setup) {
+    console.log(`  qwen    deferred: ${setup.missing}${waiting.length ? ` · ${waiting.length} recording(s) waiting` : ""}`);
+    return 0;
+  }
+  let done = 0;
+  for (const name of waiting) if (upgradeFolder(dest, name, setup, dryRun)) done++;
+  if (!dryRun && done) {
+    const prior = existsSync(join(dest, "manifest.json")) ? (JSON.parse(readFileSync(join(dest, "manifest.json"), "utf8")) as { source?: string }).source : undefined;
+    writeManifest(dest, prior ?? "unknown");
+  }
+  console.log(`  qwen    ${done} transcribed${dryRun ? " (dry run)" : ""} · ${names.length - waiting.length} already on Qwen`);
+  return done;
 }
 
 function writeManifest(dest: string, source: string): void {
@@ -349,52 +436,6 @@ function needQwen(): QwenSetup {
   return setup;
 }
 
-function transcribeMissing(dest: string, dryRun: boolean): void {
-  if (!existsSync(dest)) {
-    console.log(`  nothing to do: ${dest} does not exist`);
-    return;
-  }
-  const setup = needQwen();
-  let done = 0;
-  let have = 0;
-  for (const entry of readdirSync(dest, { withFileTypes: true }).filter((e) => e.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
-    const folder = join(dest, entry.name);
-    const metaPath = join(folder, "meta.json");
-    if (!existsSync(metaPath)) continue;
-    if (existsSync(join(folder, "transcript.txt"))) {
-      have++;
-      continue;
-    }
-    const audioFile = readdirSync(folder).find((f) => f.startsWith("audio."));
-    if (!audioFile) continue;
-    const meta = JSON.parse(readFileSync(metaPath, "utf8")) as Meta;
-    console.log(`  ${entry.name}  (${meta.duration_seconds ?? "?"}s) → ${setup.name}`);
-    if (dryRun) {
-      done++;
-      continue;
-    }
-    const prompt = schedulePrompt(root, meta.recorded_at ? new Date(meta.recorded_at) : null, meta.duration_seconds);
-    const t = qwenTranscribe(setup, join(folder, audioFile), prompt);
-    writeTranscript(folder, t);
-    Object.assign(meta, {
-      transcript: "transcript.txt",
-      transcript_word_count: t.words.length,
-      transcript_locale: t.locale,
-      transcript_source: t.source,
-      transcript_timing: t.timing,
-      transcript_dropped_segments: t.dropped_segments,
-    });
-    writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n");
-    console.log(`    ${t.words.length} words`);
-    done++;
-  }
-  if (!dryRun && done) {
-    const prior = existsSync(join(dest, "manifest.json")) ? (JSON.parse(readFileSync(join(dest, "manifest.json"), "utf8")) as { source?: string }).source : undefined;
-    writeManifest(dest, prior ?? "unknown");
-  }
-  console.log(`\n  ${done} transcribed · ${have} already had a transcript${dryRun ? "  (dry run — nothing written)" : ""}`);
-}
-
 function parseArgs(argv: string[]): Args {
   const value = (name: string): string | undefined => {
     const i = argv.indexOf(`--${name}`);
@@ -411,15 +452,22 @@ function parseArgs(argv: string[]): Args {
     asr: asrMode(value("asr")),
     transcribeMissing: argv.includes("--transcribe-missing"),
     allowBattery: argv.includes("--allow-battery"),
+    retranscribe: value("retranscribe"),
   };
 }
 
 const args = parseArgs(process.argv.slice(2));
 const root = resolve(import.meta.dir, "..");
-if (args.transcribeMissing) {
-  transcribeMissing(resolve(args.dest), args.dryRun);
+if (args.retranscribe) {
+  if (!upgrade(resolve(args.dest), args.dryRun, args.retranscribe)) console.log("  (nothing changed)");
   process.exit(0);
 }
+if (args.transcribeMissing) {
+  upgrade(resolve(args.dest), args.dryRun);
+  process.exit(0);
+}
+// Export always writes the fast Voice Memos transcript first; Qwen then upgrades
+// it in a second pass (below), so a recording is never held back waiting on power.
 const qwen = args.asr === "apple" ? null : qwenSetup({ allowBattery: args.allowBattery });
 if (args.asr === "qwen" && qwen && "missing" in qwen) needQwen();
 const window = resolveWindow(args, root);
@@ -468,8 +516,10 @@ for (const path of audio) {
 
   const data = readFileSync(path);
   const title = m4aTag(data, Buffer.from([0xa9, 0x6e, 0x61, 0x6d])) ?? basename(path, `.${path.split(".").pop()}`);
-  const apple = args.asr === "qwen" ? null : tsrpTranscript(data);
-  const local = qwen && !("missing" in qwen) && (args.asr === "qwen" || !apple) ? qwen : null;
+  const apple = tsrpTranscript(data);
+  // Qwen runs at export only when there is no Voice Memos transcript to start from;
+  // otherwise the upgrade pass after the loop replaces it.
+  const local = qwen && !("missing" in qwen) && !apple ? qwen : null;
   const stamp = created ? localStamp(created) : "unknown-date";
 
   const base = `${stamp}_${slug(title)}`;
@@ -484,7 +534,7 @@ for (const path of audio) {
     moved++;
     continue;
   }
-  const transcript = local ? qwenTranscribe(local, path, schedulePrompt(root, created, info.duration)) : apple;
+  const transcript = local ? qwenTranscribe(local, path, schedulePrompt(root, created, info.duration), (l) => console.log(`    ${l}`)) : apple;
   const words = transcript?.words ?? [];
   const meta: Meta = {
     title,
@@ -495,7 +545,7 @@ for (const path of audio) {
     transcript_locale: transcript?.locale ?? null,
     transcript_source: transcript?.source ?? null,
     transcript_timing: transcript?.timing ?? null,
-    ...(transcript && transcript.source !== "voice-memos" ? { transcript_dropped_segments: transcript.dropped_segments } : {}),
+    ...(transcript && transcript.source !== "voice-memos" ? { transcript_echo_segments: transcript.echo_segments } : {}),
     source_file: basename(path),
     audio_sha256: digest,
     exported_at: localIso(new Date()),
@@ -524,6 +574,7 @@ for (const path of audio) {
 }
 
 if (!args.dryRun && moved) writeManifest(dest, source);
+if (args.asr !== "apple") upgrade(dest, args.dryRun);
 
 let summary = `\n  ${moved} moved · ${skipped} already present`;
 if (window) summary += ` · ${outOfWindow} outside the window · ${undated} undated (skipped)`;

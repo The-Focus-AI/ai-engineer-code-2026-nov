@@ -66,7 +66,7 @@ no entry here is a bug, and the render must fail rather than skip it.
 
 Which session each recording captured, and why. Material: `session_id`,
 `confidence`, `method` (`time`, `time+title`, `time+transcript`, `time+title+transcript`,
-`time+attribution+transcript`),
+`time+attribution+transcript`, `time+operator`),
 `evidence`, `candidates`, `status`. An entry may exist with `status:
 needs-review` and `session_id: null`; that is a *result*, not a failure — it says
 the recordings is real, the slot is known, and the talk is not decided.
@@ -104,16 +104,41 @@ in the transcript is a real change to the document.
     `transcript:`, `note:` (with the note path), or `title:`, and the abstract
     claim a quote answers is named beside it.
 
+  - **confirmed** (`method: time+operator`), when neither of the above holds
+    but the operator has decided, in either of two ways: a note under
+    `notes/inbox/` with `kind: decision` naming this recording and this
+    `session_id`; or the recording's Voice Memos title (the operator typed it)
+    matching, exactly and case-insensitively, the name of a speaker of this
+    session in `speakers`. Either way the session's window must fit the
+    recording's time. A title that only resembles a name ("Ankir Jain") is
+    attribution, not confirmation. The decision note's path is an `evidence` entry, the match's
+    confidence stays below a named match's, and the cleaned talk says in its
+    header that it was filed on the operator's confirmation.
+
   A match justified only by time and duration, or by an attribution without
-  transcript corroboration, cannot reach `cleaned`.
+  transcript corroboration or an operator decision, cannot reach `cleaned`.
 - **One talk, one recording**: two recordings may not both claim the same
   `session_id`. When they do, the longer recording wins, the other becomes
   `needs-review`, and both are listed.
 - **Faithful rendering**: a cleaned transcript adds no sentence, no fact, and no
   speaker attribution that is not in the source. Filler removal, punctuation,
   casing, paragraphing, and headings are allowed; paraphrase is not.
-- **Raw material is immutable**: `audio.m4a`, `transcript.txt`, and
+- **Raw material is immutable**: `audio.m4a`, every transcript file, and
   `meta.json` in the inbox are read-only. The render never edits or deletes them.
+  The transcript in force is the file `meta.json` `transcript` names
+  (`transcript.txt` unless the mover re-transcribed); earlier transcripts stay
+  beside it, listed in `transcript_alternates`.
+- **Qwen first**: the transcript in force is the local Qwen3-ASR one whenever
+  the mover has made it; a Voice Memos transcript in force means the upgrade is
+  still waiting on power. Render from whichever is in force; never wait for
+  the upgrade.
+- **Re-transcription re-decides**: when the transcript in force changes, the
+  recording is identified and cleaned again from the new text, and the talk's
+  `source` names its engine. Evidence quotes come from the transcript in force
+  or from an alternate transcript of the same recording listed in
+  `transcript_alternates`; each such quote names its file. A name quoted from an
+  unprompted alternate (Voice Memos) counts as **named**; a name quoted from a
+  schedule-prompted Qwen transcript counts only as attribution.
 - **Attachments are copies**: files are copied into the talk folder, never moved
   out of the inbox, and `placement: inline` requires an `at_seconds` inside the
   recording's duration.
@@ -128,9 +153,9 @@ in the transcript is a real change to the document.
 - `transcript-missing`: a recording has audio but no `transcript.txt`; the
   recording is indexed and marked `failed` rather than transcribed here. This is
   expected, not a fault, when Voice Memos had no transcript and the mover
-  deferred local transcription because the machine was on battery power. When
-  `mise run transcribe` later adds the transcript on AC power, the inbox
-  fingerprint moves and the recording is identified on that wake.
+  deferred local transcription because the machine was on battery at or below
+  50%. When a later tick (or `mise run transcribe`) adds the transcript, the
+  inbox fingerprint moves and the recording is identified on that wake.
 - `talk-write-failed`: a talk file could not be written; the prior talk stands.
 - `attachment-unsafe`: an attachment path escapes the talk folder, or a symlink is
   involved.
@@ -197,7 +222,8 @@ arrivals.
 - `prohibited`: editing or deleting raw recordings, transcripts, or `meta.json`;
   inventing a talk title, speaker, room, or time instead of reading `program`;
   asserting a match without a quotable excerpt; transcribing audio (that is the
-  mover's job: Voice Memos' transcript, or local Qwen3-ASR on AC power); writing outside `talks/`.
+  mover's job: local Qwen3-ASR is the transcript of record, with Voice Memos'
+  in force only until power allows the upgrade); writing outside `talks/`.
 
 ### Invariants
 
@@ -218,7 +244,9 @@ arrivals.
   are the common case, not the exception.
 - when the folder title names a company or a person ("Air Canada", "Ksenia"):
   treat it as strong evidence, and look for that name in the transcript before
-  relying on it.
+  relying on it. When it exactly names a speaker of a session that fits the
+  recording's time, it is the operator's confirmation and the match can stand
+  on it (`time+operator`), even if the transcript never says the name.
 - when the emcee introduces the talk: the announcement is the best evidence
   available — quote it, including the speaker's name and company.
 - when the speaker introduces themselves: quote the self-introduction.

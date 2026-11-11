@@ -7,22 +7,31 @@
  *   QWEN_ASR_MODEL  model directory inside it, or an absolute path
  *                   (default qwen3-asr-1.7b)
  *
+ * Audio is transcribed in chunks (QWEN_ASR_CHUNK_SECONDS, default 300): one long
+ * pass breaks down partway through a talk. Each finished chunk is cached under
+ * QWEN_ASR_CACHE (default ~/.cache/focus-conference/qwen-asr), keyed by audio
+ * hash, model, chunk length and prompt, so an interrupted run resumes at the
+ * first unfinished chunk.
+ *
  * Qwen gives timings per segment (about five seconds), not per word. Every word
  * in a segment carries that segment's start and end, and `timing` says so. No
  * finer timing is invented.
  *
- * Qwen can echo its prompt as transcript text, typically over trailing silence.
- * A segment carrying three or more of the prompt's terms is dropped and counted
- * in `dropped_segments`, so a name in the transcript came from the audio.
+ * Qwen can echo its prompt as transcript text, and on a long pass the echo can
+ * open a segment that then carries minutes of real speech. A run of three or
+ * more prompt terms is cut out of the segment and the rest kept; the number of
+ * segments touched is `echo_segments`. A name left in the transcript came from
+ * the audio.
  *
  * Qwen runs on every CPU core at a few times realtime: a 25-minute talk drains a
- * laptop battery noticeably. On battery power it is deferred, not run, unless the
+ * laptop battery noticeably. It runs on AC power or on battery above 50%
+ * (QWEN_ASR_MIN_BATTERY); below that it is deferred, not run, unless the
  * caller allows it (`--allow-battery`, or RECORDINGS_ASR_ON_BATTERY=allow). A
  * deferred recording arrives without a transcript; `mise run transcribe` fills it
  * in once the machine is on AC power.
  */
 
-import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, renameSync, rmSync, writeFileSync } from "node:fs";
 import { homedir, tmpdir } from "node:os";
 import { isAbsolute, join } from "node:path";
 
@@ -38,7 +47,7 @@ export interface Transcript {
   locale: string | null;
   source: string;
   timing: "word" | "segment";
-  dropped_segments: number;
+  echo_segments: number;
 }
 
 const expand = (p: string): string => (p.startsWith("~") ? join(homedir(), p.slice(1)) : p);
@@ -78,8 +87,10 @@ export function qwenSetup(opts: { allowBattery?: boolean } = {}): QwenSetup | { 
   const allow = opts.allowBattery || process.env.RECORDINGS_ASR_ON_BATTERY === "allow";
   if (!allow) {
     const power = powerSource();
-    if (power.onBattery) {
-      return { missing: `on battery power (${power.percent ?? "?"}%); deferred — plug in, or pass --allow-battery` };
+    // Run on AC, or on battery above the floor (QWEN_ASR_MIN_BATTERY, default 50%).
+    const floor = Number(process.env.QWEN_ASR_MIN_BATTERY ?? "50");
+    if (power.onBattery && (power.percent === null || power.percent <= floor)) {
+      return { missing: `on battery power at ${power.percent ?? "?"}% (needs AC or more than ${floor}%); deferred — plug in, or pass --allow-battery` };
     }
   }
   const dir = expand(process.env.QWEN_ASR_DIR ?? "~/src/qwen-asr");
@@ -130,54 +141,103 @@ export function schedulePrompt(root: string, recordedAt: Date | null, durationSe
 const PROMPT_TERMS = "Preserve spelling:";
 
 /** The prompt's spelling terms, lowercased, for echo detection. */
-function promptTerms(prompt: string | null): string[] {
+export function promptTerms(prompt: string | null): string[] {
   if (!prompt) return [];
   const at = prompt.indexOf(PROMPT_TERMS);
   if (at < 0) return [];
   return prompt.slice(at + PROMPT_TERMS.length).split("; ").map((t) => t.trim().toLowerCase()).filter(Boolean);
 }
 
-/** True when a segment reads like the prompt rather than speech. */
-function echoesPrompt(text: string, terms: string[]): boolean {
-  const lower = text.toLowerCase();
-  return terms.filter((t) => lower.includes(t)).length >= 3;
+const escapeRe = (s: string): string => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+/**
+ * The segment with any echoed prompt removed: the header, and every run of
+ * three or more prompt terms in a row. Speech around the echo is kept.
+ */
+export function stripEcho(text: string, terms: string[]): { text: string; echoed: boolean } {
+  if (!terms.length) return { text, echoed: false };
+  const term = `(?:${terms.map(escapeRe).join("|")})[;.,]?\\s*`;
+  const run = new RegExp(`(?:conference talk transcription\\.?\\s*)?(?:preserve spelling:\\s*)?(?:${term}){3,}`, "gi");
+  const out = text.replace(run, " ").replace(/\s+/g, " ").trim();
+  return { text: out, echoed: out !== text.trim() };
 }
 
-/** Transcribe one audio file. Throws with the tool's own message on failure. */
-export function qwenTranscribe(setup: QwenSetup, audioPath: string, prompt: string | null): Transcript {
-  // --timestamps needs a file, not stdin, so decode to a temporary 16 kHz mono WAV.
+/** Seconds per chunk. Long single passes break down partway (Ankit Jain: speech stopped at 10:54 of 22:30). */
+export const CHUNK_SECONDS = Number(process.env.QWEN_ASR_CHUNK_SECONDS ?? "300");
+
+/** Where finished chunks are kept, so an interrupted run resumes. */
+const cacheRoot = (): string => expand(process.env.QWEN_ASR_CACHE ?? "~/.cache/focus-conference/qwen-asr");
+
+interface Segment {
+  start: number | null;
+  end: number | null;
+  text: string;
+}
+
+const sha = (data: string | Uint8Array): string => new Bun.CryptoHasher("sha256").update(data).digest("hex");
+
+/**
+ * Transcribe one audio file in CHUNK_SECONDS pieces. Each finished chunk is
+ * written to the cache (keyed by audio hash, model, chunk length and prompt)
+ * before the next starts, so a run cut short by a kill, a crash or a flat
+ * battery picks up at the first unfinished chunk. Throws with the tool's own
+ * message on failure; finished chunks stay cached.
+ */
+export function qwenTranscribe(setup: QwenSetup, audioPath: string, prompt: string | null, log: (line: string) => void = () => {}): Transcript {
+  const key = [sha(readFileSync(audioPath)).slice(0, 16), setup.name, `${CHUNK_SECONDS}s`, sha(prompt ?? "").slice(0, 8)].join("-");
+  const cache = join(cacheRoot(), key);
+  mkdirSync(cache, { recursive: true });
+
+  // --timestamps needs a file, not stdin, so decode to 16 kHz mono WAV chunks.
   const work = mkdtempSync(join(tmpdir(), "qwen-asr-"));
   try {
-    const wav = join(work, "audio.wav");
     const ff = Bun.spawnSync({
-      cmd: ["ffmpeg", "-y", "-loglevel", "error", "-i", audioPath, "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le", wav],
+      cmd: ["ffmpeg", "-y", "-loglevel", "error", "-i", audioPath, "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le",
+        "-f", "segment", "-segment_time", String(CHUNK_SECONDS), join(work, "chunk_%03d.wav")],
       stdout: "pipe",
       stderr: "pipe",
     });
     if (ff.exitCode !== 0) throw new Error(`ffmpeg could not decode ${audioPath}: ${ff.stderr.toString().trim()}`);
-
-    const cmd = [setup.binary, "-d", setup.model, "-i", wav, "--timestamps", "--silent"];
-    if (prompt) cmd.push("--prompt", prompt);
-    const run = Bun.spawnSync({ cmd, stdout: "pipe", stderr: "pipe" });
-    if (run.exitCode !== 0) throw new Error(`qwen_asr failed on ${audioPath}: ${run.stderr.toString().trim()}`);
+    const chunks = readdirSync(work).filter((f) => f.startsWith("chunk_")).sort();
 
     const terms = promptTerms(prompt);
     const words: Word[] = [];
     const lines: string[] = [];
-    let dropped = 0;
-    for (const line of run.stdout.toString().split("\n")) {
-      if (!line.trim().startsWith("{")) continue;
-      const seg = JSON.parse(line) as { start?: number; end?: number; text?: string };
-      const text = (seg.text ?? "").trim();
-      if (!text) continue;
-      if (echoesPrompt(text, terms)) {
-        dropped++;
-        continue;
+    let echoed = 0;
+    chunks.forEach((chunk, i) => {
+      const offset = i * CHUNK_SECONDS;
+      const done = join(cache, chunk.replace(/\.wav$/, ".json"));
+      let segments: Segment[];
+      if (existsSync(done)) {
+        segments = JSON.parse(readFileSync(done, "utf8")) as Segment[];
+        log(`chunk ${i + 1}/${chunks.length} cached`);
+      } else {
+        const cmd = [setup.binary, "-d", setup.model, "-i", join(work, chunk), "--timestamps", "--silent"];
+        if (prompt) cmd.push("--prompt", prompt);
+        const run = Bun.spawnSync({ cmd, stdout: "pipe", stderr: "pipe" });
+        if (run.exitCode !== 0) throw new Error(`qwen_asr failed on ${audioPath} chunk ${i + 1}/${chunks.length}: ${run.stderr.toString().trim()}`);
+        segments = run.stdout.toString().split("\n").filter((l) => l.trim().startsWith("{")).map((l) => {
+          const seg = JSON.parse(l) as { start?: number; end?: number; text?: string };
+          return {
+            start: seg.start == null ? null : Math.round((seg.start + offset) * 100) / 100,
+            end: seg.end == null ? null : Math.round((seg.end + offset) * 100) / 100,
+            text: (seg.text ?? "").trim(),
+          };
+        });
+        // Write then rename: a half-written file must never look finished.
+        writeFileSync(`${done}.tmp`, JSON.stringify(segments));
+        renameSync(`${done}.tmp`, done);
+        log(`chunk ${i + 1}/${chunks.length} transcribed`);
       }
-      lines.push(text);
-      for (const w of text.split(/\s+/)) words.push({ w, start: seg.start ?? null, end: seg.end ?? null });
-    }
-    return { text: lines.join(" "), words, locale: null, source: setup.name, timing: "segment", dropped_segments: dropped };
+      for (const seg of segments) {
+        const clean = stripEcho(seg.text, terms);
+        if (clean.echoed) echoed++;
+        if (!clean.text) continue;
+        lines.push(clean.text);
+        for (const w of clean.text.split(/\s+/)) words.push({ w, start: seg.start, end: seg.end });
+      }
+    });
+    return { text: lines.join(" "), words, locale: null, source: setup.name, timing: "segment", echo_segments: echoed };
   } finally {
     rmSync(work, { recursive: true, force: true });
   }

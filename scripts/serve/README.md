@@ -98,6 +98,14 @@ the only intelligent steps.
    nothing.
 6. **Log.** Append one line per wake and per propagation decision to
    `runs/serve/serve.log.md`.
+7. **Refresh the views.** If any receipt this tick was `rendered`, run
+   `bun scripts/serve/refresh-views.ts` (`mise run views`). It re-renders the
+   whole site from the current truth: Today (`index.html`), the schedule
+   (`site/index.html`), the talk hubs, themes and people pages (`site/`), so the site always shows the state of things. The
+   views are projections: they are never read back as truth, need no receipt,
+   and a view that fails to render is reported without failing the tick. The
+   inbox tick (`tick-inbox.ts`) runs this step itself whenever its fingerprint
+   moves; a tick that renders other nodes runs it once at the end.
 
 Single-flight: one render per node at a time. A wake that arrives while a render
 is in flight marks the node dirty and collapses into one follow-up render; the

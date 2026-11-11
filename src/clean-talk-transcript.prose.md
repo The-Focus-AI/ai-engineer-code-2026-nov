@@ -50,7 +50,9 @@ Reads the raw transcript; never rewrites it.
   `_(as transcribed)_` rather than guessing.
 - `word_count` after cleaning must be lower than the raw count (filler removal
   only reduces); if it is higher, something was added and the render must fail.
-- The raw `transcript.txt` is never modified.
+- The raw transcript is never modified. It is the file `meta.json`
+  `transcript` names (`transcript.txt` unless the recording was re-transcribed),
+  with its timings in the matching `.words.json`.
 
 ### Errors
 
