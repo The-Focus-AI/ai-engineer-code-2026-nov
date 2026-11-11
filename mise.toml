@@ -93,3 +93,7 @@ run = "bun scripts/validate-atlas.ts ${INDEX:-atlases/example/index.html}"
 [tasks.atlas-serve]
 description = "Serve an atlas with live follow-up questions (loopback)"
 run = "bun scripts/explainer-server.ts --root . --dir ${DIR:-atlases/example} --agent \"${AGENT:-claude -p}\""
+
+[tasks.publish]
+description = "Commit data changes and push to main, which deploys GitHub Pages"
+run = "bun scripts/serve/publish.ts"

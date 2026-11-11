@@ -106,6 +106,15 @@ the only intelligent steps.
    and a view that fails to render is reported without failing the tick. The
    inbox tick (`tick-inbox.ts`) runs this step itself whenever its fingerprint
    moves; a tick that renders other nodes runs it once at the end.
+8. **Publish.** Every tick ends with `bun scripts/serve/publish.ts --reason
+   "<what moved>"` (`mise run publish`). On `main` it commits the data paths
+   (talks, notes, recordings, state, analysis, brief, editorial, the rendered
+   pages), never code, and pushes to `origin/main`, which deploys GitHub Pages
+   (`.github/workflows/pages.yml`). It publishes only when something a reader
+   would see moved (also a note captured between ticks); receipt ledgers and
+   re-stamped HTML alone wait and ride along with the next real change. It never
+   forces: a rejected push or no network is reported, and the commit stays local
+   for the next tick. Code changes are committed by hand, separately.
 
 Single-flight: one render per node at a time. A wake that arrives while a render
 is in flight marks the node dirty and collapses into one follow-up render; the
