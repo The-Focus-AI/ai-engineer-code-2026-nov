@@ -24,9 +24,9 @@
  * the audio.
  *
  * Qwen runs on every CPU core at a few times realtime: a 25-minute talk drains a
- * laptop battery noticeably. It runs on AC power or on battery above 50%
- * (QWEN_ASR_MIN_BATTERY); below that it is deferred, not run, unless the
- * caller allows it (`--allow-battery`, or RECORDINGS_ASR_ON_BATTERY=allow). A
+ * laptop battery noticeably. It runs only when the machine is plugged in; on
+ * battery it is deferred, not run, unless the caller allows it
+ * (`--allow-battery`, or RECORDINGS_ASR_ON_BATTERY=allow). A
  * deferred recording arrives without a transcript; `mise run transcribe` fills it
  * in once the machine is on AC power.
  */
@@ -87,10 +87,9 @@ export function qwenSetup(opts: { allowBattery?: boolean } = {}): QwenSetup | { 
   const allow = opts.allowBattery || process.env.RECORDINGS_ASR_ON_BATTERY === "allow";
   if (!allow) {
     const power = powerSource();
-    // Run on AC, or on battery above the floor (QWEN_ASR_MIN_BATTERY, default 50%).
-    const floor = Number(process.env.QWEN_ASR_MIN_BATTERY ?? "50");
-    if (power.onBattery && (power.percent === null || power.percent <= floor)) {
-      return { missing: `on battery power at ${power.percent ?? "?"}% (needs AC or more than ${floor}%); deferred — plug in, or pass --allow-battery` };
+    // Run only when plugged in. On battery it defers, whatever the charge.
+    if (power.onBattery) {
+      return { missing: `on battery power at ${power.percent ?? "?"}% (Qwen runs only when plugged in); deferred — plug in, or pass --allow-battery` };
     }
   }
   const dir = expand(process.env.QWEN_ASR_DIR ?? "~/src/qwen-asr");

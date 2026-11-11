@@ -56,8 +56,8 @@ version: 0.3.0
   whose transcript in force is not yet Qwen's gets one, written beside the
   Voice Memos transcript and named in `meta.json`. The upgraded folder's
   fingerprint moves, so `recording-intake` re-decides and re-cleans it.
-- **Power gate.** The upgrade runs only on AC power or with the battery above
-  50% (`QWEN_ASR_MIN_BATTERY`). Otherwise it defers without failing: the
+- **Power gate.** The upgrade runs only when the machine is plugged in (AC
+  power). On battery it defers without failing, whatever the charge: the
   recording keeps its Voice Memos transcript, intake works from that, and a
   later tick upgrades it once power allows. The deferral is recorded in the
   receipt's `semantic_diff.transcript_upgrade`.

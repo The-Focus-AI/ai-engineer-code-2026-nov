@@ -106,8 +106,9 @@ the only intelligent steps.
    and a view that fails to render is reported without failing the tick. The
    inbox tick (`tick-inbox.ts`) runs this step itself whenever its fingerprint
    moves; a tick that renders other nodes runs it once at the end.
-8. **Publish.** Every tick ends with `bun scripts/serve/publish.ts --reason
-   "<what moved>"` (`mise run publish`). On `main` it commits the data paths
+8. **Publish (only when asked).** Ticks do not commit or push: changes stay
+   local until the operator asks to publish. Then run `bun scripts/serve/publish.ts
+   --reason "<what moved>"` (`mise run publish`). On `main` it commits the data paths
    (talks, notes, recordings, state, analysis, brief, editorial, the rendered
    pages), never code, and pushes to `origin/main`, which deploys GitHub Pages
    (`.github/workflows/pages.yml`). It publishes only when something a reader

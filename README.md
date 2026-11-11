@@ -129,14 +129,15 @@ needs Full Disk Access.
 
 Every recording ends up on a local [Qwen3-ASR](https://github.com/antirez/qwen-asr)
 transcript (`QWEN_ASR_DIR`, default `~/src/qwen-asr`), because it is more
-accurate than Voice Memos' (see `analysis/asr-compare-ankit-jain.md`). Sync
-writes the Voice Memos transcript first, then an upgrade pass transcribes each
-recording with Qwen, biased toward the speaker names of the sessions around it,
+accurate than Voice Memos' (see `analysis/asr-compare-ankit-jain.md`). `mise
+run sync` only copies (it runs the exporter with `--asr apple`, writing the Voice
+Memos transcript); the serve tick's upgrade pass (`--transcribe-missing`, on AC
+power only) then transcribes each recording with Qwen, biased toward the speaker names of the sessions around it,
 and makes that the transcript in force. The Voice Memos one stays beside it in
 `transcript_alternates`. Nothing is overwritten.
 
-Qwen keeps every core busy, so it runs only on AC power or with the battery
-above 50% (`QWEN_ASR_MIN_BATTERY`). Below that it is deferred, not failed: the
+Qwen keeps every core busy, so it runs only when the machine is plugged in. On
+battery it is deferred, not failed: the
 recording keeps its Voice Memos transcript, and the next pass upgrades it. While
 `prose serve` runs, every 15-minute inbox tick does that pass; by hand it is
 `mise run transcribe`. An upgrade wakes `recording-intake`, which re-files the

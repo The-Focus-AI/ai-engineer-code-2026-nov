@@ -153,8 +153,7 @@ in the transcript is a real change to the document.
 - `transcript-missing`: a recording has audio but no `transcript.txt`; the
   recording is indexed and marked `failed` rather than transcribed here. This is
   expected, not a fault, when Voice Memos had no transcript and the mover
-  deferred local transcription because the machine was on battery at or below
-  50%. When a later tick (or `mise run transcribe`) adds the transcript, the
+  deferred local transcription because the machine was on battery. When a later tick (or `mise run transcribe`) adds the transcript, the
   inbox fingerprint moves and the recording is identified on that wake.
 - `talk-write-failed`: a talk file could not be written; the prior talk stands.
 - `attachment-unsafe`: an attachment path escapes the talk folder, or a symlink is

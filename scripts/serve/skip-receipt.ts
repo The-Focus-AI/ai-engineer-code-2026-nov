@@ -46,6 +46,18 @@ if (contract !== prior.contract_fingerprint) {
   console.error(`contract moved for ${node} (${prior.contract_fingerprint.slice(0, 12)} → ${contract.slice(0, 12)}): render, do not skip`);
   process.exit(3);
 }
+// The memo key is contract AND inputs: refuse when any upstream facet this node
+// subscribes to has moved since its last receipt (e.g. the inbox moved this tick).
+const movedInputs = Object.entries((prior.input_fingerprints ?? {}) as Record<string, string>).filter(([key, fp]) => {
+  const [up, facet] = [key.slice(0, key.indexOf(".")), key.slice(key.indexOf(".") + 1)];
+  const lines = readFileSync(join(root, "state/world-model", up, "receipts.jsonl"), "utf8").trim().split("\n");
+  const current = JSON.parse(lines.at(-1)!).fingerprints?.[facet];
+  return current !== undefined && strip(current) !== strip(fp);
+}).map(([key]) => key);
+if (movedInputs.length) {
+  console.error(`input moved for ${node} (${movedInputs.join(", ")}): render, do not skip`);
+  process.exit(4);
+}
 
 const now = new Date();
 const at = ny(now);

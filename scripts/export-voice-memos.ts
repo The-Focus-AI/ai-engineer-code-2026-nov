@@ -32,8 +32,8 @@
  * transcribes each recording with Qwen and makes that the one meta.json names,
  * keeping the Voice Memos one beside it in `transcript_alternates`.
  *
- * Qwen runs on AC power, or on battery above 50% (QWEN_ASR_MIN_BATTERY). Below
- * that it is deferred, not failed: the recording keeps its Voice Memos
+ * Qwen runs only when the machine is plugged in. On battery it is deferred,
+ * not failed: the recording keeps its Voice Memos
  * transcript and the next pass (`mise run transcribe`, or the serve inbox tick)
  * upgrades it. --allow-battery or RECORDINGS_ASR_ON_BATTERY=allow overrides.
  *

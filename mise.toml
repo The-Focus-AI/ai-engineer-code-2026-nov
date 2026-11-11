@@ -7,8 +7,8 @@ claude = "latest"
 # (src/recording-intake.prose.md).
 
 [tasks.sync]
-description = "Move new Voice Memos recordings into recordings/inbox/ (needs Full Disk Access)"
-run = "bun scripts/export-voice-memos.ts"
+description = "Copy new Voice Memos recordings into recordings/inbox/ (needs Full Disk Access). Copy only: Qwen transcription runs in the serve tick"
+run = "bun scripts/export-voice-memos.ts --asr apple"
 
 [tasks.export]
 description = "Same as sync — one folder per recording, with audio, transcript, meta, attachments"

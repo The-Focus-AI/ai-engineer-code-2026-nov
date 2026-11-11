@@ -130,7 +130,7 @@ Missing in both, and how it comes back:
 | `dist/` | `prose compile`, then promote `manifest.next.json` → `manifest.active.json` |
 | `runs/` | the first serve wake |
 | `state/`, `brief/` | the schedule render, in a session opened in the build |
-| `talks/` | `recording-intake` after `mise run sync` |
+| `talks/` | `recording-intake` after `mise run sync` (copy) and the serve tick (Qwen) |
 | `talks/*/photos/`, `photos/event/` | `mise run photos` over the local drop; filed copies stay local |
 | `recordings/**/*.m4a` | `mise run sync` (needs Full Disk Access) |
 | `recordings/inbox/*/transcript.txt` with no Voice Memos transcript | `mise run transcribe` (local Qwen3-ASR, `QWEN_ASR_DIR`) |
