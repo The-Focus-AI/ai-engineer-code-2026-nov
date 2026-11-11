@@ -1,0 +1,23 @@
+{
+  "title": "George Fraser",
+  "recorded_at": "2026-11-10T14:18:17-08:00",
+  "duration_seconds": 1677.3,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 4236,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261110 141817.m4a",
+  "audio_sha256": "f1b8e0cd17955f380c16182cc45781f2a83189debfca93a2bf800d96783c5f92",
+  "exported_at": "2026-11-10T14:46:23-08:00",
+  "transcript_echo_segments": 6,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 4388,
+      "locale": "en_US"
+    }
+  ]
+}

@@ -1,1 +1,67 @@
-{}
+{
+  "1333169": [
+    {
+      "name": "Aviator",
+      "url": "https://www.aviator.co/",
+      "what": "Shared context, faster reviews, deterministic verification, and merge-to-deploy automation built for the volume AI creates.",
+      "evidence": [
+        "page title: \"Aviator — Ship AI-generated code at velocity you trust\""
+      ]
+    }
+  ],
+  "1334565": [
+    {
+      "name": "Monaco",
+      "url": "https://www.monaco.com/",
+      "what": "An AI-native revenue platform for startups that replaces legacy CRM and sales point solutions",
+      "evidence": [
+        "page title: \"Monaco – The first revenue engine for startups\"",
+        "transcript: \"he is the head of AI at Monaco\""
+      ]
+    }
+  ],
+  "1341863": [
+    {
+      "name": "Composio",
+      "url": "https://composio.dev/",
+      "what": "Put the AI you already use to work across 1,700+ apps.",
+      "evidence": [
+        "page title: \"Composio\"",
+        "roster: affiliation Composio"
+      ]
+    }
+  ],
+  "1352199": [
+    {
+      "name": "Netflix",
+      "url": "https://www.netflix.com/",
+      "what": "Streaming service for movies and TV shows",
+      "evidence": [
+        "page title: \"Netflix\"",
+        "transcript: \"Netflix launched one of our\""
+      ]
+    }
+  ],
+  "1356697": [
+    {
+      "name": "Fivetran",
+      "url": "https://www.fivetran.com/",
+      "what": "Automated data movement platform",
+      "evidence": [
+        "page title: \"Fivetran | Automated data movement platform\"",
+        "transcript: \"And this is how we do it at Fivetran.\""
+      ]
+    }
+  ],
+  "1379134": [
+    {
+      "name": "Syntax",
+      "url": "https://syntax.fm/",
+      "what": "Full Stack Web Developers Wes Bos and Scott Tolinski dive deep into web development, CSS, JavaScript, Frameworks, Typescript, Servers and more.",
+      "evidence": [
+        "page title: \"Syntax - Web Development Podcast\"",
+        "transcript: \"And give Syntax a subscribe on YouTube\""
+      ]
+    }
+  ]
+}

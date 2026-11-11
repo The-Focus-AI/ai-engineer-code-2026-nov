@@ -1,0 +1,200 @@
+{
+  "themes": [
+    {
+      "name": "Context for AI",
+      "claim_sentence": "AI does its best work on context people have already curated (the intent captured in a session, modeled data, a map of the database), not on raw systems.",
+      "definition": "George Fraser's companies connect their agents to the same modeled data stack that serves BI, simplify messy data for them, and give them an agent schema as a map. Ankit Jain captures a change's intent and acceptance criteria from the agent session rather than writing specs. Utkarsh Shrivastava calls the AI tool the tip of the iceberg and puts Netflix's lasting investment in the company context beneath it: enterprise skills and MCP servers. In each, the useful input is something a person already shaped. Mihail Eric seeds Monaco's agent memory from sales emails, call transcripts and onboarding context, then promotes what the agents learn back into it.",
+      "claims": [
+        "1333169-518-138b45",
+        "1334565-625-13c255",
+        "1352199-131-92cfb3",
+        "1356697-198-40846e",
+        "1356697-323-cb7c4e",
+        "1356697-678-541d96"
+      ],
+      "counter_claims": [],
+      "also_called": [
+        "agent schema",
+        "company context",
+        "context engineering",
+        "intent",
+        "memory",
+        "reflections",
+        "source of truth"
+      ],
+      "why_uncontested": "No talk argues agents do better on raw systems than on curated context; whether to reach company data through each app is recorded separately as contested.",
+      "theme_id": "context-for-ai",
+      "talk_slugs": [
+        "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
+        "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
+        "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
+        "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai"
+      ],
+      "talk_count": 4
+    },
+    {
+      "name": "Guardrails people own",
+      "claim_sentence": "Agents are trusted through guardrails that people own (rules that check their output, scoped access, and a firewall on what goes in and what they do) rather than by people reading what they produce.",
+      "definition": "Ankit Jain mines years of review comments into rules with owners and turns some into deterministic checks, so people own the rules instead of the code. Karan Vaidya gives agents broad but granular access to each app and puts a firewall on both their inputs and their actions. Utkarsh Shrivastava has Netflix's domain teams run a regression eval suite in CI before any new connector or model change, and scales the gate with the stakes, from reads to irreversible writes. All three replace line-by-line supervision with controls a named person or team maintains. Mihail Eric goes further for vertical AI: there is no absolute correctness, so in-house domain experts define what good looks like and evaluations follow them.",
+      "claims": [
+        "1333169-1038-239cc0",
+        "1333169-617-c557b1",
+        "1334565-1061-9df945",
+        "1341863-349-4e2fb1",
+        "1341863-435-93ffef",
+        "1352199-543-fa5bf9",
+        "1352199-965-290d20"
+      ],
+      "counter_claims": [],
+      "also_called": [
+        "evals in CI",
+        "experts define correctness",
+        "firewall for agents",
+        "gates by stakes",
+        "invariants",
+        "own the rules"
+      ],
+      "why_uncontested": "No talk argues for trusting agent output unchecked or for returning to line-by-line review.",
+      "theme_id": "guardrails-people-own",
+      "talk_slugs": [
+        "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
+        "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
+        "2026-11-10-from-coding-agents-to-knowledge-work-agents",
+        "2026-11-10-one-teams-path-to-trusting-ai-generated-code"
+      ],
+      "talk_count": 4
+    },
+    {
+      "name": "Decision load",
+      "claim_sentence": "As agents take over the work, the decisions left to people become the scarce, tiring part, so teams record them, queue them for a person, and keep them few enough to make well.",
+      "definition": "Across the talks, agents do more of the doing and people are left with the deciding. Ankit Jain finds that human review comments were mostly about decisions and has agents argue so the decisions surface and get written down. Karan Vaidya's security agents queue uncertain findings for a person to judge in the morning. Scott Tolinski's survey shows the cost: running many agents multiplies the decisions and wears people out, and fewer agents in parallel helps.",
+      "claims": [
+        "1333169-29-2579a7",
+        "1333169-428-47a134",
+        "1341863-116-315efe",
+        "1379134-1190-f34d67",
+        "1379134-582-2c9987"
+      ],
+      "counter_claims": [],
+      "also_called": [
+        "decision fatigue",
+        "micro decisions",
+        "human judgment"
+      ],
+      "why_uncontested": "No talk argues decisions can be handed to agents outright; even Karan Vaidya's always-on agents route uncertain cases to a person.",
+      "theme_id": "decision-load",
+      "talk_slugs": [
+        "2026-11-10-from-coding-agents-to-knowledge-work-agents",
+        "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
+        "2026-11-10-scott-tolinski-co-host-syntax"
+      ],
+      "talk_count": 3
+    },
+    {
+      "theme_id": "connecting-is-not-answering",
+      "name": "Connecting is not answering",
+      "claim_sentence": "Connecting an AI to every source is now cheap, but it does not settle which source answers, so a connection per source produces wrong or conflicting answers unless something decides between them.",
+      "definition": "George Fraser argues that wiring an assistant to each system of record through MCP fails for data questions because it cannot join across sources. Utkarsh Shrivastava reaches the same problem from inside Netflix: every connector is another way for the agent to choose wrong, two correct connectors gave different viewer counts for one event, and MCP made access cheap without settling who owns the answer. Fraser's fix is one modeled store; Shrivastava's is a platform that gates and arbitrates across domain-owned connectors.",
+      "claims": [
+        "1352199-280-b314ee",
+        "1352199-280-dc0325",
+        "1352199-409-a5ad0a",
+        "1356697-424-143e8b"
+      ],
+      "counter_claims": [
+        "1341863-349-4e2fb1"
+      ],
+      "also_called": [
+        "source collisions",
+        "MCP sprawl",
+        "which source answers"
+      ],
+      "why_uncontested": null,
+      "talk_slugs": [
+        "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
+        "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai"
+      ],
+      "talk_count": 2
+    },
+    {
+      "theme_id": "the-vertical-harness",
+      "name": "The vertical harness",
+      "claim_sentence": "A domain AI product is a shared harness (data access, an agent workspace with memory, expert-guided workflows and evaluation) plus the domain expertise built into it, and that expertise, not the model or the tool, is what lasts.",
+      "definition": "Mihail Eric describes the same building blocks under every vertical AI company, with Monaco's go-to-market knowledge layered on top, and splits workflows into ones Monaco's own sales experts design and ones customers build for their niche. Utkarsh Shrivastava makes the same cut inside Netflix: the AI tool is the tip of the iceberg, and the lasting investment is the company context, skills and harness beneath it.",
+      "talk_count": 2,
+      "talk_slugs": [
+        "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
+        "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco"
+      ],
+      "claims": [
+        "1334565-515-817a86",
+        "1334565-902-29fd73",
+        "1352199-131-92cfb3"
+      ],
+      "counter_claims": [],
+      "also_called": [
+        "vertical AI",
+        "GTM harness",
+        "domain workflows",
+        "company context"
+      ],
+      "why_uncontested": "No talk argues the model or tool is the durable asset; Karan Vaidya's recording, which might have described his harness, misses the part of the talk on it."
+    }
+  ],
+  "singletons": [
+    "1341863-41-60fbe0",
+    "1341863-218-2bbb54",
+    "1341863-579-b0125d",
+    "1333169-176-0d34aa",
+    "1379134-291-86edc7",
+    "1379134-392-ae0b0d",
+    "1379134-474-13e18f",
+    "1379134-840-37ce1f",
+    "1356697-869-437a02",
+    "1356697-1604-63c8a2",
+    "1334565-343-a16f2e",
+    "1334565-1258-dcf3b4"
+  ],
+  "contested": [
+    {
+      "question": "Do the skills people built before AI carry over?",
+      "sides": [
+        {
+          "claim_id": "1379134-840-37ce1f",
+          "stance": "Coding skills fade with AI use, and much of what is lost no longer matters"
+        },
+        {
+          "claim_id": "1356697-1604-63c8a2",
+          "stance": "The analytics skills data teams built are exactly what AI context needs"
+        }
+      ]
+    },
+    {
+      "question": "Should agents reach company data through each app or through one modeled store?",
+      "sides": [
+        {
+          "claim_id": "1356697-424-143e8b",
+          "stance": "Through the modeled warehouse; a connection per source cannot join across sources"
+        },
+        {
+          "claim_id": "1341863-349-4e2fb1",
+          "stance": "Through scoped access to each of the company's apps"
+        },
+        {
+          "claim_id": "1352199-409-a5ad0a",
+          "stance": "Through MCP servers each domain owns, behind a shared platform that gates access and decides which source answers"
+        }
+      ]
+    }
+  ],
+  "corpus": {
+    "talk_count": 6,
+    "word_count": 23243,
+    "last_touched": "2026-11-10",
+    "theme_count": 5,
+    "unassigned": [],
+    "thin": [],
+    "report_path": "analysis/themes.md",
+    "generated_at": "2026-11-10T19:31:01-05:00"
+  }
+}

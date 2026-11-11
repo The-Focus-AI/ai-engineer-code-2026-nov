@@ -13,20 +13,169 @@
     "starts_at": "2026-11-10T09:30:00-08:00",
     "source_recording": "2026-11-10_0933_Ankir-Jain",
     "sections": [
-      "00:00:00 — Opening",
-      "00:00:30 — What we tried first",
+      "00:00:02 — Opening",
+      "00:00:29 — What we tried first",
       "00:02:56 — Code review is not about the code",
-      "00:05:51 — Six steps",
-      "00:07:11 — Argue",
-      "00:08:37 — Capture",
+      "00:05:48 — Six steps",
+      "00:07:08 — Argue",
+      "00:08:38 — Capture",
       "00:10:17 — Codify",
       "00:13:02 — Verify",
-      "00:14:10 — Debate",
+      "00:14:09 — Debate",
       "00:17:18 — Own",
-      "00:18:45 — Results",
-      "00:21:08 — Start tomorrow"
+      "00:18:42 — Results",
+      "00:21:09 — Start tomorrow"
     ],
-    "word_count": 3817,
-    "cleaned_at": "2026-11-10T13:06:37-05:00"
+    "word_count": 3786,
+    "cleaned_at": "2026-11-10T14:34:02-05:00"
+  },
+  "1334565": {
+    "slug": "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
+    "path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/transcript.md",
+    "title": "Building World-class Agentic GTM: Learnings from Monaco for Monaco",
+    "speakers": [
+      {
+        "name": "Mihail Eric",
+        "affiliation": "Monaco"
+      }
+    ],
+    "room_id": "continental-13-workshop-room-1",
+    "starts_at": "2026-11-10T15:30:00-08:00",
+    "source_recording": "2026-11-10_1529_Mihail-Eric",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:03:35 — Monaco and the future of sales",
+      "00:05:43 — Knowledge and procedure in go-to-market",
+      "00:08:33 — The vertical AI harness",
+      "00:10:23 — Data, memory and workspace",
+      "00:15:00 — Workflows from experts",
+      "00:17:41 — Tracing and evaluation",
+      "00:18:47 — Case studies",
+      "00:20:57 — Culture: everyone builds",
+      "00:25:21 — Vertical AI as an opportunity",
+      "00:26:46 — Questions"
+    ],
+    "word_count": 5449,
+    "cleaned_at": "2026-11-10T19:33:49-05:00"
+  },
+  "1341863": {
+    "slug": "2026-11-10-from-coding-agents-to-knowledge-work-agents",
+    "path": "talks/2026-11-10-from-coding-agents-to-knowledge-work-agents/transcript.md",
+    "title": "What It Takes to Run a Company on Agent Swarms",
+    "speakers": [
+      {
+        "name": "Karan Vaidya",
+        "affiliation": "Composio"
+      }
+    ],
+    "room_id": "continental-13-workshop-room-1",
+    "starts_at": "2026-11-10T13:50:00-08:00",
+    "source_recording": "2026-11-10_1355_Karan-Vaidya",
+    "sections": [
+      "00:00:00 — Giving agents access",
+      "00:00:41 — Attackers already use agents",
+      "00:01:56 — Security agents that watch the company",
+      "00:03:38 — SRE agents",
+      "00:05:49 — The right amount of access",
+      "00:07:15 — A firewall for agents",
+      "00:09:39 — Patterns to conclude"
+    ],
+    "word_count": 1686,
+    "cleaned_at": "2026-11-10T18:19:57-05:00"
+  },
+  "1352199": {
+    "slug": "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
+    "path": "talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/transcript.md",
+    "title": "Building a Shared AI Assistant: The Platform Challenges Beyond MCP",
+    "speakers": [
+      {
+        "name": "Utkarsh Shrivastava",
+        "affiliation": "Netflix"
+      }
+    ],
+    "room_id": "continental-13-workshop-room-1",
+    "starts_at": "2026-11-10T15:00:00-08:00",
+    "source_recording": "2026-11-10_1457_Utkarsh",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:00:43 — Choosing models",
+      "00:02:11 — Company context is the key",
+      "00:03:12 — Before and after the agentic suite",
+      "00:04:40 — Every tool is another way to choose wrong",
+      "00:06:49 — One word, many meanings",
+      "00:09:03 — Gate one: access and evaluation",
+      "00:13:04 — Gate two: who owns the answer",
+      "00:16:05 — Gate three: high-stakes writes",
+      "00:17:34 — Did consolidating help?",
+      "00:20:28 — Platform and teams together",
+      "00:21:38 — Questions"
+    ],
+    "word_count": 4022,
+    "cleaned_at": "2026-11-10T18:32:00-05:00"
+  },
+  "1356697": {
+    "slug": "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai",
+    "path": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/transcript.md",
+    "title": "The new job of the data team is providing context to AI",
+    "speakers": [
+      {
+        "name": "George Fraser",
+        "affiliation": "Fivetran"
+      }
+    ],
+    "room_id": "continental-13-workshop-room-1",
+    "starts_at": "2026-11-10T14:20:00-08:00",
+    "source_recording": "2026-11-10_1418_George-Fraser",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:01:22 — Why context, why now",
+      "00:02:56 — The head-of-sales question",
+      "00:03:18 — Companies already doing it",
+      "00:05:23 — AI is a new consumer of the data stack",
+      "00:06:38 — Unstructured data",
+      "00:07:04 — Don't wire AI to every system through MCP",
+      "00:09:47 — How Fivetran does it",
+      "00:11:18 — Giving the agent a map",
+      "00:14:29 — One place for everything",
+      "00:15:24 — Building the demo",
+      "00:22:31 — Asking the agent",
+      "00:26:44 — What data teams are already good at"
+    ],
+    "word_count": 4234,
+    "cleaned_at": "2026-11-10T18:17:50-05:00"
+  },
+  "1379134": {
+    "slug": "2026-11-10-scott-tolinski-co-host-syntax",
+    "path": "talks/2026-11-10-scott-tolinski-co-host-syntax/transcript.md",
+    "title": "The True Cost of AI Coding",
+    "speakers": [
+      {
+        "name": "Scott Tolinski",
+        "affiliation": "Syntax"
+      }
+    ],
+    "room_id": "continental-13-workshop-room-1",
+    "starts_at": "2026-11-10T10:10:00-08:00",
+    "source_recording": "2026-11-10_1009_Scott-Tolinski",
+    "sections": [
+      "00:00:03 — Introduction",
+      "00:01:23 — Disclaimer and backstory",
+      "00:03:25 — A viral tweet",
+      "00:04:22 — The survey",
+      "00:04:51 — Prompting past quitting time",
+      "00:06:05 — Sleep",
+      "00:06:32 — A variable reward",
+      "00:07:54 — Pressure to produce more",
+      "00:09:42 — Running many agents",
+      "00:12:11 — Enjoyment",
+      "00:14:00 — Skills sharpening or diminishing",
+      "00:17:50 — What do we do about it",
+      "00:19:50 — Less parallelization",
+      "00:20:46 — Go outside",
+      "00:21:48 — Checking agents from your phone",
+      "00:23:08 — Closing"
+    ],
+    "word_count": 4075,
+    "cleaned_at": "2026-11-10T14:34:02-05:00"
   }
 }

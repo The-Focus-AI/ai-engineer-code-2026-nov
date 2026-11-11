@@ -3,50 +3,50 @@
     {
       "url": "https://ai.engineer/code/2026",
       "role": "entry",
-      "content_hash": "1f10a7a8d30fc4d507030a42443fa09fbc9b22b049f8fee633e201e5131fa454",
-      "byte_length": 277159,
+      "content_hash": "eca3f034bc89d4cc25cd977a0f143f6123e30fd7219deebb40af268e86883e59",
+      "byte_length": 318854,
       "truncated": false
     },
     {
       "url": "https://ai.engineer/code/2026/schedule",
       "role": "schedule",
-      "content_hash": "b61d11835e14b26734e1cd1cdcaa2e23ae70c9680c62c630616f797b185d0ec1",
-      "byte_length": 367011,
+      "content_hash": "dab37231651c6f0faf984be78ad565421dbf841f1b87c20adde20b3f2c237589",
+      "byte_length": 379125,
       "truncated": false
     },
     {
       "url": "https://ai.engineer/code/2026/map",
       "role": "venue",
-      "content_hash": "a596878cfd5cf5970581c0c24c2304017824ab2d82514c60443379da02edacfc",
+      "content_hash": "79ffacb3e1ced004f1ccb02a5eb9c8fd778effcd6b0db45e8cc6ab74075c7405",
       "byte_length": 3737,
       "truncated": false
     },
     {
       "url": "https://luma.com/after-summit",
       "role": "side-event",
-      "content_hash": "4e0e8c4123ee87887f184e40a7c18dd00723ed17418336c3d15c574b35b3ba6a",
-      "byte_length": 166184,
+      "content_hash": "045b44f3e82e3ce263329ba9a049f552ad1abfb1b92ac6ef36d0033ab1cc351c",
+      "byte_length": 175508,
       "truncated": false
     },
     {
       "url": "https://luma.com/allthings-aie",
       "role": "side-event",
-      "content_hash": "c07fba001da65fefb7b2c02e0553378e952cae935700bd85a0dbda514ceba0d6",
-      "byte_length": 141534,
+      "content_hash": "72a8dbe290a9e4786b780099784ba55469d60ce86a9493a7f3e4027dd165975a",
+      "byte_length": 160573,
       "truncated": false
     },
     {
       "url": "https://luma.com/AIECodeSummitHackathon",
       "role": "side-event",
-      "content_hash": "7200fd555902bf802d84b370294a61114eeb88f567fecacc44e9cebef8b76103",
-      "byte_length": 200874,
+      "content_hash": "e0ea05ee2c63de3c51275ee8ea02345853111ac10106d72ae5e623f73a5451e2",
+      "byte_length": 204233,
       "truncated": false
     },
     {
       "url": "https://luma.com/kdtg113c",
       "role": "side-event",
-      "content_hash": "097a8979fdf34367afcb611e448721235241f465613e6bdafda41789a115769e",
-      "byte_length": 161035,
+      "content_hash": "afd05316c8fd8090696ebae83174b980ae70a22c7373677d819ab9e277325d57",
+      "byte_length": 163559,
       "truncated": false
     }
   ],
@@ -60,20 +60,19 @@
     "coverage-gap: entry page states '7 streamed' online talks (Kush Agrawal, Prasanna Sankar, Preetam Dwivedi, Manjari Akella, Nouha Dziri, Tanmay Sah, Dolly Sah, Ari Azarafrooz, Rohan Pandey); 0 of the 7 are in the schedule data and the site publishes no title or time for them, so they are not in program.sessions",
     "schedule data omits entry-page speakers with no scheduled session: Alex Polozov, David Roster, Joe Spisak, Lukas Frei",
     "stated_session_count null: neither the entry page nor the schedule route states a session total, so completeness of 112 cannot be reconciled against one",
-    "session 'Cognition Workshop' (2026-11-10 16:30, Continental 6): source type 'other', no speaker and no description; format null because the source does not establish one",
     "sessions 'Token Billionaires Lounge' (2026-11-11, 2026-11-12, Continental 7) and 'Expo Hall Hours' (2026-11-11, 2026-11-12, Golden Gate): source type 'other', no speaker and no description; format null because the source does not establish one",
     "session 'AIE x MLH Hackathon' ends_at follows the official page (9 PM PT); its linked Luma page says 6 PM PT",
     "session 'allthings/aie': off-site place not published; official page gives none and the Luma address is guests-only",
     "exact addresses of the off-site side events are guests-only on Luma; location_note carries the neighbourhood only",
     "format 'keynote' unused: schedule data types mainstage sessions as 'Mainstage Talk'; entry cards label these speakers Keynote without tying the label to a session: Diogo Almeida, Jarred Sumner, Melvin Johnson",
-    "track holds the schedule page's own session-type label (Mainstage Talk, Expo Stage Talk, Workshop); topics are empty on all 108 scheduled sessions and no thematic track is assigned per session",
-    "talk title not published, title is the speaker line (18): 1379134, 1381709, 1381496, 1373447, 1373612, 1373465, 1376198, 1373471, 1376191, 1379009, 1373472, 1378217, 1373475, 1379010, 1373478, 1376195, 1373481, 1373482",
-    "abstract null on non-MC talks and workshops (19): 1379134, 1381709, 1381496, 1373447, 1373612, 1373465, 1373468, 1376198, 1373471, 1376191, 1379009, 1373472, 1378217, 1373475, 1379010, 1373478, 1376195, 1373481, 1373482",
-    "bio null (5): cassandra-chin, richelle-j, ross-cefalu, scott-tolinski, sydney-runkle",
-    "affiliation null (2): cassandra-chin, simon-willison",
-    "links empty (17): aamir-shakir, ankit-mathur, arsalan-bashir, bradford-chang, cassandra-chin, doug-clauson, elise-gonzales, jakub-hojsan, james-arthur, louis-walsh, michelle-chen, owen-kephart, richelle-j, scott-roberts, scott-tolinski, sudhir-tonse, sydney-runkle",
     "venue.transit null: not stated on the entry or map pages",
     "venue.accessibility null: not stated on the entry or map pages",
+    "track holds the schedule page's own session-type label (Mainstage Talk, Expo Stage Talk, Workshop, and since this render 'workshopTalk', labelled here 'Workshop Room Talk' because the site publishes no label for it); topics are empty and no thematic track is assigned per session",
+    "talk title not published, title is the speaker line (2): 1373478, 1373482",
+    "abstract null on non-MC talks and workshops (5): 1373468, 1373471, 1379009, 1373478, 1373482",
+    "bio null (3): richelle-ji, ross-cefalu, sydney-runkle",
+    "affiliation null (2): charlie-meyer, stephen-chin",
+    "links empty (16): aamir-shakir, ankit-mathur, arsalan-bashir, bradford-chang, doug-clauson, elise-gonzales, jakub-hojsan, james-arthur, louis-walsh, michelle-chen, owen-kephart, richelle-ji, scott-roberts, scott-tolinski, sudhir-tonse, sydney-runkle",
     "room clash: Networking Break / Expo Hall Hours @ 2026-11-11T10:40:00-08:00",
     "room clash: Expo Hall Hours / Lunch @ 2026-11-11T10:40:00-08:00",
     "room clash: Expo Hall Hours / Afternoon Break / Keynote Reset @ 2026-11-11T10:40:00-08:00",
@@ -83,10 +82,11 @@
     "unparsed region: entry page agenda grid (labelled 'all times PT · preliminary', 'Full talk agenda coming soon'): block-level only, not structured; the schedule route is the session source",
     "unparsed region: entry page 'Online talks // 7 streamed' block: speaker names only, no title, time, or stream link",
     "unparsed region: entry page FAQ: answers are not in the served page, questions only",
-    "unparsed region: venue floorplan images (level-1, level-2-workshop-day, level-2-session-days .avif): not read; room levels come from the map page's area list"
+    "unparsed region: venue floorplan images (level-1, level-2-workshop-day, level-2-session-days .avif): not read; room levels come from the map page's area list",
+    "enrichment pending (3): new speakers whose profile pages were not opened this render: charlie-meyer, richelle-ji, stephen-chin"
   ],
-  "last_verified_at": "2026-11-06T18:33:00-05:00",
-  "verification_count": 3,
+  "last_verified_at": "2026-11-11T03:38:27-05:00",
+  "verification_count": 5,
   "enrichment": {
     "done": [
       "aamir-shakir",
@@ -109,7 +109,6 @@
       "cj-avilla",
       "corey-quinn",
       "dan-kiuna",
-      "daniel-balsam",
       "daniel-tao",
       "devin-gupta",
       "dexter-horthy",
@@ -123,6 +122,7 @@
       "francisco-javier-arceo",
       "frank-coyle",
       "george-fraser",
+      "giovanni-d-antonio",
       "ishaan-dey",
       "ivan-leo",
       "jacob-prall",
@@ -151,11 +151,11 @@
       "natalie-serrino",
       "nikhil-harithas",
       "owen-kephart",
+      "patrick-debois",
       "philip-kiely",
       "philipp-schmid",
       "quinn-slack",
       "raz-berman-gold",
-      "richelle-j",
       "ross-cefalu",
       "sajid-mehmood",
       "scott-roberts",
@@ -170,13 +170,16 @@
       "theodor-marcu",
       "thor-schaeff",
       "utkarsh-shrivastava",
-      "vasek-mlejnsky",
       "walden-yan",
       "yacine-mahdid",
       "zach-bruggeman",
       "zach-lloyd"
     ],
-    "pending": [],
+    "pending": [
+      "charlie-meyer",
+      "richelle-ji",
+      "stephen-chin"
+    ],
     "failed": []
   }
 }

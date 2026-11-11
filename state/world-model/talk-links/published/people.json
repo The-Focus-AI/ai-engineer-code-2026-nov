@@ -1,1 +1,127 @@
-{}
+{
+  "1333169": [
+    {
+      "name": "Ankit Jain",
+      "role": "Founder and CEO",
+      "affiliation": "Aviator",
+      "links": {
+        "site": "https://www.aviator.co/blog/author/ankitjain/",
+        "linkedin": null,
+        "x": "https://x.com/ankitxg",
+        "github": "https://github.com/jainankit",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Aviator; bio \"a founder and CEO of Aviator\"",
+        "page title: \"Ankit Jain, Author at Aviator Blog\"",
+        "page title: \"Ankit Jain (@ankitxg) / X\"",
+        "page title: \"jainankit (Ankit Jain) · GitHub\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1334565": [
+    {
+      "name": "Mihail Eric",
+      "role": "Head of AI",
+      "affiliation": "Monaco",
+      "links": {
+        "site": "https://www.mihaileric.com/",
+        "linkedin": "https://www.linkedin.com/in/mihaileric/",
+        "x": "https://x.com/mihail_eric",
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Monaco; bio \"I’m Head of AI at Monaco\"",
+        "page title: \"About me - Mihail Eric\"",
+        "page title: \"Mihail Eric - Stanford University | LinkedIn\"",
+        "page title: \"Mihail Eric (@mihail_eric) / X\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1341863": [
+    {
+      "name": "Karan Vaidya",
+      "role": "Founder",
+      "affiliation": "Composio",
+      "links": {
+        "site": "https://kvaidya.com/",
+        "linkedin": "https://www.linkedin.com/in/kaavee315/",
+        "x": "https://x.com/KaranVaidya6",
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Composio; bio \"Founder of Composio, building the infra for knowledge work agents\"",
+        "page title: \"Karan Vaidya\"",
+        "page title: \"Karan Vaidya - Composio | LinkedIn\"",
+        "page title: \"Karan Vaidya (@KaranVaidya6) / X\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1352199": [
+    {
+      "name": "Utkarsh Shrivastava",
+      "role": "Engineering lead, enterprise AI",
+      "affiliation": "Netflix",
+      "links": {
+        "site": null,
+        "linkedin": "https://www.linkedin.com/in/utkarshshrivastava",
+        "x": null,
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Netflix; bio \"Utkarsh Shrivastava leads engineering for enterprise AI at Netflix\"",
+        "page title: \"Utkarsh Shrivastava - Netflix | LinkedIn\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1356697": [
+    {
+      "name": "George Fraser",
+      "role": "CEO and co-founder",
+      "affiliation": "Fivetran",
+      "links": {
+        "site": null,
+        "linkedin": "https://www.linkedin.com/in/george-fraser-a0219230/",
+        "x": "https://x.com/frasergeorgew",
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Fivetran; bio \"George Fraser is the CEO and co-founder of Fivetran\"",
+        "transcript: \"And this is how we do it at Fivetran.\"",
+        "page title: \"George Fraser - Fivetran | LinkedIn\"",
+        "page title: \"George Fraser (@frasergeorgew) / X\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1379134": [
+    {
+      "name": "Scott Tolinski",
+      "role": "Co-host",
+      "affiliation": "Syntax",
+      "links": {
+        "site": "https://tolin.ski/",
+        "linkedin": null,
+        "x": "https://x.com/stolinski",
+        "github": "https://github.com/stolinski",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Syntax; schedule title \"The True Cost of AI Coding\"",
+        "transcript: \"So again, on syntax, we get a lot of people commenting all the time.\"",
+        "page title: \"Scott Tolinski\"",
+        "page title: \"Scott Tolinski (@stolinski) / X\"",
+        "page title: \"stolinski (Scott Tolinski) · GitHub\""
+      ],
+      "status": "found"
+    }
+  ]
+}

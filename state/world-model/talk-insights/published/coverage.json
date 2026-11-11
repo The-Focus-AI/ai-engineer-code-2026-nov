@@ -1,0 +1,67 @@
+{
+  "1333169": {
+    "sections_read": 12,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "the speaker's introduction was not recorded",
+      "Qwen garbles some terms: \"poetry\" for code review (00:02:56), \"battle\" for the first attempt (00:00:29), \"Every commonly, your team repeats to the governor\" (00:10:17)"
+    ],
+    "extracted_at": "2026-11-10T18:21:22-05:00"
+  },
+  "1334565": {
+    "sections_read": 11,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Qwen prompt insertions \"Sonar\" (00:01:20, the MC's introduction) and \"Netflix\" (00:19:44) are not quoted",
+      "\"Zain correctness\" and \"virtual AI\" (00:17:41) are recogniser slips; the claim quotes the clean sentence after them",
+      "case-study figures (00:18:47) and the closing \"vertical AI is one of the largest economic opportunities in history\" (00:25:21) are left out to stay within six claims"
+    ],
+    "extracted_at": "2026-11-10T19:35:50-05:00"
+  },
+  "1341863": {
+    "sections_read": 7,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "the recording starts about five minutes into the talk; the first sections, including how harnesses moved from code to knowledge work, are unrecorded",
+      "\"swarms\" is heard as \"songs\" and \"storms\" throughout; quoted as transcribed",
+      "\"Composio\" in this transcript may come from the Qwen prompt; no claim relies on it"
+    ],
+    "extracted_at": "2026-11-10T18:22:30-05:00"
+  },
+  "1352199": {
+    "sections_read": 12,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "\"Google DeepMind\" (00:25:14) and \"DeepMind solved the connection\" (00:06:49) are likely prompt insertions or misheard \"MCP\"; not quoted",
+      "the line in Devanagari script around 00:25:58 and \"Andumi, beri anda lebih banyak peluang\" (00:17:34) are recogniser misreadings",
+      "\"The next AI\" (00:00:43) is likely xAI, per the operator's note; \"Israeli agents\" and \"Rousey versus Karamu\" are garbled"
+    ],
+    "extracted_at": "2026-11-10T18:34:20-05:00"
+  },
+  "1356697": {
+    "sections_read": 13,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "the recording starts in the MC's introduction",
+      "\"At Composio\" at 00:09:53 is a prompt insertion (likely \"At Fivetran\"); not quoted",
+      "\"DPT\" (00:15:24) is likely dbt; companies \"Kai\" and \"Vera\" (00:03:18) are garbled names of Stripe's and another firm's agents"
+    ],
+    "extracted_at": "2026-11-10T18:21:22-05:00"
+  },
+  "1379134": {
+    "sections_read": 16,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "\"Databricks\" at 00:14:40 is a prompt insertion, not the audio; no claim quotes it",
+      "\"Japanese piracy\" (00:17:50) is likely pottery; not quoted",
+      "the 52% and 71% figures are paraphrased from the survey slides he reads; the quotes are his framing"
+    ],
+    "extracted_at": "2026-11-10T18:21:22-05:00"
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "theses": {
+    "1333169": {
+      "thesis": "Once AI writes most of the code, a team should stop reviewing diffs and instead capture intent, decisions and evidence, owning the rules that verify the code rather than the code itself.",
+      "confidence": 0.85
+    },
+    "1341863": {
+      "thesis": "Running agent swarms across a company means giving each one scoped access to every app it needs and a firewall on what goes in and what it does, because attackers already use agents.",
+      "confidence": 0.6
+    },
+    "1356697": {
+      "thesis": "The data stack built for business intelligence is now the context layer for AI, so data teams should connect agents to modeled warehouse data rather than wiring them to every source system.",
+      "confidence": 0.85
+    },
+    "1379134": {
+      "thesis": "AI coding's compulsive pull and the decisions it demands are wearing developers out, and the remedy is habits and limits, not more tools.",
+      "confidence": 0.8
+    }
+  },
+  "claims": {
+    "1333169": [
+      {
+        "claim_id": "1333169-29-2579a7",
+        "section": "00:00:29",
+        "at_seconds": 29,
+        "quote": "Most of the comments that humans are providing are actually not about bugs or correctness. It's about decisions.",
+        "claim": "Human review comments are mostly about decisions, not bugs or correctness.",
+        "speaker": "Ankit Jain",
+        "also_at": []
+      },
+      {
+        "claim_id": "1333169-176-0d34aa",
+        "section": "00:02:56",
+        "at_seconds": 176,
+        "quote": "It's for us to build mental models.",
+        "claim": "Code review exists to build a team's shared mental model, and line-by-line review of large AI diffs no longer does that.",
+        "speaker": "Ankit Jain",
+        "also_at": []
+      },
+      {
+        "claim_id": "1333169-428-47a134",
+        "section": "00:07:08",
+        "at_seconds": 428,
+        "quote": "Everything that they disagree about, we should write it down.",
+        "claim": "A coding agent and a review agent with opposing goals should argue first, and every disagreement should be recorded as a decision.",
+        "speaker": "Ankit Jain",
+        "also_at": []
+      },
+      {
+        "claim_id": "1333169-518-138b45",
+        "section": "00:08:38",
+        "at_seconds": 518,
+        "quote": "Intent is why are we making whatever change.",
+        "claim": "Intent and acceptance criteria, captured from the agent session, replace hand-maintained specs that go stale.",
+        "speaker": "Ankit Jain",
+        "also_at": []
+      },
+      {
+        "claim_id": "1333169-617-c557b1",
+        "section": "00:10:17",
+        "at_seconds": 617,
+        "quote": "Out of 200 candidates, we got 64 rules automatically created.",
+        "claim": "Mining past review comments yields rules (invariants) with owners, and some of them become deterministic checks.",
+        "speaker": "Ankit Jain",
+        "also_at": []
+      },
+      {
+        "claim_id": "1333169-1038-239cc0",
+        "section": "00:17:18",
+        "at_seconds": 1038,
+        "quote": "So instead of thinking about owning the code. Own the guardrails. Own the rules.",
+        "claim": "Humans stay accountable by owning the rules and guardrails that verify code, not the lines of code.",
+        "speaker": "Ankit Jain",
+        "also_at": []
+      }
+    ],
+    "1341863": [
+      {
+        "claim_id": "1341863-41-60fbe0",
+        "section": "00:00:41",
+        "at_seconds": 41,
+        "quote": "Attackers are obviously using agents to attack you.",
+        "claim": "Attackers already use agents, so defense has to run on agents too.",
+        "speaker": "Karan Vaidya",
+        "also_at": []
+      },
+      {
+        "claim_id": "1341863-116-315efe",
+        "section": "00:01:56",
+        "at_seconds": 116,
+        "quote": "And it's running twenty four into seven, so engineers can somewhat sleep effectively while.",
+        "claim": "Security agent swarms watch company activity around the clock and queue uncertain findings for a person to judge in the morning.",
+        "speaker": "Karan Vaidya",
+        "also_at": []
+      },
+      {
+        "claim_id": "1341863-218-2bbb54",
+        "section": "00:03:38",
+        "at_seconds": 218,
+        "quote": "A few minutes after deploy, the song suggests that there is a rollback in the trade itself and slack.",
+        "claim": "SRE agents watch deploys and configuration changes and propose a rollback in Slack before an incident lands.",
+        "speaker": "Karan Vaidya",
+        "also_at": []
+      },
+      {
+        "claim_id": "1341863-349-4e2fb1",
+        "section": "00:05:49",
+        "at_seconds": 349,
+        "quote": "So to be able to do that correctly, you need to give right amount of access to all of these agents.",
+        "claim": "Agents need broad reach across the company's apps but granular, scoped access to each one.",
+        "speaker": "Karan Vaidya",
+        "also_at": []
+      },
+      {
+        "claim_id": "1341863-435-93ffef",
+        "section": "00:07:15",
+        "at_seconds": 435,
+        "quote": "In case of non-deterministic agents, you want something similar protecting.",
+        "claim": "Agents need a firewall on both what goes into them and what actions they take.",
+        "speaker": "Karan Vaidya",
+        "also_at": []
+      },
+      {
+        "claim_id": "1341863-579-b0125d",
+        "section": "00:09:39",
+        "at_seconds": 579,
+        "quote": "You don't want to have multiple agents looking at the same surface area because that can kind of conflict the context.",
+        "claim": "Give each surface area one agent swarm, since several on the same surface conflict.",
+        "speaker": "Karan Vaidya",
+        "also_at": []
+      }
+    ],
+    "1356697": [
+      {
+        "claim_id": "1356697-198-40846e",
+        "section": "00:03:18",
+        "at_seconds": 198,
+        "quote": "They are using as a source of truth for AI agents for questions about data.",
+        "claim": "Leading companies connect their AI agents to the same modeled data stack that already serves business intelligence.",
+        "speaker": "George Fraser",
+        "also_at": []
+      },
+      {
+        "claim_id": "1356697-323-cb7c4e",
+        "section": "00:05:23",
+        "at_seconds": 323,
+        "quote": "You're presenting a simplified view of what is probably some very messy and complicated data.",
+        "claim": "Modeling data into a simplified view is what makes it usable by AI, exactly as it was for human analysts.",
+        "speaker": "George Fraser",
+        "also_at": []
+      },
+      {
+        "claim_id": "1356697-424-143e8b",
+        "section": "00:07:04",
+        "at_seconds": 424,
+        "quote": "And you can't even do joins across sources, right?",
+        "claim": "Connecting an assistant to each system of record through MCP fails for data questions, because it cannot join across sources.",
+        "speaker": "George Fraser",
+        "also_at": []
+      },
+      {
+        "claim_id": "1356697-678-541d96",
+        "section": "00:11:18",
+        "at_seconds": 678,
+        "quote": "Local tables in a special schema, a map of the rest of the database that acts as a guide.",
+        "claim": "Agents need a map: a small agent schema inside the database that describes the rest of it.",
+        "speaker": "George Fraser",
+        "also_at": []
+      },
+      {
+        "claim_id": "1356697-869-437a02",
+        "section": "00:14:29",
+        "at_seconds": 869,
+        "quote": "And it's really convenient to have everything in one place.",
+        "claim": "Keeping structured data, unstructured text and vector indexes in one database lets an agent write hybrid queries.",
+        "speaker": "George Fraser",
+        "also_at": []
+      },
+      {
+        "claim_id": "1356697-1604-63c8a2",
+        "section": "00:26:44",
+        "at_seconds": 1604,
+        "quote": "The exact same skills that made them good at delivering analytics are going to make them good.",
+        "claim": "The skills data teams built for analytics are the skills that make them good at providing context to AI.",
+        "speaker": "George Fraser",
+        "also_at": []
+      }
+    ],
+    "1379134": [
+      {
+        "claim_id": "1379134-291-86edc7",
+        "section": "00:04:51",
+        "at_seconds": 291,
+        "quote": "Let me just one more. Let me just one more, right?",
+        "claim": "Half of surveyed developers keep prompting past the point they meant to stop, and it costs them sleep.",
+        "speaker": "Scott Tolinski",
+        "also_at": []
+      },
+      {
+        "claim_id": "1379134-392-ae0b0d",
+        "section": "00:06:32",
+        "at_seconds": 392,
+        "quote": "Reward system like a loot box on a video game, right?",
+        "claim": "Prompting works like a variable reward, which is what makes it hard to put down.",
+        "speaker": "Scott Tolinski",
+        "also_at": []
+      },
+      {
+        "claim_id": "1379134-474-13e18f",
+        "section": "00:07:54",
+        "at_seconds": 474,
+        "quote": "Only 195 people said never.",
+        "claim": "Most developers feel pressure to produce more simply because AI makes it possible.",
+        "speaker": "Scott Tolinski",
+        "also_at": []
+      },
+      {
+        "claim_id": "1379134-582-2c9987",
+        "section": "00:09:42",
+        "at_seconds": 582,
+        "quote": "Obviously, it's decision fatigue.",
+        "claim": "Running many agents at once multiplies the decisions a person must make and leads to decision fatigue.",
+        "speaker": "Scott Tolinski",
+        "also_at": []
+      },
+      {
+        "claim_id": "1379134-840-37ce1f",
+        "section": "00:14:00",
+        "at_seconds": 840,
+        "quote": "So again, we start to form new pathways.",
+        "claim": "Coding skills fade with AI use, but the brain forms new paths and much of what is lost no longer matters.",
+        "speaker": "Scott Tolinski",
+        "also_at": []
+      },
+      {
+        "claim_id": "1379134-1190-f34d67",
+        "section": "00:19:50",
+        "at_seconds": 1190,
+        "quote": "Less paralization makes for a calmer mind.",
+        "claim": "Fewer agents in parallel, better habits and time away from screens are what help.",
+        "speaker": "Scott Tolinski",
+        "also_at": []
+      }
+    ]
+  },
+  "coverage": {
+    "1333169": {
+      "sections_read": 12,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "the speaker's introduction was not recorded",
+        "Qwen garbles some terms: \"poetry\" for code review (00:02:56), \"battle\" for the first attempt (00:00:29), \"Every commonly, your team repeats to the governor\" (00:10:17)"
+      ],
+      "extracted_at": "2026-11-10T18:21:22-05:00"
+    },
+    "1341863": {
+      "sections_read": 7,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "the recording starts about five minutes into the talk; the first sections, including how harnesses moved from code to knowledge work, are unrecorded",
+        "\"swarms\" is heard as \"songs\" and \"storms\" throughout; quoted as transcribed",
+        "\"Composio\" in this transcript may come from the Qwen prompt; no claim relies on it"
+      ],
+      "extracted_at": "2026-11-10T18:22:30-05:00"
+    },
+    "1356697": {
+      "sections_read": 13,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "the recording starts in the MC's introduction",
+        "\"At Composio\" at 00:09:53 is a prompt insertion (likely \"At Fivetran\"); not quoted",
+        "\"DPT\" (00:15:24) is likely dbt; companies \"Kai\" and \"Vera\" (00:03:18) are garbled names of Stripe's and another firm's agents"
+      ],
+      "extracted_at": "2026-11-10T18:21:22-05:00"
+    },
+    "1379134": {
+      "sections_read": 16,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "\"Databricks\" at 00:14:40 is a prompt insertion, not the audio; no claim quotes it",
+        "\"Japanese piracy\" (00:17:50) is likely pottery; not quoted",
+        "the 52% and 71% figures are paraphrased from the survey slides he reads; the quotes are his framing"
+      ],
+      "extracted_at": "2026-11-10T18:21:22-05:00"
+    }
+  }
+}

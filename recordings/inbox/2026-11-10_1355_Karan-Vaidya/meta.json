@@ -1,0 +1,23 @@
+{
+  "title": "Karan Vaidya",
+  "recorded_at": "2026-11-10T13:55:07-08:00",
+  "duration_seconds": 641.1,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 1687,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261110 135507.m4a",
+  "audio_sha256": "5121c0f5d5cf9ccbc26d4a23c12643657aa3ce6ac2e5d1c083d7a024ecec438c",
+  "exported_at": "2026-11-10T14:06:03-08:00",
+  "transcript_echo_segments": 2,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 1713,
+      "locale": "en_US"
+    }
+  ]
+}

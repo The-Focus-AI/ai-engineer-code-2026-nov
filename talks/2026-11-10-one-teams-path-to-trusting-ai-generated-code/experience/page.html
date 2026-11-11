@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Software that learns what it is · Ankit Jain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: .3rem; padding: .6rem .8rem; }
+  .key { border-color: var(--accent); background: var(--accent-soft); }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .stack { display: grid; gap: .45rem; font: .8rem/1.4 var(--sans); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; font: .8rem/1.4 var(--sans); }
+  .two h3 { margin: 0 0 .3rem; font: 600 .9rem/1.2 var(--sans); }
+  .arrow { text-align: center; color: var(--muted); font: .7rem/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; }
+  .n { font: 1.5rem/1 var(--serif); color: var(--accent); display: inline-block; min-width: 3rem; }
+  .loop { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; font: .82rem/1.35 var(--sans); text-align: center; }
+  .tl { display: grid; gap: .4rem; font: .78rem/1.35 var(--sans); }
+  .tl .card { display: grid; grid-template-columns: 1fr auto 1fr; gap: .5rem; align-items: center; }
+  .tl .to { color: var(--accent); }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .further { max-width: 46rem; margin: 0 auto 3rem; padding: 0 1.5rem; font: .9rem/1.55 var(--sans); }
+  .further h2 { font: 600 1.3rem/1.2 var(--serif); }
+  .further h3 { font: 600 .72rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 1.4rem 0 .4rem; }
+  .further li { margin: .35rem 0; }
+  @media (max-width: 620px) { .two, .loop { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Tue 10 Nov 2026 · Continental 1–3</div>
+  <h1>Software that learns what it is</h1>
+  <p class="dek">A system can start as a sketch and become resilient by learning what it is from the conversations that build it. Ankit Jain's talk on how his team stopped reading AI-written code is the best evidence for that heard today.</p>
+  <div class="talk-meta">Ankit Jain, Aviator · “One team's path to trusting AI generated code” · 22 min · <a href="../links.md">Links</a> · The thesis is Will's framing; the talk is the evidence.</div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual diagram-card" data-visual="v1">
+        <div class="lbl">Two ways to build, neither learns</div>
+        <div class="two">
+          <div class="card"><h3>Spec first</h3>Written once, then the code moves away from it.</div>
+          <div class="card"><h3>Sketch first</h3>No written shape, so nothing holds it.</div>
+        </div>
+        <div class="arrow" style="margin:.6rem 0">↓ both drift ↓</div>
+        <div class="card key" style="text-align:center;font:600 .85rem/1.3 var(--sans);color:var(--accent)">What's missing: a way to learn</div>
+        <figcaption>Specs going stale: 00:00:29</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v2">
+        <div class="lbl">The trail the work leaves</div>
+        <div class="stack">
+          <div class="two"><div class="card">Agent sessions<br><small>intent</small></div><div class="card">Agents arguing<br><small>decisions</small></div></div>
+          <div class="two"><div class="card">Verification runs<br><small>evidence</small></div><div class="card">Chat logs, issues<br><small>context</small></div></div>
+          <div class="arrow">↓</div>
+          <div class="card key" style="text-align:center">One record of what the system is meant to be</div>
+        </div>
+        <figcaption>00:07:08, 00:08:38, 00:13:02; chat logs and issues are the thesis's addition</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v3">
+        <div class="lbl">Sketch to resilient</div>
+        <div class="stack">
+          <div class="card"><span class="n">200</span>patterns noticed in past review comments</div>
+          <div class="arrow">↓ named</div>
+          <div class="card"><span class="n">64</span>rules, written in English</div>
+          <div class="arrow">↓ enforced</div>
+          <div class="card key"><span class="n">19</span>deterministic checks</div>
+        </div>
+        <figcaption>From the talk at 00:10:17</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v4">
+        <div class="lbl">The system reads itself back</div>
+        <div class="loop">
+          <div class="card key">The record</div><div class="card">Context for agents</div>
+          <div class="card">Next change</div><div class="card">New decisions</div>
+        </div>
+        <div class="arrow" style="margin-top:.6rem">↻ round again</div>
+        <figcaption>From the talk at 00:14:09</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v5">
+        <div class="lbl">This repo, one morning</div>
+        <div class="tl">
+          <div class="card"><span>A recording never named its talk</span><span class="to">→</span><span>attribution rule in the contract</span></div>
+          <div class="card"><span>Speech model echoed its prompt</span><span class="to">→</span><span>echo filter</span></div>
+          <div class="card"><span>Transcription drained the battery</span><span class="to">→</span><span>defer on battery</span></div>
+          <div class="card"><span>A receipt mislabeled its result</span><span class="to">→</span><span>corrected and re-signed</span></div>
+        </div>
+        <figcaption>Not from the talk: 9:30 am to 12:30 pm, 10 Nov</figcaption>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v6">
+        <blockquote style="margin:0">If you don't have an owner for a rule, this rule will become stale.</blockquote>
+        <cite>Ankit Jain · 00:10:17</cite>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="drift" data-visual="v1" data-caption="Sketches drift, specs go stale">
+      <div class="chapter">The problem</div>
+      <h2>Sketches drift, specs go stale</h2>
+      <p>There are two familiar ways to build. Write the spec first and let the code follow, or skip the spec and let the code find its shape. Jain's team tried specs: they went stale as the code moved, and nothing checked that the code still matched them. Without a spec, nothing holds the shape at all. Neither approach learns.</p>
+      <blockquote>“The intent was written down, but nothing really checked whether we're actually still consistent with the spec.”<span class="cite">00:00:29</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:29</p>
+    </section>
+
+    <section data-chapter="evidence" data-visual="v2" data-caption="Every conversation is evidence">
+      <div class="chapter">The trail</div>
+      <h2>Every conversation is evidence</h2>
+      <p>What makes learning possible now is that the work leaves a trail. The intent of a change is already in the agent session. Decisions surface when a coding agent and a review agent argue, and every disagreement is written down with its outcome. Evidence that a change works is captured as agents verify it. Sessions, chat logs and issues become a record of what the system is meant to be, without anyone writing documentation.</p>
+      <blockquote>“And these already live in your sessions.”<span class="cite">00:08:38</span></blockquote>
+      <blockquote>“Everything that they disagree about, we should write it down.”<span class="cite">00:07:08</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:07:08, 00:08:38, 00:13:02</p>
+    </section>
+
+    <section data-chapter="promoted" data-visual="v3" data-caption="Pattern → rule → check">
+      <div class="chapter">Promotion</div>
+      <h2>What keeps proving true gets promoted</h2>
+      <p>The record is where invariants are discovered. Jain's team mined their past review comments and found 200 candidate patterns, which distilled into 64 rules written in English. An agent then turned rules into scripts, and 19 became deterministic checks. Settled decisions take the same path and harden into the team's standards.</p>
+      <div class="reading"><b>The movement:</b> a pattern noticed, a rule named, a check enforced. Each promotion constrains the next change. The system hardens where it has proven itself and stays loose where it hasn't.</div>
+      <blockquote>“Which now essentially become the standards of your approach.”<span class="cite">00:14:09</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:10:17, 00:14:09</p>
+    </section>
+
+    <section data-chapter="reads-itself" data-visual="v4" data-caption="The record becomes context for the next change">
+      <div class="chapter">Memory</div>
+      <h2>The system reads itself back</h2>
+      <p>Learning only counts if the record is used. Jain's team pulls the decisions behind a feature or a week and gives them to their agents, which then know what was already decided. The system's memory of why it is the way it is becomes context for the next change. Design-time decision records, like the ADRs the <code>grill-with-docs</code> skill writes, capture intended decisions; this captures the decisions actually made.</p>
+      <blockquote>“Now, agent knows these past decisions.”<span class="cite">00:14:09</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:14:09</p>
+    </section>
+
+    <section data-chapter="up-close" data-visual="v5" data-caption="Four incidents became four invariants">
+      <div class="chapter">Up close</div>
+      <h2>What learning looks like up close</h2>
+      <div class="reading"><b>Not from the talk.</b> This repo learned four things in one morning, each from a conversation. A rule that a recording must name its talk relaxed once an operator's attribution proved trustworthy. A speech model echoing its prompt became a filter. Running speech recognition on battery became a deferral rule. A receipt that mislabeled its own result was caught and corrected. Each started as "this happened once" and ended as a contract or a check.</div>
+    </section>
+
+    <section data-chapter="limits" data-visual="v6" data-caption="Promotion still needs an owner">
+      <div class="chapter">The limit</div>
+      <h2>What it doesn't solve</h2>
+      <p>The risk is learning the wrong thing. Mined rules reflect past habits, including bad ones, and every rule needs an owner or it goes stale. Jain's answer is that responsibility stays with people: models can't own anything, so people own the guardrails and the rules. It also isn't free: his team spent about ninety days doing double work before it paid off.</p>
+      <blockquote>“So instead of thinking about owning the code. Own the guardrails. Own the rules.”<span class="cite">00:17:18</span></blockquote>
+      <div class="reading"><b>Open question:</b> who decides when something graduates to an invariant: a person, a repetition threshold, or the system proposing and a person approving?</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:05:48, 00:10:17, 00:17:18, 00:18:42</p>
+    </section>
+
+  </main>
+</div>
+
+<div class="further">
+  <h2>Further reading</h2>
+  <p>Not from the talk, except where noted.</p>
+  <h3>The frame</h3>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/How_Buildings_Learn">How Buildings Learn</a> (Stewart Brand, 1994): buildings improve through use, adapting where they're lived in.</li>
+    <li><a href="https://en.wikipedia.org/wiki/John_Gall_(author)">Gall's law</a>: a complex system that works evolves from a simple system that worked.</li>
+    <li><a href="https://en.wikipedia.org/wiki/Desire_path">Desire paths</a>: worn by use, paved later. Guardrails discovered, then reified.</li>
+  </ul>
+  <h3>The risk</h3>
+  <ul>
+    <li><a href="https://www.hyrumslaw.com/">Hyrum's law</a>: every observable behavior gets depended on, named or not.</li>
+    <li><a href="https://en.wikipedia.org/wiki/Lehman%27s_laws_of_software_evolution">Lehman's laws of software evolution</a>: systems must keep changing, and complexity grows unless worked against.</li>
+  </ul>
+  <h3>Decision records</h3>
+  <ul>
+    <li><a href="https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Documenting architecture decisions</a> (Michael Nygard, 2011) · <a href="https://adr.github.io/">adr.github.io</a></li>
+    <li><a href="https://www.microsoft.com/en-us/research/publication/expectations-outcomes-and-challenges-of-modern-code-review/">Expectations, Outcomes, and Challenges of Modern Code Review</a> (Bacchelli and Bird, 2013): cited by the speaker at 00:02:56.</li>
+  </ul>
+  <h3>From the speaker</h3>
+  <ul>
+    <li><a href="https://tessl.io/blog/we-stopped-reviewing-code-and-started-verifying-intent">We stopped reviewing code and started verifying intent</a> (Tessl)</li>
+    <li><a href="https://docs.aviator.co/verify/concepts/invariants">Aviator Verify: invariants</a></li>
+  </ul>
+  <h3>From this conference</h3>
+  <ul>
+    <li><a href="../../2026-11-10-scott-tolinski-co-host-syntax/transcript.md">Scott Tolinski</a>, same room, 10:10: the human cost of always-on agents.</li>
+    <li><a href="https://www.turingpost.com/p/ai-agents-anxiety-and-decision-overload">AI Agents, Anxiety, and the Cost of Too Many Decisions</a> (Turing Post): if the system proposes promotions, people make fewer decisions.</li>
+    <li>Kent C. Dodds, "Closing the Agentic Loop" (workshop, not attended): decision records and invariants.</li>
+  </ul>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>. Quotes are verbatim from <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room). The thesis, "The movement," and "Not from the talk" passages are interpretation, not the speaker's words.
+</footer>
+
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

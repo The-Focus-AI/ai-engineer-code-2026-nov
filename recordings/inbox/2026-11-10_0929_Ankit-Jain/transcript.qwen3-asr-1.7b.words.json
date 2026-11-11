@@ -1,0 +1,422 @@
+{
+ "words": [
+  {
+   "w": "Interesting",
+   "start": 0,
+   "end": 4.75
+  },
+  {
+   "w": "has.",
+   "start": 0,
+   "end": 4.75
+  },
+  {
+   "w": "More,",
+   "start": 4.75,
+   "end": 8.65
+  },
+  {
+   "w": "more",
+   "start": 4.75,
+   "end": 8.65
+  },
+  {
+   "w": "polarized",
+   "start": 4.75,
+   "end": 8.65
+  },
+  {
+   "w": "than",
+   "start": 4.75,
+   "end": 8.65
+  },
+  {
+   "w": "we",
+   "start": 4.75,
+   "end": 8.65
+  },
+  {
+   "w": "do.",
+   "start": 4.75,
+   "end": 8.65
+  },
+  {
+   "w": "And",
+   "start": 8.65,
+   "end": 15.2
+  },
+  {
+   "w": "basically,",
+   "start": 8.65,
+   "end": 15.2
+  },
+  {
+   "w": "once",
+   "start": 8.65,
+   "end": 15.2
+  },
+  {
+   "w": "you",
+   "start": 8.65,
+   "end": 15.2
+  },
+  {
+   "w": "walk",
+   "start": 8.65,
+   "end": 15.2
+  },
+  {
+   "w": "into",
+   "start": 8.65,
+   "end": 15.2
+  },
+  {
+   "w": "the",
+   "start": 8.65,
+   "end": 15.2
+  },
+  {
+   "w": "house.",
+   "start": 8.65,
+   "end": 15.2
+  },
+  {
+   "w": "我看啊。",
+   "start": 15.2,
+   "end": 18.35
+  },
+  {
+   "w": "未来比如非常。",
+   "start": 100.5,
+   "end": 104.85
+  },
+  {
+   "w": "Okay,",
+   "start": 115.85,
+   "end": 118.4
+  },
+  {
+   "w": "so.",
+   "start": 115.85,
+   "end": 118.4
+  },
+  {
+   "w": "Um.",
+   "start": 118.4,
+   "end": 122.95
+  },
+  {
+   "w": "So.",
+   "start": 141.05,
+   "end": 147.05
+  },
+  {
+   "w": "All",
+   "start": 170.85,
+   "end": 175.6
+  },
+  {
+   "w": "right.",
+   "start": 170.85,
+   "end": 175.6
+  },
+  {
+   "w": "So",
+   "start": 170.85,
+   "end": 175.6
+  },
+  {
+   "w": "I",
+   "start": 170.85,
+   "end": 175.6
+  },
+  {
+   "w": "will",
+   "start": 170.85,
+   "end": 175.6
+  },
+  {
+   "w": "be",
+   "start": 170.85,
+   "end": 175.6
+  },
+  {
+   "w": "sharing",
+   "start": 170.85,
+   "end": 175.6
+  },
+  {
+   "w": "some",
+   "start": 170.85,
+   "end": 175.6
+  },
+  {
+   "w": "of",
+   "start": 170.85,
+   "end": 175.6
+  },
+  {
+   "w": "our.",
+   "start": 170.85,
+   "end": 175.6
+  },
+  {
+   "w": "One",
+   "start": 175.6,
+   "end": 180.35
+  },
+  {
+   "w": "year,",
+   "start": 175.6,
+   "end": 180.35
+  },
+  {
+   "w": "but",
+   "start": 175.6,
+   "end": 180.35
+  },
+  {
+   "w": "we",
+   "start": 175.6,
+   "end": 180.35
+  },
+  {
+   "w": "also",
+   "start": 175.6,
+   "end": 180.35
+  },
+  {
+   "w": "sell",
+   "start": 175.6,
+   "end": 180.35
+  },
+  {
+   "w": "a",
+   "start": 175.6,
+   "end": 180.35
+  },
+  {
+   "w": "tool",
+   "start": 175.6,
+   "end": 180.35
+  },
+  {
+   "w": "that",
+   "start": 175.6,
+   "end": 180.35
+  },
+  {
+   "w": "we",
+   "start": 175.6,
+   "end": 180.35
+  },
+  {
+   "w": "ended",
+   "start": 175.6,
+   "end": 180.35
+  },
+  {
+   "w": "up.",
+   "start": 175.6,
+   "end": 180.35
+  },
+  {
+   "w": "So",
+   "start": 180.35,
+   "end": 184
+  },
+  {
+   "w": "please",
+   "start": 180.35,
+   "end": 184
+  },
+  {
+   "w": "be",
+   "start": 180.35,
+   "end": 184
+  },
+  {
+   "w": "suspicious.",
+   "start": 180.35,
+   "end": 184
+  },
+  {
+   "w": "Let's",
+   "start": 184,
+   "end": 191.35
+  },
+  {
+   "w": "start",
+   "start": 184,
+   "end": 191.35
+  },
+  {
+   "w": "with",
+   "start": 184,
+   "end": 191.35
+  },
+  {
+   "w": "this.",
+   "start": 184,
+   "end": 191.35
+  },
+  {
+   "w": "Many",
+   "start": 184,
+   "end": 191.35
+  },
+  {
+   "w": "of",
+   "start": 184,
+   "end": 191.35
+  },
+  {
+   "w": "you",
+   "start": 184,
+   "end": 191.35
+  },
+  {
+   "w": "already",
+   "start": 184,
+   "end": 191.35
+  },
+  {
+   "w": "have",
+   "start": 184,
+   "end": 191.35
+  },
+  {
+   "w": "been.",
+   "start": 184,
+   "end": 191.35
+  },
+  {
+   "w": "We",
+   "start": 197.45,
+   "end": 201.75
+  },
+  {
+   "w": "talk",
+   "start": 197.45,
+   "end": 201.75
+  },
+  {
+   "w": "about.",
+   "start": 197.45,
+   "end": 201.75
+  },
+  {
+   "w": "But",
+   "start": 204.4,
+   "end": 210.56
+  },
+  {
+   "w": "the",
+   "start": 204.4,
+   "end": 210.56
+  },
+  {
+   "w": "reason",
+   "start": 204.4,
+   "end": 210.56
+  },
+  {
+   "w": "I'm",
+   "start": 204.4,
+   "end": 210.56
+  },
+  {
+   "w": "sharing",
+   "start": 204.4,
+   "end": 210.56
+  },
+  {
+   "w": "this",
+   "start": 204.4,
+   "end": 210.56
+  },
+  {
+   "w": "is",
+   "start": 204.4,
+   "end": 210.56
+  },
+  {
+   "w": "a",
+   "start": 204.4,
+   "end": 210.56
+  },
+  {
+   "w": "big",
+   "start": 204.4,
+   "end": 210.56
+  },
+  {
+   "w": "part",
+   "start": 204.4,
+   "end": 210.56
+  },
+  {
+   "w": "of.",
+   "start": 204.4,
+   "end": 210.56
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Interesting has. More, more polarized than we do.",
+   "start": 0,
+   "end": 8.65
+  },
+  {
+   "text": "And basically, once you walk into the house.",
+   "start": 8.65,
+   "end": 15.2
+  },
+  {
+   "text": "我看啊。 未来比如非常。 Okay, so.",
+   "start": 15.2,
+   "end": 118.4
+  },
+  {
+   "text": "Um. So. All right.",
+   "start": 118.4,
+   "end": 175.6
+  },
+  {
+   "text": "So I will be sharing some of our.",
+   "start": 170.85,
+   "end": 175.6
+  },
+  {
+   "text": "One year, but we also sell a tool that we ended up.",
+   "start": 175.6,
+   "end": 180.35
+  },
+  {
+   "text": "So please be suspicious.",
+   "start": 180.35,
+   "end": 184
+  },
+  {
+   "text": "Let's start with this.",
+   "start": 184,
+   "end": 191.35
+  },
+  {
+   "text": "Many of you already have been.",
+   "start": 184,
+   "end": 191.35
+  },
+  {
+   "text": "We talk about.",
+   "start": 197.45,
+   "end": 201.75
+  },
+  {
+   "text": "But the reason I'm sharing this is a big part of.",
+   "start": 204.4,
+   "end": 210.56
+  }
+ ],
+ "timing": "segment"
+}

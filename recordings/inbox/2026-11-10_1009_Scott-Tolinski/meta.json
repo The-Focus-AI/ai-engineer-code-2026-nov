@@ -1,0 +1,23 @@
+{
+  "title": "Scott Tolinski",
+  "recorded_at": "2026-11-10T10:09:14-08:00",
+  "duration_seconds": 1437.4,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 4077,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261110 100914.m4a",
+  "audio_sha256": "767132761c0945c1b77819ab6e59bdad9117091b026de342cd8469038f649c7e",
+  "exported_at": "2026-11-10T10:41:43-08:00",
+  "transcript_echo_segments": 1,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 4093,
+      "locale": "en_US"
+    }
+  ]
+}

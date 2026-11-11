@@ -1,0 +1,130 @@
+{
+  "themes": [
+    {
+      "name": "Decision load",
+      "claim_sentence": "As agents take over the work, the decisions left to people become the scarce, tiring part, so teams record them, queue them for a person, and keep them few enough to make well.",
+      "definition": "Across the talks, agents do more of the doing and people are left with the deciding. Ankit Jain finds that human review comments were mostly about decisions and has agents argue so the decisions surface and get written down. Karan Vaidya's security agents queue uncertain findings for a person to judge in the morning. Scott Tolinski's survey shows the cost: running many agents multiplies the decisions and wears people out, and fewer agents in parallel helps.",
+      "claims": [
+        "1333169-29-2579a7",
+        "1333169-428-47a134",
+        "1341863-116-315efe",
+        "1379134-1190-f34d67",
+        "1379134-582-2c9987"
+      ],
+      "counter_claims": [],
+      "also_called": [
+        "decision fatigue",
+        "micro decisions",
+        "human judgment"
+      ],
+      "why_uncontested": "No talk argues decisions can be handed to agents outright; even Karan Vaidya's always-on agents route uncertain cases to a person.",
+      "theme_id": "decision-load",
+      "talk_slugs": [
+        "2026-11-10-from-coding-agents-to-knowledge-work-agents",
+        "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
+        "2026-11-10-scott-tolinski-co-host-syntax"
+      ],
+      "talk_count": 3
+    },
+    {
+      "name": "Context for AI",
+      "claim_sentence": "AI does its best work on context people have already curated (the intent captured in a session, modeled data, a map of the database), not on raw systems.",
+      "definition": "George Fraser's companies connect their agents to the same modeled data stack that serves BI, simplify messy data for them, and give them an agent schema as a map. Ankit Jain captures a change's intent and acceptance criteria from the agent session rather than writing specs. In both, the useful input is something a person already shaped.",
+      "claims": [
+        "1333169-518-138b45",
+        "1356697-198-40846e",
+        "1356697-323-cb7c4e",
+        "1356697-678-541d96"
+      ],
+      "counter_claims": [],
+      "also_called": [
+        "context engineering",
+        "source of truth",
+        "agent schema",
+        "intent"
+      ],
+      "why_uncontested": "No talk argues agents do better on raw systems than on curated context; whether to reach company data through each app is recorded separately as contested.",
+      "theme_id": "context-for-ai",
+      "talk_slugs": [
+        "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
+        "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai"
+      ],
+      "talk_count": 2
+    },
+    {
+      "name": "Guardrails people own",
+      "claim_sentence": "Agents are trusted through guardrails that people own (rules that check their output, scoped access, and a firewall on what goes in and what they do) rather than by people reading what they produce.",
+      "definition": "Ankit Jain mines years of review comments into rules with owners and turns some into deterministic checks, so people own the rules instead of the code. Karan Vaidya gives agents broad but granular access to each app and puts a firewall on both their inputs and their actions. Both replace line-by-line supervision with controls a named person maintains.",
+      "claims": [
+        "1333169-1038-239cc0",
+        "1333169-617-c557b1",
+        "1341863-349-4e2fb1",
+        "1341863-435-93ffef"
+      ],
+      "counter_claims": [],
+      "also_called": [
+        "invariants",
+        "firewall for agents",
+        "own the rules"
+      ],
+      "why_uncontested": "No talk argues for trusting agent output unchecked or for returning to line-by-line review.",
+      "theme_id": "guardrails-people-own",
+      "talk_slugs": [
+        "2026-11-10-from-coding-agents-to-knowledge-work-agents",
+        "2026-11-10-one-teams-path-to-trusting-ai-generated-code"
+      ],
+      "talk_count": 2
+    }
+  ],
+  "singletons": [
+    "1341863-41-60fbe0",
+    "1341863-218-2bbb54",
+    "1341863-579-b0125d",
+    "1333169-176-0d34aa",
+    "1379134-291-86edc7",
+    "1379134-392-ae0b0d",
+    "1379134-474-13e18f",
+    "1379134-840-37ce1f",
+    "1356697-424-143e8b",
+    "1356697-869-437a02",
+    "1356697-1604-63c8a2"
+  ],
+  "contested": [
+    {
+      "question": "Do the skills people built before AI carry over?",
+      "sides": [
+        {
+          "claim_id": "1379134-840-37ce1f",
+          "stance": "Coding skills fade with AI use, and much of what is lost no longer matters"
+        },
+        {
+          "claim_id": "1356697-1604-63c8a2",
+          "stance": "The analytics skills data teams built are exactly what AI context needs"
+        }
+      ]
+    },
+    {
+      "question": "Should agents reach company data through each app or through one modeled store?",
+      "sides": [
+        {
+          "claim_id": "1356697-424-143e8b",
+          "stance": "Through the modeled warehouse; a connection per source cannot join across sources"
+        },
+        {
+          "claim_id": "1341863-349-4e2fb1",
+          "stance": "Through scoped access to each of the company's apps"
+        }
+      ]
+    }
+  ],
+  "corpus": {
+    "talk_count": 4,
+    "word_count": 13781,
+    "last_touched": "2026-11-10",
+    "theme_count": 3,
+    "unassigned": [],
+    "thin": [],
+    "report_path": "analysis/themes.md",
+    "generated_at": "2026-11-10T18:23:43-05:00"
+  }
+}

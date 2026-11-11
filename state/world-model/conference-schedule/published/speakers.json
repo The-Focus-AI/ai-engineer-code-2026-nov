@@ -168,10 +168,14 @@
   },
   "cassandra-chin": {
     "name": "Cassandra Chin",
-    "affiliation": null,
-    "bio": null,
-    "links": [],
+    "affiliation": "and Kids Workshop Instructor",
+    "bio": "Cassandra Chin is a keynote speaker at Devnexus, JFokus, Devoxx Belgium, Devoxx Morocco, and GIDS, and author of Apress’s Raising Young Coders. She has taught technology workshops for kids at international conferences since age 13 and advocates for women, minorities, and underserved students in tech. She is Content Chair of CNCF Kids Day, helps run AI Engineer Kids Day, and has been featured at KubeCon + CloudNativeCon, theCUBE, and Techstrong TV.",
+    "links": [
+      "https://linkedin.com/in/cassandra-chin-developer",
+      "https://twitter.com/@cassandraonjava"
+    ],
     "talks": [
+      "1304968",
       "ai-engineer-kids-day@2026-11-14T12:30:00-08:00"
     ],
     "source_url": "https://ai.engineer/code/2026"
@@ -189,6 +193,19 @@
       "1376183"
     ],
     "source_url": "https://ai.engineer/speakers/charlie-guo"
+  },
+  "charlie-meyer": {
+    "name": "Charlie Meyer",
+    "affiliation": null,
+    "bio": "Charlie Meyer is a Special Projects Engineer at Cognition. He studies Computer Science at the University of Virginia as an Echols Scholar and is broadly interested in ML/RL, alignment, AI for math, and web design.",
+    "links": [
+      "https://charliemeyer.xyz/",
+      "https://www.linkedin.com/in/charlie-meyer-loves-you"
+    ],
+    "talks": [
+      "1383277"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
   },
   "chibi-vikram": {
     "name": "Chibi Vikram",
@@ -262,20 +279,6 @@
       "1375631"
     ],
     "source_url": "https://ai.engineer/speakers/dan-kiuna"
-  },
-  "daniel-balsam": {
-    "name": "Daniel Balsam",
-    "affiliation": "Goodfire",
-    "bio": "Daniel Balsam is co-founder and CTO of Goodfire, an AI interpretability company focused on understanding and designing AI systems. He leads Goodfire’s research on interpretability, model steering, and AI safety, and previously served as Head of AI at RippleMatch.",
-    "links": [
-      "https://www.goodfire.com/",
-      "https://www.linkedin.com/in/dbalsam/",
-      "https://x.com/GoodfireAI"
-    ],
-    "talks": [
-      "1356850"
-    ],
-    "source_url": "https://ai.engineer/speakers/daniel-balsam"
   },
   "daniel-tao": {
     "name": "Daniel Tao",
@@ -447,6 +450,18 @@
       "1356697"
     ],
     "source_url": "https://ai.engineer/speakers/george-fraser"
+  },
+  "giovanni-d-antonio": {
+    "name": "Giovanni D'Antonio",
+    "affiliation": "Cognition",
+    "bio": "Giovanni is part of the Research Team at Cognition where he focuses on usability and coding RL. He most recently was working at Thinking Machines, and previously was part of frontier evals team at Google Deepmind.",
+    "links": [
+      "https://www.linkedin.com/in/giovanni-dantonio/"
+    ],
+    "talks": [
+      "1383277"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
   },
   "ishaan-dey": {
     "name": "Ishaan Dey",
@@ -804,6 +819,20 @@
     ],
     "source_url": "https://ai.engineer/speakers/owen-kephart"
   },
+  "patrick-debois": {
+    "name": "Patrick Debois",
+    "affiliation": "Tessl",
+    "bio": "Godfather of Devops, working on shaping the next wave of Software delivery with AI",
+    "links": [
+      "https://jedi.be/blog",
+      "https://twitter.com/patrickdebois",
+      "https://www.linkedin.com/in/patrickdebois/"
+    ],
+    "talks": [
+      "1351616"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
   "philip-kiely": {
     "name": "Philip Kiely",
     "affiliation": "Baseten",
@@ -862,8 +891,8 @@
     ],
     "source_url": "https://ai.engineer/speakers/raz-berman-gold"
   },
-  "richelle-j": {
-    "name": "Richelle J.",
+  "richelle-ji": {
+    "name": "Richelle Ji",
     "affiliation": "Featherless AI",
     "bio": null,
     "links": [],
@@ -910,7 +939,7 @@
   "scott-tolinski": {
     "name": "Scott Tolinski",
     "affiliation": "Syntax",
-    "bio": null,
+    "bio": "Co-host of the most popular web development podcast in the world, Scott Tolinski has been teaching coding on Youtube since 2012.",
     "links": [],
     "talks": [
       "1379134"
@@ -919,7 +948,7 @@
   },
   "simon-willison": {
     "name": "Simon Willison",
-    "affiliation": null,
+    "affiliation": "Independent",
     "bio": "Simon Willison is the creator of Datasette, a co-creator of the Django web framework, and an independent open-source developer whose work spans data journalism, SQLite, and practical AI engineering. He builds tools that make powerful systems more accessible and inspectable while exposing the security risks of giving language models access to sensitive information.",
     "links": [
       "https://github.com/simonw",
@@ -930,6 +959,20 @@
       "1376191"
     ],
     "source_url": "https://ai.engineer/speakers/simon-willison"
+  },
+  "stephen-chin": {
+    "name": "Stephen Chin",
+    "affiliation": null,
+    "bio": "Stephen Chin is VP of Developer Relations at Neo4j, AAIF ambassador, program chair and board member for the LF AI & Data Foundation, and author of numerous titles including the upcoming GraphRAG: The Definitive Guide for O'Reilly. He has given keynotes at numerous conferences around the world including AI Engineer World’s Fair, The AI Conference, AI DevSummit, Open Source Summit, Devoxx, Jfokus, DevNexus, JNation, JavaOne, Shift, Joker, swampUP, and GIDS. Stephen is an avid motorcyclist who has done evangelism tours in Europe, Japan, and Brazil, interviewing developers in their natural habitat. When he is not traveling, he enjoys teaching kids how to do AI, embedded, and robot programming together with his daughters.",
+    "links": [
+      "http://steveonjava.com/",
+      "https://twitter.com/steveonjava",
+      "https://www.linkedin.com/in/steveonjava/"
+    ],
+    "talks": [
+      "1304968"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
   },
   "steve-yegge": {
     "name": "Steve Yegge",
@@ -1053,20 +1096,6 @@
       "1352199"
     ],
     "source_url": "https://ai.engineer/speakers/utkarsh-shrivastava"
-  },
-  "vasek-mlejnsky": {
-    "name": "Vasek Mlejnsky",
-    "affiliation": "E2B",
-    "bio": "Vasek Mlejnsky is the co-founder and CEO of E2B, which builds cloud infrastructure for AI agents. Since co-founding E2B in 2023, he has helped make sandboxes a core part of the agent stack. E2B has launched over two billion sandboxes and powers agent-native companies including Arena, Amp, Genspark, ClickUp, Manus, and Rogo.",
-    "links": [
-      "https://e2b.dev/",
-      "https://linkedin.com/in/mlejva",
-      "https://x.com/mlejva"
-    ],
-    "talks": [
-      "1359774"
-    ],
-    "source_url": "https://ai.engineer/speakers/vasek-mlejnsky"
   },
   "walden-yan": {
     "name": "Walden Yan",

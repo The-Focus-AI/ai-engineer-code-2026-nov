@@ -2,12 +2,22 @@
   "title": "Ankit Jain",
   "recorded_at": "2026-11-10T09:29:55-08:00",
   "duration_seconds": 210.6,
-  "transcript": "transcript.txt",
-  "transcript_word_count": 68,
-  "transcript_locale": "en_US",
-  "transcript_source": "voice-memos",
-  "transcript_timing": "word",
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 72,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
   "source_file": "20261110 092954.m4a",
   "audio_sha256": "ce90863099e2f9493402099829eb77addd3c17d05b66c3ff2a89e5649cdaae76",
-  "exported_at": "2026-11-10T10:00:39-08:00"
+  "exported_at": "2026-11-10T10:00:39-08:00",
+  "transcript_echo_segments": 2,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 68,
+      "locale": "en_US"
+    }
+  ]
 }

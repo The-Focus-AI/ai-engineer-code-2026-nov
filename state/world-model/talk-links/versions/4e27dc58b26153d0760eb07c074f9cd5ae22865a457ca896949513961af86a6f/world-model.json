@@ -1,0 +1,182 @@
+{
+  "people": {
+    "1333169": [
+      {
+        "name": "Ankit Jain",
+        "role": "Founder and CEO",
+        "affiliation": "Aviator",
+        "links": {
+          "site": "https://www.aviator.co/blog/author/ankitjain/",
+          "linkedin": null,
+          "x": "https://x.com/ankitxg",
+          "github": "https://github.com/jainankit",
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Aviator; bio \"a founder and CEO of Aviator\"",
+          "page title: \"Ankit Jain, Author at Aviator Blog\"",
+          "page title: \"Ankit Jain (@ankitxg) / X\"",
+          "page title: \"jainankit (Ankit Jain) · GitHub\""
+        ],
+        "status": "found"
+      }
+    ],
+    "1379134": [
+      {
+        "name": "Scott Tolinski",
+        "role": "Co-host",
+        "affiliation": "Syntax",
+        "links": {
+          "site": "https://tolin.ski/",
+          "linkedin": null,
+          "x": "https://x.com/stolinski",
+          "github": "https://github.com/stolinski",
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Syntax; schedule title \"Scott Tolinski, Co-host, Syntax\"",
+          "transcript: \"So again, on syntax, we get a lot of people commenting all the time.\"",
+          "page title: \"Scott Tolinski\"",
+          "page title: \"Scott Tolinski (@stolinski) / X\"",
+          "page title: \"stolinski (Scott Tolinski) · GitHub\""
+        ],
+        "status": "found"
+      }
+    ]
+  },
+  "companies": {
+    "1333169": [
+      {
+        "name": "Aviator",
+        "url": "https://www.aviator.co/",
+        "what": "Shared context, faster reviews, deterministic verification, and merge-to-deploy automation built for the volume AI creates.",
+        "evidence": [
+          "page title: \"Aviator — Ship AI-generated code at velocity you trust\""
+        ]
+      }
+    ],
+    "1379134": [
+      {
+        "name": "Syntax",
+        "url": "https://syntax.fm/",
+        "what": "Full Stack Web Developers Wes Bos and Scott Tolinski dive deep into web development, CSS, JavaScript, Frameworks, Typescript, Servers and more.",
+        "evidence": [
+          "page title: \"Syntax - Web Development Podcast\"",
+          "transcript: \"And give Syntax a subscribe on YouTube\""
+        ]
+      }
+    ]
+  },
+  "resources": {
+    "1333169": [
+      {
+        "type": "blog",
+        "title": "We stopped reviewing code and started verifying intent",
+        "url": "https://tessl.io/blog/we-stopped-reviewing-code-and-started-verifying-intent",
+        "why": "The speaker's own written version of this talk: four times the pull requests, intent instead of diff review, review comments mined into invariants.",
+        "evidence": [
+          "page title: \"We stopped reviewing code and started verifying intent\"",
+          "transcript: \"We talk about intent. Intent is why are we making whatever change.\""
+        ],
+        "first_seen": "20261110-141925-902d07",
+        "published_at": "2026-10-20",
+        "verified_at": "2026-11-10T14:19:25-05:00"
+      },
+      {
+        "type": "blog",
+        "title": "How Verify Checks Code: Semantic Analysis, Runtime Previews, and Why It’s Not Just Another AI Review Tool",
+        "url": "https://www.aviator.co/blog/how-verify-checks-code-semantic-analysis-runtime-previews-and-why-its-not-just-another-ai-review-tool/",
+        "why": "Aviator's explanation of the verification step the talk's Verify section describes: plans, runtime previews, captured evidence.",
+        "evidence": [
+          "page title: \"How Verify Checks Code: Semantic Analysis, Runtime Previews, and Why It’s Not Just Another AI Review Tool - Aviator Blog\""
+        ],
+        "first_seen": "20261110-141925-902d07",
+        "published_at": "2026-07-21",
+        "verified_at": "2026-11-10T14:19:25-05:00"
+      },
+      {
+        "type": "product",
+        "title": "Verify | Aviator Documentation",
+        "url": "https://docs.aviator.co/verify",
+        "why": "Product documentation for the intent-and-acceptance-criteria workflow the talk walks through.",
+        "evidence": [
+          "page title: \"Verify | Aviator Documentation\""
+        ],
+        "first_seen": "20261110-141925-902d07",
+        "published_at": null,
+        "verified_at": "2026-11-10T14:19:25-05:00"
+      },
+      {
+        "type": "product",
+        "title": "Invariants | Aviator Documentation",
+        "url": "https://docs.aviator.co/verify/concepts/invariants",
+        "why": "How Aviator stores invariants: the rules distilled from repeated review comments in the Codify section.",
+        "evidence": [
+          "page title: \"Invariants | Aviator Documentation\"",
+          "transcript: \"Now these become your invariants.\""
+        ],
+        "first_seen": "20261110-141925-902d07",
+        "published_at": null,
+        "verified_at": "2026-11-10T14:19:25-05:00"
+      }
+    ],
+    "1379134": [
+      {
+        "type": "youtube",
+        "title": "Syntax - YouTube",
+        "url": "https://www.youtube.com/@syntaxfm",
+        "why": "The channel the talk closes on; the speaker says the longer video on this survey, with expert interviews, is published there.",
+        "evidence": [
+          "page title: \"Syntax - YouTube\"",
+          "transcript: \"And give Syntax a subscribe on YouTube\"",
+          "transcript: \"And the YouTube video goes into a bit more depth\""
+        ],
+        "first_seen": "20261110-141925-902d07",
+        "published_at": null,
+        "verified_at": "2026-11-10T14:19:25-05:00"
+      }
+    ]
+  },
+  "freshness": {
+    "1333169": {
+      "phase": "live",
+      "last_checked": "2026-11-10T14:34:41-05:00",
+      "next_check": "2026-11-10T20:19:25-05:00",
+      "checks": 2
+    },
+    "1379134": {
+      "phase": "live",
+      "last_checked": "2026-11-10T14:34:41-05:00",
+      "next_check": "2026-11-10T20:19:25-05:00",
+      "checks": 2
+    }
+  },
+  "coverage": {
+    "1333169": {
+      "searched": [
+        "roster links (aviator.co, blog author page, x.com/ankitxg, github.com/jainankit, linkedin.com/in/ankitjaindce)",
+        "web: Aviator intent verification invariants review comments Ankit Jain"
+      ],
+      "gaps": [
+        "linkedin.com/in/ankitjaindce answered 999 with no page title naming the person; not corroborated, dropped",
+        "no official recording or slides of this talk found yet"
+      ],
+      "generated_at": "2026-11-10T14:19:25-05:00"
+    },
+    "1379134": {
+      "searched": [
+        "roster (no links published)",
+        "candidate profiles: scotttolinski.com, x.com/stolinski, github.com/stolinski, syntax.fm, youtube.com/@syntaxfm",
+        "web: Scott Tolinski survey developers mental health AI coding Syntax",
+        "web: Syntax YouTube true cost of AI coding mental health video"
+      ],
+      "gaps": [
+        "the survey the talk reports (\"about 4000 respondents so far\") has no results page found",
+        "the Syntax YouTube video on this topic was not found; the one candidate (youtube.com/watch?v=GEkoGCFpY8c) is on The PrimeTime channel, rejected",
+        "Sentry not added: the transcript's \"executive producer over a century\" is an ASR guess at the employer, not verified",
+        "no official recording or slides of this talk found yet"
+      ],
+      "generated_at": "2026-11-10T14:19:25-05:00"
+    }
+  }
+}

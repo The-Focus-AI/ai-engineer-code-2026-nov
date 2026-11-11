@@ -5,6 +5,63 @@ from the audience in Continental 1–3). Apple is the Voice Memos transcript the
 talk was filed from. Qwen is `qwen3-asr-1.7b` run locally through
 `scripts/qwen-asr.ts`.
 
+
+> **Correction (11:00).** Qwen did not stop at 10:54. On a single long pass it
+> opens a segment with the echoed prompt and then puts the rest of the talk,
+> about 11½ minutes, into that one segment with no further timestamps. The
+> echo filter used for the runs below dropped any segment carrying prompt
+> names, so it discarded the whole second half. Cutting out only the echo
+> keeps it: the single pass with `--past-text no` then gives 3,562 words,
+> including "we got 64 rules automatically created" and 3.4 hours.
+>
+> **5-minute chunks fix the timing too.** The same recording cut into
+> 300-second chunks took 4 min 8 s (vs 7 min 32 s for one pass), produced
+> 252 timestamped segments through 22:11, 3,779 words, and every
+> second-half number: "out of the sixty-four rules we had, we were able to
+> convert nineteen of them", 3.4 hours, five days to 2.5 hours, "First ninety
+> days". Chunking plus echo-cutting is now the default in
+> `scripts/qwen-asr.ts`. The tables below describe the earlier runs and are
+> kept as the record.
+
+
+## Pipeline run: it works (11:02)
+
+The fixed pipeline, run for real with
+`bun scripts/export-voice-memos.ts --retranscribe 2026-11-10_0933_Ankir-Jain`:
+5-minute chunks, each cached as it finished, echo cut out, names-only prompt.
+
+| | Apple (Voice Memos) | Qwen, pipeline |
+| --- | --- | --- |
+| Time | instant | 4 min 15 s on AC power (10:58:26–11:02:41), about 1 min per 5-min chunk |
+| Coverage | 0:00–22:30 | 0:00–22:08, 256 distinct segment times, no gap |
+| Words | 3,824 | 3,786 |
+| Echo | n/a | 1 segment had the prompt cut out; no "Aviator" or "Ankit" left in the text |
+| Timing | per word | per segment (~5 s) |
+
+The same passages:
+
+| Point | Apple | Qwen, pipeline |
+| --- | --- | --- |
+| Opening | "I knew I'm gonna be working 100 PRs per week. And now we're doing about 4" | "A year ago, we were merging about 100 PRs per week. And now we are doing about 400." |
+| The shift | "we moved from human, redwood code with VI assistants" | "we moved from human. Written code with AI assistants to now predominantly AI-written code" |
+| The study | "back in 2013, by Microsoft, 44% of people asked, why did they do good reviews?" | "back in twenty thirteen by Microsoft. Forty-four percent of people asked why do they do code reviews." |
+| Invariants | "Now, these become your invariants" | "Now these become your invariants. … Out of 200 candidates, we got 64 rules automatically created." |
+| Deterministic rules | "out of the 64 rules we had, we were even converted 19 on that. Did it domestic?" | "out of the sixty-four rules we had, we were able to convert nineteen of them to deterministic." |
+| Results | "It's 3.4 hours better used to be 2.one deals." | "3.4 hours later, used to be 2.1 days." |
+| Ownership | "the models cannot really do anything. So unfortunately even. still responsible" | "the models cannot own anything. So unfortunately, humans for that. Still responsible on the line" |
+| Close | "Here's a principle of either verified experience." | "Here's a quick look at our verified experience, where we captured intent and evidence of the decisions." |
+
+Every number checked appears in both: 100 → 400 PRs, 44% and 14%, 400 and 600
+lines, 200 candidates, 64 rules, 19 deterministic, 3.4 hours, 5 days, 2.5 hours,
+90 days. Qwen spells some out ("twenty thirteen", "sixty-four"). It still
+mishears some words ("poetry" for code review, "battle" for the first part), far
+less often than Apple.
+
+**Verdict:** the chunked, cached, echo-cut pipeline works on a full 22-minute
+talk. This recording now uses it: `meta.json` names
+`transcript.qwen3-asr-1.7b.txt`, and Apple's `transcript.txt` stays beside it in
+`transcript_alternates`.
+
 ## At a glance
 
 | | Apple (Voice Memos) | Qwen3-ASR 1.7B, long prompt | Qwen3-ASR 1.7B, names-only prompt + echo filter |

@@ -2,12 +2,22 @@
   "title": "Ankir Jain",
   "recorded_at": "2026-11-10T09:33:30-08:00",
   "duration_seconds": 1350.6,
-  "transcript": "transcript.txt",
-  "transcript_word_count": 3824,
-  "transcript_locale": "en_US",
-  "transcript_source": "voice-memos",
-  "transcript_timing": "word",
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 3786,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
   "source_file": "20261110 093330.m4a",
   "audio_sha256": "781886bc883a98a22f793115c984d281adc24aae340200027c7be3090cc021f7",
-  "exported_at": "2026-11-10T10:00:39-08:00"
+  "exported_at": "2026-11-10T10:00:39-08:00",
+  "transcript_echo_segments": 1,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 3824,
+      "locale": "en_US"
+    }
+  ]
 }

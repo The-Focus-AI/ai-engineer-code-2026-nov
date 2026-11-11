@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Too much, all at once · Scott Tolinski</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .alongside { margin: 1.2rem 0; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: .3rem; font: .88rem/1.55 var(--sans); }
+  .alongside b { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; display: block; margin-bottom: .2rem; }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .fork { display: grid; gap: .6rem; font: .8rem/1.4 var(--sans); }
+  .fork .start { text-align: center; padding: .7rem; border-radius: .3rem; background: var(--ink); color: var(--paper); font-weight: 600; }
+  .fork .arms { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+  .fork .arm { border: 1px solid var(--rule); border-radius: .3rem; padding: .7rem .8rem; background: var(--card); }
+  .fork .arm h3 { margin: 0 0 .35rem; font: 600 .95rem/1.2 var(--sans); }
+  .fork .arm ul { margin: 0; padding-left: 1rem; }
+  .fork .digest { border-color: var(--accent); background: var(--accent-soft); }
+  .fork .digest h3 { color: var(--accent); }
+  .fork .q { text-align: center; color: var(--muted); font: italic 1rem/1.3 var(--serif); }
+  @media (max-width: 620px) { .fork .arms { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Tue 10 Nov 2026 · Continental 1–3</div>
+  <h1>Too much, all at once</h1>
+  <p class="dek">Scott Tolinski surveyed more than 4,000 developers about how AI coding is affecting their mental health. The answers describe people who can suddenly do far more than they can hold. Read with the notes taken in the room, the talk asks one question: is this a new world people will learn to absorb, or one that burns them out first?</p>
+  <div class="talk-meta">Scott Tolinski, Syntax · 24 min · every slide in the talk is a 3D scene built in three.js · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="prompting-past-stop.jpg" alt="His survey chart, photographed from the audience: Prompting past when you meant to stop, answers from 1 (never) to 5 (daily), with the higher-frequency bars tallest.">
+        <figcaption>His survey chart, 10:14 am (cropped from photos/PXL_20261110_181435938.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="writing-code-break.jpg" alt="A slide quoting a survey respondent: Writing code by hand feels like taking a break, as in stealing company time, and actual breaks feel borderline illegal. Beside it, a crossed-out coffee cup.">
+        <figcaption>A survey respondent, on his slide, 10:18 am (cropped from photos/PXL_20261110_181822800.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="lost-my-spark.jpg" alt="Scott Tolinski at the podium, pointing at a slide quoting a respondent: I lost my spark, my passion, now it's just money, for however long I'll be able to do it.">
+        <figcaption>“I lost my spark”, 10:22 am (cropped from photos/PXL_20261110_182211766.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v4">
+        <div class="lbl">Digesting: paths fade, paths form</div>
+        <svg viewBox="0 0 400 230" role="img" aria-label="A diagram of a brain's paths: well-worn old paths to old skills fade, while new paths to new skills strengthen.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">
+            <rect x="14" y="92" width="96" height="46" rx="8" fill="var(--accent)"/>
+            <text x="62" y="120" text-anchor="middle" fill="var(--paper)" font-weight="600">you</text>
+            <path d="M110 105 C 180 60, 230 40, 290 40" fill="none" stroke="var(--rule)" stroke-width="3" stroke-dasharray="4 6"/>
+            <path d="M110 115 C 180 100, 230 95, 290 95" fill="none" stroke="var(--rule)" stroke-width="3" stroke-dasharray="4 6"/>
+            <path d="M110 125 C 180 150, 230 160, 290 160" fill="none" stroke="var(--accent)" stroke-width="5"/>
+            <path d="M110 132 C 180 190, 230 205, 290 205" fill="none" stroke="var(--accent)" stroke-width="5"/>
+            <text x="296" y="44" fill="var(--muted)">CSS clear-fix tricks</text>
+            <text x="296" y="99" fill="var(--muted)">IE5-proof sites</text>
+            <text x="296" y="164" fill="var(--accent)" font-weight="600">new ways to build</text>
+            <text x="296" y="209" fill="var(--accent)" font-weight="600">new skills</text>
+            <text x="200" y="20" fill="var(--muted)" text-anchor="middle">fading: no longer used</text>
+          </g>
+        </svg>
+        <figcaption>His examples of what he's forgotten, 00:14:00. The new-skill labels are illustrative.</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v5">
+        <img src="hours-halved.jpg" alt="A slide quoting a respondent: my hours worked per day have halved and my mental health has got much better. I do half the work, 4x the output and a lot of time for hobbies. Beside it, short bars for hours and a tall bar for output, with a book icon.">
+        <figcaption>One respondent, 10:28 am. The hours and output bars animate in the live deck. (cropped from photos/PXL_20261110_182820893.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v6">
+        <div class="lbl">The open question</div>
+        <div class="fork">
+          <div class="start">Far more than a person can hold</div>
+          <div class="arms">
+            <div class="arm digest"><h3>Digest</h3><ul><li>paths rewire</li><li>limits get built</li><li>the work means something again</li></ul></div>
+            <div class="arm"><h3>Burn out</h3><ul><li>one more prompt</li><li>no stopping point</li><li>nobody talks about it</li></ul></div>
+          </div>
+          <div class="q">Which way depends on the limits people and teams build.</div>
+        </div>
+        <figcaption>The framing from notes taken in the room, not his slide</figcaption>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="manic-loop" data-visual="v1" data-caption="52% prompt past when they meant to stop">
+      <div class="chapter">The pull</div>
+      <h2>A manic loop</h2>
+      <p>The first thing the survey found is that people can't stop. 52 percent kept prompting past the time they meant to quit, and those who struggled to stop also reported sleeping badly. One respondent had the AI remind them to stop for meals and still ignored it. He describes the pull as a slot machine: a variable reward, like a loot box, where the next prompt might be the one that gets it right. At the extreme, he cites a developer who ended up in hospital from stress, trying to use up tokens before a model was retired.</p>
+      <p>He isn't writing about other people. Symptoms from an earlier injury (sleep loss, muscle twitches) came back when he started prompting heavily, and he ties them to stress.</p>
+      <blockquote>“Let me just one more. Let me just one more, right?”<span class="cite">00:04:51</span></blockquote>
+      <blockquote>“It feels like I'm buying lottery tickets with my time and attention, but it's so fun to build.”<span class="cite">00:06:32</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:23, 00:03:25, 00:04:51, 00:06:05, 00:06:32, 00:20:46</p>
+    </section>
+
+    <section data-chapter="too-much-at-once" data-visual="v2" data-caption="Pressure to produce, and decisions that never stop">
+      <div class="chapter">The load</div>
+      <h2>Too much at once</h2>
+      <p>The pressure isn't only internal. 71 percent feel they have to produce more simply because AI makes it possible, and only 195 people said never. One respondent says writing code by hand now feels like taking a break, and real breaks feel close to illegal.</p>
+      <p>Then multiply it. Running five agents means five streams of questions; he names it decision fatigue, and quotes a React developer's escalation: two agents, four, eight, infinity. The result is people who feel more productive than ever and more tired than ever.</p>
+      <blockquote>“Obviously, it's decision fatigue.”<span class="cite">00:09:42</span></blockquote>
+      <blockquote>“If I can run four, I can run eight. And I can run infinity”<span class="cite">00:09:42</span></blockquote>
+      <div class="alongside"><b>Read alongside</b>Ksenia Se's Turing Post editorial, <a href="https://www.turingpost.com/p/ai-agents-anxiety-and-decision-overload">“The Anxiety of Abundance”</a> (Nov 9, 2026), makes the same point from outside the talk: agents take the doing off your hands, but the deciding stays with you, and it doesn't scale.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:07:54, 00:09:42</p>
+    </section>
+
+    <section data-chapter="crisis-of-meaning" data-visual="v3" data-caption="The same change empties the work for one person and refills it for another">
+      <div class="chapter">Meaning</div>
+      <h2>A crisis of meaning</h2>
+      <p>Under the overwork is a harder question: what the work even is. He says developers are in a transition in their understanding of their own work, and many are mourning the loss of writing code by hand. The survey answers split. One person lost their spark, and now it's just money. Another says AI is the spark, and someone senior enough that they rarely code is “so back now.”</p>
+      <blockquote>“And so, a lot of people are having to mourn the loss of writing code by hand”<span class="cite">00:12:11</span></blockquote>
+      <div class="reading"><b>The reading:</b> this is the crisis of meaning underneath the mania. The same change empties the work for one person and refills it for another.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:12:11</p>
+    </section>
+
+    <section data-chapter="digesting" data-visual="v4" data-caption="Old paths fade; new ones form">
+      <div class="chapter">Digesting</div>
+      <h2>The brain rewires</h2>
+      <p>63 percent say their coding skills are diminishing. He explains it with neuroplasticity: the brain strengthens the paths it uses, and the ones it stops using fade. At first that upset him. Then he looked at what he'd forgotten (old CSS clear-fix tricks, sites that worked in Internet Explorer 5) and decided most of it no longer matters.</p>
+      <blockquote>“So again, we start to form new pathways.”<span class="cite">00:14:00</span></blockquote>
+      <div class="reading"><b>The reading:</b> this is what digesting looks like. Old skills fade and new paths form, and losing them is a cost only if they were still the point.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:14:00</p>
+    </section>
+
+    <section data-chapter="ways-to-absorb" data-visual="v5" data-caption="Habits, fewer agents, grounded time">
+      <div class="chapter">Absorbing</div>
+      <h2>Building ways to absorb it</h2>
+      <p>His answer is not a tool. What makes an impact is better habits and sticking to them, which he admits is easier said than done. Run fewer agents at once: a respondent says less parallelization makes for a calmer mind, and he agrees from experience. Make room for grounded time like hobbies, pottery and hiking, experiences that were nice to have and are becoming necessary. Go outside, away from screens and agents. And keep agents out of your downtime; checking them on your phone during a hockey game is where it slips.</p>
+      <p>One respondent halved their hours, with better mental health and more output. The transcript garbles the line, but the slide reads: “I do half the work, 4x the output and a lot of time for hobbies.”</p>
+      <blockquote>“Less paralization makes for a calmer mind.”<span class="cite">00:19:50</span></blockquote>
+      <blockquote>“Nature heals AI psychosis. Go touch grass.”<span class="cite">00:20:46</span></blockquote>
+      <div class="reading"><b>From the notes:</b> one agent, watched, rather than many in parallel, is the practice that stood out in the room.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:17:50, 00:19:50, 00:20:46, 00:21:48</p>
+    </section>
+
+    <section data-chapter="digest-or-burn-out" data-visual="v6" data-caption="Digest and transcend, or burn out?">
+      <div class="chapter">The question</div>
+      <h2>Digest and transcend, or burn out?</h2>
+      <p>The talk doesn't settle it. On one side, he expects change: developers are mid-transition, and as the models get better some of this pressure changes. The brain rewires. On the other side, people are exhausted and holding it in. They used the survey to say how hard it is, because nobody's talking about it. And self-control alone isn't a system.</p>
+      <p>His own deck is evidence for both. A respondent says AI let them make slides out of three.js, something they'd never have tried, and this talk is built that way: every slide is a 3D model. Abundance can be delightful and still be too much.</p>
+      <blockquote>“It's not that easy to build these systems, right?”<span class="cite">00:21:48</span></blockquote>
+      <div class="reading"><b>The reading:</b> the open question is whether people digest this and come out the other side, or burn out first. The talk's honest answer is that it depends on the limits people and organizations build, and nobody has those yet.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:04:22, 00:06:32, 00:12:11, 00:14:00, 00:19:50, 00:21:48</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room) and on notes taken during the talk. Quotes are verbatim from the transcript; one survey quote is read from the slide photo because the transcript garbles it. Passages marked “The reading” and “From the notes” are interpretation, not his words; “Read alongside” is an outside source. The survey and his video on the topic are linked from his closing slide; more is on the <a href="../links.md">links page</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
     "title": "Ankit Jain",
     "recorded_at": "2026-11-10T09:29:55-08:00",
     "duration_seconds": 210.6,
-    "word_count": 68,
+    "word_count": 72,
     "audio_sha256": "ce90863099e2f9493402099829eb77addd3c17d05b66c3ff2a89e5649cdaae76",
     "status": "needs-review"
   },
@@ -15,8 +15,58 @@
     "title": "Ankir Jain",
     "recorded_at": "2026-11-10T09:33:30-08:00",
     "duration_seconds": 1350.6,
-    "word_count": 3824,
+    "word_count": 3786,
     "audio_sha256": "781886bc883a98a22f793115c984d281adc24aae340200027c7be3090cc021f7",
+    "status": "cleaned"
+  },
+  "2026-11-10_1009_Scott-Tolinski": {
+    "folder": "2026-11-10_1009_Scott-Tolinski",
+    "path": "recordings/inbox/2026-11-10_1009_Scott-Tolinski",
+    "title": "Scott Tolinski",
+    "recorded_at": "2026-11-10T10:09:14-08:00",
+    "duration_seconds": 1437.4,
+    "word_count": 4077,
+    "audio_sha256": "767132761c0945c1b77819ab6e59bdad9117091b026de342cd8469038f649c7e",
+    "status": "cleaned"
+  },
+  "2026-11-10_1355_Karan-Vaidya": {
+    "folder": "2026-11-10_1355_Karan-Vaidya",
+    "path": "recordings/inbox/2026-11-10_1355_Karan-Vaidya",
+    "title": "Karan Vaidya",
+    "recorded_at": "2026-11-10T13:55:07-08:00",
+    "duration_seconds": 641.1,
+    "word_count": 1687,
+    "audio_sha256": "5121c0f5d5cf9ccbc26d4a23c12643657aa3ce6ac2e5d1c083d7a024ecec438c",
+    "status": "cleaned"
+  },
+  "2026-11-10_1418_George-Fraser": {
+    "folder": "2026-11-10_1418_George-Fraser",
+    "path": "recordings/inbox/2026-11-10_1418_George-Fraser",
+    "title": "George Fraser",
+    "recorded_at": "2026-11-10T14:18:17-08:00",
+    "duration_seconds": 1677.3,
+    "word_count": 4236,
+    "audio_sha256": "f1b8e0cd17955f380c16182cc45781f2a83189debfca93a2bf800d96783c5f92",
+    "status": "cleaned"
+  },
+  "2026-11-10_1457_Utkarsh": {
+    "folder": "2026-11-10_1457_Utkarsh",
+    "path": "recordings/inbox/2026-11-10_1457_Utkarsh",
+    "title": "Utkarsh",
+    "recorded_at": "2026-11-10T14:57:27-08:00",
+    "duration_seconds": 1630.5,
+    "word_count": 4025,
+    "audio_sha256": "1451a8f8dcb729454e1bfce18a5df0447526e6dfbca95e7d5558974d480aabc2",
+    "status": "cleaned"
+  },
+  "2026-11-10_1529_Mihail-Eric": {
+    "folder": "2026-11-10_1529_Mihail-Eric",
+    "path": "recordings/inbox/2026-11-10_1529_Mihail-Eric",
+    "title": "Mihail Eric",
+    "recorded_at": "2026-11-10T15:29:42-08:00",
+    "duration_seconds": 1775.7,
+    "word_count": 5451,
+    "audio_sha256": "2d3f4ef08a6fdba94731bc3b5b899e386bb798cca40443e9ff7b86c9e393ced7",
     "status": "cleaned"
   }
 }

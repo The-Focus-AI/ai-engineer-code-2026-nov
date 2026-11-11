@@ -2,4 +2,821 @@
 
 AI Engineer Code Summit 2026. Newest first; mirrors the change log exactly.
 
-The change log has 0 entries.
+## 49
+
+```json
+{
+  "at": "2026-11-11T03:38:27-05:00",
+  "seq": 49,
+  "kind": "retitled",
+  "session_id": "1375634",
+  "field": "title",
+  "before": "Ship more as a team of one with Kiro Crew",
+  "after": "Ship more as a team with Kiro Crew",
+  "summary": "'Ship more as a team of one with Kiro Crew' is now 'Ship more as a team with Kiro Crew'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 48
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 48,
+  "kind": "retitled",
+  "session_id": "1373481",
+  "field": "title",
+  "before": "Quinn Slack, CEO, Amp",
+  "after": "A Company Built Around the Agent",
+  "summary": "'Quinn Slack, CEO, Amp' is now 'A Company Built Around the Agent'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 47
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 47,
+  "kind": "room-changed",
+  "session_id": "1375635",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'Agents That Don't Clock Out': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 46
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 46,
+  "kind": "retitled",
+  "session_id": "1376195",
+  "field": "title",
+  "before": "Ishaan Dey, Software Engineer, Google DeepMind (Antigravity)",
+  "after": "Judgement is the Last Job",
+  "summary": "'Ishaan Dey, Software Engineer, Google DeepMind (Antigravity)' is now 'Judgement is the Last Job'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 45
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 45,
+  "kind": "room-changed",
+  "session_id": "1373479",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'Your agent pays twice for every search: how we cut token spend by 90+% with better accuracy': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 44
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 44,
+  "kind": "room-changed",
+  "session_id": "1381580",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'The first Grounded Decision Model': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 43
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 43,
+  "kind": "room-changed",
+  "session_id": "1380658",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'Scaling Your Agent Workforce: Lessons from Inside Cognition': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 42
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 42,
+  "kind": "retitled",
+  "session_id": "1379010",
+  "field": "title",
+  "before": "Lance Martin, Member of Technical Staff, Anthropic",
+  "after": "Exploring Claude’s frontier",
+  "summary": "'Lance Martin, Member of Technical Staff, Anthropic' is now 'Exploring Claude’s frontier'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 41
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 41,
+  "kind": "room-changed",
+  "session_id": "1379163",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'Code review without reviewing code': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 40
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 40,
+  "kind": "room-changed",
+  "session_id": "1379011",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'Let the Agent Cook: From APIs to Answers': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 39
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 39,
+  "kind": "room-changed",
+  "session_id": "1379052",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'Talk But Verify: human-in-the-loop for agents that actually matter': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 38
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 38,
+  "kind": "retitled",
+  "session_id": "1373475",
+  "field": "title",
+  "before": "Walden Yan, Chief Product Officer, Cognition",
+  "after": "A New Age of Software Engineering",
+  "summary": "'Walden Yan, Chief Product Officer, Cognition' is now 'A New Age of Software Engineering'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 37
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 37,
+  "kind": "room-changed",
+  "session_id": "1373476",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'Connect Agents to Reality: The Context Engine Powering Your Software Factory': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 36
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 36,
+  "kind": "retitled",
+  "session_id": "1373476",
+  "field": "title",
+  "before": "Emitted, not authored: The context layer under your software factory",
+  "after": "Connect Agents to Reality: The Context Engine Powering Your Software Factory",
+  "summary": "'Emitted, not authored: The context layer under your software factory' is now 'Connect Agents to Reality: The Context Engine Powering Your Software Factory'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 35
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 35,
+  "kind": "retitled",
+  "session_id": "1378217",
+  "field": "title",
+  "before": "Brandon Thomas, CEO, Artcraft",
+  "after": "Let's Open Source the World",
+  "summary": "'Brandon Thomas, CEO, Artcraft' is now 'Let's Open Source the World'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 34
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 34,
+  "kind": "retitled",
+  "session_id": "1373472",
+  "field": "title",
+  "before": "Armin Ronacher, CTO, Earendil",
+  "after": "The Software Atelier",
+  "summary": "'Armin Ronacher, CTO, Earendil' is now 'The Software Atelier'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 33
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 33,
+  "kind": "retitled",
+  "session_id": "1379009",
+  "field": "title",
+  "before": "Jason Liu, Developer Experience Engineer, OpenAI",
+  "after": "Ambition in AI",
+  "summary": "'Jason Liu, Developer Experience Engineer, OpenAI' is now 'Ambition in AI'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 32
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 32,
+  "kind": "retitled",
+  "session_id": "1376191",
+  "field": "title",
+  "before": "Simon Willison, Creator of Datasette, Independent",
+  "after": "2026 in LLMs",
+  "summary": "'Simon Willison, Creator of Datasette, Independent' is now '2026 in LLMs'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 31
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 31,
+  "kind": "retitled",
+  "session_id": "1373471",
+  "field": "title",
+  "before": "Steve Yegge, Independent Advisor & Creator of Beads & Gas Town, Independent",
+  "after": "Software Factories: Escape from Trash Mountain",
+  "summary": "'Steve Yegge, Independent Advisor & Creator of Beads & Gas Town, Independent' is now 'Software Factories: Escape from Trash Mountain'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 30
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 30,
+  "kind": "room-changed",
+  "session_id": "1380927",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'Leaving Localhost: Building an Agent-Native Dev Environment': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 29
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 29,
+  "kind": "retitled",
+  "session_id": "1376198",
+  "field": "title",
+  "before": "Scott Roberts, Workday",
+  "after": "Autocomplete for Actions: System One from the UI to the DB",
+  "summary": "'Scott Roberts, Workday' is now 'Autocomplete for Actions: System One from the UI to the DB'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 28
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 28,
+  "kind": "room-changed",
+  "session_id": "1373468",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'CVE remediation with Factory: from finding to merged PR': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 27
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 27,
+  "kind": "room-changed",
+  "session_id": "1373467",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'Ground Truth or Dare: Using Oracles to Make Postgres Reactive': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 26
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 26,
+  "kind": "retitled",
+  "session_id": "1374822",
+  "field": "title",
+  "before": "J Stack",
+  "after": "Your Automation Is Overthinking It",
+  "summary": "'J Stack' is now 'Your Automation Is Overthinking It'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 25
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 25,
+  "kind": "room-changed",
+  "session_id": "1357875",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'More Checks, Less Noise: Layered Security for AI-Assisted Development': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 24
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 24,
+  "kind": "retitled",
+  "session_id": "1373465",
+  "field": "title",
+  "before": "Diogo Almeida, Co-founder, TypeSafe AI",
+  "after": "I love you so jevving much",
+  "summary": "'Diogo Almeida, Co-founder, TypeSafe AI' is now 'I love you so jevving much'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 23
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 23,
+  "kind": "room-changed",
+  "session_id": "1373466",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'Coding Agents and How to Tame Them': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 22
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 22,
+  "kind": "room-changed",
+  "session_id": "1373464",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'The Software Factory That Needs Zero FDEs': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 21
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 21,
+  "kind": "room-changed",
+  "session_id": "1373462",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'How to build agents over your own data': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 20
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 20,
+  "kind": "room-changed",
+  "session_id": "1373460",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'Heal Your Agents, Don't Just Grade Them': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 19
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 19,
+  "kind": "room-changed",
+  "session_id": "1373458",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'Refactor or Rot: Building a self-improving codebase': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 18
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 18,
+  "kind": "room-changed",
+  "session_id": "1380068",
+  "field": "room_id",
+  "before": "continental-13-workshop-room-1",
+  "after": "continental-13-expo-sessions",
+  "summary": "'Manage Yourself Out of the Loop': Continental 1–3 (Workshop Room 1) → Continental 1–3 (Expo Sessions)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 17
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 17,
+  "kind": "speaker-changed",
+  "session_id": "1380081",
+  "field": "speaker_ids",
+  "before": [
+    "richelle-j"
+  ],
+  "after": [
+    "richelle-ji"
+  ],
+  "summary": "'MC Outro' speakers ['richelle-j'] → ['richelle-ji']",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 16
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 16,
+  "kind": "room-changed",
+  "session_id": "3e1a3db8-9da0-4015-af37-7277b48182cb",
+  "field": "room_id",
+  "before": "continental-5-breakfast-lunch",
+  "after": "continental-foyer",
+  "summary": "'Networking Break': Continental 5 (Breakfast & Lunch) → Continental Foyer",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 15
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 15,
+  "kind": "retitled",
+  "session_id": "1373612",
+  "field": "title",
+  "before": "Philipp Schmid, Thor Schaeff & Ivan Leo, Members of Technical Staff, Google DeepMind (Part 2)",
+  "after": "AFK Engineering: From Terminal to Voice-Controlled Remote Agents (Part 2)",
+  "summary": "'Philipp Schmid, Thor Schaeff & Ivan Leo, Members of Technical Staff, Google DeepMind (Part 2)' is now 'AFK Engineering: From Terminal to Voice-Controlled Remote Agents (Part 2)'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 14
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 14,
+  "kind": "retitled",
+  "session_id": "1373447",
+  "field": "title",
+  "before": "Philipp Schmid, Thor Schaeff & Ivan Leo, Members of Technical Staff, Google DeepMind (Part 1)",
+  "after": "AFK Engineering: From Terminal to Voice-Controlled Remote Agents (Part 1)",
+  "summary": "'Philipp Schmid, Thor Schaeff & Ivan Leo, Members of Technical Staff, Google DeepMind (Part 1)' is now 'AFK Engineering: From Terminal to Voice-Controlled Remote Agents (Part 1)'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 13
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 13,
+  "kind": "retitled",
+  "session_id": "1341863",
+  "field": "title",
+  "before": "From Coding agents to Knowledge work agents",
+  "after": "What It Takes to Run a Company on Agent Swarms",
+  "summary": "'From Coding agents to Knowledge work agents' is now 'What It Takes to Run a Company on Agent Swarms'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 12
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 12,
+  "kind": "retitled",
+  "session_id": "1381496",
+  "field": "title",
+  "before": "Sydney Runkle, Product Manager, LangChain",
+  "after": "Proactive Agent Engineering",
+  "summary": "'Sydney Runkle, Product Manager, LangChain' is now 'Proactive Agent Engineering'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 11
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 11,
+  "kind": "retitled",
+  "session_id": "1381709",
+  "field": "title",
+  "before": "Ahmad Osman, Founder & CEO, Osmantic",
+  "after": "What Runs Where: The State of Local AI",
+  "summary": "'Ahmad Osman, Founder & CEO, Osmantic' is now 'What Runs Where: The State of Local AI'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 10
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 10,
+  "kind": "room-changed",
+  "session_id": "a8ad909b-f03d-416b-99e7-591813ebb8e5",
+  "field": "room_id",
+  "before": "continental-5-breakfast-lunch",
+  "after": "continental-foyer",
+  "summary": "'Networking Break': Continental 5 (Breakfast & Lunch) → Continental Foyer",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 9
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 9,
+  "kind": "retitled",
+  "session_id": "1379134",
+  "field": "title",
+  "before": "Scott Tolinski, Co-host, Syntax",
+  "after": "The True Cost of AI Coding",
+  "summary": "'Scott Tolinski, Co-host, Syntax' is now 'The True Cost of AI Coding'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 8
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 8,
+  "kind": "speaker-changed",
+  "session_id": "1380080",
+  "field": "speaker_ids",
+  "before": [
+    "richelle-j"
+  ],
+  "after": [
+    "richelle-ji"
+  ],
+  "summary": "'MC Intro' speakers ['richelle-j'] → ['richelle-ji']",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 7
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 7,
+  "kind": "added",
+  "session_id": "1304968",
+  "field": null,
+  "before": null,
+  "after": {
+    "title": "Warning: This Pull Request Contains Graphic Content",
+    "starts_at": "2026-11-10T17:00:00-08:00",
+    "room_id": "continental-13-workshop-room-1"
+  },
+  "summary": "Added: 'Warning: This Pull Request Contains Graphic Content' (Cassandra Chin, Stephen Chin, 2026-11-10T17:00:00-08:00, Continental 1–3 (Workshop Room 1))",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 6
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 6,
+  "kind": "added",
+  "session_id": "1383277",
+  "field": null,
+  "before": null,
+  "after": {
+    "title": "Do it All with Devin",
+    "starts_at": "2026-11-10T16:30:00-08:00",
+    "room_id": "continental-6-workshop-room-3"
+  },
+  "summary": "Added: 'Do it All with Devin' (Charlie Meyer, Giovanni D'Antonio, 2026-11-10T16:30:00-08:00, Continental 6 (Workshop Room 3))",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 5
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 5,
+  "kind": "added",
+  "session_id": "1351616",
+  "field": null,
+  "before": null,
+  "after": {
+    "title": "Multiplayer software factories - Leading the shift to concurrent delivery",
+    "starts_at": "2026-11-10T16:30:00-08:00",
+    "room_id": "continental-13-workshop-room-1"
+  },
+  "summary": "Added: 'Multiplayer software factories - Leading the shift to concurrent delivery' (Patrick Debois, 2026-11-10T16:30:00-08:00, Continental 1–3 (Workshop Room 1))",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 4
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 4,
+  "kind": "removed",
+  "session_id": "1359774",
+  "field": null,
+  "before": {
+    "title": "Sandboxes are dead",
+    "starts_at": "2026-11-10T17:00:00-08:00",
+    "room_id": "continental-13-workshop-room-1"
+  },
+  "after": null,
+  "summary": "Removed: 'Sandboxes are dead' (2026-11-10T17:00:00-08:00, continental-13-workshop-room-1)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 3
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 3,
+  "kind": "removed",
+  "session_id": "7840ea51-d307-4cab-b034-00cfc661ab26",
+  "field": null,
+  "before": {
+    "title": "Cognition Workshop",
+    "starts_at": "2026-11-10T16:30:00-08:00",
+    "room_id": "continental-6-workshop-room-3"
+  },
+  "after": null,
+  "summary": "Removed: 'Cognition Workshop' (2026-11-10T16:30:00-08:00, continental-6-workshop-room-3)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 2
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 2,
+  "kind": "removed",
+  "session_id": "1356850",
+  "field": null,
+  "before": {
+    "title": "Catching Reward Hacking From the Inside",
+    "starts_at": "2026-11-10T16:30:00-08:00",
+    "room_id": "continental-13-workshop-room-1"
+  },
+  "after": null,
+  "summary": "Removed: 'Catching Reward Hacking From the Inside' (2026-11-10T16:30:00-08:00, continental-13-workshop-room-1)",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 1
+
+```json
+{
+  "at": "2026-11-10T21:51:30-05:00",
+  "seq": 1,
+  "kind": "venue-changed",
+  "session_id": null,
+  "field": "rooms",
+  "before": null,
+  "after": [
+    "Continental 1–3 (Expo Sessions)",
+    "Continental Foyer"
+  ],
+  "summary": "New room names in the schedule: Continental 1–3 (Expo Sessions), Continental Foyer",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```

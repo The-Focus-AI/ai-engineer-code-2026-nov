@@ -4,7 +4,8 @@
     "confidence": 0.6,
     "method": "time+title",
     "evidence": [
-      "title: \"Ankit Jain\" (folder title names this session's speaker)"
+      "title: \"Ankit Jain\" (folder title names this session's speaker)",
+      "transcript in force is now transcript.qwen3-asr-1.7b.txt; still a 3½-minute pre-talk clip with no claim from the abstract; the 22½-minute recording already claims session 1333169"
     ],
     "candidates": [
       {
@@ -41,11 +42,12 @@
     "method": "time+attribution+transcript",
     "evidence": [
       "note: notes/inbox/2026-11-10T0944-capturing-intent-and-decisions-agents-argue.md — talk: talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/ (operator named the talk; captured 09:44, inside the recording)",
-      "title: \"Ankir Jain\" (folder title, ASR-style misspelling of the speaker's name)",
-      "transcript: \"I knew I'm gonna be working 100 PRs per week. And now we're doing about 4, right?\" — abstract: \"Our team merges 4x more pull requests than we did a year ago.\"",
-      "transcript: \"We talk about intent. Intent is why are we making a particular change?\" — abstract: \"building a verification layer around *intent*\"",
-      "transcript: \"So what we did was in India, mining one year of our previous comments.\" — abstract: \"how we turned years of recurring review comments into machine-enforceable invariants\"",
-      "transcript: \"Now, these become your invariants\" — abstract: \"encoding team standards as reusable invariants\""
+      "title: \"Ankir Jain\" (folder title, misspelling of the speaker's name)",
+      "transcript: \"A year ago, we were merging about 100 PRs per week. And now we are doing about 400.\" — abstract: \"Our team merges 4x more pull requests than we did a year ago.\"",
+      "transcript: \"We talk about intent. Intent is why are we making whatever change.\" — abstract: \"building a verification layer around *intent*\"",
+      "transcript: \"Now these become your invariants.\" — abstract: \"encoding team standards as reusable invariants\"",
+      "transcript: \"So what we did was we ended up mining a bunch of our previous comments.\" — abstract: \"how we turned years of recurring review comments into machine-enforceable invariants\"",
+      "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, names-only prompt, echo cut); its text names neither the speaker nor Aviator, so this stays an attributed match"
     ],
     "candidates": [
       {
@@ -67,6 +69,157 @@
         "session_id": "1376183",
         "why": "New Ways of Working with Codex workshop, 09:00–10:00: overlaps the recording; no transcript quote answers its topic",
         "confidence": 0.05
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-10_1009_Scott-Tolinski": {
+    "session_id": "1379134",
+    "confidence": 0.9,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt: \"So again, on syntax, we get a lot of people commenting all the time.\" (unprompted Voice Memos alternate; names the speaker's company, Syntax)",
+      "transcript.txt: \"And give syntax a subscribe on YouTube\" (unprompted Voice Memos alternate; names Syntax)",
+      "transcript.qwen3-asr-1.7b.txt: \"My name is Scott Tolinski. I'm from Syntax.\" (transcript in force; Qwen was prompted with these names, so attribution only)",
+      "title: \"Scott Tolinski\" (folder title names the speaker)",
+      "note: notes/inbox/2026-11-10T1013-like-turing-posts-recent-post.md — talk: talks/2026-11-10-scott-tolinski-co-host-syntax/ (captured 10:13, inside the recording)"
+    ],
+    "candidates": [
+      {
+        "session_id": "1379134",
+        "why": "talk 10:10–10:35 in Continental 1–3; recording 10:09:14 for 24 min; the transcript names Syntax twice and the speaker introduces himself",
+        "confidence": 0.9
+      },
+      {
+        "session_id": "1373449",
+        "why": "Omnigent workshop, 10:10–11:10, Continental 6: overlaps; no transcript quote names it",
+        "confidence": 0.03
+      },
+      {
+        "session_id": "1373450",
+        "why": "Stop Prompting, Start Delegating workshop, 10:10–11:10, Continental 7–9: overlaps; no transcript quote names it",
+        "confidence": 0.03
+      },
+      {
+        "session_id": "1356771",
+        "why": "Forget AGI workshop, 10:10–11:10, Continental 4: overlaps; no transcript quote names it",
+        "confidence": 0.03
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-10_1355_Karan-Vaidya": {
+    "session_id": "1341863",
+    "confidence": 0.7,
+    "method": "time+operator",
+    "evidence": [
+      "note: notes/inbox/2026-11-10T1519-file-karan-vaidya-recording.md — kind: decision, session_id 1341863 (the operator confirmed this recording is his talk)",
+      "title: \"Karan Vaidya\" (folder title names the speaker of 1341863)",
+      "time: recorded 13:55:07 for 11 min, inside the 13:50–14:15 slot in Continental 1–3",
+      "transcript.qwen3-asr-1.7b.txt: \"that's what we have done at Composio where. We have mapped all these access control patterns\" (names his company; prompt-biased, attribution only)"
+    ],
+    "candidates": [
+      {
+        "session_id": "1341863",
+        "why": "From Coding agents to Knowledge work agents, 13:50–14:15, Continental 1–3; recording 13:55:07 for 11 min; folder title names Karan Vaidya; Qwen text names Composio (prompt-biased)",
+        "confidence": 0.55
+      },
+      {
+        "session_id": "1373447",
+        "why": "Google DeepMind workshop part 1, 13:50–14:50, Continental 4: overlaps; nothing in the transcript names it",
+        "confidence": 0.03
+      },
+      {
+        "session_id": "1376182",
+        "why": "A Field Guide to Agent Shapes workshop, 13:50–14:50, Continental 6: overlaps; nothing in the transcript names it",
+        "confidence": 0.03
+      },
+      {
+        "session_id": "1357839",
+        "why": "Keep the Harness, Own Your Inference workshop, 13:50–14:50, Continental 7–9: overlaps; nothing in the transcript names it",
+        "confidence": 0.03
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-10_1418_George-Fraser": {
+    "session_id": "1356697",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos, unprompted): \"the new job of the data team is providing context to AI. So that's welcome. George?\" (the MC names the talk and the speaker)",
+      "transcript.qwen3-asr-1.7b.txt: \"And this is how we do it at Fivetran.\" (the speaker's company; Qwen was prompted with Fivetran, so attribution only)",
+      "title: \"George Fraser\" (folder title names the speaker)",
+      "note: notes/inbox/2026-11-10T1420-down-with-dashboards-up-with-artifacts.md — talk: talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/ (operator named the talk; captured 14:20, inside the recording)"
+    ],
+    "candidates": [
+      {
+        "session_id": "1356697",
+        "why": "talk 14:20–14:45 in Continental 1–3; recording 14:18:17 for 28 min; the MC names the talk and the speaker",
+        "confidence": 0.95
+      },
+      {
+        "session_id": "1373447",
+        "why": "Google DeepMind workshop part 1, 13:50–14:50: overlaps; not named",
+        "confidence": 0.02
+      },
+      {
+        "session_id": "1376182",
+        "why": "A Field Guide to Agent Shapes workshop, 13:50–14:50: overlaps; not named",
+        "confidence": 0.02
+      },
+      {
+        "session_id": "1357839",
+        "why": "Keep the Harness, Own Your Inference workshop, 13:50–14:50: overlaps; not named",
+        "confidence": 0.02
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-10_1457_Utkarsh": {
+    "session_id": "1352199",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos, unprompted): \"Hi, everyone. This is Utkarsh Shibasto\" (self-introduction; recogniser spelling of Utkarsh Shrivastava)",
+      "transcript.txt (Voice Memos, unprompted): \"Netflix launched one of our premier live offerings\" (names his company)",
+      "title: \"Utkarsh\" (folder title gives the speaker's first name)",
+      "note: notes/inbox/2026-11-10T1459-netflix-xai-frontier-open-weight-enterprise-support.md — talk: talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/ (captured 14:59, inside the recording)"
+    ],
+    "candidates": [
+      {
+        "session_id": "1352199",
+        "why": "talk 15:00–15:25 in Continental 1–3; recording 14:57:27 for 27 min; he introduces himself and names Netflix",
+        "confidence": 0.95
+      },
+      {
+        "session_id": "1373447",
+        "why": "Google DeepMind workshop part 2, 15:00–16:00: overlaps; not named in the unprompted transcript",
+        "confidence": 0.02
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-10_1529_Mihail-Eric": {
+    "session_id": "1334565",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos, unprompted): \"he is the head of AI Monaco\" (the MC names the speaker's company)",
+      "title: \"Mihail Eric\" (folder title exactly names the speaker of 1334565; operator confirmation)",
+      "note: notes/inbox/2026-11-10T1532-monaco-ai-native-gtm-company.md — talk: talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/ (captured 15:32, inside the recording)",
+      "transcript in force is now transcript.qwen3-asr-1.7b.txt (upgraded on AC power); the named evidence stays the Voice Memos alternate"
+    ],
+    "candidates": [
+      {
+        "session_id": "1334565",
+        "why": "talk 15:30–15:55 in Continental 1–3; recording 15:29:42 for 30 min; the MC names Monaco; the title names Mihail Eric",
+        "confidence": 0.95
+      },
+      {
+        "session_id": "1373447",
+        "why": "Google DeepMind workshop part 2, 15:00–16:00: overlaps; not named",
+        "confidence": 0.02
       }
     ],
     "status": "matched"

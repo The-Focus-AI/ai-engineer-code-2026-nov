@@ -1,0 +1,417 @@
+{
+  "people": {
+    "1333169": [
+      {
+        "name": "Ankit Jain",
+        "role": "Founder and CEO",
+        "affiliation": "Aviator",
+        "links": {
+          "site": "https://www.aviator.co/blog/author/ankitjain/",
+          "linkedin": null,
+          "x": "https://x.com/ankitxg",
+          "github": "https://github.com/jainankit",
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Aviator; bio \"a founder and CEO of Aviator\"",
+          "page title: \"Ankit Jain, Author at Aviator Blog\"",
+          "page title: \"Ankit Jain (@ankitxg) / X\"",
+          "page title: \"jainankit (Ankit Jain) · GitHub\""
+        ],
+        "status": "found"
+      }
+    ],
+    "1341863": [
+      {
+        "name": "Karan Vaidya",
+        "role": "Founder",
+        "affiliation": "Composio",
+        "links": {
+          "site": "https://kvaidya.com/",
+          "linkedin": "https://www.linkedin.com/in/kaavee315/",
+          "x": "https://x.com/KaranVaidya6",
+          "github": null,
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Composio; bio \"Founder of Composio, building the infra for knowledge work agents\"",
+          "page title: \"Karan Vaidya\"",
+          "page title: \"Karan Vaidya - Composio | LinkedIn\"",
+          "page title: \"Karan Vaidya (@KaranVaidya6) / X\""
+        ],
+        "status": "found"
+      }
+    ],
+    "1352199": [
+      {
+        "name": "Utkarsh Shrivastava",
+        "role": "Engineering lead, enterprise AI",
+        "affiliation": "Netflix",
+        "links": {
+          "site": null,
+          "linkedin": "https://www.linkedin.com/in/utkarshshrivastava",
+          "x": null,
+          "github": null,
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Netflix; bio \"Utkarsh Shrivastava leads engineering for enterprise AI at Netflix\"",
+          "page title: \"Utkarsh Shrivastava - Netflix | LinkedIn\""
+        ],
+        "status": "found"
+      }
+    ],
+    "1356697": [
+      {
+        "name": "George Fraser",
+        "role": "CEO and co-founder",
+        "affiliation": "Fivetran",
+        "links": {
+          "site": null,
+          "linkedin": "https://www.linkedin.com/in/george-fraser-a0219230/",
+          "x": "https://x.com/frasergeorgew",
+          "github": null,
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Fivetran; bio \"George Fraser is the CEO and co-founder of Fivetran\"",
+          "transcript: \"And this is how we do it at Fivetran.\"",
+          "page title: \"George Fraser - Fivetran | LinkedIn\"",
+          "page title: \"George Fraser (@frasergeorgew) / X\""
+        ],
+        "status": "found"
+      }
+    ],
+    "1379134": [
+      {
+        "name": "Scott Tolinski",
+        "role": "Co-host",
+        "affiliation": "Syntax",
+        "links": {
+          "site": "https://tolin.ski/",
+          "linkedin": null,
+          "x": "https://x.com/stolinski",
+          "github": "https://github.com/stolinski",
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Syntax; schedule title \"Scott Tolinski, Co-host, Syntax\"",
+          "transcript: \"So again, on syntax, we get a lot of people commenting all the time.\"",
+          "page title: \"Scott Tolinski\"",
+          "page title: \"Scott Tolinski (@stolinski) / X\"",
+          "page title: \"stolinski (Scott Tolinski) · GitHub\""
+        ],
+        "status": "found"
+      }
+    ]
+  },
+  "companies": {
+    "1333169": [
+      {
+        "name": "Aviator",
+        "url": "https://www.aviator.co/",
+        "what": "Shared context, faster reviews, deterministic verification, and merge-to-deploy automation built for the volume AI creates.",
+        "evidence": [
+          "page title: \"Aviator — Ship AI-generated code at velocity you trust\""
+        ]
+      }
+    ],
+    "1341863": [
+      {
+        "name": "Composio",
+        "url": "https://composio.dev/",
+        "what": "Put the AI you already use to work across 1,700+ apps.",
+        "evidence": [
+          "page title: \"Composio\"",
+          "roster: affiliation Composio"
+        ]
+      }
+    ],
+    "1352199": [
+      {
+        "name": "Netflix",
+        "url": "https://www.netflix.com/",
+        "what": "Streaming service for movies and TV shows",
+        "evidence": [
+          "page title: \"Netflix\"",
+          "transcript: \"Netflix launched one of our\""
+        ]
+      }
+    ],
+    "1356697": [
+      {
+        "name": "Fivetran",
+        "url": "https://www.fivetran.com/",
+        "what": "Automated data movement platform",
+        "evidence": [
+          "page title: \"Fivetran | Automated data movement platform\"",
+          "transcript: \"And this is how we do it at Fivetran.\""
+        ]
+      }
+    ],
+    "1379134": [
+      {
+        "name": "Syntax",
+        "url": "https://syntax.fm/",
+        "what": "Full Stack Web Developers Wes Bos and Scott Tolinski dive deep into web development, CSS, JavaScript, Frameworks, Typescript, Servers and more.",
+        "evidence": [
+          "page title: \"Syntax - Web Development Podcast\"",
+          "transcript: \"And give Syntax a subscribe on YouTube\""
+        ]
+      }
+    ]
+  },
+  "resources": {
+    "1333169": [
+      {
+        "type": "blog",
+        "title": "We stopped reviewing code and started verifying intent",
+        "url": "https://tessl.io/blog/we-stopped-reviewing-code-and-started-verifying-intent",
+        "why": "The speaker's own written version of this talk: four times the pull requests, intent instead of diff review, review comments mined into invariants.",
+        "evidence": [
+          "page title: \"We stopped reviewing code and started verifying intent\"",
+          "transcript: \"We talk about intent. Intent is why are we making whatever change.\""
+        ],
+        "first_seen": "20261110-141925-902d07",
+        "published_at": "2026-10-20",
+        "verified_at": "2026-11-10T14:19:25-05:00"
+      },
+      {
+        "type": "blog",
+        "title": "How Verify Checks Code: Semantic Analysis, Runtime Previews, and Why It’s Not Just Another AI Review Tool",
+        "url": "https://www.aviator.co/blog/how-verify-checks-code-semantic-analysis-runtime-previews-and-why-its-not-just-another-ai-review-tool/",
+        "why": "Aviator's explanation of the verification step the talk's Verify section describes: plans, runtime previews, captured evidence.",
+        "evidence": [
+          "page title: \"How Verify Checks Code: Semantic Analysis, Runtime Previews, and Why It’s Not Just Another AI Review Tool - Aviator Blog\""
+        ],
+        "first_seen": "20261110-141925-902d07",
+        "published_at": "2026-07-21",
+        "verified_at": "2026-11-10T14:19:25-05:00"
+      },
+      {
+        "type": "product",
+        "title": "Verify | Aviator Documentation",
+        "url": "https://docs.aviator.co/verify",
+        "why": "Product documentation for the intent-and-acceptance-criteria workflow the talk walks through.",
+        "evidence": [
+          "page title: \"Verify | Aviator Documentation\""
+        ],
+        "first_seen": "20261110-141925-902d07",
+        "published_at": null,
+        "verified_at": "2026-11-10T14:19:25-05:00"
+      },
+      {
+        "type": "product",
+        "title": "Invariants | Aviator Documentation",
+        "url": "https://docs.aviator.co/verify/concepts/invariants",
+        "why": "How Aviator stores invariants: the rules distilled from repeated review comments in the Codify section.",
+        "evidence": [
+          "page title: \"Invariants | Aviator Documentation\"",
+          "transcript: \"Now these become your invariants.\""
+        ],
+        "first_seen": "20261110-141925-902d07",
+        "published_at": null,
+        "verified_at": "2026-11-10T14:19:25-05:00"
+      }
+    ],
+    "1341863": [],
+    "1352199": [
+      {
+        "type": "blog",
+        "title": "Parsing “Can” from “Should”: How Netflix's Product Team Got Thousands of Creatives to Trust an AI Overhaul",
+        "url": "https://review.firstround.com/netflix-ai-strategy/",
+        "why": "First Round's account of Netflix's internal AI rollout: the organisational side of the same problem the talk treats as a platform question.",
+        "evidence": [
+          "page title: \"Parsing “Can” from “Should”: How Netflix's Product Team Got Thousands of Creatives to Trust an AI Overhaul\""
+        ],
+        "first_seen": "20261110-183326-bc6e12",
+        "published_at": "2026-09-23",
+        "verified_at": "2026-11-10T18:33:26-05:00"
+      },
+      {
+        "type": "youtube",
+        "title": "Scaling AI agent development at Netflix: Production insights with Claude Sonnet 4.5",
+        "url": "https://claude.com/resources/webinars/scaling-ai-agent-development-at-netflix",
+        "why": "A webinar with Netflix engineering leaders on running AI agents in production at Netflix; related background, not this talk.",
+        "evidence": [
+          "page title: \"Scaling AI agent development at Netflix: Production insights with Claude Sonnet 4.5 | Claude by Anthropic\""
+        ],
+        "first_seen": "20261110-183326-bc6e12",
+        "published_at": null,
+        "verified_at": "2026-11-10T18:33:26-05:00"
+      }
+    ],
+    "1356697": [
+      {
+        "type": "blog",
+        "title": "Meet Ramp Research: Our Agentic Data Analyst",
+        "url": "https://engineering.ramp.com/post/meet-ramp-research",
+        "why": "The first example in the talk: Ramp's in-house data analyst agent, connected to the same modeled data (dbt, Looker, Snowflake) that serves its BI.",
+        "evidence": [
+          "page title: \"Meet Ramp Research: Our Agentic Data Analyst | Ramp Builders\"",
+          "transcript: \"Last year, what they did is they made an interactive data analyst.\""
+        ],
+        "first_seen": "20261110-182014-0b317a",
+        "published_at": null,
+        "verified_at": "2026-11-10T18:20:14-05:00"
+      },
+      {
+        "type": "blog",
+        "title": "Open Data Infrastructure needs context engineering to unify data use cases",
+        "url": "https://www.fivetran.com/blog/open-data-infrastructure-needs-context-engineering-to-unify-data-use-cases",
+        "why": "Fivetran's own write-up of the talk's argument: the context engineering that makes data usable by AI is the same work that makes it usable by everyone.",
+        "evidence": [
+          "page title: \"Open Data Infrastructure needs context engineering to unify data use cases | Blog | Fivetran\"",
+          "transcript: \"To connect that AI to context.\""
+        ],
+        "first_seen": "20261110-182014-0b317a",
+        "published_at": null,
+        "verified_at": "2026-11-10T18:20:14-05:00"
+      },
+      {
+        "type": "product",
+        "title": "Build Custom Data Connectors with Python | Fivetran Connector SDK",
+        "url": "https://fivetran.com/docs/connector-sdk",
+        "why": "The demo's ingestion: he builds Python connectors with the Connector SDK (and its agent skill) to replicate the demo's sources.",
+        "evidence": [
+          "page title: \"Build Custom Data Connectors with Python | Fivetran Connector SDK\"",
+          "transcript: \"with our connector SDK skill, and it will bring you beautiful connectors to any data source you desire.\""
+        ],
+        "first_seen": "20261110-182014-0b317a",
+        "published_at": null,
+        "verified_at": "2026-11-10T18:20:14-05:00"
+      },
+      {
+        "type": "product",
+        "title": "Deliver trusted data with dbt | dbt Labs",
+        "url": "https://www.getdbt.com/",
+        "why": "The modeling layer in the demo (ASR: \"DPT\"): dbt models shape the source tables, add the agent schema, and declare the vector index.",
+        "evidence": [
+          "page title: \"Deliver trusted data with dbt | dbt Labs\"",
+          "transcript: \"A bunch of source tables, and then we use DPT.\""
+        ],
+        "first_seen": "20261110-182014-0b317a",
+        "published_at": null,
+        "verified_at": "2026-11-10T18:20:14-05:00"
+      }
+    ],
+    "1379134": [
+      {
+        "type": "youtube",
+        "title": "Syntax - YouTube",
+        "url": "https://www.youtube.com/@syntaxfm",
+        "why": "The channel the talk closes on; the speaker says the longer video on this survey, with expert interviews, is published there.",
+        "evidence": [
+          "page title: \"Syntax - YouTube\"",
+          "transcript: \"And give Syntax a subscribe on YouTube\"",
+          "transcript: \"And the YouTube video goes into a bit more depth\""
+        ],
+        "first_seen": "20261110-141925-902d07",
+        "published_at": null,
+        "verified_at": "2026-11-10T14:19:25-05:00"
+      }
+    ]
+  },
+  "freshness": {
+    "1333169": {
+      "phase": "live",
+      "last_checked": "2026-11-10T18:33:26-05:00",
+      "next_check": "2026-11-11T00:33:26-05:00",
+      "checks": 4
+    },
+    "1341863": {
+      "phase": "live",
+      "last_checked": "2026-11-10T18:33:26-05:00",
+      "next_check": "2026-11-11T00:33:26-05:00",
+      "checks": 2
+    },
+    "1352199": {
+      "phase": "live",
+      "last_checked": "2026-11-10T18:33:26-05:00",
+      "next_check": "2026-11-11T00:33:26-05:00",
+      "checks": 1
+    },
+    "1356697": {
+      "phase": "live",
+      "last_checked": "2026-11-10T18:33:26-05:00",
+      "next_check": "2026-11-11T00:33:26-05:00",
+      "checks": 2
+    },
+    "1379134": {
+      "phase": "live",
+      "last_checked": "2026-11-10T18:33:26-05:00",
+      "next_check": "2026-11-11T00:33:26-05:00",
+      "checks": 4
+    }
+  },
+  "coverage": {
+    "1333169": {
+      "searched": [
+        "roster links (aviator.co, blog author page, x.com/ankitxg, github.com/jainankit, linkedin.com/in/ankitjaindce)",
+        "web: Aviator intent verification invariants review comments Ankit Jain"
+      ],
+      "gaps": [
+        "linkedin.com/in/ankitjaindce answered 999 with no page title naming the person; not corroborated, dropped",
+        "no official recording or slides of this talk found yet"
+      ],
+      "generated_at": "2026-11-10T14:19:25-05:00"
+    },
+    "1341863": {
+      "searched": [
+        "roster links (kvaidya.com, linkedin.com/in/kaavee315, x.com/KaranVaidya6)",
+        "company site: composio.dev"
+      ],
+      "gaps": [
+        "the recording starts about five minutes in, so whatever the opening named (posts, repos, the harness story in the abstract) is unrecorded",
+        "the firewall product he describes is heard only in garbled form; not linked",
+        "\"Composio\" in the transcript may be a Qwen prompt insertion, so no transcript quote is used as evidence here",
+        "no official recording or slides of this talk found yet"
+      ],
+      "generated_at": "2026-11-10T18:22:54-05:00"
+    },
+    "1352199": {
+      "searched": [
+        "roster links (linkedin.com/in/utkarshshrivastava, netflix.com)",
+        "web: Netflix tech blog internal AI assistant MCP enterprise platform",
+        "web: Utkarsh Shrivastava Netflix enterprise AI",
+        "candidates: netflixtechblog.com, about.netflix.com, theorg.com profile, review.firstround.com, claude.com webinar"
+      ],
+      "gaps": [
+        "netflixtechblog.com answered 403 (bot wall); no Netflix Tech Blog post on the internal assistant or its MCP gating was found",
+        "theorg.com profile lists an older data-infrastructure role; the roster's enterprise-AI role is used",
+        "no official recording or slides of this talk found yet"
+      ],
+      "generated_at": "2026-11-10T18:33:26-05:00"
+    },
+    "1356697": {
+      "searched": [
+        "roster links (fivetran.com, linkedin.com/in/george-fraser-a0219230, x.com/frasergeorgew)",
+        "web: George Fraser Fivetran context AI data team business intelligence",
+        "web: Ramp AI data analyst agent blog dbt",
+        "web: OpenAI in-house data agent blog",
+        "candidates: fivetran.com/docs/connector-sdk, getdbt.com"
+      ],
+      "gaps": [
+        "openai.com/index/inside-our-in-house-data-agent (the in-house agent the talk says OpenAI wrote about) answered 403 to the check; not linked",
+        "Stripe's internal data agent (ASR: \"Kai\") and a second company's (ASR: \"Vera\") are named only in garbled form; no post linked",
+        "no official recording or slides of this talk found yet"
+      ],
+      "generated_at": "2026-11-10T18:20:14-05:00"
+    },
+    "1379134": {
+      "searched": [
+        "roster (no links published)",
+        "candidate profiles: scotttolinski.com, x.com/stolinski, github.com/stolinski, syntax.fm, youtube.com/@syntaxfm",
+        "web: Scott Tolinski survey developers mental health AI coding Syntax",
+        "web: Syntax YouTube true cost of AI coding mental health video"
+      ],
+      "gaps": [
+        "the survey the talk reports (\"about 4000 respondents so far\") has no results page found",
+        "the Syntax YouTube video on this topic was not found; the one candidate (youtube.com/watch?v=GEkoGCFpY8c) is on The PrimeTime channel, rejected",
+        "Sentry not added: the transcript's \"executive producer over a century\" is an ASR guess at the employer, not verified",
+        "no official recording or slides of this talk found yet"
+      ],
+      "generated_at": "2026-11-10T14:19:25-05:00"
+    }
+  }
+}

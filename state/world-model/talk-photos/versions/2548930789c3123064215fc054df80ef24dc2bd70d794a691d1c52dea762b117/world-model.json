@@ -1,0 +1,226 @@
+{
+  "photos": {
+    "PXL_20261110_175511716.jpg": {
+      "file": "PXL_20261110_175511716.jpg",
+      "captured_at_utc": "2026-11-10T17:55:11+00:00",
+      "captured_at_local": "2026-11-10T09:55:11-08:00",
+      "sha256": "3c2eab0ff025ce95c7fb70edfbd215c1bf6cfa7136f3ca52015033f9fc5cac0a",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1333169",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_0933_Ankir-Jain (2026-11-10T17:33:30.000Z–2026-11-10T17:56:00.600Z) matched to session 1333169"
+      ],
+      "placed_path": "talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/photos/PXL_20261110_175511716.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_181435938.jpg": {
+      "file": "PXL_20261110_181435938.jpg",
+      "captured_at_utc": "2026-11-10T18:14:35+00:00",
+      "captured_at_local": "2026-11-10T10:14:35-08:00",
+      "sha256": "e7efdcf5cd9971bbd82771afec96db7a061baa73348e7dbdc1e6767e7e5238f7",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1379134",
+      "method": "session+attribution",
+      "confidence": 0.85,
+      "evidence": [
+        "session 1379134 window contains the photo",
+        "note: notes/inbox/2026-11-10T1014-ai-agents-anxiety-and-the-cost-of-too-many-decisions.md names the talk (nearest of 7 notes in the window)",
+        "picked from candidates: 1379134, 1356771, 1373449, 1373450"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_181435938.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_181822800.jpg": {
+      "file": "PXL_20261110_181822800.jpg",
+      "captured_at_utc": "2026-11-10T18:18:22+00:00",
+      "captured_at_local": "2026-11-10T10:18:22-08:00",
+      "sha256": "3961cb11b52a056feb12f5bb7bbc69d4095020d5546a450722019b28ecd3e9a6",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1379134",
+      "method": "session+attribution",
+      "confidence": 0.85,
+      "evidence": [
+        "session 1379134 window contains the photo",
+        "note: notes/inbox/2026-11-10T1019-slides-are-a-3d-model-zooming-between-monitors.md names the talk (nearest of 7 notes in the window)",
+        "picked from candidates: 1379134, 1356771, 1373449, 1373450"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_181822800.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182207872.MP.jpg": {
+      "file": "PXL_20261110_182207872.MP.jpg",
+      "captured_at_utc": "2026-11-10T18:22:07+00:00",
+      "captured_at_local": "2026-11-10T10:22:07-08:00",
+      "sha256": "d0df1e66cd7f6da1cc837965f2fb25db5512d0346670cd111d83d629206c23f2",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1022",
+      "session_id": "1379134",
+      "method": "session+attribution",
+      "confidence": 0.85,
+      "evidence": [
+        "session 1379134 window contains the photo",
+        "note: notes/inbox/2026-11-10T1021-the-visuals-are-amazing.md names the talk (nearest of 7 notes in the window)",
+        "picked from candidates: 1379134, 1356771, 1373449, 1373450"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182207872.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182209724.jpg": {
+      "file": "PXL_20261110_182209724.jpg",
+      "captured_at_utc": "2026-11-10T18:22:09+00:00",
+      "captured_at_local": "2026-11-10T10:22:09-08:00",
+      "sha256": "985293f1ab00ab94e047266d08c37be26718fee35b8678d2a20af68e0daa256f",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1022",
+      "session_id": "1379134",
+      "method": "session+attribution",
+      "confidence": 0.85,
+      "evidence": [
+        "session 1379134 window contains the photo",
+        "note: notes/inbox/2026-11-10T1021-the-visuals-are-amazing.md names the talk (nearest of 7 notes in the window)",
+        "picked from candidates: 1379134, 1356771, 1373449, 1373450"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182209724.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182211766.MP.jpg": {
+      "file": "PXL_20261110_182211766.MP.jpg",
+      "captured_at_utc": "2026-11-10T18:22:11+00:00",
+      "captured_at_local": "2026-11-10T10:22:11-08:00",
+      "sha256": "acf394e676728e21db3d920cff5e976cc5d4977f6e0364eb6cd5c211b80e2d43",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1022",
+      "session_id": "1379134",
+      "method": "session+attribution",
+      "confidence": 0.85,
+      "evidence": [
+        "session 1379134 window contains the photo",
+        "note: notes/inbox/2026-11-10T1021-the-visuals-are-amazing.md names the talk (nearest of 7 notes in the window)",
+        "picked from candidates: 1379134, 1356771, 1373449, 1373450"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182211766.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182817402.jpg": {
+      "file": "PXL_20261110_182817402.jpg",
+      "captured_at_utc": "2026-11-10T18:28:17+00:00",
+      "captured_at_local": "2026-11-10T10:28:17-08:00",
+      "sha256": "31558b141195644957adcaba2273bfbbd06f1d1b4954d73a3193c95033885ad5",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1028",
+      "session_id": "1379134",
+      "method": "session+attribution",
+      "confidence": 0.85,
+      "evidence": [
+        "session 1379134 window contains the photo",
+        "note: notes/inbox/2026-11-10T1030-one-agent-watched-not-parallel-mental-health.md names the talk (nearest of 7 notes in the window)",
+        "picked from candidates: 1379134, 1356771, 1373449, 1373450"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182817402.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182819090.jpg": {
+      "file": "PXL_20261110_182819090.jpg",
+      "captured_at_utc": "2026-11-10T18:28:19+00:00",
+      "captured_at_local": "2026-11-10T10:28:19-08:00",
+      "sha256": "654d32140f189a9b8f449470fac46342b2613c77b1ea84bbe8ac664a8e6746b5",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1028",
+      "session_id": "1379134",
+      "method": "session+attribution",
+      "confidence": 0.85,
+      "evidence": [
+        "session 1379134 window contains the photo",
+        "note: notes/inbox/2026-11-10T1030-one-agent-watched-not-parallel-mental-health.md names the talk (nearest of 7 notes in the window)",
+        "picked from candidates: 1379134, 1356771, 1373449, 1373450"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182819090.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182820893.jpg": {
+      "file": "PXL_20261110_182820893.jpg",
+      "captured_at_utc": "2026-11-10T18:28:20+00:00",
+      "captured_at_local": "2026-11-10T10:28:20-08:00",
+      "sha256": "4e1554d5ad0ed7ac3a2b54dd42cc0e358002c6fdf8733024349a70cdf04592b2",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1028",
+      "session_id": "1379134",
+      "method": "session+attribution",
+      "confidence": 0.85,
+      "evidence": [
+        "session 1379134 window contains the photo",
+        "note: notes/inbox/2026-11-10T1030-one-agent-watched-not-parallel-mental-health.md names the talk (nearest of 7 notes in the window)",
+        "picked from candidates: 1379134, 1356771, 1373449, 1373450"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182820893.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_183242051.jpg": {
+      "file": "PXL_20261110_183242051.jpg",
+      "captured_at_utc": "2026-11-10T18:32:42+00:00",
+      "captured_at_local": "2026-11-10T10:32:42-08:00",
+      "sha256": "474fcc98532a04e2f446a65ca4a399902ca442b3fa53cd789743f37d27f2cc3b",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1379134",
+      "method": "session+attribution",
+      "confidence": 0.85,
+      "evidence": [
+        "session 1379134 window contains the photo",
+        "note: notes/inbox/2026-11-10T1030-one-agent-watched-not-parallel-mental-health.md names the talk (nearest of 7 notes in the window)",
+        "picked from candidates: 1379134, 1356771, 1373449, 1373450"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_183242051.jpg",
+      "status": "placed"
+    }
+  },
+  "placements": {
+    "1333169": {
+      "dir": "talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/photos",
+      "photos": [
+        "PXL_20261110_175511716.jpg"
+      ]
+    },
+    "1379134": {
+      "dir": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos",
+      "photos": [
+        "PXL_20261110_181435938.jpg",
+        "PXL_20261110_181822800.jpg",
+        "PXL_20261110_182207872.MP.jpg",
+        "PXL_20261110_182209724.jpg",
+        "PXL_20261110_182211766.MP.jpg",
+        "PXL_20261110_182817402.jpg",
+        "PXL_20261110_182819090.jpg",
+        "PXL_20261110_182820893.jpg",
+        "PXL_20261110_183242051.jpg"
+      ]
+    }
+  },
+  "event_photos": {},
+  "coverage": {
+    "photos_dir": "photos",
+    "photo_count": 10,
+    "placed_count": 10,
+    "event_count": 0,
+    "review_count": 0,
+    "unplaced_count": 0,
+    "timezone": "America/Los_Angeles",
+    "last_checked": "2026-11-10T13:53:20-05:00",
+    "generated_at": "2026-11-10T13:53:20-05:00"
+  }
+}
