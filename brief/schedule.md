@@ -33,9 +33,9 @@
 
 ## Coverage
 
-**112 of an unknown total sessions verified; source not archived in the truth, page hashes only.** Neither source page states a session total, so this schedule cannot be called complete. 108 sessions come from the schedule page and 4 from the entry page. Last verified 2026-11-11T03:38:27-05:00 (verification pass 5). 7 pages read, 0 truncated.
+**112 of an unknown total sessions verified; source not archived in the truth, page hashes only.** Neither source page states a session total, so this schedule cannot be called complete. 108 sessions come from the schedule page and 4 from the entry page. Last verified 2026-11-11T15:40:35-05:00 (verification pass 6). 7 pages read, 0 truncated.
 
-**27 coverage gaps are open. The main ones:**
+**25 coverage gaps are open. The main ones:**
 
 - **Online talks are missing from this schedule.** The entry page states 7 streamed talks. None are in the schedule data, and no title, time, or stream link is published for them.
 - **The hackathon end time is conflicted.** The official page says 9 PM PT; its linked Luma page says 6 PM PT.
@@ -56,8 +56,6 @@ All gaps, as recorded in the truth:
 - track holds the schedule page's own session-type label (Mainstage Talk, Expo Stage Talk, Workshop, and since this render 'workshopTalk', labelled here 'Workshop Room Talk' because the site publishes no label for it); topics are empty and no thematic track is assigned per session
 - talk title not published, title is the speaker line (2): 1373478, 1373482
 - abstract null on non-MC talks and workshops (5): 1373468, 1373471, 1379009, 1373478, 1373482
-- bio null (3): richelle-ji, ross-cefalu, sydney-runkle
-- affiliation null (2): charlie-meyer, stephen-chin
 - links empty (16): aamir-shakir, ankit-mathur, arsalan-bashir, bradford-chang, doug-clauson, elise-gonzales, jakub-hojsan, james-arthur, louis-walsh, michelle-chen, owen-kephart, richelle-ji, scott-roberts, scott-tolinski, sudhir-tonse, sydney-runkle
 - room clash: Networking Break / Expo Hall Hours @ 2026-11-11T10:40:00-08:00
 - room clash: Expo Hall Hours / Lunch @ 2026-11-11T10:40:00-08:00
@@ -69,7 +67,7 @@ All gaps, as recorded in the truth:
 - unparsed region: entry page 'Online talks // 7 streamed' block: speaker names only, no title, time, or stream link
 - unparsed region: entry page FAQ: answers are not in the served page, questions only
 - unparsed region: venue floorplan images (level-1, level-2-workshop-day, level-2-session-days .avif): not read; room levels come from the map page's area list
-- enrichment pending (3): new speakers whose profile pages were not opened this render: charlie-meyer, richelle-ji, stephen-chin
+- enrichment pending (1): new speakers whose profile pages were not opened this render: richelle-ji
 
 ## Tue, Nov 10: Workshops & Welcome Reception
 
@@ -119,9 +117,9 @@ All gaps, as recorded in the truth:
 - 4:30 PM–4:55 PM · Continental 1–3 (Workshop Room 1) · **Multiplayer software factories - Leading the shift to concurrent delivery** · `talk` · Patrick Debois (Tessl)
   > Your whole team runs coding agents now, and they all land on one main. Continuous delivery wasn't built for that. This talk maps what breaks when a software factory goes multiplayer, and the patterns that fix it: one main for the agents, one board for the people.
 - 4:30 PM–5:30 PM · Continental 4 (Workshop Room 2) · **Our Agents Shipped 6,000 PRs to 600+ Companies in The First Month. Now They Build Features** · `workshop` · Alex Lebedev (PostHog)
-- 4:30 PM–5:30 PM · Continental 6 (Workshop Room 3) · **Do it All with Devin** · `workshop` · Charlie Meyer, Giovanni D'Antonio (Cognition)
+- 4:30 PM–5:30 PM · Continental 6 (Workshop Room 3) · **Do it All with Devin** · `workshop` · Charlie Meyer (Cognition), Giovanni D'Antonio (Cognition)
 - 4:30 PM–5:30 PM · Continental 7–9 (Workshop Room 4) · **Build your first Kiro Crew app: An agent that triages your backlog while you sleep** · `workshop` · Arundeep Nagaraj (AWS), Dan Kiuna (AWS)
-- 5:00 PM–5:25 PM · Continental 1–3 (Workshop Room 1) · **Warning: This Pull Request Contains Graphic Content** · `talk` · Cassandra Chin (and Kids Workshop Instructor), Stephen Chin
+- 5:00 PM–5:25 PM · Continental 1–3 (Workshop Room 1) · **Warning: This Pull Request Contains Graphic Content** · `talk` · Cassandra Chin (and Kids Workshop Instructor), Stephen Chin (Neo4j)
   > AI coding agents can turn a small feature request into a substantial code change and a pull request description that reads like a short novel. Yet the decisions, failed experiments, and human interventions that shaped the result remain buried in agent sessions. Reviewers reconstruct the history, question unsupported claims, and send the PR back for another costly round. Compressing the context into fewer tokens still leaves them searching for the missing connections. TraceToon uses that history to create better PR descriptions and comics grounded in the work behind the diff. With Relate, an embedded, in-memory graph database, TraceToon connects prompts and decisions to code changes and verification runs. It retrieves the evidence neighborhood around each change and turns it into a focused brief for drafting and review. The comic makes the wrong turns and corrections visible, while the technical description explains the behavior, rationale, and checks that support the result. Following a real pull request from Claude Code, Codex, or Antigravity sessions to a finished PR and comic, we’ll show how the graph keeps the story honest: connecting sessions to branch changes, distinguishing an earlier passing test from validation of the submitted code, and preserving uncertainty when evidence is incomplete. We’ll also show how connected evidence, a tuned brief, and cost-effective reviewers work together to improve PR quality and lower total drafting cost in our benchmarks. Attendees will leave with an open source workflow and practical patterns for using graph context and visual storytelling to make agent work easier to understand and review.
 - 5:25 PM–5:30 PM · Continental 1–3 (Workshop Room 1) · **MC Outro** · `talk` · Richelle Ji (Featherless AI)
 - 5:30 PM–8:30 PM · Golden Gate (Expo Hall, Lunch & Reception) · **Opening Reception** · `social` · no speakers listed

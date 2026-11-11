@@ -1,0 +1,132 @@
+---
+title: "What Will You Build When AI Is 10x Faster?"
+speakers:
+  - name: Natalie Serrino
+    affiliation: Gimlet Labs
+room: "Continental 4–6 (Mainstage)"
+starts_at: 2026-11-11T09:10:00-08:00
+ends_at: 2026-11-11T09:30:00-08:00
+format: talk
+recording: 2026-11-11_0911_Natalie-Serrino
+duration: 1050
+source: qwen3-asr-1.7b
+---
+
+> The recording starts as the speaker begins; the MC's introduction is not captured. The last
+> line ("As AI models get better.") is the start of the next introduction.
+>
+> Transcribed locally with Qwen3-ASR 1.7B (timings per ~5 s segment), prompted with the
+> speaker names of overlapping sessions. The Voice Memos transcript is kept beside it as
+> `transcript.txt`.
+
+### 00:00:16 — Opening
+
+It's so good to be here. Thank you for being with me this morning. First session of the day. I see everyone here is a morning person. So I'm here to talk to you about what will you build when AI is 10 times faster. We're all builders here, so we're all thinking about what's next. Just a bit about me. My name is Natalie. I'm a co-founder of Gimlet Labs.
+
+At Gimlet, we're building an inference cloud that's designed to produce much, much faster tokens at high efficiency. Leveraging different categories and types of chips. At Gimlet, I work on our kernel generation side of things. Across different hardware types. Another thing about me is I love agents. I use my coding tools for everything, but I really, really hate waiting.
+
+### 00:01:02 — Isn't inference already fast enough?
+
+And one thing that, given that, kind of surprises me is when you're building an ultra-fast inference cloud. People ask me this all the time, actually. They're like, isn't inference already fast enough? And I'm like, what? But they have a point, right? Because I can do things, and we can all do things with our agents so much faster than we could have done before. For example, this slide here, I actually made pretty using my agent.
+
+And it took me with my agent much less time than it would take. Need to do that by myself. I'm not very good at design. And so I think that from an end-to-end perspective, obviously we're getting more done. But in terms of, is it fast enough? Like that's still. Question. So, let's take a look at what happened when I used my agent to make that slide look pretty. You can see the ugly before slide.
+
+Right. So we're gonna press play here. And I said to my agent, "Can you improve the visual look of this slide?" I love Figma. I use Figma for everything, so of course I'm going to use it with my agents. So what we can see on the bottom here is. The timeline of what happened, and the text is a little small to see. But red is inference. Red is the time spent that the model is in inference.
+
+Green is the time it spent making tool calls, and blue is the time that it spent. Taking my input and. We can see that you know this agent's doing good work. It's doing a lot of thinking, but I'm waiting here. I'm actually waiting so long. I sped up this video 9x because I didn't want all of you to have to wait for the full turnaround. It ended up being about two minutes long, but we can see at the end of this, after my one input, we have this nice, pretty slide at the end.
+
+So you know, on one hand, this is actually much faster than a human can do. But on the other hand, in those about two minutes, I have probably moved on to another task. I'm not really focused on this anymore. I'm context switching.
+
+### 00:02:57 — Lessons from the web era
+
+And when we look to, you know, the inevitable progression of. Inference getting faster and faster. I think it helps to look back in time and look back to the internet era. I mean, we're still in the internet, but like you know, people canonically call the web era. And what we always see with a new shift is that with each new major wave, new capabilities are unlocked. And so we do things that weren't possible before that technology, like using an agent to edit my slide.
+
+So I think we should take a step back to 2000 in the early days of the internet. I think many people here weren't even alive, so it'll be a history lesson for you. And we're going to look at a little application. It's fun to think about it. Squirrelmail is actually open source, so you can run it today. It was a web application for you know doing your email back then.
+
+So on the left, what we have here is I'm running squirrelmail, and I'm running it with. Simulated 2,000 dial-up speeds. And then on the right, it'll run with twenty six speed, so the speed that we're used to today. So the both sides are going to take the same actions, but. The left side, I'm using it with that simulated lower speed internet. And we can see that you know it's doing its job.
+
+Back in 2000, loading an image like this would have blown people's minds. But our modern eyes are like, wow! That took forever to show up. And so we can see these lags. We can see a noticeable thing, but on the same time, someone might have looked at the stack in 2000 and said, "This is fast enough." I don't actually need this to be faster. The thing is, though, all of the major giants back in that era did find out it mattered.
+
+Pretty much every major company, from Amazon to Yahoo to Google to Bing. Or being at Microsoft, like all of them, found that. Even very small delays cost the users. It costs them people coming back. It costs them. People doing as many clicks, it costs them literal money, even. A hundred milliseconds of delay added on to the typical experience. Had a demonstrable impact on the bottom line. And even when you got rid of that delay, those same users didn't come back to the platform.
+
+As often as they did, without that delay. And this makes sense because fast products keep us in flow state. They provide us superior UX. About 100 milliseconds feels instant to us. One seconds, one second of wait. I still keep my train of thought. It's not a big deal. I don't. Ten seconds. We're gonna start turning to something else from a psychology perspective. Maybe we pull out our phone. Maybe switch to another agent. But today. From data from June, the median coding agent turn is 63 seconds.
+
+Each workload has different speed requirements. We don't need the same speed for everything. But over time, our expectations do rise, and the fastest. Today, the fastest internet in the squirrel mail days would feel incredibly slow to us. And we can keep. We can expect that trend to continue for inference speed as well.
+
+### 00:06:01 — More tokens versus faster tokens
+
+There's a problem, though, and the problem is everyone knows that we have massive compute scarcity. Today's infrastructure is under incredible pressure to deliver two things at the same time. More tokens and faster tokens. Unfortunately, these goals are fundamentally at odds because faster tokens require more energy to produce than slower tokens. So with the same energy footprint, you can't make as many of them. Back before this was a session and not a keynote.
+
+Thanks to upgrading this to a keynote, everyone.
+
+### 00:06:33 — The Token Mint Factory game
+
+We're going to play a game that I made. Called Token Mint Factory, and you can actually play this. I will not be offended if you play it right now, even. But just so you know, it does not work on. Phones. It only works on your laptop. And basically, in this game, you're running a token factory. You're printing literal tokens. And there's different modes. The modes are: you can play to maximize how quickly you can put out one single token.
+
+Or you can maximize how many tokens you can put out in sixty seconds. Or you can play the SLA mode, where you have to maintain a. 20 second SLA on each token for it to count, but you're still trying to put out as many as you can. And as we play, you'll quickly see that the strategy is extremely different for doing fast tokens versus doing slow tokens.
+
+And neither one is actually better or worse from a decision perspective. It's just a matter of what the application needs and what makes sense. For your factory, so I took real runs from people in my company that played this game. And I made a Pareto frontier of these tokens in the game. And we can see there's a real-life Pareto frontier of this game as well. If we have faster tokens, we don't have as many. And if we have more tokens, they're not as fast.
+
+But there is a way to get more up and to the right, and up and to the right is where we want to go. We want more faster tokens. I don't want to compromise. I want both. So the game has a concept of adding upgrades to your equipment. And what we can see is that compared to the no upgrade baseline, these technological innovations. Help drive us up into the right and get more tokens and faster tokens.
+
+### 00:08:06 — The right accelerator for the right job
+
+So how do we upgrade our real life assembly lines, so to speak? To make making our actual tokens faster. One thing that we do at Gimlet for this is we really believe that you have to use the right accelerator for the right job. And so we actually take models and we split them up into different pieces. And we run each piece on a different category of accelerator. So we might run one piece of work.
+
+On a GPU, and another piece of the workload on something like an asteroid-centric accelerator. And we find that even with the network overhead, this delivers dramatically faster tokens. It's essentially like the same thing as the. Upgrade to the equipment in the token factory when you better match the accelerator to the job. Unfortunately, we have ended the time of free lunch transistors. Right. So now we have to look to other approaches to make this faster.
+
+And so, with this, it's a little hard to read, but we can see the same real-life Pareto frontier for a frontier model. If you look at you know simple homogenous GPU inference. It's very high throughput, and then the latency drops off a little bit. You don't, you can't get it as fast. Because the y-axis is how many tokens that I can make, and the x-axis has how fast these tokens are for each.
+
+User, and we can see that depending on how you split the model up, because there's different ways of doing it. You can get much faster tokens for the same power footprint. You can get many more tokens. For the same speed, or you can get more and faster tokens. So as an industry, we need to continue pushing, pushing, pushing on this because otherwise, our core data centers are just going to.
+
+### 00:09:43 — Demo: building Snake
+
+So I just wanted to show a quick demo of this. So. Using a coding agent, build the same app using heterogeneous inference that leverages different chip types versus the traditional one. So. This is going to be the game Snake, and we can see on the left. The heterogeneous fast one's done. I can stay in my flow state. I can keep adding things. I can keep. But on the right side, it's still going. And by the way, I still think the left side's too slow. We need to make that even faster.
+
+And then we can add a competitor to the game, and we can see even with the tool calls, even with all the things that. It's doing. It's going to complete, and then the other one will still be hanging because it's. Fundamentally, about how can you drive more efficiency and better performance with the same resources. It's gonna go on. I'm not gonna make you guys wait for this.
+
+### 00:10:37 — When tool calls become the bottleneck
+
+One thing that people often point out too is. Is inference the bottleneck? Our tool calls the bottleneck, and I think this is a great point. If we look back to the turn timeline, from the time that I was spending updating my slide. We could see that 80 percent of it was in France, and 18 percent of it was. Tool calls. If we simulate that same exact thing.
+
+And have 10x faster inference. We can see that 67% of that will be tool. If we don't optimize the tool costs. That's why it's important that we have to constantly attack the bottlenecks of the application and get the low-hanging fruit where we can. Today, people are focused on inference speed, and maybe we haven't optimized the tool call side and how tools are called as much because it's not the bottleneck.
+
+If I cut away the tool calls on the upper one, it wouldn't even really matter to the end application. But once we get much faster, we have to think about how to call these tools much more efficiently and much more performantly, because otherwise they're going to be the reason. That we're all waiting around.
+
+### 00:11:38 — Self-optimizing inference
+
+I think the good news is that optimizing these speeds and what we're all collectively doing as an industry. Is a verifiable task if I know what my inputs and outputs should be. I can have agents do this very full stack, and that's where we're increasingly moving to. We're having. Self-improvement loops with these agents to drive better efficiency on the fly as our inferences. Running and at Gimlet, we're building recursive self-optimization for this.
+
+That pulls from low-level telemetry from our data centers all the way up to the model layer, and trying to use all of it to. Improve the overall efficiency of the workload because if you just optimize one small piece, it might not make that much of a dent.
+
+### 00:12:18 — Demo: a defender on the critical path
+
+I want to show another demo because I think that cybersecurity is on everyone's mind right now. We're all seeing like the huge, incredible advances in AI driving. Awareness that there's all those vulnerabilities in our software. And I think that this is an area where faster inference can really, really help. So this is a dumb fake scenario, but it's a real application in a real demo. Where imagine that you're running the Dog Club, and that's a website for dog lovers to upload and vote on pictures of dogs.
+
+However, unfortunately, like we often see, one of your node dependencies has a vulnerability. And this is a real vulnerability. This was really a Node tar, and. You're running a security agent on your application. And it's trying to monitor live traffic and see is there anything going wrong that I don't know about. This agent doesn't know about this vulnerability, but it does know its job is to protect your application.
+
+So let's do a quick turn with normal user traffic. We're going to upload a dog. Biscuit, and on the upper side we have the application logs, and on the bottom we have the defender. And the defender is monitoring, but it's not in the critical path because it's not fast enough. To actually respond to every user request live, it's monitoring things async. And we can see this gig gets uploaded, and we see that this is an okay, you know, this is an okay upload. The defender doesn't see any problem.
+
+But now what we're going to do is have this. Defender operating when there's a malicious upload, and this upload is expected. Exploiting the real vulnerability, where in Node.js there was a release where you could basically overwrite files that you weren't supposed to overwrite, based. On the destinations and what was the beginning concept. So in this one, we have Ranger, a fake, bad, malicious. Dog, not really a dog, and what we're going to see is that the defender is going to figure out that.
+
+This is a malicious thing. The agent is smart enough to detect that it's doing something that it shouldn't be doing, even though it hasn't. Seen this exact vulnerability before, but unfortunately. Cat's malicious upload has taken over. So your website's gone. It's too late. You didn't react in time. But if we retry this same exact malicious upload, but this time with an ultra fast defender. Again, this is a real, real demo fake use case.
+
+We can see that with ultra fast inference, we can react to things in. Do things online much more quickly, and this should change the way that we think about how to use agents in the first place. We're all thinking about how to use them in an async way, but we should think about. How to use them in online ways as well. So we can see on the bottom that the worker blocked the request, and it was like.
+
+What are you doing? This is obviously wrong.
+
+### 00:15:11 — What does faster unlock?
+
+So, faster internet took us from squirrel mail to. On-demand high-resolution streaming, right? Like, you just look from this to this. It's crazy. If you showed this to my like five-year-old self or something, I would have been like, my mind would have been blown. And this is just one of many things that I can select. So, what does a ten thousand token per second world look like? We're in the like low hundreds today. What does it look like when we get to a million tokens per second?
+
+Like, what does that unlock for us? And I think that we should all ask ourselves this too. It's important in AI to skate to where the puck is moving, right? It's changing so fast. We need to be ready. We need to think boldly. It's not enough to just do what we've always been doing. I think we've all had the experience where. We make an audacious request to our agent, and after the latest model release, it just works.
+
+And it's going to be the same thing with latency, and so. I think that we can think about ideas that are both coming soon when we hit a certain latency threshold. What we can do. But also the stuff that is real-life sci-fi. Like if you look at something like Jarvis or something. There's no way today's inference could be fast enough to power that experience for Ironman, but we will get there.
+
+So I'm really excited about online use cases, online security, online things of like I want to just. Tell my agent what I want to build, and it's building it right in front of me. I don't even have to type anything. I think we're going to have new patterns of interaction. You know, think tap complete for everything. How can we have the user side of things be as quick and immediate as possible? Because the inference side is also just as fast to accommodate it.
+
+And we're going to have so many more agents. We're going to have. And even maybe transformers driving robots, right? There's so much that we can build when this gets unlocked, and I think as builders on the frontier here, we should all be thinking about this too.
+
+### 00:16:59 — Closing
+
+Thank you so much for being with me. This morning, you can find me on X at nserino. We're hiring at Gimlet. Would love to talk to you all. And then if you want to play the token min game. You can also find that QR here. Thank you so much, everyone. As AI models get better.

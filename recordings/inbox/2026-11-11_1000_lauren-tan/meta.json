@@ -1,0 +1,23 @@
+{
+  "title": "lauren tan",
+  "recorded_at": "2026-11-11T10:00:25-08:00",
+  "duration_seconds": 1107.5,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 2766,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261111 100025.m4a",
+  "audio_sha256": "9ea41418cd0dbd7cf577fdc09b748a431e008d178fc66fe5cde77f80be7730f5",
+  "exported_at": "2026-11-11T10:18:59-08:00",
+  "transcript_echo_segments": 0,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 2791,
+      "locale": "en_US"
+    }
+  ]
+}

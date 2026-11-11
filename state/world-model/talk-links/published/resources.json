@@ -92,6 +92,60 @@
       "verified_at": "2026-11-11T09:08:08-08:00"
     }
   ],
+  "1352467": [
+    {
+      "type": "product",
+      "title": "Token Mint — Gimlet Labs",
+      "url": "https://gimletlabs.ai/token-mint-game",
+      "why": "The token-factory game played in the talk: fast tokens versus many tokens, with upgrades that push the Pareto frontier up and to the right.",
+      "evidence": [
+        "page title: \"Token Mint — Gimlet Labs\"",
+        "transcript: \"We're going to play a game that I made.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": null,
+      "verified_at": "2026-11-11T11:10:50-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "The emerging role of SRAM-centric chips in AI inference",
+      "url": "https://gimletlabs.ai/blog/sram-centric-chips",
+      "why": "Gimlet's post (bylined Natalie Serrino) on the SRAM-centric accelerators the talk pairs with GPUs.",
+      "evidence": [
+        "page title: \"The emerging role of SRAM-centric chips in AI inference | Gimlet Blog\"",
+        "transcript: \"On a GPU, and another piece of the workload on something like an asteroid-centric accelerator.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": "2026-03-05",
+      "verified_at": "2026-11-11T11:10:50-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Splitting LLM inference across different hardware platforms",
+      "url": "https://gimletlabs.ai/blog/multivendor-prefill-decode-disaggregation",
+      "why": "The split-the-model-across-chip-types approach behind the talk's heterogeneous inference demo, written up by the speaker.",
+      "evidence": [
+        "page title: \"Splitting LLM inference across different hardware platforms | Gimlet Blog\"",
+        "transcript: \"And so we actually take models and we split them up into different pieces.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": "2025-10-13",
+      "verified_at": "2026-11-11T11:10:50-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Recursive Self-Optimization at Gimlet",
+      "url": "https://gimletlabs.ai/blog/recursive-self-optimization",
+      "why": "The self-improvement loop from data-center telemetry to the model layer that the talk's self-optimizing inference section names.",
+      "evidence": [
+        "page title: \"Recursive Self-Optimization at Gimlet | Gimlet Blog\"",
+        "transcript: \"Running and at Gimlet, we're building recursive self-optimization for this.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": "2026-11-03",
+      "verified_at": "2026-11-11T11:10:50-08:00"
+    }
+  ],
   "1356697": [
     {
       "type": "blog",
@@ -144,6 +198,140 @@
       "first_seen": "20261110-182014-0b317a",
       "published_at": null,
       "verified_at": "2026-11-11T09:08:08-08:00"
+    }
+  ],
+  "1373446": [
+    {
+      "type": "repo",
+      "title": "plugins/pstack at main · cursor/plugins",
+      "url": "https://github.com/cursor/plugins/tree/main/pstack",
+      "why": "pstack, the speaker's skills plugin ('Potato stack') named in the talk; its skills encode the deterministic-check and verification habits she describes.",
+      "evidence": [
+        "page title: \"plugins/pstack at main · cursor/plugins · GitHub\"",
+        "transcript: \"I made this new skill called State Chart in my plugin P Stack.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": null,
+      "verified_at": "2026-11-11T11:10:50-08:00"
+    },
+    {
+      "type": "repo",
+      "title": "plugins/pstack/skills/statechart at main · cursor/plugins",
+      "url": "https://github.com/cursor/plugins/tree/main/pstack/skills/statechart",
+      "why": "The statechart skill itself: state machines drawn from the user's point of view, reviewed alongside videos and screenshots.",
+      "evidence": [
+        "page title: \"plugins/pstack/skills/statechart at main · cursor/plugins · GitHub\"",
+        "transcript: \"Potato stack, which helps you visualize state machines from the user's point of view.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": null,
+      "verified_at": "2026-11-11T11:10:50-08:00"
+    },
+    {
+      "type": "repo",
+      "title": "plugins/pstack/skills/no-comments at main · cursor/plugins",
+      "url": "https://github.com/cursor/plugins/tree/main/pstack/skills/no-comments",
+      "why": "The pstack skill behind the talk's 'ban 99% of comments' rule.",
+      "evidence": [
+        "page title: \"plugins/pstack/skills/no-comments at main · cursor/plugins · GitHub\"",
+        "transcript: \"Ban 99% of comments because.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": null,
+      "verified_at": "2026-11-11T11:10:50-08:00"
+    },
+    {
+      "type": "repo",
+      "title": "antithesishq/bombadil: Property-based testing for web and terminal UIs",
+      "url": "https://github.com/antithesishq/bombadil",
+      "why": "The property-based UI testing library the talk names; the Qwen transcript renders it \"Duckbill\", the Voice Memos transcript \"bombadil\".",
+      "evidence": [
+        "page title: \"GitHub - antithesishq/bombadil: Property-based testing for web and terminal UIs · GitHub\"",
+        "transcript: \"Another thing that we just started looking at is property-based testing as well for UIs.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": null,
+      "verified_at": "2026-11-11T11:10:50-08:00"
+    },
+    {
+      "type": "product",
+      "title": "My TLA+ Home Page",
+      "url": "https://lamport.azurewebsites.net/tla/tla.html",
+      "why": "TLA+, which the Grok Bot team uses to model-check major user flows such as cross-device notifications.",
+      "evidence": [
+        "page title: \"My TLA+ Home Page\"",
+        "transcript: \"So we now use TLA+ to do some model checking.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": null,
+      "verified_at": "2026-11-11T11:10:50-08:00"
+    }
+  ],
+  "1373457": [
+    {
+      "type": "blog",
+      "title": "Introducing Clef: our open-source decision models, and new RL fine-tuning platform",
+      "url": "https://blog.cloudflare.com/clef-decision-models/",
+      "why": "The launch post (co-authored by the speaker) for Clef, the System One decision model the talk says Cloudflare trained over a weekend.",
+      "evidence": [
+        "page title: \"Introducing Clef: our open-source decision models, and new RL fine-tuning platform | Cloudflare Blog\"",
+        "transcript: \"And so we ended up with a model called CLUF.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": "2026-10-01",
+      "verified_at": "2026-11-11T11:10:50-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Introducing Clairic, a new System One class of extraction models",
+      "url": "https://blog.cloudflare.com/clairic-extraction-model/",
+      "why": "The launch post (co-authored by the speaker) for Clairic, the extraction model that turns unstructured input into typed JSON.",
+      "evidence": [
+        "page title: \"Introducing Clairic, a new System One class of extraction models | Cloudflare Blog\"",
+        "transcript: \"We're calling it an extraction model.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": "2026-10-19",
+      "verified_at": "2026-11-11T11:10:50-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Powering the agents: Workers AI now runs large models, starting with Kimi K2.5",
+      "url": "https://blog.cloudflare.com/workers-ai-large-models/",
+      "why": "The March 2026 pivot to serving trillion-parameter models that the talk describes, co-authored by the speaker.",
+      "evidence": [
+        "page title: \"Powering the agents: Workers AI now runs large models, starting with Kimi K2.5 | Cloudflare Blog\"",
+        "transcript: \"So in March 2026, we launched.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": "2026-03-19",
+      "verified_at": "2026-11-11T11:10:50-08:00"
+    },
+    {
+      "type": "product",
+      "title": "Overview · Cloudflare Durable Objects docs",
+      "url": "https://developers.cloudflare.com/durable-objects/",
+      "why": "The stateful compute primitive the talk says agents run on (the CI-triage demo's agent runs on a durable object).",
+      "evidence": [
+        "page title: \"Overview · Cloudflare Durable Objects docs\"",
+        "transcript: \"And then we followed with other compute primitives like durable objects, which are more stateful.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": null,
+      "verified_at": "2026-11-11T11:10:50-08:00"
+    },
+    {
+      "type": "product",
+      "title": "Agents · Cloudflare Agents docs",
+      "url": "https://developers.cloudflare.com/agents/",
+      "why": "Cloudflare's agent framework: the 'agent cloud' the talk's primitives add up to.",
+      "evidence": [
+        "page title: \"Agents · Cloudflare Agents docs\"",
+        "transcript: \"Agent Cloud story, and so we started telling this narrative that we want to be the agent cloud.\""
+      ],
+      "first_seen": "20261111-111050-472211",
+      "published_at": null,
+      "verified_at": "2026-11-11T11:10:50-08:00"
     }
   ],
   "1379134": [

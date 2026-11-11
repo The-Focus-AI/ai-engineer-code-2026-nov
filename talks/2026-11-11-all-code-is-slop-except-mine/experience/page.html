@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Code is memory · Lauren Tan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .alongside { margin: 1.2rem 0; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: .3rem; font: .88rem/1.55 var(--sans); }
+  .alongside b { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; display: block; margin-bottom: .2rem; }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  code { font: .88em var(--mono); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Wed 11 Nov 2026 · Mainstage</div>
+  <h1>Code is memory</h1>
+  <p class="dek">Lauren Tan (“Potato”) shipped three thousand pull requests to production in a month. Her talk is about why that volume doesn't turn into slop. Read with the notes taken in the room, it comes down to one idea: the codebase is the agent's memory, and verification loops are how you keep that memory clean.</p>
+  <div class="talk-meta">Lauren Tan, SpaceXSI (xAI) · 18 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual quote-card" data-visual="v1">
+        <p class="quote-big">“And well, with agents, anyone can now be a coding machine”<span>Lauren Tan · 00:01:40</span></p>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="organic-architecture.jpg" alt="Lauren Tan on stage in front of a slide titled Organic Architecture: concrete towers overgrown with plants and trees.">
+        <figcaption>Her “Organic Architecture” slide, 10:05 am (cropped from photos/PXL_20261111_180543709.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="dune-slide.jpg" alt="Slide: dune, a framework for agents. An app framework box (navigation, rendering, IPC) plus three rules: one folder per feature, strict import bans, no comments in code.">
+        <figcaption>Her Dune slide, 10:06 am (straightened from photos/PXL_20261111_180633895.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v4">
+        <img src="property-testing.jpg" alt="Lauren Tan beside a slide titled ui property based testing, linking github.com/antithesishq/bombadil, showing a chat window flooded with random generated input.">
+        <figcaption>UI property-based testing with bombadil, 10:13 am (cropped from photos/PXL_20261111_181315486.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v5">
+        <div class="lbl">Inner loop first, then the factory</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="An inner loop of codebase, deterministic checks and verification must be solid before an outer loop of fuzzing, fixing and auto-merging is built on top; automating a sloppy inner loop just multiplies slop.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="130" width="360" height="100" rx="10" fill="var(--panel)" stroke="var(--accent)"/>
+            <text x="34" y="150" fill="var(--accent)" font-weight="600">inner loop · build this first</text>
+            <g fill="var(--card)" stroke="var(--rule)">
+              <rect x="34" y="162" width="104" height="52" rx="6"/><rect x="148" y="162" width="104" height="52" rx="6"/><rect x="262" y="162" width="104" height="52" rx="6"/>
+            </g>
+            <g fill="var(--ink)" text-anchor="middle" font-weight="600">
+              <text x="86" y="184">clean codebase</text><text x="200" y="184">checks, not</text><text x="314" y="184">verification</text>
+            </g>
+            <g fill="var(--muted)" text-anchor="middle" font-size="10">
+              <text x="86" y="200">what agents copy</text><text x="200" y="200">comments</text><text x="314" y="200">evidence to review</text>
+            </g>
+            <rect x="60" y="30" width="280" height="62" rx="10" fill="var(--card)" stroke="var(--rule)"/>
+            <text x="200" y="52" text-anchor="middle" fill="var(--ink)" font-weight="600">outer loop · the factory</text>
+            <text x="200" y="70" text-anchor="middle" fill="var(--muted)" font-size="10">every release: agents fuzz the app,</text>
+            <text x="200" y="83" text-anchor="middle" fill="var(--muted)" font-size="10">open fixes, auto-merge</text>
+            <line x1="200" y1="92" x2="200" y2="128" stroke="var(--accent)" stroke-width="2"/>
+            <text x="210" y="114" fill="var(--muted)" font-size="10">built on top</text>
+            <text x="200" y="246" text-anchor="middle" fill="var(--muted)" font-size="10">sloppy inner loop + automation = more slop</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from her close at 00:16:10; not her slide</figcaption>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="coding-machines" data-visual="v1" data-caption="Every engineer is a team of agents">
+      <div class="chapter">The volume</div>
+      <h2>Everyone is a coding machine now</h2>
+      <p>Before agents, a few engineers were “coding machines”, wildly productive outliers. Now anyone can be one. She used to review three pull requests a day from colleagues; now it's more like three hundred. Every engineer is a team of hundreds of agents, and code arrives as a continuous stream.</p>
+      <p>Her thesis: the engineer's job is now to keep, or raise, code quality while productivity explodes, and the way to do that is trust. Not blind trust, but an environment built so you can trust agents to do the right thing. It took her six months to get there.</p>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:40, 00:04:26</p>
+    </section>
+
+    <section data-chapter="code-is-memory" data-visual="v2" data-caption="Agents copy what they find">
+      <div class="chapter">The memory</div>
+      <h2>Code is memory</h2>
+      <p>Agents produce output from their inputs, and the codebase is the biggest input. So it works like memory: workarounds, anti-patterns, deprecated code and tech debt get copied by the next agent, because they look like the established pattern. Her image is a garden where weeds spread before you notice; constraints and guardrails are the concrete that new code grows around. She calls it organic architecture.</p>
+      <blockquote>“So you want to make your codebase as pristine as possible, so that agents are always copying the right stuff.”<span class="cite">00:04:26</span></blockquote>
+      <p>Dune, the client framework they built (she describes it as Next.js for Electron apps), encodes those lessons as constraints. Anything that needs nuance gets banned: React's <code>useEffect</code> is allowed only inside a few framework APIs, so the problem is gone rather than caught in review. Folder structure carries context too: main-thread and renderer code sit in two top-level directories, and imports between them are blocked by a dependency check.</p>
+      <div class="reading"><b>From the notes:</b> “code is memory”, and “nuance tends to create slop, so just design better APIs”. The codebase isn't only what agents edit; it's what they remember.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:02:55, 00:04:26, 00:05:56</p>
+    </section>
+
+    <section data-chapter="comment-slop" data-visual="v3" data-caption="Every correction becomes a check">
+      <div class="chapter">The rule</div>
+      <h2>Comment slop</h2>
+      <p>Agents write a lot of markdown: docs, code comments, rules, skills. They use it to justify not doing something, or to turn one small correction into a rule that can never be broken. Her example from earlier work on Cursor: agents patched an architecture clash with timers and wrote comments explaining why each quick fix was fine. The timers spread and the app got slower.</p>
+      <p>So they banned 99% of comments. Comments go stale, people don't read them, they give agents an excuse, and nothing enforces them. Lint rules with helpful error messages tell the agent to fix the root cause instead. It's her trust pyramid: prefer the code itself, then linters, types and tests, then verification, and only a thin layer of prose rules last.</p>
+      <blockquote>“And so our general principle is that every time we correct our agents, it turns into one of these deterministic checks.”<span class="cite">00:07:54</span></blockquote>
+      <p>Do that enough and there is less and less to look for in review, until most pull requests can merge without a person reading them.</p>
+      <div class="reading"><b>From the notes:</b> “comment slop”, and “stop agents from writing unsolicited markdown”. The comment is the slop, because it can't be checked.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:02:55, 00:07:54</p>
+    </section>
+
+    <section data-chapter="review-evidence" data-visual="v4" data-caption="Review the proof, not the diff">
+      <div class="chapter">The loop</div>
+      <h2>Review the evidence, not the code</h2>
+      <p>What replaces reading code is verification. Review has shrunk to looking at artifacts: videos, screenshots, a feature map of what the app does from the user's side. Agents run the app themselves through the same debugging tools people use.</p>
+      <blockquote>“And our code review process has now really shrunk into looking at verification artifacts.”<span class="cite">00:10:40</span></blockquote>
+      <p>Then formal verification, which she still treats as an experiment. TLA+ model-checks whole user flows, such as notifications arriving across several devices. Lean proves specific algorithms: their own list-virtualization library, checked so it can't flicker or jitter. It has already found real bugs, and she is clear it is not a silver bullet. For the interface, property-based testing with bombadil explores the app looking for broken rules. A tweet she cites says 70 percent of one developer's daily tokens now go to verification, and she says that matches her own.</p>
+      <blockquote>“And really, we are entering a golden age of software testing”<span class="cite">00:12:50</span></blockquote>
+      <div class="alongside"><b>Read alongside</b>Her <a href="https://github.com/cursor/plugins/tree/main/pstack">pstack</a> plugin makes this routine. The statechart skill has the agent write a TLA+ model, check it, and draw what the user sees, marking each broken rule with the shortest path to it; rules come only from behavior a person agrees to and are never weakened to pass. Other skills turn one proved property into a check that reruns on every change, and tell model drift from real bugs.</div>
+      <div class="reading"><b>From the notes:</b> “code review has become looking at verification artifacts”, and the read of the whole talk: “this is all about verification loops really”. It is the move Ankit Jain made yesterday: review intent and evidence, not diffs.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:10:40, 00:12:50</p>
+    </section>
+
+    <section data-chapter="bad-loop" data-visual="v5" data-caption="Then automate">
+      <div class="chapter">The factory</div>
+      <h2>Don't automate a bad loop</h2>
+      <p>The payoff: the team shipped eleven thousand pull requests to production, cuts a stable release about once a day, and 227 people contributed at least one pull request in October. The share of reverted pull requests has fallen to about half a percent, and the app got faster at startup, typing and switching chats.</p>
+      <blockquote>“A ridiculous eleven thousand pull requests to production, which is a wild number.”<span class="cite">00:14:22</span></blockquote>
+      <p>Her warning comes before any of that: fix the codebase first, clean up old patterns, and make verification strong, because that work is the prerequisite for automation. Then the outer loop is easy: every release now spins up agents that fuzz the build like a real user, open fixes for what they find, and auto-merge them.</p>
+      <blockquote>“Then automating that loop just produces more slop.”<span class="cite">00:16:10</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “don't automate a bad loop”. Clean memory and real verification are what make the factory safe to build.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:14:22, 00:16:10</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room) and on notes taken during the talk. Quotes are verbatim from the transcript, which garbles the product name and some tools (“Lean”, “bombadil”); the names here are checked against the Apple transcript and the links page. “From the notes” is the reading taken in the room; “Read alongside” is her published plugin; the loop diagram is illustrative. More on the <a href="../links.md">links page</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

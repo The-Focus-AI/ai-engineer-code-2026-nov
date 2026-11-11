@@ -223,5 +223,134 @@
       }
     ],
     "status": "matched"
+  },
+  "2026-11-11_0904_swyx": {
+    "session_id": null,
+    "confidence": 0.4,
+    "method": "time+transcript",
+    "evidence": [
+      "transcript.qwen3-asr-1.7b.txt: \"we're so happy to open the show for you\"",
+      "transcript.qwen3-asr-1.7b.txt: \"So nice to have him MC as well\"",
+      "transcript.qwen3-asr-1.7b.txt: \"AIE code is. Kind of our vertical, very focused, smaller format.\"",
+      "transcript.qwen3-asr-1.7b.txt: \"Swix will be there. I will not\"",
+      "title: \"swyx\" (not a roster speaker; no session lists swyx, so it is neither confirmation nor attribution)",
+      "note: notes/inbox/2026-11-11T0908-what-is-major-league-hacking.md — captured 09:08 inside the recording, talk: null, kind: question (no attribution)",
+      "note: notes/inbox/2026-11-11T0925-swyx-clip-stays-a-side-clip.md — kind: decision, session_id null (the operator decided it stays a side clip, filed to no talk)"
+    ],
+    "candidates": [
+      {
+        "session_id": "1376240",
+        "why": "MC Intro, Mainstage 09:00–09:10: the recording (09:04:48–09:08:38) sits inside the slot and is the organizers' opening welcome — year in review, team, 2027 plans, MLH hackathon, AIE kids, Sydney; but the speaker refers to the MC in the third person and never names Corey Quinn or Duckbill, and the session has no abstract to answer, so nothing identifies the session or its speaker",
+        "confidence": 0.4
+      },
+      {
+        "session_id": "1352467",
+        "why": "What Will You Build When AI Is 10x Faster?, Mainstage 09:10–09:30: begins 1½ minutes after the recording ended; nothing in the transcript touches inference speed or Gimlet",
+        "confidence": 0.02
+      }
+    ],
+    "status": "needs-review"
+  },
+  "2026-11-11_0911_Natalie-Serrino": {
+    "session_id": "1352467",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos, unprompted): \"My name's Natalie. I'm a co-founder of Gimlet Labs.\" (self-introduction; names the speaker and her company)",
+      "transcript.txt (Voice Memos, unprompted): \"So I'm here to talk to you about what will you build when AI is 10 times faster?\" (names the talk)",
+      "title: \"Natalie Serrino\" (folder title exactly names the speaker of 1352467)",
+      "note: notes/inbox/2026-11-11T0916-research-fast-token-inference.md — session_id 1352467, talk: talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/ (captured 09:16, inside the recording)",
+      "time: recorded 09:11:14 for 17½ min, inside the 09:10–09:30 Mainstage slot"
+    ],
+    "candidates": [
+      {
+        "session_id": "1352467",
+        "why": "self-introduction names Natalie and Gimlet Labs and the talk title; recorded 09:11–09:28 inside the slot; exact-name folder title",
+        "confidence": 0.95
+      },
+      {
+        "session_id": "1376240",
+        "why": "MC Intro 09:00–09:10 ended before the recording began; the recording is the speaker's talk, not the MC",
+        "confidence": 0.01
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-11_0929_Lydia-Halley": {
+    "session_id": null,
+    "confidence": 0.85,
+    "method": "time+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos, unprompted): \"Sorry, we have some technical issues this morning, so hopefully everything works.\"",
+      "transcript.txt (Voice Memos, unprompted): \"I'm told that this might be the 1st time that an anthropic employee\" (the MC, during the laptop failure; names the speaker's company)",
+      "transcript.txt (Voice Memos, unprompted): \"Lydia, yeah.\"",
+      "transcript.qwen3-asr-1.7b.txt: \"we went from being super in the loop with our code\" (the only line of the talk itself in the recording)",
+      "title: \"Lydia Halley\" (resembles but does not exactly match the roster name Lydia Hallie: attribution, not operator confirmation)",
+      "why not filed: the 9-minute recording is the AV failure, the MC filling time, and conversation beside the recorder; beyond a one-sentence \"TLDR\" the talk was not captured, so there is no talk to clean. It ends on \"Eight minutes is rough\"; whether the talk ran after the recorder stopped is not known. An operator decision note can file it (time+operator) or leave it as a side clip."
+    ],
+    "candidates": [
+      {
+        "session_id": "1373455",
+        "why": "recorded 09:29–09:38 in the slot (09:30–09:50, program running early); the MC names an Anthropic employee with laptop trouble and \"Lydia\"; but almost none of the talk is in the recording",
+        "confidence": 0.85
+      },
+      {
+        "session_id": "1373457",
+        "why": "the next Mainstage slot; the recording ends at 09:38:21, before the Cloudflare introduction that opens 2026-11-11_0939_cloudflare at 09:39:42",
+        "confidence": 0.02
+      }
+    ],
+    "status": "needs-review"
+  },
+  "2026-11-11_0939_cloudflare": {
+    "session_id": "1373457",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos, unprompted): \"Please welcome Michelle Chen, group product manager at Cloudflare.\" (the MC names the speaker and her company)",
+      "transcript.txt (Voice Memos, unprompted): \"Chatting a little bit more about why Coudflair became a NALab.\" (names the talk, as transcribed)",
+      "title: \"cloudflare\" (folder title names the speaker's company)",
+      "note: notes/inbox/2026-11-11T0941-life-understood-backwards-kierkegaard.md — session_id 1373457 (captured 09:41, inside the recording)",
+      "time: recorded 09:39:42 for 20 min; the program ran about ten minutes early (slot 09:50–10:10; the operator reported the talk under way by 09:41)"
+    ],
+    "candidates": [
+      {
+        "session_id": "1373457",
+        "why": "the MC introduces Michelle Chen of Cloudflare and she names the talk; 20-minute recording matches the 20-minute slot shifted ten minutes early",
+        "confidence": 0.95
+      },
+      {
+        "session_id": "1373455",
+        "why": "scheduled 09:30–09:50, overlapping the recording's start; nothing in the recording names Lydia Hallie or Claude Code best practices",
+        "confidence": 0.02
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-11_1000_lauren-tan": {
+    "session_id": "1373446",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos, unprompted): \"Near at SpaceX Super Intelligence.\" (the end of the MC's introduction; names the speaker's company, SpaceXSI)",
+      "transcript.txt (Voice Memos, unprompted): \"my name is potato\" (self-introduction by her handle, poteto)",
+      "transcript.qwen3-asr-1.7b.txt: \"Also known as Lauren\" (transcript in force; prompted, so attribution only)",
+      "title: \"lauren tan\" (folder title exactly names the speaker of 1373446)",
+      "note: notes/inbox/2026-11-11T1005-code-is-memory.md — session_id 1373446 (captured 10:05, inside the recording)",
+      "time: recorded 10:00:25 for 18½ min; the program ran about ten minutes early (slot 10:10–10:30)"
+    ],
+    "candidates": [
+      {
+        "session_id": "1373446",
+        "why": "the MC names SpaceX Superintelligence and the speaker introduces herself as Potato/Lauren; talk on turning slop into gold matches the abstract; exact-name folder title",
+        "confidence": 0.95
+      },
+      {
+        "session_id": "1373457",
+        "why": "scheduled 09:50–10:10, overlapping the recording's start; already claimed by 2026-11-11_0939_cloudflare, whose MC introduction names Michelle Chen",
+        "confidence": 0.01
+      }
+    ],
+    "status": "matched"
   }
 }

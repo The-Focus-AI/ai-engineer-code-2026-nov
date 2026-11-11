@@ -42,6 +42,16 @@
     ],
     "extracted_at": "2026-11-10T18:34:20-05:00"
   },
+  "1352467": {
+    "sections_read": 12,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "the MC's introduction was not recorded; the last line is the next introduction",
+      "Qwen garbles some terms: \"asteroid-centric accelerator\" for SRAM-centric (00:08:06), \"in France\" for inference (00:10:37), \"twenty six speed\" for 2026 speed (00:02:57), \"Token Mint Factory\" / \"token min game\" for Token Mint (00:06:33, 00:16:59)"
+    ],
+    "extracted_at": "2026-11-11T11:13:17-08:00"
+  },
   "1356697": {
     "sections_read": 13,
     "claims_found": 6,
@@ -52,6 +62,29 @@
       "\"DPT\" (00:15:24) is likely dbt; companies \"Kai\" and \"Vera\" (00:03:18) are garbled names of Stripe's and another firm's agents"
     ],
     "extracted_at": "2026-11-10T18:21:22-05:00"
+  },
+  "1373446": {
+    "sections_read": 10,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "the recording opens on the end of the MC's introduction",
+      "Grok Bot is garbled (\"GAPA\", \"Grokbot\", \"Grovbot\", \"Groppo\", \"Gau\", \"GraphR\"); \"Duckbill\" (00:10:40) is an ASR prompt artifact for bombadil",
+      "Qwen garbles common words: \"polar bears\" for pull requests (00:01:40), \"Coinbase\" for codebase and \"reagents\" for our agents (00:02:55), \"garbage\" likely gardening (00:04:26), \"condoms\" for comments, \"pingers\" for timers, \"mid rules\" for lint rules, \"Asians\" for agents (00:07:54), \"court review\" / \"COVID\" for code review (00:05:56), \"leaning as ball\" unclear (00:10:40), \"documentation\" likely verification (00:12:50)"
+    ],
+    "extracted_at": "2026-11-11T11:13:17-08:00"
+  },
+  "1373457": {
+    "sections_read": 14,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "the recording opens on the MC's introduction (\"Group Product Manager at Club\" for Cloudflare)",
+      "model names are garbled: \"CLUF\", \"CLEF\" for Clef; \"Cleric\", \"Claire\", \"CLiRE\", \"Clarif\", \"playeric\" for Clairic; \"Claflash\" likely Clef-flash; \"Jet\", \"Chat\", \"JAG\", \"Jasper\", \"duck\" for Jev (00:07:50–00:18:14)",
+      "\"new lab\", \"needle app\", \"game lab\" for neolab; the launch dates at 00:09:53 (\"November 15th\", \"September eighteenth\") are garbled",
+      "\"Anthropic\" (00:00:56) and \"Claude\" (00:11:35) may be ASR prompt artifacts; \"PyDurable\" (00:14:06) unidentified"
+    ],
+    "extracted_at": "2026-11-11T11:13:17-08:00"
   },
   "1379134": {
     "sections_read": 16,

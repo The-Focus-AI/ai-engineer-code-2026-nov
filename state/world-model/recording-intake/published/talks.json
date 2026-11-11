@@ -177,5 +177,95 @@
     ],
     "word_count": 4075,
     "cleaned_at": "2026-11-10T14:34:02-05:00"
+  },
+  "1352467": {
+    "slug": "2026-11-11-what-will-you-build-when-ai-is-10x-faster",
+    "path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/transcript.md",
+    "title": "What Will You Build When AI Is 10x Faster?",
+    "speakers": [
+      {
+        "name": "Natalie Serrino",
+        "affiliation": "Gimlet Labs"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-11T09:10:00-08:00",
+    "source_recording": "2026-11-11_0911_Natalie-Serrino",
+    "sections": [
+      "00:00:16 — Opening",
+      "00:01:02 — Isn't inference already fast enough?",
+      "00:02:57 — Lessons from the web era",
+      "00:06:01 — More tokens versus faster tokens",
+      "00:06:33 — The Token Mint Factory game",
+      "00:08:06 — The right accelerator for the right job",
+      "00:09:43 — Demo: building Snake",
+      "00:10:37 — When tool calls become the bottleneck",
+      "00:11:38 — Self-optimizing inference",
+      "00:12:18 — Demo: a defender on the critical path",
+      "00:15:11 — What does faster unlock?",
+      "00:16:59 — Closing"
+    ],
+    "word_count": 3208,
+    "cleaned_at": "2026-11-11T11:01:36-08:00"
+  },
+  "1373457": {
+    "slug": "2026-11-11-cloudflare-is-a-neolab",
+    "path": "talks/2026-11-11-cloudflare-is-a-neolab/transcript.md",
+    "title": "cloudflare is a neolab",
+    "speakers": [
+      {
+        "name": "Michelle Chen",
+        "affiliation": "Cloudflare"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-11T09:50:00-08:00",
+    "source_recording": "2026-11-11_0939_cloudflare",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:00:56 — Life understood backwards",
+      "00:01:45 — From CDN to compute",
+      "00:03:47 — Storage and the developer platform",
+      "00:04:24 — Workers AI and the small-model hypothesis",
+      "00:06:16 — Serving the giant models",
+      "00:06:55 — The agent cloud story",
+      "00:07:50 — The east wind: system one models",
+      "00:09:53 — Building our own in a weekend",
+      "00:11:35 — An extraction model",
+      "00:13:18 — Why Cloudflare had to become a neolab",
+      "00:14:06 — Demo: triaging a failed CI build",
+      "00:18:14 — What people are building",
+      "00:18:56 — Going onward"
+    ],
+    "word_count": 3887,
+    "cleaned_at": "2026-11-11T11:01:36-08:00"
+  },
+  "1373446": {
+    "slug": "2026-11-11-all-code-is-slop-except-mine",
+    "path": "talks/2026-11-11-all-code-is-slop-except-mine/transcript.md",
+    "title": "All Code Is Slop (Except Mine)",
+    "speakers": [
+      {
+        "name": "Lauren Tan",
+        "affiliation": "SpaceXSI (xAI)"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-11T10:10:00-08:00",
+    "source_recording": "2026-11-11_1000_lauren-tan",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:01:40 — Coding machines and trust",
+      "00:02:55 — From low trust to high trust",
+      "00:04:26 — The codebase as a garden",
+      "00:05:56 — Dune and organic architecture",
+      "00:07:54 — Agents and markdown",
+      "00:10:40 — Verification",
+      "00:12:50 — Where the tokens go",
+      "00:14:22 — The promised land",
+      "00:16:10 — Before you build a software factory"
+    ],
+    "word_count": 2756,
+    "cleaned_at": "2026-11-11T11:01:36-08:00"
   }
 }

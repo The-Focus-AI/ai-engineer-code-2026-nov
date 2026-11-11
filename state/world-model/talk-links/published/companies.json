@@ -42,6 +42,17 @@
       ]
     }
   ],
+  "1352467": [
+    {
+      "name": "Gimlet Labs",
+      "url": "https://gimletlabs.ai/",
+      "what": "Gimlet Labs is an applied research lab focused on building high performance AI systems.",
+      "evidence": [
+        "page title: \"Gimlet Labs\"",
+        "transcript: \"At Gimlet, we're building an inference cloud that's designed to produce much, much faster tokens at high efficiency.\""
+      ]
+    }
+  ],
   "1356697": [
     {
       "name": "Fivetran",
@@ -50,6 +61,28 @@
       "evidence": [
         "page title: \"Fivetran | Automated data movement platform\"",
         "transcript: \"And this is how we do it at Fivetran.\""
+      ]
+    }
+  ],
+  "1373446": [
+    {
+      "name": "SpaceXSI (xAI)",
+      "url": "https://github.com/xai-org",
+      "what": "Understand the Universe.",
+      "evidence": [
+        "page title: \"SpaceXSI Org · GitHub\"",
+        "roster: affiliation SpaceXSI (xAI)"
+      ]
+    }
+  ],
+  "1373457": [
+    {
+      "name": "Cloudflare (Workers AI)",
+      "url": "https://developers.cloudflare.com/workers-ai/",
+      "what": "Run machine learning models, powered by serverless GPUs, on Cloudflare's global network.",
+      "evidence": [
+        "page title: \"Overview · Cloudflare Workers AI docs\"",
+        "transcript: \"So in 2023, we launched a product called Workers AI, where we added GPUs to our network.\""
       ]
     }
   ],

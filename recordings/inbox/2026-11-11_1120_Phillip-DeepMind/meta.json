@@ -1,0 +1,23 @@
+{
+  "title": "Phillip DeepMind",
+  "recorded_at": "2026-11-11T11:20:37-08:00",
+  "duration_seconds": 976.5,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 2863,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261111 112037.m4a",
+  "audio_sha256": "7268a9550d8c0a6c179aa8298cf1572a3c21ffb776d6e1e57be5738db5f3ef31",
+  "exported_at": "2026-11-11T11:37:03-08:00",
+  "transcript_echo_segments": 0,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 2891,
+      "locale": "en_US"
+    }
+  ]
+}

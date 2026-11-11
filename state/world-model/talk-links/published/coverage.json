@@ -55,6 +55,19 @@
     ],
     "generated_at": "2026-11-10T18:33:26-05:00"
   },
+  "1352467": {
+    "searched": [
+      "roster links (gimletlabs.ai/blog, linkedin.com/in/natalieserrino, x.com/nserrino)",
+      "user note: gimletlabs.ai/token-mint-game",
+      "gimletlabs.ai/blog index: posts matched to the talk's SRAM-centric, model-splitting and self-optimization sections"
+    ],
+    "gaps": [
+      "linkedin.com/in/natalieserrino (from the roster) answered 999 with no page title naming her; not corroborated, dropped",
+      "gimletlabs.ai/blog (from the roster) is the company blog, not a personal page; used for resources, not as her site",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-11T11:10:50-08:00"
+  },
   "1356697": {
     "searched": [
       "roster links (fivetran.com, linkedin.com/in/george-fraser-a0219230, x.com/frasergeorgew)",
@@ -70,6 +83,36 @@
       "no official recording or slides of this talk found yet"
     ],
     "generated_at": "2026-11-10T18:20:14-05:00"
+  },
+  "1373446": {
+    "searched": [
+      "roster links (github.com/poteto, linkedin.com/in/laurenelizabethtan)",
+      "api.github.com/users/poteto: twitter_username poteto, company @xai-org (corroborates x.com/poteto)",
+      "web: poteto pstack statechart skill Lauren Tan; cursor/plugins pstack/skills listing",
+      "user notes: Dune, statechart skill, comment slop, verification artifacts"
+    ],
+    "gaps": [
+      "linkedin.com/in/laurenelizabethtan (from the roster) answered 999 with no page title naming her; not corroborated, dropped",
+      "x.ai answered 403 behind a bot wall; the company links to its GitHub org instead",
+      "Dune (the Grok Bot client framework) has no public page found; no link",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-11T11:10:50-08:00"
+  },
+  "1373457": {
+    "searched": [
+      "roster: no links listed",
+      "web: Cloudflare clef clairic system one model Workers AI blog",
+      "web: Michelle Chen Cloudflare AI Platform product Workers AI; blog.cloudflare.com/author/michelle (post list)",
+      "web: \"Michelle Chen\" Cloudflare group product manager linkedin OR x.com",
+      "user notes: Durable Objects, Workers AI, clef/clairic, agents deep dive"
+    ],
+    "gaps": [
+      "no LinkedIn, X or GitHub profile verifiably hers found (common name; roster lists none); status partial",
+      "\"PyDurable\" in the CI-triage demo not identified; no link",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-11T11:10:50-08:00"
   },
   "1379134": {
     "searched": [

@@ -223,6 +223,62 @@
       "also_at": []
     }
   ],
+  "1352467": [
+    {
+      "claim_id": "1352467-62-d4642c",
+      "section": "00:01:02",
+      "at_seconds": 62,
+      "quote": "But on the other hand, in those about two minutes, I have probably moved on to another task.",
+      "claim": "Agents already beat humans on speed, but a two-minute agent turn still breaks the user's focus and forces a context switch.",
+      "speaker": "Natalie Serrino",
+      "also_at": []
+    },
+    {
+      "claim_id": "1352467-177-4fa52c",
+      "section": "00:02:57",
+      "at_seconds": 177,
+      "quote": "From data from June, the median coding agent turn is 63 seconds.",
+      "claim": "As in the web era, where 100 ms of delay measurably cost users and revenue, latency expectations rise; today's median 63-second agent turn is far past the 10-second attention threshold.",
+      "speaker": "Natalie Serrino",
+      "also_at": []
+    },
+    {
+      "claim_id": "1352467-361-55a030",
+      "section": "00:06:01",
+      "at_seconds": 361,
+      "quote": "Unfortunately, these goals are fundamentally at odds because faster tokens require more energy to produce than slower tokens.",
+      "claim": "Under compute scarcity, more tokens and faster tokens trade off against each other for the same energy footprint.",
+      "speaker": "Natalie Serrino",
+      "also_at": []
+    },
+    {
+      "claim_id": "1352467-486-fbff1b",
+      "section": "00:08:06",
+      "at_seconds": 486,
+      "quote": "And we find that even with the network overhead, this delivers dramatically faster tokens.",
+      "claim": "Splitting a model across different accelerator categories (GPUs plus SRAM-centric chips) pushes the throughput-latency Pareto frontier outward, despite network overhead.",
+      "speaker": "Natalie Serrino",
+      "also_at": []
+    },
+    {
+      "claim_id": "1352467-637-e234c8",
+      "section": "00:10:37",
+      "at_seconds": 637,
+      "quote": "And have 10x faster inference. We can see that 67% of that will be tool.",
+      "claim": "With 10x faster inference, tool calls (18% of an agent turn today) become two thirds of it, so the bottleneck moves and tool execution must be optimized next.",
+      "speaker": "Natalie Serrino",
+      "also_at": []
+    },
+    {
+      "claim_id": "1352467-738-c98fa2",
+      "section": "00:12:18",
+      "at_seconds": 738,
+      "quote": "Do things online much more quickly, and this should change the way that we think about how to use agents in the first place.",
+      "claim": "Ultra-fast inference lets an agent sit on the critical path, e.g. a security defender that blocks a malicious upload live instead of monitoring asynchronously.",
+      "speaker": "Natalie Serrino",
+      "also_at": []
+    }
+  ],
   "1356697": [
     {
       "claim_id": "1356697-198-40846e",
@@ -276,6 +332,120 @@
       "quote": "The exact same skills that made them good at delivering analytics are going to make them good.",
       "claim": "The skills data teams built for analytics are the skills that make them good at providing context to AI.",
       "speaker": "George Fraser",
+      "also_at": []
+    }
+  ],
+  "1373446": [
+    {
+      "claim_id": "1373446-100-7d4360",
+      "section": "00:01:40",
+      "at_seconds": 100,
+      "quote": "All about trust—not blind trust, but investing in your agent's environment.",
+      "claim": "With agents anyone can be a coding machine; the engineer's job becomes keeping quality up while volume rises, by investing in an environment that makes agents trustworthy.",
+      "speaker": "Lauren Tan",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373446-175-e0a5fa",
+      "section": "00:02:55",
+      "at_seconds": 175,
+      "quote": "Instead of adding another line to your rules or your agent's dot md, because it's far more reproducible, it's in code.",
+      "claim": "Constrain agents first with deterministic layers (API design, architecture, types, lint, tests), then verification, and only last with prose rules and skills.",
+      "speaker": "Lauren Tan",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373446-266-948a25",
+      "section": "00:04:26",
+      "at_seconds": 266,
+      "quote": "It's now likely to be just copied by the next agent, since it looks like the established pattern in the codebase.",
+      "claim": "The codebase is the agent's largest input, so workarounds and tech debt spread like weeds; it has to be kept pristine so agents copy the right patterns.",
+      "speaker": "Lauren Tan",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373446-474-81f378",
+      "section": "00:07:54",
+      "at_seconds": 474,
+      "quote": "And so our general principle is that every time we correct our agents, it turns into one of these deterministic checks.",
+      "claim": "Every agent correction becomes a lint rule or an API that eliminates the problem (banning useEffect, most code comments, cross-thread imports), until code review has little left to check.",
+      "speaker": "Lauren Tan",
+      "also_at": [
+        "00:05:56"
+      ]
+    },
+    {
+      "claim_id": "1373446-640-c9a528",
+      "section": "00:10:40",
+      "at_seconds": 640,
+      "quote": "And our code review process has now really shrunk into looking at verification artifacts.",
+      "claim": "Code review has shrunk to inspecting verification artifacts (videos, screenshots) produced by runtime verification, model checking and property-based UI tests.",
+      "speaker": "Lauren Tan",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373446-970-065660",
+      "section": "00:16:10",
+      "at_seconds": 970,
+      "quote": "Then automating that loop just produces more slop.",
+      "claim": "Before building a software factory, fix the codebase and the verification story; an automated sloppy inner loop just burns more tokens on more slop.",
+      "speaker": "Lauren Tan",
+      "also_at": []
+    }
+  ],
+  "1373457": [
+    {
+      "claim_id": "1373457-264-90e3f7",
+      "section": "00:04:24",
+      "at_seconds": 264,
+      "quote": "Our hypothesis was that models were going to get smaller.",
+      "claim": "Workers AI was built on the bet that models would shrink and edge network latency would matter; instead models grew to trillions of parameters and latency mattered less.",
+      "speaker": "Michelle Chen",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373457-415-25d579",
+      "section": "00:06:55",
+      "at_seconds": 415,
+      "quote": "All built on our infrastructure and our network, but it never felt quite right.",
+      "claim": "Compute, storage and hosted large models added up to an 'agent cloud' story, but the distributed edge infrastructure still had no workload that fit it.",
+      "speaker": "Michelle Chen",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373457-470-b0751b",
+      "section": "00:07:50",
+      "at_seconds": 470,
+      "quote": "We don't have to send every request to an LLM.",
+      "claim": "System One models answer in one forward pass and work in tandem with LLMs, taking decisions off them; that vindicates the small-and-fast hypothesis, which was early rather than wrong.",
+      "speaker": "Michelle Chen",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373457-593-2c7665",
+      "section": "00:09:53",
+      "at_seconds": 593,
+      "quote": "And we ended up training the model over 48 hours over the weekend, and then we launched it the following week.",
+      "claim": "Because the original System One model was closed source, Cloudflare trained its own decision model (Clef) in a weekend, letting agents decide without long LLM reasoning or a human in the loop.",
+      "speaker": "Michelle Chen",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373457-798-0d1682",
+      "section": "00:13:18",
+      "at_seconds": 798,
+      "quote": "Being a new lab means that we can create what we are missing, right?",
+      "claim": "Being a neolab means building missing pieces instead of depending on closed-source models or carrying regulatory risk.",
+      "speaker": "Michelle Chen",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373457-846-3555d9",
+      "section": "00:14:06",
+      "at_seconds": 846,
+      "quote": "We shrunk our LLM calls from five down to one. It was about 94 percent less tokens.",
+      "claim": "In a CI-triage demo, pairing System One models with one LLM call reached the same answer about twice as fast, 72% cheaper and with 94% fewer tokens.",
+      "speaker": "Michelle Chen",
       "also_at": []
     }
   ],

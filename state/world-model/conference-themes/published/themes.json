@@ -2,18 +2,20 @@
   {
     "name": "Context for AI",
     "claim_sentence": "AI does its best work on context people have already curated (the intent captured in a session, modeled data, a map of the database), not on raw systems.",
-    "definition": "George Fraser's companies connect their agents to the same modeled data stack that serves BI, simplify messy data for them, and give them an agent schema as a map. Ankit Jain captures a change's intent and acceptance criteria from the agent session rather than writing specs. Utkarsh Shrivastava calls the AI tool the tip of the iceberg and puts Netflix's lasting investment in the company context beneath it: enterprise skills and MCP servers. In each, the useful input is something a person already shaped. Mihail Eric seeds Monaco's agent memory from sales emails, call transcripts and onboarding context, then promotes what the agents learn back into it.",
+    "definition": "George Fraser's companies connect their agents to the same modeled data stack that serves BI, simplify messy data for them, and give them an agent schema as a map. Ankit Jain captures a change's intent and acceptance criteria from the agent session rather than writing specs. Utkarsh Shrivastava calls the AI tool the tip of the iceberg and puts Netflix's lasting investment in the company context beneath it: enterprise skills and MCP servers. In each, the useful input is something a person already shaped. Mihail Eric seeds Monaco's agent memory from sales emails, call transcripts and onboarding context, then promotes what the agents learn back into it. Lauren Tan makes the same point about code: the codebase is the agent's largest input, so whatever patterns it holds, good or bad, are what the next agent copies, and it has to be kept pristine.",
     "claims": [
       "1333169-518-138b45",
       "1334565-623-8c20fa",
       "1352199-131-92cfb3",
       "1356697-198-40846e",
       "1356697-323-cb7c4e",
-      "1356697-678-541d96"
+      "1356697-678-541d96",
+      "1373446-266-948a25"
     ],
     "counter_claims": [],
     "also_called": [
       "agent schema",
+      "codebase as input",
       "company context",
       "context engineering",
       "intent",
@@ -27,14 +29,15 @@
       "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
       "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
       "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
-      "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai"
+      "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai",
+      "2026-11-11-all-code-is-slop-except-mine"
     ],
-    "talk_count": 4
+    "talk_count": 5
   },
   {
     "name": "Guardrails people own",
     "claim_sentence": "Agents are trusted through guardrails that people own (rules that check their output, scoped access, and a firewall on what goes in and what they do) rather than by people reading what they produce.",
-    "definition": "Ankit Jain mines years of review comments into rules with owners and turns some into deterministic checks, so people own the rules instead of the code. Karan Vaidya gives agents broad but granular access to each app and puts a firewall on both their inputs and their actions. Utkarsh Shrivastava has Netflix's domain teams run a regression eval suite in CI before any new connector or model change, and scales the gate with the stakes, from reads to irreversible writes. All three replace line-by-line supervision with controls a named person or team maintains. Mihail Eric goes further for vertical AI: there is no absolute correctness, so in-house domain experts define what good looks like and evaluations follow them.",
+    "definition": "Ankit Jain mines years of review comments into rules with owners and turns some into deterministic checks, so people own the rules instead of the code. Karan Vaidya gives agents broad but granular access to each app and puts a firewall on both their inputs and their actions. Utkarsh Shrivastava has Netflix's domain teams run a regression eval suite in CI before any new connector or model change, and scales the gate with the stakes, from reads to irreversible writes. All three replace line-by-line supervision with controls a named person or team maintains. Mihail Eric goes further for vertical AI: there is no absolute correctness, so in-house domain experts define what good looks like and evaluations follow them. Lauren Tan puts the most weight on it: on the Grok Bot team every correction to an agent becomes a lint rule, a banned API or a better design, prose rules come last, and code review has shrunk to reading verification artifacts (videos, screenshots, model checks), which is what lets hundreds of pull requests a day land.",
     "claims": [
       "1333169-1038-239cc0",
       "1333169-617-c557b1",
@@ -42,31 +45,41 @@
       "1341863-349-4e2fb1",
       "1341863-435-93ffef",
       "1352199-543-fa5bf9",
-      "1352199-965-290d20"
+      "1352199-965-290d20",
+      "1373446-100-7d4360",
+      "1373446-175-e0a5fa",
+      "1373446-474-81f378",
+      "1373446-640-c9a528"
     ],
     "counter_claims": [],
     "also_called": [
+      "agent environment",
+      "deterministic checks",
       "evals in CI",
       "experts define correctness",
       "firewall for agents",
       "gates by stakes",
       "invariants",
-      "own the rules"
+      "organic architecture",
+      "own the rules",
+      "software factory",
+      "verification artifacts"
     ],
-    "why_uncontested": "No talk argues for trusting agent output unchecked or for returning to line-by-line review.",
+    "why_uncontested": "No talk argues for trusting agent output unchecked or for returning to line-by-line review; Lauren Tan's team lets agents merge most pull requests only because the checks carry the review.",
     "theme_id": "guardrails-people-own",
     "talk_slugs": [
       "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
       "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
       "2026-11-10-from-coding-agents-to-knowledge-work-agents",
-      "2026-11-10-one-teams-path-to-trusting-ai-generated-code"
+      "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
+      "2026-11-11-all-code-is-slop-except-mine"
     ],
-    "talk_count": 4
+    "talk_count": 5
   },
   {
     "name": "Decision load",
     "claim_sentence": "As agents take over the work, the decisions left to people become the scarce, tiring part, so teams record them, queue them for a person, and keep them few enough to make well.",
-    "definition": "Across the talks, agents do more of the doing and people are left with the deciding. Ankit Jain finds that human review comments were mostly about decisions and has agents argue so the decisions surface and get written down. Karan Vaidya's security agents queue uncertain findings for a person to judge in the morning. Scott Tolinski's survey shows the cost: running many agents multiplies the decisions and wears people out, and fewer agents in parallel helps.",
+    "definition": "Across the talks, agents do more of the doing and people are left with the deciding. Ankit Jain finds that human review comments were mostly about decisions and has agents argue so the decisions surface and get written down. Karan Vaidya's security agents queue uncertain findings for a person to judge in the morning. Scott Tolinski's survey shows the cost: running many agents multiplies the decisions and wears people out, and fewer agents in parallel helps. Michelle Chen argues the other way: Cloudflare's Clef decision model lets an agent make the call itself, without minutes of LLM reasoning or a human in the loop, so it can run around the clock.",
     "claims": [
       "1333169-29-2579a7",
       "1333169-428-47a134",
@@ -74,13 +87,15 @@
       "1379134-1190-f34d67",
       "1379134-582-2c9987"
     ],
-    "counter_claims": [],
+    "counter_claims": [
+      "1373457-593-2c7665"
+    ],
     "also_called": [
       "decision fatigue",
       "micro decisions",
       "human judgment"
     ],
-    "why_uncontested": "No talk argues decisions can be handed to agents outright; even Karan Vaidya's always-on agents route uncertain cases to a person.",
+    "why_uncontested": null,
     "theme_id": "decision-load",
     "talk_slugs": [
       "2026-11-10-from-coding-agents-to-knowledge-work-agents",
@@ -112,6 +127,38 @@
     "talk_slugs": [
       "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
       "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai"
+    ],
+    "talk_count": 2
+  },
+  {
+    "theme_id": "faster-tokens",
+    "name": "Faster tokens",
+    "claim_sentence": "Agent latency is now a design constraint: making each step faster, with faster inference or small one-pass models that take work off the LLM, keeps people in flow and lets agents act inline instead of in the background.",
+    "definition": "Natalie Serrino starts from the wait: a median coding-agent turn of 63 seconds is far past the point where people switch tasks, and the web era showed that every 100 ms costs users. With ultra-fast inference a security agent can sit on the critical path and block a malicious upload live. Michelle Chen reaches speed from the model side: Cloudflare's System One models answer in one forward pass, take decisions and extraction off the LLM, and in her CI-triage demo reached the same answer about twice as fast with 94% fewer tokens. Both qualify it: Serrino shows that at 10x inference tool calls become the bottleneck, and Chen's first bet on small, latency-sensitive models lost to ever-larger ones before System One revived it.",
+    "claims": [
+      "1352467-177-4fa52c",
+      "1352467-62-d4642c",
+      "1352467-738-c98fa2",
+      "1373457-470-b0751b",
+      "1373457-846-3555d9"
+    ],
+    "counter_claims": [
+      "1352467-637-e234c8",
+      "1373457-264-90e3f7"
+    ],
+    "also_called": [
+      "System One",
+      "critical path",
+      "fast inference",
+      "flow state",
+      "heterogeneous inference",
+      "latency",
+      "small and fast models"
+    ],
+    "why_uncontested": null,
+    "talk_slugs": [
+      "2026-11-11-cloudflare-is-a-neolab",
+      "2026-11-11-what-will-you-build-when-ai-is-10x-faster"
     ],
     "talk_count": 2
   },

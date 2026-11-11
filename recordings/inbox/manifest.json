@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T16:33:22-08:00",
+  "generated_at": "2026-11-11T14:30:09-08:00",
   "source": "/Users/wschenk/Library/Group Containers/group.com.apple.VoiceMemos.shared/Recordings",
   "recordings": [
     {
@@ -169,6 +169,196 @@
         }
       ],
       "folder": "2026-11-10_1529_Mihail-Eric"
+    },
+    {
+      "title": "swyx",
+      "recorded_at": "2026-11-11T09:04:48-08:00",
+      "duration_seconds": 229.4,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 657,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261111 090448.m4a",
+      "audio_sha256": "070abb8eed41de17c31572ab47feb77362e60779e33d14c627f4772208c8c17a",
+      "exported_at": "2026-11-11T09:08:49-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 659,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-11_0904_swyx"
+    },
+    {
+      "title": "Natalie Serrino",
+      "recorded_at": "2026-11-11T09:11:14-08:00",
+      "duration_seconds": 1050,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 3213,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261111 091114.m4a",
+      "audio_sha256": "25fb6ddf91fb401fc375799dfd247d7822b019390b46627bce2c7a8e77a2d015",
+      "exported_at": "2026-11-11T10:18:59-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 3221,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-11_0911_Natalie-Serrino"
+    },
+    {
+      "title": "Lydia Halley",
+      "recorded_at": "2026-11-11T09:29:01-08:00",
+      "duration_seconds": 560.2,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 719,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261111 092901.m4a",
+      "audio_sha256": "e2ffd2b6a0b2875c1b15c64710ea561fe9591af5fbfbb2c34f0d4b0a01540448",
+      "exported_at": "2026-11-11T10:18:59-08:00",
+      "transcript_echo_segments": 16,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 880,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-11_0929_Lydia-Halley"
+    },
+    {
+      "title": "cloudflare",
+      "recorded_at": "2026-11-11T09:39:42-08:00",
+      "duration_seconds": 1212.5,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 3892,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261111 093942.m4a",
+      "audio_sha256": "665b7d755e6662f777ee3ced0ff681629a14de72a2e7c43b59c1b86edb6f31e8",
+      "exported_at": "2026-11-11T10:18:59-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 3919,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-11_0939_cloudflare"
+    },
+    {
+      "title": "lauren tan",
+      "recorded_at": "2026-11-11T10:00:25-08:00",
+      "duration_seconds": 1107.5,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 2766,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261111 100025.m4a",
+      "audio_sha256": "9ea41418cd0dbd7cf577fdc09b748a431e008d178fc66fe5cde77f80be7730f5",
+      "exported_at": "2026-11-11T10:18:59-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 2791,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-11_1000_lauren-tan"
+    },
+    {
+      "title": "Phillip DeepMind",
+      "recorded_at": "2026-11-11T11:20:37-08:00",
+      "duration_seconds": 976.5,
+      "transcript": "transcript.txt",
+      "transcript_word_count": 2891,
+      "transcript_locale": "en_US",
+      "transcript_source": "voice-memos",
+      "transcript_timing": "word",
+      "source_file": "20261111 112037.m4a",
+      "audio_sha256": "7268a9550d8c0a6c179aa8298cf1572a3c21ffb776d6e1e57be5738db5f3ef31",
+      "exported_at": "2026-11-11T11:37:03-08:00",
+      "folder": "2026-11-11_1120_Phillip-DeepMind"
+    },
+    {
+      "title": "Heal your agents",
+      "recorded_at": "2026-11-11T11:48:01-08:00",
+      "duration_seconds": 1404,
+      "transcript": "transcript.txt",
+      "transcript_word_count": 3497,
+      "transcript_locale": "en_US",
+      "transcript_source": "voice-memos",
+      "transcript_timing": "word",
+      "source_file": "20261111 114801.m4a",
+      "audio_sha256": "6e0b340b25cdb2e65bdf037026a77db6358b335e98e483a55e3462cb368ef7e2",
+      "exported_at": "2026-11-11T12:34:39-08:00",
+      "folder": "2026-11-11_1148_Heal-your-agents"
+    },
+    {
+      "title": "Aamir Shakir",
+      "recorded_at": "2026-11-11T12:15:57-08:00",
+      "duration_seconds": 1117.4,
+      "transcript": "transcript.txt",
+      "transcript_word_count": 2806,
+      "transcript_locale": "en_US",
+      "transcript_source": "voice-memos",
+      "transcript_timing": "word",
+      "source_file": "20261111 121557.m4a",
+      "audio_sha256": "9f95978c14ad45d277ebab51d728163f8e5facd151f288c430fff5a253ea4833",
+      "exported_at": "2026-11-11T12:34:39-08:00",
+      "folder": "2026-11-11_1215_Aamir-Shakir"
+    },
+    {
+      "title": "overcut",
+      "recorded_at": "2026-11-11T12:36:46-08:00",
+      "duration_seconds": 1187.5,
+      "transcript": "transcript.txt",
+      "transcript_word_count": 2904,
+      "transcript_locale": "en_US",
+      "transcript_source": "voice-memos",
+      "transcript_timing": "word",
+      "source_file": "20261111 123646.m4a",
+      "audio_sha256": "253b33d22a4addaa0aeb33f08326bb4cc027373091adbe5309e96a884189ee76",
+      "exported_at": "2026-11-11T12:56:42-08:00",
+      "folder": "2026-11-11_1236_overcut"
+    },
+    {
+      "title": "diogo",
+      "recorded_at": "2026-11-11T14:06:57-08:00",
+      "duration_seconds": 1380.2,
+      "transcript": "transcript.txt",
+      "transcript_word_count": 4633,
+      "transcript_locale": "en_US",
+      "transcript_source": "voice-memos",
+      "transcript_timing": "word",
+      "source_file": "20261111 140657.m4a",
+      "audio_sha256": "6645620c00606bce83be5a8d79642ce82e192bbc50c6fdaca7ab11bd1611ab0c",
+      "exported_at": "2026-11-11T14:30:09-08:00",
+      "folder": "2026-11-11_1406_diogo"
     }
   ]
 }

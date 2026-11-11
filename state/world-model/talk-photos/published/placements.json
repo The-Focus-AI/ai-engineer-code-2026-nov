@@ -1,4 +1,14 @@
 {
+  "1323755": {
+    "dir": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/photos",
+    "photos": [
+      "PXL_20261111_192121284.jpg",
+      "PXL_20261111_192124422.MP.jpg",
+      "PXL_20261111_192337423.MP.jpg",
+      "PXL_20261111_192437514.jpg",
+      "PXL_20261111_192552608.MP.jpg"
+    ]
+  },
   "1333169": {
     "dir": "talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/photos",
     "photos": [
@@ -30,6 +40,17 @@
       "PXL_20261110_230002960.MP.jpg"
     ]
   },
+  "1352467": {
+    "dir": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos",
+    "photos": [
+      "PXL_20261111_171209055.MP.jpg",
+      "PXL_20261111_171601929.jpg",
+      "PXL_20261111_171650670.MP.jpg",
+      "PXL_20261111_172207359.jpg",
+      "PXL_20261111_172722980.MP.jpg",
+      "PXL_20261111_172835016.jpg"
+    ]
+  },
   "1356697": {
     "dir": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos",
     "photos": [
@@ -38,6 +59,69 @@
       "PXL_20261110_222825483.jpg",
       "PXL_20261110_223052728.MP.jpg",
       "PXL_20261110_223144635.jpg"
+    ]
+  },
+  "1373446": {
+    "dir": "talks/2026-11-11-all-code-is-slop-except-mine/photos",
+    "photos": [
+      "PXL_20261111_180543709.jpg",
+      "PXL_20261111_180633895.MP.jpg",
+      "PXL_20261111_181315486.MP.jpg"
+    ]
+  },
+  "1373457": {
+    "dir": "talks/2026-11-11-cloudflare-is-a-neolab/photos",
+    "photos": [
+      "PXL_20261111_174204253.jpg",
+      "PXL_20261111_174235183.MP.jpg",
+      "PXL_20261111_174332301.MP.jpg",
+      "PXL_20261111_174612522.jpg",
+      "PXL_20261111_174749891.MP.jpg",
+      "PXL_20261111_175158642.MP.jpg",
+      "PXL_20261111_175645827.jpg"
+    ]
+  },
+  "1373460": {
+    "dir": "talks/2026-11-11-heal-your-agents-dont-just-grade-them/photos",
+    "photos": [
+      "PXL_20261111_195547531.jpg",
+      "PXL_20261111_195708977.jpg"
+    ]
+  },
+  "1373462": {
+    "dir": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos",
+    "photos": [
+      "PXL_20261111_201809500.jpg",
+      "PXL_20261111_202017480.jpg",
+      "PXL_20261111_202234302.jpg",
+      "PXL_20261111_202529574.jpg",
+      "PXL_20261111_202947151.jpg"
+    ]
+  },
+  "1373465": {
+    "dir": "talks/2026-11-11-i-love-you-so-jevving-much/photos",
+    "photos": [
+      "PXL_20261111_220719135.jpg",
+      "PXL_20261111_220721084.jpg",
+      "PXL_20261111_220808193.MP.jpg",
+      "PXL_20261111_220941916.jpg",
+      "PXL_20261111_220946718.jpg",
+      "PXL_20261111_221035708.MP.jpg",
+      "PXL_20261111_221152212.MP.jpg",
+      "PXL_20261111_221254071.jpg",
+      "PXL_20261111_221334555.jpg",
+      "PXL_20261111_221509505.jpg",
+      "PXL_20261111_221614856.jpg",
+      "PXL_20261111_221803022.jpg",
+      "PXL_20261111_221846829.jpg",
+      "PXL_20261111_222013873.jpg",
+      "PXL_20261111_222224555.jpg"
+    ]
+  },
+  "1376240": {
+    "dir": "talks/2026-11-11-mc-intro/photos",
+    "photos": [
+      "PXL_20261111_170523953.MP.jpg"
     ]
   },
   "1379134": {

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The warehouse is the context · George Fraser</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  code { font: .88em var(--mono); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Tue 10 Nov 2026 · Continental 1–3</div>
+  <h1>The warehouse is the context</h1>
+  <p class="dek">George Fraser runs Fivetran, which moves and models data for thousands of companies. His claim is practical: when an AI agent needs facts about your business, the best place to get them is the data warehouse you already built for business intelligence, not the apps where the data was born. That makes context the data team's new job.</p>
+  <div class="talk-meta">George Fraser, Fivetran · 28 min · demo built on Formula 1 data · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="new-consumer.jpg" alt="His slide, AI is a new consumer of the data stack: business systems flow into a data warehouse or lakehouse, which feeds two consumers, business intelligence and AI agents. Below: How do we help AI agents navigate the data warehouse?">
+        <figcaption>His slide, 2:23 pm (straightened from photos/PXL_20261110_222347495.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v2">
+        <div class="lbl">Two ways to give an agent context</div>
+        <svg viewBox="0 0 400 260" role="img" aria-label="Left: an agent with separate tool links to Salesforce, Jira, Slack and billing, with no joins between them. Right: the same apps flow into one warehouse that joins and models them, and the agent reads the warehouse.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <text x="95" y="18" text-anchor="middle" fill="var(--muted)" font-weight="600">tool per app</text>
+            <text x="300" y="18" text-anchor="middle" fill="var(--accent)" font-weight="600">one modeled warehouse</text>
+            <line x1="198" y1="28" x2="198" y2="250" stroke="var(--rule)"/>
+            <rect x="60" y="34" width="70" height="28" rx="6" fill="var(--card)" stroke="var(--rule)"/>
+            <text x="95" y="52" text-anchor="middle" fill="var(--ink)">agent</text>
+            <g fill="var(--panel)" stroke="var(--rule)">
+              <rect x="8" y="200" width="40" height="24" rx="4"/><rect x="54" y="200" width="40" height="24" rx="4"/>
+              <rect x="100" y="200" width="40" height="24" rx="4"/><rect x="146" y="200" width="40" height="24" rx="4"/>
+            </g>
+            <g fill="var(--muted)" text-anchor="middle" font-size="9">
+              <text x="28" y="216">CRM</text><text x="74" y="216">Jira</text><text x="120" y="216">Slack</text><text x="166" y="216">billing</text>
+            </g>
+            <g stroke="var(--rule)" stroke-dasharray="3 4">
+              <line x1="80" y1="62" x2="28" y2="200"/><line x1="90" y1="62" x2="74" y2="200"/>
+              <line x1="100" y1="62" x2="120" y2="200"/><line x1="110" y1="62" x2="166" y2="200"/>
+            </g>
+            <text x="97" y="150" text-anchor="middle" fill="var(--muted)" font-size="10">4 query languages</text>
+            <text x="97" y="164" text-anchor="middle" fill="var(--muted)" font-size="10">no joins across them</text>
+            <g fill="var(--panel)" stroke="var(--rule)">
+              <rect x="212" y="200" width="40" height="24" rx="4"/><rect x="258" y="200" width="40" height="24" rx="4"/>
+              <rect x="304" y="200" width="40" height="24" rx="4"/><rect x="350" y="200" width="40" height="24" rx="4"/>
+            </g>
+            <g fill="var(--muted)" text-anchor="middle" font-size="9">
+              <text x="232" y="216">CRM</text><text x="278" y="216">Jira</text><text x="324" y="216">Slack</text><text x="370" y="216">billing</text>
+            </g>
+            <g stroke="var(--accent)"><line x1="232" y1="200" x2="280" y2="150"/><line x1="278" y1="200" x2="292" y2="150"/><line x1="324" y1="200" x2="308" y2="150"/><line x1="370" y1="200" x2="320" y2="150"/></g>
+            <rect x="240" y="112" width="120" height="38" rx="6" fill="var(--accent)"/>
+            <text x="300" y="129" text-anchor="middle" fill="var(--paper)" font-weight="600">warehouse</text>
+            <text x="300" y="143" text-anchor="middle" fill="var(--paper)" font-size="9">cleaned · modeled · joined</text>
+            <line x1="300" y1="112" x2="300" y2="62" stroke="var(--accent)" stroke-width="2"/>
+            <rect x="265" y="34" width="70" height="28" rx="6" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="300" y="52" text-anchor="middle" fill="var(--ink)">agent</text>
+            <text x="300" y="245" text-anchor="middle" fill="var(--muted)" font-size="10">tools still take actions in the apps</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from his argument at 00:07:04; not his slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="agents-schema.jpg" alt="His slide, AGENTS schema: a root table, below it dbt_tables, which branches to dbt_columns and dbt_joins.">
+        <figcaption>His slide, 2:30 pm (straightened from photos/PXL_20261110_223052728.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v4">
+        <div class="lbl">One query, both kinds of data</div>
+        <svg viewBox="0 0 400 230" role="img" aria-label="A single query combines a vector search over post-race press conference transcripts for tire problems with a structured filter on 2025 races, all inside one database.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="10" y="20" width="380" height="190" rx="10" fill="none" stroke="var(--rule)"/>
+            <text x="22" y="40" fill="var(--muted)" font-weight="600">one database</text>
+            <rect x="30" y="58" width="150" height="62" rx="6" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="105" y="80" text-anchor="middle" fill="var(--ink)" font-weight="600">transcripts (text)</text>
+            <text x="105" y="98" text-anchor="middle" fill="var(--muted)" font-size="10">vector search:</text>
+            <text x="105" y="111" text-anchor="middle" fill="var(--muted)" font-size="10">“tire problems”</text>
+            <rect x="220" y="58" width="150" height="62" rx="6" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="295" y="80" text-anchor="middle" fill="var(--ink)" font-weight="600">races (tables)</text>
+            <text x="295" y="98" text-anchor="middle" fill="var(--muted)" font-size="10">filter:</text>
+            <text x="295" y="111" text-anchor="middle" fill="var(--muted)" font-size="10">season = 2025</text>
+            <line x1="105" y1="120" x2="190" y2="160" stroke="var(--accent)" stroke-width="2"/>
+            <line x1="295" y1="120" x2="210" y2="160" stroke="var(--accent)" stroke-width="2"/>
+            <rect x="130" y="158" width="140" height="34" rx="6" fill="var(--accent)"/>
+            <text x="200" y="179" text-anchor="middle" fill="var(--paper)" font-weight="600">one hybrid query</text>
+          </g>
+        </svg>
+        <figcaption>His demo's example query, 00:15:24; drawn, not his slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v5">
+        <p class="quote-big">“The data team should own your context.”<span>George Fraser · 00:26:44</span></p>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="new-consumer" data-visual="v1" data-caption="The BI stack gets a second consumer">
+      <div class="chapter">The pattern</div>
+      <h2>A new consumer of the data stack</h2>
+      <p>Agents are already good at the simple work data teams used to do: writing queries, making charts, much of the dashboard work. What they need is correct, data-grounded answers, for people and for autonomous agents alike. His example is a head of sales asking an assistant in Slack for the best ideas to improve pipeline conversion: open-ended, and a pattern he says to encourage.</p>
+      <p>In the last six months a pattern has emerged. Ramp built an interactive data analyst on its modeled data. Stripe built a knowledge agent on its data platform. OpenAI and Anthropic both built in-house data agents on their data platforms and wrote about it. What they share is that each points its AI at the same stack that has served people for years.</p>
+      <blockquote>“They are using as a source of truth for AI agents for questions about data.”<span class="cite">00:03:18</span></blockquote>
+      <p>It works because agents behave so much like people. The work that makes data usable for an analyst (pulling every system into one database, joining across them, modeling it to fit the business) is the work that makes it usable for an agent.</p>
+      <blockquote>“Modeling is fundamentally an exercise of simplification.”<span class="cite">00:05:23</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “down with dashboards and up with artifacts”, and the same AI connected to the warehouse or lakehouse that serves BI. The dashboard stops being the product; the agent answering from the modeled data is.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:22, 00:02:56, 00:03:18, 00:05:23</p>
+    </section>
+
+    <section data-chapter="not-everything" data-visual="v2" data-caption="Gather context from the warehouse; act through the apps">
+      <div class="chapter">The anti-pattern</div>
+      <h2>Why not just connect it to everything</h2>
+      <p>The obvious move is to give the assistant MCP connections to every system of record. None of the companies he named do that, and he says it doesn't work. Ask a human analyst to answer a business question by logging into each system and clicking around: they could, but slowly and with many mistakes.</p>
+      <blockquote>“It would take them like a year, and they would make a lot of mistakes.”<span class="cite">00:07:04</span></blockquote>
+      <p>An agent going through tools hits the same walls. The source data is messy (every company has a messy Salesforce), while the warehouse copy has been cleaned by the business's rules. Each system's query language is poor: Salesforce's own SQL dialect, Jira's query language, or for Slack just the search box. And the decisive one:</p>
+      <blockquote>“And you can't even do joins across sources, right?”<span class="cite">00:07:04</span></blockquote>
+      <p>MCP itself isn't the villain. It's still the right tool for taking actions and for fetching a single record that just changed, and at Fivetran every client (a Slack bot, Claude, an autonomous support agent) reaches the warehouse through an MCP server. The problem is what the tools point at.</p>
+      <div class="reading"><b>From the notes:</b> the MCP-to-every-app pattern is an anti-pattern “mainly because you can't join across sources”.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:07:04, 00:09:47</p>
+    </section>
+
+    <section data-chapter="map" data-visual="v3" data-caption="A schema called agents, a table called root">
+      <div class="chapter">The map</div>
+      <h2>A map, kept in the database</h2>
+      <p>Connect an agent to a database and tell it to look around, and the answers are poor; better than six months ago, still poor. It needs a map. Vendors sell context catalogs for this. His point is that you don't need one, because a database can describe itself.</p>
+      <blockquote>“Metadata is a kind of data.”<span class="cite">00:11:18</span></blockquote>
+      <p>His proposal, framed like AGENTS.md but for databases: a schema called <code>agents</code> with a table called <code>root</code>, one column of markdown blocks describing the rest. At Fivetran the tables under it come from their Looker metadata; in the demo there are three, saying what the tables are, what the columns mean, and how to join them. The agent's system prompt only says to read <code>agents.root</code> first, so when the data changes, the map changes with it.</p>
+      <p>Why it fits: agents interpret open-ended questions and explain answers but forget everything, like the man in Memento writing himself notes. Databases remember and calculate but can't interpret.</p>
+      <blockquote>“They have exactly the mirror image of each other's strengths and weaknesses.”<span class="cite">00:11:18</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “the agents schema thing as a good map”.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:11:18, 00:15:24</p>
+    </section>
+
+    <section data-chapter="one-place" data-visual="v4" data-caption="Text and tables, one query">
+      <div class="chapter">The demo</div>
+      <h2>Everything in one place</h2>
+      <p>The new domain is unstructured data. Agents read so fast they can go through a thousand customer-call transcripts, so text belongs in the stack too. You don't need a separate vector database: the major data platforms have built-in vector indexes now, and text goes in ordinary text columns.</p>
+      <blockquote>“And it's really convenient to have everything in one place.”<span class="cite">00:14:29</span></blockquote>
+      <p>His demo uses Formula 1: structured race data from a public API, plus the rules, glossary and post-race press-conference transcripts. Connectors written with Fivetran's connector SDK (he suggests letting an AI write them) land it all in BigQuery. dbt models normalize it and build the embeddings and vector index, and a Gemini agent answers questions, checked by a small set of evals in CI. A typical agent query is hybrid: a vector search for talk of tire problems, filtered to 2025 races. He built it in about five hours. Asked who the most improved driver is, the agent reads <code>agents.root</code>, probes the data, then writes a long multi-join query, much as a human analyst would.</p>
+      <div class="reading"><b>From the notes:</b> every major database now has vector indexes, and an open question: how well do text columns really hold up at scale?</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:06:38, 00:14:29, 00:15:24, 00:22:31</p>
+    </section>
+
+    <section data-chapter="owns-context" data-visual="v5" data-caption="Context is the data team's job">
+      <div class="chapter">The job</div>
+      <h2>The data team owns the context</h2>
+      <p>His close: this simple pattern gets better as models get smarter, because it puts the model in charge instead of boxing it in with an over-engineered context system. The work belongs to the data team, whose skills at delivering analytics are the ones that deliver context. Use standard components, avoid anyone's walled garden, and keep definitions in code so agents can write code too.</p>
+      <blockquote>“The data team should own your context.”<span class="cite">00:26:44</span></blockquote>
+      <div class="reading"><b>From the notes:</b> a service The Focus could sell. Extract from a client's remote systems, build their data stack or lakehouse as the system of record, then build the code (agents, artifacts) on top. This talk is the case for doing it in that order.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:26:44</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room) and on notes taken during the talk. Quotes are verbatim from the transcript, which garbles some names (Stripe's agent is heard as “Kai”). Passages marked “From the notes” are the reading taken in the room, not his words; the two drawn diagrams are illustrative. Ramp's and Fivetran's write-ups are on the <a href="../links.md">links page</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

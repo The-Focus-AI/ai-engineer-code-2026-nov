@@ -1,0 +1,23 @@
+{
+  "title": "Lydia Halley",
+  "recorded_at": "2026-11-11T09:29:01-08:00",
+  "duration_seconds": 560.2,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 719,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261111 092901.m4a",
+  "audio_sha256": "e2ffd2b6a0b2875c1b15c64710ea561fe9591af5fbfbb2c34f0d4b0a01540448",
+  "exported_at": "2026-11-11T10:18:59-08:00",
+  "transcript_echo_segments": 16,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 880,
+      "locale": "en_US"
+    }
+  ]
+}

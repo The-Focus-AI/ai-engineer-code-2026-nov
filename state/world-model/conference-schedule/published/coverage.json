@@ -3,50 +3,50 @@
     {
       "url": "https://ai.engineer/code/2026",
       "role": "entry",
-      "content_hash": "eca3f034bc89d4cc25cd977a0f143f6123e30fd7219deebb40af268e86883e59",
-      "byte_length": 318854,
+      "content_hash": "4c9bdeda5975d3496e35294aafbfa760a18a71f0e18813c5bd40e0270911757a",
+      "byte_length": 321817,
       "truncated": false
     },
     {
       "url": "https://ai.engineer/code/2026/schedule",
       "role": "schedule",
-      "content_hash": "dab37231651c6f0faf984be78ad565421dbf841f1b87c20adde20b3f2c237589",
-      "byte_length": 379125,
+      "content_hash": "b476a4390f510be8d14606424f46ce1591e0bca7832b3ab48758a39e734777c1",
+      "byte_length": 383845,
       "truncated": false
     },
     {
       "url": "https://ai.engineer/code/2026/map",
       "role": "venue",
-      "content_hash": "79ffacb3e1ced004f1ccb02a5eb9c8fd778effcd6b0db45e8cc6ab74075c7405",
+      "content_hash": "6f516233d41c6182161ea9f08b02d2c614984fbb0c2ca731e09f0c49031cfdb9",
       "byte_length": 3737,
       "truncated": false
     },
     {
       "url": "https://luma.com/after-summit",
       "role": "side-event",
-      "content_hash": "045b44f3e82e3ce263329ba9a049f552ad1abfb1b92ac6ef36d0033ab1cc351c",
-      "byte_length": 175508,
+      "content_hash": "cafe4ed42f828e38edd3d23fb12d76f97313d4d07996c1f6e6e4bc87ad353ca6",
+      "byte_length": 175569,
       "truncated": false
     },
     {
       "url": "https://luma.com/allthings-aie",
       "role": "side-event",
-      "content_hash": "72a8dbe290a9e4786b780099784ba55469d60ce86a9493a7f3e4027dd165975a",
-      "byte_length": 160573,
+      "content_hash": "ebe94cef21b38686bb53352ea0dd6ecdf8593642674cd0a7ef8e6f5853f2f03b",
+      "byte_length": 160629,
       "truncated": false
     },
     {
       "url": "https://luma.com/AIECodeSummitHackathon",
       "role": "side-event",
-      "content_hash": "e0ea05ee2c63de3c51275ee8ea02345853111ac10106d72ae5e623f73a5451e2",
-      "byte_length": 204233,
+      "content_hash": "6913b8882b4d679c557d8169a5b0e28bd70659004d86ad21ce76af0b97be8d17",
+      "byte_length": 221850,
       "truncated": false
     },
     {
       "url": "https://luma.com/kdtg113c",
       "role": "side-event",
-      "content_hash": "afd05316c8fd8090696ebae83174b980ae70a22c7373677d819ab9e277325d57",
-      "byte_length": 163559,
+      "content_hash": "bf5573ab2d67667e1c670f7c7bd93985d2f1c1862c96bacf8660d3b66c9eaf6a",
+      "byte_length": 163615,
       "truncated": false
     }
   ],
@@ -70,8 +70,6 @@
     "track holds the schedule page's own session-type label (Mainstage Talk, Expo Stage Talk, Workshop, and since this render 'workshopTalk', labelled here 'Workshop Room Talk' because the site publishes no label for it); topics are empty and no thematic track is assigned per session",
     "talk title not published, title is the speaker line (2): 1373478, 1373482",
     "abstract null on non-MC talks and workshops (5): 1373468, 1373471, 1379009, 1373478, 1373482",
-    "bio null (3): richelle-ji, ross-cefalu, sydney-runkle",
-    "affiliation null (2): charlie-meyer, stephen-chin",
     "links empty (16): aamir-shakir, ankit-mathur, arsalan-bashir, bradford-chang, doug-clauson, elise-gonzales, jakub-hojsan, james-arthur, louis-walsh, michelle-chen, owen-kephart, richelle-ji, scott-roberts, scott-tolinski, sudhir-tonse, sydney-runkle",
     "room clash: Networking Break / Expo Hall Hours @ 2026-11-11T10:40:00-08:00",
     "room clash: Expo Hall Hours / Lunch @ 2026-11-11T10:40:00-08:00",
@@ -83,10 +81,10 @@
     "unparsed region: entry page 'Online talks // 7 streamed' block: speaker names only, no title, time, or stream link",
     "unparsed region: entry page FAQ: answers are not in the served page, questions only",
     "unparsed region: venue floorplan images (level-1, level-2-workshop-day, level-2-session-days .avif): not read; room levels come from the map page's area list",
-    "enrichment pending (3): new speakers whose profile pages were not opened this render: charlie-meyer, richelle-ji, stephen-chin"
+    "enrichment pending (1): new speakers whose profile pages were not opened this render: richelle-ji"
   ],
-  "last_verified_at": "2026-11-11T03:38:27-05:00",
-  "verification_count": 5,
+  "last_verified_at": "2026-11-11T15:40:35-05:00",
+  "verification_count": 6,
   "enrichment": {
     "done": [
       "aamir-shakir",
@@ -104,6 +102,7 @@
       "brian-kennedy",
       "cassandra-chin",
       "charlie-guo",
+      "charlie-meyer",
       "chibi-vikram",
       "chinmay-goyal",
       "cj-avilla",
@@ -161,6 +160,7 @@
       "scott-roberts",
       "scott-tolinski",
       "simon-willison",
+      "stephen-chin",
       "steve-yegge",
       "sudhir-tonse",
       "sydney-runkle",
@@ -176,9 +176,7 @@
       "zach-lloyd"
     ],
     "pending": [
-      "charlie-meyer",
-      "richelle-ji",
-      "stephen-chin"
+      "richelle-ji"
     ],
     "failed": []
   }

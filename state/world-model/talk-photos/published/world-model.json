@@ -424,9 +424,1081 @@
       ],
       "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_235341969.MP.jpg",
       "status": "placed"
+    },
+    "PXL_20261111_162505741.MP.jpg": {
+      "file": "PXL_20261111_162505741.MP.jpg",
+      "captured_at_utc": "2026-11-11T16:25:05+00:00",
+      "captured_at_local": "2026-11-11T08:25:05-08:00",
+      "sha256": "746cdb437c1245857a1e6e549bac2ad31f3140648c815fb6a51169fa259cbf46",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": null,
+      "method": "event",
+      "confidence": 0.9,
+      "status": "event",
+      "placed_path": "photos/event/2026-11-11/PXL_20261111_162505741.MP.jpg",
+      "evidence": [
+        "event window: Registration (f8b0a0a6-9f29-4434-92fe-694d66d20a34, 08:00–17:40 PT, format registration) contains 08:25 PT; no talk window and no recording active"
+      ]
+    },
+    "PXL_20261111_164545430.TS-000.jpg": {
+      "file": "PXL_20261111_164545430.TS-000.jpg",
+      "captured_at_utc": "2026-11-11T16:45:45+00:00",
+      "captured_at_local": "2026-11-11T08:45:45-08:00",
+      "sha256": "33c1969e6c7655891f1f41f4a9002d5f99f1c720c70a9e7dbd0a907ae3e33da2",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": null,
+      "method": "event",
+      "confidence": 0.9,
+      "status": "event",
+      "placed_path": "photos/event/2026-11-11/PXL_20261111_164545430.TS-000.jpg",
+      "evidence": [
+        "event window: Registration (f8b0a0a6-9f29-4434-92fe-694d66d20a34, 08:00–17:40 PT, format registration) contains 08:45 PT; no talk window and no recording active"
+      ]
+    },
+    "PXL_20261111_170523953.MP.jpg": {
+      "file": "PXL_20261111_170523953.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:05:23+00:00",
+      "captured_at_local": "2026-11-11T09:05:23-08:00",
+      "sha256": "3f4590a7cc1970c193d44d9c8d5ea547e5d1a7fdd998b68c767b3a871b52a53b",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1376240",
+      "method": "time",
+      "confidence": 0.7,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-mc-intro/photos/PXL_20261111_170523953.MP.jpg",
+      "evidence": [
+        "session 1376240 \"MC Intro\" (09:00–09:10 PT) is the only talk window containing 09:05 PT",
+        "recording 2026-11-11_0904_swyx (09:04–09:08 PT) is active but unmatched (session_id null) — cannot decide by recording-overlap",
+        "filed on operator decision notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md (held needs-review in the prior render pending talk-folder approval)"
+      ]
+    },
+    "PXL_20261111_171209055.MP.jpg": {
+      "file": "PXL_20261111_171209055.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:12:09+00:00",
+      "captured_at_local": "2026-11-11T09:12:09-08:00",
+      "sha256": "a2cbe3e0e3cefff94e6e7a293cad2aa9474c32df7b174a98af4506b5c589cfec",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1352467",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos/PXL_20261111_171209055.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_0911_Natalie-Serrino (2026-11-11T17:11:14.000Z–2026-11-11T17:28:44.000Z) matched to session 1352467",
+        "session 1352467 \"What Will You Build When AI Is 10x Faster?\" (09:10–09:30 PT) also contains it; the recording window confirms the operator-approved time placement (notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md)"
+      ]
+    },
+    "PXL_20261111_171601929.jpg": {
+      "file": "PXL_20261111_171601929.jpg",
+      "captured_at_utc": "2026-11-11T17:16:01+00:00",
+      "captured_at_local": "2026-11-11T09:16:01-08:00",
+      "sha256": "94f1e7e12712cef48fb6de0d6f607437ac0c44948de35b5d52167adf60978f5b",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T0916",
+      "session_id": "1352467",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos/PXL_20261111_171601929.jpg",
+      "evidence": [
+        "recording 2026-11-11_0911_Natalie-Serrino (2026-11-11T17:11:14.000Z–2026-11-11T17:28:44.000Z) matched to session 1352467",
+        "session 1352467 \"What Will You Build When AI Is 10x Faster?\" (09:10–09:30 PT) also contains it; the recording window confirms the operator-approved time placement (notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md)"
+      ]
+    },
+    "PXL_20261111_171650670.MP.jpg": {
+      "file": "PXL_20261111_171650670.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:16:50+00:00",
+      "captured_at_local": "2026-11-11T09:16:50-08:00",
+      "sha256": "1f579aced4a017c3db6ef43c60c56ad95a543af0629c95e24db5eeb73f03cce8",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T0916",
+      "session_id": "1352467",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos/PXL_20261111_171650670.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_0911_Natalie-Serrino (2026-11-11T17:11:14.000Z–2026-11-11T17:28:44.000Z) matched to session 1352467",
+        "session 1352467 \"What Will You Build When AI Is 10x Faster?\" (09:10–09:30 PT) also contains it; the recording window confirms the operator-approved time placement (notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md)"
+      ]
+    },
+    "PXL_20261111_172207359.jpg": {
+      "file": "PXL_20261111_172207359.jpg",
+      "captured_at_utc": "2026-11-11T17:22:07+00:00",
+      "captured_at_local": "2026-11-11T09:22:07-08:00",
+      "sha256": "0938c6986c4a786a41456ea77afa35954a2eb5ab5e98b9df9817f2e9bcaff0ff",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1352467",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos/PXL_20261111_172207359.jpg",
+      "evidence": [
+        "recording 2026-11-11_0911_Natalie-Serrino (2026-11-11T17:11:14.000Z–2026-11-11T17:28:44.000Z) matched to session 1352467",
+        "session 1352467 \"What Will You Build When AI Is 10x Faster?\" (09:10–09:30 PT) also contains it; the recording window confirms the operator-approved time placement (notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md)"
+      ]
+    },
+    "PXL_20261111_172722980.MP.jpg": {
+      "file": "PXL_20261111_172722980.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:27:22+00:00",
+      "captured_at_local": "2026-11-11T09:27:22-08:00",
+      "sha256": "0af66201b36084c1cf49ea22eea5a331a8434a634849d6a3de44fb4e16f3ae75",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1352467",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos/PXL_20261111_172722980.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_0911_Natalie-Serrino (2026-11-11T17:11:14.000Z–2026-11-11T17:28:44.000Z) matched to session 1352467",
+        "session 1352467 \"What Will You Build When AI Is 10x Faster?\" (09:10–09:30 PT) also contains it; the recording window confirms the operator-approved time placement (notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md)"
+      ]
+    },
+    "PXL_20261111_172835016.jpg": {
+      "file": "PXL_20261111_172835016.jpg",
+      "captured_at_utc": "2026-11-11T17:28:35+00:00",
+      "captured_at_local": "2026-11-11T09:28:35-08:00",
+      "sha256": "4ae65a9a104d44739f42852d913ac603f34069b06f254b1fdd01bf475680cca9",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1352467",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos/PXL_20261111_172835016.jpg",
+      "evidence": [
+        "recording 2026-11-11_0911_Natalie-Serrino (2026-11-11T17:11:14.000Z–2026-11-11T17:28:44.000Z) matched to session 1352467",
+        "session 1352467 \"What Will You Build When AI Is 10x Faster?\" (09:10–09:30 PT) also contains it; the recording window confirms the operator-approved time placement (notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md)"
+      ]
+    },
+    "PXL_20261111_174204253.jpg": {
+      "file": "PXL_20261111_174204253.jpg",
+      "captured_at_utc": "2026-11-11T17:42:04+00:00",
+      "captured_at_local": "2026-11-11T09:42:04-08:00",
+      "sha256": "4f63f915331995865739ebea585d7dbcbe6ab5a85492eb47a104f6e955d90d6f",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T0942",
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:42 PT",
+        "program window holds session 1373455 \"Rethinking Claude Code Best Practices\" (09:30–09:50 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_174204253.jpg"
+    },
+    "PXL_20261111_174235183.MP.jpg": {
+      "file": "PXL_20261111_174235183.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:42:35+00:00",
+      "captured_at_local": "2026-11-11T09:42:35-08:00",
+      "sha256": "e9dfc9320850c808836465f7474bc12826b8e665661ed969273b65a65c63fc3f",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T0942",
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:42 PT",
+        "program window holds session 1373455 \"Rethinking Claude Code Best Practices\" (09:30–09:50 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_174235183.MP.jpg"
+    },
+    "PXL_20261111_174332301.MP.jpg": {
+      "file": "PXL_20261111_174332301.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:43:32+00:00",
+      "captured_at_local": "2026-11-11T09:43:32-08:00",
+      "sha256": "e92226185976187a90bb2d13c19d22e33e32104fd9df7ce83a80cafe6a3e2db5",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T0942",
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:43 PT",
+        "program window holds session 1373455 \"Rethinking Claude Code Best Practices\" (09:30–09:50 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_174332301.MP.jpg"
+    },
+    "PXL_20261111_174612522.jpg": {
+      "file": "PXL_20261111_174612522.jpg",
+      "captured_at_utc": "2026-11-11T17:46:12+00:00",
+      "captured_at_local": "2026-11-11T09:46:12-08:00",
+      "sha256": "5cd977aa208e544d073ece713c9c4cd4c6d1736fb3d0f6fa570248bfbb3e6ac8",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:46 PT",
+        "program window holds session 1373455 \"Rethinking Claude Code Best Practices\" (09:30–09:50 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_174612522.jpg"
+    },
+    "PXL_20261111_174749891.MP.jpg": {
+      "file": "PXL_20261111_174749891.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:47:49+00:00",
+      "captured_at_local": "2026-11-11T09:47:49-08:00",
+      "sha256": "0d9840eadbc13f1a83b7fe77f018f03675841686c8f281fca3e3af378329a99d",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:47 PT",
+        "program window holds session 1373455 \"Rethinking Claude Code Best Practices\" (09:30–09:50 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_174749891.MP.jpg"
+    },
+    "PXL_20261111_175158642.MP.jpg": {
+      "file": "PXL_20261111_175158642.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:51:58+00:00",
+      "captured_at_local": "2026-11-11T09:51:58-08:00",
+      "sha256": "e0cd5d67beab5b45bc418f9276157b2c9c45345d87d79d054135a729ea480081",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:51 PT"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_175158642.MP.jpg"
+    },
+    "PXL_20261111_175645827.jpg": {
+      "file": "PXL_20261111_175645827.jpg",
+      "captured_at_utc": "2026-11-11T17:56:45+00:00",
+      "captured_at_local": "2026-11-11T09:56:45-08:00",
+      "sha256": "1da7776d258d0a81477c2016efc7b87f519b271f998a5fc8bf11e06eb3fbb81d",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:56 PT"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_175645827.jpg"
+    },
+    "PXL_20261111_180543709.jpg": {
+      "file": "PXL_20261111_180543709.jpg",
+      "captured_at_utc": "2026-11-11T18:05:43+00:00",
+      "captured_at_local": "2026-11-11T10:05:43-08:00",
+      "sha256": "c4df8463465932629301e008b5211dec776fe1326560e22377cc6022cb943d25",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1005",
+      "session_id": "1373446",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1000_lauren-tan (10:00:25–10:18:52 PT) matched to session 1373446 contains 10:05 PT",
+        "program window holds session 1373457 \"cloudflare is a neolab\" (09:50–10:10 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-all-code-is-slop-except-mine/photos/PXL_20261111_180543709.jpg"
+    },
+    "PXL_20261111_180633895.MP.jpg": {
+      "file": "PXL_20261111_180633895.MP.jpg",
+      "captured_at_utc": "2026-11-11T18:06:33+00:00",
+      "captured_at_local": "2026-11-11T10:06:33-08:00",
+      "sha256": "41d95fcc31c870097a1ad7af726685cacb48ba09a5a91e202bfa45e63c4e0c9a",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1005",
+      "session_id": "1373446",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1000_lauren-tan (10:00:25–10:18:52 PT) matched to session 1373446 contains 10:06 PT",
+        "program window holds session 1373457 \"cloudflare is a neolab\" (09:50–10:10 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-all-code-is-slop-except-mine/photos/PXL_20261111_180633895.MP.jpg"
+    },
+    "PXL_20261111_181315486.MP.jpg": {
+      "file": "PXL_20261111_181315486.MP.jpg",
+      "captured_at_utc": "2026-11-11T18:13:15+00:00",
+      "captured_at_local": "2026-11-11T10:13:15-08:00",
+      "sha256": "a7acc7ccbba94c0edd0142f31d3385e23b4b83da693846376bc7157987419d2c",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1373446",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1000_lauren-tan (10:00:25–10:18:52 PT) matched to session 1373446 contains 10:13 PT"
+      ],
+      "placed_path": "talks/2026-11-11-all-code-is-slop-except-mine/photos/PXL_20261111_181315486.MP.jpg"
+    },
+    "PXL_20261111_192121284.jpg": {
+      "file": "PXL_20261111_192121284.jpg",
+      "captured_at_utc": "2026-11-11T19:21:21+00:00",
+      "captured_at_local": "2026-11-11T11:21:21-08:00",
+      "sha256": "1446cb34a1156b5dc4286edd59ee45929d1db172b3e6ad7c06eb0f8449060f04",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1121",
+      "session_id": "1323755",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1323755",
+        "1373458"
+      ],
+      "evidence": [
+        "parallel sessions share 11:21 PT: session 1323755 \"I deleted 90% of my harness (And It Got Better)\" (11:20–11:40 PT, Mainstage Talk); session 1373458 \"Refactor or Rot: Building a self-improving codebase\" (11:20–11:40 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1323755 window name 1323755 and no other candidate: notes/inbox/2026-11-11T1121-deepmind-talk-slides-look-nice.md, notes/inbox/2026-11-11T1121-2-there-is-a-decision-model.md, notes/inbox/2026-11-11T1122-write-about-decision-models.md, notes/inbox/2026-11-11T1124-bash-is-a-python-one-liner.md, notes/inbox/2026-11-11T1125-the-model-eats-the-tool.md, notes/inbox/2026-11-11T1127-auto-background-return-file-descriptor.md, notes/inbox/2026-11-11T1135-2-code-tool-like-old-cloudflare-idea.md, notes/inbox/2026-11-11T1135-future-is-fewer-tokens.md, notes/inbox/2026-11-11T1136-philschmid-de.md",
+        "inbox recording 2026-11-11_1120_Phillip-DeepMind is not yet matched; it should confirm this on intake"
+      ],
+      "placed_path": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/photos/PXL_20261111_192121284.jpg"
+    },
+    "PXL_20261111_192124422.MP.jpg": {
+      "file": "PXL_20261111_192124422.MP.jpg",
+      "captured_at_utc": "2026-11-11T19:21:24+00:00",
+      "captured_at_local": "2026-11-11T11:21:24-08:00",
+      "sha256": "11cb432d024167292a24f767c24ff7901e89c3bd605bd18dc40c249e3a6ecbb6",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1121",
+      "session_id": "1323755",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1323755",
+        "1373458"
+      ],
+      "evidence": [
+        "parallel sessions share 11:21 PT: session 1323755 \"I deleted 90% of my harness (And It Got Better)\" (11:20–11:40 PT, Mainstage Talk); session 1373458 \"Refactor or Rot: Building a self-improving codebase\" (11:20–11:40 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1323755 window name 1323755 and no other candidate: notes/inbox/2026-11-11T1121-deepmind-talk-slides-look-nice.md, notes/inbox/2026-11-11T1121-2-there-is-a-decision-model.md, notes/inbox/2026-11-11T1122-write-about-decision-models.md, notes/inbox/2026-11-11T1124-bash-is-a-python-one-liner.md, notes/inbox/2026-11-11T1125-the-model-eats-the-tool.md, notes/inbox/2026-11-11T1127-auto-background-return-file-descriptor.md, notes/inbox/2026-11-11T1135-2-code-tool-like-old-cloudflare-idea.md, notes/inbox/2026-11-11T1135-future-is-fewer-tokens.md, notes/inbox/2026-11-11T1136-philschmid-de.md",
+        "inbox recording 2026-11-11_1120_Phillip-DeepMind is not yet matched; it should confirm this on intake"
+      ],
+      "placed_path": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/photos/PXL_20261111_192124422.MP.jpg"
+    },
+    "PXL_20261111_192337423.MP.jpg": {
+      "file": "PXL_20261111_192337423.MP.jpg",
+      "captured_at_utc": "2026-11-11T19:23:37+00:00",
+      "captured_at_local": "2026-11-11T11:23:37-08:00",
+      "sha256": "f46b41c175faa2a844a91f0c126380170ffd38eca231b3dc7f997db9ef8a0888",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1123",
+      "session_id": "1323755",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1323755",
+        "1373458"
+      ],
+      "evidence": [
+        "parallel sessions share 11:23 PT: session 1323755 \"I deleted 90% of my harness (And It Got Better)\" (11:20–11:40 PT, Mainstage Talk); session 1373458 \"Refactor or Rot: Building a self-improving codebase\" (11:20–11:40 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1323755 window name 1323755 and no other candidate: notes/inbox/2026-11-11T1121-deepmind-talk-slides-look-nice.md, notes/inbox/2026-11-11T1121-2-there-is-a-decision-model.md, notes/inbox/2026-11-11T1122-write-about-decision-models.md, notes/inbox/2026-11-11T1124-bash-is-a-python-one-liner.md, notes/inbox/2026-11-11T1125-the-model-eats-the-tool.md, notes/inbox/2026-11-11T1127-auto-background-return-file-descriptor.md, notes/inbox/2026-11-11T1135-2-code-tool-like-old-cloudflare-idea.md, notes/inbox/2026-11-11T1135-future-is-fewer-tokens.md, notes/inbox/2026-11-11T1136-philschmid-de.md",
+        "inbox recording 2026-11-11_1120_Phillip-DeepMind is not yet matched; it should confirm this on intake"
+      ],
+      "placed_path": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/photos/PXL_20261111_192337423.MP.jpg"
+    },
+    "PXL_20261111_192437514.jpg": {
+      "file": "PXL_20261111_192437514.jpg",
+      "captured_at_utc": "2026-11-11T19:24:37+00:00",
+      "captured_at_local": "2026-11-11T11:24:37-08:00",
+      "sha256": "0d2656045f74e199324333e83714c07baabbe5d6b020b3c50fc0b34c6d963ec7",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1123",
+      "session_id": "1323755",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1323755",
+        "1373458"
+      ],
+      "evidence": [
+        "parallel sessions share 11:24 PT: session 1323755 \"I deleted 90% of my harness (And It Got Better)\" (11:20–11:40 PT, Mainstage Talk); session 1373458 \"Refactor or Rot: Building a self-improving codebase\" (11:20–11:40 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1323755 window name 1323755 and no other candidate: notes/inbox/2026-11-11T1121-deepmind-talk-slides-look-nice.md, notes/inbox/2026-11-11T1121-2-there-is-a-decision-model.md, notes/inbox/2026-11-11T1122-write-about-decision-models.md, notes/inbox/2026-11-11T1124-bash-is-a-python-one-liner.md, notes/inbox/2026-11-11T1125-the-model-eats-the-tool.md, notes/inbox/2026-11-11T1127-auto-background-return-file-descriptor.md, notes/inbox/2026-11-11T1135-2-code-tool-like-old-cloudflare-idea.md, notes/inbox/2026-11-11T1135-future-is-fewer-tokens.md, notes/inbox/2026-11-11T1136-philschmid-de.md",
+        "inbox recording 2026-11-11_1120_Phillip-DeepMind is not yet matched; it should confirm this on intake"
+      ],
+      "placed_path": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/photos/PXL_20261111_192437514.jpg"
+    },
+    "PXL_20261111_192552608.MP.jpg": {
+      "file": "PXL_20261111_192552608.MP.jpg",
+      "captured_at_utc": "2026-11-11T19:25:52+00:00",
+      "captured_at_local": "2026-11-11T11:25:52-08:00",
+      "sha256": "c033221b339cc62b57718a89c3d1c53f4c3df4c4adc1697e121b5effc6352b27",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1323755",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1323755",
+        "1373458"
+      ],
+      "evidence": [
+        "parallel sessions share 11:25 PT: session 1323755 \"I deleted 90% of my harness (And It Got Better)\" (11:20–11:40 PT, Mainstage Talk); session 1373458 \"Refactor or Rot: Building a self-improving codebase\" (11:20–11:40 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1323755 window name 1323755 and no other candidate: notes/inbox/2026-11-11T1121-deepmind-talk-slides-look-nice.md, notes/inbox/2026-11-11T1121-2-there-is-a-decision-model.md, notes/inbox/2026-11-11T1122-write-about-decision-models.md, notes/inbox/2026-11-11T1124-bash-is-a-python-one-liner.md, notes/inbox/2026-11-11T1125-the-model-eats-the-tool.md, notes/inbox/2026-11-11T1127-auto-background-return-file-descriptor.md, notes/inbox/2026-11-11T1135-2-code-tool-like-old-cloudflare-idea.md, notes/inbox/2026-11-11T1135-future-is-fewer-tokens.md, notes/inbox/2026-11-11T1136-philschmid-de.md",
+        "inbox recording 2026-11-11_1120_Phillip-DeepMind is not yet matched; it should confirm this on intake"
+      ],
+      "placed_path": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/photos/PXL_20261111_192552608.MP.jpg"
+    },
+    "PXL_20261111_195547531.jpg": {
+      "file": "PXL_20261111_195547531.jpg",
+      "captured_at_utc": "2026-11-11T19:55:47+00:00",
+      "captured_at_local": "2026-11-11T11:55:47-08:00",
+      "sha256": "ada2d0518ddefba48184c9452187fbcc98415cbf432d6e7ba37dd58a46441beb",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1155",
+      "session_id": "1373460",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373460",
+        "1373459"
+      ],
+      "evidence": [
+        "parallel sessions share 11:55 PT: session 1373460 \"Heal Your Agents, Don't Just Grade Them\" (11:45–12:05 PT, Expo Stage Talk); session 1373459 \"The Rise of the Agent Workforce: Rethinking Agent Infrastructure\" (11:45–12:05 PT, Mainstage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373460 window name 1373460 and no other candidate: notes/inbox/2026-11-11T1156-immune-system-not-ticketing-system.md",
+        "inbox recording 2026-11-11_1148_Heal-your-agents is not yet matched; it should confirm this on intake"
+      ],
+      "placed_path": "talks/2026-11-11-heal-your-agents-dont-just-grade-them/photos/PXL_20261111_195547531.jpg"
+    },
+    "PXL_20261111_195708977.jpg": {
+      "file": "PXL_20261111_195708977.jpg",
+      "captured_at_utc": "2026-11-11T19:57:08+00:00",
+      "captured_at_local": "2026-11-11T11:57:08-08:00",
+      "sha256": "00ef3cc812bbc770a46bb936cc5eca91969640c70d8efa3d07ce9e9f5566a85e",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1155",
+      "session_id": "1373460",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373460",
+        "1373459"
+      ],
+      "evidence": [
+        "parallel sessions share 11:57 PT: session 1373460 \"Heal Your Agents, Don't Just Grade Them\" (11:45–12:05 PT, Expo Stage Talk); session 1373459 \"The Rise of the Agent Workforce: Rethinking Agent Infrastructure\" (11:45–12:05 PT, Mainstage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373460 window name 1373460 and no other candidate: notes/inbox/2026-11-11T1156-immune-system-not-ticketing-system.md",
+        "inbox recording 2026-11-11_1148_Heal-your-agents is not yet matched; it should confirm this on intake"
+      ],
+      "placed_path": "talks/2026-11-11-heal-your-agents-dont-just-grade-them/photos/PXL_20261111_195708977.jpg"
+    },
+    "PXL_20261111_201809500.jpg": {
+      "file": "PXL_20261111_201809500.jpg",
+      "captured_at_utc": "2026-11-11T20:18:09+00:00",
+      "captured_at_local": "2026-11-11T12:18:09-08:00",
+      "sha256": "f5fbe4118b5647eb93b95b70119ec2d711334b971e521088a546df65c083a96b",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373462",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373462",
+        "1373461"
+      ],
+      "evidence": [
+        "parallel sessions share 12:18 PT: session 1373462 \"How to build agents over your own data\" (12:10–12:30 PT, Expo Stage Talk); session 1373461 \"Building a Safe Software Factory\" (12:10–12:30 PT, Mainstage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373462 window name 1373462 and no other candidate: notes/inbox/2026-11-11T1221-index-data-ahead-of-mcp-search.md, notes/inbox/2026-11-11T1221-2-more-sources-more-noise.md, notes/inbox/2026-11-11T1222-follow-up-on-mixedbread.md, notes/inbox/2026-11-11T1225-rebuild-mixedbread.md, notes/inbox/2026-11-11T1226-which-embedding-models.md",
+        "inbox recording 2026-11-11_1215_Aamir-Shakir is not yet matched; it should confirm this on intake"
+      ],
+      "placed_path": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos/PXL_20261111_201809500.jpg"
+    },
+    "PXL_20261111_202017480.jpg": {
+      "file": "PXL_20261111_202017480.jpg",
+      "captured_at_utc": "2026-11-11T20:20:17+00:00",
+      "captured_at_local": "2026-11-11T12:20:17-08:00",
+      "sha256": "be55ce65491ea0c592278b684c06986d9915f0657afeb685e959fde91ee544cb",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373462",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373462",
+        "1373461"
+      ],
+      "evidence": [
+        "parallel sessions share 12:20 PT: session 1373462 \"How to build agents over your own data\" (12:10–12:30 PT, Expo Stage Talk); session 1373461 \"Building a Safe Software Factory\" (12:10–12:30 PT, Mainstage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373462 window name 1373462 and no other candidate: notes/inbox/2026-11-11T1221-index-data-ahead-of-mcp-search.md, notes/inbox/2026-11-11T1221-2-more-sources-more-noise.md, notes/inbox/2026-11-11T1222-follow-up-on-mixedbread.md, notes/inbox/2026-11-11T1225-rebuild-mixedbread.md, notes/inbox/2026-11-11T1226-which-embedding-models.md",
+        "inbox recording 2026-11-11_1215_Aamir-Shakir is not yet matched; it should confirm this on intake"
+      ],
+      "placed_path": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos/PXL_20261111_202017480.jpg"
+    },
+    "PXL_20261111_202234302.jpg": {
+      "file": "PXL_20261111_202234302.jpg",
+      "captured_at_utc": "2026-11-11T20:22:34+00:00",
+      "captured_at_local": "2026-11-11T12:22:34-08:00",
+      "sha256": "ec6a5764fd0576d43d04959899f35e65ba65033f7ceed70fc584db2dc743156c",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373462",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373462",
+        "1373461"
+      ],
+      "evidence": [
+        "parallel sessions share 12:22 PT: session 1373462 \"How to build agents over your own data\" (12:10–12:30 PT, Expo Stage Talk); session 1373461 \"Building a Safe Software Factory\" (12:10–12:30 PT, Mainstage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373462 window name 1373462 and no other candidate: notes/inbox/2026-11-11T1221-index-data-ahead-of-mcp-search.md, notes/inbox/2026-11-11T1221-2-more-sources-more-noise.md, notes/inbox/2026-11-11T1222-follow-up-on-mixedbread.md, notes/inbox/2026-11-11T1225-rebuild-mixedbread.md, notes/inbox/2026-11-11T1226-which-embedding-models.md",
+        "inbox recording 2026-11-11_1215_Aamir-Shakir is not yet matched; it should confirm this on intake"
+      ],
+      "placed_path": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos/PXL_20261111_202234302.jpg"
+    },
+    "PXL_20261111_202529574.jpg": {
+      "file": "PXL_20261111_202529574.jpg",
+      "captured_at_utc": "2026-11-11T20:25:29+00:00",
+      "captured_at_local": "2026-11-11T12:25:29-08:00",
+      "sha256": "4e7fb9c1d2a59ea3b7b8170ecc9550fdb31046121df0c87573f77c0ffcf65b1c",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373462",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373462",
+        "1373461"
+      ],
+      "evidence": [
+        "parallel sessions share 12:25 PT: session 1373462 \"How to build agents over your own data\" (12:10–12:30 PT, Expo Stage Talk); session 1373461 \"Building a Safe Software Factory\" (12:10–12:30 PT, Mainstage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373462 window name 1373462 and no other candidate: notes/inbox/2026-11-11T1221-index-data-ahead-of-mcp-search.md, notes/inbox/2026-11-11T1221-2-more-sources-more-noise.md, notes/inbox/2026-11-11T1222-follow-up-on-mixedbread.md, notes/inbox/2026-11-11T1225-rebuild-mixedbread.md, notes/inbox/2026-11-11T1226-which-embedding-models.md",
+        "inbox recording 2026-11-11_1215_Aamir-Shakir is not yet matched; it should confirm this on intake"
+      ],
+      "placed_path": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos/PXL_20261111_202529574.jpg"
+    },
+    "PXL_20261111_202947151.jpg": {
+      "file": "PXL_20261111_202947151.jpg",
+      "captured_at_utc": "2026-11-11T20:29:47+00:00",
+      "captured_at_local": "2026-11-11T12:29:47-08:00",
+      "sha256": "cb8024358a014544319ddb3f8b86a959cf536880a3d4d489a65a9d0607170c7d",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373462",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373462",
+        "1373461"
+      ],
+      "evidence": [
+        "parallel sessions share 12:29 PT: session 1373462 \"How to build agents over your own data\" (12:10–12:30 PT, Expo Stage Talk); session 1373461 \"Building a Safe Software Factory\" (12:10–12:30 PT, Mainstage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373462 window name 1373462 and no other candidate: notes/inbox/2026-11-11T1221-index-data-ahead-of-mcp-search.md, notes/inbox/2026-11-11T1221-2-more-sources-more-noise.md, notes/inbox/2026-11-11T1222-follow-up-on-mixedbread.md, notes/inbox/2026-11-11T1225-rebuild-mixedbread.md, notes/inbox/2026-11-11T1226-which-embedding-models.md",
+        "inbox recording 2026-11-11_1215_Aamir-Shakir is not yet matched; it should confirm this on intake"
+      ],
+      "placed_path": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos/PXL_20261111_202947151.jpg"
+    },
+    "PXL_20261111_203144669.MP.jpg": {
+      "file": "PXL_20261111_203144669.MP.jpg",
+      "captured_at_utc": "2026-11-11T20:31:44+00:00",
+      "captured_at_local": "2026-11-11T12:31:44-08:00",
+      "sha256": "98afe310b084b1bf965877510a71127335041d85cd9249b984d742d1589ba50f",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": null,
+      "method": "event",
+      "confidence": 0.9,
+      "status": "event",
+      "placed_path": "photos/event/2026-11-11/PXL_20261111_203144669.MP.jpg",
+      "evidence": [
+        "event window: Registration (08:00–17:40 PT) and Expo Hall Hours (d4b20610-7cef-463f-b607-b5a51a334993, 10:40–16:00 PT) contain 12:31 PT; no talk window (1373462/1373461 ended 12:30, 1373464/1373463 start 12:35) and no matched recording active",
+        "inbox recording 2026-11-11_1215_Aamir-Shakir (~12:15–12:34) and note notes/inbox/2026-11-11T1234-acl-access-control-for-ingesting.md point at 1373462; refile when intake matches that recording"
+      ]
+    },
+    "PXL_20261111_205517744.MP.jpg": {
+      "file": "PXL_20261111_205517744.MP.jpg",
+      "captured_at_utc": "2026-11-11T20:55:17+00:00",
+      "captured_at_local": "2026-11-11T12:55:17-08:00",
+      "sha256": "fc9b283718c5e1c9d017305ceb5d399c887a4679a16b9025c2faddf13dc544a9",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": null,
+      "method": "event",
+      "confidence": 0.9,
+      "status": "event",
+      "placed_path": "photos/event/2026-11-11/PXL_20261111_205517744.MP.jpg",
+      "evidence": [
+        "event window: Registration (f8b0a0a6-9f29-4434-92fe-694d66d20a34, 08:00–17:40 PT); Expo Hall Hours (d4b20610-7cef-463f-b607-b5a51a334993, 10:40–16:00 PT); Lunch (d3d5809a-6087-496f-8f90-9bb417a58d02, 12:55–14:05 PT) contains 12:55:17 PT; talks 1373464/1373463 ended 12:55:00; no talk window and no matched recording active"
+      ]
+    },
+    "PXL_20261111_220719135.jpg": {
+      "file": "PXL_20261111_220719135.jpg",
+      "captured_at_utc": "2026-11-11T22:07:19+00:00",
+      "captured_at_local": "2026-11-11T14:07:19-08:00",
+      "sha256": "b46ba2fff5381835468e38a626cb4376bd6305bc2743997a6ff99e618d620d38",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1407",
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_220719135.jpg",
+      "evidence": [
+        "parallel sessions share 14:07 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_220721084.jpg": {
+      "file": "PXL_20261111_220721084.jpg",
+      "captured_at_utc": "2026-11-11T22:07:21+00:00",
+      "captured_at_local": "2026-11-11T14:07:21-08:00",
+      "sha256": "f1299f7e9fcfa3b1aa97c1e4315d93a5d08559d6472f65819d1eac0eaa0efd15",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1407",
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_220721084.jpg",
+      "evidence": [
+        "parallel sessions share 14:07 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_220808193.MP.jpg": {
+      "file": "PXL_20261111_220808193.MP.jpg",
+      "captured_at_utc": "2026-11-11T22:08:08+00:00",
+      "captured_at_local": "2026-11-11T14:08:08-08:00",
+      "sha256": "411dfd4a0613b3e114a2eb94215e7b39948db2ee71691d4d49f66c4acffd261b",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1407",
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_220808193.MP.jpg",
+      "evidence": [
+        "parallel sessions share 14:08 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_220941916.jpg": {
+      "file": "PXL_20261111_220941916.jpg",
+      "captured_at_utc": "2026-11-11T22:09:41+00:00",
+      "captured_at_local": "2026-11-11T14:09:41-08:00",
+      "sha256": "76db67d24c737668f28585fe908bf34be1ee548ef74e3d2907a4bdc35c668a42",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1409",
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_220941916.jpg",
+      "evidence": [
+        "parallel sessions share 14:09 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_220946718.jpg": {
+      "file": "PXL_20261111_220946718.jpg",
+      "captured_at_utc": "2026-11-11T22:09:46+00:00",
+      "captured_at_local": "2026-11-11T14:09:46-08:00",
+      "sha256": "627ad153e310b3a972ca6604431521594b2b5c81a78a6b7ed1a7d6aa37574e69",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1409",
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_220946718.jpg",
+      "evidence": [
+        "parallel sessions share 14:09 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_221035708.MP.jpg": {
+      "file": "PXL_20261111_221035708.MP.jpg",
+      "captured_at_utc": "2026-11-11T22:10:35+00:00",
+      "captured_at_local": "2026-11-11T14:10:35-08:00",
+      "sha256": "3acad22cce4b33f072de9e48fec2e5ff45bf8a962c9fd130af62325b2c112f71",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1409",
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221035708.MP.jpg",
+      "evidence": [
+        "parallel sessions share 14:10 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_221152212.MP.jpg": {
+      "file": "PXL_20261111_221152212.MP.jpg",
+      "captured_at_utc": "2026-11-11T22:11:52+00:00",
+      "captured_at_local": "2026-11-11T14:11:52-08:00",
+      "sha256": "76267cb516d2a62a1f09bee7745e574b217343b7744d089e7cfa486c6ddbafed",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1411",
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221152212.MP.jpg",
+      "evidence": [
+        "parallel sessions share 14:11 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_221254071.jpg": {
+      "file": "PXL_20261111_221254071.jpg",
+      "captured_at_utc": "2026-11-11T22:12:54+00:00",
+      "captured_at_local": "2026-11-11T14:12:54-08:00",
+      "sha256": "7a3e0c82c0cc857f846bdc7132a61a4f1d70746a91c5039927f99234002352f6",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1411",
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221254071.jpg",
+      "evidence": [
+        "parallel sessions share 14:12 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_221334555.jpg": {
+      "file": "PXL_20261111_221334555.jpg",
+      "captured_at_utc": "2026-11-11T22:13:34+00:00",
+      "captured_at_local": "2026-11-11T14:13:34-08:00",
+      "sha256": "c0b1e1712c31ec5be046a4044375612699af8fe236c4a2f6764d17c2e3977836",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221334555.jpg",
+      "evidence": [
+        "parallel sessions share 14:13 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_221509505.jpg": {
+      "file": "PXL_20261111_221509505.jpg",
+      "captured_at_utc": "2026-11-11T22:15:09+00:00",
+      "captured_at_local": "2026-11-11T14:15:09-08:00",
+      "sha256": "161986da92bf9a91e4242e481a020e74fe1fb4801fba0572c800dc913291e148",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1415",
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221509505.jpg",
+      "evidence": [
+        "parallel sessions share 14:15 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_221614856.jpg": {
+      "file": "PXL_20261111_221614856.jpg",
+      "captured_at_utc": "2026-11-11T22:16:14+00:00",
+      "captured_at_local": "2026-11-11T14:16:14-08:00",
+      "sha256": "118c09207746b15c7934da7df12bec231fac15a94a111e9fddb94dc521376e28",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1415",
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221614856.jpg",
+      "evidence": [
+        "parallel sessions share 14:16 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_221803022.jpg": {
+      "file": "PXL_20261111_221803022.jpg",
+      "captured_at_utc": "2026-11-11T22:18:03+00:00",
+      "captured_at_local": "2026-11-11T14:18:03-08:00",
+      "sha256": "eaf74daa32665771aa9a917e62042b9ace2938bea27a9f11984c2be37bfbb0b7",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1418",
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221803022.jpg",
+      "evidence": [
+        "parallel sessions share 14:18 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_221846829.jpg": {
+      "file": "PXL_20261111_221846829.jpg",
+      "captured_at_utc": "2026-11-11T22:18:46+00:00",
+      "captured_at_local": "2026-11-11T14:18:46-08:00",
+      "sha256": "91810fbdf549750d8cde7a175826cd0861cf696fbfc5a61f56dbce4796719d67",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1418",
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221846829.jpg",
+      "evidence": [
+        "parallel sessions share 14:18 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_222013873.jpg": {
+      "file": "PXL_20261111_222013873.jpg",
+      "captured_at_utc": "2026-11-11T22:20:13+00:00",
+      "captured_at_local": "2026-11-11T14:20:13-08:00",
+      "sha256": "66baf642f2afe7f5569f47ddf99f0d1e0e7a938027d1eeb1459af8183337a067",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_222013873.jpg",
+      "evidence": [
+        "parallel sessions share 14:20 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_222224555.jpg": {
+      "file": "PXL_20261111_222224555.jpg",
+      "captured_at_utc": "2026-11-11T22:22:24+00:00",
+      "captured_at_local": "2026-11-11T14:22:24-08:00",
+      "sha256": "2f78e224f0df60c5283a1174ab10976e7cff2010549f1305dd9d0078cc16793a",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1373465",
+      "method": "session+attribution",
+      "confidence": 0.8,
+      "status": "placed",
+      "candidates": [
+        "1373465",
+        "1373466"
+      ],
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_222224555.jpg",
+      "evidence": [
+        "parallel sessions share 14:22 PT: session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk); session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk)",
+        "no matched recording is active (recording-intake recordings facet)",
+        "operator notes inside the 1373465 window name 1373465 (session_id; talk: null) and no note names 1373466: notes/inbox/2026-11-11T1408-where-is-the-automation.md, notes/inbox/2026-11-11T1410-too-good-or-too-bad-whats-the-line.md, notes/inbox/2026-11-11T1411-human-in-the-loop-because-rlhf.md, notes/inbox/2026-11-11T1414-rlhf-dont-think-about-the-right-task.md, notes/inbox/2026-11-11T1417-reliable-intelligence.md, notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md, notes/inbox/2026-11-11T1417-3-saasapalooza-not-saaspocalypse.md, notes/inbox/2026-11-11T1418-smart-software.md",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings); it should confirm this on intake"
+      ]
+    },
+    "PXL_20261111_222426885.jpg": {
+      "file": "PXL_20261111_222426885.jpg",
+      "captured_at_utc": "2026-11-11T22:24:26+00:00",
+      "captured_at_local": "2026-11-11T14:24:26-08:00",
+      "sha256": "4d909c5e3af990fac5f2d88641d81ddabef431ef793a54bc0f3d83a40cd56e2f",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": null,
+      "method": "none",
+      "confidence": 0.0,
+      "status": "needs-review",
+      "candidates": [
+        "1373466",
+        "1373465"
+      ],
+      "placed_path": null,
+      "evidence": [
+        "14:24 PT is inside only session 1373466 \"Coding Agents and How to Tame Them\" (14:05–14:25 PT, Expo Stage Talk), so a bare time match would file it there",
+        "but the operator was in the parallel Mainstage room for session 1373465 \"I love you so jevving much\" (14:05–14:23 PT, Mainstage Talk): notes 14:08–14:18 name 1373465, and notes notes/inbox/2026-11-11T1423-read-tyranny-of-the-kv-cache.md, notes/inbox/2026-11-11T1424-principal-agent-problem.md, notes/inbox/2026-11-11T1426-dwim-twitter-demo.md, notes/inbox/2026-11-11T1427-slop-pushes-work-to-others.md hold session null as likely 1373465 running past its slot",
+        "inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings) covers 14:24; no matched recording yet, so neither recording-overlap nor attribution decides it. Candidates: 1373466 (time window), 1373465 (overrun); resolve on intake"
+      ]
+    },
+    "PXL_20261111_222912575.jpg": {
+      "file": "PXL_20261111_222912575.jpg",
+      "captured_at_utc": "2026-11-11T22:29:12+00:00",
+      "captured_at_local": "2026-11-11T14:29:12-08:00",
+      "sha256": "3ec68893a0cc9255112fee0f81867ca4802860263bad1ced6eb7cf1e1724327a",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": null,
+      "method": "event",
+      "confidence": 0.9,
+      "status": "event",
+      "placed_path": "photos/event/2026-11-11/PXL_20261111_222912575.jpg",
+      "evidence": [
+        "event window: Registration (f8b0a0a6-9f29-4434-92fe-694d66d20a34, 08:00–17:40 PT); Expo Hall Hours (d4b20610-7cef-463f-b607-b5a51a334993, 10:40–16:00 PT) contains 14:29 PT; no talk window and no matched recording active",
+        "no talk window (1373465 ended 14:23, 1373466 ended 14:25; 1357875/1374818 start 14:30); inbox recording 2026-11-11_1406_diogo (14:06:57–14:29:57 PT, not yet in recording-intake recordings) and notes through 14:27 suggest 1373465 overran; refile when intake matches that recording"
+      ]
     }
   },
   "placements": {
+    "1323755": {
+      "dir": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/photos",
+      "photos": [
+        "PXL_20261111_192121284.jpg",
+        "PXL_20261111_192124422.MP.jpg",
+        "PXL_20261111_192337423.MP.jpg",
+        "PXL_20261111_192437514.jpg",
+        "PXL_20261111_192552608.MP.jpg"
+      ]
+    },
     "1333169": {
       "dir": "talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/photos",
       "photos": [
@@ -458,6 +1530,17 @@
         "PXL_20261110_230002960.MP.jpg"
       ]
     },
+    "1352467": {
+      "dir": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos",
+      "photos": [
+        "PXL_20261111_171209055.MP.jpg",
+        "PXL_20261111_171601929.jpg",
+        "PXL_20261111_171650670.MP.jpg",
+        "PXL_20261111_172207359.jpg",
+        "PXL_20261111_172722980.MP.jpg",
+        "PXL_20261111_172835016.jpg"
+      ]
+    },
     "1356697": {
       "dir": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos",
       "photos": [
@@ -466,6 +1549,69 @@
         "PXL_20261110_222825483.jpg",
         "PXL_20261110_223052728.MP.jpg",
         "PXL_20261110_223144635.jpg"
+      ]
+    },
+    "1373446": {
+      "dir": "talks/2026-11-11-all-code-is-slop-except-mine/photos",
+      "photos": [
+        "PXL_20261111_180543709.jpg",
+        "PXL_20261111_180633895.MP.jpg",
+        "PXL_20261111_181315486.MP.jpg"
+      ]
+    },
+    "1373457": {
+      "dir": "talks/2026-11-11-cloudflare-is-a-neolab/photos",
+      "photos": [
+        "PXL_20261111_174204253.jpg",
+        "PXL_20261111_174235183.MP.jpg",
+        "PXL_20261111_174332301.MP.jpg",
+        "PXL_20261111_174612522.jpg",
+        "PXL_20261111_174749891.MP.jpg",
+        "PXL_20261111_175158642.MP.jpg",
+        "PXL_20261111_175645827.jpg"
+      ]
+    },
+    "1373460": {
+      "dir": "talks/2026-11-11-heal-your-agents-dont-just-grade-them/photos",
+      "photos": [
+        "PXL_20261111_195547531.jpg",
+        "PXL_20261111_195708977.jpg"
+      ]
+    },
+    "1373462": {
+      "dir": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos",
+      "photos": [
+        "PXL_20261111_201809500.jpg",
+        "PXL_20261111_202017480.jpg",
+        "PXL_20261111_202234302.jpg",
+        "PXL_20261111_202529574.jpg",
+        "PXL_20261111_202947151.jpg"
+      ]
+    },
+    "1373465": {
+      "dir": "talks/2026-11-11-i-love-you-so-jevving-much/photos",
+      "photos": [
+        "PXL_20261111_220719135.jpg",
+        "PXL_20261111_220721084.jpg",
+        "PXL_20261111_220808193.MP.jpg",
+        "PXL_20261111_220941916.jpg",
+        "PXL_20261111_220946718.jpg",
+        "PXL_20261111_221035708.MP.jpg",
+        "PXL_20261111_221152212.MP.jpg",
+        "PXL_20261111_221254071.jpg",
+        "PXL_20261111_221334555.jpg",
+        "PXL_20261111_221509505.jpg",
+        "PXL_20261111_221614856.jpg",
+        "PXL_20261111_221803022.jpg",
+        "PXL_20261111_221846829.jpg",
+        "PXL_20261111_222013873.jpg",
+        "PXL_20261111_222224555.jpg"
+      ]
+    },
+    "1376240": {
+      "dir": "talks/2026-11-11-mc-intro/photos",
+      "photos": [
+        "PXL_20261111_170523953.MP.jpg"
       ]
     },
     "1379134": {
@@ -483,16 +1629,24 @@
       ]
     }
   },
-  "event_photos": {},
+  "event_photos": {
+    "2026-11-11": [
+      "PXL_20261111_162505741.MP.jpg",
+      "PXL_20261111_164545430.TS-000.jpg",
+      "PXL_20261111_203144669.MP.jpg",
+      "PXL_20261111_205517744.MP.jpg",
+      "PXL_20261111_222912575.jpg"
+    ]
+  },
   "coverage": {
     "photos_dir": "photos",
-    "photo_count": 25,
-    "placed_count": 25,
-    "event_count": 0,
-    "review_count": 0,
+    "photo_count": 75,
+    "placed_count": 69,
+    "event_count": 5,
+    "review_count": 1,
     "unplaced_count": 0,
     "timezone": "America/Los_Angeles",
-    "last_checked": "2026-11-11T09:07:42-08:00",
-    "generated_at": "2026-11-11T09:07:42-08:00"
+    "last_checked": "2026-11-11T14:41:24-08:00",
+    "generated_at": "2026-11-11T14:41:24-08:00"
   }
 }

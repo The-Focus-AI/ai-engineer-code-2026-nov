@@ -13,6 +13,19 @@
     ]
   },
   {
+    "question": "Should a person stay in the loop on the decisions agents make?",
+    "sides": [
+      {
+        "claim_id": "1341863-116-315efe",
+        "stance": "Yes for uncertain cases: always-on agents queue them for a person to judge"
+      },
+      {
+        "claim_id": "1373457-593-2c7665",
+        "stance": "No: a fast decision model lets the agent decide itself, without a human in the loop"
+      }
+    ]
+  },
+  {
     "question": "Should agents reach company data through each app or through one modeled store?",
     "sides": [
       {

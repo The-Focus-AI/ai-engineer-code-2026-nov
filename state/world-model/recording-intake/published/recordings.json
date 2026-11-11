@@ -68,5 +68,55 @@
     "word_count": 5451,
     "audio_sha256": "2d3f4ef08a6fdba94731bc3b5b899e386bb798cca40443e9ff7b86c9e393ced7",
     "status": "cleaned"
+  },
+  "2026-11-11_0904_swyx": {
+    "folder": "2026-11-11_0904_swyx",
+    "path": "recordings/inbox/2026-11-11_0904_swyx",
+    "title": "swyx",
+    "recorded_at": "2026-11-11T09:04:48-08:00",
+    "duration_seconds": 229.4,
+    "word_count": 657,
+    "audio_sha256": "070abb8eed41de17c31572ab47feb77362e60779e33d14c627f4772208c8c17a",
+    "status": "needs-review"
+  },
+  "2026-11-11_0911_Natalie-Serrino": {
+    "folder": "2026-11-11_0911_Natalie-Serrino",
+    "path": "recordings/inbox/2026-11-11_0911_Natalie-Serrino",
+    "title": "Natalie Serrino",
+    "recorded_at": "2026-11-11T09:11:14-08:00",
+    "duration_seconds": 1050,
+    "word_count": 3213,
+    "audio_sha256": "25fb6ddf91fb401fc375799dfd247d7822b019390b46627bce2c7a8e77a2d015",
+    "status": "cleaned"
+  },
+  "2026-11-11_0929_Lydia-Halley": {
+    "folder": "2026-11-11_0929_Lydia-Halley",
+    "path": "recordings/inbox/2026-11-11_0929_Lydia-Halley",
+    "title": "Lydia Halley",
+    "recorded_at": "2026-11-11T09:29:01-08:00",
+    "duration_seconds": 560.2,
+    "word_count": 719,
+    "audio_sha256": "e2ffd2b6a0b2875c1b15c64710ea561fe9591af5fbfbb2c34f0d4b0a01540448",
+    "status": "needs-review"
+  },
+  "2026-11-11_0939_cloudflare": {
+    "folder": "2026-11-11_0939_cloudflare",
+    "path": "recordings/inbox/2026-11-11_0939_cloudflare",
+    "title": "cloudflare",
+    "recorded_at": "2026-11-11T09:39:42-08:00",
+    "duration_seconds": 1212.5,
+    "word_count": 3892,
+    "audio_sha256": "665b7d755e6662f777ee3ced0ff681629a14de72a2e7c43b59c1b86edb6f31e8",
+    "status": "cleaned"
+  },
+  "2026-11-11_1000_lauren-tan": {
+    "folder": "2026-11-11_1000_lauren-tan",
+    "path": "recordings/inbox/2026-11-11_1000_lauren-tan",
+    "title": "lauren tan",
+    "recorded_at": "2026-11-11T10:00:25-08:00",
+    "duration_seconds": 1107.5,
+    "word_count": 2766,
+    "audio_sha256": "9ea41418cd0dbd7cf577fdc09b748a431e008d178fc66fe5cde77f80be7730f5",
+    "status": "cleaned"
   }
 }

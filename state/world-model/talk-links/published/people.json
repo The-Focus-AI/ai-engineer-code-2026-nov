@@ -81,6 +81,26 @@
       "status": "found"
     }
   ],
+  "1352467": [
+    {
+      "name": "Natalie Serrino",
+      "role": "Co-founder",
+      "affiliation": "Gimlet Labs",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": "https://x.com/nserrino",
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Gimlet Labs; bio \"Natalie Serrino is a co-founder of Gimlet Labs\"",
+        "transcript: \"My name is Natalie. I'm a co-founder of Gimlet Labs.\"",
+        "page title: \"Natalie Serrino (@nserrino) / X\""
+      ],
+      "status": "found"
+    }
+  ],
   "1356697": [
     {
       "name": "George Fraser",
@@ -100,6 +120,47 @@
         "page title: \"George Fraser (@frasergeorgew) / X\""
       ],
       "status": "found"
+    }
+  ],
+  "1373446": [
+    {
+      "name": "Lauren Tan",
+      "role": "Principal Engineer",
+      "affiliation": "SpaceXSI (xAI)",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": "https://x.com/poteto",
+        "github": "https://github.com/poteto",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation SpaceXSI (xAI); bio \"Lauren is a Principal Engineer at SpaceXSI where she works on Grok Bot and client architecture.\"",
+        "transcript: \"My name is Potato. I work on GAPA at SpaceXSI.\"",
+        "page title: \"poteto (lauren) · GitHub\"",
+        "page title: \"lauren (@poteto) / X\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1373457": [
+    {
+      "name": "Michelle Chen",
+      "role": "Group Product Manager, AI Platform",
+      "affiliation": "Cloudflare",
+      "links": {
+        "site": "https://blog.cloudflare.com/author/michelle/",
+        "linkedin": null,
+        "x": null,
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Cloudflare; bio \"Michelle Chen runs the AI Platform at Cloudflare on the product team.\"",
+        "transcript: \"So at Cloudflare, I am the group PM here.\"",
+        "page title: \"Michelle Chen - Cloudflare Blog\""
+      ],
+      "status": "partial"
     }
   ],
   "1379134": [
