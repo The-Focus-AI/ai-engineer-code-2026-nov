@@ -377,15 +377,22 @@ for (const t of captured) {
 // ===== Today =====
 {
   const up = "";
+  // The whole day, both rooms; all-day items (registration, expo hours, lounges) go on one line.
+  const ALL_DAY = 3 * 3600e3;
+  const shortRoom = (s: Session): string => roomName(s).match(/\(([^)]+)\)/)?.[1] ?? roomName(s);
   const plan = wm.program.sessions
-    .filter((s) => recs[s.session_id]?.call === "go" || capturedSessionIds.has(s.session_id) || (s.format === "break" || /keynote/i.test(s.format ?? "")))
+    .filter((s) => Date.parse(s.ends_at) - Date.parse(s.starts_at) <= ALL_DAY)
     .map((s) => ({
-      id: s.session_id, day: s.day, start: s.starts_at, end: s.ends_at, title: s.title, room: roomName(s),
-      who: s.speaker_ids.map((id) => wm.speakers[id]?.name).filter(Boolean).join(", "),
+      id: s.session_id, day: s.day, start: s.starts_at, end: s.ends_at, title: s.title, room: shortRoom(s),
+      main: /mainstage/i.test(roomName(s)),
+      who: s.speaker_ids.map((id) => { const p = wm.speakers[id]; return p ? p.name + (p.affiliation ? ` (${p.affiliation})` : "") : ""; }).filter(Boolean).join(", "),
       call: recs[s.session_id]?.call ?? (s.format === "break" ? "break" : ""),
+      why: recs[s.session_id]?.why ?? "", abstract: s.abstract ?? "",
       hub: slugBySession.has(s.session_id) ? talkHref(slugBySession.get(s.session_id)!, up) : null,
     }))
-    .sort((a, b) => a.start.localeCompare(b.start));
+    .sort((a, b) => a.start.localeCompare(b.start) || Number(b.main) - Number(a.main));
+  const allDay = wm.program.sessions.filter((s) => Date.parse(s.ends_at) - Date.parse(s.starts_at) > ALL_DAY)
+    .map((s) => ({ day: s.day, title: s.title, room: shortRoom(s), start: s.starts_at, end: s.ends_at }));
   const days = wm.program.days.map((d) => ({ date: d.date, label: day(new Date(`${d.date}T12:00:00-08:00`)), full: d.label ?? "" }));
   const recent = captured.map((t) => `<div class="receipt"><span><a href="${talkHref(t.slug, up)}">${esc(t.title)}</a> <span class="minor">${esc(speakerNames(t.session).split(" · ").map((x) => x.split(",")[0]).join(", "))}</span></span><span class="mono">${builtCount(t)}/7 built</span></div>`).join("");
   const latest = [...notes].sort((a, b) => b.file.localeCompare(a.file)).slice(0, 6).map((n) => {
@@ -401,12 +408,14 @@ for (const t of captured) {
     return `<div class="receipt"><span>${node}<span class="minor"> · ${esc(firstLine(r?.semantic_diff?.summary ?? "", 90))}</span></span><span class="mono">${r ? `${esc(r.status)} · ${clock(new Date(r.at))}` : "never run"}</span></div>`;
   }).join("");
   const git = Bun.spawnSync({ cmd: ["git", "status", "--porcelain"], cwd: root, stdout: "pipe" }).stdout.toString().split("\n").filter(Boolean).length;
-  const data = JSON.stringify({ plan, days, tz: TZ }).replace(/</g, "\\u003c");
+  const data = JSON.stringify({ plan, allDay, days, tz: TZ }).replace(/</g, "\\u003c");
   const body = `
   <header class="masthead"><p class="mono agency">${esc(wm.event.name)}</p><h1 id="today-title">Today</h1><p class="sub" id="today-sub">Where the day stands.</p></header>
   <div class="marginalia mono"><span id="dayswitch"></span><a href="site/index.html">Full schedule →</a></div>
   <section class="view now-next" id="nownext"></section>
-  <section class="view"><div class="view-head"><h2>My day</h2><p class="lede">My GO picks, the talks I've captured, and the breaks. <a href="site/index.html">Full schedule</a></p></div>
+  <section class="view"><div class="view-head"><h2>Schedule</h2><p class="lede">Everything on, in time order. GO and maybe are my picks; tap a talk for its abstract.</p>
+    <div class="roomfilter" id="roomfilter"><button type="button" data-r="all">Both rooms</button><button type="button" data-r="main">Mainstage only</button></div>
+    <p class="minor" id="allday"></p></div>
     <ol class="plan" id="plan"></ol></section>
   <section class="view"><div class="view-head"><h2>Captured so far</h2><p class="lede"><a href="site/talks/index.html">${captured.length} talks</a> · ${notes.length} notes · <a href="site/themes.html">${themes.length} themes</a></p></div><div>${recent}</div></section>
   <section class="view"><div class="view-head"><h2>Latest notes</h2></div><div>${latest}</div></section>
@@ -418,25 +427,35 @@ for (const t of captured) {
   var dates=D.days.map(function(d){return d.date});
   var pick=dates.indexOf(today)>=0?today:(today<dates[0]?dates[0]:(dates.find(function(d){return d>today})||dates[dates.length-1]));
   var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
-  function render(date){
+  var room='all';try{room=localStorage.getItem('aie-room')||'all'}catch(e){}
+  var cur=pick;
+  function render(date){cur=date;
     var now=Date.now(), live=date===today;
     var lab=D.days.find(function(d){return d.date===date});
     document.getElementById('today-title').textContent=live?'Today':(lab?lab.label:date);
     document.getElementById('today-sub').textContent=new Date(date+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})+(live?' · '+new Date().toLocaleTimeString('en-US',{timeZone:D.tz,hour:'numeric',minute:'2-digit'})+' in San Francisco':'');
-    var rows=D.plan.filter(function(p){return p.day===date});
-    var nowRow=live&&rows.find(function(p){return Date.parse(p.start)<=now&&now<Date.parse(p.end)&&p.call!=='break'})||live&&rows.find(function(p){return Date.parse(p.start)<=now&&now<Date.parse(p.end)});
-    var next=rows.find(function(p){return Date.parse(p.start)>now&&p.call!=='break'});
-    var card=function(k,p){return p?'<div class="nn"><span class="mono">'+k+' · '+fmt(p.start)+'–'+fmt(p.end)+'</span><b>'+(p.hub?'<a href="'+p.hub+'">'+esc(p.title)+'</a>':esc(p.title))+'</b><span class="minor">'+esc(p.room)+(p.who?' · '+esc(p.who):'')+'</span></div>':''};
+    var rows=D.plan.filter(function(p){return p.day===date&&(room==='all'||p.main||p.call==='break')});
+    var inProg=live?rows.filter(function(p){return Date.parse(p.start)<=now&&now<Date.parse(p.end)}):[];
+    var talksNow=inProg.filter(function(p){return p.call!=='break'});var nowRows=talksNow.length?talksNow:inProg;
+    var upcoming=rows.filter(function(p){return Date.parse(p.start)>now&&p.call!=='break'});
+    var nextRows=upcoming.length?upcoming.filter(function(p){return p.start===upcoming[0].start}):[];
+    var card=function(k,p){return '<div class="nn"><span class="mono">'+k+' · '+fmt(p.start)+'–'+fmt(p.end)+' · '+esc(p.room)+'</span><b>'+(p.hub?'<a href="'+p.hub+'">'+esc(p.title)+'</a>':esc(p.title))+'</b><span class="minor">'+esc(p.who)+'</span></div>'};
     var nn=document.getElementById('nownext');
-    nn.innerHTML=live?(card('Now',nowRow)+card('Next',next))||'<p class="lede">Nothing else planned today.</p>':'';
+    nn.innerHTML=live?(nowRows.map(function(p){return card('Now',p)}).join('')+nextRows.map(function(p){return card('Next',p)}).join(''))||'<p class="lede">Nothing else on today.</p>':'';
     nn.hidden=!live;
+    var ad=D.allDay.filter(function(a){return a.day===date});
+    document.getElementById('allday').textContent=ad.length?'All day: '+ad.map(function(a){return a.title+' ('+a.room+', '+fmt(a.start)+'–'+fmt(a.end)+')'}).join(' · '):'';
+    document.querySelectorAll('#roomfilter button').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-r')===room))});
     document.getElementById('plan').innerHTML=rows.map(function(p){
-      var past=live&&Date.parse(p.end)<now, cur=p===nowRow;
-      var pill=p.hub?'<span class="pill call-go">captured</span>':p.call==='go'?'<span class="pill call-maybe">go</span>':p.call==='break'?'<span class="pill call-skip">break</span>':'';
-      return '<li class="'+(past?'past ':'')+(cur?'cur':'')+'"><span class="mono">'+fmt(p.start)+'</span><span class="t">'+(p.hub?'<a href="'+p.hub+'">'+esc(p.title)+'</a>':esc(p.title))+'<span class="minor"> · '+esc(p.room)+(p.who?' · '+esc(p.who):'')+'</span></span>'+pill+'</li>'}).join('')||'<li class="lede">Nothing planned.</li>';
+      var past=live&&Date.parse(p.end)<now, cur=nowRows.indexOf(p)>=0;
+      var pill=p.hub?'<span class="pill call-go">captured</span>':p.call==='go'?'<span class="pill call-go">go</span>':p.call==='maybe'?'<span class="pill call-maybe">maybe</span>':p.call==='break'?'<span class="pill call-skip">break</span>':'';
+      var head=(p.hub?'<a href="'+p.hub+'">'+esc(p.title)+'</a>':esc(p.title))+(p.who?'<span class="minor"> · '+esc(p.who)+'</span>':'');
+      var more=(p.abstract||p.why)?'<details><summary>'+head+'</summary>'+(p.why?'<p class="why"><b>Why '+esc(p.call)+':</b> '+esc(p.why)+'</p>':'')+(p.abstract?'<p class="abs">'+esc(p.abstract)+'</p>':'')+'</details>':head;
+      return '<li class="'+(past?'past ':'')+(cur?'cur ':'')+(p.main?'':'side')+'"><span class="mono">'+fmt(p.start)+'</span><span class="t">'+more+'<span class="room mono">'+esc(p.room)+'</span></span>'+pill+'</li>'}).join('')||'<li class="lede">Nothing scheduled.</li>';
     document.getElementById('dayswitch').innerHTML=D.days.map(function(d){return '<button type="button" title="'+esc(d.full)+'" data-d="'+d.date+'"'+(d.date===date?' aria-pressed="true"':'')+'>'+esc(d.label)+'</button>'}).join('');
   }
   document.getElementById('dayswitch').addEventListener('click',function(e){var b=e.target.closest('button');if(b)render(b.getAttribute('data-d'))});
+  document.getElementById('roomfilter').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;room=b.getAttribute('data-r');try{localStorage.setItem('aie-room',room)}catch(x){}render(cur)});
   render(pick);setInterval(function(){var b=document.querySelector('#dayswitch [aria-pressed]');render(b?b.getAttribute('data-d'):pick)},60000);
 })();`;
   write("index.html", shell({ title: "Today", active: "today", up, body, script }));

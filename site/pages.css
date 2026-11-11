@@ -81,3 +81,14 @@ details summary { cursor: pointer; color: var(--machine); }
 .card-acts { display: flex; flex-wrap: wrap; gap: .4rem 1rem; align-items: center; }
 .cta.small { margin-top: 0; font-size: .95rem; padding: .5rem .9rem; }
 .cta.ghost { background: none; color: var(--action); border: 1px solid var(--action); }
+.roomfilter { display: flex; gap: .3rem; flex-wrap: wrap; }
+.roomfilter button { background: none; border: 1px solid var(--line-strong); color: var(--ink-muted); border-radius: 999px; padding: .25rem .7rem; font: inherit; font-size: .85rem; cursor: pointer; }
+.roomfilter button[aria-pressed="true"] { color: var(--on-action); background: var(--action); border-color: var(--action); }
+.plan li.side .t { padding-left: .9rem; border-left: 1px solid var(--line-strong); }
+.plan .room { display: block; margin-top: .15rem; }
+.plan details summary { color: var(--ink); list-style: none; }
+.plan details summary::-webkit-details-marker { display: none; }
+.plan details summary::after { content: " +"; color: var(--ink-muted); }
+.plan details[open] summary::after { content: " –"; }
+.plan .why, .plan .abs { margin-top: .4rem; font-size: .9rem; color: var(--ink-muted); max-width: 46rem; }
+.plan .why b { color: var(--ink); }
