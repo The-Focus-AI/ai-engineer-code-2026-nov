@@ -4,9 +4,10 @@
 // Run after the views are refreshed (tick procedure step 8). It commits only
 // data paths, never code, and pushes to origin/main, whose push deploys Pages
 // (.github/workflows/pages.yml). It publishes only when something a reader
-// would see moved: a note, a talk file, a recording sidecar, a world-model, an
-// analysis. Receipt ledgers and re-rendered HTML alone (a skip tick re-stamps
-// both) wait for the next real change and ride along with it.
+// would see moved: a note, a talk file, a recording sidecar, a moved
+// world-model fingerprint, an analysis. Receipt ledgers, re-stamped
+// world-models and re-rendered HTML alone (every tick touches them) wait for
+// the next real change and ride along with it.
 //
 // Never forces. A rejected push (main moved elsewhere) or no network is
 // reported and left for the next tick; the commit stays local.
@@ -36,7 +37,10 @@ const report = (o: Record<string, unknown>) => { console.log(JSON.stringify(o));
 // docs, CSS, the runtime) is committed by hand, separately.
 const DATA = ["talks", "notes", "recordings", "state", "analysis", "brief", "editorial", "photos/manifest.json",
   "site/recommendations.json", "site/index.html", "site/talks", "site/people.html", "site/themes.html", "index.html"];
-const NOISE = (p: string): boolean => /^state\/world-model\/[^/]+\/receipts\.jsonl$/.test(p) || /\.html$/.test(p);
+// Under state/, only a moved fingerprint counts: a render that moved rewrites
+// the node's .version. Ledgers, and world-models re-stamped by an unmoved
+// render (a gateway records received_at every tick), are noise.
+const NOISE = (p: string): boolean => (p.startsWith("state/") && !p.endsWith(".version")) || /\.html$/.test(p);
 
 const branch = git("rev-parse", "--abbrev-ref", "HEAD").out;
 if (branch !== "main") report({ published: false, why: `on branch ${branch}, not main` });
