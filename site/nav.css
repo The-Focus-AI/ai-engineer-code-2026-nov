@@ -1,0 +1,21 @@
+/* The site's top bar. Linked by every generated page, inlined into the field
+   guide by render-site.ts, and loaded by the talk runtime. Colours are literal
+   so it reads the same under either token set. */
+.topnav {
+  display: flex; align-items: center; gap: .15rem; overflow-x: auto; scrollbar-width: none;
+  max-width: 68rem; margin: 0 auto; padding: .55rem 0;
+  border-bottom: 1px solid rgba(242, 241, 232, 0.16);
+  font: 600 1.02rem/1 "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  letter-spacing: .05em; text-transform: uppercase;
+}
+.topnav::-webkit-scrollbar { display: none; }
+.topnav a { color: #b9bcae; text-decoration: none; padding: .45rem .6rem; border-radius: 999px; white-space: nowrap; }
+.topnav a:hover { color: #f2f1e8; }
+.topnav a[aria-current="page"] { color: #17231b; background: #f4cf72; }
+.topnav .brand { color: #f2f1e8; margin-right: auto; padding-left: 0; letter-spacing: .08em; }
+.topnav a:focus-visible { outline: 2px solid #a9d18f; outline-offset: 2px; }
+@media (max-width: 34rem) {
+  .topnav .brand { display: none; }
+  .topnav { justify-content: space-between; font-size: .95rem; }
+  .topnav a { padding: .45rem .45rem; }
+}

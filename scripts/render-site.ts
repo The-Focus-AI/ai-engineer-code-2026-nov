@@ -9,6 +9,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { topnav } from "./site/nav.ts";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const argv = process.argv.slice(2);
@@ -99,9 +100,12 @@ const data = {
 const template = readFileSync(join(HERE, "site", "template.html"), "utf8");
 // "<" is escaped so source text can never close the data block.
 const json = JSON.stringify(data).replace(/</g, "\\u003c");
-if (!template.includes("/*SITE_DATA*/null") || !template.includes("/*SITE_TITLE*/")) throw new Error("template is missing a placeholder");
+if (!["/*SITE_DATA*/null", "/*SITE_TITLE*/", "/*NAV_CSS*/", "<!--TOPNAV-->"].every((p) => template.includes(p))) throw new Error("template is missing a placeholder");
+// The site's top bar, shared with every other page; its CSS is inlined so the guide stays one file.
+const navCss = readFileSync(join(root, "site/nav.css"), "utf8");
 const title = `${String(wm.event.name).replace(/&/g, "&amp;").replace(/</g, "&lt;")} Field Guide`;
-const html = template.replace("/*SITE_TITLE*/", () => title).replace("/*SITE_DATA*/null", () => json);
+const html = template.replace("/*SITE_TITLE*/", () => title).replace("/*SITE_DATA*/null", () => json)
+  .replace("/*NAV_CSS*/", () => navCss).replace("<!--TOPNAV-->", () => topnav("schedule", "../"));
 
 mkdirSync(dirname(out), { recursive: true });
 writeFileSync(out, html);

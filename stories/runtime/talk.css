@@ -1,24 +1,35 @@
 :root {
-  --ink: #191714;
-  --paper: #fbf8f1;
-  --panel: #f2ecdf;
-  --muted: #6d6458;
-  --rule: #d6cbb8;
-  --accent: #8a2f1d;
-  --accent-soft: #f3e3d6;
-  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  /* The field guide's palette and type (site/theme.css), mapped onto the
+     names this runtime and the talk pages already use. */
+  color-scheme: dark;
+  --ink: #f2f1e8;
+  --paper: #17231b;
+  --deep: #101712;
+  --panel: #1e2c22;
+  --raised: #24352a;
+  --card: #2b3f31;
+  --muted: #b9bcae;
+  --rule: rgba(242, 241, 232, 0.16);
+  --rule-strong: rgba(242, 241, 232, 0.38);
+  --accent: #f4cf72;
+  --accent-soft: #3a3a24;
+  --identity: #a9d18f;
+  --machine: #8fb8d8;
+  --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue Condensed", system-ui, sans-serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --serif: Georgia, "Times New Roman", serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 * { box-sizing: border-box; }
 html { background: var(--paper); scroll-behavior: smooth; }
 body {
   margin: 0;
   color: var(--ink);
-  font-family: var(--serif);
-  line-height: 1.65;
+  font-family: var(--sans);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-a { color: var(--accent); }
+a { color: var(--machine); }
 
 .talk-masthead {
   max-width: 84rem;
@@ -32,6 +43,9 @@ a { color: var(--accent); }
   color: var(--muted);
 }
 .talk-masthead h1 {
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-weight: 600;
   font-size: clamp(2.2rem, 4.5vw, 3.6rem);
   line-height: 1;
   letter-spacing: -.03em;
@@ -54,7 +68,7 @@ a { color: var(--accent); }
   font: 600 .74rem/1 var(--sans);
   padding: .5rem .7rem;
   border: 1px solid var(--rule);
-  background: #fffdf8;
+  background: var(--raised);
   color: var(--ink);
   border-radius: .25rem;
   cursor: pointer;
@@ -164,19 +178,19 @@ a { color: var(--accent); }
   flex-direction: column;
   justify-content: center;
   gap: .7rem;
-  background: #191714;
+  background: var(--deep);
   color: var(--paper);
 }
 .video-card a {
   color: var(--paper);
   font: 600 .85rem/1.3 var(--sans);
   text-decoration: none;
-  border-bottom: 1px solid rgba(251, 248, 241, .45);
+  border-bottom: 1px solid var(--rule-strong);
   align-self: flex-start;
 }
 .video-card .time {
   font: .8rem/1.4 var(--mono, ui-monospace, monospace);
-  color: #d6cbb8;
+  color: var(--muted);
 }
 
 .talk-copy { min-width: 0; max-width: 46rem; }
@@ -196,6 +210,10 @@ a { color: var(--accent); }
   color: var(--accent);
 }
 .talk-copy h2 {
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .02em;
   font-size: clamp(1.7rem, 3vw, 2.3rem);
   line-height: 1.12;
   letter-spacing: -.02em;
@@ -239,7 +257,7 @@ a { color: var(--accent); }
   font: .78rem/1.5 var(--sans);
   color: var(--muted);
 }
-.talk-copy .watch a { color: var(--accent); }
+.talk-copy .watch a { color: var(--machine); }
 .talk-foot {
   max-width: 84rem;
   margin: 0 auto;
@@ -248,33 +266,26 @@ a { color: var(--accent); }
   color: var(--muted);
 }
 
+/* Mid widths (700–980px): keep the story layout, just a narrower pair of columns. */
 @media (max-width: 980px) {
-  .talk-layout { grid-template-columns: 1fr; gap: 1.5rem; }
-  .talk-rail { position: static; }
-  .talk-visuals {
-    aspect-ratio: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background: transparent;
-    border: 0;
-    overflow: visible;
-  }
-  .talk-visual {
-    position: static;
-    opacity: 1;
-    transform: none;
-    pointer-events: auto;
-    display: flex;
-    background: var(--panel);
-    border: 1px solid var(--rule);
-    border-radius: .4rem;
-    min-height: 15rem;
-  }
-  .talk-rail-progress { display: none; }
-  .talk-copy section { min-height: 0; padding: 1.5rem 0; }
-  .talk-copy section:first-child { padding-top: 0; }
+  .talk-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.6rem; padding-inline: 1rem; }
 }
+
+/* Phones (under 700px): no sticky rail. The runtime places each chapter's visual
+   directly above that chapter's text, so picture and paragraph stay together. */
+@media (max-width: 700px) {
+  .talk-layout { grid-template-columns: 1fr; gap: 0; }
+  .talk-rail { display: none; }
+  .talk-copy section, .talk-copy section:first-child { min-height: 0; padding: 1.4rem 0 2rem; opacity: 1; }
+  .inline-visual {
+    position: static; opacity: 1; transform: none; pointer-events: auto;
+    display: flex; flex-direction: column; gap: .6rem;
+    margin: 0 0 1.2rem; padding: .9rem;
+    background: var(--panel); border: 1px solid var(--rule); border-top: 2px solid var(--accent); border-radius: .4rem;
+  }
+  .inline-visual img { width: 100%; height: auto; }
+}
+@media (min-width: 701px) { .inline-visual { display: none; } }
 
 @media (max-width: 620px) {
   .talk-masthead { padding-top: 2.5rem; }
@@ -296,3 +307,36 @@ a { color: var(--accent); }
   .talk-copy section { min-height: 0; break-inside: avoid; }
   .talk-copy section h2 { break-after: avoid; }
 }
+
+/* Guide accents: mono kickers, serif quotes, yellow rule on the rail. */
+.talk-kicker, .talk-copy .chapter, .diagram-card .diagram-label { font-family: var(--mono); font-weight: 700; color: var(--muted); }
+.talk-copy .chapter { color: var(--accent); }
+.talk-masthead .dek { font-family: var(--serif); font-style: italic; }
+.talk-copy blockquote { font-family: var(--serif); border-left-color: var(--accent); }
+.talk-visuals { border-top: 2px solid var(--accent); }
+
+/* Scrollytelling: the rail fills the viewport beside the text, the chapter in
+   view is at full strength, and the others recede so one beat reads at a time. */
+@media (min-width: 701px) {
+  .talk-rail { top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+  .talk-visuals { aspect-ratio: auto; height: min(72vh, 44rem); }
+  .talk-copy section { min-height: 92vh; transition: opacity .35s ease; opacity: .32; }
+  .talk-copy section.is-current { opacity: 1; }
+  .talk-copy section:first-child { padding-top: 6vh; min-height: 92vh; justify-content: center; }
+}
+.talk-rail-count { font: 700 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--accent); margin-top: .7rem; }
+@media print {
+  .talk-copy section { opacity: 1 !important; }
+  .inline-visual { display: none !important; }
+}
+.talk-layout[data-talk-collapsed] .talk-copy section { opacity: 1; min-height: 0; padding: 1.6rem 0; }
+.inline-visual figcaption { font: .72rem/1.45 var(--sans); color: var(--muted); }
+.inline-visual .diagram-label { font: 700 .66rem/1.3 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+/* A page's photo rule stretches images to fill the rail; inline cards size to the image. */
+.inline-visual img { flex: none !important; height: auto !important; max-height: 60vh; object-fit: contain; }
+
+/* Site chrome injected by talk.js: the shared top bar and the way back to the hub. */
+.topnav.in-talk { max-width: none; padding-inline: max(1.5rem, env(safe-area-inset-left, 0px)); }
+.talk-back { display: inline-block; margin-bottom: .9rem; color: var(--machine); font: 700 .66rem/1.4 var(--mono); letter-spacing: .14em; text-transform: uppercase; text-decoration: none; }
+.talk-back:hover { text-decoration: underline; }
+@media print { .topnav, .talk-back { display: none; } }

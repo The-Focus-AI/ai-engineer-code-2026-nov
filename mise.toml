@@ -58,6 +58,14 @@ run = "npx --yes --cache .npm-cache skills experimental_install"
 description = "Render the schedule guide (site/index.html) from the published schedule truth"
 run = "bun scripts/render-site.ts"
 
+[tasks.views]
+description = "Refresh every HTML page (Today, schedule, talk hubs, themes, people) from current truth"
+run = "bun scripts/serve/refresh-views.ts"
+
+[tasks.pages]
+description = "Render Today (index.html), the talk hubs, themes and people pages under site/"
+run = "bun scripts/render-pages.ts"
+
 [tasks.issue]
 description = "Render a magazine issue.md to print-first issue.html"
 run = "bun scripts/render-issue.ts ${ISSUE:-magazine/issue-01/issue.md}"
