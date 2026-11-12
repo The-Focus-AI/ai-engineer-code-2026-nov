@@ -411,6 +411,16 @@ for (const t of captured) {
   const short = (s: Session): string => roomName(s).match(/\(([^)]+)\)/)?.[1] ?? (roomName(s) || "TBA");
   const isTrack = (s: Session): boolean => !!s.room_id && /talk|workshop|keynote/i.test(s.format ?? "talk") && s.format !== "break";
   const who = (s: Session): string => s.speaker_ids.map((id) => { const p = wm.speakers[id]; return p ? p.name + (p.affiliation ? ` (${p.affiliation})` : "") : ""; }).filter(Boolean).join(", ");
+  // Speaker metadata from the roster: bio and links, shown inside each session's About.
+  const linkLabel = (u: string): string => {
+    const h = (() => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } })();
+    return /(^|\.)x\.com$|twitter\.com$/.test(h) ? "X" : /linkedin\.com$/.test(h) ? "LinkedIn" : /github\.com$/.test(h) ? "GitHub" : h;
+  };
+  const speakerMeta = (s: Session): string => s.speaker_ids.map((id) => wm.speakers[id]).filter(Boolean).map((p) => {
+    const links = (p!.links ?? []).map((u) => `<a href="${esc(u)}" rel="noopener">${esc(linkLabel(u))}</a>`).join(" · ");
+    const bio = (p as { bio?: string }).bio;
+    return `<div class="tt-speaker"><p><b>${esc(p!.name)}</b>${p!.affiliation ? `, ${esc(p!.affiliation)}` : ""}${links ? ` <span class="mono">${links}</span>` : ""}</p>${bio ? `<p class="minor">${esc(bio)}</p>` : ""}</div>`;
+  }).join("");
   const pill = (s: Session): string => {
     if (slugBySession.has(s.session_id)) return `<span class="pill call-go">captured</span>`;
     const c = recs[s.session_id]?.call;
@@ -421,7 +431,8 @@ for (const t of captured) {
     const title = href ? `<a href="${esc(href)}">${esc(s.title)}</a>` : esc(s.title);
     const meta = `<span class="mono">${esc(clock(new Date(s.starts_at)))}–${esc(clock(new Date(s.ends_at)))}${withRoom ? "" : ` · <span class="rm">${esc(short(s))}</span>`}</span>`;
     const why = recs[s.session_id]?.why;
-    const more = s.abstract || why ? `<details><summary>About</summary>${why ? `<p class="why"><b>My call:</b> ${esc(why)}</p>` : ""}${s.abstract ? `<p>${esc(s.abstract)}</p>` : ""}</details>` : "";
+    const bios = speakerMeta(s);
+    const more = s.abstract || why || bios ? `<details><summary>About</summary>${why ? `<p class="why"><b>My call:</b> ${esc(why)}</p>` : ""}${s.abstract ? `<p>${esc(s.abstract)}</p>` : ""}${bios}</details>` : "";
     return `<div class="tt-cell" data-start="${s.starts_at}" data-end="${s.ends_at}">${meta}<b class="tt-title">${title}</b>${who(s) ? `<span class="tt-who">${esc(who(s))}</span>` : ""}<div class="tt-foot">${pill(s)}</div>${more}</div>`;
   };
   const days = wm.program.days.map((d) => {
