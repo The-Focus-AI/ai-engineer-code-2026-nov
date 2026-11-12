@@ -1,0 +1,23 @@
+{
+  "title": "trust by verify",
+  "recorded_at": "2026-11-12T11:46:59-08:00",
+  "duration_seconds": 1301,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 3646,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261112 114659.m4a",
+  "audio_sha256": "ae549d90ab72e8d4b1f79759037533f7ad0054a1676d00b049cd42fa2eda127b",
+  "exported_at": "2026-11-12T12:54:02-08:00",
+  "transcript_echo_segments": 8,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 3707,
+      "locale": "en_US"
+    }
+  ]
+}

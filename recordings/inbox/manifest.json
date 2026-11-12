@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T14:30:09-08:00",
+  "generated_at": "2026-11-12T13:12:49-08:00",
   "source": "/Users/wschenk/Library/Group Containers/group.com.apple.VoiceMemos.shared/Recordings",
   "recordings": [
     {
@@ -294,71 +294,361 @@
       "title": "Phillip DeepMind",
       "recorded_at": "2026-11-11T11:20:37-08:00",
       "duration_seconds": 976.5,
-      "transcript": "transcript.txt",
-      "transcript_word_count": 2891,
-      "transcript_locale": "en_US",
-      "transcript_source": "voice-memos",
-      "transcript_timing": "word",
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 2863,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
       "source_file": "20261111 112037.m4a",
       "audio_sha256": "7268a9550d8c0a6c179aa8298cf1572a3c21ffb776d6e1e57be5738db5f3ef31",
       "exported_at": "2026-11-11T11:37:03-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 2891,
+          "locale": "en_US"
+        }
+      ],
       "folder": "2026-11-11_1120_Phillip-DeepMind"
     },
     {
       "title": "Heal your agents",
       "recorded_at": "2026-11-11T11:48:01-08:00",
       "duration_seconds": 1404,
-      "transcript": "transcript.txt",
-      "transcript_word_count": 3497,
-      "transcript_locale": "en_US",
-      "transcript_source": "voice-memos",
-      "transcript_timing": "word",
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 3290,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
       "source_file": "20261111 114801.m4a",
       "audio_sha256": "6e0b340b25cdb2e65bdf037026a77db6358b335e98e483a55e3462cb368ef7e2",
       "exported_at": "2026-11-11T12:34:39-08:00",
+      "transcript_echo_segments": 19,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 3497,
+          "locale": "en_US"
+        }
+      ],
       "folder": "2026-11-11_1148_Heal-your-agents"
     },
     {
       "title": "Aamir Shakir",
       "recorded_at": "2026-11-11T12:15:57-08:00",
       "duration_seconds": 1117.4,
-      "transcript": "transcript.txt",
-      "transcript_word_count": 2806,
-      "transcript_locale": "en_US",
-      "transcript_source": "voice-memos",
-      "transcript_timing": "word",
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 2801,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
       "source_file": "20261111 121557.m4a",
       "audio_sha256": "9f95978c14ad45d277ebab51d728163f8e5facd151f288c430fff5a253ea4833",
       "exported_at": "2026-11-11T12:34:39-08:00",
+      "transcript_echo_segments": 8,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 2806,
+          "locale": "en_US"
+        }
+      ],
       "folder": "2026-11-11_1215_Aamir-Shakir"
     },
     {
       "title": "overcut",
       "recorded_at": "2026-11-11T12:36:46-08:00",
       "duration_seconds": 1187.5,
-      "transcript": "transcript.txt",
-      "transcript_word_count": 2904,
-      "transcript_locale": "en_US",
-      "transcript_source": "voice-memos",
-      "transcript_timing": "word",
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 2659,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
       "source_file": "20261111 123646.m4a",
       "audio_sha256": "253b33d22a4addaa0aeb33f08326bb4cc027373091adbe5309e96a884189ee76",
       "exported_at": "2026-11-11T12:56:42-08:00",
+      "transcript_echo_segments": 13,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 2904,
+          "locale": "en_US"
+        }
+      ],
       "folder": "2026-11-11_1236_overcut"
     },
     {
       "title": "diogo",
       "recorded_at": "2026-11-11T14:06:57-08:00",
       "duration_seconds": 1380.2,
-      "transcript": "transcript.txt",
-      "transcript_word_count": 4633,
-      "transcript_locale": "en_US",
-      "transcript_source": "voice-memos",
-      "transcript_timing": "word",
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 4615,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
       "source_file": "20261111 140657.m4a",
       "audio_sha256": "6645620c00606bce83be5a8d79642ce82e192bbc50c6fdaca7ab11bd1611ab0c",
       "exported_at": "2026-11-11T14:30:09-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 4633,
+          "locale": "en_US"
+        }
+      ],
       "folder": "2026-11-11_1406_diogo"
+    },
+    {
+      "title": "brian kennedy",
+      "recorded_at": "2026-11-11T15:22:39-08:00",
+      "duration_seconds": 27.6,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 46,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261111 152239.m4a",
+      "audio_sha256": "46418cc0a399cb5ecb967772969c08e75d520d1c1bfd6edbdca75230043365ed",
+      "exported_at": "2026-11-11T17:50:40-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 49,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-11_1522_brian-kennedy"
+    },
+    {
+      "title": "Scott Roberts",
+      "recorded_at": "2026-11-11T15:25:01-08:00",
+      "duration_seconds": 712.1,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 2013,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261111 152501.m4a",
+      "audio_sha256": "a74c999a368a5dd8d222cfda23a8893c4dc298d86f1d23511ef3f7787c2e6c0a",
+      "exported_at": "2026-11-11T17:50:40-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 2081,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-11_1525_Scott-Roberts"
+    },
+    {
+      "title": "Lovable",
+      "recorded_at": "2026-11-11T16:29:13-08:00",
+      "duration_seconds": 1144.1,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 3392,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261111 162913.m4a",
+      "audio_sha256": "2fa207ca9930c5b3aa7fc7ea47edee72db055a5a19cf48f3b8a05bb7ceff3a87",
+      "exported_at": "2026-11-11T17:50:40-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 3307,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-11_1629_Lovable"
+    },
+    {
+      "title": "Zach Bruggeman",
+      "recorded_at": "2026-11-11T16:48:38-08:00",
+      "duration_seconds": 506,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 1376,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261111 164838.m4a",
+      "audio_sha256": "e9067ee612c59d583242e5cec8cde331643d98f64ea3a320e6121739c6dfdf8a",
+      "exported_at": "2026-11-11T17:50:40-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 1389,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-11_1648_Zach-Bruggeman"
+    },
+    {
+      "title": "Steve Yegge",
+      "recorded_at": "2026-11-11T17:06:21-08:00",
+      "duration_seconds": 1284.5,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 3981,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261111 170621.m4a",
+      "audio_sha256": "bf67cd218a3424c8bd18acda51fd1c48a803b20f0ca7b4218bd426ca79ebfeb8",
+      "exported_at": "2026-11-11T17:50:40-08:00",
+      "transcript_echo_segments": 1,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 3986,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-11_1706_Steve-Yegge"
+    },
+    {
+      "title": "simon willison",
+      "recorded_at": "2026-11-11T17:30:50-08:00",
+      "duration_seconds": 1182.3,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 3914,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261111 173050.m4a",
+      "audio_sha256": "bb2f85202721c759245e90fdb6bd09a2bc91c52c1650b81cd309af776ca8abdd",
+      "exported_at": "2026-11-11T17:50:40-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 3888,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-11_1730_simon-willison"
+    },
+    {
+      "title": "walden",
+      "recorded_at": "2026-11-12T11:20:34-08:00",
+      "duration_seconds": 830.8,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 2590,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261112 112034.m4a",
+      "audio_sha256": "c1986f358fc419cf01d93f29185e8556bf96bc3367c79ee409eee323bd4dc57c",
+      "exported_at": "2026-11-12T12:54:02-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 2590,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-12_1120_walden"
+    },
+    {
+      "title": "trust by verify",
+      "recorded_at": "2026-11-12T11:46:59-08:00",
+      "duration_seconds": 1301,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 3646,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261112 114659.m4a",
+      "audio_sha256": "ae549d90ab72e8d4b1f79759037533f7ad0054a1676d00b049cd42fa2eda127b",
+      "exported_at": "2026-11-12T12:54:02-08:00",
+      "transcript_echo_segments": 8,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 3707,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-12_1146_trust-by-verify"
+    },
+    {
+      "title": "arsln let the agents cook",
+      "recorded_at": "2026-11-12T12:11:55-08:00",
+      "duration_seconds": 1063.9,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 3184,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261112 121155.m4a",
+      "audio_sha256": "bbf1184a3db31f88bee5ab4b734da8fe273e555273c4965d5dab51a70cd48a96",
+      "exported_at": "2026-11-12T12:54:02-08:00",
+      "transcript_echo_segments": 1,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 3256,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-12_1211_arsln-let-the-agents-cook"
+    },
+    {
+      "title": "lance martin",
+      "recorded_at": "2026-11-12T12:35:29-08:00",
+      "duration_seconds": 1098.3,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 3285,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261112 123529.m4a",
+      "audio_sha256": "549d69c33d8654ba3da06eaa79c76298a07350527d0f656d96ee7baca03c54cd",
+      "exported_at": "2026-11-12T12:54:02-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 3310,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-12_1235_lance-martin"
     }
   ]
 }

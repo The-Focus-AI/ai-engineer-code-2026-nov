@@ -22,6 +22,35 @@
       {
         "claim_id": "1373457-593-2c7665",
         "stance": "No: a fast decision model lets the agent decide itself, without a human in the loop"
+      },
+      {
+        "claim_id": "1373464-272-aa838a",
+        "stance": "Yes, at approval gates the team places wherever it wants them"
+      },
+      {
+        "claim_id": "1373465-537-5a8f2c",
+        "stance": "Only until the model is reliable: an unpredictable miss is what forces a reviewer onto every answer"
+      },
+      {
+        "claim_id": "1379052-769-3e6761",
+        "stance": "Yes for high stakes: approval on a separate channel (CIBA) before the tool runs"
+      },
+      {
+        "claim_id": "1379010-126-1d81c9",
+        "stance": "No: a thousand agents solved a 30-hour proof with no human steering on the solution"
+      }
+    ]
+  },
+  {
+    "question": "Should agent memory keep everything or be pruned?",
+    "sides": [
+      {
+        "claim_id": "1373469-416-4d9fe1",
+        "stance": "Keep everything in an append-only log, and render the prompt from it per model"
+      },
+      {
+        "claim_id": "1373471-642-0e7cf0",
+        "stance": "Prune on purpose: agents never delete, so memory becomes a garbage dump"
       }
     ]
   },
@@ -39,6 +68,23 @@
       {
         "claim_id": "1352199-409-a5ad0a",
         "stance": "Through MCP servers each domain owns, behind a shared platform that gates access and decides which source answers"
+      },
+      {
+        "claim_id": "1373462-128-fdc2fa",
+        "stance": "Through one search index prepared ahead of time; one MCP server per source leaves the agent guessing"
+      }
+    ]
+  },
+  {
+    "question": "Should agents search a prepared index or judge every row?",
+    "sides": [
+      {
+        "claim_id": "1373462-859-88518e",
+        "stance": "Index everything ahead of time into one search layer; it raised accuracy from about 40% to 97%"
+      },
+      {
+        "claim_id": "1376198-483-4f6d51",
+        "stance": "Skip the index: ask a decision model the question about every row directly"
       }
     ]
   }

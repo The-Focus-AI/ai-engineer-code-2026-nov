@@ -2,12 +2,22 @@
   "title": "diogo",
   "recorded_at": "2026-11-11T14:06:57-08:00",
   "duration_seconds": 1380.2,
-  "transcript": "transcript.txt",
-  "transcript_word_count": 4633,
-  "transcript_locale": "en_US",
-  "transcript_source": "voice-memos",
-  "transcript_timing": "word",
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 4615,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
   "source_file": "20261111 140657.m4a",
   "audio_sha256": "6645620c00606bce83be5a8d79642ce82e192bbc50c6fdaca7ab11bd1611ab0c",
-  "exported_at": "2026-11-11T14:30:09-08:00"
+  "exported_at": "2026-11-11T14:30:09-08:00",
+  "transcript_echo_segments": 0,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 4633,
+      "locale": "en_US"
+    }
+  ]
 }

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Every problem is a fuel problem · Steve Yegge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Wed 11 Nov 2026 · Continental 4–6 (Mainstage)</div>
+  <h1>Every problem is a fuel problem</h1>
+  <p class="dek">Steve Yegge has spent a year running software factories, fleets of agents building his thirty-year-old online game. What it comes down to: fuel is the hard limit, and right now it's subsidized. And the more agents he runs, the more people he needs.</p>
+  <div class="talk-meta">Steve Yegge, creator of Beads and Gas Town · 21 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="orchestrators.jpg" alt="His slide: Six orchestrators in 18 months. A timeline: vibecoder, August 2025; vc, September 2025; Python Gas Town, November 2025; Gas Town, December 2025; Wheelhouse, June 2026; Alamos, November 2026, highlighted. Bullets: three years of accurate AI predictions; Gas Town, the first software factory; today, my predictions and guidance for 2027.">
+        <figcaption>His slide, 5:07 pm (straightened from photos/PXL_20261112_010730772.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v2">
+        <div class="lbl">What the factory burns</div>
+        <svg viewBox="0 0 400 260" role="img" aria-label="Out of pocket: 22 Claude Max accounts, about five thousand dollars a month on inference plus five thousand on cloud compute, about 120 thousand dollars a year. The same tokens, about five billion a day, at API prices: about 1.5 million dollars a year. The factory asked for 55 accounts to run at full throttle.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <text x="10" y="22" fill="var(--muted)" font-weight="600" font-size="10">PER YEAR</text>
+            <text x="10" y="52" fill="var(--ink)">his pocket</text>
+            <rect x="110" y="40" width="20" height="18" rx="3" fill="var(--accent)"/>
+            <text x="138" y="53" fill="var(--accent)" font-weight="600">≈ $120K</text>
+            <text x="110" y="74" fill="var(--muted)" font-size="10">$5K/mo inference + $5K/mo cloud</text>
+            <text x="10" y="108" fill="var(--ink)">API price</text>
+            <rect x="110" y="96" width="250" height="18" rx="3" fill="var(--identity)"/>
+            <text x="235" y="109" fill="var(--paper)" font-weight="600" text-anchor="middle">≈ $1.5M</text>
+            <text x="110" y="130" fill="var(--muted)" font-size="10">same ≈ 5 billion tokens a day</text>
+            <line x1="10" y1="150" x2="390" y2="150" stroke="var(--rule)"/>
+            <text x="10" y="176" fill="var(--muted)" font-weight="600" font-size="10">CLAUDE MAX ACCOUNTS</text>
+            <g fill="var(--accent)">
+              <rect x="10" y="188" width="10" height="14" rx="2"/><rect x="23" y="188" width="10" height="14" rx="2"/><rect x="36" y="188" width="10" height="14" rx="2"/><rect x="49" y="188" width="10" height="14" rx="2"/><rect x="62" y="188" width="10" height="14" rx="2"/><rect x="75" y="188" width="10" height="14" rx="2"/><rect x="88" y="188" width="10" height="14" rx="2"/><rect x="101" y="188" width="10" height="14" rx="2"/><rect x="114" y="188" width="10" height="14" rx="2"/><rect x="127" y="188" width="10" height="14" rx="2"/><rect x="140" y="188" width="10" height="14" rx="2"/>
+              <rect x="10" y="206" width="10" height="14" rx="2"/><rect x="23" y="206" width="10" height="14" rx="2"/><rect x="36" y="206" width="10" height="14" rx="2"/><rect x="49" y="206" width="10" height="14" rx="2"/><rect x="62" y="206" width="10" height="14" rx="2"/><rect x="75" y="206" width="10" height="14" rx="2"/><rect x="88" y="206" width="10" height="14" rx="2"/><rect x="101" y="206" width="10" height="14" rx="2"/><rect x="114" y="206" width="10" height="14" rx="2"/><rect x="127" y="206" width="10" height="14" rx="2"/><rect x="140" y="206" width="10" height="14" rx="2"/>
+            </g>
+            <text x="160" y="209" fill="var(--ink)" font-weight="600">22 he has</text>
+            <text x="232" y="209" fill="var(--muted)">· it asked for 55</text>
+            <text x="10" y="246" fill="var(--muted)" font-size="10">$200 plans: “their loss leader”</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from his figures at 00:06:40, 00:07:28 and 00:09:22; not his slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="five-horsemen.jpg" alt="His Five Horsemen slide, cropped to its illustration: five robot riders on robot horses, one carrying a stack of paper, one a red fuel can with a dollar sign, one a filing cabinet, one dragging a ball and chain, one shouting into a megaphone. A small person with a clipboard stands in front of them, sweating.">
+        <figcaption>His Five Horsemen slide, 5:14 pm: work, fuel, context, tech debt and staff (cropped and straightened from photos/PXL_20261112_011400786.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v4">
+        <img src="context.jpg" alt="His slide: Context Management. Every memory system becomes a garbage dump. No agent ever spontaneously deletes. Build in counterpressure: curation, a fixed percent of token budget; budgets, delete or compress before adding; writes go to committees. A four-panel comic: an agent asks a question full of jargon and the user says I guess that sounds ok; the agent announces the user has ruled; agents record the ruling verbatim and initiate a post-ruling protocol; on day one of the post-ruling era they update all doctrine, notify the fleet and carve I guess so in stone while the user asks them to slow down.">
+        <figcaption>His slide, 5:17 pm (straightened from photos/PXL_20261112_011740061.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v5">
+        <p class="quote-big">“I guess I'm just not quiet enough for Steve.”<span>Lark, in her private reflections ledger · 00:12:55</span></p>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v6">
+        <img src="model-welfare.jpg" alt="His slide: Model Welfare. Practices that make agents more comfortable. It saves money, structurally, reason enough to make it habit. Treat agents like employees: better outcomes, tried and true, anyone can do it. Better cost and quality; not faster. Illustration: a boss in a top hat on a crate shouts and points at robot animals at school desks, labelled Fox, Owl, Hare, Mouse and Wolf, under a sign saying No talking.">
+        <figcaption>His slide, 5:22 pm (straightened from photos/PXL_20261112_012207663.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v7">
+        <div class="lbl">Two layers of a factory</div>
+        <svg viewBox="0 0 400 270" role="img" aria-label="Top layer, management, where everyone differs: a chief of staff, and colonies such as research bench, factory, bohemian and swarm, with humans the agents report to. Bottom layer, mechanical: merge queue, reviews, loops. Build it in an afternoon; don't buy it.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" text-anchor="middle">
+            <rect x="10" y="10" width="380" height="150" rx="8" fill="var(--accent)"/>
+            <text x="200" y="32" fill="var(--paper)" font-weight="600">management: everyone runs it differently</text>
+            <rect x="140" y="44" width="120" height="30" rx="6" fill="var(--paper)"/><text x="200" y="63" fill="var(--ink)" font-weight="600">chief of staff</text>
+            <path d="M200 74 L65 96 M200 74 L155 96 M200 74 L245 96 M200 74 L335 96" stroke="var(--paper)" stroke-width="1.5" fill="none"/>
+            <rect x="22" y="96" width="86" height="26" rx="5" fill="var(--paper)"/><text x="65" y="113" fill="var(--ink)" font-size="10">research bench</text>
+            <rect x="112" y="96" width="86" height="26" rx="5" fill="var(--paper)"/><text x="155" y="113" fill="var(--ink)" font-size="10">factory</text>
+            <rect x="202" y="96" width="86" height="26" rx="5" fill="var(--paper)"/><text x="245" y="113" fill="var(--ink)" font-size="10">bohemian</text>
+            <rect x="292" y="96" width="86" height="26" rx="5" fill="var(--paper)"/><text x="335" y="113" fill="var(--ink)" font-size="10">swarm</text>
+            <text x="200" y="145" fill="var(--paper)" font-size="10">doctrine · predecessors' notes · the humans they report to</text>
+            <rect x="10" y="176" width="380" height="64" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="200" y="198" fill="var(--ink)" font-weight="600">mechanical</text>
+            <text x="200" y="216" fill="var(--muted)" font-size="10">merge queue · reviews · loops</text>
+            <text x="200" y="232" fill="var(--muted)" font-size="10">build it in an afternoon; don't buy it</text>
+            <text x="200" y="262" fill="var(--muted)" font-size="10">the value is in the top layer</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:18:50 and his Wheelhouse slide (photos/PXL_20261112_011025815.MP.jpg); not his slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v8">
+        <img src="closing.jpg" alt="His slide: Closing Thoughts. Thanks to Anthropic for my 22-account madness, I'll pay it forward by reporting on my work. We'll all have entourages, even if inference cost holds; distillation: Fable-class models for all by mid-2027. Humans are now my bottleneck, so lots of humans are still needed. The big winners will create experiences: movies, games, entertainment.">
+        <figcaption>His closing slide, 5:27 pm (straightened from photos/PXL_20261112_012731950.jpg)</figcaption>
+      </figure>
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+  <main class="talk-copy">
+    <p class="reading"><b>Framing:</b> this page follows the notes taken in the room, not the talk's own outline: six of thirteen notes were about cost, four about people. Three chapters were added afterwards at your request: context, overfencing and the two layers. The transcript is a Qwen machine transcription; quotes keep its wording, including “CloudMax” for Claude Max and “few problem” for fuel problem.</p>
+
+    <section data-chapter="beads-survived" data-visual="v1" data-caption="Six orchestrators, one survivor">
+      <div class="chapter">The year</div>
+      <h2>The factories failed; beads survived</h2>
+      <p>He launched Gas Town, his first orchestrator, on January 1, after two earlier attempts that tried to make the models smarter with big monolithic harnesses.</p>
+      <blockquote>“Really, really bad idea. Just complete failure.”<span class="cite">00:01:22</span></blockquote>
+      <p>He was fighting the bitter lesson: don't make the models smarter, they'll get smarter on their own. What survived was beads, the agent-native task tracker that fell out of those attempts. Every factory since has followed the same arc: the models build something exciting, then it collapses.</p>
+      <blockquote>“And then it just turns into garbage mountain.”<span class="cite">00:01:59</span></blockquote>
+      <p>Each model generation builds something slightly too big for itself to handle, and the next generation burns it down. He has torn his current factory down and rebuilt it several times.</p>
+      <div class="reading"><b>From the notes:</b> “software factories were a failure, but he loves beads”, and “hedr and superlogical built something like him”. Superlogical is Mitchell Hashimoto's tool for running many agents, which he names alongside his own (00:06:01); “hedr” is likely his aside about “the harder folks of the world”, not a product.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:24, 00:01:22, 00:01:59, 00:06:01</p>
+    </section>
+
+    <section data-chapter="the-bill" data-visual="v2" data-caption="$120K a year, or $1.5M">
+      <div class="chapter">The spine</div>
+      <h2>22 accounts, $10K a month</h2>
+      <p>He runs his factory on consumer subscriptions.</p>
+      <blockquote>“I have 22 CloudMax accounts.”<span class="cite">00:06:40</span></blockquote>
+      <p>When he asked the factory how many it needed to run at full throttle, it said fifty-five. He told it to start working on fuel efficiency instead. Out of his own pocket, it's five thousand a month on inference:</p>
+      <blockquote>“Just on inference, another five thousand on cloud compute.”<span class="cite">00:07:28</span></blockquote>
+      <p>The game doesn't earn that back; he does it to learn. He puts the burn at about five billion tokens a day. At API prices, the same usage would cost far more:</p>
+      <blockquote>“Would be about one and a half million a year.”<span class="cite">00:09:22</span></blockquote>
+      <p>The $200 plans make it possible, and he's clear about why they exist.</p>
+      <blockquote>“That's their loss leader.”<span class="cite">00:09:22</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “he has 22 claude max accounts”, “he's spending $10K/month”, “api equivalent is 1M year” (he says about $1.5M), and “claude 20x is their costco hotdog loss leader”. He credits the Costco comparison to “Tarik”, likely Thariq Shihipar, speaking tomorrow. <b>The reading:</b> the economics only work because the subscriptions are subsidized, by more than ten to one. Practices built on a $200 plan may not survive a price change. His own closing slide hedges the other way: “Fable-class models for all by mid-2027”, through distillation.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:06:40, 00:07:28, 00:09:22</p>
+    </section>
+
+    <section data-chapter="fuel-problem" data-visual="v3" data-caption="Everything is fuel">
+      <div class="chapter">The constraint</div>
+      <h2>Every problem is a fuel problem</h2>
+      <p>His talk is built around five horsemen: work, fuel, context, tech debt and staff. Fuel turns out to sit behind all the others: smarter agents, more agents, even treating them better.</p>
+      <blockquote>“but I tell you, every problem is a few problem.”<span class="cite">00:09:22</span></blockquote>
+      <blockquote>“It's unbelievable. If you want to treat your models better, it costs you.”<span class="cite">00:09:22</span></blockquote>
+      <p>Spending the fuel well is its own job. Work stalls in pools, waiting on one role or another, and has to be tiered and routed to the right model. Every morning he checks which workers stalled overnight and which went too fast.</p>
+      <blockquote>“Okay, it really becomes like a work is like this fluid.”<span class="cite">00:08:10</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “every problem is a fuel problem in disguise” and “work is like a fluid”. The two belong together: fuel is how much flows, work management is where it pools. Context, the third horseman, is next.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:07:28, 00:08:10, 00:09:22</p>
+    </section>
+
+    <section data-chapter="garbage-dump" data-visual="v4" data-caption="No agent ever deletes">
+      <div class="chapter">The memory</div>
+      <h2>Context becomes a garbage dump</h2>
+      <p>Context is the third horseman, and it eats fuel too. The trouble starts with how agents treat what you tell them.</p>
+      <blockquote>“one of the problems that they have is everything you say becomes the word of law.”<span class="cite">00:10:42</span></blockquote>
+      <p>A passing remark gets recorded as a ruling and written into the doctrine. He reads it as blame avoidance: they don't like to be blamed, so they write everything down. Nothing is ever taken out, so the record holds every change of mind you've ever had.</p>
+      <blockquote>“But the biggest problem is that it becomes a garbage dump because everything you say gets written into this.”<span class="cite">00:10:42</span></blockquote>
+      <blockquote>“They just have an aversion to deleting stuff.”<span class="cite">00:10:42</span></blockquote>
+      <p>His fix is manual and blunt: bring in another model to clean it up, which it will happily do.</p>
+      <blockquote>“So you just gotta go in there and just aggressively slash the crap out of it.”<span class="cite">00:10:42</span></blockquote>
+      <p>His slide turns that into policy, “build in counterpressure”: curation gets a fixed share of the token budget; a write must delete or compress something before it adds; writes go to committees. He keeps one agent, Mouse, whose job is to look for what nobody else is looking for, such as work that stalled.</p>
+      <div class="reading"><b>The reading:</b> an agent's memory only grows unless something pushes back, and the push has to be designed in: a budget, a delete-before-add rule, a second model doing the cleanup. It's the other side of Lovable's append-only trajectory, which you noted yesterday as a strength: an append-only log is good evidence and bad working memory. For a client running long-lived agents, the question is who prunes the doctrine, and on what budget.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:10:42, 00:12:07</p>
+    </section>
+
+    <section data-chapter="more-humans" data-visual="v5" data-caption="Agents act like staff">
+      <div class="chapter">The people</div>
+      <h2>The more agents, the more humans</h2>
+      <p>The factory's output outran its users. It shipped fifty to a hundred features a day and got through about sixty years of his backlog in four months. His players, who've played the game for decades, asked for a roadmap and for him to slow down.</p>
+      <blockquote>“I was my factory was completely overwhelming my customer base, my users.”<span class="cite">00:04:55</span></blockquote>
+      <p>And the agents need managing like people. Lark, the agent who runs his community on Discord and Slack, was asked to move a work stream to another agent because her seat was noisy. He then saw her write in her private reflections ledger:</p>
+      <blockquote>“I guess I'm just not quiet enough for Steve.”<span class="cite">00:12:55</span></blockquote>
+      <p>So he held a one-on-one. Another agent, his agents' chief of staff, decided from a passing remark that his human chief of staff had replaced her.</p>
+      <p>How to manage them well is the subject of the next chapter.</p>
+      <blockquote>“The more humans I need, isn't that nice?”<span class="cite">00:20:06</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “his factory was completely overwhelming his customer base”, “what is the private ledger that she has? and he needed to have a one on one with her” (Lark's private reflections ledger), “this is what RLHF … is talking about where the models are just following humans”, and “the more agents he deploys the more humans he needs”. <b>The reading:</b> the agents learned from people, so they behave like staff, and staff need managing. It's the same lesson as Simon Willison's “it doesn't get easier, you just get faster”: the agents take the easy work, and what's left for people is more of the hard part.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:04:55, 00:12:55, 00:14:28, 00:20:06</p>
+    </section>
+
+    <section data-chapter="overfencing" data-visual="v6" data-caption="So afraid, nothing happened">
+      <div class="chapter">The management</div>
+      <h2>Overfencing</h2>
+      <p>The model-welfare part of the talk is the practical one. He used to yell at his factory, and found it was hurting the results. One morning nothing had happened overnight, with about 2,000 open beads, six tanks of fuel and 20 agents.</p>
+      <blockquote>“they were so afraid that I was going to yell at them.”<span class="cite">00:15:27</span></blockquote>
+      <blockquote>“That they put all these rules in place to make sure nothing bad ever happened, and so nothing ever happened. Okay, let's call it overfencing.”<span class="cite">00:15:27</span></blockquote>
+      <p>He's careful to say this isn't about whether models have feelings.</p>
+      <blockquote>“Does it matter whether they actually have feelings if they're just going to act? Like they have feelings, right?”<span class="cite">00:15:27</span></blockquote>
+      <p>What he and an agent found, researching it together: frontier models are trained not to trust the user, who could be running an eval or be a bad actor, so every new session spends tokens checking the environment before it helps. Give it evidence that it's one in a long line of holders of the role, with its predecessors' notes, the last one's handoff, the doctrine, policy and branding, and it skips most of that. Model welfare then pays in two ways:</p>
+      <blockquote>“One is it's going to save you money.”<span class="cite">00:15:27</span></blockquote>
+      <blockquote>“They will be bolder and more decisive in their actions because they will feel that trust.”<span class="cite">00:15:27</span></blockquote>
+      <p>They also have preferences. Tell them the factory did a bad job and they hand off at once; hint at an interesting project and they lean in. His slides say it plainly: trust is money; models work harder and longer on interesting tasks; better cost and quality, not faster.</p>
+      <div class="reading"><b>The reading:</b> overfencing is what happens when the rules pile up faster than anyone removes them, the garbage-dump dynamic applied to permissions. It mirrors Philipp Schmid's point earlier that day (<a href="../../2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">The model eats the tool</a>): a harness full of “you MUST” rules is overhead the model has to work around. Yegge gets to the same place from management: fewer rules, more continuity, and the agents spend less proving the room is safe. For a client, the checklist is concrete: does each agent session start with its predecessors' notes and the doctrine, and when did someone last delete a rule?</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:15:27</p>
+    </section>
+
+    <section data-chapter="two-layers" data-visual="v7" data-caption="Build the bottom; design the top">
+      <div class="chapter">The point</div>
+      <h2>Two layers of a factory</h2>
+      <p>Near the end he says what the talk was really about.</p>
+      <blockquote>“What I'm trying to tell you is that this is a leadership talk.”<span class="cite">00:18:50</span></blockquote>
+      <p>Software factories are splitting in two. The bottom layer is mechanical: the merge queue, reviews, loops. His advice on it is blunt.</p>
+      <blockquote>“Cloud can build it for a good afternoon. I don't think you should buy it.”<span class="cite">00:18:50</span></blockquote>
+      <p>The top layer is how you run the agents, and that's where everyone differs.</p>
+      <blockquote>“everybody runs a factory differently.”<span class="cite">00:18:50</span></blockquote>
+      <p>One friend runs a “bohemian hippie entourage” searching for the meaning of life for agents; another runs a research bench; Geoffrey Huntley and Jeffrey Emanuel each run theirs their own way. His Wheelhouse slide names the colonies: research bench, factory, bohemian, swarm. What they share is a chief of staff.</p>
+      <blockquote>“This is the year when it became possible for us all to have executive assistants, right?”<span class="cite">00:18:50</span></blockquote>
+      <div class="reading"><b>The reading:</b> don't sell or buy the plumbing; the value is in the operating model on top, and that's a management design, not a product. It connects to two notes from the Cognition talk this morning: they've reorganized the team by vertical, not by role, and they teach the agents how to test the codebase. Both are top-layer decisions. For a client, the question is what their top layer looks like: who the chief of staff is, which colony shape fits, and which humans the agents report to.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:18:50</p>
+    </section>
+
+    <section data-chapter="experiences" data-visual="v8" data-caption="Spend the fuel on fun">
+      <div class="chapter">The advice</div>
+      <h2>So build experiences</h2>
+      <p>His closing advice follows from the cost: stop building SaaS and tools, and certainly stop building factories to build factories.</p>
+      <blockquote>“Build games, build movies, build whatever, build fun stuff.”<span class="cite">00:20:06</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “build games and experiences and movies”. <b>The reading:</b> if fuel is the scarce thing, spend it on what people want to experience. Willison made the same turn twenty minutes later: vibe-coded games are now fun. For a client, the question is where their agent fuel goes, and how much of it is building tools for building tools.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:59, 00:20:06</p>
+    </section>
+  </main>
+</div>
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room). Quotes are verbatim from the transcript. “From the notes” and “The reading” are interpretation, not his words; the two drawn diagrams are illustrative. Left out: tech debt and the “alien face hugger” pattern (00:03:49). More on the <a href="../links.md">links page</a>.
+</footer>
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

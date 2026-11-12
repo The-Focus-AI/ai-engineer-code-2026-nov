@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Too good to be true, too bad to be useful · Diogo Almeida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  .idea { font-weight: 600; color: var(--ink); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Wed 11 Nov 2026 · Continental 4–6 (Mainstage)</div>
+  <h1>Too good to be true, too bad to be useful</h1>
+  <p class="dek">Diogo Almeida co-created ChatGPT, RLHF and InstructGPT. Now he blames RLHF for why AI helps people brilliantly and still can't be trusted to run on its own. Train for the right task, reliability, and a model call becomes a fourth logic gate inside ordinary software. Then there's a lot of software to rethink.</p>
+  <div class="talk-meta">Diogo Almeida, TypeSafe AI · 22 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="chatgpt.jpg" alt="His slide: My relationship to ChatGPT. A Venn diagram: Made ChatGPT, with the OpenAI logo, and Hates on ChatGPT, with photos of Yann LeCun and Gary Marcus. In the overlap: Me.">
+        <figcaption>His slide, 2:08 pm (straightened from photos/PXL_20261111_220808193.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="sane-view.jpg" alt="His slide: The Sane View of AI. Too good to be true: instruction following, ChatGPT, copilots, coding agents and Claude Code, NotebookLM, DeepResearch, voice agents, customer service without decisions, slop and spam. Too bad to be useful: customer service, drive-thrus, accounting and taxes, QA, insurance, data entry, anything requiring reliability. A red arrow points at the line between them: What explains this line?">
+        <figcaption>His slide, 2:09 pm (straightened from photos/PXL_20261111_220941916.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="pyramid.jpg" alt="His slide: This is extra true for making LLMs useful. A pyramid with algorithms at the top, then compute, then data, and doing the right task at the base. Arrows label data as human feedback or verifiable environments, and doing the right task as RLHF or RLVR.">
+        <figcaption>His slide, 2:15 pm (straightened from photos/PXL_20261111_221509505.jpg; its left edge was out of frame)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v4">
+        <img src="jev-secret.jpg" alt="His slide: Jev's secret: reliable intelligence. You get what you optimize for; this is why benchmarks don't matter; this is why people love the model over copycats; this is why there was a ChatGPT for developers moment; NOT speed, cost or interface. Beside it, a grey T-shirt printed jev ne sais quois, typesafe.">
+        <figcaption>His slide, 2:16 pm (straightened from photos/PXL_20261111_221614856.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v5">
+        <img src="smart-software.jpg" alt="His slide: three kinds of software. Traditional software: a flowchart of boxes and decision diamonds ending in money bags, with one branch ending in a robot calling SOS. Just-in-time software: a long snaking chain of steps ending in a question mark, with a panicking brain juggling papers. Smart software: the flowchart again with small brains at a few decision points, and every branch ending in a money bag.">
+        <figcaption>His slide, 2:18 pm (straightened from photos/PXL_20261111_221803022.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v6">
+        <img src="real-swe.jpg" alt="His slide: Theme: real software engineering. Breaking it down (decomposition); thinking about stages that can be verified (encapsulation); designing what a smart person would need to do that stage (state management); engineering around the task!!!! Beside it, an engraving-style cartoon of a man with his head in his hands at a cluttered computer, captioned This is not your vibecoder's AI.">
+        <figcaption>His slide, 2:22 pm (straightened from photos/PXL_20261111_222224555.jpg; its left edge was out of frame)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v7">
+        <img src="principal-agent.jpg" alt="His slide: Principal-agent solutions plus spirit over letter, over a screenshot of the Wikipedia article Principal–agent problem, with its diagram of a principal who hires an agent who performs, each with their own self-interest.">
+        <figcaption>His slide, 2:24 pm (straightened from photos/PXL_20261111_222426885.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v8">
+        <p class="quote-big">“The root of slop is that AI is unreliable.”<span>Diogo Almeida · 00:19:45</span></p>
+      </figure>
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+  <main class="talk-copy">
+    <section data-chapter="two-cults" data-visual="v1" data-caption="The man who made it, and hates on it">
+      <div class="chapter">The puzzle</div>
+      <h2>Two cults and a jagged frontier</h2>
+      <p>He opens with his own odd position: he loves chatbots and coding agents, and still thinks the field has gone wrong.</p>
+      <blockquote>“One of the few people who hates on ChatGPT, who made it.”<span class="cite">00:00:37</span></blockquote>
+      <p>Then the two cults. One reads the benchmarks, where models have beaten humans for two years:</p>
+      <blockquote>“We've been announcing AGI three months away for two years now.”<span class="cite">00:01:26</span></blockquote>
+      <p>The other looks outside San Francisco, at a world that has barely changed. Both are looking at the same facts.</p>
+      <blockquote>“It's a rare. Point of view to actually think AI is cool and transformative, and also like underwhelming the world right now.”<span class="cite">00:01:26</span></blockquote>
+      <p>That's the jagged frontier: models that can work on Millennium Prize problems but can't be trusted with bookkeeping. (The transcript garbles his example: “They can't even be used to touch a counting.”) He wants an Occam's razor explanation, and the rest of the talk is his.</p>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:37, 00:01:26, 00:02:29</p>
+    </section>
+
+    <section data-chapter="the-line" data-visual="v2" data-caption="What explains this line?">
+      <div class="chapter">The spine</div>
+      <h2>What explains the line?</h2>
+      <p>His slide splits the field. Too good to be true: ChatGPT, copilots, coding agents, deep research, voice agents, customer service without decisions, and slop. Too bad to be useful: customer service, drive-thrus, accounting, QA, insurance, data entry, anything requiring reliability. His answer:</p>
+      <blockquote>“Everything on the left side is intrinsically a human-in-the-loop task.”<span class="cite">00:03:24</span></blockquote>
+      <p>Deep research writes better than he could. But if the answer had to be correct, not well written, you'd pick him. Pleasing a person and doing the task are different goals:</p>
+      <blockquote>“And my claim is actually for these tests pleasing a human. Is nothing to do with doing the task.”<span class="cite">00:03:24</span></blockquote>
+      <p>The cause is the method he co-created.</p>
+      <blockquote>“I get the irony. That you know, I co-created RLHF, and I do believe RLHF is part of the problem.”<span class="cite">00:04:15</span></blockquote>
+      <blockquote>“That is what the HF is in RLHF.”<span class="cite">00:04:15</span></blockquote>
+      <p>The human feedback is the human in the loop, built in. Unless a task is trivially verifiable, a person still checks the output afterwards. Never pick him over ChatGPT for a ChatGPT question; but for background work that has to be right on its own,</p>
+      <blockquote>“You should not trust LMs at all.”<span class="cite">00:04:15</span></blockquote>
+      <p>His “WTF is going on in AI?” slide lists it: LLMs are too good to be true at assistance; 0% are optimized for automation (“RL??”); they're too bad to be useful at automation; his guess is that automation is worth more than assistance; then “???” and “Profit”.</p>
+      <div class="reading"><b>From the notes:</b> “where is the automation”, “why are some too good to be true and the others are too bad, what explains this line”, and “all ai today does require human in the loop, rlhf is the reason”. His answer: the left column is work a person checks anyway, so a model trained to please that person shines; the right column is work nobody checks in the moment, so it needs reliability the training never asked for. <b>The reading:</b> sort a client's AI ideas into his two columns. Anything on the right won't be fixed by a better chatbot; it needs a narrower model call trusted without a reviewer, or a person kept in the loop on purpose.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:03:24, 00:04:15</p>
+    </section>
+
+    <section data-chapter="right-task" data-visual="v3" data-caption="The base of the pyramid">
+      <div class="chapter">The cause</div>
+      <h2>The bitterest lesson: doing the right task</h2>
+      <p>He extends Sutton's bitter lesson. Compute beats clever algorithms; data beats compute; and underneath both:</p>
+      <blockquote>“I would argue that the bitterest lesson is doing the right task.”<span class="cite">00:06:05</span></blockquote>
+      <p>In classical RL, the game supplies the task:</p>
+      <blockquote>“So actually, when you're doing RL, you don't even need to think about the right task.”<span class="cite">00:06:05</span></blockquote>
+      <p>Language models were different. The field had to find next-token prediction, which mattered not for its maths but for what you could do with it afterwards: generate text. Then instruction following: before RLHF, the data for it didn't exist, and with simple algorithms a small model trained on it beat far larger pretrained ones. The transcript garbles the model sizes he gave, so they're left out.</p>
+      <div class="reading"><b>From the notes:</b> “when you are doing RLHF you don't even need to think about doing the right task”. He says it of RL on games, where the rules are the task. The catch is that RLHF chose a task too, pleasing a rater, and that's the one models got good at. <b>The reading:</b> the garbled sizes are most likely the InstructGPT result, where a much smaller instruction-tuned model was preferred to GPT-3.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:06:05, 00:08:04</p>
+    </section>
+
+    <section data-chapter="reliable" data-visual="v4" data-caption="Einstein 95%, Mr Bean 5%">
+      <div class="chapter">The fix</div>
+      <h2>Reliable intelligence</h2>
+      <p>So TypeSafe picked a different task.</p>
+      <blockquote>“You get what you optimize for.”<span class="cite">00:08:57</span></blockquote>
+      <blockquote>“I often call it you get Einstein ninety five percent of the time, but Mr Bean five.”<span class="cite">00:08:57</span></blockquote>
+      <blockquote>“If you can't tell which is which, how the fuck is it automated?”<span class="cite">00:08:57</span></blockquote>
+      <p>Instead of occasional brilliance that someone then has to check, aim for narrow, dependable smarts:</p>
+      <blockquote>“What if you focused on extreme, extreme narrow focused reliability?”<span class="cite">00:08:57</span></blockquote>
+      <p>It doesn't show up in benchmarks, and he credits it, not speed, cost or interface, for how developers took to Jev. He isn't sure of the name himself:</p>
+      <blockquote>“I'm looking for a better word than reliable.”<span class="cite">00:08:57</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “reliable intelligence is the phrase he's using, but it's not really the right one, or what do we deeply mean by this”. He's asking too. What the talk means is intelligence you don't have to check: the Mr Bean five percent is the problem, because one unpredictable miss puts a reviewer on every answer. Possible better words: “dependable judgement”, or “unsupervised-grade”.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:08:57</p>
+    </section>
+
+    <section data-chapter="smart-software" data-visual="v5" data-caption="A brain at the decision points">
+      <div class="chapter">What it unlocks</div>
+      <h2>Smart software: a fourth logic gate</h2>
+      <p>Not more chatbots. Software has barely changed in a decade except that it's cheaper to write, and the best AI has done inside it is</p>
+      <blockquote>“Is having a chatbot to the side that sometimes interacts with the software, but cannot take expensive decisions for you.”<span class="cite">00:10:25</span></blockquote>
+      <blockquote>“And I think the problem is we're focusing too much on coding agents.”<span class="cite">00:10:25</span></blockquote>
+      <p>The intelligence belongs in the program's inner loop. His slide draws it: traditional software is a flowchart of fixed rules, with one branch that needs a human; just-in-time software is a long chain of LLM steps ending in a question mark; smart software is the flowchart again, with small model decisions at a few nodes, and every branch pays.</p>
+      <blockquote>“I think the narrative of SaaS apocalypse is obviously not going to happen.”<span class="cite">00:10:25</span></blockquote>
+      <p>His analogy is the blue LED: red and green made indicator lights; adding blue gave white light and displays. Software has been built from greater than, less than and equal.</p>
+      <blockquote>“This is kind of conceptually adding a fourth semantic logic gate.”<span class="cite">00:12:12</span></blockquote>
+      <blockquote>“Like, do we still need regexes with like crazy things, or can we just say like we want a Gmail email address or a real looking one?”<span class="cite">00:12:12</span></blockquote>
+      <p>A later slide, “Infinitely replicable lego blocks”, draws AND, OR and NOT beside three model gates that take data and a question: a yes/no with probabilities, a score, and a choice among options.</p>
+      <div class="reading"><b>From the notes:</b> “smart software”, “we need to build out a better area of how tools fit in with decisions”, and “SaaSapalooza, not SaaSpocalypse”. The three model gates are that map's missing piece: a yes/no, a score and a choice are the shapes a decision takes inside a program, next to tools (which act) and code (which follows rules). Jev is the decision model that kept coming up this week, alongside <a href="../../2026-11-11-cloudflare-is-a-neolab/experience/page.html">Cloudflare's Clef</a> and <a href="../../2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">Gemini Decisions</a>, and in Scott Roberts' talk Jev was called inside a SQL statement in DuckDB.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:10:25, 00:12:12</p>
+    </section>
+
+    <section data-chapter="software-research" data-visual="v6" data-caption="Engineering around the task">
+      <div class="chapter">The call</div>
+      <h2>LLM Stockholm syndrome and software research</h2>
+      <p>His “AIE secret” is that the field isn't pushing hard enough; the slide says “the field isn't jevving hard enough”.</p>
+      <blockquote>“I think the world still has LLM Stockholm syndrome.”<span class="cite">00:11:32</span></blockquote>
+      <p>Most ideas just replace a step with an LLM instead of rethinking the software. His alternative:</p>
+      <blockquote>“I call this software research.”<span class="cite">00:14:32</span></blockquote>
+      <p>Like the early web, it means building things because we can, and finding out what's possible.</p>
+      <blockquote>“Should all of those websites existed? Probably not.”<span class="cite">00:14:32</span></blockquote>
+      <blockquote>“The theme is going to be real software engineering, not just white coding.”<span class="cite">00:14:32</span></blockquote>
+      <p>(“White coding” is the transcript's vibe coding.) That means decomposition, stages that can be verified, real encapsulation, and state you design, not</p>
+      <blockquote>“Instead of assuming everything is global state within a KV cache”<span class="cite">00:14:32</span></blockquote>
+      <div class="reading"><b>The reading:</b> the gains come from engineering around the model, not a bigger one. It's the same advice as <a href="../../2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Yegge's two layers</a> and Cognition's “teach the agents how to test the codebase”. And it answers your Cognition note, “most teams are limited by the amount of ambition they have”: software research is a call for more of it.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:11:32, 00:14:32</p>
+    </section>
+
+    <section data-chapter="ideas" data-visual="v7" data-caption="Spirit over letter">
+      <div class="chapter">The ideas</div>
+      <h2>Ideas worth building</h2>
+      <p><span class="idea">Agents beyond the KV cache.</span> Designs that fight the cache get slow and expensive, so people abandon them.</p>
+      <blockquote>“They're so inflexible in design because of the tyranny of the KB cache.”<span class="cite">00:15:50</span></blockquote>
+      <p>Why can't every call include all your past coding-agent history? The memory exists; what's missing is the smarts to search and summarize it. And why can't agents working at once share what they learn?</p>
+      <blockquote>“Why do they need to rediscover the same patterns of the codebase?”<span class="cite">00:15:50</span></blockquote>
+      <p><span class="idea">Principal-agent problems.</span> Not coding agents: anyone acting for someone else whose interests differ, such as elected officials acting for citizens. A fair society has to stress the letter of a rule, which breeds loopholes.</p>
+      <blockquote>“And I think the root of that problem is we can't encode the spirit.”<span class="cite">00:17:20</span></blockquote>
+      <p><span class="idea">Real-time security, semantic types, new interfaces.</span> Spotting a bad action is easier than doing it; what's missing is checks fast, cheap and reliable enough to run live.</p>
+      <blockquote>“I would argue it's a lot easier to figure out they're doing a naughty thing. Than to actually do the naughty thing”<span class="cite">00:18:11</span></blockquote>
+      <p>He wants a type system that checks meaning, with a model in the linter, and interfaces that do what you mean.</p>
+      <div class="reading"><b>From the notes:</b> “read the tyranny of the kv cache”: it's his phrase in the talk, not a published piece. “What is a principal agent problem”: answered above. “What is the DWIM twitter demo”: DWIM is “do what I mean”, an old idea that failed on too many hard-coded rules; he ties it to “a great Twitter video” of a voice interface but doesn't name it, so it stays open. <b>The reading:</b> his memory idea is the opposite of Yegge's warning the same afternoon. Yegge prunes agent memory because it becomes a garbage dump; Diogo would keep all of it and get smart enough to search it. Both say the missing piece is judgement about what matters, which is a decision model's job.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:15:50, 00:17:20, 00:18:11</p>
+    </section>
+
+    <section data-chapter="slop" data-visual="v8" data-caption="Reliability moves the line">
+      <div class="chapter">The close</div>
+      <h2>The root of slop, and what couldn't we automate?</h2>
+      <p>Because AI is unreliable, no one uses it for decisions that cost them anything. Pushing the cost onto someone else is another matter:</p>
+      <blockquote>“But it's actually totally fine to push the costs into other people.”<span class="cite">00:19:45</span></blockquote>
+      <p>That's slop: an externalized cost, and an advantage for people who don't care. Then he turns playful: even “cursed software”, deliberately terrible interfaces, is worth making.</p>
+      <blockquote>“Doing things because we can is what software engineering is about.”<span class="cite">00:20:25</span></blockquote>
+      <p>His closing question: every engineer knows what software can't do. What if those limits went away in six months or a year?</p>
+      <blockquote>“What couldn't we automate?”<span class="cite">00:21:07</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “slop is pushing the work to other people”. The same diagnosis as <a href="../../2026-11-11-all-code-is-slop-except-mine/experience/page.html">Lauren Tan's talk</a>: unchecked output moves the checking onto whoever receives it. Diogo puts the cause in the model: make it reliable and there's less checking to push. <b>The reading:</b> it closes his opening question. Reliability draws the line between assistance and automation; move it, and the question stops being whether something can be automated and becomes how much work it is.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:19:45, 00:20:25, 00:21:07</p>
+    </section>
+  </main>
+</div>
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room) and is framed by twelve notes and seventeen photos taken there. Quotes are verbatim from the transcript, which garbles Jev (“Jeff”, “Java”), RLHF (“Arlo”) and the KV cache (“KB cache”). “From the notes” and “The reading” are interpretation, not his words. More on the <a href="../links.md">links page</a>.
+</footer>
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

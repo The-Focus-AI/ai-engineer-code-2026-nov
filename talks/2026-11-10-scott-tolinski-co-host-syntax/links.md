@@ -2,8 +2,8 @@
 session_id: "1379134"
 title: "The True Cost of AI Coding"
 phase: live
-last_checked: 2026-11-10T14:19:25-05:00
-render: 20261110-141925-902d07
+last_checked: 2026-11-12T13:24:21-08:00
+render: 20261112-132421-c4d6ee
 ---
 
 # Links: The True Cost of AI Coding

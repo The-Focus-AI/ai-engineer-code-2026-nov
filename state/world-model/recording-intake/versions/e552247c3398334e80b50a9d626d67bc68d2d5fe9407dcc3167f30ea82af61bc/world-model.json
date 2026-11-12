@@ -1,0 +1,1835 @@
+{
+  "recordings": {
+    "2026-11-10_0929_Ankit-Jain": {
+      "folder": "2026-11-10_0929_Ankit-Jain",
+      "path": "recordings/inbox/2026-11-10_0929_Ankit-Jain",
+      "title": "Ankit Jain",
+      "recorded_at": "2026-11-10T09:29:55-08:00",
+      "duration_seconds": 210.6,
+      "word_count": 72,
+      "audio_sha256": "ce90863099e2f9493402099829eb77addd3c17d05b66c3ff2a89e5649cdaae76",
+      "status": "needs-review"
+    },
+    "2026-11-10_0933_Ankir-Jain": {
+      "folder": "2026-11-10_0933_Ankir-Jain",
+      "path": "recordings/inbox/2026-11-10_0933_Ankir-Jain",
+      "title": "Ankir Jain",
+      "recorded_at": "2026-11-10T09:33:30-08:00",
+      "duration_seconds": 1350.6,
+      "word_count": 3786,
+      "audio_sha256": "781886bc883a98a22f793115c984d281adc24aae340200027c7be3090cc021f7",
+      "status": "cleaned"
+    },
+    "2026-11-10_1009_Scott-Tolinski": {
+      "folder": "2026-11-10_1009_Scott-Tolinski",
+      "path": "recordings/inbox/2026-11-10_1009_Scott-Tolinski",
+      "title": "Scott Tolinski",
+      "recorded_at": "2026-11-10T10:09:14-08:00",
+      "duration_seconds": 1437.4,
+      "word_count": 4077,
+      "audio_sha256": "767132761c0945c1b77819ab6e59bdad9117091b026de342cd8469038f649c7e",
+      "status": "cleaned"
+    },
+    "2026-11-10_1355_Karan-Vaidya": {
+      "folder": "2026-11-10_1355_Karan-Vaidya",
+      "path": "recordings/inbox/2026-11-10_1355_Karan-Vaidya",
+      "title": "Karan Vaidya",
+      "recorded_at": "2026-11-10T13:55:07-08:00",
+      "duration_seconds": 641.1,
+      "word_count": 1687,
+      "audio_sha256": "5121c0f5d5cf9ccbc26d4a23c12643657aa3ce6ac2e5d1c083d7a024ecec438c",
+      "status": "cleaned"
+    },
+    "2026-11-10_1418_George-Fraser": {
+      "folder": "2026-11-10_1418_George-Fraser",
+      "path": "recordings/inbox/2026-11-10_1418_George-Fraser",
+      "title": "George Fraser",
+      "recorded_at": "2026-11-10T14:18:17-08:00",
+      "duration_seconds": 1677.3,
+      "word_count": 4236,
+      "audio_sha256": "f1b8e0cd17955f380c16182cc45781f2a83189debfca93a2bf800d96783c5f92",
+      "status": "cleaned"
+    },
+    "2026-11-10_1457_Utkarsh": {
+      "folder": "2026-11-10_1457_Utkarsh",
+      "path": "recordings/inbox/2026-11-10_1457_Utkarsh",
+      "title": "Utkarsh",
+      "recorded_at": "2026-11-10T14:57:27-08:00",
+      "duration_seconds": 1630.5,
+      "word_count": 4025,
+      "audio_sha256": "1451a8f8dcb729454e1bfce18a5df0447526e6dfbca95e7d5558974d480aabc2",
+      "status": "cleaned"
+    },
+    "2026-11-10_1529_Mihail-Eric": {
+      "folder": "2026-11-10_1529_Mihail-Eric",
+      "path": "recordings/inbox/2026-11-10_1529_Mihail-Eric",
+      "title": "Mihail Eric",
+      "recorded_at": "2026-11-10T15:29:42-08:00",
+      "duration_seconds": 1775.7,
+      "word_count": 5451,
+      "audio_sha256": "2d3f4ef08a6fdba94731bc3b5b899e386bb798cca40443e9ff7b86c9e393ced7",
+      "status": "cleaned"
+    },
+    "2026-11-11_0904_swyx": {
+      "folder": "2026-11-11_0904_swyx",
+      "path": "recordings/inbox/2026-11-11_0904_swyx",
+      "title": "swyx",
+      "recorded_at": "2026-11-11T09:04:48-08:00",
+      "duration_seconds": 229.4,
+      "word_count": 657,
+      "audio_sha256": "070abb8eed41de17c31572ab47feb77362e60779e33d14c627f4772208c8c17a",
+      "status": "needs-review"
+    },
+    "2026-11-11_0911_Natalie-Serrino": {
+      "folder": "2026-11-11_0911_Natalie-Serrino",
+      "path": "recordings/inbox/2026-11-11_0911_Natalie-Serrino",
+      "title": "Natalie Serrino",
+      "recorded_at": "2026-11-11T09:11:14-08:00",
+      "duration_seconds": 1050,
+      "word_count": 3213,
+      "audio_sha256": "25fb6ddf91fb401fc375799dfd247d7822b019390b46627bce2c7a8e77a2d015",
+      "status": "cleaned"
+    },
+    "2026-11-11_0929_Lydia-Halley": {
+      "folder": "2026-11-11_0929_Lydia-Halley",
+      "path": "recordings/inbox/2026-11-11_0929_Lydia-Halley",
+      "title": "Lydia Halley",
+      "recorded_at": "2026-11-11T09:29:01-08:00",
+      "duration_seconds": 560.2,
+      "word_count": 719,
+      "audio_sha256": "e2ffd2b6a0b2875c1b15c64710ea561fe9591af5fbfbb2c34f0d4b0a01540448",
+      "status": "needs-review"
+    },
+    "2026-11-11_0939_cloudflare": {
+      "folder": "2026-11-11_0939_cloudflare",
+      "path": "recordings/inbox/2026-11-11_0939_cloudflare",
+      "title": "cloudflare",
+      "recorded_at": "2026-11-11T09:39:42-08:00",
+      "duration_seconds": 1212.5,
+      "word_count": 3892,
+      "audio_sha256": "665b7d755e6662f777ee3ced0ff681629a14de72a2e7c43b59c1b86edb6f31e8",
+      "status": "cleaned"
+    },
+    "2026-11-11_1000_lauren-tan": {
+      "folder": "2026-11-11_1000_lauren-tan",
+      "path": "recordings/inbox/2026-11-11_1000_lauren-tan",
+      "title": "lauren tan",
+      "recorded_at": "2026-11-11T10:00:25-08:00",
+      "duration_seconds": 1107.5,
+      "word_count": 2766,
+      "audio_sha256": "9ea41418cd0dbd7cf577fdc09b748a431e008d178fc66fe5cde77f80be7730f5",
+      "status": "cleaned"
+    },
+    "2026-11-11_1120_Phillip-DeepMind": {
+      "folder": "2026-11-11_1120_Phillip-DeepMind",
+      "path": "recordings/inbox/2026-11-11_1120_Phillip-DeepMind",
+      "title": "Phillip DeepMind",
+      "recorded_at": "2026-11-11T11:20:37-08:00",
+      "duration_seconds": 976.5,
+      "word_count": 2863,
+      "audio_sha256": "7268a9550d8c0a6c179aa8298cf1572a3c21ffb776d6e1e57be5738db5f3ef31",
+      "status": "cleaned"
+    },
+    "2026-11-11_1148_Heal-your-agents": {
+      "folder": "2026-11-11_1148_Heal-your-agents",
+      "path": "recordings/inbox/2026-11-11_1148_Heal-your-agents",
+      "title": "Heal your agents",
+      "recorded_at": "2026-11-11T11:48:01-08:00",
+      "duration_seconds": 1404,
+      "word_count": 3290,
+      "audio_sha256": "6e0b340b25cdb2e65bdf037026a77db6358b335e98e483a55e3462cb368ef7e2",
+      "status": "cleaned"
+    },
+    "2026-11-11_1215_Aamir-Shakir": {
+      "folder": "2026-11-11_1215_Aamir-Shakir",
+      "path": "recordings/inbox/2026-11-11_1215_Aamir-Shakir",
+      "title": "Aamir Shakir",
+      "recorded_at": "2026-11-11T12:15:57-08:00",
+      "duration_seconds": 1117.4,
+      "word_count": 2801,
+      "audio_sha256": "9f95978c14ad45d277ebab51d728163f8e5facd151f288c430fff5a253ea4833",
+      "status": "cleaned"
+    },
+    "2026-11-11_1236_overcut": {
+      "folder": "2026-11-11_1236_overcut",
+      "path": "recordings/inbox/2026-11-11_1236_overcut",
+      "title": "overcut",
+      "recorded_at": "2026-11-11T12:36:46-08:00",
+      "duration_seconds": 1187.5,
+      "word_count": 2659,
+      "audio_sha256": "253b33d22a4addaa0aeb33f08326bb4cc027373091adbe5309e96a884189ee76",
+      "status": "cleaned"
+    },
+    "2026-11-11_1406_diogo": {
+      "folder": "2026-11-11_1406_diogo",
+      "path": "recordings/inbox/2026-11-11_1406_diogo",
+      "title": "diogo",
+      "recorded_at": "2026-11-11T14:06:57-08:00",
+      "duration_seconds": 1380.2,
+      "word_count": 4615,
+      "audio_sha256": "6645620c00606bce83be5a8d79642ce82e192bbc50c6fdaca7ab11bd1611ab0c",
+      "status": "cleaned"
+    },
+    "2026-11-11_1522_brian-kennedy": {
+      "folder": "2026-11-11_1522_brian-kennedy",
+      "path": "recordings/inbox/2026-11-11_1522_brian-kennedy",
+      "title": "brian kennedy",
+      "recorded_at": "2026-11-11T15:22:39-08:00",
+      "duration_seconds": 27.6,
+      "word_count": 46,
+      "audio_sha256": "46418cc0a399cb5ecb967772969c08e75d520d1c1bfd6edbdca75230043365ed",
+      "status": "cleaned"
+    },
+    "2026-11-11_1525_Scott-Roberts": {
+      "folder": "2026-11-11_1525_Scott-Roberts",
+      "path": "recordings/inbox/2026-11-11_1525_Scott-Roberts",
+      "title": "Scott Roberts",
+      "recorded_at": "2026-11-11T15:25:01-08:00",
+      "duration_seconds": 712.1,
+      "word_count": 2013,
+      "audio_sha256": "a74c999a368a5dd8d222cfda23a8893c4dc298d86f1d23511ef3f7787c2e6c0a",
+      "status": "cleaned"
+    },
+    "2026-11-11_1629_Lovable": {
+      "folder": "2026-11-11_1629_Lovable",
+      "path": "recordings/inbox/2026-11-11_1629_Lovable",
+      "title": "Lovable",
+      "recorded_at": "2026-11-11T16:29:13-08:00",
+      "duration_seconds": 1144.1,
+      "word_count": 3392,
+      "audio_sha256": "2fa207ca9930c5b3aa7fc7ea47edee72db055a5a19cf48f3b8a05bb7ceff3a87",
+      "status": "cleaned"
+    },
+    "2026-11-11_1648_Zach-Bruggeman": {
+      "folder": "2026-11-11_1648_Zach-Bruggeman",
+      "path": "recordings/inbox/2026-11-11_1648_Zach-Bruggeman",
+      "title": "Zach Bruggeman",
+      "recorded_at": "2026-11-11T16:48:38-08:00",
+      "duration_seconds": 506,
+      "word_count": 1376,
+      "audio_sha256": "e9067ee612c59d583242e5cec8cde331643d98f64ea3a320e6121739c6dfdf8a",
+      "status": "cleaned"
+    },
+    "2026-11-11_1706_Steve-Yegge": {
+      "folder": "2026-11-11_1706_Steve-Yegge",
+      "path": "recordings/inbox/2026-11-11_1706_Steve-Yegge",
+      "title": "Steve Yegge",
+      "recorded_at": "2026-11-11T17:06:21-08:00",
+      "duration_seconds": 1284.5,
+      "word_count": 3981,
+      "audio_sha256": "bf67cd218a3424c8bd18acda51fd1c48a803b20f0ca7b4218bd426ca79ebfeb8",
+      "status": "cleaned"
+    },
+    "2026-11-11_1730_simon-willison": {
+      "folder": "2026-11-11_1730_simon-willison",
+      "path": "recordings/inbox/2026-11-11_1730_simon-willison",
+      "title": "simon willison",
+      "recorded_at": "2026-11-11T17:30:50-08:00",
+      "duration_seconds": 1182.3,
+      "word_count": 3914,
+      "audio_sha256": "bb2f85202721c759245e90fdb6bd09a2bc91c52c1650b81cd309af776ca8abdd",
+      "status": "cleaned"
+    },
+    "2026-11-12_1120_walden": {
+      "folder": "2026-11-12_1120_walden",
+      "path": "recordings/inbox/2026-11-12_1120_walden",
+      "title": "walden",
+      "recorded_at": "2026-11-12T11:20:34-08:00",
+      "duration_seconds": 830.8,
+      "word_count": 2590,
+      "audio_sha256": "c1986f358fc419cf01d93f29185e8556bf96bc3367c79ee409eee323bd4dc57c",
+      "status": "cleaned"
+    },
+    "2026-11-12_1146_trust-by-verify": {
+      "folder": "2026-11-12_1146_trust-by-verify",
+      "path": "recordings/inbox/2026-11-12_1146_trust-by-verify",
+      "title": "trust by verify",
+      "recorded_at": "2026-11-12T11:46:59-08:00",
+      "duration_seconds": 1301,
+      "word_count": 3646,
+      "audio_sha256": "ae549d90ab72e8d4b1f79759037533f7ad0054a1676d00b049cd42fa2eda127b",
+      "status": "cleaned"
+    },
+    "2026-11-12_1211_arsln-let-the-agents-cook": {
+      "folder": "2026-11-12_1211_arsln-let-the-agents-cook",
+      "path": "recordings/inbox/2026-11-12_1211_arsln-let-the-agents-cook",
+      "title": "arsln let the agents cook",
+      "recorded_at": "2026-11-12T12:11:55-08:00",
+      "duration_seconds": 1063.9,
+      "word_count": 3184,
+      "audio_sha256": "bbf1184a3db31f88bee5ab4b734da8fe273e555273c4965d5dab51a70cd48a96",
+      "status": "cleaned"
+    },
+    "2026-11-12_1235_lance-martin": {
+      "folder": "2026-11-12_1235_lance-martin",
+      "path": "recordings/inbox/2026-11-12_1235_lance-martin",
+      "title": "lance martin",
+      "recorded_at": "2026-11-12T12:35:29-08:00",
+      "duration_seconds": 1098.3,
+      "word_count": 3285,
+      "audio_sha256": "549d69c33d8654ba3da06eaa79c76298a07350527d0f656d96ee7baca03c54cd",
+      "status": "cleaned"
+    }
+  },
+  "matches": {
+    "2026-11-10_0929_Ankit-Jain": {
+      "session_id": null,
+      "confidence": 0.6,
+      "method": "time+title",
+      "evidence": [
+        "title: \"Ankit Jain\" (folder title names this session's speaker)",
+        "transcript in force is now transcript.qwen3-asr-1.7b.txt; still a 3½-minute pre-talk clip with no claim from the abstract; the 22½-minute recording already claims session 1333169"
+      ],
+      "candidates": [
+        {
+          "session_id": "1333169",
+          "why": "folder title names Ankit Jain; recorded 09:29:55–09:33:26 at the slot's start; 68 words, none answering a claim in the abstract; the 22½-minute recording 2026-11-10_0933_Ankir-Jain already claims this session (one talk, one recording: the longer wins)",
+          "confidence": 0.6
+        },
+        {
+          "session_id": "1302670",
+          "why": "From Shared Language to Enforceable Contracts, 09:00–09:25, same room: ended five minutes before the recording began",
+          "confidence": 0.05
+        },
+        {
+          "session_id": "1373448",
+          "why": "Machine trust workshop, 09:00–10:00, Continental 4: overlaps the recording; no transcript quote answers its topic",
+          "confidence": 0.05
+        },
+        {
+          "session_id": "1334020",
+          "why": "Build a Coding Agent Harness From an Empty Loop workshop, 09:00–10:00: overlaps the recording; no transcript quote answers its topic",
+          "confidence": 0.05
+        },
+        {
+          "session_id": "1376183",
+          "why": "New Ways of Working with Codex workshop, 09:00–10:00: overlaps the recording; no transcript quote answers its topic",
+          "confidence": 0.05
+        }
+      ],
+      "status": "needs-review"
+    },
+    "2026-11-10_0933_Ankir-Jain": {
+      "session_id": "1333169",
+      "confidence": 0.9,
+      "method": "time+attribution+transcript",
+      "evidence": [
+        "note: notes/inbox/2026-11-10T0944-capturing-intent-and-decisions-agents-argue.md — talk: talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/ (operator named the talk; captured 09:44, inside the recording)",
+        "title: \"Ankir Jain\" (folder title, misspelling of the speaker's name)",
+        "transcript: \"A year ago, we were merging about 100 PRs per week. And now we are doing about 400.\" — abstract: \"Our team merges 4x more pull requests than we did a year ago.\"",
+        "transcript: \"We talk about intent. Intent is why are we making whatever change.\" — abstract: \"building a verification layer around *intent*\"",
+        "transcript: \"Now these become your invariants.\" — abstract: \"encoding team standards as reusable invariants\"",
+        "transcript: \"So what we did was we ended up mining a bunch of our previous comments.\" — abstract: \"how we turned years of recurring review comments into machine-enforceable invariants\"",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, names-only prompt, echo cut); its text names neither the speaker nor Aviator, so this stays an attributed match"
+      ],
+      "candidates": [
+        {
+          "session_id": "1333169",
+          "why": "talk 09:30–09:55 in Continental 1–3; recording 09:33:30 for 22½ min; operator note names it; four transcript quotes answer specific abstract claims",
+          "confidence": 0.9
+        },
+        {
+          "session_id": "1373448",
+          "why": "Machine trust workshop, 09:00–10:00, Continental 4: overlaps the recording; no transcript quote answers its topic",
+          "confidence": 0.05
+        },
+        {
+          "session_id": "1334020",
+          "why": "Build a Coding Agent Harness From an Empty Loop workshop, 09:00–10:00: overlaps the recording; no transcript quote answers its topic",
+          "confidence": 0.05
+        },
+        {
+          "session_id": "1376183",
+          "why": "New Ways of Working with Codex workshop, 09:00–10:00: overlaps the recording; no transcript quote answers its topic",
+          "confidence": 0.05
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-10_1009_Scott-Tolinski": {
+      "session_id": "1379134",
+      "confidence": 0.9,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt: \"So again, on syntax, we get a lot of people commenting all the time.\" (unprompted Voice Memos alternate; names the speaker's company, Syntax)",
+        "transcript.txt: \"And give syntax a subscribe on YouTube\" (unprompted Voice Memos alternate; names Syntax)",
+        "transcript.qwen3-asr-1.7b.txt: \"My name is Scott Tolinski. I'm from Syntax.\" (transcript in force; Qwen was prompted with these names, so attribution only)",
+        "title: \"Scott Tolinski\" (folder title names the speaker)",
+        "note: notes/inbox/2026-11-10T1013-like-turing-posts-recent-post.md — talk: talks/2026-11-10-scott-tolinski-co-host-syntax/ (captured 10:13, inside the recording)"
+      ],
+      "candidates": [
+        {
+          "session_id": "1379134",
+          "why": "talk 10:10–10:35 in Continental 1–3; recording 10:09:14 for 24 min; the transcript names Syntax twice and the speaker introduces himself",
+          "confidence": 0.9
+        },
+        {
+          "session_id": "1373449",
+          "why": "Omnigent workshop, 10:10–11:10, Continental 6: overlaps; no transcript quote names it",
+          "confidence": 0.03
+        },
+        {
+          "session_id": "1373450",
+          "why": "Stop Prompting, Start Delegating workshop, 10:10–11:10, Continental 7–9: overlaps; no transcript quote names it",
+          "confidence": 0.03
+        },
+        {
+          "session_id": "1356771",
+          "why": "Forget AGI workshop, 10:10–11:10, Continental 4: overlaps; no transcript quote names it",
+          "confidence": 0.03
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-10_1355_Karan-Vaidya": {
+      "session_id": "1341863",
+      "confidence": 0.7,
+      "method": "time+operator",
+      "evidence": [
+        "note: notes/inbox/2026-11-10T1519-file-karan-vaidya-recording.md — kind: decision, session_id 1341863 (the operator confirmed this recording is his talk)",
+        "title: \"Karan Vaidya\" (folder title names the speaker of 1341863)",
+        "time: recorded 13:55:07 for 11 min, inside the 13:50–14:15 slot in Continental 1–3",
+        "transcript.qwen3-asr-1.7b.txt: \"that's what we have done at Composio where. We have mapped all these access control patterns\" (names his company; prompt-biased, attribution only)"
+      ],
+      "candidates": [
+        {
+          "session_id": "1341863",
+          "why": "From Coding agents to Knowledge work agents, 13:50–14:15, Continental 1–3; recording 13:55:07 for 11 min; folder title names Karan Vaidya; Qwen text names Composio (prompt-biased)",
+          "confidence": 0.55
+        },
+        {
+          "session_id": "1373447",
+          "why": "Google DeepMind workshop part 1, 13:50–14:50, Continental 4: overlaps; nothing in the transcript names it",
+          "confidence": 0.03
+        },
+        {
+          "session_id": "1376182",
+          "why": "A Field Guide to Agent Shapes workshop, 13:50–14:50, Continental 6: overlaps; nothing in the transcript names it",
+          "confidence": 0.03
+        },
+        {
+          "session_id": "1357839",
+          "why": "Keep the Harness, Own Your Inference workshop, 13:50–14:50, Continental 7–9: overlaps; nothing in the transcript names it",
+          "confidence": 0.03
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-10_1418_George-Fraser": {
+      "session_id": "1356697",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos, unprompted): \"the new job of the data team is providing context to AI. So that's welcome. George?\" (the MC names the talk and the speaker)",
+        "transcript.qwen3-asr-1.7b.txt: \"And this is how we do it at Fivetran.\" (the speaker's company; Qwen was prompted with Fivetran, so attribution only)",
+        "title: \"George Fraser\" (folder title names the speaker)",
+        "note: notes/inbox/2026-11-10T1420-down-with-dashboards-up-with-artifacts.md — talk: talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/ (operator named the talk; captured 14:20, inside the recording)"
+      ],
+      "candidates": [
+        {
+          "session_id": "1356697",
+          "why": "talk 14:20–14:45 in Continental 1–3; recording 14:18:17 for 28 min; the MC names the talk and the speaker",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1373447",
+          "why": "Google DeepMind workshop part 1, 13:50–14:50: overlaps; not named",
+          "confidence": 0.02
+        },
+        {
+          "session_id": "1376182",
+          "why": "A Field Guide to Agent Shapes workshop, 13:50–14:50: overlaps; not named",
+          "confidence": 0.02
+        },
+        {
+          "session_id": "1357839",
+          "why": "Keep the Harness, Own Your Inference workshop, 13:50–14:50: overlaps; not named",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-10_1457_Utkarsh": {
+      "session_id": "1352199",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos, unprompted): \"Hi, everyone. This is Utkarsh Shibasto\" (self-introduction; recogniser spelling of Utkarsh Shrivastava)",
+        "transcript.txt (Voice Memos, unprompted): \"Netflix launched one of our premier live offerings\" (names his company)",
+        "title: \"Utkarsh\" (folder title gives the speaker's first name)",
+        "note: notes/inbox/2026-11-10T1459-netflix-xai-frontier-open-weight-enterprise-support.md — talk: talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/ (captured 14:59, inside the recording)"
+      ],
+      "candidates": [
+        {
+          "session_id": "1352199",
+          "why": "talk 15:00–15:25 in Continental 1–3; recording 14:57:27 for 27 min; he introduces himself and names Netflix",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1373447",
+          "why": "Google DeepMind workshop part 2, 15:00–16:00: overlaps; not named in the unprompted transcript",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-10_1529_Mihail-Eric": {
+      "session_id": "1334565",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos, unprompted): \"he is the head of AI Monaco\" (the MC names the speaker's company)",
+        "title: \"Mihail Eric\" (folder title exactly names the speaker of 1334565; operator confirmation)",
+        "note: notes/inbox/2026-11-10T1532-monaco-ai-native-gtm-company.md — talk: talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/ (captured 15:32, inside the recording)",
+        "transcript in force is now transcript.qwen3-asr-1.7b.txt (upgraded on AC power); the named evidence stays the Voice Memos alternate"
+      ],
+      "candidates": [
+        {
+          "session_id": "1334565",
+          "why": "talk 15:30–15:55 in Continental 1–3; recording 15:29:42 for 30 min; the MC names Monaco; the title names Mihail Eric",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1373447",
+          "why": "Google DeepMind workshop part 2, 15:00–16:00: overlaps; not named",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_0904_swyx": {
+      "session_id": null,
+      "confidence": 0.4,
+      "method": "time+transcript",
+      "evidence": [
+        "transcript.qwen3-asr-1.7b.txt: \"we're so happy to open the show for you\"",
+        "transcript.qwen3-asr-1.7b.txt: \"So nice to have him MC as well\"",
+        "transcript.qwen3-asr-1.7b.txt: \"AIE code is. Kind of our vertical, very focused, smaller format.\"",
+        "transcript.qwen3-asr-1.7b.txt: \"Swix will be there. I will not\"",
+        "title: \"swyx\" (not a roster speaker; no session lists swyx, so it is neither confirmation nor attribution)",
+        "note: notes/inbox/2026-11-11T0908-what-is-major-league-hacking.md — captured 09:08 inside the recording, talk: null, kind: question (no attribution)",
+        "note: notes/inbox/2026-11-11T0925-swyx-clip-stays-a-side-clip.md — kind: decision, session_id null (the operator decided it stays a side clip, filed to no talk)"
+      ],
+      "candidates": [
+        {
+          "session_id": "1376240",
+          "why": "MC Intro, Mainstage 09:00–09:10: the recording (09:04:48–09:08:38) sits inside the slot and is the organizers' opening welcome — year in review, team, 2027 plans, MLH hackathon, AIE kids, Sydney; but the speaker refers to the MC in the third person and never names Corey Quinn or Duckbill, and the session has no abstract to answer, so nothing identifies the session or its speaker",
+          "confidence": 0.4
+        },
+        {
+          "session_id": "1352467",
+          "why": "What Will You Build When AI Is 10x Faster?, Mainstage 09:10–09:30: begins 1½ minutes after the recording ended; nothing in the transcript touches inference speed or Gimlet",
+          "confidence": 0.02
+        }
+      ],
+      "status": "needs-review"
+    },
+    "2026-11-11_0911_Natalie-Serrino": {
+      "session_id": "1352467",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos, unprompted): \"My name's Natalie. I'm a co-founder of Gimlet Labs.\" (self-introduction; names the speaker and her company)",
+        "transcript.txt (Voice Memos, unprompted): \"So I'm here to talk to you about what will you build when AI is 10 times faster?\" (names the talk)",
+        "title: \"Natalie Serrino\" (folder title exactly names the speaker of 1352467)",
+        "note: notes/inbox/2026-11-11T0916-research-fast-token-inference.md — session_id 1352467, talk: talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/ (captured 09:16, inside the recording)",
+        "time: recorded 09:11:14 for 17½ min, inside the 09:10–09:30 Mainstage slot"
+      ],
+      "candidates": [
+        {
+          "session_id": "1352467",
+          "why": "self-introduction names Natalie and Gimlet Labs and the talk title; recorded 09:11–09:28 inside the slot; exact-name folder title",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1376240",
+          "why": "MC Intro 09:00–09:10 ended before the recording began; the recording is the speaker's talk, not the MC",
+          "confidence": 0.01
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_0929_Lydia-Halley": {
+      "session_id": null,
+      "confidence": 0.85,
+      "method": "time+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos, unprompted): \"Sorry, we have some technical issues this morning, so hopefully everything works.\"",
+        "transcript.txt (Voice Memos, unprompted): \"I'm told that this might be the 1st time that an anthropic employee\" (the MC, during the laptop failure; names the speaker's company)",
+        "transcript.txt (Voice Memos, unprompted): \"Lydia, yeah.\"",
+        "transcript.qwen3-asr-1.7b.txt: \"we went from being super in the loop with our code\" (the only line of the talk itself in the recording)",
+        "title: \"Lydia Halley\" (resembles but does not exactly match the roster name Lydia Hallie: attribution, not operator confirmation)",
+        "why not filed: the 9-minute recording is the AV failure, the MC filling time, and conversation beside the recorder; beyond a one-sentence \"TLDR\" the talk was not captured, so there is no talk to clean. It ends on \"Eight minutes is rough\"; whether the talk ran after the recorder stopped is not known. An operator decision note can file it (time+operator) or leave it as a side clip."
+      ],
+      "candidates": [
+        {
+          "session_id": "1373455",
+          "why": "recorded 09:29–09:38 in the slot (09:30–09:50, program running early); the MC names an Anthropic employee with laptop trouble and \"Lydia\"; but almost none of the talk is in the recording",
+          "confidence": 0.85
+        },
+        {
+          "session_id": "1373457",
+          "why": "the next Mainstage slot; the recording ends at 09:38:21, before the Cloudflare introduction that opens 2026-11-11_0939_cloudflare at 09:39:42",
+          "confidence": 0.02
+        }
+      ],
+      "status": "needs-review"
+    },
+    "2026-11-11_0939_cloudflare": {
+      "session_id": "1373457",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos, unprompted): \"Please welcome Michelle Chen, group product manager at Cloudflare.\" (the MC names the speaker and her company)",
+        "transcript.txt (Voice Memos, unprompted): \"Chatting a little bit more about why Coudflair became a NALab.\" (names the talk, as transcribed)",
+        "title: \"cloudflare\" (folder title names the speaker's company)",
+        "note: notes/inbox/2026-11-11T0941-life-understood-backwards-kierkegaard.md — session_id 1373457 (captured 09:41, inside the recording)",
+        "time: recorded 09:39:42 for 20 min; the program ran about ten minutes early (slot 09:50–10:10; the operator reported the talk under way by 09:41)"
+      ],
+      "candidates": [
+        {
+          "session_id": "1373457",
+          "why": "the MC introduces Michelle Chen of Cloudflare and she names the talk; 20-minute recording matches the 20-minute slot shifted ten minutes early",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1373455",
+          "why": "scheduled 09:30–09:50, overlapping the recording's start; nothing in the recording names Lydia Hallie or Claude Code best practices",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_1000_lauren-tan": {
+      "session_id": "1373446",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos, unprompted): \"Near at SpaceX Super Intelligence.\" (the end of the MC's introduction; names the speaker's company, SpaceXSI)",
+        "transcript.txt (Voice Memos, unprompted): \"my name is potato\" (self-introduction by her handle, poteto)",
+        "transcript.qwen3-asr-1.7b.txt: \"Also known as Lauren\" (transcript in force; prompted, so attribution only)",
+        "title: \"lauren tan\" (folder title exactly names the speaker of 1373446)",
+        "note: notes/inbox/2026-11-11T1005-code-is-memory.md — session_id 1373446 (captured 10:05, inside the recording)",
+        "time: recorded 10:00:25 for 18½ min; the program ran about ten minutes early (slot 10:10–10:30)"
+      ],
+      "candidates": [
+        {
+          "session_id": "1373446",
+          "why": "the MC names SpaceX Superintelligence and the speaker introduces herself as Potato/Lauren; talk on turning slop into gold matches the abstract; exact-name folder title",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1373457",
+          "why": "scheduled 09:50–10:10, overlapping the recording's start; already claimed by 2026-11-11_0939_cloudflare, whose MC introduction names Michelle Chen",
+          "confidence": 0.01
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_1120_Phillip-DeepMind": {
+      "session_id": "1323755",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos, unprompted): \"So, I going to talk to you about how I deleted roughly 90% of my Asian harness and how it got better.\" (the speaker names the talk)",
+        "transcript.txt (Voice Memos, unprompted): \"let's look at the, I think, very important essay from Richard Sutton, the bitter lesson\" (the abstract's Bitter Lesson framing)",
+        "transcript.qwen3-asr-1.7b.txt: \"what we have been doing at Google DeepMind for the last six months\" (names his company; prompt-biased, attribution only)",
+        "title: \"Phillip DeepMind\" (folder title names the speaker's company and resembles his first name, Philipp)",
+        "note: notes/inbox/2026-11-11T1121-deepmind-talk-slides-look-nice.md — session_id 1323755, talk: talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/ (captured 11:21, inside the recording)",
+        "time: recorded 11:20:37 for 16 min, inside the 11:20–11:40 Mainstage slot"
+      ],
+      "candidates": [
+        {
+          "session_id": "1323755",
+          "why": "the speaker names the talk (\"how I deleted roughly 90% of my Asian harness and how it got better\") and the Bitter Lesson; folder title names DeepMind; recorded 11:20–11:37 inside the slot",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1373458",
+          "why": "Refactor or Rot (Jacob Prall, Render), 11:20–11:40 in Expo Sessions: same slot; nothing in the recording names it",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_1148_Heal-your-agents": {
+      "session_id": "1373460",
+      "confidence": 0.85,
+      "method": "time+attribution+transcript",
+      "evidence": [
+        "note: notes/inbox/2026-11-11T1156-immune-system-not-ticketing-system.md — session_id 1373460, talk: talks/2026-11-11-heal-your-agents-dont-just-grade-them/ (captured 11:56, inside the recording)",
+        "title: \"Heal your agents\" (folder title names the talk, not a speaker: attribution, not operator confirmation)",
+        "transcript: transcript.qwen3-asr-1.7b.txt \"Regular evaluation is just not enough.\" — abstract: \"Your evals are green, and users are still hitting failures.\"",
+        "transcript: transcript.qwen3-asr-1.7b.txt \"Some unknown unknown in terms of how your agents are going to function\" — abstract: \"production at millions of sessions a day keeps inventing failures nobody wrote a test for\"",
+        "transcript: transcript.qwen3-asr-1.7b.txt \"Look at all the sessions.\" — abstract: \"many visible only as a pattern across sessions\"",
+        "transcript: transcript.qwen3-asr-1.7b.txt \"Keep going in production, and make sure that it doesn't recur.\" — abstract: \"How do you verify each fix and expand to cover every failure you find so it stays caught?\"",
+        "transcript: transcript.txt (Voice Memos) \"We're looking at like half a millioness per day.\" — abstract: \"production at millions of sessions a day\"",
+        "transcript: transcript.txt (Voice Memos) \"You have a pathogenism, how does anything get it? It's not waiting for some test.\" (the immune-system framing the operator's note records)",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, names-only prompt); its \"Asif\" and \"Splunk\" are prompt-biased, and the unprompted Voice Memos transcript names neither speaker nor company, so this stays an attributed match",
+        "time: recorded 11:48:01 for 23½ min, in the 11:45–12:05 slot (Expo Sessions)"
+      ],
+      "candidates": [
+        {
+          "session_id": "1373460",
+          "why": "operator note captured 11:56 names the talk; folder title names it; transcript quotes answer the abstract (evals not enough, unknown unknowns, all sessions, verify fixes stay caught); recorded 11:48–12:11",
+          "confidence": 0.85
+        },
+        {
+          "session_id": "1373459",
+          "why": "The Rise of the Agent Workforce (Ankit Mathur, Databricks), 11:45–12:05 on the Mainstage: same slot; no quote answers its topic and nothing names Databricks",
+          "confidence": 0.03
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_1215_Aamir-Shakir": {
+      "session_id": "1373462",
+      "confidence": 0.9,
+      "method": "time+attribution+transcript",
+      "evidence": [
+        "title: \"Aamir Shakir\" (folder title exactly names the speaker of 1373462: the operator's confirmation)",
+        "note: notes/inbox/2026-11-11T1222-follow-up-on-mixedbread.md — session_id 1373462, talk: talks/2026-11-11-how-to-build-agents-over-your-own-data/ (captured 12:22, inside the recording)",
+        "note: notes/inbox/2026-11-11T1221-2-more-sources-more-noise.md — session_id 1373462 (captured 12:21, inside the recording)",
+        "transcript: transcript.qwen3-asr-1.7b.txt \"We use an MCP or CLI per tool that you need, right?\" — abstract: \"Connecting every source through separate MCP servers creates another bottleneck\"",
+        "transcript: transcript.qwen3-asr-1.7b.txt \"So you know, you also at the mercy of the weight limits of these tools.\" — abstract: \"inheriting each service’s latency, rate limits, and uneven search quality\"",
+        "transcript: transcript.qwen3-asr-1.7b.txt \"What we need, therefore, is a way to bring all the data at one spot.\" — abstract: \"giving internal agents a unified search layer for company knowledge\"",
+        "transcript: transcript.qwen3-asr-1.7b.txt \"No compliance, and only the right people are allowed to access this\" — abstract: \"preserves source permissions\"",
+        "transcript: transcript.qwen3-asr-1.7b.txt \"We can answer the query actually and send back where we got the source from.\" — abstract: \"returns compact, cited evidence to the acting agent\"",
+        "transcript.qwen3-asr-1.7b.txt: \"And Mixedbread has this concept of metadata.\" (names his company; prompt-biased, attribution only; the Voice Memos transcript has \"big bread\" and \"mixed fraction\")",
+        "time: recorded 12:15:57 for 18½ min, in the 12:10–12:30 slot (Expo Sessions)"
+      ],
+      "candidates": [
+        {
+          "session_id": "1373462",
+          "why": "exact-name folder title; operator notes captured 12:21–12:34 name the talk; five transcript quotes answer the abstract (one MCP per tool, rate limits, one index, permissions, cited sources)",
+          "confidence": 0.9
+        },
+        {
+          "session_id": "1373461",
+          "why": "Building a Safe Software Factory (Andrew Finch, Sonar), 12:10–12:30 on the Mainstage: same slot; no quote answers its topic",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_1236_overcut": {
+      "session_id": "1373464",
+      "confidence": 0.9,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos, unprompted): \"The self- improving software factory, the only one that needs zeroeral FD is.\" (names the talk, as transcribed: \"The Software Factory That Needs Zero FDEs\")",
+        "transcript.txt (Voice Memos, unprompted): \"Let's stop your factory that needs 0 ethnes.\" (names the talk again, as transcribed)",
+        "transcript.qwen3-asr-1.7b.txt: \"Software factory, the only one that needs zero FDEs.\" (transcript in force)",
+        "transcript.qwen3-asr-1.7b.txt: \"So let's start with Overcut.\" (names the speaker's company; prompt-biased, attribution only)",
+        "title: \"overcut\" (folder title names the speaker's company, Overcut)",
+        "time: recorded 12:36:46 for 20 min, inside the 12:35–12:55 slot (Expo Sessions)"
+      ],
+      "candidates": [
+        {
+          "session_id": "1373464",
+          "why": "the speaker names the talk twice (software factory that needs zero FDEs) in the unprompted transcript; the demo matches the abstract (agents with their own identity, workflows triggered from Jira, GitHub and Slack, human approval gates); folder title names Overcut",
+          "confidence": 0.9
+        },
+        {
+          "session_id": "1373463",
+          "why": "Earning Autonomy: From Missions to Workstreams (Luke Alvoeiro, Factory), 12:35–12:55 on the Mainstage: same slot; nothing names Factory, Droid, Missions or workstreams (\"software factory\" is Overcut's phrase)",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_1406_diogo": {
+      "session_id": "1373465",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"I, Diego Almeda, and this talk is, I love you so jetting much.\" (self-introduction; names the speaker and the talk, as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"We have a stop Gen AI baseball vat for type safe.\" (names his company, TypeSafe, as transcribed)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Heck yeah, I'm Diogo Almeida, and this talk is I love you so, Jetting much.\" (the same self-introduction; the name is prompt-biased, attribution only)",
+        "title: \"diogo\" (folder title names the speaker's first name)",
+        "note: notes/inbox/2026-11-11T1408-where-is-the-automation.md — session_id 1373465, talk: talks/2026-11-11-i-love-you-so-jevving-much/ (captured 14:08, inside the recording)",
+        "note: notes/inbox/2026-11-11T1444-file-1424-photo-under-diogo.md — kind: decision (photo filing; records that the talk ran past its slot, 14:07–14:30)",
+        "time: recorded 14:06:57 for 23 min; slot 14:05–14:23 on the Mainstage, the talk ran past it",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos self-introduction."
+      ],
+      "candidates": [
+        {
+          "session_id": "1373465",
+          "why": "self-introduction names Diogo Almeida (as \"Diego Almeda\") and the talk; folder title and operator notes name him; recorded 14:07–14:30 from the start of the slot",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1373466",
+          "why": "Coding Agents and How to Tame Them (Ivan Leo, Google DeepMind), 14:05–14:25 in Expo Sessions: same slot; nothing in the recording names it",
+          "confidence": 0.01
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_1522_brian-kennedy": {
+      "session_id": "1376197",
+      "confidence": 0.7,
+      "method": "time+attribution+transcript",
+      "evidence": [
+        "title: \"brian kennedy\" (folder title exactly names the speaker of 1376197; the recording starts 3½ min after the slot's scheduled end, so the window does not fit and this is attribution, not operator confirmation)",
+        "transcript: transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force) \"Run a second check. Run in shadow mode, seeing where it disagrees.\" — abstract: \"Then we ran Jev beside it and found the grader was passing work that never happened.\"",
+        "transcript: transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force) \"We entrusted our judge until we measured it.\" — abstract: \"Every step an agent takes in ZoomInfo's Agent Teams is graded by another model.\" (the grader as a judge to be measured)",
+        "transcript: transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force) \"Then read the cases, see where the two disagree\" — abstract: \"found the grader was passing work that never happened\" (comparing the judge with the second check)",
+        "transcript: transcript.txt (Voice Memos alternate) \"Round a second check, run into shadow mode, seeing where disagrees.\" — abstract: \"Then we ran Jev beside it\" (the same closing line, unprompted)",
+        "time: recorded 15:22:39 for 28 s, the closing lines (the Voice Memos alternate ends \"Thank you.\"); slot 15:06–15:19 on the Mainstage, the talk ran over; the next Mainstage talk (1376198, scheduled 15:24) was recorded from 15:25:01",
+        "no operator note captured in the span (15:22–15:23)",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Neither transcript names the talk, the speaker or ZoomInfo, though both were in the prompt; re-decided on the Qwen upgrade: same session, still attributed."
+      ],
+      "candidates": [
+        {
+          "session_id": "1376197",
+          "why": "exact-name folder title; the closing lines answer the abstract (a judge measured against a second check run in shadow mode, cases where the two disagree); a talk-closing \"Thank you\" at 15:23, four minutes after the scheduled end",
+          "confidence": 0.7
+        },
+        {
+          "session_id": "1373468",
+          "why": "CVE remediation with Factory (Nikhil Harithas), 15:20–15:40 in Expo Sessions: the only slot the recording fits, but a closing \"Thank you\" three minutes after its start is implausible and nothing names CVEs, Factory or remediation",
+          "confidence": 0.05
+        },
+        {
+          "session_id": "1376198",
+          "why": "Autocomplete for Actions (Scott Roberts, Workday), scheduled 15:24 on the Mainstage: starts after the recording ends; recorded separately from 15:25:01",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_1525_Scott-Roberts": {
+      "session_id": "1376198",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"So that work day, we have over 11,000 different organizations that use our tools.\" (names the speaker's company, Workday, as transcribed)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"So that workday, we have over eleven thousand different organizations that use our.\" (the same line; \"Workday\" was in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"So if we look at the system one versus system two thinking.\" (the talk's System One framing)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"So here we have a select statement. So this is against a DuckDB, where we have a function.\" — abstract: \"running inside DuckDB as a SQL filter\" (DuckDB was not in the prompt)",
+        "title: \"Scott Roberts\" (folder title exactly names the speaker of 1376198)",
+        "note: notes/inbox/2026-11-11T1534-jev-inside-sql-in-duckdb.md — session_id 1376198, talk: talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/ (captured 15:34, inside the recording)",
+        "time: recorded 15:25:01 for 12 min, inside the 15:24–15:37 Mainstage slot",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session."
+      ],
+      "candidates": [
+        {
+          "session_id": "1376198",
+          "why": "names Workday (\"work day\"); System One versus System 2; Jev picking action cards and running in a SQL select; exact-name folder title; operator notes 15:30–15:34; recorded 15:25–15:37 inside the slot",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1373468",
+          "why": "CVE remediation with Factory (Nikhil Harithas), 15:20–15:40 in Expo Sessions: same window; nothing names CVEs or Factory",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_1629_Lovable": {
+      "session_id": "1373469",
+      "confidence": 0.9,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"it's been kind of a core basis behind lovable that you won't have to care about the code\" (names the speaker's company)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"And we designed this trajectory with really Git as inspiration\" — abstract: \"persistent histories that let them continue longer work\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Creating one of these forks of a computer is.\" — abstract: \"forkable computers that give agents room to experiment\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"for for each agent, we have a separate inbox.\" — abstract: \"durable communication that lets them coordinate\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"it's been kind of a core thesis behind Lovable that.\" (\"Lovable\" was in the prompt, attribution only)",
+        "title: \"Lovable\" (folder title names the speaker's company)",
+        "note: notes/inbox/2026-11-11T1637-trajectory-append-only-forkable.md — session_id 1373469, talk: talks/2026-11-11-what-it-takes-to-set-intelligence-free/ (captured 16:37, inside the recording)",
+        "time: recorded 16:29:13 for 19 min, opening mid-talk; slot 16:30–16:50 on the Mainstage (nothing else scheduled then)",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; Qwen's \"Niteshift\" and \"Ramp\" are prompt-biased and name no other session."
+      ],
+      "candidates": [
+        {
+          "session_id": "1373469",
+          "why": "names Lovable; forkable computers, a Git-like trajectory and an inbox per agent answer the abstract; folder title names Lovable; operator notes 16:33–16:46; the only session in the window",
+          "confidence": 0.9
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_1648_Zach-Bruggeman": {
+      "session_id": "1373470",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"My name is Zach and I'm an engineer ramp.\" (self-introduction; names the speaker and his company)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"My name is Zach, and I'm an engineer at Ramp.\" (the same self-introduction; \"Ramp\" was in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Through this, we now see around seventy-five percent of all of Ramp's code.\" — abstract: \"Inspect, which writes ~75% of merged PRs\"",
+        "title: \"Zach Bruggeman\" (folder title exactly names the speaker of 1373470)",
+        "note: notes/inbox/2026-11-11T1650-ramp-inspect-multiplayer-coding-agent.md — session_id 1373470, talk: talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/ (captured 16:50, inside the recording)",
+        "note: notes/inbox/2026-11-11T1705-cut-talk-short.md — the operator cut the talk short: the recording covers only its start",
+        "time: recorded 16:48:38 for 8½ min (speaker begins 00:01:26), the start of the 16:50–17:10 Mainstage slot",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; Qwen's \"Steve Yegge\" in the pre-talk chatter is prompt-biased (the Voice Memos alternate has no name there)."
+      ],
+      "candidates": [
+        {
+          "session_id": "1373470",
+          "why": "self-introduction names Zach and Ramp; Inspect writing ~75% of the code answers the abstract; exact-name folder title; operator notes 16:50–16:55",
+          "confidence": 0.95
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_1706_Steve-Yegge": {
+      "session_id": "1373471",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"Independent AI advisor and creator of Gastown.\" (the end of the MC's introduction)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"I guess I'm just not quiet enough for Steve.\" (an agent's ledger names the speaker)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Independent AI advisor and creator of Goose and Gastown.\" (the same introduction; \"Independent\" was in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I've been independent and just kind of playing with. Playing with software factories, yeah.\" (names the talk's subject, Software Factories)",
+        "title: \"Steve Yegge\" (folder title exactly names the speaker of 1373471)",
+        "note: notes/inbox/2026-11-11T1708-software-factories-failed-loves-beads.md — session_id 1373471, talk: talks/2026-11-11-software-factories-escape-from-trash-mountain/ (captured 17:08, inside the recording: the talk started early)",
+        "time: recorded 17:06:21 for 21½ min; slot 17:10–17:30 on the Mainstage, started about four minutes early",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; Qwen's \"The Duckbill Group\" and \"Fabian\" are prompt-biased and absent from the Voice Memos alternate."
+      ],
+      "candidates": [
+        {
+          "session_id": "1373471",
+          "why": "MC introduction (\"creator of Gastown\"); software factories throughout; an agent names Steve; exact-name folder title; operator notes 17:08–17:27",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1373470",
+          "why": "How to build an agent that builds the culture (Zach Bruggeman, Ramp), 16:50–17:10: overlaps the first four minutes; nothing names Ramp or Inspect, and 2026-11-11_1648_Zach-Bruggeman captured it",
+          "confidence": 0.01
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-11_1730_simon-willison": {
+      "session_id": "1376191",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"Please put your hands together for Simon Willison, creator of data set.\" (the MC's introduction names the speaker)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Please put your hands together for Simon Willison.\" (the same introduction; the name was in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I've got 18 minutes to talk about the last 12 months.\" (names the talk, 2026 in LLMs)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"November 2025 is what I consider the coding agents inflection point.\" — abstract: \"since last November's coding agent inflection point\"",
+        "title: \"simon willison\" (folder title exactly names the speaker of 1376191)",
+        "note: notes/inbox/2026-11-11T1732-three-inflection-points-nov-2025.md — session_id 1376191, talk: talks/2026-11-11-2026-in-llms/ (captured 17:32, inside the recording)",
+        "time: recorded 17:30:50 for 19½ min, inside the 17:30–17:50 Mainstage slot",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session."
+      ],
+      "candidates": [
+        {
+          "session_id": "1376191",
+          "why": "the MC introduces Simon Willison; the speaker names the last 12 months in LLMs and the November 2025 coding agent inflection point; exact-name folder title; operator notes 17:32–17:49",
+          "confidence": 0.95
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-12_1120_walden": {
+      "session_id": "1373475",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"this is what our merged PR through book looks like at cognition.\" (names the speaker's company, Cognition)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"We build a air product called Devon.\" (names Cognition's product, Devin, as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"In fact, some engineers are cognition have already moved to using iPads for the development process.\" (Cognition again)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"We build a AI product called Devon.\" (names Cognition's product, Devin, as transcribed; not in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"this is what our merged PR throughput looks like at Cognition.\" (\"Cognition\" was in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Many of you are probably familiar with the Software Factory.\" — abstract: \"the most advanced ways teams are using AI today\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"In fact, several engineers at Cognition.\" (the same line as the Voice Memos alternate; attribution only)",
+        "title: \"walden\" (folder title names the speaker's first name, Walden Yan)",
+        "note: notes/inbox/2026-11-12T1123-cognition-team-by-vertical-not-role.md — session_id 1373475, talk: talks/2026-11-12-a-new-age-of-software-engineering/ (captured 11:23, inside the recording)",
+        "note: notes/inbox/2026-11-12T1125-cognition-sharing-videos-as-proof.md — session_id 1373475, talk: talks/2026-11-12-a-new-age-of-software-engineering/ (captured 11:25, inside the recording)",
+        "note: notes/inbox/2026-11-12T1126-cognition-teach-agents-to-test.md — session_id 1373475, talk: talks/2026-11-12-a-new-age-of-software-engineering/ (captured 11:26, inside the recording)",
+        "note: notes/inbox/2026-11-12T1128-cognition-sessions-for-self-improvement.md — session_id 1373475, talk: talks/2026-11-12-a-new-age-of-software-engineering/ (captured 11:28, inside the recording)",
+        "note: notes/inbox/2026-11-12T1133-cognition-android-parity-with-ios.md — session_id 1373475, talk: talks/2026-11-12-a-new-age-of-software-engineering/ (captured 11:33, inside the recording)",
+        "note: notes/inbox/2026-11-12T1134-cognition-teams-limited-by-ambition.md — session_id 1373475, talk: talks/2026-11-12-a-new-age-of-software-engineering/ (captured 11:34, inside the recording)",
+        "time: recorded 11:20:34 for 14 min, inside the 11:20–11:40 Mainstage slot",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos \"cognition\"; no speaker name from the prompt appears in Qwen."
+      ],
+      "candidates": [
+        {
+          "session_id": "1373475",
+          "why": "Mainstage 11:20–11:40; recording 11:20:34 for 14 min; the speaker names Cognition and Devin; folder title is the speaker's first name; six operator notes 11:23–11:34 carry this session",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1373476",
+          "why": "Connect Agents to Reality (Brandon Waselnuk, Unblocked), Expo Sessions 11:20–11:40: same slot; no transcript quote names it or Unblocked",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-12_1146_trust-by-verify": {
+      "session_id": "1379052",
+      "confidence": 0.9,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"My name is Michael.\" (self-introduction; the first name of the speaker, Michael Liendo)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"I work at the off 0 prime team.\" (names the speaker's company, Auth0, as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"Off 0 is broriating that you know to your email.\" (Auth0 again, as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"I know this actually on year from trust, but verify.\" (names the talk, Talk But Verify, as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"You can share your card with the Asian, please don't do that.\" — abstract: \"handing your agent a wallet with real money in it\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Another session throughout the years called Trust But Verify.\" (names the talk, Talk But Verify, as transcribed; titles are not in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"My name is Michael Liendo, and we're gonna have a really good time.\" (the same self-introduction; the surname was in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I'm a software developer having been over at Auth0.\" (\"Auth0\" was in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"You can share your card with the agent.\" — abstract: \"handing your agent a wallet with real money in it\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Ciba client-initiated back-channel authentication.\" — abstract: \"out-of-band permission gates\"",
+        "title: \"trust by verify\" (folder title names the talk, as typed)",
+        "note: notes/inbox/2026-11-12T1154-token-vault-limits-agent-scopes.md — session_id 1379052, talk: talks/2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter/ (captured 11:54, inside the recording)",
+        "note: notes/inbox/2026-11-12T1204-agent-payment-flow.md — session_id 1379052, talk: talks/2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter/ (captured 12:04, inside the recording)",
+        "note: notes/inbox/2026-11-12T1204-ciba-human-approval-for-agents.md — session_id 1379052, talk: talks/2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter/ (captured 12:04, inside the recording)",
+        "time: recorded 11:46:59 for 21½ min; slot 11:45–12:05 in Expo Sessions, the talk ran about four minutes over",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos self-introduction and \"off 0\"; Qwen's \"Michael Liendo\", \"Auth0\" and \"AWS\" are prompt-biased."
+      ],
+      "candidates": [
+        {
+          "session_id": "1379052",
+          "why": "Expo Sessions 11:45–12:05; recording 11:46:59 for 21½ min; the speaker says his name is Michael and that he works on the Auth0 team, and names \"trust, but verify\"; folder title names the talk; three operator notes 11:54–12:04 carry this session",
+          "confidence": 0.9
+        },
+        {
+          "session_id": "1373477",
+          "why": "What Your AI Doesn't Know (Jeffrey Pinner, Exa), Mainstage 11:45–12:05: same slot; no transcript quote names it or Exa",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-12_1211_arsln-let-the-agents-cook": {
+      "session_id": "1379011",
+      "confidence": 0.9,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"And now, I'm a sentry building at that point\" (self-introduction; names the speaker's company, Sentry, as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"having only 2 tools at the century\" (a questioner names Sentry, as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"You going to give your agent a bunch of tools, one tool per data source even, and go from there.\" — abstract: \"Give an agent a pile of APIs.\"",
+        "transcript.txt (Voice Memos alternate, unprompted): \"and finally try to allow your agent to check his work whenever possible.\" — abstract: \"check its own answers\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"And now I'm at Sentry, building agents that find and fix bugs.\" (the same self-introduction; \"Sentry\" was in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I'm interested in what you said about having only two tools at Sentry\" (a questioner; attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"You're going to give your agent a bunch of tools.\" — abstract: \"Give an agent a pile of APIs.\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"And finally, try to allow your agent to check its work whenever possible.\" — abstract: \"check its own answers\"",
+        "title: \"arsln let the agents cook\" (folder title names the talk, Let the Agent Cook, and the speaker's first name, Arsalan, as typed)",
+        "note: notes/inbox/2026-11-12T1215-olap-cubes-modality-of-values.md — session_id 1379011, talk: talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/ (captured 12:15, inside the recording)",
+        "note: notes/inbox/2026-11-12T1215-organize-tools-by-use-case.md — session_id 1379011, talk: talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/ (captured 12:15, inside the recording)",
+        "note: notes/inbox/2026-11-12T1217-likes-write-the-code-tools.md — session_id 1379011, talk: talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/ (captured 12:17, inside the recording)",
+        "note: notes/inbox/2026-11-12T1218-optimization-gives-agent-tunnel-vision.md — session_id 1379011, talk: talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/ (captured 12:18, inside the recording)",
+        "note: notes/inbox/2026-11-12T1221-follow-up-which-harness-tools-to-keep.md — session_id 1379011, talk: talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/ (captured 12:21, inside the recording)",
+        "time: recorded 12:11:55 for 17¾ min, inside the 12:10–12:30 Expo Sessions slot",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos \"sentry\"; Qwen's \"Auth0\" at 00:05:11 is prompt-biased (the Voice Memos alternate has \"out there\") and names no other session."
+      ],
+      "candidates": [
+        {
+          "session_id": "1379011",
+          "why": "Expo Sessions 12:10–12:30; recording 12:11:55 for 17¾ min; the speaker names Sentry; folder title names the talk; five operator notes 12:15–12:21 carry this session",
+          "confidence": 0.9
+        },
+        {
+          "session_id": "1375634",
+          "why": "Ship more as a team with Kiro Crew (Doug Clauson, AWS), Mainstage 12:10–12:30: same slot; no transcript quote names it, Kiro or AWS",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-12_1235_lance-martin": {
+      "session_id": "1379010",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"I'm Lance Strom and dropping.\" (self-introduction; names the speaker, Lance, and his company, Anthropic, as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"And in September, we publish that we use Claude to formalize it.\" (names Claude, the talk's subject)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"use the database in this way to coordinate their work\" — abstract: \"multi-agent coordination\"",
+        "transcript.txt (Voice Memos alternate, unprompted): \"Now, I want to shift gears and talk about memory\" — abstract: \"Claude's frontier capabilities in memory\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I'm Lance from Anthropic.\" (the same self-introduction; \"Lance Martin\" and \"Anthropic\" were in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I'm going to tell two stories about attending the most out of Claude and exploring Claude's frontier capabilities.\" (names the talk; Claude and the title are not in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"So the first is multi-agent.\" — abstract: \"multi-agent coordination\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I want to shift gears and talk about memory\" — abstract: \"Claude’s frontier capabilities in memory\"",
+        "title: \"lance martin\" (folder title exactly names the speaker of 1379010)",
+        "note: notes/inbox/2026-11-12T1238-fable-52-no-human-steering-multi-agent.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:38, inside the recording)",
+        "note: notes/inbox/2026-11-12T1239-follow-up-agent-database-to-store-stuff.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:39, inside the recording)",
+        "note: notes/inbox/2026-11-12T1239-primitives-git-and-sql-database.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:39, inside the recording)",
+        "note: notes/inbox/2026-11-12T1241-agent-created-db-tables-for-coordination.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:41, inside the recording)",
+        "note: notes/inbox/2026-11-12T1242-magnificent-work-all-999-of-you.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:42, inside the recording)",
+        "note: notes/inbox/2026-11-12T1244-life-understood-backwards-lived-forwards.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:44, inside the recording)",
+        "note: notes/inbox/2026-11-12T1248-claude-better-at-reading-writing-memory.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:48, inside the recording)",
+        "note: notes/inbox/2026-11-12T1249-follow-up-memory-from-transcripts.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:49, inside the recording)",
+        "note: notes/inbox/2026-11-12T1251-wiki-and-data-from-memory.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:51, inside the recording)",
+        "note: notes/inbox/2026-11-12T1252-what-are-dreaming-tokens.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:52, inside the recording)",
+        "time: recorded 12:35:29 for 18¼ min, inside the 12:35–12:55 Mainstage slot",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; Qwen's \"Anthropic\" is prompt-biased, its \"Claude\" and \"Kierkegaard\" are not."
+      ],
+      "candidates": [
+        {
+          "session_id": "1379010",
+          "why": "Mainstage 12:35–12:55; recording 12:35:29 for 18¼ min; the speaker introduces himself as Lance and names Claude; exact-name folder title; ten operator notes 12:38–12:52 carry this session",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1379163",
+          "why": "Code review without reviewing code (Daniel Tao, Atlassian), Expo Sessions 12:35–12:55: same slot; no transcript quote names it or Atlassian",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    }
+  },
+  "talks": {
+    "1323755": {
+      "slug": "2026-11-11-i-deleted-90-of-my-harness-and-it-got-better",
+      "path": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/transcript.md",
+      "title": "I deleted 90% of my harness (And It Got Better)",
+      "speakers": [
+        {
+          "name": "Philipp Schmid",
+          "affiliation": "Google DeepMind"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-11T11:20:00-08:00",
+      "source_recording": "2026-11-11_1120_Phillip-DeepMind",
+      "sections": [
+        "00:00:00 — Opening",
+        "00:00:13 — The bitter lesson",
+        "00:00:41 — Six months of shipping",
+        "00:01:29 — The Gemini Decisions API",
+        "00:01:58 — How models learn agentic work",
+        "00:02:31 — Dedicated tools versus one bash script",
+        "00:03:20 — Rebuilding the harness every six months",
+        "00:04:31 — One tool: Bash",
+        "00:06:11 — Shrinking system prompts",
+        "00:06:44 — How much of the harness helps?",
+        "00:07:44 — Score, tokens and cost",
+        "00:09:37 — Demos: Flash and Carbon",
+        "00:11:39 — Better models chain more commands",
+        "00:13:33 — Fewer tokens per task",
+        "00:14:23 — What comes next: code mode and MCP",
+        "00:15:25 — Takeaways"
+      ],
+      "word_count": 2859,
+      "cleaned_at": "2026-11-11T16:09:53-08:00"
+    },
+    "1333169": {
+      "slug": "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
+      "path": "talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/transcript.md",
+      "title": "One team's path to trusting AI generated code",
+      "speakers": [
+        {
+          "name": "Ankit Jain",
+          "affiliation": "Aviator"
+        }
+      ],
+      "room_id": "continental-13-workshop-room-1",
+      "starts_at": "2026-11-10T09:30:00-08:00",
+      "source_recording": "2026-11-10_0933_Ankir-Jain",
+      "sections": [
+        "00:00:02 — Opening",
+        "00:00:29 — What we tried first",
+        "00:02:56 — Code review is not about the code",
+        "00:05:48 — Six steps",
+        "00:07:08 — Argue",
+        "00:08:38 — Capture",
+        "00:10:17 — Codify",
+        "00:13:02 — Verify",
+        "00:14:09 — Debate",
+        "00:17:18 — Own",
+        "00:18:42 — Results",
+        "00:21:09 — Start tomorrow"
+      ],
+      "word_count": 3786,
+      "cleaned_at": "2026-11-10T14:34:02-05:00"
+    },
+    "1334565": {
+      "slug": "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
+      "path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/transcript.md",
+      "title": "Building World-class Agentic GTM: Learnings from Monaco for Monaco",
+      "speakers": [
+        {
+          "name": "Mihail Eric",
+          "affiliation": "Monaco"
+        }
+      ],
+      "room_id": "continental-13-workshop-room-1",
+      "starts_at": "2026-11-10T15:30:00-08:00",
+      "source_recording": "2026-11-10_1529_Mihail-Eric",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:03:35 — Monaco and the future of sales",
+        "00:05:43 — Knowledge and procedure in go-to-market",
+        "00:08:33 — The vertical AI harness",
+        "00:10:23 — Data, memory and workspace",
+        "00:15:00 — Workflows from experts",
+        "00:17:41 — Tracing and evaluation",
+        "00:18:47 — Case studies",
+        "00:20:57 — Culture: everyone builds",
+        "00:25:21 — Vertical AI as an opportunity",
+        "00:26:46 — Questions"
+      ],
+      "word_count": 5449,
+      "cleaned_at": "2026-11-10T19:33:49-05:00"
+    },
+    "1341863": {
+      "slug": "2026-11-10-from-coding-agents-to-knowledge-work-agents",
+      "path": "talks/2026-11-10-from-coding-agents-to-knowledge-work-agents/transcript.md",
+      "title": "What It Takes to Run a Company on Agent Swarms",
+      "speakers": [
+        {
+          "name": "Karan Vaidya",
+          "affiliation": "Composio"
+        }
+      ],
+      "room_id": "continental-13-workshop-room-1",
+      "starts_at": "2026-11-10T13:50:00-08:00",
+      "source_recording": "2026-11-10_1355_Karan-Vaidya",
+      "sections": [
+        "00:00:00 — Giving agents access",
+        "00:00:41 — Attackers already use agents",
+        "00:01:56 — Security agents that watch the company",
+        "00:03:38 — SRE agents",
+        "00:05:49 — The right amount of access",
+        "00:07:15 — A firewall for agents",
+        "00:09:39 — Patterns to conclude"
+      ],
+      "word_count": 1686,
+      "cleaned_at": "2026-11-10T18:19:57-05:00"
+    },
+    "1352199": {
+      "slug": "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
+      "path": "talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/transcript.md",
+      "title": "Building a Shared AI Assistant: The Platform Challenges Beyond MCP",
+      "speakers": [
+        {
+          "name": "Utkarsh Shrivastava",
+          "affiliation": "Netflix"
+        }
+      ],
+      "room_id": "continental-13-workshop-room-1",
+      "starts_at": "2026-11-10T15:00:00-08:00",
+      "source_recording": "2026-11-10_1457_Utkarsh",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:00:43 — Choosing models",
+        "00:02:11 — Company context is the key",
+        "00:03:12 — Before and after the agentic suite",
+        "00:04:40 — Every tool is another way to choose wrong",
+        "00:06:49 — One word, many meanings",
+        "00:09:03 — Gate one: access and evaluation",
+        "00:13:04 — Gate two: who owns the answer",
+        "00:16:05 — Gate three: high-stakes writes",
+        "00:17:34 — Did consolidating help?",
+        "00:20:28 — Platform and teams together",
+        "00:21:38 — Questions"
+      ],
+      "word_count": 4022,
+      "cleaned_at": "2026-11-10T18:32:00-05:00"
+    },
+    "1352467": {
+      "slug": "2026-11-11-what-will-you-build-when-ai-is-10x-faster",
+      "path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/transcript.md",
+      "title": "What Will You Build When AI Is 10x Faster?",
+      "speakers": [
+        {
+          "name": "Natalie Serrino",
+          "affiliation": "Gimlet Labs"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-11T09:10:00-08:00",
+      "source_recording": "2026-11-11_0911_Natalie-Serrino",
+      "sections": [
+        "00:00:16 — Opening",
+        "00:01:02 — Isn't inference already fast enough?",
+        "00:02:57 — Lessons from the web era",
+        "00:06:01 — More tokens versus faster tokens",
+        "00:06:33 — The Token Mint Factory game",
+        "00:08:06 — The right accelerator for the right job",
+        "00:09:43 — Demo: building Snake",
+        "00:10:37 — When tool calls become the bottleneck",
+        "00:11:38 — Self-optimizing inference",
+        "00:12:18 — Demo: a defender on the critical path",
+        "00:15:11 — What does faster unlock?",
+        "00:16:59 — Closing"
+      ],
+      "word_count": 3208,
+      "cleaned_at": "2026-11-11T11:01:36-08:00"
+    },
+    "1356697": {
+      "slug": "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai",
+      "path": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/transcript.md",
+      "title": "The new job of the data team is providing context to AI",
+      "speakers": [
+        {
+          "name": "George Fraser",
+          "affiliation": "Fivetran"
+        }
+      ],
+      "room_id": "continental-13-workshop-room-1",
+      "starts_at": "2026-11-10T14:20:00-08:00",
+      "source_recording": "2026-11-10_1418_George-Fraser",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:01:22 — Why context, why now",
+        "00:02:56 — The head-of-sales question",
+        "00:03:18 — Companies already doing it",
+        "00:05:23 — AI is a new consumer of the data stack",
+        "00:06:38 — Unstructured data",
+        "00:07:04 — Don't wire AI to every system through MCP",
+        "00:09:47 — How Fivetran does it",
+        "00:11:18 — Giving the agent a map",
+        "00:14:29 — One place for everything",
+        "00:15:24 — Building the demo",
+        "00:22:31 — Asking the agent",
+        "00:26:44 — What data teams are already good at"
+      ],
+      "word_count": 4234,
+      "cleaned_at": "2026-11-10T18:17:50-05:00"
+    },
+    "1373446": {
+      "slug": "2026-11-11-all-code-is-slop-except-mine",
+      "path": "talks/2026-11-11-all-code-is-slop-except-mine/transcript.md",
+      "title": "All Code Is Slop (Except Mine)",
+      "speakers": [
+        {
+          "name": "Lauren Tan",
+          "affiliation": "SpaceXSI (xAI)"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-11T10:10:00-08:00",
+      "source_recording": "2026-11-11_1000_lauren-tan",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:01:40 — Coding machines and trust",
+        "00:02:55 — From low trust to high trust",
+        "00:04:26 — The codebase as a garden",
+        "00:05:56 — Dune and organic architecture",
+        "00:07:54 — Agents and markdown",
+        "00:10:40 — Verification",
+        "00:12:50 — Where the tokens go",
+        "00:14:22 — The promised land",
+        "00:16:10 — Before you build a software factory"
+      ],
+      "word_count": 2756,
+      "cleaned_at": "2026-11-11T11:01:36-08:00"
+    },
+    "1373457": {
+      "slug": "2026-11-11-cloudflare-is-a-neolab",
+      "path": "talks/2026-11-11-cloudflare-is-a-neolab/transcript.md",
+      "title": "cloudflare is a neolab",
+      "speakers": [
+        {
+          "name": "Michelle Chen",
+          "affiliation": "Cloudflare"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-11T09:50:00-08:00",
+      "source_recording": "2026-11-11_0939_cloudflare",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:00:56 — Life understood backwards",
+        "00:01:45 — From CDN to compute",
+        "00:03:47 — Storage and the developer platform",
+        "00:04:24 — Workers AI and the small-model hypothesis",
+        "00:06:16 — Serving the giant models",
+        "00:06:55 — The agent cloud story",
+        "00:07:50 — The east wind: system one models",
+        "00:09:53 — Building our own in a weekend",
+        "00:11:35 — An extraction model",
+        "00:13:18 — Why Cloudflare had to become a neolab",
+        "00:14:06 — Demo: triaging a failed CI build",
+        "00:18:14 — What people are building",
+        "00:18:56 — Going onward"
+      ],
+      "word_count": 3887,
+      "cleaned_at": "2026-11-11T11:01:36-08:00"
+    },
+    "1373460": {
+      "slug": "2026-11-11-heal-your-agents-dont-just-grade-them",
+      "path": "talks/2026-11-11-heal-your-agents-dont-just-grade-them/transcript.md",
+      "title": "Heal Your Agents, Don't Just Grade Them",
+      "speakers": [
+        {
+          "name": "Khasimul Asif Mohammad",
+          "affiliation": "Splunk"
+        },
+        {
+          "name": "Sudhir Tonse",
+          "affiliation": "Splunk"
+        }
+      ],
+      "room_id": "continental-13-expo-sessions",
+      "starts_at": "2026-11-11T11:45:00-08:00",
+      "source_recording": "2026-11-11_1148_Heal-your-agents",
+      "sections": [
+        "00:00:04 — Opening",
+        "00:01:04 — Introductions",
+        "00:01:42 — Evaluating agents",
+        "00:02:08 — Observe, then act",
+        "00:03:19 — LLMs as judges",
+        "00:04:28 — Sessions, traces and spans",
+        "00:04:55 — The journey to signals",
+        "00:06:02 — Why regular evals are not enough",
+        "00:07:27 — The immune system as inspiration",
+        "00:08:50 — What customers asked for next",
+        "00:10:14 — Continuous detection across sessions",
+        "00:10:56 — A taxonomy of failures",
+        "00:11:22 — Recommendations and remembering",
+        "00:12:42 — A customer story",
+        "00:13:42 — Demo",
+        "00:16:29 — What the demo showed",
+        "00:17:23 — Why not just use an LLM?",
+        "00:18:24 — What's next",
+        "00:19:48 — Takeaways",
+        "00:21:30 — Closing and after the talk"
+      ],
+      "word_count": 3277,
+      "cleaned_at": "2026-11-11T16:09:53-08:00"
+    },
+    "1373462": {
+      "slug": "2026-11-11-how-to-build-agents-over-your-own-data",
+      "path": "talks/2026-11-11-how-to-build-agents-over-your-own-data/transcript.md",
+      "title": "How to build agents over your own data",
+      "speakers": [
+        {
+          "name": "Aamir Shakir",
+          "affiliation": "Mixedbread"
+        }
+      ],
+      "room_id": "continental-13-expo-sessions",
+      "starts_at": "2026-11-11T12:10:00-08:00",
+      "source_recording": "2026-11-11_1215_Aamir-Shakir",
+      "sections": [
+        "00:00:09 — Introduction",
+        "00:01:49 — A 3 a.m. incident",
+        "00:02:08 — One tool per source",
+        "00:03:12 — Cost, latency and rate limits",
+        "00:04:07 — Only as good as your weakest connector",
+        "00:05:00 — More sources, more noise",
+        "00:06:22 — One index for everything",
+        "00:07:12 — Why not build it yourself?",
+        "00:08:13 — Search as infrastructure",
+        "00:08:59 — What it costs",
+        "00:09:56 — Retrieval quality and scaling laws",
+        "00:11:24 — How an agent searches",
+        "00:12:15 — Demo",
+        "00:14:19 — A bank case study",
+        "00:15:23 — Wrap-up",
+        "00:15:43 — After the talk",
+        "00:17:41 — A question on access control"
+      ],
+      "word_count": 2793,
+      "cleaned_at": "2026-11-11T16:09:53-08:00"
+    },
+    "1373464": {
+      "slug": "2026-11-11-the-software-factory-that-needs-zero-fdes",
+      "path": "talks/2026-11-11-the-software-factory-that-needs-zero-fdes/transcript.md",
+      "title": "The Software Factory That Needs Zero FDEs",
+      "speakers": [
+        {
+          "name": "Raz Berman Gold",
+          "affiliation": "Overcut"
+        }
+      ],
+      "room_id": "continental-13-expo-sessions",
+      "starts_at": "2026-11-11T12:35:00-08:00",
+      "source_recording": "2026-11-11_1236_overcut",
+      "sections": [
+        "00:00:00 — What Overcut is",
+        "00:00:19 — The FDE problem",
+        "00:00:56 — Built on what you already run",
+        "00:01:31 — Governance in one place",
+        "00:01:56 — Configuration and integrations",
+        "00:02:42 — Building blocks and agents",
+        "00:03:36 — Workflows and playbooks",
+        "00:04:32 — Ticket to PR",
+        "00:05:49 — A run, step by step",
+        "00:07:30 — Retrospectives and memory",
+        "00:08:43 — Q&A: scoring memories",
+        "00:10:03 — Q&A: orchestration and memories",
+        "00:11:25 — Q&A: evaluation, sharing and permissions",
+        "00:12:45 — Q&A: governance, limits and audit",
+        "00:16:53 — Q&A: remediation",
+        "00:17:17 — Build your own factory",
+        "00:18:41 — Closing and after the talk"
+      ],
+      "word_count": 2646,
+      "cleaned_at": "2026-11-11T16:09:53-08:00"
+    },
+    "1373465": {
+      "slug": "2026-11-11-i-love-you-so-jevving-much",
+      "path": "talks/2026-11-11-i-love-you-so-jevving-much/transcript.md",
+      "title": "I love you so jevving much",
+      "speakers": [
+        {
+          "name": "Diogo Almeida",
+          "affiliation": "TypeSafe AI"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-11T14:05:00-08:00",
+      "source_recording": "2026-11-11_1406_diogo",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:00:37 — Where is all the automation?",
+        "00:01:26 — The two cults of AI",
+        "00:02:29 — Why is AI jagged?",
+        "00:03:24 — Human in the loop, by design",
+        "00:04:15 — RLHF and the assistance trap",
+        "00:05:30 — Rethinking how AI is done",
+        "00:06:05 — The bitterest lesson: doing the right task",
+        "00:08:04 — What instruction following showed",
+        "00:08:57 — Reliable intelligence",
+        "00:10:25 — Smart software",
+        "00:11:32 — LLM Stockholm syndrome",
+        "00:12:12 — The blue LED",
+        "00:14:32 — Software research",
+        "00:15:50 — Ideas: rethinking agents",
+        "00:17:20 — Ideas: principal-agent problems",
+        "00:18:11 — Ideas: real-time security, types and interfaces",
+        "00:19:45 — The root of slop",
+        "00:20:25 — Cursed software and automating everything",
+        "00:21:07 — What couldn't we automate?",
+        "00:21:57 — Thanks"
+      ],
+      "word_count": 4605,
+      "cleaned_at": "2026-11-11T18:23:47-08:00"
+    },
+    "1373469": {
+      "slug": "2026-11-11-what-it-takes-to-set-intelligence-free",
+      "path": "talks/2026-11-11-what-it-takes-to-set-intelligence-free/transcript.md",
+      "title": "What it takes to set intelligence free",
+      "speakers": [
+        {
+          "name": "Fabian Hedin",
+          "affiliation": "Lovable"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-11T16:30:00-08:00",
+      "source_recording": "2026-11-11_1629_Lovable",
+      "sections": [
+        "00:00:00 — Agents are back",
+        "00:00:42 — What is Lovable?",
+        "00:02:04 — Outcomes, not code",
+        "00:02:29 — The platform: agent, cloud and business",
+        "00:04:32 — From a time limit to 10 hours",
+        "00:05:00 — Three pieces of the architecture",
+        "00:05:39 — The agent runtime: an inbox per agent",
+        "00:06:56 — A trajectory modelled on Git",
+        "00:08:00 — Separating the prompt from the task history",
+        "00:09:11 — Demo: the debug tool",
+        "00:09:49 — A stateless process",
+        "00:11:24 — The computer: golden checkpoints",
+        "00:13:02 — Forking computers",
+        "00:13:38 — Copy-on-write and streamed memory",
+        "00:14:48 — Rewriting the dev server in Rust",
+        "00:16:03 — Verification: inner and outer loops",
+        "00:17:54 — Wrap-up"
+      ],
+      "word_count": 3292,
+      "cleaned_at": "2026-11-11T18:23:47-08:00"
+    },
+    "1373470": {
+      "slug": "2026-11-11-how-to-build-an-agent-that-builds-the-culture",
+      "path": "talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/transcript.md",
+      "title": "How to build an agent that builds the culture",
+      "speakers": [
+        {
+          "name": "Zach Bruggeman",
+          "affiliation": "Ramp"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-11T16:50:00-08:00",
+      "source_recording": "2026-11-11_1648_Zach-Bruggeman",
+      "sections": [
+        "00:00:00 — Before the talk",
+        "00:01:26 — Introduction: Inspect at Ramp",
+        "00:02:55 — The culture angle",
+        "00:03:29 — The cost of everyone tuning their own setup",
+        "00:04:25 — Lesson one: build tools and kill information silos",
+        "00:05:14 — One Inspect for the whole company",
+        "00:05:38 — Learning by working in public",
+        "00:06:44 — Lesson two: building trust",
+        "00:07:27 — Sessions as living artifacts"
+      ],
+      "word_count": 1376,
+      "cleaned_at": "2026-11-11T18:23:47-08:00"
+    },
+    "1373471": {
+      "slug": "2026-11-11-software-factories-escape-from-trash-mountain",
+      "path": "talks/2026-11-11-software-factories-escape-from-trash-mountain/transcript.md",
+      "title": "Software Factories: Escape from Trash Mountain",
+      "speakers": [
+        {
+          "name": "Steve Yegge",
+          "affiliation": "Independent"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-11T17:10:00-08:00",
+      "source_recording": "2026-11-11_1706_Steve-Yegge",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:00:24 — Inventing software factories",
+        "00:01:22 — Two orchestrators and the bitter lesson",
+        "00:01:59 — Every factory turns to garbage",
+        "00:03:10 — The game",
+        "00:03:49 — The alien face hugger pattern",
+        "00:04:55 — Overwhelming the players",
+        "00:06:01 — This is my factory",
+        "00:06:40 — 22 Max accounts",
+        "00:07:28 — The five horsemen",
+        "00:08:10 — Work",
+        "00:09:22 — Fuel",
+        "00:10:42 — Context management",
+        "00:12:07 — Agents named after Aesop's fables",
+        "00:12:55 — Agents act like people",
+        "00:14:28 — The chief of staff",
+        "00:15:27 — Model welfare",
+        "00:18:50 — Two layers of software factories",
+        "00:20:06 — Takeaways"
+      ],
+      "word_count": 3950,
+      "cleaned_at": "2026-11-11T18:23:47-08:00"
+    },
+    "1373475": {
+      "slug": "2026-11-12-a-new-age-of-software-engineering",
+      "path": "talks/2026-11-12-a-new-age-of-software-engineering/transcript.md",
+      "title": "A New Age of Software Engineering",
+      "speakers": [
+        {
+          "name": "Walden Yan",
+          "affiliation": "Cognition"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-12T11:20:00-08:00",
+      "source_recording": "2026-11-12_1120_walden",
+      "sections": [
+        "00:00:00 — Introduction: 40x merged PRs",
+        "00:01:18 — The software factory",
+        "00:01:48 — A new role for engineers",
+        "00:03:09 — Working from Slack",
+        "00:04:06 — Testing without live services",
+        "00:06:41 — Recursive self-improvement",
+        "00:07:41 — From tasks to jobs",
+        "00:09:27 — Example: inference latency",
+        "00:10:45 — Example: Android parity",
+        "00:13:07 — Be ambitious"
+      ],
+      "word_count": 2586,
+      "cleaned_at": "2026-11-12T13:14:46-08:00"
+    },
+    "1376191": {
+      "slug": "2026-11-11-2026-in-llms",
+      "path": "talks/2026-11-11-2026-in-llms/transcript.md",
+      "title": "2026 in LLMs",
+      "speakers": [
+        {
+          "name": "Simon Willison",
+          "affiliation": "Independent"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-11T17:30:00-08:00",
+      "source_recording": "2026-11-11_1730_simon-willison",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:00:28 — Three inflection points",
+        "00:00:43 — November 2025: the coding agent inflection point",
+        "00:01:35 — Pelicans riding bicycles",
+        "00:01:58 — Be more ambitious",
+        "00:02:42 — Predictions for the year",
+        "00:03:51 — Deep blue",
+        "00:04:14 — February: Gemini 3.1 Pro's pelican",
+        "00:05:20 — The first kakapo chick",
+        "00:05:40 — April: the model they did not release",
+        "00:07:32 — A 30-day window",
+        "00:08:02 — The fable-class inflection point",
+        "00:08:55 — The beep locator",
+        "00:10:43 — Fable class is the baseline",
+        "00:11:35 — July: breaking out of the sandbox",
+        "00:13:09 — A new benchmark",
+        "00:13:54 — Games",
+        "00:15:51 — Make it a lot more fun",
+        "00:17:03 — Vibe-coded games are good now",
+        "00:17:08 — The pelican benchmark, defeated",
+        "00:17:44 — It doesn't get easier, you get faster",
+        "00:18:33 — The scorecard"
+      ],
+      "word_count": 3880,
+      "cleaned_at": "2026-11-11T18:23:47-08:00"
+    },
+    "1376197": {
+      "slug": "2026-11-11-your-judge-is-hallucinating-too",
+      "path": "talks/2026-11-11-your-judge-is-hallucinating-too/transcript.md",
+      "title": "Your Judge Is Hallucinating Too",
+      "speakers": [
+        {
+          "name": "Brian Kennedy",
+          "affiliation": "ZoomInfo"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-11T15:06:00-08:00",
+      "source_recording": "2026-11-11_1522_brian-kennedy",
+      "sections": [
+        "00:00:00 — Closing"
+      ],
+      "word_count": 46,
+      "cleaned_at": "2026-11-11T18:23:47-08:00"
+    },
+    "1376198": {
+      "slug": "2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db",
+      "path": "talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/transcript.md",
+      "title": "Autocomplete for Actions: System One from the UI to the DB",
+      "speakers": [
+        {
+          "name": "Scott Roberts",
+          "affiliation": "Workday"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-11T15:24:00-08:00",
+      "source_recording": "2026-11-11_1525_Scott-Roberts",
+      "sections": [
+        "00:00:00 — Quick actions and deep work",
+        "00:00:37 — Too much intelligence",
+        "00:01:42 — Decision primitives",
+        "00:02:24 — Not just another classifier",
+        "00:03:17 — Is a fish a pet?",
+        "00:04:00 — Demos: from autocomplete to actions",
+        "00:06:42 — Under the hood: picking the card",
+        "00:08:03 — The recruiter problem",
+        "00:09:24 — Demo: Jev inside a SQL query",
+        "00:10:57 — Summary"
+      ],
+      "word_count": 2006,
+      "cleaned_at": "2026-11-11T18:23:47-08:00"
+    },
+    "1379010": {
+      "slug": "2026-11-12-exploring-claudes-frontier",
+      "path": "talks/2026-11-12-exploring-claudes-frontier/transcript.md",
+      "title": "Exploring Claude’s frontier",
+      "speakers": [
+        {
+          "name": "Lance Martin",
+          "affiliation": "Anthropic"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-12T12:35:00-08:00",
+      "source_recording": "2026-11-12_1235_lance-martin",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:00:13 — Formalizing Fermat's Last Theorem",
+        "00:02:06 — A thousand agents, no domain harness",
+        "00:03:46 — Agents build their own coordination tables",
+        "00:05:27 — Long-horizon work from simple primitives",
+        "00:07:06 — Memory: understood backwards, lived forwards",
+        "00:08:54 — Better models use memory better",
+        "00:10:40 — Pokémon memory directories",
+        "00:12:13 — Dreaming",
+        "00:13:42 — Dreaming corrects mistakes",
+        "00:15:15 — Building a wiki from a corpus",
+        "00:17:09 — Filling gaps",
+        "00:18:04 — Thanks"
+      ],
+      "word_count": 3272,
+      "cleaned_at": "2026-11-12T13:14:46-08:00"
+    },
+    "1379011": {
+      "slug": "2026-11-12-let-the-agent-cook-from-apis-to-answers",
+      "path": "talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/transcript.md",
+      "title": "Let the Agent Cook: From APIs to Answers",
+      "speakers": [
+        {
+          "name": "Arsalan Bashir",
+          "affiliation": "Sentry"
+        }
+      ],
+      "room_id": "continental-13-expo-sessions",
+      "starts_at": "2026-11-12T12:10:00-08:00",
+      "source_recording": "2026-11-12_1211_arsln-let-the-agents-cook",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:00:32 — Rolling your own agent",
+        "00:01:32 — Where it breaks",
+        "00:03:01 — Lesson one: organize tools by use case",
+        "00:05:18 — Lesson two: don't out-think the model",
+        "00:08:07 — A simpler agent",
+        "00:09:45 — Lesson three: let the agent check its work",
+        "00:11:40 — Recap",
+        "00:12:07 — Q&A"
+      ],
+      "word_count": 3171,
+      "cleaned_at": "2026-11-12T13:14:46-08:00"
+    },
+    "1379052": {
+      "slug": "2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter",
+      "path": "talks/2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter/transcript.md",
+      "title": "Talk But Verify: human-in-the-loop for agents that actually matter",
+      "speakers": [
+        {
+          "name": "Michael Liendo",
+          "affiliation": "Auth0"
+        }
+      ],
+      "room_id": "continental-13-expo-sessions",
+      "starts_at": "2026-11-12T11:45:00-08:00",
+      "source_recording": "2026-11-12_1146_trust-by-verify",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:00:45 — Who is the agent acting for?",
+        "00:02:04 — How much human in the loop",
+        "00:04:30 — A small business example",
+        "00:06:11 — Step-up authorization",
+        "00:07:19 — Demo: booking an appointment",
+        "00:08:44 — Demo: Party Animals",
+        "00:12:49 — High stakes: approval by email",
+        "00:15:56 — Agents that pay: 402 and virtual cards",
+        "00:19:13 — Raffle and close"
+      ],
+      "word_count": 3639,
+      "cleaned_at": "2026-11-12T13:14:46-08:00"
+    },
+    "1379134": {
+      "slug": "2026-11-10-scott-tolinski-co-host-syntax",
+      "path": "talks/2026-11-10-scott-tolinski-co-host-syntax/transcript.md",
+      "title": "The True Cost of AI Coding",
+      "speakers": [
+        {
+          "name": "Scott Tolinski",
+          "affiliation": "Syntax"
+        }
+      ],
+      "room_id": "continental-13-workshop-room-1",
+      "starts_at": "2026-11-10T10:10:00-08:00",
+      "source_recording": "2026-11-10_1009_Scott-Tolinski",
+      "sections": [
+        "00:00:03 — Introduction",
+        "00:01:23 — Disclaimer and backstory",
+        "00:03:25 — A viral tweet",
+        "00:04:22 — The survey",
+        "00:04:51 — Prompting past quitting time",
+        "00:06:05 — Sleep",
+        "00:06:32 — A variable reward",
+        "00:07:54 — Pressure to produce more",
+        "00:09:42 — Running many agents",
+        "00:12:11 — Enjoyment",
+        "00:14:00 — Skills sharpening or diminishing",
+        "00:17:50 — What do we do about it",
+        "00:19:50 — Less parallelization",
+        "00:20:46 — Go outside",
+        "00:21:48 — Checking agents from your phone",
+        "00:23:08 — Closing"
+      ],
+      "word_count": 4075,
+      "cleaned_at": "2026-11-10T14:34:02-05:00"
+    }
+  },
+  "attachments": []
+}

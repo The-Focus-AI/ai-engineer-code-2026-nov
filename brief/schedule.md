@@ -20,7 +20,7 @@
 
 **Sessions in this brief: 112.** This is what the sources list, not a confirmed total.
 
-**Headline changes (7 of 49 change-log entries; all are in brief/changes.md):**
+**Headline changes (7 of 51 change-log entries; all are in brief/changes.md):**
 
 - #7 added, 2026-11-10T21:51:30-05:00: Added: 'Warning: This Pull Request Contains Graphic Content' (Cassandra Chin, Stephen Chin, 2026-11-10T17:00:00-08:00, Continental 1–3 (Workshop Room 1))
 - #6 added, 2026-11-10T21:51:30-05:00: Added: 'Do it All with Devin' (Charlie Meyer, Giovanni D'Antonio, 2026-11-10T16:30:00-08:00, Continental 6 (Workshop Room 3))
@@ -29,11 +29,11 @@
 - #3 removed, 2026-11-10T21:51:30-05:00: Removed: 'Cognition Workshop' (2026-11-10T16:30:00-08:00, continental-6-workshop-room-3)
 - #2 removed, 2026-11-10T21:51:30-05:00: Removed: 'Catching Reward Hacking From the Inside' (2026-11-10T16:30:00-08:00, continental-13-workshop-room-1)
 - #1 venue-changed, 2026-11-10T21:51:30-05:00: New room names in the schedule: Continental 1–3 (Expo Sessions), Continental Foyer
-- Also in the change log: 2 speaker-changed, 20 retitled, 20 room-changed.
+- Also in the change log: 3 speaker-changed, 21 retitled, 20 room-changed.
 
 ## Coverage
 
-**112 of an unknown total sessions verified; source not archived in the truth, page hashes only.** Neither source page states a session total, so this schedule cannot be called complete. 108 sessions come from the schedule page and 4 from the entry page. Last verified 2026-11-11T15:40:35-05:00 (verification pass 6). 7 pages read, 0 truncated.
+**112 of an unknown total sessions verified; source not archived in the truth, page hashes only.** Neither source page states a session total, so this schedule cannot be called complete. 108 sessions come from the schedule page and 4 from the entry page. Last verified 2026-11-12T03:37:31-05:00 (verification pass 7). 7 pages read, 0 truncated.
 
 **25 coverage gaps are open. The main ones:**
 
@@ -262,7 +262,8 @@ Recorded in coverage gaps for this day:
   > Every AI lab is building full stack cloud agents. Every enterprise is building their own software factory. We've worked with a lot of teams adopting all flavors in every combination. In this talk we'll distill out the core principles and design patterns we've seen across factories, and make a case for why the AI-native forge will be composable and built on open primitives.
 - 5:30 PM–5:50 PM · Continental 4–6 (Mainstage) · **Thariq Shihipar, Independent** · `talk` · Thariq Shihipar (Independent)
   - Note: talk title not published; the source shows the speaker line.
-- 5:50 PM–6:00 PM · Continental 4–6 (Mainstage) · **MC Outro** · `talk` · Corey Quinn (The Duckbill Group)
+- 5:50 PM–6:00 PM · Continental 4–6 (Mainstage) · **Something to Celebrate** · `talk` · swyx (AI Engineer)
+  > To close Code Summit 2026, swyx invites everyone to celebrate together: three days of talks, workshops, hallway conversations and the AI engineers who made them happen. Stay for the finale and celebrate with us.
 - 6:30 PM–9:30 PM · Off-site: Financial District, San Francisco · **Official After Party** · `social` · no speakers listed
 
 ## Fri, Nov 13: side event, outside the main dates

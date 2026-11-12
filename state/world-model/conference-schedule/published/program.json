@@ -1947,8 +1947,8 @@
     },
     {
       "session_id": "1380098",
-      "title": "MC Outro",
-      "abstract": null,
+      "title": "Something to Celebrate",
+      "abstract": "To close Code Summit 2026, swyx invites everyone to celebrate together: three days of talks, workshops, hallway conversations and the AI engineers who made them happen. Stay for the finale and celebrate with us.",
       "track": "Mainstage Talk",
       "format": "talk",
       "room_id": "continental-46-mainstage",
@@ -1957,7 +1957,7 @@
       "starts_at": "2026-11-12T17:50:00-08:00",
       "ends_at": "2026-11-12T18:00:00-08:00",
       "speaker_ids": [
-        "corey-quinn"
+        "swyx"
       ],
       "status": "scheduled",
       "source_url": "https://ai.engineer/code/2026/schedule",

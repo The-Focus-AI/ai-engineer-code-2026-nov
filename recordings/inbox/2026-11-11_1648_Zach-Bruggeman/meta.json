@@ -1,0 +1,23 @@
+{
+  "title": "Zach Bruggeman",
+  "recorded_at": "2026-11-11T16:48:38-08:00",
+  "duration_seconds": 506,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 1376,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261111 164838.m4a",
+  "audio_sha256": "e9067ee612c59d583242e5cec8cde331643d98f64ea3a320e6121739c6dfdf8a",
+  "exported_at": "2026-11-11T17:50:40-08:00",
+  "transcript_echo_segments": 0,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 1389,
+      "locale": "en_US"
+    }
+  ]
+}

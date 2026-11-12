@@ -260,8 +260,7 @@
       "1376246",
       "1380094",
       "1380095",
-      "1380097",
-      "1380098"
+      "1380097"
     ],
     "source_url": "https://ai.engineer/code/2026/schedule"
   },
@@ -996,6 +995,18 @@
     "links": [],
     "talks": [
       "1373460"
+    ],
+    "source_url": "https://ai.engineer/code/2026/schedule"
+  },
+  "swyx": {
+    "name": "swyx",
+    "affiliation": "AI Engineer",
+    "bio": "swyx, also known as Shawn Wang, is the co-founder and chief executive of AI Engineer, editor and podcast co-host of Latent Space, and founder of Smol AI.",
+    "links": [
+      "https://x.com/swyx"
+    ],
+    "talks": [
+      "1380098"
     ],
     "source_url": "https://ai.engineer/code/2026/schedule"
   },

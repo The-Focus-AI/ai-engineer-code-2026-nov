@@ -2,6 +2,42 @@
 
 AI Engineer Code Summit 2026. Newest first; mirrors the change log exactly.
 
+## 51
+
+```json
+{
+  "at": "2026-11-12T03:37:31-05:00",
+  "seq": 51,
+  "kind": "speaker-changed",
+  "session_id": "1380098",
+  "field": "speaker_ids",
+  "before": [
+    "corey-quinn"
+  ],
+  "after": [
+    "swyx"
+  ],
+  "summary": "'Something to Celebrate' speakers ['corey-quinn'] → ['swyx']",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
+## 50
+
+```json
+{
+  "at": "2026-11-12T03:37:31-05:00",
+  "seq": 50,
+  "kind": "retitled",
+  "session_id": "1380098",
+  "field": "title",
+  "before": "MC Outro",
+  "after": "Something to Celebrate",
+  "summary": "'MC Outro' is now 'Something to Celebrate'",
+  "source_url": "https://ai.engineer/code/2026/schedule"
+}
+```
+
 ## 49
 
 ```json

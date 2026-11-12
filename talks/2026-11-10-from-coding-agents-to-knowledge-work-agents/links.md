@@ -2,8 +2,8 @@
 session_id: "1341863"
 title: "What It Takes to Run a Company on Agent Swarms"
 phase: live
-last_checked: 2026-11-10T18:22:54-05:00
-render: 20261110-182254-71f225
+last_checked: 2026-11-12T13:24:21-08:00
+render: 20261112-132421-c4d6ee
 ---
 
 # Links: What It Takes to Run a Company on Agent Swarms

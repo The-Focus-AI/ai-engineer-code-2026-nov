@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The model eats the tool · Philipp Schmid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Wed 11 Nov 2026 · Continental 4–6 (Mainstage)</div>
+  <h1>The model eats the tool</h1>
+  <p class="dek">Every six months Philipp Schmid rebuilds his coding-agent harness from scratch; the latest rebuild deleted roughly 90 percent of it. The method is the lesson: each model generation absorbs tools the last harness had to provide, so each rebuild deletes what the model now does on its own and brings in only what it still can't.</p>
+  <div class="talk-meta">Philipp Schmid, Google DeepMind · 16 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="bitter-lesson.jpg" alt="His slide, Rich Sutton, The Bitter Lesson, 2019: General methods that leverage computation are ultimately the most effective, and by a large margin. A caption, partly hidden by the speaker, says more compute makes better models, better models need less of our code, and ends: eats the harness.">
+        <figcaption>His slide, 11:21 am (straightened from photos/PXL_20261111_192121284.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="harness-2025.jpg" alt="His slide: A coding agent in 2025, about 16 tools and the rules to use them. Sixteen tools including Task, Bash, Glob, Grep, LS, Read, Edit, MultiEdit, Write, WebFetch, WebSearch and TodoWrite. Rules from its system prompt: You MUST avoid using search commands like find and grep; You MUST avoid read tools like cat, head, tail and ls; Use these tools VERY frequently to ensure that you are tracking your tasks; You MUST answer concisely with fewer than 4 lines.">
+        <figcaption>His slide, 11:24 am (straightened from photos/PXL_20261111_192437514.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="one-tool.jpg" alt="His slide: A 1-tool agent, a computer instead of a toolbox. Prompt goes to the model, which sends a command to bash, the only tool; bash runs on a computer, a sandbox with a file system, with cat, sed, rg, python, git, pytest, curl and other agents; output repeats back to the model until it answers. The tool definition: run a command in the current workspace in a clean subshell; a command still running after 120 seconds moves to the background and keeps running, the call returns its pid and log path. Caption: Reading, searching, editing and testing are just commands.">
+        <figcaption>His slide, 11:25 am (straightened from photos/PXL_20261111_192552608.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v4">
+        <div class="lbl">Rebuild from the last harness</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="The 2025 harness, sixteen tools plus rules, is reviewed. What the model now does itself, file editing, planning, memory and subagents, is deleted. What it still can't do through a computer is brought in: bash, a view-media tool, and a background handle for long commands.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" text-anchor="middle">
+            <rect x="110" y="10" width="180" height="44" rx="8" fill="var(--panel)" stroke="var(--rule)"/><text x="200" y="30" fill="var(--ink)" font-weight="600">last harness</text><text x="200" y="45" fill="var(--muted)" font-size="10">16 tools + rules in the prompt</text>
+            <path d="M160 54 L95 92 M240 54 L305 92" stroke="var(--rule)" stroke-width="2" fill="none"/>
+            <rect x="10" y="92" width="170" height="96" rx="8" fill="var(--card)" stroke="var(--identity)" stroke-dasharray="4 3"/>
+            <text x="95" y="112" fill="var(--identity)" font-weight="600">the model ate these</text>
+            <text x="95" y="132" fill="var(--muted)" font-size="10">file read / edit tools</text><text x="95" y="148" fill="var(--muted)" font-size="10">planning, to-do lists</text><text x="95" y="164" fill="var(--muted)" font-size="10">memory, subagents</text><text x="95" y="180" fill="var(--muted)" font-size="10">“you MUST” rules</text>
+            <rect x="220" y="92" width="170" height="96" rx="8" fill="var(--accent)"/>
+            <text x="305" y="112" fill="var(--paper)" font-weight="600">bring in only</text>
+            <text x="305" y="132" fill="var(--paper)" font-size="10">bash: a computer</text><text x="305" y="148" fill="var(--paper)" font-size="10">view media (bash can't</text><text x="305" y="162" fill="var(--paper)" font-size="10">show it an image)</text><text x="305" y="178" fill="var(--paper)" font-size="10">background + log handle</text>
+            <text x="95" y="210" fill="var(--identity)" font-size="10" font-weight="600">delete</text><text x="305" y="210" fill="var(--accent)" font-size="10" font-weight="600">keep</text>
+            <text x="200" y="238" fill="var(--muted)" font-size="10">repeat on every model release</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:03:20, 00:04:31 and 00:07:44; not his slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v5">
+        <img src="two-paths.jpg" alt="His slide: Two paths to the same reward. Task: rename amount to amount_cents in charge_customer and update every caller. Path A, file tools, 10 turns of grep, read and edit calls, about 60k input tokens, each turn re-sends the context. Path B, bash, 2 turns: one inline Python script edits all four files, then the checks run; about 7k input tokens. Both paths pass; B fits the budget more often.">
+        <figcaption>His slide, 11:23 am (straightened from photos/PXL_20261111_192337423.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v6">
+        <div class="lbl">Same score, different cost</div>
+        <svg viewBox="0 0 400 230" role="img" aria-label="Two harnesses compared. Score bars are almost equal. Cost per task: the multi-tool harness about twice the bash-only harness.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <text x="10" y="24" fill="var(--muted)" font-weight="600" font-size="10">SCORE</text>
+            <text x="10" y="50" fill="var(--ink)">many tools</text><rect x="110" y="38" width="250" height="18" rx="3" fill="var(--rule)"/>
+            <text x="10" y="80" fill="var(--ink)">bash only</text><rect x="110" y="68" width="246" height="18" rx="3" fill="var(--accent)"/>
+            <text x="10" y="130" fill="var(--muted)" font-weight="600" font-size="10">COST PER TASK</text>
+            <text x="10" y="156" fill="var(--ink)">many tools</text><rect x="110" y="144" width="250" height="18" rx="3" fill="var(--rule)"/>
+            <text x="10" y="186" fill="var(--ink)">bash only</text><rect x="110" y="174" width="128" height="18" rx="3" fill="var(--accent)"/><text x="246" y="187" fill="var(--accent)" font-weight="600">≈ half</text>
+            <text x="10" y="220" fill="var(--muted)" font-size="10">≈350 tasks · accuracy hides the difference</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:07:44; proportions approximate, not his chart</figcaption>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v7">
+        <p class="quote-big">“Give your model to a computer, not a toolbox.”<span>Philipp Schmid · 00:15:25</span></p>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v8">
+        <p class="quote-big">“Happy to share that we launched the Gemini Decisions API.”<span>Philipp Schmid · 00:01:29</span></p>
+      </figure>
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+  <main class="talk-copy">
+    <section data-chapter="bitter-lesson" data-visual="v1" data-caption="More compute, less harness">
+      <div class="chapter">The premise</div>
+      <h2>The bitter lesson, applied to harnesses</h2>
+      <p>He starts from Richard Sutton's essay.</p>
+      <blockquote>“General methods that leverage computations are ultimately the most effective by a large margin”<span class="cite">00:00:13</span></blockquote>
+      <p>For agents, that means the more compute goes into the models, the less harness and the less code you need around them. The way models learn agentic work explains why: in post-training, the model attempts a task with tools and a verifier scores the result.</p>
+      <blockquote>“No one is telling the model which tools to use, and basically it only receives that reward feedback.”<span class="cite">00:01:58</span></blockquote>
+      <p>So whatever path to the reward is cheapest, the model learns. A harness built around a particular set of tools is a guess about what the model needs, and the guess goes stale.</p>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:13, 00:01:58</p>
+    </section>
+    <section data-chapter="last-harness" data-visual="v2" data-caption="What the 2025 harness carried">
+      <div class="chapter">The method</div>
+      <h2>Learning from the last harness</h2>
+      <p>Every six months he builds a new harness and asks the same question.</p>
+      <blockquote>“how much of the harness do I really need to achieve the Same task, and what is overhead to the model”<span class="cite">00:03:20</span></blockquote>
+      <p>The history is a sequence of things the harness used to carry. Two years ago: workflows with fixed steps, planners and retrieval. Then agents with many fine-grained tools. Then coding agents in 2025 with ten to twenty tools for editing files, planning and to-do lists, plus long system prompts full of rules about what to do and what not to do. System prompts shrank too: much of what had to be sent with every request is now part of the model.</p>
+      <div class="reading"><b>From the notes:</b> “he's referring to it as ‘the model eats the tool’”. That's the spine of the talk: each rebuild looks back at the last harness, finds the tools and rules the model has absorbed, and deletes them. In the recording his phrase comes out garbled (“Will keep eating the honors”, 00:13:33, likely “the harness”), and his Bitter Lesson slide backs that reading: its caption, partly hidden by him in the photo, ends “…ats the harness”.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:03:20, 00:06:11, 00:13:33</p>
+    </section>
+    <section data-chapter="bash" data-visual="v3" data-caption="A computer instead of a toolbox">
+      <div class="chapter">The rebuild</div>
+      <h2>One tool: bash</h2>
+      <p>His latest experiment gives the agent a single tool, bash, running in a clean subshell. Everything else the old harness provided, the model now does through it. Dedicated file tools become shell commands. Planning and memory become files the model writes and reads. Subagents disappear:</p>
+      <blockquote>“If the agent itself is a CLI, it can call itself using bash.”<span class="cite">00:04:31</span></blockquote>
+      <p>The same repository change takes about ten turns with dedicated read and edit tools, and two with one bash script, at about a tenth of the tokens.</p>
+      <div class="reading"><b>From the notes:</b> “having it automatically go to the background after some number of seconds, just return the file descriptor, and it is smart enough to deal with it”. That's one of the few things the harness still brings in: his tool definition moves a command still running after 120 seconds to the background and returns its log path. The model handles the rest.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:02:31, 00:04:31</p>
+    </section>
+    <section data-chapter="bring-in" data-visual="v4" data-caption="Delete what it ate; keep what it can't do">
+      <div class="chapter">The other half</div>
+      <h2>What the harness still brings in</h2>
+      <p>Deleting tools isn't the whole method; adding back what's missing is the other half. Bash can't show the model an image: cat-ing a screenshot returns binary that fills the context, and the model can't see it. So his evaluation adds one tool back, a view-media tool that returns images in a form the model can see.</p>
+      <p>The harness that's left is small and specific: a shell, a way to see images, and a way to background long work. Each piece exists because the model can't do it through bash, not because a previous harness had it.</p>
+      <div class="reading"><b>The reading:</b> this is the part to copy. Not “one tool” as a rule, but a review on every model release: what did the last harness provide that the model now does itself (delete it), and what can the model still not do through a computer (provide exactly that).</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:07:44</p>
+    </section>
+    <section data-chapter="writes-the-tool" data-visual="v5" data-caption="Ten turns, or two">
+      <div class="chapter">The demo</div>
+      <h2>The model writes the tool</h2>
+      <p>The demos show why it works better as models improve. With Gemini 3.5 Flash, bash-only and the default tools made the same number of calls: it used bash one command at a time. The newer Gemini 4 model does something different.</p>
+      <blockquote>“it uses Python to write an inline script.”<span class="cite">00:11:39</span></blockquote>
+      <p>It searches for what to change and writes one script that makes all the edits in one go. The better model chains 2.2 to 3.7 commands per bash call against 1.3 to 1.8 for Flash, and uses up to three times fewer tokens for the same task.</p>
+      <div class="reading"><b>From the notes:</b> “its using bash but the bash is a python ‘one-liner’ so I'm not sure if that is valid”. In his framing it's the point, not a loophole. The bash tool gives the model a computer; the model writes whatever code the task needs and runs it. The edit tool didn't vanish: the model wrote its own, for this task, inline. That is the model eating the tool.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:09:37, 00:11:39</p>
+    </section>
+    <section data-chapter="tokens" data-visual="v6" data-caption="Accuracy hides it; tokens show it">
+      <div class="chapter">The measure</div>
+      <h2>Same score, half the cost</h2>
+      <p>The reason this is easy to miss: on his own set of about 350 coding, knowledge-work and terminal tasks, four harnesses scored roughly the same. Only the cost differed. Bash-only tasks used fewer tokens, hit the cache more often, and were almost twice as cheap.</p>
+      <blockquote>“so if your harness Is more complex to use. The model will work around it.”<span class="cite">00:13:33</span></blockquote>
+      <p>It finds a way around an over-built harness, at the price of more turns and more tokens, and accuracy alone won't show it. He expects 2027 to be about how many tokens a task needs.</p>
+      <div class="reading"><b>From the notes:</b> “he thinks that the future will be fewer tokens, in terms of numbers not just token/sec”. The counterpoint to Natalie Serrino's talk this morning (<a href="../../2026-11-11-what-will-you-build-when-ai-is-10x-faster/experience/page.html">When the bottleneck moves</a>): she makes tokens faster, he makes tasks need fewer of them. Both shorten the wait.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:07:44, 00:13:33</p>
+    </section>
+    <section data-chapter="next" data-visual="v7" data-caption="Code next">
+      <div class="chapter">Next</div>
+      <h2>What comes next</h2>
+      <p>He'll rerun the experiment in six months, and he expects the next turn to be code: agents writing TypeScript or Python directly instead of bash, and MCP coming back, now that MCP servers can return structured output the model can script against. A typed code layer is also easier to secure than bash, where the commands are hard to inspect.</p>
+      <div class="reading"><b>From the notes:</b> “the code running tool is like the old cloudflare idea”, likely Cloudflare's earlier “Code Mode”, where the model writes code against tool APIs instead of calling them one by one. Unverified, but it's the same direction.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:14:23, 00:15:25</p>
+    </section>
+    <section data-chapter="decision-model" data-visual="v8" data-caption="The fourth decision model of the day">
+      <div class="chapter">Also launched</div>
+      <h2>A decision model</h2>
+      <p>At the top of the talk he announced the Gemini Decisions API, launched about an hour earlier with a new Gemini Decision One model: multimodal input, up to 1,000 questions in one request, 150 to 250 milliseconds end to end, 10 cents per million tokens.</p>
+      <div class="reading"><b>From the notes:</b> “there's a decision model also”, and the follow-up to write about how to use decision models overall. That's the fourth today, after <a href="../../2026-11-11-cloudflare-is-a-neolab/experience/page.html">Cloudflare's Clef</a>, TypeSafe's Jev and Workday's use of it. The two halves of his talk fit together: the harness shrinks to a computer, and the small yes/no and pick-one calls move to decision models.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:29</p>
+    </section>
+  </main>
+</div>
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room). Quotes are verbatim from the transcript, which garbles the model names. “From the notes” and “The reading” are interpretation, not his words; the two drawn diagrams are illustrative. More on the <a href="../links.md">links page</a>.
+</footer>
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

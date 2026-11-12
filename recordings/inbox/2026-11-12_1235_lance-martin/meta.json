@@ -1,0 +1,23 @@
+{
+  "title": "lance martin",
+  "recorded_at": "2026-11-12T12:35:29-08:00",
+  "duration_seconds": 1098.3,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 3285,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261112 123529.m4a",
+  "audio_sha256": "549d69c33d8654ba3da06eaa79c76298a07350527d0f656d96ee7baca03c54cd",
+  "exported_at": "2026-11-12T12:54:02-08:00",
+  "transcript_echo_segments": 0,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 3310,
+      "locale": "en_US"
+    }
+  ]
+}

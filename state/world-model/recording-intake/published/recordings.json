@@ -118,5 +118,155 @@
     "word_count": 2766,
     "audio_sha256": "9ea41418cd0dbd7cf577fdc09b748a431e008d178fc66fe5cde77f80be7730f5",
     "status": "cleaned"
+  },
+  "2026-11-11_1120_Phillip-DeepMind": {
+    "folder": "2026-11-11_1120_Phillip-DeepMind",
+    "path": "recordings/inbox/2026-11-11_1120_Phillip-DeepMind",
+    "title": "Phillip DeepMind",
+    "recorded_at": "2026-11-11T11:20:37-08:00",
+    "duration_seconds": 976.5,
+    "word_count": 2863,
+    "audio_sha256": "7268a9550d8c0a6c179aa8298cf1572a3c21ffb776d6e1e57be5738db5f3ef31",
+    "status": "cleaned"
+  },
+  "2026-11-11_1148_Heal-your-agents": {
+    "folder": "2026-11-11_1148_Heal-your-agents",
+    "path": "recordings/inbox/2026-11-11_1148_Heal-your-agents",
+    "title": "Heal your agents",
+    "recorded_at": "2026-11-11T11:48:01-08:00",
+    "duration_seconds": 1404,
+    "word_count": 3290,
+    "audio_sha256": "6e0b340b25cdb2e65bdf037026a77db6358b335e98e483a55e3462cb368ef7e2",
+    "status": "cleaned"
+  },
+  "2026-11-11_1215_Aamir-Shakir": {
+    "folder": "2026-11-11_1215_Aamir-Shakir",
+    "path": "recordings/inbox/2026-11-11_1215_Aamir-Shakir",
+    "title": "Aamir Shakir",
+    "recorded_at": "2026-11-11T12:15:57-08:00",
+    "duration_seconds": 1117.4,
+    "word_count": 2801,
+    "audio_sha256": "9f95978c14ad45d277ebab51d728163f8e5facd151f288c430fff5a253ea4833",
+    "status": "cleaned"
+  },
+  "2026-11-11_1236_overcut": {
+    "folder": "2026-11-11_1236_overcut",
+    "path": "recordings/inbox/2026-11-11_1236_overcut",
+    "title": "overcut",
+    "recorded_at": "2026-11-11T12:36:46-08:00",
+    "duration_seconds": 1187.5,
+    "word_count": 2659,
+    "audio_sha256": "253b33d22a4addaa0aeb33f08326bb4cc027373091adbe5309e96a884189ee76",
+    "status": "cleaned"
+  },
+  "2026-11-11_1406_diogo": {
+    "folder": "2026-11-11_1406_diogo",
+    "path": "recordings/inbox/2026-11-11_1406_diogo",
+    "title": "diogo",
+    "recorded_at": "2026-11-11T14:06:57-08:00",
+    "duration_seconds": 1380.2,
+    "word_count": 4615,
+    "audio_sha256": "6645620c00606bce83be5a8d79642ce82e192bbc50c6fdaca7ab11bd1611ab0c",
+    "status": "cleaned"
+  },
+  "2026-11-11_1522_brian-kennedy": {
+    "folder": "2026-11-11_1522_brian-kennedy",
+    "path": "recordings/inbox/2026-11-11_1522_brian-kennedy",
+    "title": "brian kennedy",
+    "recorded_at": "2026-11-11T15:22:39-08:00",
+    "duration_seconds": 27.6,
+    "word_count": 46,
+    "audio_sha256": "46418cc0a399cb5ecb967772969c08e75d520d1c1bfd6edbdca75230043365ed",
+    "status": "cleaned"
+  },
+  "2026-11-11_1525_Scott-Roberts": {
+    "folder": "2026-11-11_1525_Scott-Roberts",
+    "path": "recordings/inbox/2026-11-11_1525_Scott-Roberts",
+    "title": "Scott Roberts",
+    "recorded_at": "2026-11-11T15:25:01-08:00",
+    "duration_seconds": 712.1,
+    "word_count": 2013,
+    "audio_sha256": "a74c999a368a5dd8d222cfda23a8893c4dc298d86f1d23511ef3f7787c2e6c0a",
+    "status": "cleaned"
+  },
+  "2026-11-11_1629_Lovable": {
+    "folder": "2026-11-11_1629_Lovable",
+    "path": "recordings/inbox/2026-11-11_1629_Lovable",
+    "title": "Lovable",
+    "recorded_at": "2026-11-11T16:29:13-08:00",
+    "duration_seconds": 1144.1,
+    "word_count": 3392,
+    "audio_sha256": "2fa207ca9930c5b3aa7fc7ea47edee72db055a5a19cf48f3b8a05bb7ceff3a87",
+    "status": "cleaned"
+  },
+  "2026-11-11_1648_Zach-Bruggeman": {
+    "folder": "2026-11-11_1648_Zach-Bruggeman",
+    "path": "recordings/inbox/2026-11-11_1648_Zach-Bruggeman",
+    "title": "Zach Bruggeman",
+    "recorded_at": "2026-11-11T16:48:38-08:00",
+    "duration_seconds": 506,
+    "word_count": 1376,
+    "audio_sha256": "e9067ee612c59d583242e5cec8cde331643d98f64ea3a320e6121739c6dfdf8a",
+    "status": "cleaned"
+  },
+  "2026-11-11_1706_Steve-Yegge": {
+    "folder": "2026-11-11_1706_Steve-Yegge",
+    "path": "recordings/inbox/2026-11-11_1706_Steve-Yegge",
+    "title": "Steve Yegge",
+    "recorded_at": "2026-11-11T17:06:21-08:00",
+    "duration_seconds": 1284.5,
+    "word_count": 3981,
+    "audio_sha256": "bf67cd218a3424c8bd18acda51fd1c48a803b20f0ca7b4218bd426ca79ebfeb8",
+    "status": "cleaned"
+  },
+  "2026-11-11_1730_simon-willison": {
+    "folder": "2026-11-11_1730_simon-willison",
+    "path": "recordings/inbox/2026-11-11_1730_simon-willison",
+    "title": "simon willison",
+    "recorded_at": "2026-11-11T17:30:50-08:00",
+    "duration_seconds": 1182.3,
+    "word_count": 3914,
+    "audio_sha256": "bb2f85202721c759245e90fdb6bd09a2bc91c52c1650b81cd309af776ca8abdd",
+    "status": "cleaned"
+  },
+  "2026-11-12_1120_walden": {
+    "folder": "2026-11-12_1120_walden",
+    "path": "recordings/inbox/2026-11-12_1120_walden",
+    "title": "walden",
+    "recorded_at": "2026-11-12T11:20:34-08:00",
+    "duration_seconds": 830.8,
+    "word_count": 2590,
+    "audio_sha256": "c1986f358fc419cf01d93f29185e8556bf96bc3367c79ee409eee323bd4dc57c",
+    "status": "cleaned"
+  },
+  "2026-11-12_1146_trust-by-verify": {
+    "folder": "2026-11-12_1146_trust-by-verify",
+    "path": "recordings/inbox/2026-11-12_1146_trust-by-verify",
+    "title": "trust by verify",
+    "recorded_at": "2026-11-12T11:46:59-08:00",
+    "duration_seconds": 1301,
+    "word_count": 3646,
+    "audio_sha256": "ae549d90ab72e8d4b1f79759037533f7ad0054a1676d00b049cd42fa2eda127b",
+    "status": "cleaned"
+  },
+  "2026-11-12_1211_arsln-let-the-agents-cook": {
+    "folder": "2026-11-12_1211_arsln-let-the-agents-cook",
+    "path": "recordings/inbox/2026-11-12_1211_arsln-let-the-agents-cook",
+    "title": "arsln let the agents cook",
+    "recorded_at": "2026-11-12T12:11:55-08:00",
+    "duration_seconds": 1063.9,
+    "word_count": 3184,
+    "audio_sha256": "bbf1184a3db31f88bee5ab4b734da8fe273e555273c4965d5dab51a70cd48a96",
+    "status": "cleaned"
+  },
+  "2026-11-12_1235_lance-martin": {
+    "folder": "2026-11-12_1235_lance-martin",
+    "path": "recordings/inbox/2026-11-12_1235_lance-martin",
+    "title": "lance martin",
+    "recorded_at": "2026-11-12T12:35:29-08:00",
+    "duration_seconds": 1098.3,
+    "word_count": 3285,
+    "audio_sha256": "549d69c33d8654ba3da06eaa79c76298a07350527d0f656d96ee7baca03c54cd",
+    "status": "cleaned"
   }
 }

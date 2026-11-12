@@ -95,7 +95,14 @@
       "PXL_20261111_202017480.jpg",
       "PXL_20261111_202234302.jpg",
       "PXL_20261111_202529574.jpg",
-      "PXL_20261111_202947151.jpg"
+      "PXL_20261111_202947151.jpg",
+      "PXL_20261111_203144669.MP.jpg"
+    ]
+  },
+  "1373464": {
+    "dir": "talks/2026-11-11-the-software-factory-that-needs-zero-fdes/photos",
+    "photos": [
+      "PXL_20261111_205517744.MP.jpg"
     ]
   },
   "1373465": {
@@ -115,13 +122,104 @@
       "PXL_20261111_221803022.jpg",
       "PXL_20261111_221846829.jpg",
       "PXL_20261111_222013873.jpg",
-      "PXL_20261111_222224555.jpg"
+      "PXL_20261111_222224555.jpg",
+      "PXL_20261111_222426885.jpg",
+      "PXL_20261111_222912575.jpg"
+    ]
+  },
+  "1373469": {
+    "dir": "talks/2026-11-11-what-it-takes-to-set-intelligence-free/photos",
+    "photos": [
+      "PXL_20261112_003006513.jpg",
+      "PXL_20261112_003010044.jpg",
+      "PXL_20261112_003205587.jpg",
+      "PXL_20261112_003527454.jpg",
+      "PXL_20261112_004138678.jpg",
+      "PXL_20261112_004621562.jpg"
+    ]
+  },
+  "1373470": {
+    "dir": "talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/photos",
+    "photos": [
+      "PXL_20261112_005033164.MP.jpg",
+      "PXL_20261112_005117225.jpg",
+      "PXL_20261112_005452779.jpg",
+      "PXL_20261112_010359309.jpg"
+    ]
+  },
+  "1373471": {
+    "dir": "talks/2026-11-11-software-factories-escape-from-trash-mountain/photos",
+    "photos": [
+      "PXL_20261112_010730772.jpg",
+      "PXL_20261112_011025815.MP.jpg",
+      "PXL_20261112_011400786.MP.jpg",
+      "PXL_20261112_011449195.jpg",
+      "PXL_20261112_011740061.jpg",
+      "PXL_20261112_012207663.MP.jpg",
+      "PXL_20261112_012411791.jpg",
+      "PXL_20261112_012731950.jpg"
+    ]
+  },
+  "1373475": {
+    "dir": "talks/2026-11-12-a-new-age-of-software-engineering/photos",
+    "photos": [
+      "PXL_20261112_192122983.jpg",
+      "PXL_20261112_192236451.jpg",
+      "PXL_20261112_192852968.MP.jpg",
+      "PXL_20261112_193025663.jpg"
+    ]
+  },
+  "1376191": {
+    "dir": "talks/2026-11-11-2026-in-llms/photos",
+    "photos": [
+      "PXL_20261112_013245403.MP.jpg",
+      "PXL_20261112_013345081.jpg",
+      "PXL_20261112_013449465.jpg",
+      "PXL_20261112_013801563.jpg",
+      "PXL_20261112_014042907.MP.jpg",
+      "PXL_20261112_014156023.MP.jpg"
+    ]
+  },
+  "1376198": {
+    "dir": "talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos",
+    "photos": [
+      "PXL_20261111_232705433.jpg",
+      "PXL_20261111_233341807.jpg",
+      "PXL_20261111_233429743.jpg",
+      "PXL_20261111_233436849.jpg"
     ]
   },
   "1376240": {
     "dir": "talks/2026-11-11-mc-intro/photos",
     "photos": [
       "PXL_20261111_170523953.MP.jpg"
+    ]
+  },
+  "1379010": {
+    "dir": "talks/2026-11-12-exploring-claudes-frontier/photos",
+    "photos": [
+      "PXL_20261112_203545768.jpg",
+      "PXL_20261112_203933625.jpg",
+      "PXL_20261112_204152268.MP.jpg",
+      "PXL_20261112_204737535.jpg",
+      "PXL_20261112_204747489.MP.jpg",
+      "PXL_20261112_204832330.MP.jpg"
+    ]
+  },
+  "1379011": {
+    "dir": "talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/photos",
+    "photos": [
+      "PXL_20261112_201506625.jpg",
+      "PXL_20261112_201950177.jpg",
+      "PXL_20261112_202230030.jpg"
+    ]
+  },
+  "1379052": {
+    "dir": "talks/2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter/photos",
+    "photos": [
+      "PXL_20261112_194819770.jpg",
+      "PXL_20261112_194914731.jpg",
+      "PXL_20261112_195334232.MP.jpg"
     ]
   },
   "1379134": {

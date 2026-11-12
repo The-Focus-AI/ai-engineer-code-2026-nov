@@ -1,0 +1,23 @@
+{
+  "title": "arsln let the agents cook",
+  "recorded_at": "2026-11-12T12:11:55-08:00",
+  "duration_seconds": 1063.9,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 3184,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261112 121155.m4a",
+  "audio_sha256": "bbf1184a3db31f88bee5ab4b734da8fe273e555273c4965d5dab51a70cd48a96",
+  "exported_at": "2026-11-12T12:54:02-08:00",
+  "transcript_echo_segments": 1,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 3256,
+      "locale": "en_US"
+    }
+  ]
+}

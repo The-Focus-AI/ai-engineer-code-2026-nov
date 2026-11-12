@@ -1,0 +1,277 @@
+{
+ "words": [
+  {
+   "w": "Then",
+   "start": 0,
+   "end": 1.2
+  },
+  {
+   "w": "read",
+   "start": 1.2,
+   "end": 1.56
+  },
+  {
+   "w": "the",
+   "start": 1.56,
+   "end": 2.04
+  },
+  {
+   "w": "cases,",
+   "start": 2.04,
+   "end": 2.34
+  },
+  {
+   "w": "see",
+   "start": 2.34,
+   "end": 2.58
+  },
+  {
+   "w": "where",
+   "start": 2.58,
+   "end": 3
+  },
+  {
+   "w": "the",
+   "start": 3,
+   "end": 3.12
+  },
+  {
+   "w": "2",
+   "start": 3.12,
+   "end": 3.3
+  },
+  {
+   "w": "disagree,",
+   "start": 3.3,
+   "end": 4.14
+  },
+  {
+   "w": "and",
+   "start": 4.14,
+   "end": 4.38
+  },
+  {
+   "w": "don't",
+   "start": 4.38,
+   "end": 4.74
+  },
+  {
+   "w": "overthink",
+   "start": 4.74,
+   "end": 5.1
+  },
+  {
+   "w": "it,",
+   "start": 5.1,
+   "end": 5.28
+  },
+  {
+   "w": "just",
+   "start": 5.28,
+   "end": 5.4
+  },
+  {
+   "w": "start",
+   "start": 5.4,
+   "end": 5.52
+  },
+  {
+   "w": "small.",
+   "start": 5.52,
+   "end": 6.12
+  },
+  {
+   "w": "We",
+   "start": 6.96,
+   "end": 8.22
+  },
+  {
+   "w": "need",
+   "start": 8.22,
+   "end": 8.46
+  },
+  {
+   "w": "to",
+   "start": 8.46,
+   "end": 8.7
+  },
+  {
+   "w": "trust",
+   "start": 8.7,
+   "end": 8.82
+  },
+  {
+   "w": "our",
+   "start": 8.82,
+   "end": 9.06
+  },
+  {
+   "w": "judge",
+   "start": 9.06,
+   "end": 9.3
+  },
+  {
+   "w": "until",
+   "start": 9.3,
+   "end": 9.54
+  },
+  {
+   "w": "we",
+   "start": 9.54,
+   "end": 9.72
+  },
+  {
+   "w": "measured",
+   "start": 9.72,
+   "end": 10.14
+  },
+  {
+   "w": "it.",
+   "start": 10.14,
+   "end": 10.62
+  },
+  {
+   "w": "Measure",
+   "start": 10.68,
+   "end": 11.64
+  },
+  {
+   "w": "yours.",
+   "start": 11.64,
+   "end": 11.94
+  },
+  {
+   "w": "Round",
+   "start": 12,
+   "end": 12.6
+  },
+  {
+   "w": "a",
+   "start": 12.6,
+   "end": 12.72
+  },
+  {
+   "w": "second",
+   "start": 12.72,
+   "end": 12.78
+  },
+  {
+   "w": "check,",
+   "start": 12.78,
+   "end": 13.5
+  },
+  {
+   "w": "run",
+   "start": 13.5,
+   "end": 13.62
+  },
+  {
+   "w": "into",
+   "start": 13.62,
+   "end": 13.86
+  },
+  {
+   "w": "shadow",
+   "start": 13.86,
+   "end": 14.16
+  },
+  {
+   "w": "mode,",
+   "start": 14.16,
+   "end": 14.64
+  },
+  {
+   "w": "seeing",
+   "start": 14.64,
+   "end": 14.76
+  },
+  {
+   "w": "where",
+   "start": 14.76,
+   "end": 15
+  },
+  {
+   "w": "disagrees.",
+   "start": 15,
+   "end": 15.6
+  },
+  {
+   "w": "You",
+   "start": 15.66,
+   "end": 16.14
+  },
+  {
+   "w": "may",
+   "start": 16.14,
+   "end": 16.38
+  },
+  {
+   "w": "be",
+   "start": 16.38,
+   "end": 16.5
+  },
+  {
+   "w": "surprised",
+   "start": 16.5,
+   "end": 16.86
+  },
+  {
+   "w": "at",
+   "start": 16.86,
+   "end": 16.98
+  },
+  {
+   "w": "what",
+   "start": 16.98,
+   "end": 17.1
+  },
+  {
+   "w": "you",
+   "start": 17.1,
+   "end": 17.34
+  },
+  {
+   "w": "find.",
+   "start": 17.34,
+   "end": 17.58
+  },
+  {
+   "w": "Thank",
+   "start": 17.64,
+   "end": 18.54
+  },
+  {
+   "w": "you.",
+   "start": 18.54,
+   "end": 18.72
+  }
+ ],
+ "sentences": [
+  {
+   "text": "Then read the cases, see where the 2 disagree, and don't overthink it, just start small.",
+   "start": 0,
+   "end": 6.12
+  },
+  {
+   "text": "We need to trust our judge until we measured it.",
+   "start": 6.96,
+   "end": 10.62
+  },
+  {
+   "text": "Measure yours. Round a second check, run into shadow mode, seeing where disagrees.",
+   "start": 10.68,
+   "end": 15.6
+  },
+  {
+   "text": "You may be surprised at what you find.",
+   "start": 15.66,
+   "end": 17.58
+  },
+  {
+   "text": "Thank you.",
+   "start": 17.64,
+   "end": 18.72
+  }
+ ],
+ "timing": "word"
+}

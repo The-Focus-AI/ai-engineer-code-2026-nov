@@ -2,8 +2,8 @@
 session_id: "1352467"
 title: "What Will You Build When AI Is 10x Faster?"
 phase: live
-last_checked: 2026-11-11T11:10:50-08:00
-render: 20261111-111050-472211
+last_checked: 2026-11-12T13:24:21-08:00
+render: 20261112-132421-c4d6ee
 ---
 
 # Links: What Will You Build When AI Is 10x Faster?

@@ -1,4 +1,21 @@
 {
+  "1323755": {
+    "searched": [
+      "roster links (linkedin.com/in/philipp-schmid-a6a2bb196, philschmid.de, x.com/_philschmid)",
+      "github.com/philschmid (title names him)",
+      "web: Philipp Schmid bash only agent harness philschmid.de",
+      "web: Gemini Decisions API Gemini Decision 1; Gemini API changelog (2026-11-11 Decision, 2026-11-10 Gemini 4 Carbon)",
+      "web: pi coding agent harness (badlogic/pi-mono redirects to earendil-works/pi)"
+    ],
+    "gaps": [
+      "linkedin.com/in/philipp-schmid-a6a2bb196 (from the roster) answered 999 with no page title naming him; not corroborated, dropped",
+      "deepmind.google answered 200 with no title or description to quote; the company links the Gemini API docs instead",
+      "\"DeepSVE\" (the eval task source) and \"Crossbench\" not identified; no link",
+      "the free-credits QR code was not captured",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-11T19:17:48-05:00"
+  },
   "1333169": {
     "searched": [
       "roster links (aviator.co, blog author page, x.com/ankitxg, github.com/jainankit, linkedin.com/in/ankitjaindce)",
@@ -113,6 +130,231 @@
       "no official recording or slides of this talk found yet"
     ],
     "generated_at": "2026-11-11T11:10:50-08:00"
+  },
+  "1373460": {
+    "searched": [
+      "roster links (linkedin.com/in/khasimulasif for Mohammad; none for Tonse)",
+      "web: Galileo Signals Splunk AI agent failure detection taxonomy",
+      "web: \"Signals: Continuous Diagnostics of AI Agents\"; arxiv.org/abs/2611.04507 (linked from the Splunk Signals docs)",
+      "web: Sudhir Tonse Splunk Galileo Director of Engineering",
+      "recheck: web \"Context Engineering at Scale\" \"Galileo Signals\" splunk (moved copy not found)"
+    ],
+    "gaps": [
+      "linkedin.com/in/khasimulasif (from the roster) answered 999 with no page title naming him; not corroborated, dropped",
+      "no verifiable profile for Sudhir Tonse (roster lists none; search found nothing)",
+      "splunk.com answered 403 (Access Denied); the company links the Agent Observability docs instead",
+      "the small evaluation model the talk contrasts with an OpenAI release (transcribed \"Guna\") was not identified; no link",
+      "the published efficiency and quality datasets the talk mentions were not found",
+      "\"Context Engineering at Scale: How We Built Galileo Signals\" (galileo.ai, first seen 20261111-191748-d7910b) stopped answering: galileo.ai now 301-redirects every path to splunk.com's Agent Observability product page; dropped, no Splunk copy found",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-12T13:24:21-08:00"
+  },
+  "1373462": {
+    "searched": [
+      "roster: no links listed",
+      "web: Mixedbread Aamir Shakir search agents company knowledge connectors",
+      "web: Aamir Shakir mixedbread github OR x.com",
+      "mixedbread.com/blog index and docs: posts matched to the talk's connectors, multimodal search, agentic retrieval, scaling and OCR sections"
+    ],
+    "gaps": [
+      "no personal LinkedIn, X or GitHub profile verifiably his found (roster lists none; github.com/mixedbread-ai is the company org)",
+      "the bank case study the talk says publishes in two days (around 2026-11-13) is not out yet; recheck",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-11T19:17:48-05:00"
+  },
+  "1373464": {
+    "searched": [
+      "roster links (overcut.ai, linkedin.com/in/raz-berman-software-engineering-group-manager)",
+      "web: Overcut.ai software factory agentic SDLC workflows playbooks Raz Berman",
+      "overcut.ai/blog index: posts matched to the talk's playbooks, orchestration, retrospectives and limits sections"
+    ],
+    "gaps": [
+      "linkedin.com/in/raz-berman-software-engineering-group-manager (from the roster) answered 999 with no page title naming her; not corroborated, dropped",
+      "overcut.ai (from the roster) is the company site, not a personal page; used for the company",
+      "the build-your-own-factory page behind the talk's QR code was not identified; no link",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-11T19:17:48-05:00"
+  },
+  "1373465": {
+    "searched": [
+      "roster links (typesafe.ai, linkedin.com/in/diogomda, x.com/completeskeptic)",
+      "web: TypeSafe AI Jev model Diogo Almeida",
+      "web: typesafe.ai blog introducing Jev",
+      "arxiv.org/abs/2203.02155 author list (Almeida, Diogo)"
+    ],
+    "gaps": [
+      "linkedin.com/in/diogomda (from the roster) answered 999 with no page title naming him; not corroborated, dropped",
+      "typesafe.ai (from the roster) is the company site, not a personal page; used for the company",
+      "the \"great Twitter video\" on a voice interface and the sandbox security incident the talk mentions were not identified; no link",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-11T19:17:48-05:00"
+  },
+  "1373469": {
+    "searched": [
+      "roster links (github.com/fabhed)",
+      "web: Lovable engineering blog agent trajectory forkable computers checkpoint Vite Rust",
+      "web: Fabian Hedin Lovable co-founder CTO x.com OR linkedin",
+      "lovable.dev/blog/faster-previews-oj (links github.com/lovablelabs/oj)"
+    ],
+    "gaps": [
+      "lovable.dev answered 403 (bot challenge); the company links the Lovable docs instead",
+      "no LinkedIn or X profile verifiably his found (roster lists only GitHub)",
+      "the golden checkpoint, copy-on-write RAM and streamed-memory details are not in a public post found; the drafts feature has no link",
+      "the recording opens mid-talk; the first part is not captured",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-11T21:10:18-05:00"
+  },
+  "1373470": {
+    "searched": [
+      "roster links (github.com/remixz)",
+      "web: Ramp Inspect coding agent blog builders.ramp.com Pragmatic Engineer",
+      "web: Zach Bruggeman Ramp Inspect multiplayer sessions blog"
+    ],
+    "gaps": [
+      "partial recording: the operator cut the talk short, so only about the first seven minutes are covered and resources stop there",
+      "the colleague the talk says to follow on Twitter (transcribed \"Dylan Garcia\") was not identified; no link",
+      "no LinkedIn or X profile verifiably his found (roster lists only GitHub)",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-11T21:10:18-05:00"
+  },
+  "1373471": {
+    "searched": [
+      "roster links (github.com/steveyegge, linkedin.com/in/steveyegge, x.com/steve_yegge, yegge.ai)",
+      "web: Steve Yegge Gas Town Beads github software factory",
+      "web: Steve Yegge Wyvern MUD software factory wheelhouse agents Aesop",
+      "yegge.ai index: comics, podcast and Wyvern pages"
+    ],
+    "gaps": [
+      "affiliation Independent: no company to link",
+      "his Medium posts on Gas Town answered 403 (bot challenge); not verified, left out",
+      "the Wheelhouse factory itself has no public repository found",
+      "\"Superlogical\" (attributed to Mitchell Hashimoto) and the book the talk recommends (transcribed \"there is no anti-memes division\") were not linked",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-11T21:10:18-05:00"
+  },
+  "1373475": {
+    "searched": [
+      "roster links (github.com/walnutwaldo, walnutwaldo.github.io, x.com/walden_yan)",
+      "web: Cognition Walden Yan software factory 40x merged PRs Devin blog 2026",
+      "web: Cognition blog Devin software factory jobs not tasks Android app",
+      "cognition.com/blog index (posts through 2026-11-04)"
+    ],
+    "gaps": [
+      "no LinkedIn profile verifiably his (the roster lists none)",
+      "the 40x merged-PR chart, the 'jobs not tasks' framing, the self-improvement channel and the agent-built inference stack on the new GPUs have no public write-up found",
+      "the Android app built by the parity job is not yet released; no link",
+      "the recording opens as the speaker begins; the MC's introduction is not captured",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-12T13:24:21-08:00"
+  },
+  "1376191": {
+    "searched": [
+      "roster links (github.com/simonw, simonwillison.net, x.com/simonw)",
+      "web: simonwillison.net beep locator Fable raccoon heist game 2026",
+      "web: Simon Willison beep locator carbon monoxide boxes triangulate Fable",
+      "web: Simon Willison \"fable class\" model inflection point",
+      "web: simonwillison.net \"October inflection point\" vibe game development",
+      "simonwillison.net/2026/Nov/10/ day index"
+    ],
+    "gaps": [
+      "affiliation Independent: no company to link (Datasette is his open-source project, not his employer)",
+      "anthropic.com/news/claude-mythos answered 404; no primary Mythos announcement linked",
+      "the 2007 beep-ranging paper, the January predictions podcast and the Hugging Face intrusion reports were not linked (bounded at 6 resources)",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-11T21:10:18-05:00"
+  },
+  "1376197": {
+    "searched": [
+      "roster links (linkedin.com/in/brianpk)",
+      "web: ZoomInfo Agent Teams Brian Kennedy judge Jev shadow mode",
+      "web: Brian Kennedy ZoomInfo principal engineer agentic AI platform",
+      "web: ZoomInfo Jev TypeSafe judge agent evaluation"
+    ],
+    "gaps": [
+      "the recording is a 28-second closing fragment; the transcript never names the speaker, his company or the systems, so resources are matched to the abstract",
+      "no ZoomInfo write-up of the judge-versus-Jev comparison found",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-11T21:10:18-05:00"
+  },
+  "1376198": {
+    "searched": [
+      "roster: no links listed",
+      "web: Workday Sana Jev System One autocomplete actions DuckDB",
+      "web: \"Scott Roberts\" Workday Sana Jev"
+    ],
+    "gaps": [
+      "no LinkedIn, X or GitHub profile verifiably his found (a common name; roster lists none and no search result names him with Workday)",
+      "The New Stack's \"Workday is using TypeSafe's Jev to build user interfaces on the fly\" answered 403 (bot challenge); not verified, left out",
+      "the DuckDB function or extension that calls Jev was not published; no link",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-11T21:10:18-05:00"
+  },
+  "1379010": {
+    "searched": [
+      "roster links (github.com/rlancemartin, rlancemartin.github.io, linkedin.com/in/lance-martin-64a33b5, x.com/rlancemartin)",
+      "web: Lance Martin Anthropic Fable 5.2 Fermat's Last Theorem thousand agents git SQL database blog",
+      "web: Lance Martin Anthropic memory dreaming blog \"understood backwards\" agents",
+      "web: anthropic.com research Fable 5.2 thousand agents formalized Fermat's Last Theorem Lean",
+      "web: claude.com blog 1,000 Fable 5.2 agents shared database safety controls",
+      "claude.com/resources (links the claude.dev post)"
+    ],
+    "gaps": [
+      "claude.com/blog/safely-scaling-multi-agent-teams-with-fable-5-2 answered 404; the post lives on claude.dev",
+      "the closing note the talk reads out does not appear in the post, which quotes a different final message from the lead",
+      "the Prove2Me platform, the CL-Bench benchmark and the Pokémon harness were not linked separately (all described in the linked posts)",
+      "the recording opens as the speaker begins; the MC's introduction is not captured",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-12T13:24:21-08:00"
+  },
+  "1379011": {
+    "searched": [
+      "roster: no links listed",
+      "web: Arsalan Bashir Sentry AI agent Seer blog",
+      "web: \"Arsalan Bashir\" Sentry staff software engineer AI",
+      "web: \"Arsalan Bashir\" linkedin OR github OR x.com data agents business intelligence founder",
+      "web: Sentry blog Seer Agent programmatic tool calling writes code to query APIs",
+      "web: Vercel blog removed 80% of agent tools text-to-SQL"
+    ],
+    "gaps": [
+      "no LinkedIn, X or GitHub profile verifiably his found (the roster lists none and no search result names him)",
+      "his previous data-agent company (transcribed \"Lightbox\") was not identified; no link",
+      "no Sentry post by him, or on the data agent's 4x speed and 30% token results, was found",
+      "the context-window reset-and-handoff anecdote was not attributed to a source; no link",
+      "the Q&A answer on Sentry's two-tool setup and its guardrails was cut off at the recording's end",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-12T13:24:21-08:00"
+  },
+  "1379052": {
+    "searched": [
+      "roster links (github.com/FocusOtter, focusotter.com, linkedin.com/in/focusotter, youtube.com/@focus_otter, x.com/focusotter)",
+      "web: Auth0 for AI Agents Token Vault CIBA asynchronous authorization Michael Liendo",
+      "web: Michael Liendo focusotter Auth0 agent payments x402 Stripe shared payment token blog",
+      "web: auth0.com blog \"Michael Liendo\" agent",
+      "web: Machine Payments Protocol MPP Stripe docs HTTP 402 agents",
+      "focusotter.com articles index; github.com/FocusOtter repositories"
+    ],
+    "gaps": [
+      "his YouTube channel (youtube.com/@focus_otter, from the roster) answered 200 but the dossier has no slot for it",
+      "no repository for this talk's Party Animals demo found; his public repos hold earlier editions (des-moines-party-animals, party-animals-gallery), not this one",
+      "the Vercel AI SDK step-limit docs (ai-sdk.dev/docs/agents/loop-control) verified but left out (bounded at 6 resources)",
+      "OpenClaw (transcribed \"Open Club\") and the Link app used for the virtual card were not linked",
+      "the recording opens as the speaker begins; the live demos and closing raffle are heavily garbled",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-12T13:24:21-08:00"
   },
   "1379134": {
     "searched": [

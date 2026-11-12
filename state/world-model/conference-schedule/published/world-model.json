@@ -2026,8 +2026,8 @@
       },
       {
         "session_id": "1380098",
-        "title": "MC Outro",
-        "abstract": null,
+        "title": "Something to Celebrate",
+        "abstract": "To close Code Summit 2026, swyx invites everyone to celebrate together: three days of talks, workshops, hallway conversations and the AI engineers who made them happen. Stay for the finale and celebrate with us.",
         "track": "Mainstage Talk",
         "format": "talk",
         "room_id": "continental-46-mainstage",
@@ -2036,7 +2036,7 @@
         "starts_at": "2026-11-12T17:50:00-08:00",
         "ends_at": "2026-11-12T18:00:00-08:00",
         "speaker_ids": [
-          "corey-quinn"
+          "swyx"
         ],
         "status": "scheduled",
         "source_url": "https://ai.engineer/code/2026/schedule",
@@ -2358,8 +2358,7 @@
         "1376246",
         "1380094",
         "1380095",
-        "1380097",
-        "1380098"
+        "1380097"
       ],
       "source_url": "https://ai.engineer/code/2026/schedule"
     },
@@ -3097,6 +3096,18 @@
       ],
       "source_url": "https://ai.engineer/code/2026/schedule"
     },
+    "swyx": {
+      "name": "swyx",
+      "affiliation": "AI Engineer",
+      "bio": "swyx, also known as Shawn Wang, is the co-founder and chief executive of AI Engineer, editor and podcast co-host of Latent Space, and founder of Smol AI.",
+      "links": [
+        "https://x.com/swyx"
+      ],
+      "talks": [
+        "1380098"
+      ],
+      "source_url": "https://ai.engineer/code/2026/schedule"
+    },
     "sydney-runkle": {
       "name": "Sydney Runkle",
       "affiliation": "LangChain",
@@ -3824,6 +3835,32 @@
       "after": "Ship more as a team with Kiro Crew",
       "summary": "'Ship more as a team of one with Kiro Crew' is now 'Ship more as a team with Kiro Crew'",
       "source_url": "https://ai.engineer/code/2026/schedule"
+    },
+    {
+      "at": "2026-11-12T03:37:31-05:00",
+      "seq": 50,
+      "kind": "retitled",
+      "session_id": "1380098",
+      "field": "title",
+      "before": "MC Outro",
+      "after": "Something to Celebrate",
+      "summary": "'MC Outro' is now 'Something to Celebrate'",
+      "source_url": "https://ai.engineer/code/2026/schedule"
+    },
+    {
+      "at": "2026-11-12T03:37:31-05:00",
+      "seq": 51,
+      "kind": "speaker-changed",
+      "session_id": "1380098",
+      "field": "speaker_ids",
+      "before": [
+        "corey-quinn"
+      ],
+      "after": [
+        "swyx"
+      ],
+      "summary": "'Something to Celebrate' speakers ['corey-quinn'] → ['swyx']",
+      "source_url": "https://ai.engineer/code/2026/schedule"
     }
   ],
   "coverage": {
@@ -3831,50 +3868,50 @@
       {
         "url": "https://ai.engineer/code/2026",
         "role": "entry",
-        "content_hash": "4c9bdeda5975d3496e35294aafbfa760a18a71f0e18813c5bd40e0270911757a",
+        "content_hash": "f3d1519af30352470ce5258939c626f3f49f35ef163e731282e38ad78cba3052",
         "byte_length": 321817,
         "truncated": false
       },
       {
         "url": "https://ai.engineer/code/2026/schedule",
         "role": "schedule",
-        "content_hash": "b476a4390f510be8d14606424f46ce1591e0bca7832b3ab48758a39e734777c1",
-        "byte_length": 383845,
+        "content_hash": "48646b4cc85d3528ca6b275741a4de028d4cb2e1c66c1086cfd315f86532e4c2",
+        "byte_length": 383895,
         "truncated": false
       },
       {
         "url": "https://ai.engineer/code/2026/map",
         "role": "venue",
-        "content_hash": "6f516233d41c6182161ea9f08b02d2c614984fbb0c2ca731e09f0c49031cfdb9",
+        "content_hash": "d0a48a1069335dab57001c6512739a8295eb1aba9086303ce1970dcd818a790e",
         "byte_length": 3737,
         "truncated": false
       },
       {
         "url": "https://luma.com/after-summit",
         "role": "side-event",
-        "content_hash": "cafe4ed42f828e38edd3d23fb12d76f97313d4d07996c1f6e6e4bc87ad353ca6",
-        "byte_length": 175569,
+        "content_hash": "89d469872a917af997f9c79b82a1299fa518f9ecd125080b95e5e385197d714b",
+        "byte_length": 175568,
         "truncated": false
       },
       {
         "url": "https://luma.com/allthings-aie",
         "role": "side-event",
-        "content_hash": "ebe94cef21b38686bb53352ea0dd6ecdf8593642674cd0a7ef8e6f5853f2f03b",
-        "byte_length": 160629,
+        "content_hash": "93675d4bd4f086e73b3d6f00c76f2af23319078a6eab999d9e6db6c0cd7361a1",
+        "byte_length": 160441,
         "truncated": false
       },
       {
         "url": "https://luma.com/AIECodeSummitHackathon",
         "role": "side-event",
-        "content_hash": "6913b8882b4d679c557d8169a5b0e28bd70659004d86ad21ce76af0b97be8d17",
-        "byte_length": 221850,
+        "content_hash": "c807549c837f5ad6b6528977001d4fece3fc8c9ecd3c00103d9a9a485eef0c97",
+        "byte_length": 221668,
         "truncated": false
       },
       {
         "url": "https://luma.com/kdtg113c",
         "role": "side-event",
-        "content_hash": "bf5573ab2d67667e1c670f7c7bd93985d2f1c1862c96bacf8660d3b66c9eaf6a",
-        "byte_length": 163615,
+        "content_hash": "7e5d2abaefd792aedfa23729ebba142b776e04a9015e540cf2e518fe1cf2e738",
+        "byte_length": 163617,
         "truncated": false
       }
     ],
@@ -3911,8 +3948,8 @@
       "unparsed region: venue floorplan images (level-1, level-2-workshop-day, level-2-session-days .avif): not read; room levels come from the map page's area list",
       "enrichment pending (1): new speakers whose profile pages were not opened this render: richelle-ji"
     ],
-    "last_verified_at": "2026-11-11T15:40:35-05:00",
-    "verification_count": 6,
+    "last_verified_at": "2026-11-12T03:37:31-05:00",
+    "verification_count": 7,
     "enrichment": {
       "done": [
         "aamir-shakir",
@@ -3991,6 +4028,7 @@
         "stephen-chin",
         "steve-yegge",
         "sudhir-tonse",
+        "swyx",
         "sydney-runkle",
         "taylor-luttrell-williams",
         "tejas-kumar",

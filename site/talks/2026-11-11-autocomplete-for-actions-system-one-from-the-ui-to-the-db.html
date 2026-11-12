@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Autocomplete for Actions: System One from the UI to the DB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../site/theme.css">
+<link rel="stylesheet" href="../../site/nav.css">
+<link rel="stylesheet" href="../../site/pages.css">
+
+</head>
+<body>
+<nav class="topnav" aria-label="Site"><a class="brand" href="../../index.html">AIE Code ’26</a><a href="../../index.html">Today</a><a href="../../site/schedule.html">Schedule</a><a href="../../site/talks/index.html" aria-current="page">Talks</a><a href="../../site/themes.html">Themes</a><a href="../../site/people.html">People</a></nav>
+<div class="sheet">
+
+  <header class="masthead hub">
+    <p class="mono agency">Wed, Nov 11 · 3:24 PM–3:37 PM · Continental 4–6 (Mainstage)</p>
+    <h1>Autocomplete for Actions: System One from the UI to the DB</h1>
+    <p class="speakers">Scott Roberts, Workday</p>
+    <p class="sub">A decision model fast and cheap enough to call everywhere replaces both LLM agent loops and retrieval stacks: it picks the right UI card on every keystroke and runs as a function inside a SQL query on every row.</p>
+  </header>
+  <div class="marginalia mono"><a href="index.html">← All talks</a><span>6 of 7 built</span></div>
+  <div class="pills"><a class="pill call-go" href="../../site/talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db.html#recording">Recording · 12 min</a><a class="pill call-go" href="../../site/talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db.html#transcript">Transcript · qwen3-asr-1.7b</a><a class="pill call-go" href="../../site/talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db.html#links">Links</a><a class="pill call-go" href="../../site/talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db.html#photos">Photos · 4</a><a class="pill call-go" href="../../site/talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db.html#notes">Notes · 3</a><a class="pill call-go" href="../../site/talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db.html#story">Story · draft</a><a class="pill call-skip" href="../../site/talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db.html#story">Talk page</a></div>
+  
+  
+  <div class="chips"><span class="mono">Themes</span><a class="chip" href="../../site/themes.html#fuel">Fuel</a><a class="chip" href="../../site/themes.html#decision-models">Decision models</a></div>
+
+  <section class="view" id="people"><div class="view-head"><h2>Speaker</h2></div>
+    <div class="people"><div class="person" data-search="scott roberts workday  autocomplete for actions: system one from the ui to the db">
+    <div class="who"><b>Scott Roberts</b> <span class="minor">Workday</span><div class="talkline"><a href="../../site/talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db.html">Autocomplete for Actions: System One from the UI to the DB</a></div></div>
+    <div class="acts"><span class="minor">no X handle found</span></div>
+  </div></div></section>
+
+  <section class="view" id="notes"><div class="view-head"><h2>My notes</h2><p class="lede">3 captured during the talk.</p></div>
+    <ol class="notes"><li><span class="mono">3:30 PM · observation</span><div class="prose"><p>predicting what you want to say vs what you want to do</p>
+<p>Said at Scott Roberts's talk, &quot;Autocomplete for Actions: System One from the UI to the DB&quot; (Workday Sana, 15:24–15:37 Mainstage). Has no talk folder yet, so <code>talk</code> is null. Connects to the System One point in Michelle Chen's Cloudflare talk (talks/2026-11-11-cloudflare-is-a-neolab/).</p>
+</div></li><li><span class="mono">3:31 PM · observation</span><div class="prose"><p>jev will select cards that have the data, that's the ui choices that he's talkig about</p>
+<p>At Scott Roberts's talk, &quot;Autocomplete for Actions: System One from the UI to the DB&quot; (Workday Sana). Has no talk folder yet, so <code>talk</code> is null.</p>
+</div></li><li><span class="mono">3:34 PM · observation</span><div class="prose"><p>he is calling jev inside of a sql statement inside of a duckdb</p>
+<p>At Scott Roberts's talk, &quot;Autocomplete for Actions: System One from the UI to the DB&quot; (Workday Sana). His abstract describes Jev &quot;running inside DuckDB as a SQL filter&quot;. Has no talk folder yet, so <code>talk</code> is null.</p>
+</div></li></ol>
+  </section>
+
+  <section class="view" id="photos"><div class="view-head"><h2>Photos</h2><p class="lede">4 filed.</p></div>
+    <div class="photos"><a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos/PXL_20261111_232705433.jpg"><img loading="lazy" src="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos/PXL_20261111_232705433.jpg" alt="Photo taken during the talk, PXL_20261111_232705433.jpg"></a><a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos/PXL_20261111_233341807.jpg"><img loading="lazy" src="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos/PXL_20261111_233341807.jpg" alt="Photo taken during the talk, PXL_20261111_233341807.jpg"></a><a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos/PXL_20261111_233429743.jpg"><img loading="lazy" src="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos/PXL_20261111_233429743.jpg" alt="Photo taken during the talk, PXL_20261111_233429743.jpg"></a><a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos/PXL_20261111_233436849.jpg"><img loading="lazy" src="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos/PXL_20261111_233436849.jpg" alt="Photo taken during the talk, PXL_20261111_233436849.jpg"></a></div>
+  </section>
+
+  <section class="view" id="recording"><div class="view-head"><h2>Recording</h2><p class="lede">My Voice Memos from the room.</p></div>
+    <div class="rec"><span class="mono">2026-11-11_1525_Scott-Roberts · 12 min · qwen3-asr-1.7b</span><audio controls preload="none" src="../../recordings/inbox/2026-11-11_1525_Scott-Roberts/audio.m4a"></audio></div>
+  </section>
+
+  <section class="view" id="story"><div class="view-head"><h2>Story</h2><p class="lede">A draft story, not yet a page.</p></div>
+    <details><summary>Read the draft</summary><div class="prose"><h1>A judgment in a SQL query</h1>
+<p>Scott Roberts' best demo is a SQL query. Inside it, a function asks a decision model,
+TypeSafe's Jev, a question in plain English about every row, and the query sorts by
+the answer. No embeddings, no vector database, no classifier to train. The same
+model, fast and cheap enough to call on every row, also runs on every keystroke in
+Workday's search box, guessing what you're trying to do and showing the card that
+does it. Both replace something heavier: a retrieval stack in one case, an LLM agent
+loop in the other.</p>
+<p><em>Framing note: this story is framed by the notes and photos taken in the room: three
+notes and four photos, most of the photos on Jev inside a SQL query, which leads the
+story at the operator's request. The recording opens a few seconds into the talk. The
+transcript is a Qwen machine transcription; quotes keep its wording, including
+“Jeff”, “Jeb”, “Jim”, “Gem” and “Java” for Jev, and “Quinn” for Qwen. Workday's
+caveat from the talk applies throughout: the demos use fake data and aren't in
+production. “From the notes” and “The reading” boxes are interpretation, not his
+words.</em></p>
+<h2>Natural language inside the query</h2>
+<p>The problem is a recruiter's: a pile of resumes, and the need to find who fits
+(00:08:03). The demo answers it with a query (00:09:24).</p>
+<blockquote>
+<p>“So this is against a DuckDB, where we have a function.”
+— 00:09:24</p>
+</blockquote>
+<p>The function calls Jev on each resume with a question in plain English, returns the
+probability as a score, and the query orders by it. His slide shows it:</p>
+<p><code>SELECT substr(name, 1, 22) AS candidate, round(jev_noul(resume_body, 'Has this person worked on fraud, or trust and safety problems?'), 2) AS score FROM pool ORDER BY score DESC LIMIT 20;</code></p>
+<p>The pool is 117 resumes with made-up names. They're synthetic and ML-heavy, so fraud
+and trust-and-safety experience scores high. Then he makes it adversarial. The
+resumes are full of “pipeline”, data pipelines and AI pipelines, so he asks whether
+each person is qualified to do plumbing.</p>
+<blockquote>
+<p>“If you were going to just do a lexical search, it might pick up some of these.”
+— 00:09:24</p>
+</blockquote>
+<p>Jev scores them all low.</p>
+<blockquote>
+<p>“So we went over one hundred seventeen records.”
+— 00:09:24</p>
+</blockquote>
+<blockquote>
+<p>“We had 2.3 seconds of wall time and spent almost nothing on this query.”
+— 00:09:24</p>
+</blockquote>
+<div class="reading"><b>From the notes:</b> “he is calling jev inside of a sql
+statement inside of a duckdb”. <b>The reading:</b> this is the most concrete version
+of the decision-model idea from the whole conference. A judgment becomes a SQL
+function, so it composes with everything SQL already does: filtering, sorting,
+joining, grouping. His slide says it plainly: no classifier to train, no index to
+build. DuckDB is the query engine here; it can also read Parquet files directly, so
+the same function would run over a lakehouse's open files, judging data where it
+already sits, which is the shape of George Fraser's “the warehouse is the context”
+(<a href="../2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/story.md">the data team's new job</a>)
+and of this morning's note about connecting straight to OLAP cubes
+(<code>notes/inbox/2026-11-12T1215-olap-cubes-modality-of-values.md</code>).</div>
+<p><strong>Visual:</strong> photo <code>photos/PXL_20261111_233429743.jpg</code> (his slide: “Natural language inside the query”, the SQL above, over 117 resumes with made-up names, with “a question in plain English” highlighted; “No classifier to train. No index to build.”)</p>
+<h2>Retrieval without the retrieval stack</h2>
+<p>The usual answer to the recruiter's problem is a pipeline (00:08:03): embed the
+resumes, put the vectors in a vector database, retrieve, rerank, and show the top of
+the list.</p>
+<blockquote>
+<p>“One interesting callout is the Quinn reranker.”
+— 00:08:03</p>
+</blockquote>
+<p>Qwen's reranker already asks the model a yes/no question about each candidate at the
+end, which is what Jev does. So skip everything before it:</p>
+<blockquote>
+<p>“But with Jeff, we basically take out all the embedding steps.”
+— 00:08:03</p>
+</blockquote>
+<blockquote>
+<p>“I don't have to train anything up. I don't have to do embedding. I don't have to put things in a vector database.”
+— 00:08:03</p>
+</blockquote>
+<p>Put the resumes in a database, ask in natural language, and check every one.</p>
+<div class="reading"><b>The reading:</b> his slide lays out retrieval three ways.
+Qwen and Cohere both go embedding, vector database, similarity search, then a
+judgment at the end; Jev goes straight to the judgment, on every row. It's the
+opposite answer to Mixedbread's the same day
+(<a href="../2026-11-11-how-to-build-agents-over-your-own-data/story.md">Search ahead of the agent</a>),
+which said to index everything ahead of time. Both are right at different sizes:
+checking every row is simple and exact for hundreds or thousands; at millions of
+documents you still narrow the pool first, with a cheap SQL filter or an index, and
+let the model judge what's left.</div>
+<p><strong>Visual:</strong> photo <code>photos/PXL_20261111_233341807.jpg</code> (his slide: “Retrieval three ways: Qwen, Cohere and Jev”: embedding, vector database and similarity search before a yes/no judgment or relevance score; “The reranker already asks a yes/no question. Jev asks it of every row directly: no embeddings, no vector database, no retrieval.”)</p>
+<h2>Why a decision model, not an LLM</h2>
+<p>Calling a model on every row only works because the model is small. He starts from
+the agent loop (00:00:37): take a request, decide, run tools, judge, repeat, with an
+LLM call at every step.</p>
+<blockquote>
+<p>“So one is there's too much intelligence.”
+— 00:00:37</p>
+</blockquote>
+<blockquote>
+<p>“So you know, LLMs a lot of times are just a hammer looking for a nail.”
+— 00:00:37</p>
+</blockquote>
+<blockquote>
+<p>“So we want something that is fast. Smart, easy to use.”
+— 00:00:37</p>
+</blockquote>
+<p>In code, most of those steps need something simple (00:01:42):</p>
+<blockquote>
+<p>“it's really just a conditional.”
+— 00:01:42</p>
+</blockquote>
+<p>Jev has primitives for exactly that: a probability (is it this or that?), categories
+(which of these does it fall into?), and a score (probability plus sorting). The SQL
+function is the probability one. He was sceptical at first (00:02:24):</p>
+<blockquote>
+<p>“We already have classifiers.”
+— 00:02:24</p>
+</blockquote>
+<p>But a classifier needs a dataset, training and retraining. With Jev,</p>
+<blockquote>
+<p>“We plugged in our question.”
+— 00:02:24</p>
+</blockquote>
+<p>and it generalized, for routing, judging and resume screening. His simplest example
+(00:03:17): nobody taught Jev what a fish is.</p>
+<blockquote>
+<p>“is a fish a pet? Well, fifty-fifty.”
+— 00:03:17</p>
+</blockquote>
+<p>Add context and ask again, twenty milliseconds later: a fish in a bowl, yes.</p>
+<blockquote>
+<p>“Oh, is a fish on my plate a pet? Clearly not.”
+— 00:03:17</p>
+</blockquote>
+<div class="reading"><b>The reading:</b> his slide writes a harness's branches
+(continue the plan, retry with a refined query, escalate to review) as Jev calls.
+They're the same shapes Diogo drew as model gates (a yes/no, a score, a choice),
+seen from the customer's side
+(<a href="../2026-11-11-i-love-you-so-jevving-much/story.md">Too good to be true</a>).
+The SQL demo is the yes/no gate, applied to a table.</div>
+<p><strong>Visual:</strong> photo <code>photos/PXL_20261111_232705433.jpg</code> (his slide, from the back of the room: “In code, it's a conditional”, harness branches written as Jev calls)</p>
+<h2>From what you want to say to what you want to do</h2>
+<p>The other half of the talk is the interface (00:04:00). Autocomplete guesses your
+question:</p>
+<blockquote>
+<p>“It's just predicting the question. It's not helping you get to the answer.”
+— 00:04:00</p>
+</blockquote>
+<p>Workday wants to move from predicting the next word to finishing the task:</p>
+<blockquote>
+<p>“Where we go from predicting what you want to say. To predicting what you want to do”
+— 00:04:00</p>
+</blockquote>
+<p>Type that you need time off next week, and as you type, the interface adjusts to what
+it's learning.</p>
+<blockquote>
+<p>“This is not something that we could have done with an LLM.”
+— 00:04:00</p>
+</blockquote>
+<p>Ask “what was my pay last period?” and a card pops up with the payslip, hidden until
+you reveal it. Start typing about a meeting, next Friday at 2 p.m., with your boss,
+and the meeting is booked. Type a name, or “the person who owns this part of the
+organization”, and a contact card appears with an email button.</p>
+<div class="reading"><b>From the notes:</b> “predicting what you want to say vs what
+you want to do”. That's his framing, nearly word for word. <b>The reading:</b> it's
+the System One idea from Cloudflare's talk in the morning, applied to a product: the
+quick decision happens while you type, and slow, deliberate work starts only if it's
+needed. Most enterprise AI adds an agent beside the app; this puts the decision in
+the search box.</div>
+<p><strong>Visual:</strong> quote “Where we go from predicting what you want to say. To predicting what you want to do” (00:04:00)</p>
+<h2>Jev picks the card; the team fills it in</h2>
+<p>Under the hood (00:06:42), Jev runs at typing speed: predict the intent as the words
+arrive, and render an interface to match.</p>
+<blockquote>
+<p>“And you know we can do this at about twenty bucks for a million judgments.”
+— 00:06:42</p>
+</blockquote>
+<p>It works in two steps:</p>
+<blockquote>
+<p>“So first, Jeb is picking the card”
+— 00:06:42</p>
+</blockquote>
+<p>Jev reads the intent and picks a card. Then the team that owns that domain decides
+which questions progressively fill the card in. The first step gets people in the
+front door; the second makes sure the card helps them finish. Before a new card is
+added, they check it doesn't collide with existing ones, and in early experiments
+with seven cards:</p>
+<blockquote>
+<p>“We were able to get ninety-six percent accuracy on that.”
+— 00:06:42</p>
+</blockquote>
+<p>His summary (00:10:57) joins the two halves: wherever a decision used to be too
+expensive or too slow, they now look for places to put Jev. Decide fast at the front
+door; filter deep in the data.</p>
+<blockquote>
+<p>“imagine the things that you can do when you have a decision model installed.”
+— 00:10:57</p>
+</blockquote>
+<div class="reading"><b>From the notes:</b> “jev will select cards that have the
+data, that's the UI choices that he's talking about”. Yes: the UI choice is which card
+to show, and Jev makes it; the data in the card comes from the domain team's
+questions. <b>The reading:</b> it's a clean split of judgment and ownership. The
+model makes one narrow decision it can be trusted with, and the people who own the
+domain own what happens next: Diogo's “smart software”, ordinary software with a small
+model decision at the branch point. Together with the SQL demo, it answers your
+backlog item on mapping where tools and decisions fit
+(<code>notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md</code>): a decision
+model belongs at the front door and inside the query. Jev is the decision model that
+kept coming up this week, alongside
+<a href="../2026-11-11-cloudflare-is-a-neolab/story.md">Cloudflare's Clef</a> and
+<a href="../2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/story.md">Gemini Decisions</a>.</div>
+<p><strong>Visual:</strong> diagram “keystrokes → Jev picks a card (intent) → the domain team's questions fill it in → the task is done; $20 per million judgments; collision check before a card is added” (illustrative)</p>
+</div></details>
+  </section>
+
+  <section class="view" id="links"><div class="view-head"><h2>Links and resources</h2></div><div class="prose"><h2>Speaker</h2>
+<p><strong>Scott Roberts</strong>, Workday</p>
+<p>The roster published no links for him, and no LinkedIn, X or GitHub profile
+could be confirmed as his.</p>
+<h2>Company</h2>
+<p><strong><a href="https://www.workday.com/">Workday (Sana)</a></strong>: &quot;Experience a new way to work
+with Sana and agentic AI from Workday.&quot; (from the site)</p>
+<h2>Resources</h2>
+<ul>
+<li><strong>Blog</strong> · <a href="https://newsroom.workday.com/2026-10-13-Sana-Is-the-New-Workday-Home-A-Dynamic-Agentic-Experience-Built-to-Finish-the-Work,-Not-Just-Answer-Questions">Sana Is the New Workday Home: A Dynamic Agentic Experience Built to Finish the Work, Not Just Answer Questions</a>
+(Workday newsroom, 2026-10-13). Sana's dynamic interface powered by Jev: the
+&quot;predicting what you want to do&quot; cards in the demos.</li>
+<li><strong>Blog</strong> · <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">Introducing System One Models &amp; Jev</a>
+(TypeSafe AI, 2026-09-15). Jev and its decision primitives (probability, pick,
+score) that the talk builds on.</li>
+<li><strong>Blog</strong> · <a href="https://itwire.com/business-it-news/data/workdays-joel-hellermark-on-jev-meta-work-and-why-ai-agents-need-deterministic-guardrails">Workday's Joel Hellermark on Jev, &quot;meta work&quot; and why AI agents need deterministic guardrails</a>
+(iTWire). Workday's chief AI officer on why Jev sits under its agents.</li>
+<li><strong>Product</strong> · <a href="https://duckdb.org/">DuckDB</a>. The database in the resume demo
+(&quot;against a DuckDB&quot; in the talk), where Jev runs as a function inside a SQL
+select.</li>
+</ul>
+<h2>Gaps</h2>
+<ul>
+<li>No profile verifiably his (a common name; the roster lists none).</li>
+<li>The New Stack's &quot;Workday is using TypeSafe's Jev to build user interfaces on
+the fly&quot; answered 403 (bot challenge), so it is not verified and is left out.</li>
+<li>The DuckDB function that calls Jev has not been published.</li>
+<li>No official recording or slides found yet. The dossier rechecks every 6 hours
+during the event.</li>
+</ul>
+</div></section>
+
+  <section class="view" id="transcript"><div class="view-head"><h2>Transcript</h2><p class="lede">Machine transcript (qwen3-asr-1.7b). Garbled words are kept as heard.</p></div>
+    <details><summary>Read the transcript</summary><div class="prose transcript"><blockquote>
+<p>The recording opens mid-sentence, a few seconds into the talk; the MC's introduction and the
+speaker's opening are not captured.</p>
+<p>Transcribed locally with Qwen3-ASR 1.7B (timings per ~5 s segment), prompted with the
+speaker names and affiliations of overlapping sessions. &quot;Workday&quot; at 00:04:00 may come from
+that prompt: the Voice Memos transcript has &quot;one day&quot; there (and &quot;work day&quot; at 00:00:06, where
+Qwen has &quot;workday&quot;). Other names are kept as transcribed: the model is &quot;Jeff&quot;, &quot;Jeb&quot; and &quot;Jim&quot;,
+and LLMs are once &quot;LMS&quot;. The Voice Memos transcript is kept beside it as <code>transcript.txt</code>.</p>
+</blockquote>
+<h3>00:00:00 — Quick actions and deep work</h3>
+<p>To drive new innovations in HR, finance, tax. Exciting stuff! So that workday, we have over eleven thousand different organizations that use our. And a lot of the problems that we deal with break down into. Two different categories. So one is very quick actions they have to. I want to see my pay. I want to ask for a day off. The other ones are I have to dive into a ton of data.</p>
+<p>We through it. Try to figure out what's going on. And like many of your companies as well, we're trying to put agentic workflows around this.</p>
+<h3>00:00:37 — Too much intelligence</h3>
+<p>And so, if we look at just a very simple. Agentic loop. You know we have a user request, and we try to decide what to do. Running tools, we're judging, doing a good job, and then over and over again until we finally get a result. Now, one of the problems here is that on each one of those, we're doing. LLM calls, and there's two major problems with that. So one is there's too much intelligence.</p>
+<p>So if we look at the system one versus system two thinking. We're doing a lot of slow, deliberate, very expensive thought processes. At each one of those steps. Another problem is it's just the wrong tool for the job. So you know, LLMs a lot of times are just a hammer looking for a nail. And you know we want to figure out like what do we actually need because clearly LMS are not doing it.</p>
+<p>So we want something that is fast. Smart, easy to use. It's generalized and it's very cheap.</p>
+<h3>00:01:42 — Decision primitives</h3>
+<p>So when we look at like from a code perspective, what are we really looking at from a From a gem-like model, it's really just a conditional. If this happens. This should happen. Which one of these cases are the ones that I want to explore? And you know you see it among many of these presentations already. But Jeb has the primitives to allow us to do this. There's the probability. Is it this or that? And what's the probability? What are the different categories that this?</p>
+<p>Particular thing could fall into, and then you have the scoring mechanism, which is basically probability and sorting. So. Yeah, this has been brought up as well.</p>
+<h3>00:02:24 — Not just another classifier</h3>
+<p>You know, my first thought when I saw Jeff' models was, well. We already have classifiers. I've been doing this for a long time. How's it actually different? And as many of the speakers have talked about already, you know with classifiers. I need to figure out, you know, what's my data set. I have to train it. New data comes out. I've iterated over and over with Jeff. Just out of the box, it just.</p>
+<p>Worked. We plugged in our question. We classified it. We didn't really have to do anything. It generalized to our question. And so we started using it for a lot of the use cases that you've seen from some of the. Presenters already, so we use it for routing. That's kind of the canonical example. You know, figuring out this step work. You know, as a judge. We looked at you know resumes, you know.</p>
+<p>Is this person qualified?</p>
+<h3>00:03:17 — Is a fish a pet?</h3>
+<p>No. I want to do kind of an overly simplified example as well. So no one taught Jeff like what a fish is. And so this is actually a question we ask: like, is a fish a pet? Well, fifty-fifty. Might be pets sometimes. Might not be. And so, you know, if I ran into this, then I have to figure out. What do I do next? Maybe I can give it some more context. Oh, is a fish in a bowl a pet?</p>
+<p>You know, after twenty milliseconds, I can ask this again. All right, that's great. Oh, is a fish on my plate a pet? Clearly not. So this is something that wasn't trained out of the box in seconds. It just worked.</p>
+<h3>00:04:00 — Demos: from autocomplete to actions</h3>
+<p>All right. So now on to some of the demos that we've done at Workday. So just a caveat on some of these: it's not real data, so we're not using any of your resumes or payroll data. These are also not in production now. It may or may not be in the future. So that's something our legal asked me to say. So let's get into some of the demos.</p>
+<p>All right. So starting with why do So autocomplete starts to predict what you're trying to ask. It's just predicting the question. It's not helping you get to the answer. So as you start to type more, it's gonna guess like, oh, I want to figure out. If this person wants to take it down, great. Guess the question, but really, help me get to the answer. So what we want to do is move from just predicting the word or the next block of code.</p>
+<p>And actually help you finish the task, and so this is best shown with a demo that. Where we go from predicting what you want to say. To predicting what you want to do, so hopefully the video plays. There we go. All right. So I need to take time off. Next week, and as I start to ask this, Jim is actually figuring out under the. Okay, what more context do I have?</p>
+<p>How can I adjust this UI based on the information that I'm that I'm getting? This is not something that we could have done with an LLM. We're getting you know we're we're doing this you know in a loop. While someone's asking, the payslip. You should have to go in and ask an agent. Hey, can you go find out how much I was paid? What you can do is just in the search say, what was my pay last period?</p>
+<p>Pops up an interface, allows you to unhide it. You know, see what your pay was in the last period. Very simple. Gets you to the action. Book a meeting. So I know that I want to book a meeting. And I'm gonna want to do it for next Friday. Let me do it at 2 p.m. Oh, I want to do with my boss. Make sure that I get my you know my boss on this.</p>
+<p>Logan McNeil. There we go. Meetings booked. And then a final one that we have just for this example, but there's many more. Is finding a person. So in this one, I may have some semantic knowledge. Like, find the person who owns this part of. The organization, or just like Pusashanti, I want to contact her. Pop it up. Click on email. Good to go.</p>
+<h3>00:06:42 — Under the hood: picking the card</h3>
+<p>All right. So what's happening under the? So, because Gem is fast and cheap, just like a typeahead. We can start to render a UI on this on that same cadence. We can look at as the words are coming, do a prediction of intent, and start to render an interface. And you know we can do this at about twenty bucks for a million judgments. And the way that we're doing it is kind of twofold, or two parts, I should say.</p>
+<p>So first, Jeb is picking the card, saying, &quot;What's the intent? All right, there's a card that's going to help you out.&quot; And then the team that's responsible in that domain then can decide what are the questions to progressively fill out that card. And so there's sort of this two-step process. The first step is getting people in the front door. Getting the right. And then the second one is making sure that you fill in that card.</p>
+<p>To help them accomplish the task that they're after. Now we have an email on here. Before we merge any card, we want to make sure that it doesn't collide with any other one. And in our initial experiments, you know, we've done seven cards or in just chat. It should, if there's no workaround to solve it, it should lie. We were able to get ninety-six percent accuracy on that.</p>
+<h3>00:08:03 — The recruiter problem</h3>
+<p>All right. So now on to the recruiter. So let's talk about the recruiter problem. All right. So this is not like a fast a task. It's something where. Recruiter has a pile of hundreds of resumes and has to figure out who is the best resume to accomplish the task. Now, I first want to look at like how we would have done this before. We would have done, you know, in embedding, put the vectors in a vector.</p>
+<p>Then had a retrieval layer. Then had a word ranker. And then figure out based on the ranker which ones that we want to put in front of the recruiter. One interesting callout is the Quinn reranker. Looks surprisingly similar to the job process as well. And so that's kind of an interesting corollary if you've used that one before. But with Jeff, we basically take out all the embedding steps.</p>
+<p>I don't have to train anything up. I don't have to do embedding. I don't have to put things in a vector database. What I can do is just do a function on my database to put all the resumes. Into a database, use natural language to query it. Iterate over every single one of them. And then just figure out which ones match my criteria.</p>
+<h3>00:09:24 — Demo: Jev inside a SQL query</h3>
+<p>So I'll go into you know an actual demo of this exact same one. So here we have a select statement. So this is against a DuckDB, where we have a function. That is going to call Jeff to figure out what's the probability that someone matches this criteria. We're going to get it a score, and then we're going to order by that score. Now I'm going to do about 20, and as I said, these are all fakes, and I'm going to resume the right now. I promise. And then here we see these are very ML focused synthetic data as well.</p>
+<p>So it's not a surprise that we would have. Very high hit rates against someone who's worked in fraud, trust, safety problems. But let's look at it. Let's change this question. Let's be a little bit more adversarial on this one. So a lot of these resumes have the word pipeline in them. So whether it's a data pipeline or an AI pipeline, pipes gonna come out. So let's just ask: like, is this Wasn't qualified to do plumbing.</p>
+<p>If you were going to just do a lexical search, it might pick up some of these. So we put it into Jeff and asked, you know, of all these ML resumes, let's. Yeah, trim it down to five here. Go and run it, and we can see you know that. Very low probability on these, so these are ones that we would almost definitely throw out. And you can see the speed. So we went over one hundred seventeen records.</p>
+<p>We had 2.3 seconds of wall time and spent almost nothing on this query. Just iterate over everything.</p>
+<h3>00:10:57 — Summary</h3>
+<p>So, Jim really kind of changed the game for us because every. Every place where we're thinking is either this is too expensive or it's too. Slow. We thought of new places to inject Java into our pipeline. And so, just to summarize, you know the two areas that I went through. Are one, where can we decide very quickly and get to the intent? And get the person on their way. And then the second one is to cut down on some of the really deep.</p>
+<p>How do we filter those out for our customers? And so I hope that this gave you a little bit of insight into the things that you could take back to. You know your own companies, and how, and you know, imagine the things that you can do when you have a decision model installed. And that's my time. Thank you very much.</p>
+</div></details>
+  </section>
+  <p class="colophon mono">Generated Nov 12, 2026 at 2:25 PM · bun scripts/render-pages.ts</p>
+</div>
+<script>(function(){
+  var key="aie-followed";var done={};try{done=JSON.parse(localStorage.getItem(key)||"{}")}catch(e){}
+  document.querySelectorAll('input[data-handle]').forEach(function(b){
+    var h=b.getAttribute('data-handle').toLowerCase();b.checked=!!done[h];
+    b.closest('.person').classList.toggle('is-done',b.checked);
+    b.addEventListener('change',function(){done[h]=b.checked;b.closest('.person').classList.toggle('is-done',b.checked);try{localStorage.setItem(key,JSON.stringify(done))}catch(e){}});
+  });
+  var q=document.getElementById('find');if(q)q.addEventListener('input',function(){var v=q.value.trim().toLowerCase();
+    document.querySelectorAll('.person[data-search]').forEach(function(p){p.hidden=v&&p.getAttribute('data-search').indexOf(v)<0});});
+})();(function(){function open(){var t=location.hash&&document.getElementById(location.hash.slice(1));var d=t&&t.querySelector('details');if(d){d.open=true;t.scrollIntoView()}}open();addEventListener('hashchange',open)})();</script>
+</body>
+</html>

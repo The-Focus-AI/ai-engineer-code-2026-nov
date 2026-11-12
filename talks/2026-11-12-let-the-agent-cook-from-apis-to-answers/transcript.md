@@ -1,0 +1,132 @@
+---
+title: "Let the Agent Cook: From APIs to Answers"
+speakers:
+  - name: Arsalan Bashir
+    affiliation: Sentry
+room: "Continental 1–3 (Expo Sessions)"
+starts_at: 2026-11-12T12:10:00-08:00
+ends_at: 2026-11-12T12:30:00-08:00
+format: talk
+recording: 2026-11-12_1211_arsln-let-the-agents-cook
+duration: 1063.9
+source: qwen3-asr-1.7b
+---
+
+> The recording opens on the speaker's introduction; the MC's introduction is not captured.
+> The Q&A turns are left unlabelled: the transcript does not mark who is speaking.
+>
+> Transcribed locally with Qwen3-ASR 1.7B (timings per ~5 s segment), prompted with the
+> speaker names and affiliations of overlapping sessions. "Sentry" at 00:00:12, 00:04:47, 00:12:02,
+> 00:17:02 and 00:17:19, "Anthropic" at 00:03:37 and "Auth0" at 00:05:11 may come
+> from that prompt: the Voice Memos transcript has "sentry" and "the century", "Andropic" and
+> "anthropic", and "out there" where Qwen has "Auth0". Other names are kept as transcribed:
+> Vercel is "Werzel", agent tool calls are "Asian Google calls", the harness is also "hardest",
+> evals are "emails", Jira is also "Europe", and the speaker's previous company is "Lightbox". The Voice Memos transcript is kept beside it as `transcript.txt`.
+
+### 00:00:00 — Introduction
+
+Agents that are grounded in data. So, at my previous role. I was building a company that built agents that queried data, did business intelligence, wrote a bit of code. And now I'm at Sentry, building agents that find and fix bugs. So let's get started. I'm going to be sharing three things that are useful if you want to build. Agents that follow a sort of investigative path and really tries to figure out.
+
+Things as they go along, without much human input.
+
+### 00:00:32 — Rolling your own agent
+
+So okay, let's back up. It's a picture. This is a big, beautiful day in San Francisco. Nice sunset. Nice breeze. You know you're chilling. But on the beach, and you thought to yourself, you know what? Maybe I should build an agent. So that was your first mistake. But you decided to stick along. And you said proceed anyways. You decide to roll your own harness, obviously, and plan is quite simple. You're going to give your agent a bunch of tools.
+
+One tool per data source, even and. Go from there, and it works at first, which is great. Your agent does something like this. Have a bunch of tools in there, and when you give it a prompt like. Find my latest GitHub issue, and it shows you the link to the GitHub issue. They're exciting, you know. Finally, A G I is here. So you start to go to bed at night, thinking, okay, it's gonna be able to handle.
+
+More complex queries that my team asked, like this one. And you know why wouldn't it?
+
+### 00:01:32 — Where it breaks
+
+Except over time, you notice. You know your agent is starting to misbehave and get confused and fail in some interesting modes. The agent starts picking the wrong tools sometimes. So it gets confused between tools that have similar descriptions. You know, if you're looking for a ticket. You're looking at Jira, you're looking at Linear, and stuff like that. Sometimes the agent goes around in circles. This could be because of upstream pagination, API rate limits.
+
+Or sometimes just getting confused again, and requiring multiple tool calls when you have one tool call returning a failure, and you have to make another tool call. And sometimes it's just plain wrong. You know, for example, you're searching your CRM. Which is deduplicating by an email address and. You know something like Stripe that uses a customer ID. And your agent simply doesn't know how to do one of these things. Either the modality is failure.
+
+We saw quite often at Lightbox. Was my previous company. It says we would connect directly to OLAP cubes like Snowflake, DataBricks, and all of these generally have some sort of Query function and some sort of a function to feedback those. So when you set your agent something like find the table, find my user. You know, you wouldn't know where to look. You can either like look at the first table and stop.
+
+And declare that this is the ultimate source of truth, and give you the wrong answer pretty confidently. All the required brute force a bunch of things, and you know eventually you get the wrong answer, anyways.
+
+### 00:03:01 — Lesson one: organize tools by use case
+
+So our first learning was something like this, which was to. You know, organize tools by a clear use case. Like you can see in this example. Find user is a tool that is actually deterministic code that actually searches the CRM or database. And things like all the Yu thing and sitting dinners together, imagination and stuff like that. Yes. So the clear learning there was, you know, the implementation of the tool.
+
+Shouldn't tolerate the differences in parameters and retries and all that stuff. So be very careful about you know. Our design tools. This idea, in fact, is something we got from. From Anthropic, that's all the research that they did, where they explicitly ask developers. To push down some of the complexity of what you're giving the agent off the agent's back and into the tool. And handle the nuances of each tool in your tooling calls wherever this is possible.
+
+And this, you know, generally reduces the risk. Of your agent making mistakes. There are deterministic things that should still be in code, and your agent would benefit from something like that. What this might look in practice is again something like this, where find user and find metadata. Are some tools that you define, and they. Handle the differences in IDs, consolidate pagination, and stitch data together. Wherever possible, and in our case, if it's something like you're fetching a ticket.
+
+Who we call will be responsible for doing a broad search across GitHub, linear, vector systems. Did you make? And so, try to the learning. I guess here is to you know. Connect the dots. Build better tools, or at least be more thoughtful in tool design. For the agent, and not to waste time and, of course, using tokens or deterministic behavior that needs. And if you're feeling particularly nerdy, like you know us at Sentry.
+
+We don't even write our tools. We do something called programmatic tooling, which allows our model to kind of write tools. Sort of you know calling various APIs and so on. Which is an idea popularized also by Auth0 and a bunch of other teams.
+
+### 00:05:18 — Lesson two: don't out-think the model
+
+So our second lesson while building this sort of data agent was actually kind of really to us when we took this through a bit. To the extreme, where we do this kind of learning, and we went too far with it. So looking back, we thought that we should also solve some of the problems. That actually turns out the model is very good at solving. You know, we actually assumed that the model would get confused with like.
+
+Could pick names, schemas. It would make lose my table names, make bad joins, and so on. And we built a very complex system. So before, you know, kind of. Our agent submitted anything to the model. We would classify its intent. We would fetch schemas, and we would try to. I need to be a bit smart with kind of what we give to give the models. And you know this backfired in very interesting ways.
+
+The first and obvious one was if this optimization kind of became a blind spot for the model. And it's also not very resilient to new models coming out. We have this complex setup. And every time a new model came out, which happens quite often, you know, there might be one out by the time you know done with stock. But every time we roll game out, we have to recalibrate some of these steps. Some of these steps will be rendered obsolete.
+
+You know, and we spent a lot of time maintaining this stuff. So that was kind of a meta learning for us. Which is this optimization is kind of giving the agent sort of a primal version. And so the best analogy in a clean office: imagine you're working in a bicycle race. Train super hard, have the best bicycle. Yes, if you're still doing it, kind of training wheels on.
+
+So yeah, I'm here to tell you that the models are good enough, and are increasingly getting better to the point that you don't need a lot of the training tools that you think you need. And I would scrutinize every additional like. Intelligence that you add through your harness very deeply. You know, the biggest step improvements essentially to your agents are likely going to come from the models getting better.
+
+Eventually, over time, so you want to build your agent. With kind of that in mind, and not do anything at the hardest level that would be obsolete, anyways. So to be clear, some of the things that warrant. Being done outside from the model does not mean that you know you got to do everything from the model. Things like handling permissions, execution limits. Stripping out personally identifiable information, etc. These things do make sense to do outside of standard models.
+
+I don't. You don't even want them because the model got smarter. But generally, both anthropic and OpenAI kind of encourage you to reduce these. Like a necessary step that you do outside of. Outside model calls and let the model kind of choose its path because you know the latest. The latest models actually benefit from learning. That they uncover as they go about like kind of investigating and collecting all information that they uncover.
+
+While they're working, so a simplified version of kind of the agent we built looks something like this.
+
+### 00:08:07 — A simpler agent
+
+You can see it's a lot simpler. We just made sure that we have the right tools. Our tool descriptions are not conflating and. We allowed the agent to kind of explore abilities on that, and gave it feedback on how it did, and that performs. A lot better, you know. It worked out super well. You know, here's some of the results that we were super excited about. The agent only got four times faster, but also used 30 percent.
+
+Fewer tokens across all of our kind of user queries, but it's also not just kind of my favorite startup that you know. Had results like these. Werzel interestingly posted a blog post where they took out eighty percent of the. Code that went into Asian Google calls, Asian Google descriptions, and so on, and they actually received like similar results. And another, actually, anecdote I can think of is.
+
+Who kind of built this like reset and handoff system? And they lock other quite a lot, which would affect other models. That's approaching the end of its context window, and Marvel Store tried to wrap up its work. And eventually, what they realized was more powerful neural models didn't need that kind of. External guardrail, and they figure it out, and you know the hardest overall to improve. So yeah, that's the second learning.
+
+That as models get better, you might find your harness kind of compensating for a model that you use. Six months ago, that's a common like pitfall, and so our learning goal is to get out. Models, wherever possible.
+
+### 00:09:45 — Lesson three: let the agent check its work
+
+Yeah. So, and the final kind of lesson that we learned was. You always give your harness or your agent some way to check his work and do a quick check. Based to validate its results, this might simply. Look like you know when you're running your agent between the input and the output. You have some sort of cheap, deterministic, fast way to validate results. I'm going to share some examples of what that might look like.
+
+But at a high level, this differs from kind of use case to use case. If you're building a data agent, what that might look like is dry running queries, comparing stuff. Do some sort of fact tables and semantic layer, and going from there. But you can extrapolate this to most use cases. If you have some sort of proof, so if you're running a coding agent, you might wanna.
+
+Have some way to run the linters or run the tests, and kind of give that. Precise feedback back to the model, so it can actually iterate on those results. As we kind of highlight, we back where we find and learn how it does. It's kind of the user telling us that you were wrong. This is actually kind of an important thing for us to do because not only.
+
+We're getting better results, which means the agent writes better SQL queries, writes better Python code. But also, you know, give confidence to the user. That you know what they're looking at is not just some random sort of. Results of the model, but also how it arrived there, how it uses information to generate. Work and you, people who use like going in and out, you will notice that.
+
+They lean towards this sort of behavior where they sort of do a test-driven development where they. Sometimes we often excessively write tests in order to have some sort of framework to manage. Can't be a word. So this was a learning for us. Always give you know your agent some way to kind of verify its results. And yeah, and let it check its work.
+
+### 00:11:40 — Recap
+
+So in summary, these are the three things we learned: automate what you know. But the second one is to let the agent explore and find out things you don't know. And finally, try to allow your agent to check its work whenever possible. We do have a few minutes for questions. So if anybody has questions about your data, but also feel free to. Jack Moore, who's at Sentry, I'll be there to answer any questions.
+
+### 00:12:07 — Q&A
+
+So you. Started with saying that we could categorize the tools. It makes it easier. And then you went back to say, give the agent just the NLM and the tool. So I'm kind of confused. If I have a corpus of tools, what API approach do you think would work best? Yeah. So. The first key is not categorize the tools, but actually combine the tools into some sort of semantic meaning.
+
+The only things that should be outside of the L, and this actually is obviously open to experimentation. But what makes sense to have outside of the model harness is things you absolutely require, like things like putting on personal. Information, you know, some execution limit to make sure it's not spamming your backend. Things like that. The first point, mostly, the first learning was mostly centered around: don't give it like.
+
+Enough tools were tools to interfere with each other. So if you have. Search ticket on linear and search ticket on Europe. Those are tools that might like sort of overlap a little bit. So that was mostly alluding to that those kind of that kind of setup where you have tools that are. Kind of overlapping. For example, specifically to us, we had this like ten different. All the providers will all have a query table, and stream results from that table. It's going to combine those into.
+
+On the other hand, you also want to have deterministic systems that are like libraries that kind of encapsulate. The absolute requirements that you have, for example, user A should not be able to. Kind of access into these tools. That stuff should be deterministic. It should be outright, but that layer should be super thin, as thin as possible, and. On a meta level, you could possibly be like scrutinizing that layer.
+
+When it comes to things like security and so on, you know it's better to have it be more deterministic. But if you're trying to like classify the user's intent, so that you can change the prompt a little bit. Things like those are rapidly becoming obsolete. Yeah. Did you find a limit, like how many tools, like you can add to this thing before it starts becoming? Well, so there is an upper limit of 128 groups from like 20 I and so on, but what we found is the low, the you know.
+
+It depends more on like how much overlap your tools have between each other. You could get away with like having. 40 tools are completely different. Or you could also see like. Weird results if you have just two, but they don't overlap. I would say it's open experimentation. Depending on what your use case are. What your use case is. One thing I will kind of share is that it is sometimes useful to look at from optimization.
+
+Techniques and apply those to human descriptions. You know that helps fix things like that. But that can become like all like intermittent issues. It will not. Be like a one-stop solution for all of your problems, like micro Java worlds. Similar question for what signals you're looking for. One of the signals to help decide if it's helping or hurting. Yeah, I mean the first, like the three modalities of failure, like.
+
+That I kind of shared the most. I mean, everything starts with having good quality emails. And sort of having like golden trajectory that you compare against. So, if you're if you're agent to the customer support. You know, agent, and it's being asked to do a refund, but it's doing like ten different queries. Before it actually does the one that finds the right. Item in your order and issue the refund. That is a single entry.
+
+Again, depends on kind of your use case, but generally, if you find finding the wrong tools, you know that there is some kind of overlap. Between your tools that's causing kind of confusion. And also, more qualitatively, if it's not able to use the tool effectively. There's something wrong with it. For example, if it's trying to kind of. Hit an endpoint, get some results. Generally, what you're doing, the results are fascinating, and your agent is not wrong. It assumes that okay, it's giving me like bad results, and that's.
+
+Pretty much it. That would be an interesting thing. Goes hand in hand, kind of, with the business logic. Of the tool itself, so if you're reading from linear, it might be different from kind of how we work with you know Jira or GitHub or. So on, and the final so that's that. Looking kind of mechanism, and the final one is like if it's not actually able to understand semantics and how to use these tools.
+
+What parameters to give it? You know, it's right. Using Stripe for giving the user an email address. And there's a projective barrier out there, which was the SDK, which also problem. Is that something you want to look out for? And then it's kind of ways to learn some of the words without the customer understanding. We kind of find and develop. But more generally, any kind, any sort of security product should be done.
+
+The first thing is, you go to that point, you do the right, right thing. I would say it's something like you will know that something is wrong. It's just a matter of like finding out what exactly the problem is there. I'm interested in what you said about having only two tools at Sentry, like write code and run. How do you think about guardrails when you do this? Because like when you had more tools, you could set you know individual guardrails for each tool, right?
+
+That gave you some degree of safety. For like an hour, so you find me at the booth at Sentry at a high level, you know. We have a we have testing list that you know can run like different like different flavour while. Okay, I'll come and talk to you later. All right. Thank you, guys.

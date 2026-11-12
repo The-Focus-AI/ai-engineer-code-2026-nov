@@ -1,4 +1,15 @@
 {
+  "1323755": [
+    {
+      "name": "Google DeepMind (Gemini API)",
+      "url": "https://ai.google.dev/gemini-api/docs",
+      "what": "Build apps and agents with Gemini, Nano Banana, Gemini Omni, and Lyria using the Gemini API documentation and reference.",
+      "evidence": [
+        "page title: \"Docs - Gemini API | Google AI Studio\"",
+        "transcript: \"Happy to share that we launched the Gemini Decisions API.\""
+      ]
+    }
+  ],
   "1333169": [
     {
       "name": "Aviator",
@@ -83,6 +94,140 @@
       "evidence": [
         "page title: \"Overview · Cloudflare Workers AI docs\"",
         "transcript: \"So in 2023, we launched a product called Workers AI, where we added GPUs to our network.\""
+      ]
+    }
+  ],
+  "1373460": [
+    {
+      "name": "Splunk (Agent Observability)",
+      "url": "https://agent-observability-docs.splunk.com/",
+      "what": "Splunk Agent Observability is the leading observability, evaluation, and guardrail platform for GenAI and agentic applications.",
+      "evidence": [
+        "page title: \"What Is Splunk Agent Observability? - Splunk Agent Observability\"",
+        "transcript: \"This is the product, as you can see, Splunk has shown.\""
+      ]
+    }
+  ],
+  "1373462": [
+    {
+      "name": "Mixedbread",
+      "url": "https://www.mixedbread.com/",
+      "what": "Mixedbread turns PDFs, decks, videos, code, Slack, and Drive into evidence your agent can act on, with fewer tokens.",
+      "evidence": [
+        "page title: \"Mixedbread - Make your agents work on your data\"",
+        "transcript: \"And we just put everything from Mixedbread, little PowerShell.\""
+      ]
+    }
+  ],
+  "1373464": [
+    {
+      "name": "Overcut",
+      "url": "https://overcut.ai/",
+      "what": "Overcut is the self-improving software factory: agentic workflows across GitHub, GitLab, Bitbucket, Azure DevOps, Jira, Linear and Slack that clear your backlog and PRs at enterprise scale.",
+      "evidence": [
+        "page title: \"The Self-Improving Software Factory | Overcut\"",
+        "transcript: \"So let's start with Overcut.\""
+      ]
+    }
+  ],
+  "1373465": [
+    {
+      "name": "TypeSafe AI",
+      "url": "https://typesafe.ai/",
+      "what": "TypeSafe AI is an AI lab building machine-native intelligence infrastructure for automation, designed to make decisions within software.",
+      "evidence": [
+        "page title: \"Home - TypeSafe AI\"",
+        "transcript: \"We have a stop GenAI baseball bat for TypeSafe.\""
+      ]
+    }
+  ],
+  "1373469": [
+    {
+      "name": "Lovable",
+      "url": "https://docs.lovable.dev/introduction/welcome",
+      "what": "Lovable is a full-stack AI development platform for building, iterating on, and deploying web applications using natural language, with real code, security, and enterprise governance.",
+      "evidence": [
+        "page title: \"Welcome to Lovable - Lovable Documentation\"",
+        "transcript: \"a core thesis behind Lovable\""
+      ]
+    }
+  ],
+  "1373470": [
+    {
+      "name": "Ramp (Inspect)",
+      "url": "https://ramp.com/",
+      "what": "Make expense management easy with Ramp's spend management platform. Combine global corporate cards, travel, expenses and accounts payable to automate finance operations and improve efficiency.",
+      "evidence": [
+        "page title: \"Spend Management, Corporate Cards & Accounts Payable Solutions | Ramp\"",
+        "transcript: \"As a quick introduction, Inspect is Ramp's collaborative coding agent.\""
+      ]
+    }
+  ],
+  "1373471": [],
+  "1373475": [
+    {
+      "name": "Cognition (Devin)",
+      "url": "https://cognition.com/",
+      "what": "Cognition is the applied AI lab behind Devin, the first autonomous software engineer. We build agents and tools that expand human capacity.",
+      "evidence": [
+        "page title: \"Cognition\"",
+        "transcript: \"We build a AI product called Devon.\""
+      ]
+    }
+  ],
+  "1376191": [],
+  "1376197": [
+    {
+      "name": "ZoomInfo",
+      "url": "https://www.zoominfo.com/",
+      "what": "ZoomInfo is the #1 GTM Platform: Marketing and sales AI plus the best B2B data. All-in-one lead generation, prospecting, market intelligence, and ABM software.",
+      "evidence": [
+        "page title: \"ZoomInfo: The #1 GTM Platform - Sales AI for Lead Generation\"",
+        "roster: affiliation ZoomInfo"
+      ]
+    }
+  ],
+  "1376198": [
+    {
+      "name": "Workday (Sana)",
+      "url": "https://www.workday.com/",
+      "what": "Experience a new way to work with Sana and agentic AI from Workday.",
+      "evidence": [
+        "page title: \"The Enterprise AI Platform for HR, Finance, and IT | Workday\"",
+        "transcript: \"So that workday, we have over eleven thousand different organizations that use our.\""
+      ]
+    }
+  ],
+  "1379010": [
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/",
+      "what": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+      "evidence": [
+        "page title: \"Home \\ Anthropic\"",
+        "transcript: \"I'm Lance from Anthropic.\""
+      ]
+    }
+  ],
+  "1379011": [
+    {
+      "name": "Sentry (Seer)",
+      "url": "https://sentry.io/",
+      "what": "Application performance monitoring for developers & software teams to see errors clearer, solve issues faster & continue learning continuously.",
+      "evidence": [
+        "page title: \"Application Performance Monitoring & Error Tracking Software | Sentry\"",
+        "transcript: \"And now I'm at Sentry, building agents that find and fix bugs.\""
+      ]
+    }
+  ],
+  "1379052": [
+    {
+      "name": "Auth0 (Auth0 for AI Agents)",
+      "url": "https://auth0.com/solutions/ship-ai-agents",
+      "what": "Learn how developers can ship AI agents faster and more securely with Auth0.",
+      "evidence": [
+        "page title: \"Ship AI Agents Faster & More Securely | Auth0\"",
+        "transcript: \"I'm a software developer having been over at Auth0.\""
       ]
     }
   ],

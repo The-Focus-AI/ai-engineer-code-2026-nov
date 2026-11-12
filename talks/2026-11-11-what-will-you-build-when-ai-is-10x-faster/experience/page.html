@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When the bottleneck moves · Natalie Serrino</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Wed 11 Nov 2026 · Continental 4–6 (Mainstage)</div>
+  <h1>When the bottleneck moves</h1>
+  <p class="dek">Isn't inference already fast enough? Natalie Serrino's answer is that speed doesn't just shorten the wait. Make inference 10x faster and the bottleneck moves somewhere else, and agents can move from watching after the fact to deciding in the request path.</p>
+  <div class="talk-meta">Natalie Serrino, Gimlet Labs · 17 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="flow-state.jpg" alt="Her slide: Fast products keep us in flow state, providing stickier UX. 0.1 s feels instant; 1 s, same train of thought; 10 s, turn to something else; 63 s, median coding-agent turn today. Sources: Miller 1968, Newell 1990, Card, Robertson and Mackinlay 1991, Nielsen 1993; agent turns from GitHub Copilot telemetry, June 2026.">
+        <figcaption>Her slide, 9:16 am (straightened from photos/PXL_20261111_171650670.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v2">
+        <div class="lbl">The Pareto frontier</div>
+        <svg viewBox="0 0 400 260" role="img" aria-label="A chart with tokens produced on the vertical axis and speed per user on the horizontal axis. Today's frontier curves down from many slow tokens to few fast ones. An upgraded frontier sits further up and to the right: more tokens and faster tokens for the same power.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <path d="M50 20 V220 H385" stroke="var(--rule)" stroke-width="2" fill="none"/>
+            <text x="20" y="120" fill="var(--muted)" transform="rotate(-90 20 120)" text-anchor="middle">tokens produced</text>
+            <text x="218" y="245" fill="var(--muted)" text-anchor="middle">speed per user →</text>
+            <path d="M60 70 C 150 80, 210 130, 250 210" stroke="var(--muted)" stroke-width="2.5" fill="none"/>
+            <text x="150" y="150" fill="var(--muted)" font-size="10">today's frontier</text>
+            <path d="M60 32 C 200 38, 300 100, 360 205" stroke="var(--accent)" stroke-width="3" fill="none"/>
+            <text x="262" y="62" fill="var(--accent)" font-weight="600">upgraded</text>
+            <text x="262" y="76" fill="var(--accent)" font-size="10">right chip for each piece</text>
+            <path d="M170 110 L215 78" stroke="var(--accent)" stroke-width="2" marker-end="url(#ar)"/>
+            <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="var(--accent)"/></marker></defs>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:06:33 and 00:08:06; not her chart</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="bottleneck.jpg" alt="Her slide: Big speedups in one area lead to new bottlenecks in other areas. Turn timeline at original speed: 82% inference, 18% tool calls, 105 seconds. Turn timeline with simulated 10x faster inference: 31% inference, 67% tool calls, 28 seconds. With any optimization problem, we need to attack the bottlenecks systematically, removing low hanging fruit first when new bottlenecks appear.">
+        <figcaption>Her slide, 9:22 am (straightened from photos/PXL_20261111_172207359.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v4">
+        <div class="lbl">Off the path, or on it</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Two rows. Slow defender: the malicious upload reaches the site, and the defender, watching the logs afterwards, flags it too late. Fast defender: the defender sits inline between the upload and the site and blocks the request.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" text-anchor="middle" font-weight="600">
+            <text x="200" y="18" fill="var(--muted)" font-size="10" font-weight="600">SLOW: WATCHING AFTERWARDS</text>
+            <rect x="10" y="30" width="90" height="40" rx="8" fill="var(--panel)" stroke="var(--rule)"/><text x="55" y="54" fill="var(--ink)">upload</text>
+            <rect x="290" y="30" width="100" height="40" rx="8" fill="var(--card)" stroke="var(--identity)"/><text x="340" y="54" fill="var(--identity)">site taken</text>
+            <path d="M100 50 H290" stroke="var(--identity)" stroke-width="2"/>
+            <rect x="150" y="84" width="100" height="36" rx="8" fill="var(--card)" stroke="var(--rule)" stroke-dasharray="4 3"/><text x="200" y="106" fill="var(--muted)">defender</text>
+            <path d="M200 84 V58" stroke="var(--rule)" stroke-dasharray="3 3"/>
+            <text x="200" y="136" fill="var(--muted)" font-size="10" font-weight="400">sees it, too late</text>
+            <text x="200" y="166" fill="var(--accent)" font-size="10">FAST: IN THE REQUEST PATH</text>
+            <rect x="10" y="180" width="90" height="40" rx="8" fill="var(--panel)" stroke="var(--rule)"/><text x="55" y="204" fill="var(--ink)">upload</text>
+            <rect x="150" y="176" width="100" height="48" rx="8" fill="var(--accent)"/><text x="200" y="204" fill="var(--paper)">defender</text>
+            <rect x="290" y="180" width="100" height="40" rx="8" fill="var(--card)" stroke="var(--accent)"/><text x="340" y="204" fill="var(--accent)">blocked</text>
+            <path d="M100 200 H150 M250 200 H290" stroke="var(--accent)" stroke-width="2"/>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from her Dog Club demo at 00:12:18; not her screen</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v5">
+        <img src="new-experiences.jpg" alt="Her slide: What new experiences will you build when AI is much faster? Coming soon: a voice assistant with human-level interactivity; fix the outage while it is still happening; block attacks immediately as requests execute. A bit crazy: instantly build and compare 100 different UIs; live voice to prototype; build 3D models in seconds from a description. Real-life sci-fi: apps written on the fly as we use them; instant negotiation among hundreds of agents; robots that dynamically collaborate with humans.">
+        <figcaption>Her slide, 9:27 am (straightened from photos/PXL_20261111_172722980.MP.jpg)</figcaption>
+      </figure>
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+  <main class="talk-copy">
+    <section data-chapter="flow" data-visual="v1" data-caption="0.1 s, 1 s, 10 s, and a 63-second turn">
+      <div class="chapter">The wait</div>
+      <h2>Waiting breaks flow</h2>
+      <p>She opens with her own agent making a slide look better in Figma. It did good work, in about two minutes, after one request. Faster than she could have done it, but long enough that she'd moved on to something else.</p>
+      <p>The web went through this already. In 2000, someone could have looked at dial-up and said it was fast enough. The large companies of that era found otherwise: a hundred milliseconds of added delay had a measurable effect on the bottom line, and users didn't fully come back even after the delay was removed.</p>
+      <blockquote>“Even very small delays cost the users.”<span class="cite">00:02:57</span></blockquote>
+      <p>The psychology is about flow. A tenth of a second feels instant; at one second you keep your train of thought; at ten seconds you pick up your phone or switch to another agent.</p>
+      <blockquote>“From data from June, the median coding agent turn is 63 seconds.”<span class="cite">00:02:57</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “i want to see how much faster these agents can be, like do a research on fast token inference”. Still open; her yardsticks (0.1 s, 1 s, 10 s against a 63-second turn) and Gimlet's posts on the <a href="../links.md">links page</a> are the starting point.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:02, 00:02:57</p>
+    </section>
+    <section data-chapter="frontier" data-visual="v2" data-caption="More tokens or faster tokens">
+      <div class="chapter">The trade-off</div>
+      <h2>More tokens or faster tokens</h2>
+      <p>The catch is compute scarcity. Infrastructure is asked for two things at once, and they pull against each other.</p>
+      <blockquote>“More tokens and faster tokens. Unfortunately, these goals are fundamentally at odds because faster tokens require more energy to produce than slower tokens.”<span class="cite">00:06:01</span></blockquote>
+      <p>Her Token Mint game makes it concrete: you run a token factory, and the strategy for one fast token is completely different from the strategy for the most tokens in a minute. Plotting real runs from her colleagues gives a Pareto frontier.</p>
+      <blockquote>“If we have faster tokens, we don't have as many. And if we have more tokens, they're not as fast.”<span class="cite">00:06:33</span></blockquote>
+      <p>Upgrades in the game push the frontier up and to the right. Gimlet's real-world upgrade is matching the chip to the job: splitting a model into pieces and running each on a different kind of accelerator, GPUs alongside SRAM-centric chips. Even with the network overhead, that gives much faster tokens for the same power. Her Snake demo shows a coding agent finishing on the split setup while the conventional one is still running.</p>
+      <div class="reading"><b>From the notes:</b> “what really is the pareto frontier? does that mean the curve of price/performance tradeoff?” Yes, in this sense: the curve of best trade-offs between how many tokens a data center makes and how fast each user gets them. Every point on it is one you can't improve on one axis without losing on the other. Better hardware matching doesn't move you along the curve; it moves the curve. The game is at <a href="https://gimletlabs.ai/token-mint-game">gimletlabs.ai/token-mint-game</a> (laptop only).</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:06:01, 00:06:33, 00:08:06, 00:09:43</p>
+    </section>
+    <section data-chapter="bottleneck" data-visual="v3" data-caption="82% inference becomes 67% tool calls">
+      <div class="chapter">The shift</div>
+      <h2>The bottleneck moves</h2>
+      <p>People ask whether inference is even the bottleneck, or the tool calls are. On her slide-editing run, inference took about 80 percent of the time and tool calls 18 percent. Simulate 10x faster inference and the tool calls become 67 percent.</p>
+      <blockquote>“That's why it's important that we have to constantly attack the bottlenecks of the application and get the low-hanging fruit where we can.”<span class="cite">00:10:37</span></blockquote>
+      <p>Nobody has optimized tool calls much, because today they aren't the bottleneck. Once inference is fast, they will be the reason everyone waits. This kind of optimization is verifiable (known inputs, known outputs), so agents can do it; Gimlet is building a self-optimization loop from data-center telemetry up to the model.</p>
+      <div class="reading"><b>From the notes:</b> “the bottleneck will change when we increase inference speed”. That's the line her slide makes: speeding up one part of a system exposes the next slowest part, so the work is systematic, not one fix.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:10:37, 00:11:38</p>
+    </section>
+    <section data-chapter="critical-path" data-visual="v4" data-caption="A reviewer becomes a gate">
+      <div class="chapter">The demo</div>
+      <h2>Agents on the critical path</h2>
+      <p>Her security demo is Dog Club, a site for dog lovers, with a real vulnerability in a Node dependency that lets an upload overwrite files it shouldn't. A security agent watches live traffic. It doesn't know this vulnerability, but it knows its job.</p>
+      <blockquote>“And the defender is monitoring, but it's not in the critical path because it's not fast enough.”<span class="cite">00:12:18</span></blockquote>
+      <p>So it watches asynchronously. When a malicious “dog” is uploaded, the defender works out that the upload is doing something it shouldn't, but too late: the attacker has already taken over the site. Rerun the same upload with ultra-fast inference and the defender sits inline and blocks the request. We think of agents as asynchronous; fast enough, they can work online, in the request path.</p>
+      <div class="reading"><b>From the notes:</b> “she's saying that we could use inference on the critical path if things are really fast”, and the demo where the attacker turned the dog website into a cat website. The reading: speed changes the architecture, not just the wait. An agent that answers in milliseconds can be a gate; one that answers in a minute can only be a reviewer.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:12:18</p>
+    </section>
+    <section data-chapter="unlocks" data-visual="v5" data-caption="Coming soon, a bit crazy, real-life sci-fi">
+      <div class="chapter">Forward</div>
+      <h2>What faster unlocks</h2>
+      <p>Faster internet took us from webmail at dial-up speed to on-demand streaming. She asks the same of inference, which runs in the low hundreds of tokens per second today.</p>
+      <blockquote>“What does it look like when we get to a million tokens per second?”<span class="cite">00:15:11</span></blockquote>
+      <p>Her list: security that runs online, telling an agent what to build and watching it appear, tap-complete for everything, many more agents, even robots. Requests that fail today will start working as latency drops, the same way they start working after a model release.</p>
+      <div class="reading"><b>The reading:</b> this pairs with the decision-model talks (<a href="../../2026-11-11-cloudflare-is-a-neolab/experience/page.html">Cloudflare</a> and the Jev talks). They make a decision fast by making the model small; she makes it fast by making inference fast. Either way, the agent moves from reviewing afterwards to deciding inline. For a client: ask which checks you run after the fact only because the model was too slow to run them in the path.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:15:11</p>
+    </section>
+  </main>
+</div>
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room). Quotes are verbatim from the transcript. “From the notes” and “The reading” are interpretation, not her words; the two drawn diagrams are illustrative. More on the <a href="../links.md">links page</a>.
+</footer>
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

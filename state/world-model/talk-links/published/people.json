@@ -1,4 +1,26 @@
 {
+  "1323755": [
+    {
+      "name": "Philipp Schmid",
+      "role": "Senior AI Developer Relations Engineer",
+      "affiliation": "Google DeepMind",
+      "links": {
+        "site": "https://www.philschmid.de/",
+        "linkedin": null,
+        "x": "https://x.com/_philschmid",
+        "github": "https://github.com/philschmid",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Google DeepMind; bio \"Philipp Schmid is a Senior AI Developer Relations Engineer at Google DeepMind working on Gemini, Gemma\"",
+        "transcript: \"And if we look at what we have been doing at Google DeepMind for the last six months\"",
+        "page title: \"Philipp Schmid (@_philschmid) / X\"",
+        "page title: \"philschmid (Philipp Schmid) · GitHub\"",
+        "page title: \"Philschmid\""
+      ],
+      "status": "found"
+    }
+  ],
   "1333169": [
     {
       "name": "Ankit Jain",
@@ -161,6 +183,309 @@
         "page title: \"Michelle Chen - Cloudflare Blog\""
       ],
       "status": "partial"
+    }
+  ],
+  "1373460": [
+    {
+      "name": "Khasimul Asif Mohammad",
+      "role": "Principal Product Manager, AI Observability & Resilience",
+      "affiliation": "Splunk",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": null,
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Splunk; bio \"Asif is a Principal Product Manager at Splunk, a Cisco company, where he leads the product roadmap for AI Observability & Resilience (formerly Galileo).\"",
+        "transcript: \"Product manager by trade, you can call him Asif.\""
+      ],
+      "status": "not-found"
+    },
+    {
+      "name": "Sudhir Tonse",
+      "role": "Director of Engineering, Core Platform & Research for AI Observability and Resilience",
+      "affiliation": "Splunk",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": null,
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Splunk; bio \"Sudhir Tonse is a Director of Engineering at Splunk, part of Cisco, where he leads Core Platform & Research for AI Observability and Resilience.\""
+      ],
+      "status": "not-found"
+    }
+  ],
+  "1373462": [
+    {
+      "name": "Aamir Shakir",
+      "role": "Founder and CEO",
+      "affiliation": "Mixedbread",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": null,
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Mixedbread; bio \"Aamir Shakir is the Founder and CEO of Mixedbread, where he builds retrieval systems for complex, unstructured data.\"",
+        "transcript: \"Before we jump in, quickly about me and Big Spread.\""
+      ],
+      "status": "not-found"
+    }
+  ],
+  "1373464": [
+    {
+      "name": "Raz Berman Gold",
+      "role": "Co-Founder & CTO",
+      "affiliation": "Overcut",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": null,
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Overcut; bio \"Raz Berman is Co-Founder & CTO of Overcut, building the enterprise control plane for agentic software development.\""
+      ],
+      "status": "not-found"
+    }
+  ],
+  "1373465": [
+    {
+      "name": "Diogo Almeida",
+      "role": "Co-founder and CEO",
+      "affiliation": "TypeSafe AI",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": "https://x.com/completeskeptic",
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation TypeSafe AI; bio \"Diogo Almeida is co-founder and chief executive of TypeSafe AI, where he is building Jev\"",
+        "transcript: \"Like I said, I'm Diogo Almeida.\"",
+        "page title: \"Diogo Almeida (@CompleteSkeptic) / X\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1373469": [
+    {
+      "name": "Fabian Hedin",
+      "role": "Co-founder and CTO",
+      "affiliation": "Lovable",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": null,
+        "github": "https://github.com/fabhed",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Lovable; bio \"As Co-Founder of Lovable, Founder and CEO of Tentium, and Founder and CTO of TenFAST\"",
+        "page title: \"First Block with Fabian Hedin, Co-founder and CTO of Lovable\"",
+        "page title: \"fabhed (Fabian Hedin) · GitHub\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1373470": [
+    {
+      "name": "Zach Bruggeman",
+      "role": "Principal Software Engineer",
+      "affiliation": "Ramp",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": null,
+        "github": "https://github.com/remixz",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Ramp; bio \"Zach Bruggeman is a Principal Software Engineer at Ramp, leading the efforts on Inspect, Ramp's coding agent.\"",
+        "transcript: \"My name is Zach, and I'm an engineer at Ramp.\"",
+        "page title: \"remixz (Zach Bruggeman) · GitHub\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1373471": [
+    {
+      "name": "Steve Yegge",
+      "role": "Independent AI adviser; creator of Beads and Gas Town",
+      "affiliation": "Independent",
+      "links": {
+        "site": "https://yegge.ai/",
+        "linkedin": "https://www.linkedin.com/in/steveyegge",
+        "x": "https://x.com/steve_yegge",
+        "github": "https://github.com/steveyegge",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Independent; bio \"Steve Yegge is a software engineer, writer, and independent AI adviser who created Beads and Gas Town\"",
+        "transcript: \"Independent AI advisor and creator of Goose and Gastown.\"",
+        "page title: \"Steve Yegge — Programmer\"",
+        "page title: \"Steve Yegge - Kirkland, Washington, United States | Professional Profile | LinkedIn\"",
+        "page title: \"Steve Yegge (@Steve_Yegge) / X\"",
+        "page title: \"steveyegge (Steve Yegge) · GitHub\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1373475": [
+    {
+      "name": "Walden Yan",
+      "role": "Co-founder and CPO",
+      "affiliation": "Cognition",
+      "links": {
+        "site": "https://walnutwaldo.github.io/",
+        "linkedin": null,
+        "x": "https://x.com/walden_yan",
+        "github": "https://github.com/walnutwaldo",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Cognition; bio \"Walden Yan is a co-founder of Cognition, the company behind Devin, an autonomous software-engineering agent.\"",
+        "program abstract: \"Walden Yan, cofounder and CPO of Cognition, dives into the most advanced ways teams are using AI today\"",
+        "transcript: \"this is what our merged PR throughput looks like at Cognition\"",
+        "page title: \"walnutwaldo (Walden Yan) · GitHub\"",
+        "page title: \"Walden (@walden_yan) / X\"",
+        "page title: \"The WalnutWaldoWebsite\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1376191": [
+    {
+      "name": "Simon Willison",
+      "role": "Independent open-source developer; creator of Datasette",
+      "affiliation": "Independent",
+      "links": {
+        "site": "https://simonwillison.net/",
+        "linkedin": null,
+        "x": "https://x.com/simonw",
+        "github": "https://github.com/simonw",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Independent; bio \"Simon Willison is the creator of Datasette, a co-creator of the Django web framework, and an independent open-source developer\"",
+        "transcript: \"Please put your hands together for Simon Willison. Creator of DSS and co-creator of Django.\"",
+        "page title: \"Simon Willison’s Weblog\"",
+        "page title: \"Simon Willison (@simonw) / X\"",
+        "page title: \"simonw (Simon Willison) · GitHub\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1376197": [
+    {
+      "name": "Brian Kennedy",
+      "role": "Principal Engineer, Agentic AI Platform",
+      "affiliation": "ZoomInfo",
+      "links": {
+        "site": null,
+        "linkedin": "https://www.linkedin.com/in/brianpk/",
+        "x": null,
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation ZoomInfo; bio \"Brian Kennedy is a Principal Engineer at ZoomInfo, leading engineering for the Agentic AI Platform that powers Agent Teams and over a hundred production agents.\"",
+        "page title: \"Brian Kennedy - San Francisco, California, United States | Professional Profile | LinkedIn\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1376198": [
+    {
+      "name": "Scott Roberts",
+      "role": null,
+      "affiliation": "Workday",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": null,
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Workday; bio \"Scott Roberts is scheduled to represent Workday as a keynote speaker\"",
+        "transcript: \"So that workday, we have over eleven thousand different organizations that use our.\""
+      ],
+      "status": "not-found"
+    }
+  ],
+  "1379010": [
+    {
+      "name": "Lance Martin",
+      "role": "Member of Technical Staff",
+      "affiliation": "Anthropic",
+      "links": {
+        "site": "https://rlancemartin.github.io/",
+        "linkedin": "https://www.linkedin.com/in/lance-martin-64a33b5",
+        "x": "https://x.com/rlancemartin",
+        "github": "https://github.com/rlancemartin",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Anthropic; bio \"Lance Martin is a member of technical staff at Anthropic, where his work includes Claude Managed Agents.\"",
+        "transcript: \"I'm Lance from Anthropic.\"",
+        "page title: \"Lance's Blog\"",
+        "page title: \"Lance Martin - Anthropic | LinkedIn\"",
+        "page title: \"Lance Martin (@RLanceMartin) / X\"",
+        "page title: \"rlancemartin (Lance Martin) · GitHub\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1379011": [
+    {
+      "name": "Arsalan Bashir",
+      "role": "Staff Software Engineer, AI",
+      "affiliation": "Sentry",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": null,
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Sentry; bio \"Arsalan Bashir is a Staff Software Engineer, AI at Sentry, building tools that help developers and their AI agents find and fix broken code faster.\"",
+        "transcript: \"And now I'm at Sentry, building agents that find and fix bugs.\""
+      ],
+      "status": "not-found"
+    }
+  ],
+  "1379052": [
+    {
+      "name": "Michael Liendo",
+      "role": "Staff Developer Advocate",
+      "affiliation": "Auth0",
+      "links": {
+        "site": "https://www.focusotter.com/",
+        "linkedin": "https://www.linkedin.com/in/focusotter/",
+        "x": "https://x.com/focusotter",
+        "github": "https://github.com/FocusOtter",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Auth0; bio \"As a Staff Developer Advocate at Auth0, I’ve had the opportunity to build applications, develop architectures, and speak around the world as a way to remain customer obsessed.\"",
+        "transcript: \"My name is Michael Liendo, and we're gonna have a really good time.\"",
+        "page title: \"Michael Liendo - Auth0 | LinkedIn\"",
+        "page title: \"Focus Otter - Staff Developer Advocate, Fullstack Builder, Content Creator\"",
+        "page title: \"Focus Otter (@focusotter) / X\"",
+        "page title: \"Focus Otter · GitHub\""
+      ],
+      "status": "found"
     }
   ],
   "1379134": [

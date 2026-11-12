@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A thousand agents · Lance Martin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  .part { font: 600 .72rem/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Thu 12 Nov 2026 · Continental 4–6 (Mainstage) · Part 1 of 2</div>
+  <h1>A thousand agents, git and a database</h1>
+  <p class="dek">In September a dozen agents formalized Fermat's Last Theorem with a purpose-built harness and help from researchers. With Fable 5.2, Anthropic tried a thousand agents with almost nothing: a sandbox each, git, a SQL database and the problem. Five minutes in, the lead agent had built the tables the team would coordinate through for the next thirty hours.</p>
+  <div class="talk-meta">Lance Martin, Anthropic · first 7 min of an 18-min talk · <a href="memory.html">Part 2: memory and dreaming</a> · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="title.jpg" alt="His title slide: Exploring Claude's Frontiers, Lance Martin, Member of Technical Staff, Anthropic, with a drawing of one path branching out into many dotted paths.">
+        <figcaption>His title slide, 12:35 pm (straightened from photos/PXL_20261112_203545768.jpg)</figcaption>
+      </figure>
+      <figure class="talk-visual quote-card" data-visual="v2">
+        <p class="quote-big">“Two different things: Git and a SQL database.”<span>Lance Martin · 00:02:06</span></p>
+      </figure>
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="tables.jpg" alt="His slide: the coordination tables between 1 lead and 999 helpers. Announce: the lead's orders to everyone. Assign: who works on what. Notes: an open board. Subtasks: a shared to-do list. Landed: a log of finished work. Arrows show who writes and reads each table: the lead writes Announce and Assign, everyone reads; helpers write Notes, Subtasks and Landed.">
+        <figcaption>His slide, 12:39 pm (straightened from photos/PXL_20261112_203933625.jpg; the photo is soft)</figcaption>
+      </figure>
+      <figure class="talk-visual quote-card" data-visual="v4">
+        <p class="quote-big">“Magnificent work all night.”<span>A note left by the agents · 00:05:27</span></p>
+      </figure>
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+  <main class="talk-copy">
+    <section data-chapter="harness" data-visual="v1" data-caption="Where it started">
+      <div class="chapter">September</div>
+      <h2>A dozen agents and a harness</h2>
+      <p>Fermat's Last Theorem stood unproven for about 350 years; Andrew Wiles's proof took him seven years, and formalizing it, checking every step by computer in Lean, has been a major effort since. In September, Anthropic published that Claude had done it.</p>
+      <blockquote>“We started with a team of about a dozen agents.”<span class="cite">00:00:13</span></blockquote>
+      <p>Early on the team didn't work well, so they gave it a proof-orchestration platform that managed the project's state as a graph the agents could query.</p>
+      <blockquote>“Think about it as like a very domain-specific harness.”<span class="cite">00:00:13</span></blockquote>
+      <p>That result also leaned on extensive analysis and support from researchers.</p>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:13, 00:02:06</p>
+    </section>
+
+    <section data-chapter="primitives" data-visual="v2" data-caption="Two primitives">
+      <div class="chapter">Fable 5.2</div>
+      <h2>A thousand agents, git and a database</h2>
+      <blockquote>“So going from a dozen to a thousand.”<span class="cite">00:02:06</span></blockquote>
+      <p>No domain knowledge, no proof platform, and:</p>
+      <blockquote>“And with no human steering, with respect to the solution.”<span class="cite">00:02:06</span></blockquote>
+      <p>The setup is mostly about safety: each agent runs in its own sandbox with restricted network access, with real-time monitoring and an offline review of runs every ten minutes. What the agents get to work with is short:</p>
+      <blockquote>“Two different things: Git and a SQL database.”<span class="cite">00:02:06</span></blockquote>
+      <blockquote>“It establishes one lead agent, 999 helper agents.”<span class="cite">00:02:06</span></blockquote>
+      <p>The prompt tells them about git, the database and the problem statement, and that's all.</p>
+      <div class="reading"><b>From the notes:</b> “Fable 5.2 is doing massive multi-agent work with no human steering” and “they give the primitive git and a SQL database”. <b>The reading:</b> the structure Anthropic built is all safety (sandboxes, monitoring), and none of it is domain help. That's the “Less harness, more model” theme from <a href="../../2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">Philipp Schmid</a>, pushed to a thousand agents: give them a computer and a shared store, not a toolbox.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:02:06</p>
+    </section>
+
+    <section data-chapter="tables" data-visual="v3" data-caption="Tables nobody asked for">
+      <div class="chapter">The spine</div>
+      <h2>The lead built the tables in five minutes</h2>
+      <blockquote>“Five minutes in the run, basically created these database tables.”<span class="cite">00:03:46</span></blockquote>
+      <blockquote>“We didn't tell them to.”<span class="cite">00:03:46</span></blockquote>
+      <p>The lead created a table to announce things, one to assign workers, an open board for notes, a shared to-do list of subtasks, and a log of finished work his slide calls Landed. A chart of the run shows the lead posting to the announce table now and then, assigning helpers to statements in the theorem, and the helpers reading and writing as they go.</p>
+      <blockquote>“So agents now are sufficiently advanced that they can actually build primitives if they need to solve hard problems.”<span class="cite">00:03:46</span></blockquote>
+      <blockquote>“This ran for around 30 hours.”<span class="cite">00:03:46</span></blockquote>
+      <p>For one of the hardest parts of the proof, the team built its own task tree of dependencies.</p>
+      <blockquote>“They actually developed their own abstraction.”<span class="cite">00:03:46</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “the agent created the database tables within 5 minutes, coming up with the coordination”, and “follow up on giving the agent a database to store stuff”. <b>The reading:</b> the database became the team's shared work surface: a message board, a job queue and a log the agents designed for themselves. It's the shape of <a href="../../2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">Lovable's inbox per agent</a> and Yegge's beads, except nobody built it in advance. For the follow-up: what's the minimum shared store, and what should the agent be left to design on top?</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:03:46</p>
+    </section>
+
+    <section data-chapter="thirty-hours" data-visual="v4" data-caption="No human steering">
+      <div class="chapter">The result</div>
+      <h2>Thirty hours, no harness</h2>
+      <p>Over the run the lead and the helpers reallocated themselves across the sixty statements in the proof as each was solved.</p>
+      <blockquote>“So the point of all this is really just to kind of highlight: agents can solve very long horizon problems without much.”<span class="cite">00:05:27</span></blockquote>
+      <p>One note an agent left near the end, as the work was frozen:</p>
+      <blockquote>“Magnificent work all night.”<span class="cite">00:05:27</span></blockquote>
+      <blockquote>“And agents are getting increasingly good at orchestrating themselves.”<span class="cite">00:05:27</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “Magnificent work, all 999 of you.” The recording has “Magnificent work all night”; his post on the run, on the <a href="../links.md">links page</a>, confirms the one lead and 999 helpers. <b>The reading:</b> this sits against <a href="../../2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Steve Yegge's lesson</a> that the more agents he runs, the more people he needs. Here a thousand agents ran thirty hours with no human steering the solution, though with people watching for safety every ten minutes. The difference is the task: a formal proof checks itself in Lean, so the team always knows whether it's right. For a client: does their task have that kind of check?</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:05:27 · Continued in <a href="memory.html">part 2: memory and dreaming</a></p>
+    </section>
+  </main>
+</div>
+<footer class="talk-foot">
+  Part 1 of 2. Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room). Quotes are verbatim from the transcript. “From the notes” and “The reading” are interpretation, not his words. <a href="memory.html">Part 2: memory and dreaming</a>.
+</footer>
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

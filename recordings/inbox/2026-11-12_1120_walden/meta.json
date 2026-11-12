@@ -1,0 +1,23 @@
+{
+  "title": "walden",
+  "recorded_at": "2026-11-12T11:20:34-08:00",
+  "duration_seconds": 830.8,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 2590,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261112 112034.m4a",
+  "audio_sha256": "c1986f358fc419cf01d93f29185e8556bf96bc3367c79ee409eee323bd4dc57c",
+  "exported_at": "2026-11-12T12:54:02-08:00",
+  "transcript_echo_segments": 0,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 2590,
+      "locale": "en_US"
+    }
+  ]
+}

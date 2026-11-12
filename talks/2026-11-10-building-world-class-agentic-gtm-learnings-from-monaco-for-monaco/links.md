@@ -2,8 +2,8 @@
 session_id: "1334565"
 title: "Building World-class Agentic GTM: Learnings from Monaco for Monaco"
 phase: live
-last_checked: 2026-11-10T19:29:03-05:00
-render: 20261110-192903-433767
+last_checked: 2026-11-12T13:24:21-08:00
+render: 20261112-132421-c4d6ee
 ---
 
 # Links: Building World-class Agentic GTM: Learnings from Monaco for Monaco

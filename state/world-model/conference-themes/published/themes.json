@@ -1,43 +1,8 @@
 [
   {
-    "name": "Context for AI",
-    "claim_sentence": "AI does its best work on context people have already curated (the intent captured in a session, modeled data, a map of the database), not on raw systems.",
-    "definition": "George Fraser's companies connect their agents to the same modeled data stack that serves BI, simplify messy data for them, and give them an agent schema as a map. Ankit Jain captures a change's intent and acceptance criteria from the agent session rather than writing specs. Utkarsh Shrivastava calls the AI tool the tip of the iceberg and puts Netflix's lasting investment in the company context beneath it: enterprise skills and MCP servers. In each, the useful input is something a person already shaped. Mihail Eric seeds Monaco's agent memory from sales emails, call transcripts and onboarding context, then promotes what the agents learn back into it. Lauren Tan makes the same point about code: the codebase is the agent's largest input, so whatever patterns it holds, good or bad, are what the next agent copies, and it has to be kept pristine.",
-    "claims": [
-      "1333169-518-138b45",
-      "1334565-623-8c20fa",
-      "1352199-131-92cfb3",
-      "1356697-198-40846e",
-      "1356697-323-cb7c4e",
-      "1356697-678-541d96",
-      "1373446-266-948a25"
-    ],
-    "counter_claims": [],
-    "also_called": [
-      "agent schema",
-      "codebase as input",
-      "company context",
-      "context engineering",
-      "intent",
-      "memory",
-      "reflections",
-      "source of truth"
-    ],
-    "why_uncontested": "No talk argues agents do better on raw systems than on curated context; whether to reach company data through each app is recorded separately as contested.",
-    "theme_id": "context-for-ai",
-    "talk_slugs": [
-      "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
-      "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
-      "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
-      "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai",
-      "2026-11-11-all-code-is-slop-except-mine"
-    ],
-    "talk_count": 5
-  },
-  {
     "name": "Guardrails people own",
     "claim_sentence": "Agents are trusted through guardrails that people own (rules that check their output, scoped access, and a firewall on what goes in and what they do) rather than by people reading what they produce.",
-    "definition": "Ankit Jain mines years of review comments into rules with owners and turns some into deterministic checks, so people own the rules instead of the code. Karan Vaidya gives agents broad but granular access to each app and puts a firewall on both their inputs and their actions. Utkarsh Shrivastava has Netflix's domain teams run a regression eval suite in CI before any new connector or model change, and scales the gate with the stakes, from reads to irreversible writes. All three replace line-by-line supervision with controls a named person or team maintains. Mihail Eric goes further for vertical AI: there is no absolute correctness, so in-house domain experts define what good looks like and evaluations follow them. Lauren Tan puts the most weight on it: on the Grok Bot team every correction to an agent becomes a lint rule, a banned API or a better design, prose rules come last, and code review has shrunk to reading verification artifacts (videos, screenshots, model checks), which is what lets hundreds of pull requests a day land.",
+    "definition": "Ankit Jain mines years of review comments into rules with owners and turns some into deterministic checks, so people own the rules instead of the code. Karan Vaidya gives agents broad but granular access to each app and puts a firewall on both their inputs and their actions. Utkarsh Shrivastava has Netflix's domain teams run a regression eval suite in CI before any new connector or model change, and scales the gate with the stakes, from reads to irreversible writes. All three replace line-by-line supervision with controls a named person or team maintains. Mihail Eric goes further for vertical AI: there is no absolute correctness, so in-house domain experts define what good looks like and evaluations follow them. Lauren Tan puts the most weight on it: on the Grok Bot team every correction to an agent becomes a lint rule, a banned API or a better design, prose rules come last, and code review has shrunk to reading verification artifacts (videos, screenshots, model checks), which is what lets hundreds of pull requests a day land. Overcut gives each narrow agent only the tools and permissions it needs, adds human approval gates where the team wants them, and keeps a full audit trail. Mixedbread carries each document's access rules into the index and makes every search name its user. Ramp attaches the whole agent session to a pull request, so a reviewer checks evidence instead of reading the diff. Steve Yegge's counter-point: an agent yelled at with too many rules fences itself in until nothing gets done. On Nov 12, Michael Liendo (Auth0) scales human-in-the-loop with the stakes: scoped, short-lived credentials from a token store, step-up permissions when a task needs more, out-of-band CIBA approval for high-stakes actions, and virtual cards with limits instead of the real card. Walden Yan's Cognition has agents test in local VMs and send back videos as proof, and Arsalan Bashir (Sentry) gives the agent a cheap deterministic check, such as a dry-run query, so it can iterate and users can trust the result.",
     "claims": [
       "1333169-1038-239cc0",
       "1333169-617-c557b1",
@@ -49,9 +14,25 @@
       "1373446-100-7d4360",
       "1373446-175-e0a5fa",
       "1373446-474-81f378",
-      "1373446-640-c9a528"
+      "1373446-640-c9a528",
+      "1373462-1061-9ed942",
+      "1373464-162-c63dce",
+      "1373464-272-aa838a",
+      "1373464-765-0017d7",
+      "1373470-447-9a4fd2",
+      "1373475-189-fb24f6",
+      "1373475-246-d46686",
+      "1379011-585-587f65",
+      "1379052-124-6f5f01",
+      "1379052-371-c8e43e",
+      "1379052-45-20f87c",
+      "1379052-524-897516",
+      "1379052-769-3e6761",
+      "1379052-956-474b06"
     ],
-    "counter_claims": [],
+    "counter_claims": [
+      "1373471-927-4e21fc"
+    ],
     "also_called": [
       "agent environment",
       "deterministic checks",
@@ -72,18 +53,68 @@
       "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
       "2026-11-10-from-coding-agents-to-knowledge-work-agents",
       "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
-      "2026-11-11-all-code-is-slop-except-mine"
+      "2026-11-11-all-code-is-slop-except-mine",
+      "2026-11-11-how-to-build-agents-over-your-own-data",
+      "2026-11-11-how-to-build-an-agent-that-builds-the-culture",
+      "2026-11-11-the-software-factory-that-needs-zero-fdes",
+      "2026-11-12-a-new-age-of-software-engineering",
+      "2026-11-12-let-the-agent-cook-from-apis-to-answers",
+      "2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter"
     ],
-    "talk_count": 5
+    "talk_count": 11
+  },
+  {
+    "name": "Context for AI",
+    "claim_sentence": "AI does its best work on context people have already curated (the intent captured in a session, modeled data, a map of the database), not on raw systems.",
+    "definition": "George Fraser's companies connect their agents to the same modeled data stack that serves BI, simplify messy data for them, and give them an agent schema as a map. Ankit Jain captures a change's intent and acceptance criteria from the agent session rather than writing specs. Utkarsh Shrivastava calls the AI tool the tip of the iceberg and puts Netflix's lasting investment in the company context beneath it: enterprise skills and MCP servers. In each, the useful input is something a person already shaped. Mihail Eric seeds Monaco's agent memory from sales emails, call transcripts and onboarding context, then promotes what the agents learn back into it. Lauren Tan makes the same point about code: the codebase is the agent's largest input, so whatever patterns it holds, good or bad, are what the next agent copies, and it has to be kept pristine. Aamir Shakir (Mixedbread) puts it as a bottleneck: getting the right data in front of the agent matters more than intelligence. Overcut feeds only the best-scored memories from past runs back as context. Steve Yegge qualifies it: agents never delete, so curated context decays into a garbage dump unless someone prunes it.",
+    "claims": [
+      "1333169-518-138b45",
+      "1334565-623-8c20fa",
+      "1352199-131-92cfb3",
+      "1356697-198-40846e",
+      "1356697-323-cb7c4e",
+      "1356697-678-541d96",
+      "1373446-266-948a25",
+      "1373462-192-123d4f",
+      "1373464-450-887c73"
+    ],
+    "counter_claims": [
+      "1373471-642-0e7cf0"
+    ],
+    "also_called": [
+      "agent schema",
+      "codebase as input",
+      "company context",
+      "context engineering",
+      "intent",
+      "memory",
+      "reflections",
+      "source of truth"
+    ],
+    "why_uncontested": "No talk argues agents do better on raw systems than on curated context; whether to reach company data through each app is recorded separately as contested.",
+    "theme_id": "context-for-ai",
+    "talk_slugs": [
+      "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
+      "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
+      "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
+      "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai",
+      "2026-11-11-all-code-is-slop-except-mine",
+      "2026-11-11-how-to-build-agents-over-your-own-data",
+      "2026-11-11-the-software-factory-that-needs-zero-fdes"
+    ],
+    "talk_count": 7
   },
   {
     "name": "Decision load",
     "claim_sentence": "As agents take over the work, the decisions left to people become the scarce, tiring part, so teams record them, queue them for a person, and keep them few enough to make well.",
-    "definition": "Across the talks, agents do more of the doing and people are left with the deciding. Ankit Jain finds that human review comments were mostly about decisions and has agents argue so the decisions surface and get written down. Karan Vaidya's security agents queue uncertain findings for a person to judge in the morning. Scott Tolinski's survey shows the cost: running many agents multiplies the decisions and wears people out, and fewer agents in parallel helps. Michelle Chen argues the other way: Cloudflare's Clef decision model lets an agent make the call itself, without minutes of LLM reasoning or a human in the loop, so it can run around the clock.",
+    "definition": "Across the talks, agents do more of the doing and people are left with the deciding. Ankit Jain finds that human review comments were mostly about decisions and has agents argue so the decisions surface and get written down. Karan Vaidya's security agents queue uncertain findings for a person to judge in the morning. Scott Tolinski's survey shows the cost: running many agents multiplies the decisions and wears people out, and fewer agents in parallel helps. Michelle Chen argues the other way: Cloudflare's Clef decision model lets an agent make the call itself, without minutes of LLM reasoning or a human in the loop, so it can run around the clock. Steve Yegge finds the more agents he deploys, the more humans he needs, and Simon Willison that the job feels harder because the easy part is handled: it doesn't get easier, you just get faster. Cognition's Android-parity agent ran 44 days with almost no human messages, escalating only the key decisions.",
     "claims": [
       "1333169-29-2579a7",
       "1333169-428-47a134",
       "1341863-116-315efe",
+      "1373471-1206-861644",
+      "1373475-645-4d9b10",
+      "1376191-1064-b2670d",
       "1379134-1190-f34d67",
       "1379134-582-2c9987"
     ],
@@ -92,41 +123,283 @@
     ],
     "also_called": [
       "decision fatigue",
-      "micro decisions",
-      "human judgment"
+      "human judgment",
+      "micro decisions"
     ],
     "why_uncontested": null,
     "theme_id": "decision-load",
     "talk_slugs": [
       "2026-11-10-from-coding-agents-to-knowledge-work-agents",
       "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
-      "2026-11-10-scott-tolinski-co-host-syntax"
+      "2026-11-10-scott-tolinski-co-host-syntax",
+      "2026-11-11-2026-in-llms",
+      "2026-11-11-software-factories-escape-from-trash-mountain",
+      "2026-11-12-a-new-age-of-software-engineering"
     ],
-    "talk_count": 3
+    "talk_count": 6
+  },
+  {
+    "theme_id": "fuel",
+    "name": "Fuel",
+    "claim_sentence": "Token cost is becoming the constraint that separates agent designs: the same answer can cost several times more depending on the harness, the model and how much the agent has to check.",
+    "definition": "Steve Yegge calls every problem a fuel problem: his factory runs on 22 subsidized Max accounts that would cost about $1.5M a year at API prices, and agents that don't trust their environment spend tokens checking it. Philipp Schmid finds harnesses scoring the same at very different cost per task. Cloudflare's System One demo reached the same answer with 94% fewer tokens, Workday's decision model costs about $20 per million judgments, and Natalie Serrino frames faster tokens as a trade against more tokens for the same energy. Simon Willison's Fable-class brute force qualifies it: for a hard enough goal, spending tokens freely is the method. Sentry's leaner tool set cut tokens by 30%.",
+    "claims": [
+      "1323755-813-4aeefc",
+      "1352467-361-55a030",
+      "1373457-846-3555d9",
+      "1373471-562-e5cf37",
+      "1373471-927-4e21fc",
+      "1376198-402-e3e5a3",
+      "1379011-487-832d6c"
+    ],
+    "counter_claims": [
+      "1376191-482-e08b16"
+    ],
+    "also_called": [
+      "cost per task",
+      "every problem is a fuel problem",
+      "loss leader",
+      "token budget",
+      "tokens"
+    ],
+    "talk_slugs": [
+      "2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db",
+      "2026-11-11-cloudflare-is-a-neolab",
+      "2026-11-11-i-deleted-90-of-my-harness-and-it-got-better",
+      "2026-11-11-software-factories-escape-from-trash-mountain",
+      "2026-11-11-what-will-you-build-when-ai-is-10x-faster",
+      "2026-11-12-let-the-agent-cook-from-apis-to-answers"
+    ],
+    "talk_count": 6
+  },
+  {
+    "theme_id": "agent-memory-needs-curating",
+    "name": "Agent memory needs curating",
+    "claim_sentence": "An agent's memory has to be curated, not just accumulated: keep the full history as evidence, but score, prune or re-render what actually reaches the model.",
+    "definition": "Lovable keeps each agent's task history as an append-only, Git-like log and renders a fresh prompt from it for each model. Steve Yegge warns that agents never delete, so their memory becomes a garbage dump that has to be cut back on purpose. Overcut scores memories from past runs and feeds back only the best. Monaco seeds memory from emails and calls and lets a reflection step promote what agents learn. Lance Martin (Anthropic) explains why: agents write memory greedily inside a session, but memory has to be coherent across sessions, so it needs a separate consolidation pass, dreaming, where Claude reviews transcripts and notes, fixes them and builds new representations such as a wiki; on the Stainless corpus the wiki improved with more dreaming tokens and beat semantic search alone. Stronger models also write and read memory better.",
+    "claims": [
+      "1334565-623-8c20fa",
+      "1373464-450-887c73",
+      "1373469-416-4d9fe1",
+      "1373471-642-0e7cf0",
+      "1379010-426-dc1455",
+      "1379010-534-96c71a",
+      "1379010-733-6a4275",
+      "1379010-915-2e0e17"
+    ],
+    "counter_claims": [],
+    "also_called": [
+      "compaction",
+      "garbage dump",
+      "memories",
+      "reflection",
+      "trajectory"
+    ],
+    "why_uncontested": "No talk argues that raw, ever-growing history should go straight into the prompt; how much to keep is recorded as contested.",
+    "talk_slugs": [
+      "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
+      "2026-11-11-software-factories-escape-from-trash-mountain",
+      "2026-11-11-the-software-factory-that-needs-zero-fdes",
+      "2026-11-11-what-it-takes-to-set-intelligence-free",
+      "2026-11-12-exploring-claudes-frontier"
+    ],
+    "talk_count": 5
+  },
+  {
+    "theme_id": "close-the-loop",
+    "name": "Close the loop",
+    "claim_sentence": "Evals before launch are not enough: a production agent needs a loop that watches every run, diagnoses what went wrong, feeds the fix or the lesson back, and checks it held.",
+    "definition": "The Heal Your Agents talk models agent operations on an immune system: watch every session, name the failure, prescribe a fix, and remember it so it doesn't recur, because pre-planned evals can't cover how agents fail at scale. Overcut runs a background retrospective that turns past runs into scored memories. Lovable verifies in two loops, checks within a turn and production and business signals between turns. Brian Kennedy's closing fragment applies it to the judge itself: measure it, and run a second check in shadow mode. Cognition tracks every PR and decision so agents can analyse the record daily and propose improvements to the factory itself.",
+    "claims": [
+      "1373460-1043-a4a30f",
+      "1373460-128-546a47",
+      "1373460-362-b989c0",
+      "1373460-447-f8f2f8",
+      "1373460-530-fec705",
+      "1373460-682-0d8364",
+      "1373464-450-887c73",
+      "1373469-963-64bc48",
+      "1373475-401-995a6a",
+      "1376197-0-389d25",
+      "1376197-0-bab51c"
+    ],
+    "counter_claims": [],
+    "also_called": [
+      "continuous diagnosis",
+      "immune system",
+      "outer loop",
+      "retrospective",
+      "self-improving agents",
+      "shadow mode"
+    ],
+    "why_uncontested": "No talk argues that pre-launch evaluation is enough on its own.",
+    "talk_slugs": [
+      "2026-11-11-heal-your-agents-dont-just-grade-them",
+      "2026-11-11-the-software-factory-that-needs-zero-fdes",
+      "2026-11-11-what-it-takes-to-set-intelligence-free",
+      "2026-11-11-your-judge-is-hallucinating-too",
+      "2026-11-12-a-new-age-of-software-engineering"
+    ],
+    "talk_count": 5
+  },
+  {
+    "theme_id": "less-harness-more-model",
+    "name": "Less harness, more model",
+    "claim_sentence": "Each model generation absorbs work the last harness had to do, so a harness should shrink to a goal, a computer and the few tools the model can't reach itself, and be rebuilt as models improve.",
+    "definition": "Philipp Schmid rebuilds his coding harness every six months and asks what is now overhead: the latest is one bash tool, with the model writing its own inline scripts instead of calling file tools. Steve Yegge sees the same arc in software factories: each model generation builds something slightly too big for itself and the next burns it down. Simon Willison's Fable-class models need only a defined goal and the tools to reach it. Lauren Tan qualifies it: deterministic layers such as types, lint and tests still come first. Arsalan Bashir (Sentry) found pre-classifying intent and pre-fetching schemas narrowed what the model saw and had to be recalibrated each release; stripping to fewer, non-overlapping tools made the agent four times faster on 30% fewer tokens, and the model now writes code against APIs. Lance Martin's thousand Fable 5.2 agents got only git, a SQL database and the problem.",
+    "claims": [
+      "1323755-118-bb478b",
+      "1323755-13-75721a",
+      "1323755-200-b93e9c",
+      "1323755-271-3e68b6",
+      "1323755-699-07a566",
+      "1373471-119-eaec6e",
+      "1376191-482-e08b16",
+      "1379010-126-1d81c9",
+      "1379011-181-ac22a0",
+      "1379011-318-a1f1ea",
+      "1379011-487-832d6c"
+    ],
+    "counter_claims": [
+      "1373446-175-e0a5fa"
+    ],
+    "also_called": [
+      "bash",
+      "bitter lesson",
+      "Fable class",
+      "garbage mountain",
+      "one tool",
+      "rebuild the harness",
+      "the model eats the tool"
+    ],
+    "talk_slugs": [
+      "2026-11-11-2026-in-llms",
+      "2026-11-11-i-deleted-90-of-my-harness-and-it-got-better",
+      "2026-11-11-software-factories-escape-from-trash-mountain",
+      "2026-11-12-exploring-claudes-frontier",
+      "2026-11-12-let-the-agent-cook-from-apis-to-answers"
+    ],
+    "talk_count": 5
+  },
+  {
+    "theme_id": "long-running-agents",
+    "name": "Long-running agents",
+    "claim_sentence": "Agents now run for hours rather than minutes, which moves the engineering into the runtime around them: durable histories, inboxes, checkpointed computers and gates along the way.",
+    "definition": "Lovable went from a 30-minute cap to agents running ten hours or more, with an inbox per agent, stateless processes that survive 700 deploys a day, and computers restored from a golden checkpoint in 230 ms. Overcut runs long ticket-to-PR workflows with human approval gates inserted wherever the team wants them. Simon Willison's game agent ran for twelve hours, playtesting a thousand simulated battles until the game was fun. Cognition's agent kept an Android app at parity with iOS for 44 days, and Lance Martin's agents coordinated a 30-hour proof through tables the lead agent created five minutes in.",
+    "claims": [
+      "1373464-272-aa838a",
+      "1373469-272-593891",
+      "1373469-339-a13b47",
+      "1373469-684-66e4e1",
+      "1373475-645-4d9b10",
+      "1376191-951-dc306a",
+      "1379010-226-013c74"
+    ],
+    "counter_claims": [],
+    "also_called": [
+      "10-hour agents",
+      "agent runtime",
+      "durable execution",
+      "golden checkpoint",
+      "inbox"
+    ],
+    "why_uncontested": "No talk argues agents should stay limited to short runs.",
+    "talk_slugs": [
+      "2026-11-11-2026-in-llms",
+      "2026-11-11-the-software-factory-that-needs-zero-fdes",
+      "2026-11-11-what-it-takes-to-set-intelligence-free",
+      "2026-11-12-a-new-age-of-software-engineering",
+      "2026-11-12-exploring-claudes-frontier"
+    ],
+    "talk_count": 5
   },
   {
     "theme_id": "connecting-is-not-answering",
     "name": "Connecting is not answering",
     "claim_sentence": "Connecting an AI to every source is now cheap, but it does not settle which source answers, so a connection per source produces wrong or conflicting answers unless something decides between them.",
-    "definition": "George Fraser argues that wiring an assistant to each system of record through MCP fails for data questions because it cannot join across sources. Utkarsh Shrivastava reaches the same problem from inside Netflix: every connector is another way for the agent to choose wrong, two correct connectors gave different viewer counts for one event, and MCP made access cheap without settling who owns the answer. Fraser's fix is one modeled store; Shrivastava's is a platform that gates and arbitrates across domain-owned connectors.",
+    "definition": "George Fraser argues that wiring an assistant to each system of record through MCP fails for data questions because it cannot join across sources. Utkarsh Shrivastava reaches the same problem from inside Netflix: every connector is another way for the agent to choose wrong, two correct connectors gave different viewer counts for one event, and MCP made access cheap without settling who owns the answer. Fraser's fix is one modeled store; Shrivastava's is a platform that gates and arbitrates across domain-owned connectors. Aamir Shakir (Mixedbread) adds the search side: with one MCP server per source the agent has to guess which tool holds the answer, inherits each vendor's weak search, and is only as good as the weakest connector; one prepared search layer raised a bank's answer accuracy from about 40% to 97%. Arsalan Bashir (Sentry) lists how one-tool-per-source agents fail, confusing similar tools, looping on pagination and confidently answering wrong over OLAP warehouses, and organises tools by use case with deterministic code handling the differences.",
     "claims": [
       "1352199-280-b314ee",
       "1352199-280-dc0325",
       "1352199-409-a5ad0a",
-      "1356697-424-143e8b"
+      "1356697-424-143e8b",
+      "1373462-128-fdc2fa",
+      "1373462-247-1ab414",
+      "1373462-859-88518e",
+      "1379011-181-475e63",
+      "1379011-92-6a96ca"
     ],
     "counter_claims": [
       "1341863-349-4e2fb1"
     ],
     "also_called": [
-      "source collisions",
       "MCP sprawl",
+      "source collisions",
       "which source answers"
     ],
     "why_uncontested": null,
     "talk_slugs": [
       "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
-      "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai"
+      "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai",
+      "2026-11-11-how-to-build-agents-over-your-own-data",
+      "2026-11-12-let-the-agent-cook-from-apis-to-answers"
+    ],
+    "talk_count": 4
+  },
+  {
+    "theme_id": "decision-models",
+    "name": "Decision models",
+    "claim_sentence": "Small decision models that answer a yes/no, a score or a choice in one fast pass take routine decisions off LLMs and people, cheap enough to run on every agent step, every keystroke and every database row.",
+    "definition": "Michelle Chen's Cloudflare trained its own System One decision model, Clef, in a weekend, so agents stop sending every choice to an LLM. Scott Roberts shows Workday using TypeSafe's Jev the same way: most agent steps are just conditionals, so Jev picks the right UI card as people type, at about $20 per million judgments, and runs as a function inside a DuckDB SQL query, scoring resumes with no embeddings or vector database. Diogo Almeida, who builds Jev, gives the reason: automation needs reliable intelligence, and a reliable decision is a new primitive for software, a fourth logic gate.",
+    "claims": [
+      "1373457-470-b0751b",
+      "1373457-593-2c7665",
+      "1373465-537-5a8f2c",
+      "1373465-732-bab7f8",
+      "1376198-102-7a4ad7",
+      "1376198-37-c38427",
+      "1376198-402-e3e5a3",
+      "1376198-483-4f6d51",
+      "1376198-564-dd06c4"
+    ],
+    "counter_claims": [],
+    "also_called": [
+      "Clef",
+      "decision primitives",
+      "fourth logic gate",
+      "Jev",
+      "reliable intelligence",
+      "smart software",
+      "System One"
+    ],
+    "why_uncontested": "No talk argues that every decision should go to a large model; whether the decision model replaces the person or just the LLM is recorded as contested.",
+    "talk_slugs": [
+      "2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db",
+      "2026-11-11-cloudflare-is-a-neolab",
+      "2026-11-11-i-love-you-so-jevving-much"
+    ],
+    "talk_count": 3
+  },
+  {
+    "theme_id": "ambition-is-the-limit",
+    "name": "Ambition is the limit",
+    "claim_sentence": "Once agents remove the capacity limit, what bounds a team or a person is how ambitious their goals are.",
+    "definition": "Simon Willison made being more ambitious his resolution for the year and calls it the theme of the conference. Walden Yan says the same of Cognition, where merged PRs grew 40x on 2.7x the headcount: set up right, a team's binding constraint is its ambition, not its capacity. Scott Tolinski's survey qualifies it: most developers already feel pressure to produce more simply because AI makes it possible.",
+    "claims": [
+      "1373475-787-092c92",
+      "1376191-118-9e5549"
+    ],
+    "counter_claims": [
+      "1379134-474-13e18f"
+    ],
+    "also_called": [
+      "be more ambitious",
+      "capacity",
+      "the theme of the conference"
+    ],
+    "talk_slugs": [
+      "2026-11-11-2026-in-llms",
+      "2026-11-12-a-new-age-of-software-engineering"
     ],
     "talk_count": 2
   },
@@ -147,18 +420,45 @@
       "1373457-264-90e3f7"
     ],
     "also_called": [
-      "System One",
       "critical path",
       "fast inference",
       "flow state",
       "heterogeneous inference",
       "latency",
-      "small and fast models"
+      "small and fast models",
+      "System One"
     ],
     "why_uncontested": null,
     "talk_slugs": [
       "2026-11-11-cloudflare-is-a-neolab",
       "2026-11-11-what-will-you-build-when-ai-is-10x-faster"
+    ],
+    "talk_count": 2
+  },
+  {
+    "theme_id": "one-shared-agent",
+    "name": "One shared agent",
+    "claim_sentence": "One agent shared across a company, with sessions and traces everyone can see, spreads what works faster than training or each person tuning their own setup.",
+    "definition": "Ramp runs a single Inspect for the whole company: improvements reach everyone invisibly, individual setup costs disappear, and with every session public people learn by watching teammates. Monaco makes agent traces visible to everyone and embeds its best salespeople with the product team, closing the gap between domain experts and the agent.",
+    "claims": [
+      "1334565-1257-ea4867",
+      "1373470-209-0b1546",
+      "1373470-265-1cf324",
+      "1373470-314-c5f871",
+      "1373470-338-9fb10e"
+    ],
+    "counter_claims": [],
+    "also_called": [
+      "Inspect",
+      "kill information silos",
+      "multiplayer",
+      "shared baseline",
+      "work in public"
+    ],
+    "why_uncontested": "No talk argues for each person maintaining a private agent setup.",
+    "talk_slugs": [
+      "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
+      "2026-11-11-how-to-build-an-agent-that-builds-the-culture"
     ],
     "talk_count": 2
   },
@@ -179,10 +479,10 @@
     ],
     "counter_claims": [],
     "also_called": [
-      "vertical AI",
-      "GTM harness",
+      "company context",
       "domain workflows",
-      "company context"
+      "GTM harness",
+      "vertical AI"
     ],
     "why_uncontested": "No talk argues the model or tool is the durable asset; Karan Vaidya's recording, which might have described his harness, misses the part of the talk on it."
   }

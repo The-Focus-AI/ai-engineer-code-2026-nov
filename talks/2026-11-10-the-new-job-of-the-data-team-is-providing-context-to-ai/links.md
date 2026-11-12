@@ -2,8 +2,8 @@
 session_id: "1356697"
 title: "The new job of the data team is providing context to AI"
 phase: live
-last_checked: 2026-11-10T18:20:25-05:00
-render: 20261110-182014-0b317a
+last_checked: 2026-11-12T13:24:21-08:00
+render: 20261112-132421-c4d6ee
 ---
 
 # Links: The new job of the data team is providing context to AI

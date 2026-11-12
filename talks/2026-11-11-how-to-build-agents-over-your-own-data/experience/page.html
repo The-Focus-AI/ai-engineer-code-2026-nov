@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search ahead of the agent · Aamir Shakir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Wed 11 Nov 2026 · Continental 1–3 (Expo Sessions)</div>
+  <h1>Search ahead of the agent</h1>
+  <p class="dek">For agents working on a company's data, the hard part isn't the model, it's getting the right data in front of it. Aamir Shakir's case: searching every source live, one connector per tool, gets worse with every source you add. Index it all ahead of time into one search layer, permissions included, and let the agent search that.</p>
+  <div class="talk-meta">Aamir Shakir, Mixedbread · 16 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="one-mcp-per-tool.jpg" alt="His slide: Today, one MCP server per tool. slack.search checkout latency; linear.search_issues checkout; github.search_code timeout; notion.search checkout runbook; gmail.search payment provider, 429 rate limited. Every tool brings its own search, its own latency and its own rate limits.">
+        <figcaption>His slide, 12:18 pm (straightened from photos/PXL_20261111_201809500.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="weakest-connector.jpg" alt="His slide: You're only as good as your weakest connector. Most MCP servers were built to read data. Search is an afterthought.">
+        <figcaption>His slide, 12:20 pm (straightened from photos/PXL_20261111_202017480.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="one-search-layer.jpg" alt="His slide: One search layer for company knowledge. Slack, Gmail, Google Drive, GitHub, Linear and Notion flow into Mixedbread, parsed, indexed and kept in sync, one search across all of it, then to your agents, which answer, review, investigate and automate.">
+        <figcaption>His slide, 12:22 pm (straightened from photos/PXL_20261111_202234302.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v4">
+        <div class="lbl">Retrieval gets its scaling curve</div>
+        <svg viewBox="0 0 400 230" role="img" aria-label="Retrieval quality over time: nearly flat for decades, which is why agents still use grep and keyword search, then a step up once retrieval models are trained with more data and compute.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <path d="M40 20 V190 H385" stroke="var(--rule)" stroke-width="2" fill="none"/>
+            <text x="16" y="105" fill="var(--muted)" transform="rotate(-90 16 105)" text-anchor="middle">retrieval quality</text>
+            <text x="212" y="215" fill="var(--muted)" text-anchor="middle">time →</text>
+            <path d="M45 160 C 120 156, 200 152, 270 148" stroke="var(--muted)" stroke-width="2.5" fill="none"/>
+            <text x="150" y="176" fill="var(--muted)" font-size="10" text-anchor="middle">decades: grep, keyword search</text>
+            <path d="M270 148 C 300 140, 320 70, 375 45" stroke="var(--accent)" stroke-width="3" fill="none"/>
+            <text x="300" y="38" fill="var(--accent)" font-weight="600" font-size="10" text-anchor="middle">more data + compute</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:09:56; not his chart</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v5">
+        <div class="lbl">Permissions ride along</div>
+        <svg viewBox="0 0 400 240" role="img" aria-label="A source document and its access list are ingested together; the index stores the access list as metadata; an agent searches as a named user; results are filtered to what that user may see.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" text-anchor="middle" font-weight="600">
+            <rect x="10" y="20" width="160" height="48" rx="8" fill="var(--panel)" stroke="var(--rule)"/><text x="90" y="40" fill="var(--ink)">source document</text><text x="90" y="56" fill="var(--muted)" font-size="10" font-weight="400">+ its ACL (e.g. Drive)</text>
+            <path d="M170 44 H220" stroke="var(--accent)" stroke-width="2"/>
+            <rect x="220" y="20" width="170" height="48" rx="8" fill="var(--accent)"/><text x="305" y="40" fill="var(--paper)">one index</text><text x="305" y="56" fill="var(--paper)" font-size="10" font-weight="400">ACL stored as metadata</text>
+            <rect x="10" y="120" width="160" height="48" rx="8" fill="var(--card)" stroke="var(--identity)"/><text x="90" y="140" fill="var(--identity)">agent</text><text x="90" y="156" fill="var(--identity)" font-size="10" font-weight="400">“I'm user X”</text>
+            <path d="M170 144 H220" stroke="var(--identity)" stroke-width="2"/>
+            <rect x="220" y="120" width="170" height="48" rx="8" fill="var(--card)" stroke="var(--rule)"/><text x="305" y="140" fill="var(--ink)">search</text><text x="305" y="156" fill="var(--muted)" font-size="10" font-weight="400">filtered by X's access</text>
+            <path d="M305 68 V120" stroke="var(--accent)" stroke-width="2" stroke-dasharray="4 3"/>
+            <text x="200" y="210" fill="var(--muted)" font-size="10" font-weight="400">only what user X may see comes back</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:06:22 and the Q&amp;A at 00:17:41; not his slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v6">
+        <img src="build-or-buy.jpg" alt="His slide, blurry in the photo: Build it yourself or use Mixedbread. Build it yourself: connectors for every source, permission and sync jobs, parsing and OCR, embeddings, vector database and reranker, an engineer to own it; about $24K or $34K per month and 2 to 3 months to production. Mixedbread: connect your sources, permissions copied automatically, parsing and OCR included, own models and database, one search API; about $2K per month and days to production.">
+        <figcaption>His slide, 12:25 pm, blurry (straightened from photos/PXL_20261111_202529574.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v7">
+        <img src="closing.jpg" alt="His closing slide: Your agent is only as good as what it can find. Aamir Shakir, CEO, Mixedbread, with a QR code.">
+        <figcaption>His closing slide, 12:31 pm (straightened from photos/PXL_20261111_203144669.MP.jpg)</figcaption>
+      </figure>
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+  <main class="talk-copy">
+    <section data-chapter="one-per-tool" data-visual="v1" data-caption="The agent has to guess">
+      <div class="chapter">Today</div>
+      <h2>One connector per tool</h2>
+      <p>His scenario is an on-call engineer at 3 a.m. asking why checkout failed on Tuesday. The usual way to build that agent today is one MCP server or CLI per tool, GitHub, Linear, Datadog, Notion, Slack, handed straight to the agent.</p>
+      <blockquote>“And then your agent has the task to guess, basically, what might be the right tool containing this information.”<span class="cite">00:02:08</span></blockquote>
+      <p>And every tool brings its own search, built by someone else, returning data in whatever format they chose. Each call costs money, adds latency, and hits that service's rate limits; these tools were built for people, not for agents.</p>
+      <div class="reading"><b>From the notes:</b> “get the data into a place where it can search ahead of the mcp search function”. That's his fix in one line: don't let the agent search the sources; search a copy you prepared. It's George Fraser's point from yesterday (<a href="../../2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/experience/page.html">the warehouse is the context</a>), applied to search.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:49, 00:02:08, 00:03:12</p>
+    </section>
+    <section data-chapter="noise" data-visual="v2" data-caption="Context, not intelligence">
+      <div class="chapter">The problem</div>
+      <h2>More sources, more noise</h2>
+      <blockquote>“We always say you are only as good as your data, but in this case, you're only as good as your weakest connector.”<span class="cite">00:04:07</span></blockquote>
+      <p>And it compounds. Real companies don't have five clean SaaS tools; they have legacy Postgres databases, mainframes, data everywhere. His arithmetic: a hundred sources, ten documents pulled from each, five hundred tokens a document, is half a million tokens for one question, and then the agent has to rank documents from different systems against each other.</p>
+      <blockquote>“The answers will get just worse, and so the main bottleneck really becomes context here.”<span class="cite">00:05:00</span></blockquote>
+      <blockquote>“Like getting the right data and access to data is actually the bottleneck, and not intelligence.”<span class="cite">00:03:12</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “more sources, more noise”. The counterintuitive part: adding a source can make the agent worse, because it adds more to sift than it adds signal.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:03:12, 00:04:07, 00:05:00</p>
+    </section>
+    <section data-chapter="one-layer" data-visual="v3" data-caption="Parsed, indexed, kept in sync">
+      <div class="chapter">The fix</div>
+      <h2>One search layer</h2>
+      <p>Mixedbread's answer is connectors that copy everything into one index ahead of time: PDFs, slides, charts and diagrams, in any language, parsed so the model can use them, aware of recency, kept in sync, and carrying each document's access rules. The agent gets one search instead of a tool per source.</p>
+      <p>He frames it as infrastructure: the agent sees everything and contextualizes, then goes deeper into a particular source when a result points there.</p>
+      <blockquote>“Your big fishnet, which we pull it out and then you can sort out what's relevant.”<span class="cite">00:08:13</span></blockquote>
+      <p>Because it's one index, the agent can also follow connections across sources, with a graph tool over the whole index.</p>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:06:22, 00:08:13, 00:11:24</p>
+    </section>
+    <section data-chapter="embeddings" data-visual="v4" data-caption="Their own models">
+      <div class="chapter">The models</div>
+      <h2>Their own embedding models</h2>
+      <p>The search quality comes from models they train themselves.</p>
+      <blockquote>“And we build open source embedding models, and we're one of the best ones.”<span class="cite">00:00:09</span></blockquote>
+      <p>His claim is that retrieval had its own scaling moment. For decades retrieval quality barely moved, which is why agents still lean on grep and keyword search. Mixedbread's result is that retrieval models follow scaling laws too:</p>
+      <blockquote>“meaning the more data and compute you throw at the model, the better it's getting.”<span class="cite">00:09:56</span></blockquote>
+      <p>Their newest model improved ten points on the metric he showed over their previous one.</p>
+      <div class="reading"><b>From the notes:</b> “what are the embedding models that they are using”. Their own. The talk doesn't name the current one; the <a href="../links.md">links page</a> has Mixedbread's post on Wholembed v3, and their OCR post (“The Hidden Ceiling”) on why parsing quality caps retrieval.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:09, 00:09:56</p>
+    </section>
+    <section data-chapter="acl" data-visual="v5" data-caption="Search as a named user">
+      <div class="chapter">The question</div>
+      <h2>Access control rides along</h2>
+      <p>Indexing everything into one place raises the obvious question, asked from the floor after the talk: who gets to see what? When a connector pulls from a source such as Google Drive, it pulls the access list too.</p>
+      <blockquote>“And Mixedbread has this concept of metadata.”<span class="cite">00:17:41</span></blockquote>
+      <p>The access rules are stored as metadata on each document. An agent searching on a person's behalf has to identify them,</p>
+      <blockquote>“they need to authorize say I'm user X.”<span class="cite">00:17:41</span></blockquote>
+      <p>and results are filtered to what that user may see. In the talk itself he puts the ACLs in the connector's job from the start, alongside compliance.</p>
+      <div class="reading"><b>From the notes:</b> “look into how they do the acl and the other access control for ingesting”. The answer has two parts: carry the source's permissions in as metadata at ingestion, and make every search name the user it's for. The recorded answer is brief and partly garbled, so the mechanics (how often permissions resync, what happens when access is revoked) are still worth the follow-up.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:06:22, 00:17:41</p>
+    </section>
+    <section data-chapter="rebuild" data-visual="v6" data-caption="The parts list">
+      <div class="chapter">Build or buy</div>
+      <h2>Should we rebuild it?</h2>
+      <p>His build-or-buy pitch: building this yourself means ingestion pipelines, OCR and parsing, the access-control plumbing, and handling every data type, before you get to the agent.</p>
+      <blockquote>“Without having to deal with all this overhead of building ingestion pipelines”<span class="cite">00:07:12</span></blockquote>
+      <p>The transcript garbles his figures; his slide is clearer, though the photo is blurry. As far as it shows, building it yourself means connectors for every source, permission and sync jobs, parsing and OCR, embeddings with a vector database and reranker, and an engineer to own it: tens of thousands of dollars a month (the figure reads as about $24K or $34K) and two to three months to production. Mixedbread's column: about $2K a month, and days.</p>
+      <div class="reading"><b>From the notes:</b> “i think we should rebuild mixedbread”. The slide is the parts list for doing that: connectors per source, parsing and OCR for every format, embedding models, ACL metadata, a sync loop to keep it current, and one search API with a graph over it. It's the search half of your service idea from Fraser's talk yesterday: extract into a lakehouse, build on top.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:07:12, 00:08:59</p>
+    </section>
+    <section data-chapter="results" data-visual="v7" data-caption="Only as good as what it can find">
+      <div class="chapter">The result</div>
+      <h2>What it buys</h2>
+      <p>Answers trace back to their source, which matters when the answer feeds a financial or legal decision.</p>
+      <blockquote>“You can always type back exactly to the source”<span class="cite">00:12:15</span></blockquote>
+      <p>And in a bank case study he says publishes in two days, answer accuracy rose from about 40 percent to 97 percent; staff stopped triple-checking answers, and API errors halved.</p>
+      <blockquote>“The answer accuracy jumped from very forty percent to ninety-seven percent”<span class="cite">00:14:19</span></blockquote>
+      <div class="reading"><b>The reading:</b> this is the data layer of <a href="../../../atlases/own-the-stack/page.html">own the stack</a>. Fraser says own the warehouse; Shakir says own the search index over it, with the permissions inside. Both say the same thing about agents: don't make them query the world live, one connector at a time. For a client, the question is which of their agents are still guessing which tool to call. <b>From the notes:</b> “follow up on mixedbread”: the case study and the posts are on the <a href="../links.md">links page</a>.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:12:15, 00:14:19</p>
+    </section>
+  </main>
+</div>
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room). The transcript garbles the company name and most figures; garbled figures are left out, and the cost figures come from his slide. Quotes are verbatim from the transcript. “From the notes” and “The reading” are interpretation, not his words; the two drawn diagrams are illustrative. More on the <a href="../links.md">links page</a>.
+</footer>
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

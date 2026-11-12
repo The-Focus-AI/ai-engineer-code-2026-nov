@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Understood backwards · Lance Martin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Thu 12 Nov 2026 · Continental 4–6 (Mainstage) · Part 2 of 2</div>
+  <h1>Understood backwards, lived forwards</h1>
+  <p class="dek">An agent writes memory as it works, one session at a time, but memory is only useful if it makes sense as a whole. Anthropic's answer borrows from sleep: a separate pass, dreaming, where Claude reviews its transcripts and notes, fixes what's wrong, and builds better representations, such as a wiki, that load into the next session.</p>
+  <div class="talk-meta">Lance Martin, Anthropic · last 11 min of an 18-min talk · <a href="page.html">Part 1: a thousand agents</a> · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+      <figure class="talk-visual quote-card" data-visual="v1">
+        <p class="quote-big">“So life can only be understood backwards, but it must be lived forwards.”<span>Kierkegaard, quoted by Lance Martin · 00:07:06</span></p>
+      </figure>
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="pokemon.jpg" alt="His slide: the memory directories of Claude Sonnet 3.7 and Claude Fable 5 from playing Pokémon, as treemaps at the same scale with area proportional to characters of memory. Sonnet 3.7: 413 files, 977,930 characters, a sprawling map of directories such as main, locations, battles, consolidated, core and many small ones, many named like fresh starts or new canonical knowledge bases, one alarm-named. Fable 5: 10 files, 43,406 characters, a small square of locations, gameplay and global.md.">
+        <figcaption>His slide, 12:47 pm (straightened from photos/PXL_20261112_204747489.MP.jpg)</figcaption>
+      </figure>
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="dreaming.jpg" alt="His slide: Dreaming. Between one session and the next, four layers: transcripts, a searchable event log; memory notes, salient observations written by Claude; memory representations, computed from transcripts and notes, such as wikis; injected context, memory loaded into every session. Arrows run up from transcripts through each layer and into the next session.">
+        <figcaption>His slide, 12:48 pm (straightened from photos/PXL_20261112_204832330.MP.jpg)</figcaption>
+      </figure>
+      <figure class="talk-visual quote-card" data-visual="v4">
+        <p class="quote-big">“The key idea is a poison memory is injected and it's stuck there.”<span>Lance Martin · 00:13:42</span></p>
+      </figure>
+      <figure class="talk-visual diagram-card" data-visual="v5">
+        <div class="lbl">Answering 25 questions about Stainless</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Illustrative chart. Search alone answers about 53 percent of the questions. A wiki Claude built rises as more dreaming tokens are spent. Wiki plus search does best. Only the 53 percent figure is from the talk; the other bars show direction, not values.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <line x1="40" y1="20" x2="40" y2="200" stroke="var(--rule)"/>
+            <line x1="40" y1="200" x2="390" y2="200" stroke="var(--rule)"/>
+            <rect x="60" y="105" width="50" height="95" fill="var(--rule)"/>
+            <text x="85" y="98" fill="var(--ink)" text-anchor="middle" font-weight="600">53%</text>
+            <text x="85" y="218" fill="var(--muted)" text-anchor="middle" font-size="10">search</text>
+            <rect x="140" y="140" width="40" height="60" fill="var(--accent)" opacity=".45"/>
+            <rect x="190" y="110" width="40" height="90" fill="var(--accent)" opacity=".7"/>
+            <rect x="240" y="80" width="40" height="120" fill="var(--accent)"/>
+            <text x="210" y="218" fill="var(--muted)" text-anchor="middle" font-size="10">wiki, more dreaming tokens →</text>
+            <rect x="310" y="55" width="50" height="145" fill="var(--identity)"/>
+            <text x="335" y="218" fill="var(--muted)" text-anchor="middle" font-size="10">wiki + search</text>
+            <text x="200" y="242" fill="var(--muted)" text-anchor="middle" font-size="10">illustrative: only 53% is from the talk</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:15:15; not his chart</figcaption>
+      </figure>
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+  <main class="talk-copy">
+    <section data-chapter="paradox" data-visual="v1" data-caption="Two jobs, two times">
+      <div class="chapter">The problem</div>
+      <h2>The paradox of agent memory</h2>
+      <blockquote>“So life can only be understood backwards, but it must be lived forwards.”<span class="cite">00:07:06</span></blockquote>
+      <blockquote>“This is a fundamental paradox of agent memory because agents write memory typically as they go about a task.”<span class="cite">00:07:06</span></blockquote>
+      <p>An agent notices something important and writes it down for the task at hand. But memory has to be a coherent map later sessions can rely on:</p>
+      <blockquote>“But memory needs to be something that's globally coherent and not redundant.”<span class="cite">00:07:06</span></blockquote>
+      <p>Humans have the same problem. During the day we form short-term memories; at night, it's believed, the hippocampus replays them to the neocortex, consolidating what matters into long-term knowledge.</p>
+      <blockquote>“And we found agents can benefit from the same decomposition.”<span class="cite">00:07:06</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “life can only be understood backwards, but it must be lived forwards”, the second time this week; the first was <a href="../../2026-11-11-cloudflare-is-a-neolab/experience/page.html">Michelle Chen's Cloudflare talk</a>. Here it carries the argument: writing memory and making sense of it are two jobs, and they should run at different times.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:07:06</p>
+    </section>
+
+    <section data-chapter="better-models" data-visual="v2" data-caption="Instinct for salience">
+      <div class="chapter">The evidence</div>
+      <h2>Better models use memory better</h2>
+      <p>On a benchmark of forty questions about a database, each in a fresh session, Claude can write to a memory directory in between. The only instruction:</p>
+      <blockquote>“It just tells the agent the directory is available.”<span class="cite">00:08:54</span></blockquote>
+      <p>Older models barely benefit. Stronger ones gain much more from the same instruction:</p>
+      <blockquote>“They know intrinsically when to write to memory, and they kind of know intrinsically when to read from memory to retrieve information.”<span class="cite">00:08:54</span></blockquote>
+      <p>Pokémon makes it visible. Claude 3.7's memory directory is enormous and indiscriminate:</p>
+      <blockquote>“It creates this huge, unwieldy, just disgusting memory directory of things that are not really relevant or.”<span class="cite">00:10:40</span></blockquote>
+      <p>Fable 5's is small and strategic, and it gets much further in the game. On his slide: 413 files and 977,930 characters against 10 files and 43,406.</p>
+      <blockquote>“So what we see is better models are much have much better instincts for salience.”<span class="cite">00:10:40</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “Claude is getting better at reading and writing memory than it used to be.” <b>The reading:</b> the memory version of “Less harness, more model”: the memory system is just a folder; what improved is the model's judgment about what belongs in it.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:08:54, 00:10:40</p>
+    </section>
+
+    <section data-chapter="dreaming" data-visual="v3" data-caption="Between sessions">
+      <div class="chapter">The mechanism</div>
+      <h2>Dreaming</h2>
+      <p>Both examples are memory written during the work. Dreaming is a separate pass over everything stored.</p>
+      <blockquote>“Transcripts you think about as kind of foundational.”<span class="cite">00:12:13</span></blockquote>
+      <p>A memory system could be just transcript search, but transcripts are large and most of what's in them doesn't matter. Memory notes are the next layer. Dreaming works on both:</p>
+      <blockquote>“Dreaming lets you reflect over transcripts and these written notes, and re-represent them.”<span class="cite">00:12:13</span></blockquote>
+      <p>It can build new representations, such as wikis, and promote certain memories into context that loads into every future session.</p>
+      <div class="reading"><b>From the notes:</b> “I want to know what dreaming tokens are” and “follow up on building memory from session transcripts”. This answers both: dreaming is a compute pass that reads transcripts and notes and writes better memory, and dreaming tokens are what it spends. <b>The reading:</b> it automates what <a href="../../2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Steve Yegge</a> does by hand when agent memory becomes a garbage dump, and it completes <a href="../../2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">Lovable's</a> design: keep the full log as evidence, render what reaches the model.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:12:13</p>
+    </section>
+
+    <section data-chapter="poison" data-visual="v4" data-caption="Rescue from a bad note">
+      <div class="chapter">Correction</div>
+      <h2>Dreaming fixes poisoned memory</h2>
+      <p>Playing Pokémon, Claude wrote down the wrong location for a landmark. From then on it mislocalized itself, fell through a trapdoor back to the ground floor, and repeated the loop.</p>
+      <blockquote>“The key idea is a poison memory is injected and it's stuck there.”<span class="cite">00:13:42</span></blockquote>
+      <blockquote>“Dreaming can rescue that.”<span class="cite">00:13:42</span></blockquote>
+      <p>Without dreaming, progress crashes at that point; with it, Claude corrects the note and carries on. The same pass fills gaps: a wiki Claude built had placeholder pages that didn't exist, and after dreaming they were filled and an index created.</p>
+      <blockquote>“Dream is a way that Claude can reflect and kind of apply compute across its memory to improve it.”<span class="cite">00:17:09</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:13:42, 00:17:09</p>
+    </section>
+
+    <section data-chapter="wiki" data-visual="v5" data-caption="More dreaming, better wiki">
+      <div class="chapter">Representation</div>
+      <h2>A wiki from a corpus</h2>
+      <p>Anthropic acquired Stainless in May; from its documents and Slack messages, anonymized, they built 25 questions only that corpus can answer. Plain semantic search does reasonably well:</p>
+      <blockquote>“You can see it's like 53 percent, just for search.”<span class="cite">00:15:15</span></blockquote>
+      <p>Then they let Claude build a wiki from the corpus.</p>
+      <blockquote>“You can see as you push, you add more and more dreaming tokens.”<span class="cite">00:15:15</span></blockquote>
+      <blockquote>“The wiki gets better and better and better, allowing Claude answers questions.”<span class="cite">00:15:15</span></blockquote>
+      <blockquote>“We also find that adding the wiki and the search tool together actually bumps further beyond just raw.”<span class="cite">00:15:15</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “wiki and data from memory”. <b>The reading:</b> for a client with a pile of documents, tickets and chat history, don't stop at search. Let a model spend compute building a structured map of the corpus, keep search alongside it, and rerun the consolidation as the corpus grows. It's a third answer beside <a href="../../2026-11-11-how-to-build-agents-over-your-own-data/experience/page.html">Mixedbread's</a> index everything ahead of time and <a href="../../2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/story.md">Workday's</a> judge every row: the model writes its own map of the knowledge. His post “The components of agent memory” is on the <a href="../links.md">links page</a>.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:15:15 · Back to <a href="page.html">part 1: a thousand agents</a></p>
+    </section>
+  </main>
+</div>
+<footer class="talk-foot">
+  Part 2 of 2. Built from <a href="../story-memory.md">the memory story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room). Quotes are verbatim from the transcript. “From the notes” and “The reading” are interpretation, not his words; the drawn chart is illustrative. <a href="page.html">Part 1: a thousand agents</a>.
+</footer>
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

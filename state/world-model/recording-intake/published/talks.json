@@ -1,4 +1,38 @@
 {
+  "1323755": {
+    "slug": "2026-11-11-i-deleted-90-of-my-harness-and-it-got-better",
+    "path": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/transcript.md",
+    "title": "I deleted 90% of my harness (And It Got Better)",
+    "speakers": [
+      {
+        "name": "Philipp Schmid",
+        "affiliation": "Google DeepMind"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-11T11:20:00-08:00",
+    "source_recording": "2026-11-11_1120_Phillip-DeepMind",
+    "sections": [
+      "00:00:00 — Opening",
+      "00:00:13 — The bitter lesson",
+      "00:00:41 — Six months of shipping",
+      "00:01:29 — The Gemini Decisions API",
+      "00:01:58 — How models learn agentic work",
+      "00:02:31 — Dedicated tools versus one bash script",
+      "00:03:20 — Rebuilding the harness every six months",
+      "00:04:31 — One tool: Bash",
+      "00:06:11 — Shrinking system prompts",
+      "00:06:44 — How much of the harness helps?",
+      "00:07:44 — Score, tokens and cost",
+      "00:09:37 — Demos: Flash and Carbon",
+      "00:11:39 — Better models chain more commands",
+      "00:13:33 — Fewer tokens per task",
+      "00:14:23 — What comes next: code mode and MCP",
+      "00:15:25 — Takeaways"
+    ],
+    "word_count": 2859,
+    "cleaned_at": "2026-11-11T16:09:53-08:00"
+  },
   "1333169": {
     "slug": "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
     "path": "talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/transcript.md",
@@ -113,6 +147,36 @@
     "word_count": 4022,
     "cleaned_at": "2026-11-10T18:32:00-05:00"
   },
+  "1352467": {
+    "slug": "2026-11-11-what-will-you-build-when-ai-is-10x-faster",
+    "path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/transcript.md",
+    "title": "What Will You Build When AI Is 10x Faster?",
+    "speakers": [
+      {
+        "name": "Natalie Serrino",
+        "affiliation": "Gimlet Labs"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-11T09:10:00-08:00",
+    "source_recording": "2026-11-11_0911_Natalie-Serrino",
+    "sections": [
+      "00:00:16 — Opening",
+      "00:01:02 — Isn't inference already fast enough?",
+      "00:02:57 — Lessons from the web era",
+      "00:06:01 — More tokens versus faster tokens",
+      "00:06:33 — The Token Mint Factory game",
+      "00:08:06 — The right accelerator for the right job",
+      "00:09:43 — Demo: building Snake",
+      "00:10:37 — When tool calls become the bottleneck",
+      "00:11:38 — Self-optimizing inference",
+      "00:12:18 — Demo: a defender on the critical path",
+      "00:15:11 — What does faster unlock?",
+      "00:16:59 — Closing"
+    ],
+    "word_count": 3208,
+    "cleaned_at": "2026-11-11T11:01:36-08:00"
+  },
   "1356697": {
     "slug": "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai",
     "path": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/transcript.md",
@@ -144,68 +208,32 @@
     "word_count": 4234,
     "cleaned_at": "2026-11-10T18:17:50-05:00"
   },
-  "1379134": {
-    "slug": "2026-11-10-scott-tolinski-co-host-syntax",
-    "path": "talks/2026-11-10-scott-tolinski-co-host-syntax/transcript.md",
-    "title": "The True Cost of AI Coding",
+  "1373446": {
+    "slug": "2026-11-11-all-code-is-slop-except-mine",
+    "path": "talks/2026-11-11-all-code-is-slop-except-mine/transcript.md",
+    "title": "All Code Is Slop (Except Mine)",
     "speakers": [
       {
-        "name": "Scott Tolinski",
-        "affiliation": "Syntax"
-      }
-    ],
-    "room_id": "continental-13-workshop-room-1",
-    "starts_at": "2026-11-10T10:10:00-08:00",
-    "source_recording": "2026-11-10_1009_Scott-Tolinski",
-    "sections": [
-      "00:00:03 — Introduction",
-      "00:01:23 — Disclaimer and backstory",
-      "00:03:25 — A viral tweet",
-      "00:04:22 — The survey",
-      "00:04:51 — Prompting past quitting time",
-      "00:06:05 — Sleep",
-      "00:06:32 — A variable reward",
-      "00:07:54 — Pressure to produce more",
-      "00:09:42 — Running many agents",
-      "00:12:11 — Enjoyment",
-      "00:14:00 — Skills sharpening or diminishing",
-      "00:17:50 — What do we do about it",
-      "00:19:50 — Less parallelization",
-      "00:20:46 — Go outside",
-      "00:21:48 — Checking agents from your phone",
-      "00:23:08 — Closing"
-    ],
-    "word_count": 4075,
-    "cleaned_at": "2026-11-10T14:34:02-05:00"
-  },
-  "1352467": {
-    "slug": "2026-11-11-what-will-you-build-when-ai-is-10x-faster",
-    "path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/transcript.md",
-    "title": "What Will You Build When AI Is 10x Faster?",
-    "speakers": [
-      {
-        "name": "Natalie Serrino",
-        "affiliation": "Gimlet Labs"
+        "name": "Lauren Tan",
+        "affiliation": "SpaceXSI (xAI)"
       }
     ],
     "room_id": "continental-46-mainstage",
-    "starts_at": "2026-11-11T09:10:00-08:00",
-    "source_recording": "2026-11-11_0911_Natalie-Serrino",
+    "starts_at": "2026-11-11T10:10:00-08:00",
+    "source_recording": "2026-11-11_1000_lauren-tan",
     "sections": [
-      "00:00:16 — Opening",
-      "00:01:02 — Isn't inference already fast enough?",
-      "00:02:57 — Lessons from the web era",
-      "00:06:01 — More tokens versus faster tokens",
-      "00:06:33 — The Token Mint Factory game",
-      "00:08:06 — The right accelerator for the right job",
-      "00:09:43 — Demo: building Snake",
-      "00:10:37 — When tool calls become the bottleneck",
-      "00:11:38 — Self-optimizing inference",
-      "00:12:18 — Demo: a defender on the critical path",
-      "00:15:11 — What does faster unlock?",
-      "00:16:59 — Closing"
+      "00:00:00 — Introduction",
+      "00:01:40 — Coding machines and trust",
+      "00:02:55 — From low trust to high trust",
+      "00:04:26 — The codebase as a garden",
+      "00:05:56 — Dune and organic architecture",
+      "00:07:54 — Agents and markdown",
+      "00:10:40 — Verification",
+      "00:12:50 — Where the tokens go",
+      "00:14:22 — The promised land",
+      "00:16:10 — Before you build a software factory"
     ],
-    "word_count": 3208,
+    "word_count": 2756,
     "cleaned_at": "2026-11-11T11:01:36-08:00"
   },
   "1373457": {
@@ -240,32 +268,489 @@
     "word_count": 3887,
     "cleaned_at": "2026-11-11T11:01:36-08:00"
   },
-  "1373446": {
-    "slug": "2026-11-11-all-code-is-slop-except-mine",
-    "path": "talks/2026-11-11-all-code-is-slop-except-mine/transcript.md",
-    "title": "All Code Is Slop (Except Mine)",
+  "1373460": {
+    "slug": "2026-11-11-heal-your-agents-dont-just-grade-them",
+    "path": "talks/2026-11-11-heal-your-agents-dont-just-grade-them/transcript.md",
+    "title": "Heal Your Agents, Don't Just Grade Them",
     "speakers": [
       {
-        "name": "Lauren Tan",
-        "affiliation": "SpaceXSI (xAI)"
+        "name": "Khasimul Asif Mohammad",
+        "affiliation": "Splunk"
+      },
+      {
+        "name": "Sudhir Tonse",
+        "affiliation": "Splunk"
+      }
+    ],
+    "room_id": "continental-13-expo-sessions",
+    "starts_at": "2026-11-11T11:45:00-08:00",
+    "source_recording": "2026-11-11_1148_Heal-your-agents",
+    "sections": [
+      "00:00:04 — Opening",
+      "00:01:04 — Introductions",
+      "00:01:42 — Evaluating agents",
+      "00:02:08 — Observe, then act",
+      "00:03:19 — LLMs as judges",
+      "00:04:28 — Sessions, traces and spans",
+      "00:04:55 — The journey to signals",
+      "00:06:02 — Why regular evals are not enough",
+      "00:07:27 — The immune system as inspiration",
+      "00:08:50 — What customers asked for next",
+      "00:10:14 — Continuous detection across sessions",
+      "00:10:56 — A taxonomy of failures",
+      "00:11:22 — Recommendations and remembering",
+      "00:12:42 — A customer story",
+      "00:13:42 — Demo",
+      "00:16:29 — What the demo showed",
+      "00:17:23 — Why not just use an LLM?",
+      "00:18:24 — What's next",
+      "00:19:48 — Takeaways",
+      "00:21:30 — Closing and after the talk"
+    ],
+    "word_count": 3277,
+    "cleaned_at": "2026-11-11T16:09:53-08:00"
+  },
+  "1373462": {
+    "slug": "2026-11-11-how-to-build-agents-over-your-own-data",
+    "path": "talks/2026-11-11-how-to-build-agents-over-your-own-data/transcript.md",
+    "title": "How to build agents over your own data",
+    "speakers": [
+      {
+        "name": "Aamir Shakir",
+        "affiliation": "Mixedbread"
+      }
+    ],
+    "room_id": "continental-13-expo-sessions",
+    "starts_at": "2026-11-11T12:10:00-08:00",
+    "source_recording": "2026-11-11_1215_Aamir-Shakir",
+    "sections": [
+      "00:00:09 — Introduction",
+      "00:01:49 — A 3 a.m. incident",
+      "00:02:08 — One tool per source",
+      "00:03:12 — Cost, latency and rate limits",
+      "00:04:07 — Only as good as your weakest connector",
+      "00:05:00 — More sources, more noise",
+      "00:06:22 — One index for everything",
+      "00:07:12 — Why not build it yourself?",
+      "00:08:13 — Search as infrastructure",
+      "00:08:59 — What it costs",
+      "00:09:56 — Retrieval quality and scaling laws",
+      "00:11:24 — How an agent searches",
+      "00:12:15 — Demo",
+      "00:14:19 — A bank case study",
+      "00:15:23 — Wrap-up",
+      "00:15:43 — After the talk",
+      "00:17:41 — A question on access control"
+    ],
+    "word_count": 2793,
+    "cleaned_at": "2026-11-11T16:09:53-08:00"
+  },
+  "1373464": {
+    "slug": "2026-11-11-the-software-factory-that-needs-zero-fdes",
+    "path": "talks/2026-11-11-the-software-factory-that-needs-zero-fdes/transcript.md",
+    "title": "The Software Factory That Needs Zero FDEs",
+    "speakers": [
+      {
+        "name": "Raz Berman Gold",
+        "affiliation": "Overcut"
+      }
+    ],
+    "room_id": "continental-13-expo-sessions",
+    "starts_at": "2026-11-11T12:35:00-08:00",
+    "source_recording": "2026-11-11_1236_overcut",
+    "sections": [
+      "00:00:00 — What Overcut is",
+      "00:00:19 — The FDE problem",
+      "00:00:56 — Built on what you already run",
+      "00:01:31 — Governance in one place",
+      "00:01:56 — Configuration and integrations",
+      "00:02:42 — Building blocks and agents",
+      "00:03:36 — Workflows and playbooks",
+      "00:04:32 — Ticket to PR",
+      "00:05:49 — A run, step by step",
+      "00:07:30 — Retrospectives and memory",
+      "00:08:43 — Q&A: scoring memories",
+      "00:10:03 — Q&A: orchestration and memories",
+      "00:11:25 — Q&A: evaluation, sharing and permissions",
+      "00:12:45 — Q&A: governance, limits and audit",
+      "00:16:53 — Q&A: remediation",
+      "00:17:17 — Build your own factory",
+      "00:18:41 — Closing and after the talk"
+    ],
+    "word_count": 2646,
+    "cleaned_at": "2026-11-11T16:09:53-08:00"
+  },
+  "1373465": {
+    "slug": "2026-11-11-i-love-you-so-jevving-much",
+    "path": "talks/2026-11-11-i-love-you-so-jevving-much/transcript.md",
+    "title": "I love you so jevving much",
+    "speakers": [
+      {
+        "name": "Diogo Almeida",
+        "affiliation": "TypeSafe AI"
       }
     ],
     "room_id": "continental-46-mainstage",
-    "starts_at": "2026-11-11T10:10:00-08:00",
-    "source_recording": "2026-11-11_1000_lauren-tan",
+    "starts_at": "2026-11-11T14:05:00-08:00",
+    "source_recording": "2026-11-11_1406_diogo",
     "sections": [
       "00:00:00 — Introduction",
-      "00:01:40 — Coding machines and trust",
-      "00:02:55 — From low trust to high trust",
-      "00:04:26 — The codebase as a garden",
-      "00:05:56 — Dune and organic architecture",
-      "00:07:54 — Agents and markdown",
-      "00:10:40 — Verification",
-      "00:12:50 — Where the tokens go",
-      "00:14:22 — The promised land",
-      "00:16:10 — Before you build a software factory"
+      "00:00:37 — Where is all the automation?",
+      "00:01:26 — The two cults of AI",
+      "00:02:29 — Why is AI jagged?",
+      "00:03:24 — Human in the loop, by design",
+      "00:04:15 — RLHF and the assistance trap",
+      "00:05:30 — Rethinking how AI is done",
+      "00:06:05 — The bitterest lesson: doing the right task",
+      "00:08:04 — What instruction following showed",
+      "00:08:57 — Reliable intelligence",
+      "00:10:25 — Smart software",
+      "00:11:32 — LLM Stockholm syndrome",
+      "00:12:12 — The blue LED",
+      "00:14:32 — Software research",
+      "00:15:50 — Ideas: rethinking agents",
+      "00:17:20 — Ideas: principal-agent problems",
+      "00:18:11 — Ideas: real-time security, types and interfaces",
+      "00:19:45 — The root of slop",
+      "00:20:25 — Cursed software and automating everything",
+      "00:21:07 — What couldn't we automate?",
+      "00:21:57 — Thanks"
     ],
-    "word_count": 2756,
-    "cleaned_at": "2026-11-11T11:01:36-08:00"
+    "word_count": 4605,
+    "cleaned_at": "2026-11-11T18:23:47-08:00"
+  },
+  "1373469": {
+    "slug": "2026-11-11-what-it-takes-to-set-intelligence-free",
+    "path": "talks/2026-11-11-what-it-takes-to-set-intelligence-free/transcript.md",
+    "title": "What it takes to set intelligence free",
+    "speakers": [
+      {
+        "name": "Fabian Hedin",
+        "affiliation": "Lovable"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-11T16:30:00-08:00",
+    "source_recording": "2026-11-11_1629_Lovable",
+    "sections": [
+      "00:00:00 — Agents are back",
+      "00:00:42 — What is Lovable?",
+      "00:02:04 — Outcomes, not code",
+      "00:02:29 — The platform: agent, cloud and business",
+      "00:04:32 — From a time limit to 10 hours",
+      "00:05:00 — Three pieces of the architecture",
+      "00:05:39 — The agent runtime: an inbox per agent",
+      "00:06:56 — A trajectory modelled on Git",
+      "00:08:00 — Separating the prompt from the task history",
+      "00:09:11 — Demo: the debug tool",
+      "00:09:49 — A stateless process",
+      "00:11:24 — The computer: golden checkpoints",
+      "00:13:02 — Forking computers",
+      "00:13:38 — Copy-on-write and streamed memory",
+      "00:14:48 — Rewriting the dev server in Rust",
+      "00:16:03 — Verification: inner and outer loops",
+      "00:17:54 — Wrap-up"
+    ],
+    "word_count": 3292,
+    "cleaned_at": "2026-11-11T18:23:47-08:00"
+  },
+  "1373470": {
+    "slug": "2026-11-11-how-to-build-an-agent-that-builds-the-culture",
+    "path": "talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/transcript.md",
+    "title": "How to build an agent that builds the culture",
+    "speakers": [
+      {
+        "name": "Zach Bruggeman",
+        "affiliation": "Ramp"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-11T16:50:00-08:00",
+    "source_recording": "2026-11-11_1648_Zach-Bruggeman",
+    "sections": [
+      "00:00:00 — Before the talk",
+      "00:01:26 — Introduction: Inspect at Ramp",
+      "00:02:55 — The culture angle",
+      "00:03:29 — The cost of everyone tuning their own setup",
+      "00:04:25 — Lesson one: build tools and kill information silos",
+      "00:05:14 — One Inspect for the whole company",
+      "00:05:38 — Learning by working in public",
+      "00:06:44 — Lesson two: building trust",
+      "00:07:27 — Sessions as living artifacts"
+    ],
+    "word_count": 1376,
+    "cleaned_at": "2026-11-11T18:23:47-08:00"
+  },
+  "1373471": {
+    "slug": "2026-11-11-software-factories-escape-from-trash-mountain",
+    "path": "talks/2026-11-11-software-factories-escape-from-trash-mountain/transcript.md",
+    "title": "Software Factories: Escape from Trash Mountain",
+    "speakers": [
+      {
+        "name": "Steve Yegge",
+        "affiliation": "Independent"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-11T17:10:00-08:00",
+    "source_recording": "2026-11-11_1706_Steve-Yegge",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:00:24 — Inventing software factories",
+      "00:01:22 — Two orchestrators and the bitter lesson",
+      "00:01:59 — Every factory turns to garbage",
+      "00:03:10 — The game",
+      "00:03:49 — The alien face hugger pattern",
+      "00:04:55 — Overwhelming the players",
+      "00:06:01 — This is my factory",
+      "00:06:40 — 22 Max accounts",
+      "00:07:28 — The five horsemen",
+      "00:08:10 — Work",
+      "00:09:22 — Fuel",
+      "00:10:42 — Context management",
+      "00:12:07 — Agents named after Aesop's fables",
+      "00:12:55 — Agents act like people",
+      "00:14:28 — The chief of staff",
+      "00:15:27 — Model welfare",
+      "00:18:50 — Two layers of software factories",
+      "00:20:06 — Takeaways"
+    ],
+    "word_count": 3950,
+    "cleaned_at": "2026-11-11T18:23:47-08:00"
+  },
+  "1373475": {
+    "slug": "2026-11-12-a-new-age-of-software-engineering",
+    "path": "talks/2026-11-12-a-new-age-of-software-engineering/transcript.md",
+    "title": "A New Age of Software Engineering",
+    "speakers": [
+      {
+        "name": "Walden Yan",
+        "affiliation": "Cognition"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-12T11:20:00-08:00",
+    "source_recording": "2026-11-12_1120_walden",
+    "sections": [
+      "00:00:00 — Introduction: 40x merged PRs",
+      "00:01:18 — The software factory",
+      "00:01:48 — A new role for engineers",
+      "00:03:09 — Working from Slack",
+      "00:04:06 — Testing without live services",
+      "00:06:41 — Recursive self-improvement",
+      "00:07:41 — From tasks to jobs",
+      "00:09:27 — Example: inference latency",
+      "00:10:45 — Example: Android parity",
+      "00:13:07 — Be ambitious"
+    ],
+    "word_count": 2586,
+    "cleaned_at": "2026-11-12T13:14:46-08:00"
+  },
+  "1376191": {
+    "slug": "2026-11-11-2026-in-llms",
+    "path": "talks/2026-11-11-2026-in-llms/transcript.md",
+    "title": "2026 in LLMs",
+    "speakers": [
+      {
+        "name": "Simon Willison",
+        "affiliation": "Independent"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-11T17:30:00-08:00",
+    "source_recording": "2026-11-11_1730_simon-willison",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:00:28 — Three inflection points",
+      "00:00:43 — November 2025: the coding agent inflection point",
+      "00:01:35 — Pelicans riding bicycles",
+      "00:01:58 — Be more ambitious",
+      "00:02:42 — Predictions for the year",
+      "00:03:51 — Deep blue",
+      "00:04:14 — February: Gemini 3.1 Pro's pelican",
+      "00:05:20 — The first kakapo chick",
+      "00:05:40 — April: the model they did not release",
+      "00:07:32 — A 30-day window",
+      "00:08:02 — The fable-class inflection point",
+      "00:08:55 — The beep locator",
+      "00:10:43 — Fable class is the baseline",
+      "00:11:35 — July: breaking out of the sandbox",
+      "00:13:09 — A new benchmark",
+      "00:13:54 — Games",
+      "00:15:51 — Make it a lot more fun",
+      "00:17:03 — Vibe-coded games are good now",
+      "00:17:08 — The pelican benchmark, defeated",
+      "00:17:44 — It doesn't get easier, you get faster",
+      "00:18:33 — The scorecard"
+    ],
+    "word_count": 3880,
+    "cleaned_at": "2026-11-11T18:23:47-08:00"
+  },
+  "1376197": {
+    "slug": "2026-11-11-your-judge-is-hallucinating-too",
+    "path": "talks/2026-11-11-your-judge-is-hallucinating-too/transcript.md",
+    "title": "Your Judge Is Hallucinating Too",
+    "speakers": [
+      {
+        "name": "Brian Kennedy",
+        "affiliation": "ZoomInfo"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-11T15:06:00-08:00",
+    "source_recording": "2026-11-11_1522_brian-kennedy",
+    "sections": [
+      "00:00:00 — Closing"
+    ],
+    "word_count": 46,
+    "cleaned_at": "2026-11-11T18:23:47-08:00"
+  },
+  "1376198": {
+    "slug": "2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db",
+    "path": "talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/transcript.md",
+    "title": "Autocomplete for Actions: System One from the UI to the DB",
+    "speakers": [
+      {
+        "name": "Scott Roberts",
+        "affiliation": "Workday"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-11T15:24:00-08:00",
+    "source_recording": "2026-11-11_1525_Scott-Roberts",
+    "sections": [
+      "00:00:00 — Quick actions and deep work",
+      "00:00:37 — Too much intelligence",
+      "00:01:42 — Decision primitives",
+      "00:02:24 — Not just another classifier",
+      "00:03:17 — Is a fish a pet?",
+      "00:04:00 — Demos: from autocomplete to actions",
+      "00:06:42 — Under the hood: picking the card",
+      "00:08:03 — The recruiter problem",
+      "00:09:24 — Demo: Jev inside a SQL query",
+      "00:10:57 — Summary"
+    ],
+    "word_count": 2006,
+    "cleaned_at": "2026-11-11T18:23:47-08:00"
+  },
+  "1379010": {
+    "slug": "2026-11-12-exploring-claudes-frontier",
+    "path": "talks/2026-11-12-exploring-claudes-frontier/transcript.md",
+    "title": "Exploring Claude’s frontier",
+    "speakers": [
+      {
+        "name": "Lance Martin",
+        "affiliation": "Anthropic"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-12T12:35:00-08:00",
+    "source_recording": "2026-11-12_1235_lance-martin",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:00:13 — Formalizing Fermat's Last Theorem",
+      "00:02:06 — A thousand agents, no domain harness",
+      "00:03:46 — Agents build their own coordination tables",
+      "00:05:27 — Long-horizon work from simple primitives",
+      "00:07:06 — Memory: understood backwards, lived forwards",
+      "00:08:54 — Better models use memory better",
+      "00:10:40 — Pokémon memory directories",
+      "00:12:13 — Dreaming",
+      "00:13:42 — Dreaming corrects mistakes",
+      "00:15:15 — Building a wiki from a corpus",
+      "00:17:09 — Filling gaps",
+      "00:18:04 — Thanks"
+    ],
+    "word_count": 3272,
+    "cleaned_at": "2026-11-12T13:14:46-08:00"
+  },
+  "1379011": {
+    "slug": "2026-11-12-let-the-agent-cook-from-apis-to-answers",
+    "path": "talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/transcript.md",
+    "title": "Let the Agent Cook: From APIs to Answers",
+    "speakers": [
+      {
+        "name": "Arsalan Bashir",
+        "affiliation": "Sentry"
+      }
+    ],
+    "room_id": "continental-13-expo-sessions",
+    "starts_at": "2026-11-12T12:10:00-08:00",
+    "source_recording": "2026-11-12_1211_arsln-let-the-agents-cook",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:00:32 — Rolling your own agent",
+      "00:01:32 — Where it breaks",
+      "00:03:01 — Lesson one: organize tools by use case",
+      "00:05:18 — Lesson two: don't out-think the model",
+      "00:08:07 — A simpler agent",
+      "00:09:45 — Lesson three: let the agent check its work",
+      "00:11:40 — Recap",
+      "00:12:07 — Q&A"
+    ],
+    "word_count": 3171,
+    "cleaned_at": "2026-11-12T13:14:46-08:00"
+  },
+  "1379052": {
+    "slug": "2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter",
+    "path": "talks/2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter/transcript.md",
+    "title": "Talk But Verify: human-in-the-loop for agents that actually matter",
+    "speakers": [
+      {
+        "name": "Michael Liendo",
+        "affiliation": "Auth0"
+      }
+    ],
+    "room_id": "continental-13-expo-sessions",
+    "starts_at": "2026-11-12T11:45:00-08:00",
+    "source_recording": "2026-11-12_1146_trust-by-verify",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:00:45 — Who is the agent acting for?",
+      "00:02:04 — How much human in the loop",
+      "00:04:30 — A small business example",
+      "00:06:11 — Step-up authorization",
+      "00:07:19 — Demo: booking an appointment",
+      "00:08:44 — Demo: Party Animals",
+      "00:12:49 — High stakes: approval by email",
+      "00:15:56 — Agents that pay: 402 and virtual cards",
+      "00:19:13 — Raffle and close"
+    ],
+    "word_count": 3639,
+    "cleaned_at": "2026-11-12T13:14:46-08:00"
+  },
+  "1379134": {
+    "slug": "2026-11-10-scott-tolinski-co-host-syntax",
+    "path": "talks/2026-11-10-scott-tolinski-co-host-syntax/transcript.md",
+    "title": "The True Cost of AI Coding",
+    "speakers": [
+      {
+        "name": "Scott Tolinski",
+        "affiliation": "Syntax"
+      }
+    ],
+    "room_id": "continental-13-workshop-room-1",
+    "starts_at": "2026-11-10T10:10:00-08:00",
+    "source_recording": "2026-11-10_1009_Scott-Tolinski",
+    "sections": [
+      "00:00:03 — Introduction",
+      "00:01:23 — Disclaimer and backstory",
+      "00:03:25 — A viral tweet",
+      "00:04:22 — The survey",
+      "00:04:51 — Prompting past quitting time",
+      "00:06:05 — Sleep",
+      "00:06:32 — A variable reward",
+      "00:07:54 — Pressure to produce more",
+      "00:09:42 — Running many agents",
+      "00:12:11 — Enjoyment",
+      "00:14:00 — Skills sharpening or diminishing",
+      "00:17:50 — What do we do about it",
+      "00:19:50 — Less parallelization",
+      "00:20:46 — Go outside",
+      "00:21:48 — Checking agents from your phone",
+      "00:23:08 — Closing"
+    ],
+    "word_count": 4075,
+    "cleaned_at": "2026-11-10T14:34:02-05:00"
   }
 }

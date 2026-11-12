@@ -1,0 +1,23 @@
+{
+  "title": "brian kennedy",
+  "recorded_at": "2026-11-11T15:22:39-08:00",
+  "duration_seconds": 27.6,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 46,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261111 152239.m4a",
+  "audio_sha256": "46418cc0a399cb5ecb967772969c08e75d520d1c1bfd6edbdca75230043365ed",
+  "exported_at": "2026-11-11T17:50:40-08:00",
+  "transcript_echo_segments": 0,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 49,
+      "locale": "en_US"
+    }
+  ]
+}

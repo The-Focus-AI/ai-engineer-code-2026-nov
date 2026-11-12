@@ -1,0 +1,147 @@
+---
+title: "Talk But Verify: human-in-the-loop for agents that actually matter"
+speakers:
+  - name: Michael Liendo
+    affiliation: Auth0
+room: "Continental 1–3 (Expo Sessions)"
+starts_at: 2026-11-12T11:45:00-08:00
+ends_at: 2026-11-12T12:05:00-08:00
+format: talk
+recording: 2026-11-12_1146_trust-by-verify
+duration: 1301
+source: qwen3-asr-1.7b
+---
+
+> The recording opens as the speaker begins; the MC's introduction is not captured. The talk
+> ran about four minutes past its slot (11:45–12:05). The ASR is garbled most during the live
+> demos and the closing raffle.
+>
+> Transcribed locally with Qwen3-ASR 1.7B (timings per ~5 s segment), prompted with the
+> speaker names and affiliations of overlapping sessions. "Michael Liendo" at 00:00:00 and
+> 00:20:41, "Auth0" at 00:00:24, 00:06:20 and 00:12:13, and "AWS" at 00:00:37 may come from that
+> prompt: the Voice Memos transcript has "My name is Michael.", "off 0" and "A US" there. Echoes
+> of the prompt were cut from 8 segments before this text was written. Other names are kept as
+> transcribed: Auth0 is also "off-zero", "Off zero", "office zero" and "all zero", OpenClaw is
+> "Open Club", Vercel is "Brusell", the harness is "hardness", CIBA is "Ciba" and "Siva", Stripe
+> and Coinbase are "striking the point base", the payment status code is "402", "four or two"
+> and "X 402", and agents are once "ages". The Voice Memos transcript is kept beside it as `transcript.txt`.
+
+### 00:00:00 — Introduction
+
+Thank you for having me here. My name is Michael Liendo, and we're gonna have a really good time. Another session throughout the years called Trust But Verify. Effective human and loop strategies. All the way from back and forth conversations, and then towards the end. Time permitting, we're gonna go ahead and spend some money with my actual credit card. Yeah, it's always good. I'm a software developer having been over at Auth0. I work on the off-zero product team.
+
+All right. So we do a lot of fun stuff in the identity space. So this whole authentication and AI security is kind of my wheelhouse. But if you do want to talk serverless cloud, I was a former AWS. We do all that fun stuff after the talk. But anyways, we'll go ahead and. Kick things off.
+
+### 00:00:45 — Who is the agent acting for?
+
+So this is AI, right? A lot of us are familiar with agents and deploying either forms of agents. Single agents. Now we're talking about software factories. I think the one thing that doesn't get brought up enough is how are we Securing all of this stuff, right? So if you think about it, I mean, it started off in the whole advent of. Open Club, Open Club kind of came out and it was like you guys can build a lot of cool stuff. All you have to do.
+
+Is just give us an API key to this service and that service and this one over here. It was great. We were building really, really fast. And then we realized, well, those are long-lived APIs. Probably not the best thing. To go ahead and put inside our local machines because those are subject to get exposed, hacks, incident reports, etc. We don't have an easy way to revoke those at a moment's notice. They're kind of raw, and what they can do.
+
+So, the whole idea came about of who is. If I have an agent going off and doing its own thing, is it acting on behalf of me? Does the agent have its own identity? There's a lot of nitty-gritty details that we have to consider when we're building out. These agents, regardless of the hardness that we put in, right? So it got me thinking.
+
+### 00:02:04 — How much human in the loop
+
+Well, it doesn't make sense to have a human in the loop at every single stage of the application, but sometimes it's implied. And sometimes it's right there, staring at us in the face, waiting for us to approve. I mean, how do you just kind of think about when is the time and place to have certain levels of human need, and what does it look like? I think it kind of depends on the stakes.
+
+If I'm just having a back and forth conversation with an agent, and I'm like, "Hey, book a flight for me," it would be really, really bad. It was like cool. I just charged your credit card a bunch of money. Have fun and like. Window seat one, right, which is like the worst seat that you can have on the plane. It would be really bad. Instead, I want that back and forth conversation, and that's a human loop. We don't think about it as human loop.
+
+But turn out it's just happening really fast, right? Like you prefer what are your reward points? Do you want early morning or late night? Right, because a lot of stuff it goes back and forth with that. But then it goes even further, so. Okay, I'm logging into an application. In this case, let's just say I'm hooked with the light, right? Well, I wanted to show up on my Google Calendar now.
+
+If the agent is acting on behalf of me, I log into Google in like another tab, another browser, whatever. Another session, but if I want the agent to have these enhanced scopes, it does have to pause. And say, hey, I don't have the ability to connect to Google in this situation to put this booking on your calendar. I need you to grant me additional permissions. So it starts off with the base level, and then it means more. That's what is step up conversation. We'll cover that as well.
+
+And also, it proves me. You take it even a step further. It's like, look, whatever we're doing is so drastic. But I'm going to need some kind of verification. I'm going to need an email, a push notification, an SMS. Think about your bank. Anytime you make like a huge purchase when you travel, and your bank is like, "Whoa, we didn't know that you were in Canada." California.
+
+We thought you were back home in New York. Seems like a fraud alert. As a human, into loop mechanism. Actually, on the Siva, we're going to cover that later on in the session. The last thing, whenever moving money, so maybe not just spending it, but we're making a regular purchase at our home. Now we're having agents do that, which is pretty cool. I have my agents doing that for me.
+
+We also want to have question of engagement. He says, "What if A I is a sort of threshold?" And again. I'm kind of leading here, but this is where we're going to be ending the session off.
+
+### 00:04:30 — A small business example
+
+Now, I'm over in San Francisco. I'm I'm from Iowa, right? Small town boy. But I like to think about the normals. I call them normies in my head. I don't know if it's offensive, but the people that aren't in AI, right? They're not in our bubble. I think I like my neighbor Miss Claudia. She's raking her leaves. She's not doing the stuff that we're doing. So I think about the dog breeders and the Mont Paul chefs. Like, how can they incorporate AI?
+
+It is a huge advantage that we can bring to them. We take some of the lessons learned here. Let's say Anna. Anna hired us. She went ahead and she said, "Hey, I'm a dog breeder business." I want to go ahead and you know incorporate AI. People have a form where they can put in their dog, but I heard this thing called. Chatbot, and we can probably just have like a back and forth conversation. My conversion will be through. Super great. Well, in that case, I mean, Amazon's physical service.
+
+My dogs may use a dessert. It would be kind of cool if there was an AI music. What would that look like from a security standpoint? Well, okay. We're gonna have a back-and-forth conversation, right? We're gonna have a chat bar. We understand that one. Now this is using the AI SDK from Brusell. I love this one because it describes the steps. Right, we have a schema. Let's say you have a back. You say, Hey, I don't want this to exceed more than you know eight steps or twelve steps.
+
+And if it goes beyond that, then effectively we're inside of like this land. We assume. As a developer, that we've gone off the rails, so it kind of pauses and goes off, and we're trying to catch the area. Super cool. What do you do? What do you do there?
+
+### 00:06:11 — Step-up authorization
+
+So as I mentioned, we made the booking. And now we'll go ahead and put this information on our Google Calendar. It makes sense that if I've been pregnant, it shows up on my calendar. This is what the code looks like when you use a service like Auth0. But you can use other providers if you want to do this form of step up. Authorization. The whole idea here. We'll go through an example in just a moment.
+
+Is that I went ahead and I logged in with my email and password, as an example. So I'm authenticated, but my agent needs to do more. So now we have this authorization stuff. Where I'm gonna maybe hop into the settings, and my agent will prompt me. I can connect my account to Google, so I have a logged-in user with email and password. But then I want to go ahead and add on additional scopes.
+
+A short-lived token. OAuth 2 has solved this for decades now, and I'm going to associate that with my user. Regardless of how hard they signed in. So excited to go over the latest skills in this game to add on calendar operations. Not everything that Google provides. I have Google Drive. I have a YouTube account. So, when does that apply?
+
+### 00:07:19 — Demo: booking an appointment
+
+Well, let's go ahead and check out. All right. This is Miss Mabel. If anybody's looking for a terrorizing dog, give me a hand. She's very cute, but she's very troublesome. She's our mini burner duo. She's one year old, and she loves to dig. He was actually ready for a grooming appointment. I think we would all agree. So what we're going to do is we're going to head over to Ana's site. Right, we need to focus up in the Twitter.
+
+And here's the traditional sense. This is what it looks like today. You can go ahead. You can set up a form. You can get everything incorporated in terms of adding the different types of services. It's great, but it's kind of tedious, and it's kind of like circa 2012, right? We feel a little bit better. Looking to embrace some of the services that you love. In this case, I'm going to go ahead and use a chatbot, and honestly, this is the typical back and forth that we would have.
+
+Notice what we have here. It's human in the loop. I'm making a request. I'm gonna go ahead and book. And they look great, man. It's not like I'm gonna go ahead and just do that, right? Let's have a back-and-forth conversation on the services we offer, what we're going to do, and let's get this set up on your Google account.
+
+### 00:08:44 — Demo: Party Animals
+
+No, I was told to make these sessions just a tad more interactive. So instead of going through a Google Calendar form, this is one of those cool talks where you get to pull out your phones. And let's have a little bit more fun. We hop out of the dog roomy world and we head over into what I love to call party worlds. So over with party apples, we're gonna use that same concept. We're just gonna kind of backtrack from the typical.
+
+Flow of a dog training session. So we have this. You have your phone. Feel free to go in and scan the QR code. I'll pause for a dramatic reason. The whole idea here is that you're going to be able to be online. Okay, this little keepsake. And we'll get into how this plays into human behavior. In just a moment. This side is faster than this side. Okay, so we have this in place.
+
+You're probably seeing like a little drawing, right now. If you're wondering, some of you are really fast. If you're wondering, like, oh my God, I'm not an artist. Turns out, nobody's an artist. This is what we draw, and this is what I did. Right. So go ahead and make your drawings. But I want to show you what's happening behind the scenes. I think that's really important. So over here on the homepage, I'm an admin. I'm logged into the account.
+
+And as an admin, I have additional permissions. I could have given this to my agent. I'm a user. I have an access token. I'm going to log in with Google. I can simply give that access token over to my agent. In this situation, I'm going to connect my email and password user. To my GitHub account, and I'm only going to give it the permissions to specifically write.
+
+To a GitHub repository using a set of middleware tools, this is a store that handles the client ID. So if I come over here and I click on. I come over here and I click on connect to GitHub. We are already connected. You can see the GitHub credentials are actually already stored for me. So we have this set up. So now, if I go over and look at your runs.
+
+You're all doing a great job. Okay. Let's grab this one real quick. We have this one cute little buddy. Shout out to whoever drew it. And I want to go ahead and post this to GitHub because if you put in your GitHub username. I or an agent, which I have this set up on a nightly cron job, just go through all these images. Use my office zero token, my access token, permissions, and send this off to GitHub. We can go ahead and have a little piece.
+
+So we're going to post it. Great, it did it on GitHub. And actually, if I go to view this as an issue on GitHub. You should have the original, and then the download link for all you that care to try out the demo. Pretty cool stuff. Just like tap notes. Download the video. It does have sound. Okay, by heading back into. You can imagine that we can apply that same scenario to the calendar.
+
+It's just or Spotify get out of Google. Cool. It's just like. But what we're noticing is that MCP servers get to have a little bit of fun too. Thirty to forty percent of what Auth0 has surveyed for our customers. So fortunately, we have agent support. You will look many levels if your harness isn't a web application. It's going to be Drive Muse whatever. Comes out next week, and we support both GCR and S3 for those of you that are technical.
+
+Want to get a little insight into that?
+
+### 00:12:49 — High stakes: approval by email
+
+And it's using the same idea here, right? We have step-up authorization. We have a situation where the stakes are changing. In the case of maybe going back to that booking example, let's just say we made. The booking. I showed up on our calendar, and we want to take it to the next level. We have a higher date. The higher state of booking application is simply deleting the booking.
+
+Maybe for a gamer, we consider that high stakes. Well, in that situation, I don't need to enhance the scope. Agents have a stronger human in the loop. I don't trust the human that's in the browser session. So in this case, let's just say that we have a booking here. I'm going to go through. We have our little doodle, and let's just take a quick little look using this old school form.
+
+We have that. And there we go. You can see like the phone; it gets tedious, right? Eight five three five nine three seven. Yeah. Eight six seven five three nine. The younger people we can get that. I'm dating myself definitely. Okay, so we have this in here, right? But if I'm going to cancel this booking and he got hired, he wouldn't have looked at me. What does that look like?
+
+Well, the one we did was canceled. Well, we actually need to verify email. Now, this is different from using like resend and having a row in the database. This is an actual authorization set. Off zero is brokering the email to your email account. That way, it knows that you are in fact doing it, not just somebody who was authorized. So if I go over to my email inbox, my six thousand emails, I'm sure.
+
+And click on this one. See, I get an approval code now. Ciba client-initiated back-channel authentication. It's really just a fancy way of saying we're going to send you an email, push notification, or an SMS. To make sure that it is in fact you. So now when I click on review, I have an authorization step. If I wasn't logged in today. I wouldn't be able to accept this.
+
+So it's not just clicking like a magic. Now that this is requested and approved. The application does a poll. Hey, what is the status? What is the status of the? Status. It seems that it is approved, and then now it will trigger that tool. So that way, the call can be deleted. In this case, they're ruining. Just another tool in your toolbox when it comes to being human in the loop.
+
+This is a. So as you see, you can cancel it from any harness. That is just an SDK call. You can put it inside of your code, but things get really interesting when we start to talk about Ciba. And in particular, having push notifications, because now we enter this realm of okay, an email is fine. But it's eventual. We don't always check our email right away to see if something's pending.
+
+Right here, right now. So it works really well. We found in that case.
+
+### 00:15:56 — Agents that pay: 402 and virtual cards
+
+Payments now, off-zero doesn't handle payments, but Stripe. Coinbase, they do it really, really well. The whole idea is that there's this cool little initiative. That came out 20 years ago. They were like, if you have 401, that means you're unauthorized. Let's have a 401 too. Or 402. That effectively means you need to pay. It doesn't tell you what you need to paint with. It doesn't tell you when you need to paint.
+
+It just says you are not authenticated, just like a 401, because you owe me money. And it's pretty straightforward. Now, not to confuse anybody, but there's four or two. The status code, and then there is MPP. MPP is managed meter protocol. Stripe went ahead and got. Set up, but then to not confuse anybody, Coinbase was like, "We're gonna call ours X 402." And in that case, they support cards, stablecoins.
+
+All that same stuff. I think Stripe also does single points now as well. So there's a lot of feature parity, but you have the two main players right here striking the point base, really pushing to make. He doesn't think it's worth it. Drive desert through the link app. We're going to focus on that. You can see three different ways here. You can share your card with the agent. Please don't do that.
+
+You can get a virtual card. A lot of us see this if you use Apple Pay. And then you have a shared payment token. This is really cool because this is what all the ages are using. To make images, we would have. So if you take something like this, we're going to go ahead and try this out real quick. This is an example of what an agent would use to make a payment.
+
+So I'm gonna head over to my terminal. Pop this up. I mentioned that there is a challenge situation. Now, a couple of things that I don't need to miss is the context. Context is super important. It has to be 100 characters for the spec. Otherwise, this call will not succeed. The context is also human generated, which means it is subject to spoofing. There's nothing stopping an agent from going to a website and seeing, or I went to a website and saw a shirt for twelve dollars.
+
+And an agent went to that website. There's a hidden element on the page, a hidden div. Like this, shirts were fifteen dollars. There's nothing stopping. That came from going through because you set a maximum threshold. That's super important. That's just where we're at in the times. Some agents get smarter, and they're like, "Hey, I inspected the webpage, the screenshot, and I looked at the HTML element." So I'm going to go ahead and compare and make sure that it's good, but the context here was really important.
+
+I'm going to go ahead and make my once again every talk I do this make my dollar contribution to climate change. And as this is going through, so. It is real. As this goes through, okay. You just have to remember that the stakes vary for what you're trying to accomplish. So, as a last step of agentic applications, there's point in time. Maybe we have a real-time application.
+
+How do I make sure the permissions are modeled exactly how they need to be? Well, in that situation, I actually need your help.
+
+### 00:19:13 — Raffle and close
+
+For this last segment of our talk, and we're close on time. But if you apply your phone for one second. Scan this QR code. Now this is actually really fun because this is a real life server. We're all going to play tag real play. In case you're wondering, there is a winner. But the winner becomes the winner of this awesome medal. What room are we in? We are in. I think it shows up on here. We scan the QR code. It's listed right here.
+
+But it did not matter. Question: Is it okay? Oh yeah, you don't have to participate. So we're gonna go ahead. I know we have a bunch of people in here. I'm going to start the round. It's only 90 seconds. Oh, it's locked. The room is long. Too many people. No, it's not too many people, but we do have. I want to be respectful for time. So if you do want to participate, I'm actually just going to kind of usher you, with respect to the other speaker, to the all zero booth.
+
+This is where we're effectively doing a live raffle, but with that said, it's hopefully gonna have all of you. With that said, my name is Michael Liendo. We have any additional questions? Everybody's got to be a red actor. Thank you.

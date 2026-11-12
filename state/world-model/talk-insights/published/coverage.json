@@ -1,4 +1,15 @@
 {
+  "1323755": {
+    "sections_read": 16,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "his phrase for the model absorbing the harness is garbled as \"Will keep eating the honors\" (00:13:33), likely \"the harness\"",
+      "model names are garbled throughout",
+      "the Gemini Decisions API announcement at 00:01:29 is a product launch, not part of the harness argument"
+    ],
+    "extracted_at": "2026-11-12T12:41:24-08:00"
+  },
   "1333169": {
     "sections_read": 12,
     "claims_found": 6,
@@ -85,6 +96,194 @@
       "\"Anthropic\" (00:00:56) and \"Claude\" (00:11:35) may be ASR prompt artifacts; \"PyDurable\" (00:14:06) unidentified"
     ],
     "extracted_at": "2026-11-11T11:13:17-08:00"
+  },
+  "1373460": {
+    "sections_read": 20,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Speakers are never named in the audio; attribution rests on the operator's note. The first speaker hands over at about 00:06:09 to a co-speaker introduced as Asif (likely Khasimul Asif Mohammad), but claims are left unattributed.",
+      "00:01:42 'Holocaustation stops due to racism' likely reads 'hallucination, toxicity, bias'.",
+      "00:02:08 'MCUs' likely 'MCPs'; 'that's where the garden is' likely 'guardrails'.",
+      "00:03:19 'Guna' (OpenAI's model) is unreadable; the passage on small vs large judge models is garbled.",
+      "00:04:55 'ChainPole' likely 'ChainPoll'; 'GAN Deal' likely 'Galileo'.",
+      "00:06:02 'Evans' likely 'evals'.",
+      "00:08:50 opens with a passage rendered as Chinese by the ASR; the customer request there is unreadable.",
+      "00:08:50 and 00:11:22 'stack plan recommendations' likely 'actionable recommendations'; 00:18:24 'DAXM' likely 'taxonomy'.",
+      "00:13:42-00:16:18 demo audio was hard to hear and partly rendered as Hindi; the demo walkthrough is largely unreadable.",
+      "From 00:21:30 the recording is the closing pitch and post-talk conversation, not argument."
+    ],
+    "extracted_at": "2026-11-12T12:41:24-08:00"
+  },
+  "1373462": {
+    "sections_read": 17,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Mixedbread is garbled as \"Big Spread\" and \"mixbreed\"; \"Splunk\" appears in several places from the transcription prompt",
+      "most dollar figures are garbled and left out",
+      "the access-control answer at 00:17:41 is from the Q&A and partly garbled"
+    ],
+    "extracted_at": "2026-11-12T12:41:24-08:00"
+  },
+  "1373464": {
+    "sections_read": 17,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "The MC's introduction is not captured; the recording starts as the speaker begins.",
+      "'Overcut' may come from the ASR prompt; the Voice Memos transcript renders it 'motorpack', 'overback', 'overpack'. 00:00:19 'overcapacity' likely 'Overcut'.",
+      "00:00:19 'FDI' likely 'FDE' (forward-deployed engineer).",
+      "00:01:56 'Slag, big bucket' likely 'Slack, Bitbucket'; 'fds' likely 'FDEs'.",
+      "00:02:42 'MCD'/'MCB' likely 'MCP'; 00:03:36 'SBLC' likely 'SDLC'; 'identical steps' likely 'agentic steps'.",
+      "00:04:32 'games for human in the loop' likely 'gates'; 'create VR' likely 'create PR'.",
+      "00:11:25 'Aamir Shakir' and 00:10:03 'Sonar' are prompt artifacts, not the audio; the speaker describes an LLM-as-judge.",
+      "00:10:03 'perigentic' likely 'per-agent'; 00:12:45 'audio trail' likely 'audit trail'; 'Gira' and 00:17:17 'Gmail ticket' likely 'Jira'.",
+      "00:12:45 interleaves an unrelated side conversation near the recorder (about 00:14:04-00:15:46), which garbles the governance answer.",
+      "From 00:19:13 the recording is post-talk conversation."
+    ],
+    "extracted_at": "2026-11-12T12:41:24-08:00"
+  },
+  "1373465": {
+    "sections_read": 21,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Jev is garbled as \"Jeff\", \"Jeb\", \"JEP\", \"Jetting\" and \"Java\"; RLHF as \"Arlo\" and \"R LHF\"; KV cache as \"KB cache\" and \"KDC\"",
+      "the model sizes in the instruction-following example at 00:08:04 are garbled (\"GPT nine\", \"GPT seven to nine\")",
+      "the talk ran past its slot (14:05–14:23); the recording runs 14:07–14:30"
+    ],
+    "extracted_at": "2026-11-12T12:41:24-08:00"
+  },
+  "1373469": {
+    "sections_read": 17,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "the recording opens mid-sentence; the start of the talk is not captured",
+      "agents are garbled as \"Asians\" and LLMs as \"alarms\", \"LMs\" and \"lems\"; prompts as \"problems\"; fork as \"port\"",
+      "\"Niteshift\" (00:14:48) and \"Ramp\" (00:13:54) come from the transcription prompt; the dev server is Vite and the memory is RAM"
+    ],
+    "extracted_at": "2026-11-12T12:41:24-08:00"
+  },
+  "1373470": {
+    "sections_read": 9,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "partial recording: the operator cut the talk short, so it covers about the first seven minutes; the rest of 'Build trust', 'Think bigger' and the closing are not captured",
+      "the recording opens with room chatter; \"Steve Yegge\" at 00:00:52 comes from the transcription prompt",
+      "Inspect is garbled as \"Inspire\" and \"inspects\""
+    ],
+    "extracted_at": "2026-11-12T12:41:24-08:00"
+  },
+  "1373471": {
+    "sections_read": 19,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Claude Max is garbled as \"CloudMax\"; fuel problem as \"few problem\"; beads as \"beans\" and \"bees\"; Claude as \"Cloud\"",
+      "the agents' names and the chief-of-staff story at 00:14:28 are partly garbled"
+    ],
+    "extracted_at": "2026-11-12T12:41:24-08:00"
+  },
+  "1373475": {
+    "sections_read": 10,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Devin is transcribed as \"Devon\", \"Devan\" and \"Dem\".",
+      "\"48x\" at 00:00:00 likely 40x (the chart figure stated just before).",
+      "\"Verro Ruben\" and \"bare Ruben\" likely Vera Rubin GPUs; \"GV three hundred\" likely GB300.",
+      "\"data dog\" likely Datadog; \"this black channel\" likely \"this Slack channel\".",
+      "\"P9 latency\" at 00:07:41 likely P99; \"missing customer bug reports\" at 00:01:48 likely \"fixing\" or \"managing\".",
+      "\"Cognition\" at 00:00:12, 00:05:48 and 00:09:30 was in the transcription prompt (the unprompted transcript also has it).",
+      "\"the stage I'm working on it\" at 00:10:45 is garbled; the human-message chart it describes is not in the audio.",
+      "The MC's introduction is not captured; slides (PR throughput chart, Android time-lapse) are referred to but not visible.",
+      "The tasks-to-jobs framing (00:07:41) and the inference-latency example (00:09:27) are carried by the thesis and the Android claim rather than as separate atoms."
+    ],
+    "extracted_at": "2026-11-12T13:30:17-08:00"
+  },
+  "1376191": {
+    "sections_read": 22,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "the recording opens on the end of the MC's introduction",
+      "Fable class is garbled as \"faithful class\", \"stable class\" and \"table class\"; kakapo as \"Kakapo\" and \"cackaloo\"; vibe-coded as \"Byte coded\"; Claude as \"clawed\" and \"Claw\"",
+      "the cycling quote is credited to \"Gregor Mond\", likely Greg LeMond, and broken across the transcript at 00:17:44",
+      "the vulnerability-count benchmark at 00:13:09 is garbled beyond its lab counts"
+    ],
+    "extracted_at": "2026-11-12T12:41:24-08:00"
+  },
+  "1376197": {
+    "sections_read": 1,
+    "claims_found": 2,
+    "thin": true,
+    "gaps": [
+      "only a 28-second closing fragment (204 words) was recorded; the body of the talk is missing",
+      "\"entrusted\" likely \"didn't trust\""
+    ],
+    "extracted_at": "2026-11-12T12:41:24-08:00"
+  },
+  "1376198": {
+    "sections_read": 10,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "the recording opens a few seconds into the talk",
+      "Jev is garbled as \"Jeff\", \"Jeb\", \"Jim\", \"Gem\" and \"Java\"; Qwen as \"Quinn\"; \"Workday\" at 00:04:00 may come from the transcription prompt",
+      "the speaker says the demos use fake data and are not in production"
+    ],
+    "extracted_at": "2026-11-12T12:41:24-08:00"
+  },
+  "1379010": {
+    "sections_read": 13,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "\"I'm Lance from Anthropic.\" at 00:00:00 may come from the transcription prompt (the unprompted transcript has \"I'm Lance Strom and dropping.\").",
+      "The model is \"Fable Five Two\", \"able-to\" and \"Fable Five\" (Fable 5.2); Claude is also \"Claus\", \"Clauson\", \"clock\" and \"cloud\".",
+      "\"Sir Andrew Wild\" likely Andrew Wiles; \"ProofTino\" and \"proof to me\" are a proof-orchestration platform of uncertain name; \"normalization\" at 00:02:06 likely formalization; \"get\" likely git.",
+      "\"rice\" and \"reeds\" at 00:03:46 are writes and reads; \"reaming\" is dreaming; \"white keys\" is wikis; \"member\" is memory.",
+      "\"Magnificent work all night\" at 00:05:27 likely \"all 999 of you\", as the operator heard it.",
+      "\"Löb-Ryan's tunnel\" at 00:03:46 is an unidentified theorem name.",
+      "\"OpenAI Five\" and \"Obis\" at 00:08:54 likely Opus; \"Sun at\" is Sonnet; \"CL Bench\"/\"CLH benchmark\" name is uncertain.",
+      "The charts and diagrams the talk narrates (coordination tables, memory directories, dreaming curves) are not in the audio; the closing (\"Tom Russo\") is garbled."
+    ],
+    "extracted_at": "2026-11-12T13:30:17-08:00"
+  },
+  "1379011": {
+    "sections_read": 9,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "\"Sentry\" at 00:00:12, 00:04:47, 00:12:02, 00:17:02 and 00:17:19, \"Anthropic\" at 00:03:37 and \"Auth0\" at 00:05:11 may come from the transcription prompt; the unprompted transcript has \"out there\" where Qwen has \"Auth0\".",
+      "\"Werzel\" likely Vercel; \"Asian Google calls\" likely agent tool calls; \"hardest\" likely harness; \"emails\" likely evals; \"Europe\" likely Jira.",
+      "\"Either the modality is failure\" at 00:01:32 likely \"either way, the modality of failure\".",
+      "\"all the Yu thing and sitting dinners together, imagination\" at 00:03:01 is garbled (likely \"find ticket ... stitching data together, pagination\").",
+      "\"only got four times faster\" at 00:08:07 likely \"not only got four times faster\"; \"Marvel Store\" in the same section is unclear.",
+      "\"a primal version\" at 00:05:18 is unclear (the operator heard \"tunnel vision\").",
+      "The previous company \"Lightbox\" may be misheard.",
+      "Q&A (00:12:07) turns are unlabelled, so no claim is drawn from it; the last question on guardrails for write-code tools goes unanswered."
+    ],
+    "extracted_at": "2026-11-12T13:30:17-08:00"
+  },
+  "1379052": {
+    "sections_read": 10,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Auth0 is also \"off-zero\", \"Off zero\", \"office zero\" and \"all zero\"; \"Auth0\" at 00:00:24, 00:06:20 and 00:12:13 and \"AWS\" at 00:00:37 may come from the transcription prompt.",
+      "\"Michael Liendo\" in the introduction and close may come from the prompt (the unprompted transcript has \"My name is Michael.\").",
+      "\"Open Club\" likely OpenClaw; \"Brusell\" likely Vercel; \"hardness\" likely harness; \"ages\" likely agents.",
+      "\"Ciba\" and \"Siva\" are CIBA (Client-Initiated Backchannel Authentication).",
+      "\"striking the point base\" likely \"Stripe and Coinbase\"; \"four or two\" and \"X 402\" are HTTP 402 and x402; \"managed meter protocol\" likely the Machine Payments Protocol (MPP); \"single points\" likely stablecoins.",
+      "\"if I've been pregnant\" at 00:06:11 is garbled (likely \"if I've booked an appointment\").",
+      "The closing threshold question at 00:02:04 (\"What if A I is a sort of threshold?\") is garbled.",
+      "The live demos (00:07:19, 00:08:44, 00:12:49) and the raffle (00:19:13) are heavily garbled and depend on screen content not in the audio; the MC's introduction is not captured."
+    ],
+    "extracted_at": "2026-11-12T13:30:17-08:00"
   },
   "1379134": {
     "sections_read": 16,

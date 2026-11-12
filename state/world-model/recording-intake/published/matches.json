@@ -352,5 +352,453 @@
       }
     ],
     "status": "matched"
+  },
+  "2026-11-11_1120_Phillip-DeepMind": {
+    "session_id": "1323755",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos, unprompted): \"So, I going to talk to you about how I deleted roughly 90% of my Asian harness and how it got better.\" (the speaker names the talk)",
+      "transcript.txt (Voice Memos, unprompted): \"let's look at the, I think, very important essay from Richard Sutton, the bitter lesson\" (the abstract's Bitter Lesson framing)",
+      "transcript.qwen3-asr-1.7b.txt: \"what we have been doing at Google DeepMind for the last six months\" (names his company; prompt-biased, attribution only)",
+      "title: \"Phillip DeepMind\" (folder title names the speaker's company and resembles his first name, Philipp)",
+      "note: notes/inbox/2026-11-11T1121-deepmind-talk-slides-look-nice.md — session_id 1323755, talk: talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/ (captured 11:21, inside the recording)",
+      "time: recorded 11:20:37 for 16 min, inside the 11:20–11:40 Mainstage slot"
+    ],
+    "candidates": [
+      {
+        "session_id": "1323755",
+        "why": "the speaker names the talk (\"how I deleted roughly 90% of my Asian harness and how it got better\") and the Bitter Lesson; folder title names DeepMind; recorded 11:20–11:37 inside the slot",
+        "confidence": 0.95
+      },
+      {
+        "session_id": "1373458",
+        "why": "Refactor or Rot (Jacob Prall, Render), 11:20–11:40 in Expo Sessions: same slot; nothing in the recording names it",
+        "confidence": 0.02
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-11_1148_Heal-your-agents": {
+    "session_id": "1373460",
+    "confidence": 0.85,
+    "method": "time+attribution+transcript",
+    "evidence": [
+      "note: notes/inbox/2026-11-11T1156-immune-system-not-ticketing-system.md — session_id 1373460, talk: talks/2026-11-11-heal-your-agents-dont-just-grade-them/ (captured 11:56, inside the recording)",
+      "title: \"Heal your agents\" (folder title names the talk, not a speaker: attribution, not operator confirmation)",
+      "transcript: transcript.qwen3-asr-1.7b.txt \"Regular evaluation is just not enough.\" — abstract: \"Your evals are green, and users are still hitting failures.\"",
+      "transcript: transcript.qwen3-asr-1.7b.txt \"Some unknown unknown in terms of how your agents are going to function\" — abstract: \"production at millions of sessions a day keeps inventing failures nobody wrote a test for\"",
+      "transcript: transcript.qwen3-asr-1.7b.txt \"Look at all the sessions.\" — abstract: \"many visible only as a pattern across sessions\"",
+      "transcript: transcript.qwen3-asr-1.7b.txt \"Keep going in production, and make sure that it doesn't recur.\" — abstract: \"How do you verify each fix and expand to cover every failure you find so it stays caught?\"",
+      "transcript: transcript.txt (Voice Memos) \"We're looking at like half a millioness per day.\" — abstract: \"production at millions of sessions a day\"",
+      "transcript: transcript.txt (Voice Memos) \"You have a pathogenism, how does anything get it? It's not waiting for some test.\" (the immune-system framing the operator's note records)",
+      "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, names-only prompt); its \"Asif\" and \"Splunk\" are prompt-biased, and the unprompted Voice Memos transcript names neither speaker nor company, so this stays an attributed match",
+      "time: recorded 11:48:01 for 23½ min, in the 11:45–12:05 slot (Expo Sessions)"
+    ],
+    "candidates": [
+      {
+        "session_id": "1373460",
+        "why": "operator note captured 11:56 names the talk; folder title names it; transcript quotes answer the abstract (evals not enough, unknown unknowns, all sessions, verify fixes stay caught); recorded 11:48–12:11",
+        "confidence": 0.85
+      },
+      {
+        "session_id": "1373459",
+        "why": "The Rise of the Agent Workforce (Ankit Mathur, Databricks), 11:45–12:05 on the Mainstage: same slot; no quote answers its topic and nothing names Databricks",
+        "confidence": 0.03
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-11_1215_Aamir-Shakir": {
+    "session_id": "1373462",
+    "confidence": 0.9,
+    "method": "time+attribution+transcript",
+    "evidence": [
+      "title: \"Aamir Shakir\" (folder title exactly names the speaker of 1373462: the operator's confirmation)",
+      "note: notes/inbox/2026-11-11T1222-follow-up-on-mixedbread.md — session_id 1373462, talk: talks/2026-11-11-how-to-build-agents-over-your-own-data/ (captured 12:22, inside the recording)",
+      "note: notes/inbox/2026-11-11T1221-2-more-sources-more-noise.md — session_id 1373462 (captured 12:21, inside the recording)",
+      "transcript: transcript.qwen3-asr-1.7b.txt \"We use an MCP or CLI per tool that you need, right?\" — abstract: \"Connecting every source through separate MCP servers creates another bottleneck\"",
+      "transcript: transcript.qwen3-asr-1.7b.txt \"So you know, you also at the mercy of the weight limits of these tools.\" — abstract: \"inheriting each service’s latency, rate limits, and uneven search quality\"",
+      "transcript: transcript.qwen3-asr-1.7b.txt \"What we need, therefore, is a way to bring all the data at one spot.\" — abstract: \"giving internal agents a unified search layer for company knowledge\"",
+      "transcript: transcript.qwen3-asr-1.7b.txt \"No compliance, and only the right people are allowed to access this\" — abstract: \"preserves source permissions\"",
+      "transcript: transcript.qwen3-asr-1.7b.txt \"We can answer the query actually and send back where we got the source from.\" — abstract: \"returns compact, cited evidence to the acting agent\"",
+      "transcript.qwen3-asr-1.7b.txt: \"And Mixedbread has this concept of metadata.\" (names his company; prompt-biased, attribution only; the Voice Memos transcript has \"big bread\" and \"mixed fraction\")",
+      "time: recorded 12:15:57 for 18½ min, in the 12:10–12:30 slot (Expo Sessions)"
+    ],
+    "candidates": [
+      {
+        "session_id": "1373462",
+        "why": "exact-name folder title; operator notes captured 12:21–12:34 name the talk; five transcript quotes answer the abstract (one MCP per tool, rate limits, one index, permissions, cited sources)",
+        "confidence": 0.9
+      },
+      {
+        "session_id": "1373461",
+        "why": "Building a Safe Software Factory (Andrew Finch, Sonar), 12:10–12:30 on the Mainstage: same slot; no quote answers its topic",
+        "confidence": 0.02
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-11_1236_overcut": {
+    "session_id": "1373464",
+    "confidence": 0.9,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos, unprompted): \"The self- improving software factory, the only one that needs zeroeral FD is.\" (names the talk, as transcribed: \"The Software Factory That Needs Zero FDEs\")",
+      "transcript.txt (Voice Memos, unprompted): \"Let's stop your factory that needs 0 ethnes.\" (names the talk again, as transcribed)",
+      "transcript.qwen3-asr-1.7b.txt: \"Software factory, the only one that needs zero FDEs.\" (transcript in force)",
+      "transcript.qwen3-asr-1.7b.txt: \"So let's start with Overcut.\" (names the speaker's company; prompt-biased, attribution only)",
+      "title: \"overcut\" (folder title names the speaker's company, Overcut)",
+      "time: recorded 12:36:46 for 20 min, inside the 12:35–12:55 slot (Expo Sessions)"
+    ],
+    "candidates": [
+      {
+        "session_id": "1373464",
+        "why": "the speaker names the talk twice (software factory that needs zero FDEs) in the unprompted transcript; the demo matches the abstract (agents with their own identity, workflows triggered from Jira, GitHub and Slack, human approval gates); folder title names Overcut",
+        "confidence": 0.9
+      },
+      {
+        "session_id": "1373463",
+        "why": "Earning Autonomy: From Missions to Workstreams (Luke Alvoeiro, Factory), 12:35–12:55 on the Mainstage: same slot; nothing names Factory, Droid, Missions or workstreams (\"software factory\" is Overcut's phrase)",
+        "confidence": 0.02
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-11_1406_diogo": {
+    "session_id": "1373465",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos alternate, unprompted): \"I, Diego Almeda, and this talk is, I love you so jetting much.\" (self-introduction; names the speaker and the talk, as transcribed)",
+      "transcript.txt (Voice Memos alternate, unprompted): \"We have a stop Gen AI baseball vat for type safe.\" (names his company, TypeSafe, as transcribed)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Heck yeah, I'm Diogo Almeida, and this talk is I love you so, Jetting much.\" (the same self-introduction; the name is prompt-biased, attribution only)",
+      "title: \"diogo\" (folder title names the speaker's first name)",
+      "note: notes/inbox/2026-11-11T1408-where-is-the-automation.md — session_id 1373465, talk: talks/2026-11-11-i-love-you-so-jevving-much/ (captured 14:08, inside the recording)",
+      "note: notes/inbox/2026-11-11T1444-file-1424-photo-under-diogo.md — kind: decision (photo filing; records that the talk ran past its slot, 14:07–14:30)",
+      "time: recorded 14:06:57 for 23 min; slot 14:05–14:23 on the Mainstage, the talk ran past it",
+      "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos self-introduction."
+    ],
+    "candidates": [
+      {
+        "session_id": "1373465",
+        "why": "self-introduction names Diogo Almeida (as \"Diego Almeda\") and the talk; folder title and operator notes name him; recorded 14:07–14:30 from the start of the slot",
+        "confidence": 0.95
+      },
+      {
+        "session_id": "1373466",
+        "why": "Coding Agents and How to Tame Them (Ivan Leo, Google DeepMind), 14:05–14:25 in Expo Sessions: same slot; nothing in the recording names it",
+        "confidence": 0.01
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-11_1522_brian-kennedy": {
+    "session_id": "1376197",
+    "confidence": 0.7,
+    "method": "time+attribution+transcript",
+    "evidence": [
+      "title: \"brian kennedy\" (folder title exactly names the speaker of 1376197; the recording starts 3½ min after the slot's scheduled end, so the window does not fit and this is attribution, not operator confirmation)",
+      "transcript: transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force) \"Run a second check. Run in shadow mode, seeing where it disagrees.\" — abstract: \"Then we ran Jev beside it and found the grader was passing work that never happened.\"",
+      "transcript: transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force) \"We entrusted our judge until we measured it.\" — abstract: \"Every step an agent takes in ZoomInfo's Agent Teams is graded by another model.\" (the grader as a judge to be measured)",
+      "transcript: transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force) \"Then read the cases, see where the two disagree\" — abstract: \"found the grader was passing work that never happened\" (comparing the judge with the second check)",
+      "transcript: transcript.txt (Voice Memos alternate) \"Round a second check, run into shadow mode, seeing where disagrees.\" — abstract: \"Then we ran Jev beside it\" (the same closing line, unprompted)",
+      "time: recorded 15:22:39 for 28 s, the closing lines (the Voice Memos alternate ends \"Thank you.\"); slot 15:06–15:19 on the Mainstage, the talk ran over; the next Mainstage talk (1376198, scheduled 15:24) was recorded from 15:25:01",
+      "no operator note captured in the span (15:22–15:23)",
+      "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Neither transcript names the talk, the speaker or ZoomInfo, though both were in the prompt; re-decided on the Qwen upgrade: same session, still attributed."
+    ],
+    "candidates": [
+      {
+        "session_id": "1376197",
+        "why": "exact-name folder title; the closing lines answer the abstract (a judge measured against a second check run in shadow mode, cases where the two disagree); a talk-closing \"Thank you\" at 15:23, four minutes after the scheduled end",
+        "confidence": 0.7
+      },
+      {
+        "session_id": "1373468",
+        "why": "CVE remediation with Factory (Nikhil Harithas), 15:20–15:40 in Expo Sessions: the only slot the recording fits, but a closing \"Thank you\" three minutes after its start is implausible and nothing names CVEs, Factory or remediation",
+        "confidence": 0.05
+      },
+      {
+        "session_id": "1376198",
+        "why": "Autocomplete for Actions (Scott Roberts, Workday), scheduled 15:24 on the Mainstage: starts after the recording ends; recorded separately from 15:25:01",
+        "confidence": 0.02
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-11_1525_Scott-Roberts": {
+    "session_id": "1376198",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos alternate, unprompted): \"So that work day, we have over 11,000 different organizations that use our tools.\" (names the speaker's company, Workday, as transcribed)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"So that workday, we have over eleven thousand different organizations that use our.\" (the same line; \"Workday\" was in the prompt, attribution only)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"So if we look at the system one versus system two thinking.\" (the talk's System One framing)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"So here we have a select statement. So this is against a DuckDB, where we have a function.\" — abstract: \"running inside DuckDB as a SQL filter\" (DuckDB was not in the prompt)",
+      "title: \"Scott Roberts\" (folder title exactly names the speaker of 1376198)",
+      "note: notes/inbox/2026-11-11T1534-jev-inside-sql-in-duckdb.md — session_id 1376198, talk: talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/ (captured 15:34, inside the recording)",
+      "time: recorded 15:25:01 for 12 min, inside the 15:24–15:37 Mainstage slot",
+      "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session."
+    ],
+    "candidates": [
+      {
+        "session_id": "1376198",
+        "why": "names Workday (\"work day\"); System One versus System 2; Jev picking action cards and running in a SQL select; exact-name folder title; operator notes 15:30–15:34; recorded 15:25–15:37 inside the slot",
+        "confidence": 0.95
+      },
+      {
+        "session_id": "1373468",
+        "why": "CVE remediation with Factory (Nikhil Harithas), 15:20–15:40 in Expo Sessions: same window; nothing names CVEs or Factory",
+        "confidence": 0.02
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-11_1629_Lovable": {
+    "session_id": "1373469",
+    "confidence": 0.9,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos alternate, unprompted): \"it's been kind of a core basis behind lovable that you won't have to care about the code\" (names the speaker's company)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"And we designed this trajectory with really Git as inspiration\" — abstract: \"persistent histories that let them continue longer work\"",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Creating one of these forks of a computer is.\" — abstract: \"forkable computers that give agents room to experiment\"",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"for for each agent, we have a separate inbox.\" — abstract: \"durable communication that lets them coordinate\"",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"it's been kind of a core thesis behind Lovable that.\" (\"Lovable\" was in the prompt, attribution only)",
+      "title: \"Lovable\" (folder title names the speaker's company)",
+      "note: notes/inbox/2026-11-11T1637-trajectory-append-only-forkable.md — session_id 1373469, talk: talks/2026-11-11-what-it-takes-to-set-intelligence-free/ (captured 16:37, inside the recording)",
+      "time: recorded 16:29:13 for 19 min, opening mid-talk; slot 16:30–16:50 on the Mainstage (nothing else scheduled then)",
+      "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; Qwen's \"Niteshift\" and \"Ramp\" are prompt-biased and name no other session."
+    ],
+    "candidates": [
+      {
+        "session_id": "1373469",
+        "why": "names Lovable; forkable computers, a Git-like trajectory and an inbox per agent answer the abstract; folder title names Lovable; operator notes 16:33–16:46; the only session in the window",
+        "confidence": 0.9
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-11_1648_Zach-Bruggeman": {
+    "session_id": "1373470",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos alternate, unprompted): \"My name is Zach and I'm an engineer ramp.\" (self-introduction; names the speaker and his company)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"My name is Zach, and I'm an engineer at Ramp.\" (the same self-introduction; \"Ramp\" was in the prompt, attribution only)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Through this, we now see around seventy-five percent of all of Ramp's code.\" — abstract: \"Inspect, which writes ~75% of merged PRs\"",
+      "title: \"Zach Bruggeman\" (folder title exactly names the speaker of 1373470)",
+      "note: notes/inbox/2026-11-11T1650-ramp-inspect-multiplayer-coding-agent.md — session_id 1373470, talk: talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/ (captured 16:50, inside the recording)",
+      "note: notes/inbox/2026-11-11T1705-cut-talk-short.md — the operator cut the talk short: the recording covers only its start",
+      "time: recorded 16:48:38 for 8½ min (speaker begins 00:01:26), the start of the 16:50–17:10 Mainstage slot",
+      "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; Qwen's \"Steve Yegge\" in the pre-talk chatter is prompt-biased (the Voice Memos alternate has no name there)."
+    ],
+    "candidates": [
+      {
+        "session_id": "1373470",
+        "why": "self-introduction names Zach and Ramp; Inspect writing ~75% of the code answers the abstract; exact-name folder title; operator notes 16:50–16:55",
+        "confidence": 0.95
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-11_1706_Steve-Yegge": {
+    "session_id": "1373471",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos alternate, unprompted): \"Independent AI advisor and creator of Gastown.\" (the end of the MC's introduction)",
+      "transcript.txt (Voice Memos alternate, unprompted): \"I guess I'm just not quiet enough for Steve.\" (an agent's ledger names the speaker)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Independent AI advisor and creator of Goose and Gastown.\" (the same introduction; \"Independent\" was in the prompt)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I've been independent and just kind of playing with. Playing with software factories, yeah.\" (names the talk's subject, Software Factories)",
+      "title: \"Steve Yegge\" (folder title exactly names the speaker of 1373471)",
+      "note: notes/inbox/2026-11-11T1708-software-factories-failed-loves-beads.md — session_id 1373471, talk: talks/2026-11-11-software-factories-escape-from-trash-mountain/ (captured 17:08, inside the recording: the talk started early)",
+      "time: recorded 17:06:21 for 21½ min; slot 17:10–17:30 on the Mainstage, started about four minutes early",
+      "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; Qwen's \"The Duckbill Group\" and \"Fabian\" are prompt-biased and absent from the Voice Memos alternate."
+    ],
+    "candidates": [
+      {
+        "session_id": "1373471",
+        "why": "MC introduction (\"creator of Gastown\"); software factories throughout; an agent names Steve; exact-name folder title; operator notes 17:08–17:27",
+        "confidence": 0.95
+      },
+      {
+        "session_id": "1373470",
+        "why": "How to build an agent that builds the culture (Zach Bruggeman, Ramp), 16:50–17:10: overlaps the first four minutes; nothing names Ramp or Inspect, and 2026-11-11_1648_Zach-Bruggeman captured it",
+        "confidence": 0.01
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-11_1730_simon-willison": {
+    "session_id": "1376191",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos alternate, unprompted): \"Please put your hands together for Simon Willison, creator of data set.\" (the MC's introduction names the speaker)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Please put your hands together for Simon Willison.\" (the same introduction; the name was in the prompt)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I've got 18 minutes to talk about the last 12 months.\" (names the talk, 2026 in LLMs)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"November 2025 is what I consider the coding agents inflection point.\" — abstract: \"since last November's coding agent inflection point\"",
+      "title: \"simon willison\" (folder title exactly names the speaker of 1376191)",
+      "note: notes/inbox/2026-11-11T1732-three-inflection-points-nov-2025.md — session_id 1376191, talk: talks/2026-11-11-2026-in-llms/ (captured 17:32, inside the recording)",
+      "time: recorded 17:30:50 for 19½ min, inside the 17:30–17:50 Mainstage slot",
+      "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session."
+    ],
+    "candidates": [
+      {
+        "session_id": "1376191",
+        "why": "the MC introduces Simon Willison; the speaker names the last 12 months in LLMs and the November 2025 coding agent inflection point; exact-name folder title; operator notes 17:32–17:49",
+        "confidence": 0.95
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-12_1120_walden": {
+    "session_id": "1373475",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos alternate, unprompted): \"this is what our merged PR through book looks like at cognition.\" (names the speaker's company, Cognition)",
+      "transcript.txt (Voice Memos alternate, unprompted): \"We build a air product called Devon.\" (names Cognition's product, Devin, as transcribed)",
+      "transcript.txt (Voice Memos alternate, unprompted): \"In fact, some engineers are cognition have already moved to using iPads for the development process.\" (Cognition again)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"We build a AI product called Devon.\" (names Cognition's product, Devin, as transcribed; not in the prompt)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"this is what our merged PR throughput looks like at Cognition.\" (\"Cognition\" was in the prompt, attribution only)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Many of you are probably familiar with the Software Factory.\" — abstract: \"the most advanced ways teams are using AI today\"",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"In fact, several engineers at Cognition.\" (the same line as the Voice Memos alternate; attribution only)",
+      "title: \"walden\" (folder title names the speaker's first name, Walden Yan)",
+      "note: notes/inbox/2026-11-12T1123-cognition-team-by-vertical-not-role.md — session_id 1373475, talk: talks/2026-11-12-a-new-age-of-software-engineering/ (captured 11:23, inside the recording)",
+      "note: notes/inbox/2026-11-12T1125-cognition-sharing-videos-as-proof.md — session_id 1373475, talk: talks/2026-11-12-a-new-age-of-software-engineering/ (captured 11:25, inside the recording)",
+      "note: notes/inbox/2026-11-12T1126-cognition-teach-agents-to-test.md — session_id 1373475, talk: talks/2026-11-12-a-new-age-of-software-engineering/ (captured 11:26, inside the recording)",
+      "note: notes/inbox/2026-11-12T1128-cognition-sessions-for-self-improvement.md — session_id 1373475, talk: talks/2026-11-12-a-new-age-of-software-engineering/ (captured 11:28, inside the recording)",
+      "note: notes/inbox/2026-11-12T1133-cognition-android-parity-with-ios.md — session_id 1373475, talk: talks/2026-11-12-a-new-age-of-software-engineering/ (captured 11:33, inside the recording)",
+      "note: notes/inbox/2026-11-12T1134-cognition-teams-limited-by-ambition.md — session_id 1373475, talk: talks/2026-11-12-a-new-age-of-software-engineering/ (captured 11:34, inside the recording)",
+      "time: recorded 11:20:34 for 14 min, inside the 11:20–11:40 Mainstage slot",
+      "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos \"cognition\"; no speaker name from the prompt appears in Qwen."
+    ],
+    "candidates": [
+      {
+        "session_id": "1373475",
+        "why": "Mainstage 11:20–11:40; recording 11:20:34 for 14 min; the speaker names Cognition and Devin; folder title is the speaker's first name; six operator notes 11:23–11:34 carry this session",
+        "confidence": 0.95
+      },
+      {
+        "session_id": "1373476",
+        "why": "Connect Agents to Reality (Brandon Waselnuk, Unblocked), Expo Sessions 11:20–11:40: same slot; no transcript quote names it or Unblocked",
+        "confidence": 0.02
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-12_1146_trust-by-verify": {
+    "session_id": "1379052",
+    "confidence": 0.9,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos alternate, unprompted): \"My name is Michael.\" (self-introduction; the first name of the speaker, Michael Liendo)",
+      "transcript.txt (Voice Memos alternate, unprompted): \"I work at the off 0 prime team.\" (names the speaker's company, Auth0, as transcribed)",
+      "transcript.txt (Voice Memos alternate, unprompted): \"Off 0 is broriating that you know to your email.\" (Auth0 again, as transcribed)",
+      "transcript.txt (Voice Memos alternate, unprompted): \"I know this actually on year from trust, but verify.\" (names the talk, Talk But Verify, as transcribed)",
+      "transcript.txt (Voice Memos alternate, unprompted): \"You can share your card with the Asian, please don't do that.\" — abstract: \"handing your agent a wallet with real money in it\"",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Another session throughout the years called Trust But Verify.\" (names the talk, Talk But Verify, as transcribed; titles are not in the prompt)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"My name is Michael Liendo, and we're gonna have a really good time.\" (the same self-introduction; the surname was in the prompt, attribution only)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I'm a software developer having been over at Auth0.\" (\"Auth0\" was in the prompt, attribution only)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"You can share your card with the agent.\" — abstract: \"handing your agent a wallet with real money in it\"",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Ciba client-initiated back-channel authentication.\" — abstract: \"out-of-band permission gates\"",
+      "title: \"trust by verify\" (folder title names the talk, as typed)",
+      "note: notes/inbox/2026-11-12T1154-token-vault-limits-agent-scopes.md — session_id 1379052, talk: talks/2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter/ (captured 11:54, inside the recording)",
+      "note: notes/inbox/2026-11-12T1204-agent-payment-flow.md — session_id 1379052, talk: talks/2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter/ (captured 12:04, inside the recording)",
+      "note: notes/inbox/2026-11-12T1204-ciba-human-approval-for-agents.md — session_id 1379052, talk: talks/2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter/ (captured 12:04, inside the recording)",
+      "time: recorded 11:46:59 for 21½ min; slot 11:45–12:05 in Expo Sessions, the talk ran about four minutes over",
+      "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos self-introduction and \"off 0\"; Qwen's \"Michael Liendo\", \"Auth0\" and \"AWS\" are prompt-biased."
+    ],
+    "candidates": [
+      {
+        "session_id": "1379052",
+        "why": "Expo Sessions 11:45–12:05; recording 11:46:59 for 21½ min; the speaker says his name is Michael and that he works on the Auth0 team, and names \"trust, but verify\"; folder title names the talk; three operator notes 11:54–12:04 carry this session",
+        "confidence": 0.9
+      },
+      {
+        "session_id": "1373477",
+        "why": "What Your AI Doesn't Know (Jeffrey Pinner, Exa), Mainstage 11:45–12:05: same slot; no transcript quote names it or Exa",
+        "confidence": 0.02
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-12_1211_arsln-let-the-agents-cook": {
+    "session_id": "1379011",
+    "confidence": 0.9,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos alternate, unprompted): \"And now, I'm a sentry building at that point\" (self-introduction; names the speaker's company, Sentry, as transcribed)",
+      "transcript.txt (Voice Memos alternate, unprompted): \"having only 2 tools at the century\" (a questioner names Sentry, as transcribed)",
+      "transcript.txt (Voice Memos alternate, unprompted): \"You going to give your agent a bunch of tools, one tool per data source even, and go from there.\" — abstract: \"Give an agent a pile of APIs.\"",
+      "transcript.txt (Voice Memos alternate, unprompted): \"and finally try to allow your agent to check his work whenever possible.\" — abstract: \"check its own answers\"",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"And now I'm at Sentry, building agents that find and fix bugs.\" (the same self-introduction; \"Sentry\" was in the prompt, attribution only)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I'm interested in what you said about having only two tools at Sentry\" (a questioner; attribution only)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"You're going to give your agent a bunch of tools.\" — abstract: \"Give an agent a pile of APIs.\"",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"And finally, try to allow your agent to check its work whenever possible.\" — abstract: \"check its own answers\"",
+      "title: \"arsln let the agents cook\" (folder title names the talk, Let the Agent Cook, and the speaker's first name, Arsalan, as typed)",
+      "note: notes/inbox/2026-11-12T1215-olap-cubes-modality-of-values.md — session_id 1379011, talk: talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/ (captured 12:15, inside the recording)",
+      "note: notes/inbox/2026-11-12T1215-organize-tools-by-use-case.md — session_id 1379011, talk: talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/ (captured 12:15, inside the recording)",
+      "note: notes/inbox/2026-11-12T1217-likes-write-the-code-tools.md — session_id 1379011, talk: talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/ (captured 12:17, inside the recording)",
+      "note: notes/inbox/2026-11-12T1218-optimization-gives-agent-tunnel-vision.md — session_id 1379011, talk: talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/ (captured 12:18, inside the recording)",
+      "note: notes/inbox/2026-11-12T1221-follow-up-which-harness-tools-to-keep.md — session_id 1379011, talk: talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/ (captured 12:21, inside the recording)",
+      "time: recorded 12:11:55 for 17¾ min, inside the 12:10–12:30 Expo Sessions slot",
+      "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos \"sentry\"; Qwen's \"Auth0\" at 00:05:11 is prompt-biased (the Voice Memos alternate has \"out there\") and names no other session."
+    ],
+    "candidates": [
+      {
+        "session_id": "1379011",
+        "why": "Expo Sessions 12:10–12:30; recording 12:11:55 for 17¾ min; the speaker names Sentry; folder title names the talk; five operator notes 12:15–12:21 carry this session",
+        "confidence": 0.9
+      },
+      {
+        "session_id": "1375634",
+        "why": "Ship more as a team with Kiro Crew (Doug Clauson, AWS), Mainstage 12:10–12:30: same slot; no transcript quote names it, Kiro or AWS",
+        "confidence": 0.02
+      }
+    ],
+    "status": "matched"
+  },
+  "2026-11-12_1235_lance-martin": {
+    "session_id": "1379010",
+    "confidence": 0.95,
+    "method": "time+title+transcript",
+    "evidence": [
+      "transcript.txt (Voice Memos alternate, unprompted): \"I'm Lance Strom and dropping.\" (self-introduction; names the speaker, Lance, and his company, Anthropic, as transcribed)",
+      "transcript.txt (Voice Memos alternate, unprompted): \"And in September, we publish that we use Claude to formalize it.\" (names Claude, the talk's subject)",
+      "transcript.txt (Voice Memos alternate, unprompted): \"use the database in this way to coordinate their work\" — abstract: \"multi-agent coordination\"",
+      "transcript.txt (Voice Memos alternate, unprompted): \"Now, I want to shift gears and talk about memory\" — abstract: \"Claude's frontier capabilities in memory\"",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I'm Lance from Anthropic.\" (the same self-introduction; \"Lance Martin\" and \"Anthropic\" were in the prompt, attribution only)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I'm going to tell two stories about attending the most out of Claude and exploring Claude's frontier capabilities.\" (names the talk; Claude and the title are not in the prompt)",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"So the first is multi-agent.\" — abstract: \"multi-agent coordination\"",
+      "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I want to shift gears and talk about memory\" — abstract: \"Claude’s frontier capabilities in memory\"",
+      "title: \"lance martin\" (folder title exactly names the speaker of 1379010)",
+      "note: notes/inbox/2026-11-12T1238-fable-52-no-human-steering-multi-agent.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:38, inside the recording)",
+      "note: notes/inbox/2026-11-12T1239-follow-up-agent-database-to-store-stuff.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:39, inside the recording)",
+      "note: notes/inbox/2026-11-12T1239-primitives-git-and-sql-database.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:39, inside the recording)",
+      "note: notes/inbox/2026-11-12T1241-agent-created-db-tables-for-coordination.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:41, inside the recording)",
+      "note: notes/inbox/2026-11-12T1242-magnificent-work-all-999-of-you.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:42, inside the recording)",
+      "note: notes/inbox/2026-11-12T1244-life-understood-backwards-lived-forwards.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:44, inside the recording)",
+      "note: notes/inbox/2026-11-12T1248-claude-better-at-reading-writing-memory.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:48, inside the recording)",
+      "note: notes/inbox/2026-11-12T1249-follow-up-memory-from-transcripts.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:49, inside the recording)",
+      "note: notes/inbox/2026-11-12T1251-wiki-and-data-from-memory.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:51, inside the recording)",
+      "note: notes/inbox/2026-11-12T1252-what-are-dreaming-tokens.md — session_id 1379010, talk: talks/2026-11-12-exploring-claudes-frontier/ (captured 12:52, inside the recording)",
+      "time: recorded 12:35:29 for 18¼ min, inside the 12:35–12:55 Mainstage slot",
+      "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; Qwen's \"Anthropic\" is prompt-biased, its \"Claude\" and \"Kierkegaard\" are not."
+    ],
+    "candidates": [
+      {
+        "session_id": "1379010",
+        "why": "Mainstage 12:35–12:55; recording 12:35:29 for 18¼ min; the speaker introduces himself as Lance and names Claude; exact-name folder title; ten operator notes 12:38–12:52 carry this session",
+        "confidence": 0.95
+      },
+      {
+        "session_id": "1379163",
+        "why": "Code review without reviewing code (Daniel Tao, Atlassian), Expo Sessions 12:35–12:55: same slot; no transcript quote names it or Atlassian",
+        "confidence": 0.02
+      }
+    ],
+    "status": "matched"
   }
 }

@@ -1,4 +1,71 @@
 {
+  "1323755": [
+    {
+      "type": "blog",
+      "title": "How Foundational Models Became Superhuman in Bash",
+      "url": "https://www.philschmid.de/superhuman-bash",
+      "why": "The speaker's write-up of the same experiment: rebuild the harness, strip every tool but Bash and a media viewer, compare score, tokens and cost.",
+      "evidence": [
+        "page title: \"How Foundational Models Became Superhuman in Bash\"",
+        "transcript: \"So in my experiment, every roughly six months, I try to build.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2026-09-01",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "The Bitter Lesson",
+      "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+      "why": "Rich Sutton's essay the talk opens with: general methods that leverage computation win, so the harness should shrink as models grow.",
+      "evidence": [
+        "page title: \"The Bitter Lesson\"",
+        "transcript: \"But before we start, let's look at a I think very important essay from Richard.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "product",
+      "title": "Decisions API - Gemini API",
+      "url": "https://ai.google.dev/gemini-api/docs/decisions-api",
+      "why": "The Gemini Decisions API launched the morning of the talk (Gemini API changelog, 2026-11-11): typed yes/no, choice and score answers with up to 1,000 questions per request.",
+      "evidence": [
+        "page title: \"Decisions API - Gemini API | Google AI Studio\"",
+        "transcript: \"Happy to share that we launched the Gemini Decisions API.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2026-11-11",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "product",
+      "title": "Gemini 4 Carbon - Gemini API",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-carbon",
+      "why": "The model behind the bash-only demos (GA 2026-11-10 per the changelog); it chains 2.2 to 3.7 commands per bash call against Flash's 1.3 to 1.8.",
+      "evidence": [
+        "page title: \"Gemini 4 Carbon - Gemini API | Google AI Studio\"",
+        "transcript: \"Carbon is number one on the Crossbench eval.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2026-11-10",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "repo",
+      "title": "earendil-works/pi: AI agent toolkit",
+      "url": "https://github.com/earendil-works/pi",
+      "why": "Pi, the minimal coding harness used for the demos (transcribed \"PyHarness\"); its default tools are the read/write/edit/bash set the talk compares against bash only.",
+      "evidence": [
+        "page title: \"GitHub - earendil-works/pi: AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI · GitHub\"",
+        "transcript: \"Here I am using the PyHarness, which makes it super simple to basically define what tools you want to use.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
   "1333169": [
     {
       "type": "blog",
@@ -11,7 +78,7 @@
       ],
       "first_seen": "20261110-141925-902d07",
       "published_at": "2026-10-20",
-      "verified_at": "2026-11-11T09:08:08-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "blog",
@@ -23,7 +90,7 @@
       ],
       "first_seen": "20261110-141925-902d07",
       "published_at": "2026-07-21",
-      "verified_at": "2026-11-11T09:08:08-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "product",
@@ -35,7 +102,7 @@
       ],
       "first_seen": "20261110-141925-902d07",
       "published_at": null,
-      "verified_at": "2026-11-11T09:08:08-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "product",
@@ -48,7 +115,7 @@
       ],
       "first_seen": "20261110-141925-902d07",
       "published_at": null,
-      "verified_at": "2026-11-11T09:08:08-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     }
   ],
   "1334565": [
@@ -62,7 +129,7 @@
       ],
       "first_seen": "20261110-192903-433767",
       "published_at": "2026-11-08",
-      "verified_at": "2026-11-11T09:08:08-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     }
   ],
   "1341863": [],
@@ -77,7 +144,7 @@
       ],
       "first_seen": "20261110-183326-bc6e12",
       "published_at": "2026-09-23",
-      "verified_at": "2026-11-11T09:08:08-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "youtube",
@@ -89,7 +156,7 @@
       ],
       "first_seen": "20261110-183326-bc6e12",
       "published_at": null,
-      "verified_at": "2026-11-11T09:08:08-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     }
   ],
   "1352467": [
@@ -104,7 +171,7 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": null,
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "blog",
@@ -117,7 +184,7 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": "2026-03-05",
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "blog",
@@ -130,7 +197,7 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": "2025-10-13",
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "blog",
@@ -143,7 +210,7 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": "2026-11-03",
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     }
   ],
   "1356697": [
@@ -158,7 +225,7 @@
       ],
       "first_seen": "20261110-182014-0b317a",
       "published_at": null,
-      "verified_at": "2026-11-11T09:08:08-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "blog",
@@ -171,7 +238,7 @@
       ],
       "first_seen": "20261110-182014-0b317a",
       "published_at": null,
-      "verified_at": "2026-11-11T09:08:08-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "product",
@@ -184,7 +251,7 @@
       ],
       "first_seen": "20261110-182014-0b317a",
       "published_at": null,
-      "verified_at": "2026-11-11T09:08:08-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "product",
@@ -197,7 +264,7 @@
       ],
       "first_seen": "20261110-182014-0b317a",
       "published_at": null,
-      "verified_at": "2026-11-11T09:08:08-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     }
   ],
   "1373446": [
@@ -212,7 +279,7 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": null,
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "repo",
@@ -225,7 +292,7 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": null,
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "repo",
@@ -238,7 +305,7 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": null,
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "repo",
@@ -251,7 +318,7 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": null,
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "product",
@@ -264,7 +331,7 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": null,
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     }
   ],
   "1373457": [
@@ -279,7 +346,7 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": "2026-10-01",
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "blog",
@@ -292,7 +359,7 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": "2026-10-19",
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "blog",
@@ -305,7 +372,7 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": "2026-03-19",
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "product",
@@ -318,7 +385,7 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": null,
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     },
     {
       "type": "product",
@@ -331,7 +398,841 @@
       ],
       "first_seen": "20261111-111050-472211",
       "published_at": null,
-      "verified_at": "2026-11-11T11:10:50-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1373460": [
+    {
+      "type": "paper",
+      "title": "Signals: Continuous Diagnostics of AI Agents",
+      "url": "https://arxiv.org/abs/2611.04507",
+      "why": "The Signals method the talk launches (co-authored by Asif Mohammad): a 45-type failure taxonomy across eight families, grouped findings, remediations, 91.43% F1 against reference issues.",
+      "evidence": [
+        "page title: \"[2611.04507] Signals: Continuous Diagnostics of AI Agents\"",
+        "transcript: \"By 2026, we had something called signals.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2026-11-03",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "paper",
+      "title": "Chainpoll: A high efficacy method for LLM hallucination detection",
+      "url": "https://arxiv.org/abs/2310.18344",
+      "why": "Galileo's 2023 ChainPoll paper, the start of the journey the talk traces from LLM-as-judge to Signals.",
+      "evidence": [
+        "page title: \"[2310.18344] Chainpoll: A high efficacy method for LLM hallucination detection\"",
+        "transcript: \"When we publish a paper called ChainPole, which is essentially about like small language models and decision making problems.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2023-10-22",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "product",
+      "title": "Signals - Splunk Agent Observability",
+      "url": "https://agent-observability-docs.splunk.com/concepts/signals/signals",
+      "why": "The product docs for Signals: sweeps production traces, groups related findings, and prioritizes the failure patterns evaluators miss.",
+      "evidence": [
+        "page title: \"Signals - Splunk Agent Observability\"",
+        "transcript: \"And that's what led to us building Signals One Point Zero earlier this year.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1373462": [
+    {
+      "type": "product",
+      "title": "Connectors - Mixedbread",
+      "url": "https://www.mixedbread.com/docs/connectors",
+      "why": "The connectors the talk describes: Slack, Google Drive, Gmail, Linear, Notion, GitHub and more synced into one index instead of one MCP server per source.",
+      "evidence": [
+        "page title: \"Connectors - Mixedbread\"",
+        "transcript: \"What we ended up building is basically connectors.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Introducing Mixedbread Search",
+      "url": "https://www.mixedbread.com/blog/mixedbread-search",
+      "why": "The launch of the multimodal, multilingual search API that the single index is built on.",
+      "evidence": [
+        "page title: \"Introducing Mixedbread Search - Mixedbread\"",
+        "transcript: \"Which is like multi-model, multi-lingual, which can understand charts, which can understand diagrams, which show you how it looks like.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2025-10-01",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Closing the Oracle Gap for Your Agents",
+      "url": "https://www.mixedbread.com/blog/closing-gap",
+      "why": "Mixedbread Search v3 for agentic retrieval: how an agent with a search subagent closes the gap to a browsing oracle.",
+      "evidence": [
+        "page title: \"Closing the Oracle Gap for Your Agents - Mixedbread\"",
+        "transcript: \"How does it look like for an Asian right now?\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2026-03-24",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Beyond the Limit: Introduce Mixedbread Wholembed v3",
+      "url": "https://www.mixedbread.com/blog/wholembed-v3",
+      "why": "The unified omnimodal retrieval model behind the talk's scaling-laws-for-retrieval chart and its ten-point jump over the previous model.",
+      "evidence": [
+        "page title: \"Beyond the Limit: Introduce Mixedbread Wholembed v3 - Mixedbread\"",
+        "transcript: \"This is a ten-point change for this metric.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2026-03-12",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "The Hidden Ceiling: How OCR Quality Limits RAG Performance",
+      "url": "https://www.mixedbread.com/blog/the-hidden-ceiling",
+      "why": "Why the talk's build-it-yourself cost includes OCR and parsing, and why a multimodal index beats perfect text.",
+      "evidence": [
+        "page title: \"The Hidden Ceiling: How OCR Quality Limits RAG Performance - Mixedbread\"",
+        "transcript: \"Building it yourself is all the OCR, the parsing.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2025-05-14",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1373464": [
+    {
+      "type": "repo",
+      "title": "overcut-ai/overcut-playbooks",
+      "url": "https://github.com/overcut-ai/overcut-playbooks",
+      "why": "The open playbook library the demo plugs in: auto ticket triage, code review, technical design review, ticket to PR.",
+      "evidence": [
+        "page title: \"GitHub - overcut-ai/overcut-playbooks: Overcut is an agentic SDLC orchestration platform that automates end-to-end software workflows across tools and repositories, using governed AI agents with built-in approvals, policies, and full auditability. · GitHub\"",
+        "transcript: \"So we have a full library of playbooks for the SBLC process.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Introducing Orchestrations: Ticket to Shipped",
+      "url": "https://overcut.ai/blog/introducing-orchestrations/",
+      "why": "The orchestration layer from the Q&A: workflows that trigger other workflows, with human approval gates, from ticket to shipped.",
+      "evidence": [
+        "page title: \"Introducing Orchestrations: Ticket to Shipped | Overcut\"",
+        "transcript: \"We have the orchestration.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2026-08-01",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Workflows That Remember",
+      "url": "https://overcut.ai/blog/workflows-that-remember/",
+      "why": "The retrospective process and scored memory layers the talk shows making code review self-improving.",
+      "evidence": [
+        "page title: \"Workflows That Remember | Overcut\"",
+        "transcript: \"Called retrospective, that we run.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2026-04-06",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "AI Agent Cost Control: Introducing Usage Limits",
+      "url": "https://overcut.ai/blog/introducing-usage-limits/",
+      "why": "The limits feature from the governance answer (runs per workflow, project, day, month), bylined Raz Berman Gold.",
+      "evidence": [
+        "page title: \"AI Agent Cost Control: Introducing Usage Limits | Overcut\"",
+        "transcript: \"We have this feature called limits.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2026-10-19",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Software Factory: What Changes When AI Agents Run Delivery",
+      "url": "https://overcut.ai/blog/software-factory/",
+      "why": "Overcut's case for the software factory model the talk opens with: specialized agents in a governed delivery system rather than one big agent.",
+      "evidence": [
+        "page title: \"Software Factory: What Changes When AI Agents Run Delivery | Overcut\"",
+        "transcript: \"Software factory, the only one that needs zero FDEs.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2026-09-02",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1373465": [
+    {
+      "type": "blog",
+      "title": "Introducing System One Models & Jev",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "why": "TypeSafe's launch post for Jev, the reliable, typed-decision model the talk calls a foundation for smart software.",
+      "evidence": [
+        "page title: \"Introducing System One Models & Jev - TypeSafe AI Blog\"",
+        "transcript: \"We see that Java is like a foundation for smart software.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2026-09-15",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "paper",
+      "title": "Training language models to follow instructions with human feedback",
+      "url": "https://arxiv.org/abs/2203.02155",
+      "why": "The InstructGPT paper the speaker co-authored, behind his claim that the right task beats scale (a small instruction-tuned model beating a far larger one).",
+      "evidence": [
+        "page title: \"[2203.02155] Training language models to follow instructions with human feedback\"",
+        "transcript: \"Also co-created ChatGPT, RLHF, and InstructGPT\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2022-03-04",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Partnering with TypeSafe: The Jevolution",
+      "url": "https://sequoiacap.com/article/typesafe-the-jevolution",
+      "why": "Sequoia's post on TypeSafe; the talk's \"evolution\" slide is the Jevolution.",
+      "evidence": [
+        "page title: \"Partnering with TypeSafe: The Jevolution | Sequoia Capital\"",
+        "transcript: \"Let's talk about the evolution.\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": "2026-10-10",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "The Bitter Lesson",
+      "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+      "why": "Sutton's essay, which the talk extends: data beats compute, and the 'bitterest lesson' is doing the right task.",
+      "evidence": [
+        "page title: \"The Bitter Lesson\"",
+        "transcript: \"For Sutton's bitter lesson, I'm going to loosely paraphrase to make my point easier to say\""
+      ],
+      "first_seen": "20261111-191748-d7910b",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1373469": [
+    {
+      "type": "blog",
+      "title": "Inside Chats: How Lovable's Agents Work Together",
+      "url": "https://lovable.dev/blog/how-lovable-agents-work-together",
+      "why": "The engineering post behind the runtime half of the talk: a per-agent inbox, a Git-style append-only trajectory that forks but never merges, and disposable processes that survive deploys.",
+      "evidence": [
+        "page title: \"Inside Chats: How Lovable's Agents Work Together | Lovable\"",
+        "transcript: \"And the way we chose to architect this is that for each agent, we have a separate inbox.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-09-24",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "How we built Lovable, and why we keep rebuilding it",
+      "url": "https://lovable.dev/blog/how-we-built-lovable-and-why-we-keep-rebuilding-it",
+      "why": "Anton Osika on stateful sandboxes that checkpoint memory, CPU state and disk, and on forking whole running computers so agents can try different approaches.",
+      "evidence": [
+        "page title: \"How we built Lovable, and why we keep rebuilding it | Lovable\"",
+        "transcript: \"The other thing we can do, thanks to this checkpointing, is that. Just like the directory itself, in the IronPython, we can also port the computer.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-11-04",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Faster previews, soon powered by OJ",
+      "url": "https://lovable.dev/blog/faster-previews-oj",
+      "why": "The Vite dev server forked and rewritten in Rust: the faster cold starts and roughly 6.5x smaller memory footprint the talk cites.",
+      "evidence": [
+        "page title: \"Faster previews, soon powered by OJ | Lovable\"",
+        "transcript: \"and so we took that and we forked it and we rewrote it in Rust.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-09-15",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "repo",
+      "title": "lovablelabs/oj",
+      "url": "https://github.com/lovablelabs/oj",
+      "why": "OJ, the open-sourced Rust dev server itself.",
+      "evidence": [
+        "page title: \"GitHub - lovablelabs/oj: Experimental next generation frontend tooling. · GitHub\"",
+        "transcript: \"That made the memory footprint be 6.5 times less in these machines.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1373470": [
+    {
+      "type": "blog",
+      "title": "Why We Built Our Own Background Agent",
+      "url": "https://builders.ramp.com/post/why-we-built-our-background-agent",
+      "why": "Ramp's own technical write-up of Inspect (co-authored by Zach Bruggeman): remote sandboxes, full internal context, multiplayer sessions; the plumbing the talk skips.",
+      "evidence": [
+        "page title: \"Why We Built Our Own Background Agent | Ramp Builders\"",
+        "transcript: \"You can read our blog posts\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Why Ramp built its own in-house coding agent, Inspect",
+      "url": "https://newsletter.pragmaticengineer.com/p/why-ramp-built-inspect",
+      "why": "The Pragmatic Engineer deep dive the talk points to.",
+      "evidence": [
+        "page title: \"Why Ramp built its own in-house coding agent, Inspect\"",
+        "transcript: \"or take a look at Pragmatic Engineers' deep dive that they did with us a few months ago.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-08-25",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "product",
+      "title": "Inspect by Ramp: The Collaborative Coding Agent",
+      "url": "https://ramp.com/blog/introducing-inspect",
+      "why": "Inspect as a product on the market (early access): the page puts it at 74% of Ramp's merged PRs, against the talk's \"around seventy-five percent\".",
+      "evidence": [
+        "page title: \"Inspect by Ramp: The Collaborative Coding Agent\"",
+        "transcript: \"now being a Product on the market\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-10-27",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1373471": [
+    {
+      "type": "repo",
+      "title": "gastownhall/beads",
+      "url": "https://github.com/gastownhall/beads",
+      "why": "Beads, the agent issue tracker that turns into a knowledge graph: the one piece he says survived his failed orchestrators and the only tool he knows for routing work.",
+      "evidence": [
+        "page title: \"GitHub - gastownhall/beads: Beads - A memory upgrade for your coding agent · GitHub\"",
+        "transcript: \"Who here uses beads?\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "repo",
+      "title": "gastownhall/gastown",
+      "url": "https://github.com/gastownhall/gastown",
+      "why": "Gas Town, the orchestrator he launched on January 1 (github.com/steveyegge/gastown redirects here).",
+      "evidence": [
+        "page title: \"GitHub - gastownhall/gastown: Gas Town - multi-agent workspace manager · GitHub\"",
+        "transcript: \"Right on January first, I launched Gaston.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Not Quiet Enough — The Wheelhouse",
+      "url": "https://yegge.ai/comics/not-quiet-enough/",
+      "why": "Strip #14 of The Wheelhouse, the comic he says he started about his factory's office drama; its title is the line Lark wrote in her private reflections ledger. The page carries only the strip, so the match is by title.",
+      "evidence": [
+        "page title: \"Not Quiet Enough — The Wheelhouse — Steve Yegge\"",
+        "transcript: \"I guess I'm just not quiet enough for Steve.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-11-02",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "podcast",
+      "title": "Steve Yegge's Software Factory: Running 50 Agents",
+      "url": "https://re-cinq.com/podcast/steve-yegge-software-factory",
+      "why": "A longer conversation on the same factory: running about 50 agents and burning a large part of it down.",
+      "evidence": [
+        "page title: \"Steve Yegge's Software Factory: Running 50 Agents | re:cinq\"",
+        "transcript: \"but this is like fifty agents, okay.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-09-20",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "product",
+      "title": "Wyvern",
+      "url": "https://yegge.ai/wyvern",
+      "why": "The 30-year-old graphical MUD his factory builds and whose players now talk to it.",
+      "evidence": [
+        "page title: \"Wyvern — Steve Yegge\"",
+        "transcript: \"It's a fun little RPG. I've been working on it for. 30 years.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1373475": [
+    {
+      "type": "blog",
+      "title": "How Cognition Uses Devin to Build Devin",
+      "url": "https://cognition.com/blog/how-cognition-uses-devin-to-build-devin",
+      "why": "Cognition's own account of running its engineering through Devin: anyone tags @Devin in Slack and gets a PR back, the workflow the talk opens with.",
+      "evidence": [
+        "page title: \"How Cognition Uses Devin to Build Devin | Cognition\"",
+        "transcript: \"we tag Devin and say, \"Hey, please fix this.\"\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": "2026-02-27",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Verifying Agentic Development at Scale",
+      "url": "https://cognition.com/blog/testing-development",
+      "why": "End-to-end testing inside Devin's VM: Devin saves its setup as a testing skill in the repo and comes back with a test video as proof, the two practices the talk leans on.",
+      "evidence": [
+        "page title: \"Verifying Agentic Development at Scale | Cognition\"",
+        "transcript: \"Devon will write its own skills for how to test our codebase.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": "2026-05-29",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Devin now supports Android emulators",
+      "url": "https://cognition.com/blog/android-emulator",
+      "why": "The Android Virtual Device support that the iOS-to-Android parity job depends on.",
+      "evidence": [
+        "page title: \"Devin now supports Android emulators | Cognition\"",
+        "transcript: \"Can't we just use that as a blueprint for our Android application?\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": "2026-05-13",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "podcast",
+      "title": "The Age of Async Agents — Cognition's Walden Yan & OpenInspect's Cole Murray — Latent Space",
+      "url": "https://latent.space/p/cognition",
+      "why": "Walden Yan in May on 80% of Cognition's commits coming from Devin, full VMs and agent memory: an earlier waypoint on the curve the talk puts at 40x merged PRs.",
+      "evidence": [
+        "page title: \"The Age of Async Agents — Cognition's Walden Yan & OpenInspect's Cole Murray — Latent Space\"",
+        "transcript: \"Is a 40x in the number of merged PRs we are producing on our engineering team.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": "2026-05-28",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1376191": [
+    {
+      "type": "blog",
+      "title": "The November 2025 inflection point",
+      "url": "https://simonwillison.net/2026/jan/4/inflection/",
+      "why": "The first of the talk's three inflection points: Opus 4.5 and GPT-5.1 made coding agents reliable enough for daily use.",
+      "evidence": [
+        "page title: \"The November 2025 inflection point\"",
+        "transcript: \"November 2025 is what I consider the coding agents inflection point.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-01-04",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Simon Willison on claude-mythos-fable",
+      "url": "https://simonwillison.net/tags/claude-mythos-fable/",
+      "why": "His running coverage of Claude Mythos and Fable: the model announced but held back in April, the export-control pull, and the Fable-class inflection point.",
+      "evidence": [
+        "page title: \"Simon Willison on claude-mythos-fable\"",
+        "transcript: \"but this was the second inflection point. Right, this was the fable. Class model inflection points\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Locating the source of a mysterious beep with Claude",
+      "url": "https://simonw.substack.com/p/locating-the-source-of-a-mysterious",
+      "why": "The beep locator from the talk: devices around a room of 40 boxes triangulating an intermittent beep, finished with Fable 5.2.",
+      "evidence": [
+        "page title: \"Locating the source of a mysterious beep with Claude\"",
+        "transcript: \"This is Beat Locator.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-11-10",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "One-shotting a Raccoon Heist game using Claude Fable 5",
+      "url": "https://simonwillison.net/2026/Aug/5/raccoon-heist/",
+      "why": "The raccoon heist game built from his 2022 GPT-3 and DALL-E concept, and its comparison with GPT-5.6's \"Moonlight & Mayhem\".",
+      "evidence": [
+        "page title: \"One-shotting a Raccoon Heist game using Claude Fable 5\"",
+        "transcript: \"The screenshot, the text, into Fable Five. And it built me a raccoon heist game.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-08-05",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "The October inflection point for vibe game development",
+      "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+      "why": "The third inflection point: Opus 5.5 can make vibe-coded games that are actually fun.",
+      "evidence": [
+        "page title: \"The October inflection point for vibe game development\"",
+        "transcript: \"You can ask these things to build a game that is fun, and you'll get something fun.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-10-28",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "2026 in LLMs (so far)",
+      "url": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
+      "why": "The annotated write-up of his September keynote version of this talk (WeAreDevelopers, San Jose), with the earlier chronology.",
+      "evidence": [
+        "page title: \"2026 in LLMs (so far)\"",
+        "transcript: \"I've got 18 minutes to talk about the last 12 months.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-09-27",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1376197": [
+    {
+      "type": "blog",
+      "title": "Agent Teams: Reliable Multi-Agent Orchestration for GTM",
+      "url": "https://pipeline.zoominfo.com/sales/zoominfo-agent-teams",
+      "why": "ZoomInfo's launch post for Agent Teams, the multi-agent system whose every step the talk's judge grades ('with real-time evaluations', per the page).",
+      "evidence": [
+        "page title: \"Agent Teams: Reliable Multi-Agent Orchestration for GTM\"",
+        "transcript: \"We entrusted our judge until we measured it.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Introducing System One Models & Jev",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "why": "The launch of Jev, the decision model the abstract says ZoomInfo ran beside its LLM grader as the second check.",
+      "evidence": [
+        "page title: \"Introducing System One Models & Jev - TypeSafe AI Blog\"",
+        "transcript: \"Run a second check. Run in shadow mode, seeing where it disagrees.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-09-15",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "TypeSafe Jev: Can Decision Models Replace LLM Judges?",
+      "url": "https://arize.com/blog/typesafe-jev-llm-judge/",
+      "why": "Arize on using a decision model instead of an LLM judge for evals and confidence routing: the question the talk's closing asks every team to measure.",
+      "evidence": [
+        "page title: \"TypeSafe Jev: Can Decision Models Replace LLM Judges? | Arize AI\"",
+        "transcript: \"Measure yours.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-09-18",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1376198": [
+    {
+      "type": "blog",
+      "title": "Sana Is the New Workday Home: A Dynamic Agentic Experience Built to Finish the Work, Not Just Answer Questions",
+      "url": "https://newsroom.workday.com/2026-10-13-Sana-Is-the-New-Workday-Home-A-Dynamic-Agentic-Experience-Built-to-Finish-the-Work,-Not-Just-Answer-Questions",
+      "why": "Workday's announcement of Sana as the new Workday Home with a dynamic interface powered by Jev: the predict-what-you-want-to-do cards the demos show.",
+      "evidence": [
+        "page title: \"Sana Is the New Workday Home: A Dynamic Agentic Experience Built to Finish the Work, Not Just Answer Questions - Oct 13, 2026\"",
+        "transcript: \"and so this is best shown with a demo that. Where we go from predicting what you want to say. To predicting what you want to do\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-10-13",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Introducing System One Models & Jev",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "why": "The launch of Jev and its decision primitives (yes/no probability, category pick, score) that the talk builds on.",
+      "evidence": [
+        "page title: \"Introducing System One Models & Jev - TypeSafe AI Blog\"",
+        "transcript: \"But Jeb has the primitives to allow us to do this.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": "2026-09-15",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Workday's Joel Hellermark on Jev, \"meta work\" and why AI agents need deterministic guardrails",
+      "url": "https://itwire.com/business-it-news/data/workdays-joel-hellermark-on-jev-meta-work-and-why-ai-agents-need-deterministic-guardrails",
+      "why": "Workday's chief AI officer (Sana's founder) on why Workday puts Jev under its agents: the strategy behind the talk's demos.",
+      "evidence": [
+        "page title: \"Workday's Joel Hellermark on Jev, \"meta work\" and why AI agents need deterministic guardrails | iTWire\"",
+        "transcript: \"We thought of new places to inject Java into our pipeline.\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "product",
+      "title": "DuckDB",
+      "url": "https://duckdb.org/",
+      "why": "The database in the resume demo (\"against a DuckDB\" in the transcript), where Jev runs as a function inside a SQL select.",
+      "evidence": [
+        "page title: \"An analytical SQL database management system – DuckDB\"",
+        "transcript: \"So here we have a select statement\""
+      ],
+      "first_seen": "20261111-211018-ef4694",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1379010": [
+    {
+      "type": "blog",
+      "title": "Safely scaling multi-agent teams with Claude Fable 5.2",
+      "url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/",
+      "why": "The post the first story retells (co-authored by Lance Martin): one lead and 999 helpers, each with its own Git branch and a shared Postgres database, whose lead built the Announce, Assign, Notes, Subtasks and Landed tables itself; the proof landed at hour 28.7.",
+      "evidence": [
+        "page title: \"Safely scaling multi-agent teams with Claude Fable 5.2 / claude.dev Blog\"",
+        "transcript: \"This is a blog I wrote with the Fable Five Two launch.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": "2026-11-09",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "The components of agent memory",
+      "url": "https://www.anthropic.com/research/components-of-agent-memory",
+      "why": "His memory post, opening on Kierkegaard: CL-Bench across models, Pokémon memory directories, and dreaming over transcripts, including the Stainless wiki.",
+      "evidence": [
+        "page title: \"The components of agent memory \\ Anthropic\"",
+        "transcript: \"So life can only be understood backwards, but it must be lived forwards.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": "2026-11-06",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Formalizing Fermat's Last Theorem",
+      "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+      "why": "The September result the talk starts from: a dozen agents with the Prove2Me platform (transcribed \"ProofTino\") and researcher support.",
+      "evidence": [
+        "page title: \"Formalizing Fermat's Last Theorem \\ Anthropic\"",
+        "transcript: \"In September, we published that we use Claude to.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": "2026-09-04",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "repo",
+      "title": "anthropics/fermats-last-theorem",
+      "url": "https://github.com/anthropics/fermats-last-theorem",
+      "why": "The Lean formalization itself.",
+      "evidence": [
+        "page title: \"GitHub - anthropics/fermats-last-theorem · GitHub\"",
+        "transcript: \"And we use Lean to do it.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Introducing Claude Fable 5.2 and Claude Mythos 5.2",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "why": "The launch where the 1,000-agent formalization in about 30 hours was announced.",
+      "evidence": [
+        "page title: \"Introducing Claude Fable 5.2 and Claude Mythos 5.2 \\ Anthropic\"",
+        "transcript: \"Two is show can we have a much larger team of agents?\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1379011": [
+    {
+      "type": "blog",
+      "title": "Introducing Seer Agent: The answer is already in Sentry. Now you can ask for it.",
+      "url": "https://blog.sentry.io/introducing-seer-agent/",
+      "why": "Sentry's investigative agent over its own telemetry (traces, spans, logs, source): the kind of agent the talk's three lessons come from.",
+      "evidence": [
+        "page title: \"Introducing Seer Agent: The answer is already in Sentry. Now you can ask for it. | Sentry Blog\"",
+        "transcript: \"Agents that follow a sort of investigative path and really tries to figure out.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": "2026-04-28",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "product",
+      "title": "Seer | Sentry Docs",
+      "url": "https://docs.sentry.io/product/ai-in-sentry/seer/",
+      "why": "Seer, Sentry's AI debugging agent, as a product.",
+      "evidence": [
+        "page title: \"Seer | Sentry Docs\"",
+        "transcript: \"building agents that find and fix bugs\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Writing effective tools for AI agents",
+      "url": "https://www.anthropic.com/research/writing-tools-for-agents",
+      "why": "The Anthropic guidance lesson one credits: consolidate overlapping tools and push pagination, ID matching and retries into the tool, not the agent.",
+      "evidence": [
+        "page title: \"Writing effective tools for AI agents \\ Anthropic\"",
+        "transcript: \"From Anthropic, that's all the research that they did\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": "2025-09-11",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Introducing advanced tool use for Claude",
+      "url": "https://www.anthropic.com/research/advanced-tool-use",
+      "why": "Programmatic Tool Calling, where the model writes code that calls the tools: what Sentry uses instead of hand-written tools.",
+      "evidence": [
+        "page title: \"Introducing advanced tool use for Claude \\ Anthropic\"",
+        "transcript: \"We do something called programmatic tooling, which allows our model to kind of write tools.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": "2025-11-24",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "We removed 80% of our agent’s tools",
+      "url": "https://vercel.com/blog/we-removed-80-percent-of-our-agents-tools",
+      "why": "Vercel's text-to-SQL agent that got better after most of its tools were replaced with bash: the outside example lesson two cites (transcribed \"Werzel\").",
+      "evidence": [
+        "page title: \"We removed 80% of our agent’s tools - Vercel\"",
+        "transcript: \"Werzel interestingly posted a blog post where they took out eighty percent of the.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1379052": [
+    {
+      "type": "product",
+      "title": "Asynchronous Authorization - Auth0 Docs",
+      "url": "https://auth0.com/ai/docs/intro/asynchronous-authorization",
+      "why": "CIBA in Auth0 for AI Agents: the agent asks for consent by push, SMS or email outside the browser session, as in the cancel-booking demo.",
+      "evidence": [
+        "page title: \"Asynchronous Authorization - Auth0 Docs\"",
+        "transcript: \"Ciba client-initiated back-channel authentication.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "product",
+      "title": "Token Vault - Auth0 Docs",
+      "url": "https://auth0.com/docs/secure/call-apis-on-users-behalf/token-vault",
+      "why": "Where Auth0 keeps the connected account's provider tokens so the agent gets a scoped, short-lived token rather than a raw API key: the GitHub connection in the Party Animals demo.",
+      "evidence": [
+        "page title: \"Token Vault - Auth0 Docs\"",
+        "transcript: \"You can see the GitHub credentials are actually already stored for me.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Auth0 for AI Agents is Now Generally Available (GA)",
+      "url": "https://auth0.com/blog/auth0-for-ai-agents-generally-available/",
+      "why": "The product the demos run on: user authentication, Token Vault, async authorization and FGA for RAG.",
+      "evidence": [
+        "page title: \"Auth0 for AI Agents is Now Generally Available (GA)\"",
+        "transcript: \"This is what the code looks like when you use a service like Auth0.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": "2025-11-19",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Your AI Agent Doesn't Need Your Card Number",
+      "url": "https://www.focusotter.com/articles/your-ai-agent-doesnt-need-your-card-number",
+      "why": "His own write-up of the payment section's three options: share the card, share a capped single-use virtual card, or share a Stripe Shared Payment Token with a max amount.",
+      "evidence": [
+        "page title: \"Your AI Agent Doesn't Need Your Card Number - Focus Otter\"",
+        "transcript: \"You can share your card with the agent. Please don't do that.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": "2026-07-28",
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "product",
+      "title": "MPP | Stripe Documentation",
+      "url": "https://docs.stripe.com/payments/machine/mpp",
+      "why": "Stripe's Machine Payments Protocol, the HTTP 402 challenge flow behind the live payment demo.",
+      "evidence": [
+        "page title: \"MPP | Stripe Documentation\"",
+        "transcript: \"MPP is managed meter protocol.\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
+    },
+    {
+      "type": "product",
+      "title": "x402",
+      "url": "https://www.x402.org/",
+      "why": "Coinbase's HTTP 402 payment protocol, the other side of the talk's 402 comparison.",
+      "evidence": [
+        "page title: \"x402\"",
+        "transcript: \"Coinbase was like, \"We're gonna call ours X 402.\"\""
+      ],
+      "first_seen": "20261112-132421-c4d6ee",
+      "published_at": null,
+      "verified_at": "2026-11-12T13:24:21-08:00"
     }
   ],
   "1379134": [
@@ -347,7 +1248,7 @@
       ],
       "first_seen": "20261110-141925-902d07",
       "published_at": null,
-      "verified_at": "2026-11-11T09:08:08-08:00"
+      "verified_at": "2026-11-12T13:24:21-08:00"
     }
   ]
 }

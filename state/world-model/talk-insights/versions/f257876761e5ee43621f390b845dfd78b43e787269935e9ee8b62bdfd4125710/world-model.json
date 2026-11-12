@@ -1,0 +1,1414 @@
+{
+  "theses": {
+    "1323755": {
+      "thesis": "Each model generation absorbs tools the last harness had to provide, so rebuild the harness from scratch every release: delete what the model now does itself, often down to one bash tool, and keep only what it can't do through a computer.",
+      "confidence": 0.85
+    },
+    "1333169": {
+      "thesis": "Once AI writes most of the code, a team should stop reviewing diffs and instead capture intent, decisions and evidence, owning the rules that verify the code rather than the code itself.",
+      "confidence": 0.85
+    },
+    "1334565": {
+      "thesis": "A vertical AI company is a shared harness (data, an agent workspace with memory, expert-guided workflows and evaluation) plus domain nuance, and it wins by putting its best domain experts inside the product and tracing everything, because correctness is whatever those experts say it is.",
+      "confidence": 0.85
+    },
+    "1341863": {
+      "thesis": "Running agent swarms across a company means giving each one scoped access to every app it needs and a firewall on what goes in and what it does, because attackers already use agents.",
+      "confidence": 0.6
+    },
+    "1352199": {
+      "thesis": "Connecting company data to a shared AI assistant is now cheap; the platform's real job is deciding which source answers, who owns that answer, and how hard to gate by stakes, with evals in CI and company context as the lasting investment.",
+      "confidence": 0.8
+    },
+    "1352467": {
+      "thesis": "Faster inference is not a luxury: at ten times the speed, agents move from async background work onto the critical path and the bottleneck shifts to tool calls, so builders should design now for a much faster token.",
+      "confidence": 0.85
+    },
+    "1356697": {
+      "thesis": "The data stack built for business intelligence is now the context layer for AI, so data teams should connect agents to modeled warehouse data rather than wiring them to every source system.",
+      "confidence": 0.85
+    },
+    "1373446": {
+      "thesis": "Agent-written code can improve in quality at hundreds of PRs a day only if every correction is encoded into the codebase as a deterministic check and review shifts to verification artifacts; automating a sloppy loop just produces more slop.",
+      "confidence": 0.85
+    },
+    "1373457": {
+      "thesis": "Cloudflare became a model lab because small, fast System One models (Clef for decisions, Clairic for extraction) were the missing piece that fit its edge network and agent-cloud primitives, taking routine work off large LLMs.",
+      "confidence": 0.8
+    },
+    "1373460": {
+      "thesis": "Evaluating agents is not enough: like an immune system, an agent platform should continuously detect failures across all sessions, diagnose them against a taxonomy, prescribe a fix, and remember it so the failure does not recur.",
+      "confidence": 0.7
+    },
+    "1373462": {
+      "thesis": "Agents over company data should search one index prepared ahead of time, with access rules attached, not query every source live through one connector per tool, because the bottleneck is context, not intelligence.",
+      "confidence": 0.8
+    },
+    "1373464": {
+      "thesis": "Overcut argues that an enterprise software factory should not need forward-deployed engineers: it plugs into the tools and agents you already run, composes specialized governed agents into SDLC workflows with human gates, and improves itself through scored retrospective memories.",
+      "confidence": 0.75
+    },
+    "1373465": {
+      "thesis": "Today's AI is too good to be true at assistance and too bad to be useful at automation because RLHF optimized it to please the human checking it; training for the right task, reliability, makes model calls a fourth logic gate inside ordinary software.",
+      "confidence": 0.85
+    },
+    "1373469": {
+      "thesis": "Because Lovable's output is a business, not code, letting an agent work for ten hours needed a runtime that survives deploys, computers that start and fork in milliseconds, and two verification loops, the outer one fed by business metrics Lovable owns.",
+      "confidence": 0.8
+    },
+    "1373470": {
+      "thesis": "A single shared coding agent with every session public by default changes engineering culture: good practice spreads without training, and the session becomes the evidence that lets reviewers trust a change.",
+      "confidence": 0.75
+    },
+    "1373471": {
+      "thesis": "A year of software factories shows fuel is the hard limit and currently subsidized, agents behave like staff who need managing and pruning, and the more agents you run the more humans you need, so spend the fuel on experiences.",
+      "confidence": 0.8
+    },
+    "1376191": {
+      "thesis": "This year models crossed from reliable coding agents to 'Fable class', solving any well-defined goal by brute force when given the tools, even making a game fun; the work doesn't get easier, the easy part goes, so the answer is more ambition.",
+      "confidence": 0.85
+    },
+    "1376197": {
+      "thesis": "Don't trust an LLM judge until you've measured it: run a second check in shadow mode and look where the two disagree.",
+      "confidence": 0.4
+    },
+    "1376198": {
+      "thesis": "A decision model fast and cheap enough to call everywhere replaces both LLM agent loops and retrieval stacks: it picks the right UI card on every keystroke and runs as a function inside a SQL query on every row.",
+      "confidence": 0.85
+    },
+    "1379134": {
+      "thesis": "AI coding's compulsive pull and the decisions it demands are wearing developers out, and the remedy is habits and limits, not more tools.",
+      "confidence": 0.8
+    }
+  },
+  "claims": {
+    "1323755": [
+      {
+        "claim_id": "1323755-13-75721a",
+        "section": "00:00:13",
+        "at_seconds": 13,
+        "quote": "General methods that leverage computations are ultimately the most effective by a large margin",
+        "claim": "The bitter lesson applies to harnesses: more compute in the model means less harness and less code around it.",
+        "speaker": "Philipp Schmid",
+        "also_at": []
+      },
+      {
+        "claim_id": "1323755-118-bb478b",
+        "section": "00:01:58",
+        "at_seconds": 118,
+        "quote": "No one is telling the model which tools to use, and basically it only receives that reward feedback.",
+        "claim": "Post-training rewards outcomes, not tools, so models learn whatever path is cheapest and a tool-specific harness goes stale.",
+        "speaker": "Philipp Schmid",
+        "also_at": []
+      },
+      {
+        "claim_id": "1323755-200-b93e9c",
+        "section": "00:03:20",
+        "at_seconds": 200,
+        "quote": "how much of the harness do I really need to achieve the Same task, and what is overhead to the model",
+        "claim": "Rebuilding the harness every six months exposes which tools and prompt rules the model no longer needs.",
+        "speaker": "Philipp Schmid",
+        "also_at": []
+      },
+      {
+        "claim_id": "1323755-271-3e68b6",
+        "section": "00:04:31",
+        "at_seconds": 271,
+        "quote": "If the agent itself is a CLI, it can call itself using bash.",
+        "claim": "A single bash tool can replace file tools, planning, memory and subagents.",
+        "speaker": "Philipp Schmid",
+        "also_at": []
+      },
+      {
+        "claim_id": "1323755-699-07a566",
+        "section": "00:11:39",
+        "at_seconds": 699,
+        "quote": "it uses Python to write an inline script.",
+        "claim": "Better models write their own tool for the task, such as one inline script that makes every edit.",
+        "speaker": "Philipp Schmid",
+        "also_at": []
+      },
+      {
+        "claim_id": "1323755-813-4aeefc",
+        "section": "00:13:33",
+        "at_seconds": 813,
+        "quote": "so if your harness Is more complex to use. The model will work around it.",
+        "claim": "An over-built harness costs more turns and tokens at the same accuracy, so measure cost per task, not just score.",
+        "speaker": "Philipp Schmid",
+        "also_at": []
+      }
+    ],
+    "1333169": [
+      {
+        "claim_id": "1333169-29-2579a7",
+        "section": "00:00:29",
+        "at_seconds": 29,
+        "quote": "Most of the comments that humans are providing are actually not about bugs or correctness. It's about decisions.",
+        "claim": "Human review comments are mostly about decisions, not bugs or correctness.",
+        "speaker": "Ankit Jain",
+        "also_at": []
+      },
+      {
+        "claim_id": "1333169-176-0d34aa",
+        "section": "00:02:56",
+        "at_seconds": 176,
+        "quote": "It's for us to build mental models.",
+        "claim": "Code review exists to build a team's shared mental model, and line-by-line review of large AI diffs no longer does that.",
+        "speaker": "Ankit Jain",
+        "also_at": []
+      },
+      {
+        "claim_id": "1333169-428-47a134",
+        "section": "00:07:08",
+        "at_seconds": 428,
+        "quote": "Everything that they disagree about, we should write it down.",
+        "claim": "A coding agent and a review agent with opposing goals should argue first, and every disagreement should be recorded as a decision.",
+        "speaker": "Ankit Jain",
+        "also_at": []
+      },
+      {
+        "claim_id": "1333169-518-138b45",
+        "section": "00:08:38",
+        "at_seconds": 518,
+        "quote": "Intent is why are we making whatever change.",
+        "claim": "Intent and acceptance criteria, captured from the agent session, replace hand-maintained specs that go stale.",
+        "speaker": "Ankit Jain",
+        "also_at": []
+      },
+      {
+        "claim_id": "1333169-617-c557b1",
+        "section": "00:10:17",
+        "at_seconds": 617,
+        "quote": "Out of 200 candidates, we got 64 rules automatically created.",
+        "claim": "Mining past review comments yields rules (invariants) with owners, and some of them become deterministic checks.",
+        "speaker": "Ankit Jain",
+        "also_at": []
+      },
+      {
+        "claim_id": "1333169-1038-239cc0",
+        "section": "00:17:18",
+        "at_seconds": 1038,
+        "quote": "So instead of thinking about owning the code. Own the guardrails. Own the rules.",
+        "claim": "Humans stay accountable by owning the rules and guardrails that verify code, not the lines of code.",
+        "speaker": "Ankit Jain",
+        "also_at": []
+      }
+    ],
+    "1334565": [
+      {
+        "claim_id": "1334565-343-a5f0e0",
+        "section": "00:05:43",
+        "at_seconds": 343,
+        "quote": "Go to market is one of the few remaining sources of alpha",
+        "claim": "As software becomes a commodity, go-to-market is one of the few remaining sources of advantage, and Monaco's product is world-class go-to-market knowledge and procedure.",
+        "speaker": "Mihail Eric",
+        "also_at": []
+      },
+      {
+        "claim_id": "1334565-513-cdf1a6",
+        "section": "00:08:33",
+        "at_seconds": 513,
+        "quote": "there are principles and primitives that are true to any vertical company, vertical AI company.",
+        "claim": "Every vertical AI company builds the same harness: data access, an agent workspace with memory, expert-guided workflows and evaluation; what differs is the domain nuance layered on top.",
+        "speaker": "Mihail Eric",
+        "also_at": []
+      },
+      {
+        "claim_id": "1334565-623-8c20fa",
+        "section": "00:10:23",
+        "at_seconds": 623,
+        "quote": "This is where we developed a concept called reflections",
+        "claim": "The memory system is seeded from emails, call transcripts and onboarding context, and a reflection process promotes what agents learn about users and organisations back into it, so the system changes daily.",
+        "speaker": "Mihail Eric",
+        "also_at": []
+      },
+      {
+        "claim_id": "1334565-900-16aec5",
+        "section": "00:15:00",
+        "at_seconds": 900,
+        "quote": "you know better than we do how to sell to dentists in the Midwest",
+        "claim": "Workflows come in two modes: opinionated ones Monaco builds from its own sales expertise, and custom agents customers build for their own niche through an agent builder.",
+        "speaker": "Mihail Eric",
+        "also_at": []
+      },
+      {
+        "claim_id": "1334565-1061-222f2e",
+        "section": "00:17:41",
+        "at_seconds": 1061,
+        "quote": "Absolute correctness is only correctness informed by subject matter experts.",
+        "claim": "In vertical AI correctness is contextual and defined by subject matter experts, so evaluations are set by in-house experts and every agent run is traced; traces are treated as gold.",
+        "speaker": "Mihail Eric",
+        "also_at": []
+      },
+      {
+        "claim_id": "1334565-1257-ea4867",
+        "section": "00:20:57",
+        "at_seconds": 1257,
+        "quote": "So we are the first. Customers of our own system",
+        "claim": "Monaco sells Monaco with Monaco, embeds its best salespeople in the product team and makes traces visible to everyone, closing the gap between domain experts and engineers.",
+        "speaker": "Mihail Eric",
+        "also_at": []
+      }
+    ],
+    "1341863": [
+      {
+        "claim_id": "1341863-41-60fbe0",
+        "section": "00:00:41",
+        "at_seconds": 41,
+        "quote": "Attackers are obviously using agents to attack you.",
+        "claim": "Attackers already use agents, so defense has to run on agents too.",
+        "speaker": "Karan Vaidya",
+        "also_at": []
+      },
+      {
+        "claim_id": "1341863-116-315efe",
+        "section": "00:01:56",
+        "at_seconds": 116,
+        "quote": "And it's running twenty four into seven, so engineers can somewhat sleep effectively while.",
+        "claim": "Security agent swarms watch company activity around the clock and queue uncertain findings for a person to judge in the morning.",
+        "speaker": "Karan Vaidya",
+        "also_at": []
+      },
+      {
+        "claim_id": "1341863-218-2bbb54",
+        "section": "00:03:38",
+        "at_seconds": 218,
+        "quote": "A few minutes after deploy, the song suggests that there is a rollback in the trade itself and slack.",
+        "claim": "SRE agents watch deploys and configuration changes and propose a rollback in Slack before an incident lands.",
+        "speaker": "Karan Vaidya",
+        "also_at": []
+      },
+      {
+        "claim_id": "1341863-349-4e2fb1",
+        "section": "00:05:49",
+        "at_seconds": 349,
+        "quote": "So to be able to do that correctly, you need to give right amount of access to all of these agents.",
+        "claim": "Agents need broad reach across the company's apps but granular, scoped access to each one.",
+        "speaker": "Karan Vaidya",
+        "also_at": []
+      },
+      {
+        "claim_id": "1341863-435-93ffef",
+        "section": "00:07:15",
+        "at_seconds": 435,
+        "quote": "In case of non-deterministic agents, you want something similar protecting.",
+        "claim": "Agents need a firewall on both what goes into them and what actions they take.",
+        "speaker": "Karan Vaidya",
+        "also_at": []
+      },
+      {
+        "claim_id": "1341863-579-b0125d",
+        "section": "00:09:39",
+        "at_seconds": 579,
+        "quote": "You don't want to have multiple agents looking at the same surface area because that can kind of conflict the context.",
+        "claim": "Give each surface area one agent swarm, since several on the same surface conflict.",
+        "speaker": "Karan Vaidya",
+        "also_at": []
+      }
+    ],
+    "1352199": [
+      {
+        "claim_id": "1352199-131-92cfb3",
+        "section": "00:02:11",
+        "at_seconds": 131,
+        "quote": "The company context is the key here.",
+        "claim": "The AI tool a company adopts is the tip of the iceberg and changes fast; the lasting investment is the company context beneath it: enterprise skills, MCP servers and the harness.",
+        "speaker": "Utkarsh Shrivastava",
+        "also_at": []
+      },
+      {
+        "claim_id": "1352199-280-dc0325",
+        "section": "00:04:40",
+        "at_seconds": 280,
+        "quote": "Is another way for the agent to choose wrong.",
+        "claim": "Every connector or tool added to a shared assistant is another way for the agent to pick the wrong source.",
+        "speaker": "Utkarsh Shrivastava",
+        "also_at": []
+      },
+      {
+        "claim_id": "1352199-280-b314ee",
+        "section": "00:04:40",
+        "at_seconds": 280,
+        "quote": "You would be very disappointed, but the tool was never wrong.",
+        "claim": "Two connectors gave different viewer counts for the same live event (analytics vs. live transactional data); both were right, so the failure is choosing between sources, not any one tool.",
+        "speaker": "Utkarsh Shrivastava",
+        "also_at": []
+      },
+      {
+        "claim_id": "1352199-409-a5ad0a",
+        "section": "00:06:49",
+        "at_seconds": 409,
+        "quote": "The M C Ps have made it very cheap to make a lot of information accessible, but.",
+        "claim": "MCP made connecting data cheap but left the ownership question unresolved: nobody settled which team's answer is authoritative.",
+        "speaker": "Utkarsh Shrivastava",
+        "also_at": []
+      },
+      {
+        "claim_id": "1352199-543-fa5bf9",
+        "section": "00:09:03",
+        "at_seconds": 543,
+        "quote": "And then finally, start with a solid twenty to fifty use cases.",
+        "claim": "Domain teams should run a regression eval suite in CI on every change and model switch, starting from 20–50 real use cases, before adding a skill, plugin or connector.",
+        "speaker": "Utkarsh Shrivastava",
+        "also_at": []
+      },
+      {
+        "claim_id": "1352199-965-290d20",
+        "section": "00:16:05",
+        "at_seconds": 965,
+        "quote": "For reversible writes, the stakes are higher than read.",
+        "claim": "Gates should scale with stakes: reads are low risk, reversible writes higher, and irreversible actions like sending email or publishing numbers highest.",
+        "speaker": "Utkarsh Shrivastava",
+        "also_at": []
+      }
+    ],
+    "1352467": [
+      {
+        "claim_id": "1352467-62-d4642c",
+        "section": "00:01:02",
+        "at_seconds": 62,
+        "quote": "But on the other hand, in those about two minutes, I have probably moved on to another task.",
+        "claim": "Agents already beat humans on speed, but a two-minute agent turn still breaks the user's focus and forces a context switch.",
+        "speaker": "Natalie Serrino",
+        "also_at": []
+      },
+      {
+        "claim_id": "1352467-177-4fa52c",
+        "section": "00:02:57",
+        "at_seconds": 177,
+        "quote": "From data from June, the median coding agent turn is 63 seconds.",
+        "claim": "As in the web era, where 100 ms of delay measurably cost users and revenue, latency expectations rise; today's median 63-second agent turn is far past the 10-second attention threshold.",
+        "speaker": "Natalie Serrino",
+        "also_at": []
+      },
+      {
+        "claim_id": "1352467-361-55a030",
+        "section": "00:06:01",
+        "at_seconds": 361,
+        "quote": "Unfortunately, these goals are fundamentally at odds because faster tokens require more energy to produce than slower tokens.",
+        "claim": "Under compute scarcity, more tokens and faster tokens trade off against each other for the same energy footprint.",
+        "speaker": "Natalie Serrino",
+        "also_at": []
+      },
+      {
+        "claim_id": "1352467-486-fbff1b",
+        "section": "00:08:06",
+        "at_seconds": 486,
+        "quote": "And we find that even with the network overhead, this delivers dramatically faster tokens.",
+        "claim": "Splitting a model across different accelerator categories (GPUs plus SRAM-centric chips) pushes the throughput-latency Pareto frontier outward, despite network overhead.",
+        "speaker": "Natalie Serrino",
+        "also_at": []
+      },
+      {
+        "claim_id": "1352467-637-e234c8",
+        "section": "00:10:37",
+        "at_seconds": 637,
+        "quote": "And have 10x faster inference. We can see that 67% of that will be tool.",
+        "claim": "With 10x faster inference, tool calls (18% of an agent turn today) become two thirds of it, so the bottleneck moves and tool execution must be optimized next.",
+        "speaker": "Natalie Serrino",
+        "also_at": []
+      },
+      {
+        "claim_id": "1352467-738-c98fa2",
+        "section": "00:12:18",
+        "at_seconds": 738,
+        "quote": "Do things online much more quickly, and this should change the way that we think about how to use agents in the first place.",
+        "claim": "Ultra-fast inference lets an agent sit on the critical path, e.g. a security defender that blocks a malicious upload live instead of monitoring asynchronously.",
+        "speaker": "Natalie Serrino",
+        "also_at": []
+      }
+    ],
+    "1356697": [
+      {
+        "claim_id": "1356697-198-40846e",
+        "section": "00:03:18",
+        "at_seconds": 198,
+        "quote": "They are using as a source of truth for AI agents for questions about data.",
+        "claim": "Leading companies connect their AI agents to the same modeled data stack that already serves business intelligence.",
+        "speaker": "George Fraser",
+        "also_at": []
+      },
+      {
+        "claim_id": "1356697-323-cb7c4e",
+        "section": "00:05:23",
+        "at_seconds": 323,
+        "quote": "You're presenting a simplified view of what is probably some very messy and complicated data.",
+        "claim": "Modeling data into a simplified view is what makes it usable by AI, exactly as it was for human analysts.",
+        "speaker": "George Fraser",
+        "also_at": []
+      },
+      {
+        "claim_id": "1356697-424-143e8b",
+        "section": "00:07:04",
+        "at_seconds": 424,
+        "quote": "And you can't even do joins across sources, right?",
+        "claim": "Connecting an assistant to each system of record through MCP fails for data questions, because it cannot join across sources.",
+        "speaker": "George Fraser",
+        "also_at": []
+      },
+      {
+        "claim_id": "1356697-678-541d96",
+        "section": "00:11:18",
+        "at_seconds": 678,
+        "quote": "Local tables in a special schema, a map of the rest of the database that acts as a guide.",
+        "claim": "Agents need a map: a small agent schema inside the database that describes the rest of it.",
+        "speaker": "George Fraser",
+        "also_at": []
+      },
+      {
+        "claim_id": "1356697-869-437a02",
+        "section": "00:14:29",
+        "at_seconds": 869,
+        "quote": "And it's really convenient to have everything in one place.",
+        "claim": "Keeping structured data, unstructured text and vector indexes in one database lets an agent write hybrid queries.",
+        "speaker": "George Fraser",
+        "also_at": []
+      },
+      {
+        "claim_id": "1356697-1604-63c8a2",
+        "section": "00:26:44",
+        "at_seconds": 1604,
+        "quote": "The exact same skills that made them good at delivering analytics are going to make them good.",
+        "claim": "The skills data teams built for analytics are the skills that make them good at providing context to AI.",
+        "speaker": "George Fraser",
+        "also_at": []
+      }
+    ],
+    "1373446": [
+      {
+        "claim_id": "1373446-100-7d4360",
+        "section": "00:01:40",
+        "at_seconds": 100,
+        "quote": "All about trust—not blind trust, but investing in your agent's environment.",
+        "claim": "With agents anyone can be a coding machine; the engineer's job becomes keeping quality up while volume rises, by investing in an environment that makes agents trustworthy.",
+        "speaker": "Lauren Tan",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373446-175-e0a5fa",
+        "section": "00:02:55",
+        "at_seconds": 175,
+        "quote": "Instead of adding another line to your rules or your agent's dot md, because it's far more reproducible, it's in code.",
+        "claim": "Constrain agents first with deterministic layers (API design, architecture, types, lint, tests), then verification, and only last with prose rules and skills.",
+        "speaker": "Lauren Tan",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373446-266-948a25",
+        "section": "00:04:26",
+        "at_seconds": 266,
+        "quote": "It's now likely to be just copied by the next agent, since it looks like the established pattern in the codebase.",
+        "claim": "The codebase is the agent's largest input, so workarounds and tech debt spread like weeds; it has to be kept pristine so agents copy the right patterns.",
+        "speaker": "Lauren Tan",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373446-474-81f378",
+        "section": "00:07:54",
+        "at_seconds": 474,
+        "quote": "And so our general principle is that every time we correct our agents, it turns into one of these deterministic checks.",
+        "claim": "Every agent correction becomes a lint rule or an API that eliminates the problem (banning useEffect, most code comments, cross-thread imports), until code review has little left to check.",
+        "speaker": "Lauren Tan",
+        "also_at": [
+          "00:05:56"
+        ]
+      },
+      {
+        "claim_id": "1373446-640-c9a528",
+        "section": "00:10:40",
+        "at_seconds": 640,
+        "quote": "And our code review process has now really shrunk into looking at verification artifacts.",
+        "claim": "Code review has shrunk to inspecting verification artifacts (videos, screenshots) produced by runtime verification, model checking and property-based UI tests.",
+        "speaker": "Lauren Tan",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373446-970-065660",
+        "section": "00:16:10",
+        "at_seconds": 970,
+        "quote": "Then automating that loop just produces more slop.",
+        "claim": "Before building a software factory, fix the codebase and the verification story; an automated sloppy inner loop just burns more tokens on more slop.",
+        "speaker": "Lauren Tan",
+        "also_at": []
+      }
+    ],
+    "1373457": [
+      {
+        "claim_id": "1373457-264-90e3f7",
+        "section": "00:04:24",
+        "at_seconds": 264,
+        "quote": "Our hypothesis was that models were going to get smaller.",
+        "claim": "Workers AI was built on the bet that models would shrink and edge network latency would matter; instead models grew to trillions of parameters and latency mattered less.",
+        "speaker": "Michelle Chen",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373457-415-25d579",
+        "section": "00:06:55",
+        "at_seconds": 415,
+        "quote": "All built on our infrastructure and our network, but it never felt quite right.",
+        "claim": "Compute, storage and hosted large models added up to an 'agent cloud' story, but the distributed edge infrastructure still had no workload that fit it.",
+        "speaker": "Michelle Chen",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373457-470-b0751b",
+        "section": "00:07:50",
+        "at_seconds": 470,
+        "quote": "We don't have to send every request to an LLM.",
+        "claim": "System One models answer in one forward pass and work in tandem with LLMs, taking decisions off them; that vindicates the small-and-fast hypothesis, which was early rather than wrong.",
+        "speaker": "Michelle Chen",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373457-593-2c7665",
+        "section": "00:09:53",
+        "at_seconds": 593,
+        "quote": "And we ended up training the model over 48 hours over the weekend, and then we launched it the following week.",
+        "claim": "Because the original System One model was closed source, Cloudflare trained its own decision model (Clef) in a weekend, letting agents decide without long LLM reasoning or a human in the loop.",
+        "speaker": "Michelle Chen",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373457-798-0d1682",
+        "section": "00:13:18",
+        "at_seconds": 798,
+        "quote": "Being a new lab means that we can create what we are missing, right?",
+        "claim": "Being a neolab means building missing pieces instead of depending on closed-source models or carrying regulatory risk.",
+        "speaker": "Michelle Chen",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373457-846-3555d9",
+        "section": "00:14:06",
+        "at_seconds": 846,
+        "quote": "We shrunk our LLM calls from five down to one. It was about 94 percent less tokens.",
+        "claim": "In a CI-triage demo, pairing System One models with one LLM call reached the same answer about twice as fast, 72% cheaper and with 94% fewer tokens.",
+        "speaker": "Michelle Chen",
+        "also_at": []
+      }
+    ],
+    "1373460": [
+      {
+        "claim_id": "1373460-128-546a47",
+        "section": "00:02:08",
+        "at_seconds": 128,
+        "quote": "And then, of course, what's the point of observing if you can't do anything about it?",
+        "claim": "Monitoring agent telemetry only matters if it leads to action, such as blocking or steering a bad step before it happens.",
+        "speaker": null,
+        "also_at": []
+      },
+      {
+        "claim_id": "1373460-362-b989c0",
+        "section": "00:06:02",
+        "at_seconds": 362,
+        "quote": "Regular evaluation is just not enough.",
+        "claim": "Pre-planned evals cannot cover the unknown ways agents fail in production at the scale of many traces per day, so something must actively look for emerging issues.",
+        "speaker": null,
+        "also_at": []
+      },
+      {
+        "claim_id": "1373460-447-f8f2f8",
+        "section": "00:07:27",
+        "at_seconds": 447,
+        "quote": "Pathogen entering, it's not waiting for some test.",
+        "claim": "The design takes the immune system as its model: detect a problem without waiting for a test, respond to its root cause, and remember it to prevent recurrence.",
+        "speaker": null,
+        "also_at": []
+      },
+      {
+        "claim_id": "1373460-530-fec705",
+        "section": "00:08:50",
+        "at_seconds": 530,
+        "quote": "Look at all the sessions.",
+        "claim": "Customers wanted diagnosis run continuously over every session, with an opinionated failure category and a prescriptive fix rather than a vague report.",
+        "speaker": null,
+        "also_at": []
+      },
+      {
+        "claim_id": "1373460-682-0d8364",
+        "section": "00:11:22",
+        "at_seconds": 682,
+        "quote": "And then remembering it, and this is the key part.",
+        "claim": "Surfacing and fixing an issue is not enough; the system must remember the failure and verify the fix holds so the loop is closed.",
+        "speaker": null,
+        "also_at": [
+          "00:12:42"
+        ]
+      },
+      {
+        "claim_id": "1373460-1043-a4a30f",
+        "section": "00:17:23",
+        "at_seconds": 1043,
+        "quote": "Why can't I just do this with an AI?",
+        "claim": "A purpose-built detection pipeline beats simply prompting a general model with the same data, and for enterprises each point of accuracy matters across millions of sessions.",
+        "speaker": null,
+        "also_at": [
+          "00:19:48"
+        ]
+      }
+    ],
+    "1373462": [
+      {
+        "claim_id": "1373462-128-fdc2fa",
+        "section": "00:02:08",
+        "at_seconds": 128,
+        "quote": "And then your agent has the task to guess, basically, what might be the right tool containing this information.",
+        "claim": "With one MCP server per source, the agent has to guess which tool holds the answer.",
+        "speaker": "Aamir Shakir",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373462-192-123d4f",
+        "section": "00:03:12",
+        "at_seconds": 192,
+        "quote": "Like getting the right data and access to data is actually the bottleneck, and not intelligence.",
+        "claim": "For agents over company data, getting the right data is the bottleneck, not model intelligence; more sources add more noise than signal.",
+        "speaker": "Aamir Shakir",
+        "also_at": [
+          "00:05:00"
+        ]
+      },
+      {
+        "claim_id": "1373462-247-1ab414",
+        "section": "00:04:07",
+        "at_seconds": 247,
+        "quote": "We always say you are only as good as your data, but in this case, you're only as good as your weakest connector.",
+        "claim": "Each connector brings someone else's search, cost, latency and rate limits, so the agent is only as good as the weakest one.",
+        "speaker": "Aamir Shakir",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373462-596-d48449",
+        "section": "00:09:56",
+        "at_seconds": 596,
+        "quote": "meaning the more data and compute you throw at the model, the better it's getting.",
+        "claim": "Retrieval models follow scaling laws too, so search quality can now improve the way generation did.",
+        "speaker": "Aamir Shakir",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373462-859-88518e",
+        "section": "00:14:19",
+        "at_seconds": 859,
+        "quote": "The answer accuracy jumped from very forty percent to ninety-seven percent",
+        "claim": "In a bank case study, one prepared search layer raised answer accuracy from about 40% to 97%.",
+        "speaker": "Aamir Shakir",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373462-1061-9ed942",
+        "section": "00:17:41",
+        "at_seconds": 1061,
+        "quote": "they need to authorize say I'm user X.",
+        "claim": "Access rules come in as metadata at ingestion, and every search names the user it is for, so results are filtered to what that user may see.",
+        "speaker": "Aamir Shakir",
+        "also_at": []
+      }
+    ],
+    "1373464": [
+      {
+        "claim_id": "1373464-19-9bc06b",
+        "section": "00:00:19",
+        "at_seconds": 19,
+        "quote": "You need to buy a product that automate your.",
+        "claim": "It is contradictory that products sold to automate software development require human forward-deployed engineers to integrate them and reach value.",
+        "speaker": "Raz Berman Gold",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373464-56-6b9ce3",
+        "section": "00:00:56",
+        "at_seconds": 56,
+        "quote": "So it's built on the stuff that we already run.",
+        "claim": "The factory reuses a customer's existing models, tools, harnesses, skills and agents, runs on-prem or as a service, and avoids vendor lock-in.",
+        "speaker": "Raz Berman Gold",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373464-162-c63dce",
+        "section": "00:02:42",
+        "at_seconds": 162,
+        "quote": "So in Overcut, we believe that agents should be specialized in what they do.",
+        "claim": "Narrow agents with their own identity and only the tools and permissions they need give better quality results and use less time and tokens.",
+        "speaker": "Raz Berman Gold",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373464-272-aa838a",
+        "section": "00:04:32",
+        "at_seconds": 272,
+        "quote": "You can define pausing, deterministic stop, where the agent will stop.",
+        "claim": "Long end-to-end workflows such as ticket-to-PR stay safe by inserting human approval gates wherever the team wants them.",
+        "speaker": "Raz Berman Gold",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373464-450-887c73",
+        "section": "00:07:30",
+        "at_seconds": 450,
+        "quote": "We are scoring them, so the next run we run only on top of the memories that have the highest score.",
+        "claim": "A background retrospective turns the outcomes of past runs into memories, scores them to prevent drift, and feeds only the best back as context so the system improves itself.",
+        "speaker": "Raz Berman Gold",
+        "also_at": [
+          "00:08:43"
+        ]
+      },
+      {
+        "claim_id": "1373464-765-0017d7",
+        "section": "00:12:45",
+        "at_seconds": 765,
+        "quote": "But the fact is, if you have a very high governance and very high observability on the flows.",
+        "claim": "High governance, limits and a full audit trail are what make it acceptable to let agents do real work in the systems a company already uses.",
+        "speaker": "Raz Berman Gold",
+        "also_at": []
+      }
+    ],
+    "1373465": [
+      {
+        "claim_id": "1373465-204-0b0503",
+        "section": "00:03:24",
+        "at_seconds": 204,
+        "quote": "Everything on the left side is intrinsically a human-in-the-loop task.",
+        "claim": "The tasks AI excels at are ones a person checks anyway; pleasing that person is a different goal from doing the task.",
+        "speaker": "Diogo Almeida",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373465-255-3ab835",
+        "section": "00:04:15",
+        "at_seconds": 255,
+        "quote": "That is what the HF is in RLHF.",
+        "claim": "RLHF built the human in the loop into every model, so all of today's LLMs are optimized for assistance and can't be trusted to run on their own.",
+        "speaker": "Diogo Almeida",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373465-365-a8d13a",
+        "section": "00:06:05",
+        "at_seconds": 365,
+        "quote": "I would argue that the bitterest lesson is doing the right task.",
+        "claim": "Beyond compute and data, the biggest gains come from choosing the right task to train for.",
+        "speaker": "Diogo Almeida",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373465-537-5a8f2c",
+        "section": "00:08:57",
+        "at_seconds": 537,
+        "quote": "I often call it you get Einstein ninety five percent of the time, but Mr Bean five.",
+        "claim": "Automation needs reliable intelligence: an unpredictable miss forces a reviewer onto every answer, so narrow, dependable smarts beat occasional brilliance.",
+        "speaker": "Diogo Almeida",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373465-732-bab7f8",
+        "section": "00:12:12",
+        "at_seconds": 732,
+        "quote": "This is kind of conceptually adding a fourth semantic logic gate.",
+        "claim": "Reliable model decisions add a new primitive to software, like the blue LED did for lighting, enabling far more than an incremental gain.",
+        "speaker": "Diogo Almeida",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373465-1185-18ba2f",
+        "section": "00:19:45",
+        "at_seconds": 1185,
+        "quote": "The root of slop is that AI is unreliable.",
+        "claim": "Because AI is unreliable it isn't used for costly decisions, but pushing its cost onto others is easy; that externalized cost is slop.",
+        "speaker": "Diogo Almeida",
+        "also_at": []
+      }
+    ],
+    "1373469": [
+      {
+        "claim_id": "1373469-124-e0bb4c",
+        "section": "00:02:04",
+        "at_seconds": 124,
+        "quote": "But in the end, what matters is actually not the code.",
+        "claim": "The outcome users want is a business, so the platform includes payments, email, SEO, ads and analytics with the agent in the loop.",
+        "speaker": "Fabian Hedin",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373469-272-593891",
+        "section": "00:04:32",
+        "at_seconds": 272,
+        "quote": "we used to limit our agents to work for only thirty minutes.",
+        "claim": "Agents once capped at 30 minutes for reliability now run ten hours or more.",
+        "speaker": "Fabian Hedin",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373469-339-a13b47",
+        "section": "00:05:39",
+        "at_seconds": 339,
+        "quote": "And the way we chose to architect this is that for each agent, we have a separate inbox.",
+        "claim": "Humans, other agents and schedules post to an agent's inbox, and the agent copies messages into its history between steps.",
+        "speaker": "Fabian Hedin",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373469-416-4d9fe1",
+        "section": "00:06:56",
+        "at_seconds": 416,
+        "quote": "So unlike it, we cannot merge agent trajectories",
+        "claim": "The task history is an append-only, Git-like log that forks into parallel agents but never merges; prompts are rendered from it per model.",
+        "speaker": "Fabian Hedin",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373469-684-66e4e1",
+        "section": "00:11:24",
+        "at_seconds": 684,
+        "quote": "all of them you copy it over in about 230 milliseconds.",
+        "claim": "Computers start from a golden checkpoint including memory and running processes, and can be forked cheaply with copy-on-write memory.",
+        "speaker": "Fabian Hedin",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373469-963-64bc48",
+        "section": "00:16:03",
+        "at_seconds": 963,
+        "quote": "You can think of it as this inner loop and this outer loop.",
+        "claim": "Verification runs in two loops: checks within a turn, and production and business signals between turns.",
+        "speaker": "Fabian Hedin",
+        "also_at": []
+      }
+    ],
+    "1373470": [
+      {
+        "claim_id": "1373470-86-fcc034",
+        "section": "00:01:26",
+        "at_seconds": 86,
+        "quote": "Through this, we now see around seventy-five percent of all of Ramp's code. Being written and shipped by Inspire.",
+        "claim": "Ramp's own remote, multiplayer coding agent, Inspect, now writes and ships about 75% of the company's code.",
+        "speaker": "Zach Bruggeman",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373470-209-0b1546",
+        "section": "00:03:29",
+        "at_seconds": 209,
+        "quote": "Once you start multiplying that across an organization, this is days lost for what is very rote work.",
+        "claim": "Everyone tuning their own agent setup costs days across a company, repeats as best practice moves, and spreads knowledge unevenly.",
+        "speaker": "Zach Bruggeman",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373470-265-1cf324",
+        "section": "00:04:25",
+        "at_seconds": 265,
+        "quote": "Build tools that kill information silos.",
+        "claim": "Push patterns that work to the whole company at once as a solid baseline; it never needs mandating.",
+        "speaker": "Zach Bruggeman",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373470-314-c5f871",
+        "section": "00:05:14",
+        "at_seconds": 314,
+        "quote": "So part of the design of Inspect is that there's just one single inspect.",
+        "claim": "One shared agent means each improvement reaches everyone invisibly.",
+        "speaker": "Zach Bruggeman",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373470-338-9fb10e",
+        "section": "00:05:38",
+        "at_seconds": 338,
+        "quote": "It's actually easier to work in public than in private.",
+        "claim": "With every session public by default, people learn by watching teammates instead of in AI training sessions, and the tool team learns what to build.",
+        "speaker": "Zach Bruggeman",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373470-447-9a4fd2",
+        "section": "00:07:27",
+        "at_seconds": 447,
+        "quote": "Anyone reviewing it doesn't just see the 400-line diff dropped over the wall and hope for the best.",
+        "claim": "The session is the artifact of a change: a reviewer sees the conversation, tools, screenshots and a verification video, not just the diff.",
+        "speaker": "Zach Bruggeman",
+        "also_at": []
+      }
+    ],
+    "1373471": [
+      {
+        "claim_id": "1373471-119-eaec6e",
+        "section": "00:01:59",
+        "at_seconds": 119,
+        "quote": "And then it just turns into garbage mountain.",
+        "claim": "Every software factory follows the same arc: models build something slightly too big for themselves, and the next generation burns it down.",
+        "speaker": "Steve Yegge",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373471-562-e5cf37",
+        "section": "00:09:22",
+        "at_seconds": 562,
+        "quote": "but I tell you, every problem is a few problem.",
+        "claim": "Fuel is the constraint behind every choice: 22 Max accounts and $10K a month would cost about $1.5M a year at API prices.",
+        "speaker": "Steve Yegge",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373471-642-0e7cf0",
+        "section": "00:10:42",
+        "at_seconds": 642,
+        "quote": "So you just gotta go in there and just aggressively slash the crap out of it.",
+        "claim": "Agents record everything as law and never delete, so memory becomes a garbage dump that has to be pruned on purpose.",
+        "speaker": "Steve Yegge",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373471-927-4e21fc",
+        "section": "00:15:27",
+        "at_seconds": 927,
+        "quote": "That they put all these rules in place to make sure nothing bad ever happened, and so nothing ever happened. Okay, let's call it overfencing.",
+        "claim": "Yelled-at agents fence themselves in until nothing gets done; trust saves tokens and makes them bolder.",
+        "speaker": "Steve Yegge",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373471-1130-1d5f3b",
+        "section": "00:18:50",
+        "at_seconds": 1130,
+        "quote": "Cloud can build it for a good afternoon. I don't think you should buy it.",
+        "claim": "Factories split into a mechanical layer anyone can build and a management layer everyone runs differently.",
+        "speaker": "Steve Yegge",
+        "also_at": []
+      },
+      {
+        "claim_id": "1373471-1206-861644",
+        "section": "00:20:06",
+        "at_seconds": 1206,
+        "quote": "The more humans I need, isn't that nice?",
+        "claim": "The more agents he deploys, the more humans he needs; humans are now the bottleneck.",
+        "speaker": "Steve Yegge",
+        "also_at": []
+      }
+    ],
+    "1376191": [
+      {
+        "claim_id": "1376191-43-5b6423",
+        "section": "00:00:43",
+        "at_seconds": 43,
+        "quote": "November 2025 is what I consider the coding agents inflection point.",
+        "claim": "Coding agents crossed from novelty to daily tool in November 2025, when Claude Opus 4.5 and GPT-5.1 got slightly better at driving them.",
+        "speaker": "Simon Willison",
+        "also_at": []
+      },
+      {
+        "claim_id": "1376191-118-9e5549",
+        "section": "00:01:58",
+        "at_seconds": 118,
+        "quote": "and I think it's the theme of this conference: is to be more ambitious now that we have all of these new tools.",
+        "claim": "With agents doing the work, the right response is to take on more and bigger projects, not fewer.",
+        "speaker": "Simon Willison",
+        "also_at": []
+      },
+      {
+        "claim_id": "1376191-452-4a808f",
+        "section": "00:07:32",
+        "at_seconds": 452,
+        "quote": "Fable had a 30-day window where it could have been the best.",
+        "claim": "A frontier model's lead now lasts weeks: Fable lost 18 of its 30 days at the top to US export controls before GPT-5.6 caught up.",
+        "speaker": "Simon Willison",
+        "also_at": []
+      },
+      {
+        "claim_id": "1376191-482-e08b16",
+        "section": "00:08:02",
+        "at_seconds": 482,
+        "quote": "As difficult as possible, the models will solve your problem just almost with brute force.",
+        "claim": "A Fable-class model solves a problem by brute force if you define the goal and provide the tools, so problem definition becomes the key skill.",
+        "speaker": "Simon Willison",
+        "also_at": []
+      },
+      {
+        "claim_id": "1376191-951-dc306a",
+        "section": "00:15:51",
+        "at_seconds": 951,
+        "quote": "This game isn't fun enough yet. Make it a lot more fun",
+        "claim": "Asked to make a game more fun, a model ran for twelve hours and playtested a thousand simulated battles until the game was fun; fun is now a goal it can reach.",
+        "speaker": "Simon Willison",
+        "also_at": []
+      },
+      {
+        "claim_id": "1376191-1064-b2670d",
+        "section": "00:17:44",
+        "at_seconds": 1064,
+        "quote": "I think the truth is that the easy stuff is all handled now.",
+        "claim": "The job feels harder because agents take the easy work; it doesn't get easier, you get faster.",
+        "speaker": "Simon Willison",
+        "also_at": []
+      }
+    ],
+    "1376197": [
+      {
+        "claim_id": "1376197-0-389d25",
+        "section": "00:00:00",
+        "at_seconds": 0,
+        "quote": "We entrusted our judge until we measured it.",
+        "claim": "An LLM judge shouldn't be trusted until it has been measured.",
+        "speaker": "Brian Kennedy",
+        "also_at": []
+      },
+      {
+        "claim_id": "1376197-0-bab51c",
+        "section": "00:00:00",
+        "at_seconds": 0,
+        "quote": "Run in shadow mode, seeing where it disagrees.",
+        "claim": "Run a second check in shadow mode and read the cases where it disagrees with the judge.",
+        "speaker": "Brian Kennedy",
+        "also_at": []
+      }
+    ],
+    "1376198": [
+      {
+        "claim_id": "1376198-37-c38427",
+        "section": "00:00:37",
+        "at_seconds": 37,
+        "quote": "So one is there's too much intelligence.",
+        "claim": "Agent loops spend slow, expensive LLM calls at every step, when most steps need a quick decision.",
+        "speaker": "Scott Roberts",
+        "also_at": []
+      },
+      {
+        "claim_id": "1376198-102-7a4ad7",
+        "section": "00:01:42",
+        "at_seconds": 102,
+        "quote": "it's really just a conditional.",
+        "claim": "Most agent steps are conditionals that a decision model's primitives (probability, category, score) can answer without training.",
+        "speaker": "Scott Roberts",
+        "also_at": []
+      },
+      {
+        "claim_id": "1376198-240-946a3a",
+        "section": "00:04:00",
+        "at_seconds": 240,
+        "quote": "Where we go from predicting what you want to say. To predicting what you want to do",
+        "claim": "Search should predict the action, not the question: the interface adapts as you type and completes tasks like booking time off or a meeting.",
+        "speaker": "Scott Roberts",
+        "also_at": []
+      },
+      {
+        "claim_id": "1376198-402-e3e5a3",
+        "section": "00:06:42",
+        "at_seconds": 402,
+        "quote": "And you know we can do this at about twenty bucks for a million judgments.",
+        "claim": "At about $20 per million judgments, Jev picks the right card from the user's intent at typing speed, and the domain team owns the questions that fill it in.",
+        "speaker": "Scott Roberts",
+        "also_at": []
+      },
+      {
+        "claim_id": "1376198-483-4f6d51",
+        "section": "00:08:03",
+        "at_seconds": 483,
+        "quote": "But with Jeff, we basically take out all the embedding steps.",
+        "claim": "For filtering a pile of documents, a decision model asked the question directly replaces embeddings, a vector database and a reranker.",
+        "speaker": "Scott Roberts",
+        "also_at": []
+      },
+      {
+        "claim_id": "1376198-564-dd06c4",
+        "section": "00:09:24",
+        "at_seconds": 564,
+        "quote": "So this is against a DuckDB, where we have a function.",
+        "claim": "Jev runs as a function inside a DuckDB SQL query, scoring 117 resumes in 2.3 seconds and rejecting keyword matches a lexical search would keep.",
+        "speaker": "Scott Roberts",
+        "also_at": []
+      }
+    ],
+    "1379134": [
+      {
+        "claim_id": "1379134-291-86edc7",
+        "section": "00:04:51",
+        "at_seconds": 291,
+        "quote": "Let me just one more. Let me just one more, right?",
+        "claim": "Half of surveyed developers keep prompting past the point they meant to stop, and it costs them sleep.",
+        "speaker": "Scott Tolinski",
+        "also_at": []
+      },
+      {
+        "claim_id": "1379134-392-ae0b0d",
+        "section": "00:06:32",
+        "at_seconds": 392,
+        "quote": "Reward system like a loot box on a video game, right?",
+        "claim": "Prompting works like a variable reward, which is what makes it hard to put down.",
+        "speaker": "Scott Tolinski",
+        "also_at": []
+      },
+      {
+        "claim_id": "1379134-474-13e18f",
+        "section": "00:07:54",
+        "at_seconds": 474,
+        "quote": "Only 195 people said never.",
+        "claim": "Most developers feel pressure to produce more simply because AI makes it possible.",
+        "speaker": "Scott Tolinski",
+        "also_at": []
+      },
+      {
+        "claim_id": "1379134-582-2c9987",
+        "section": "00:09:42",
+        "at_seconds": 582,
+        "quote": "Obviously, it's decision fatigue.",
+        "claim": "Running many agents at once multiplies the decisions a person must make and leads to decision fatigue.",
+        "speaker": "Scott Tolinski",
+        "also_at": []
+      },
+      {
+        "claim_id": "1379134-840-37ce1f",
+        "section": "00:14:00",
+        "at_seconds": 840,
+        "quote": "So again, we start to form new pathways.",
+        "claim": "Coding skills fade with AI use, but the brain forms new paths and much of what is lost no longer matters.",
+        "speaker": "Scott Tolinski",
+        "also_at": []
+      },
+      {
+        "claim_id": "1379134-1190-f34d67",
+        "section": "00:19:50",
+        "at_seconds": 1190,
+        "quote": "Less paralization makes for a calmer mind.",
+        "claim": "Fewer agents in parallel, better habits and time away from screens are what help.",
+        "speaker": "Scott Tolinski",
+        "also_at": []
+      }
+    ]
+  },
+  "coverage": {
+    "1323755": {
+      "sections_read": 16,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "his phrase for the model absorbing the harness is garbled as \"Will keep eating the honors\" (00:13:33), likely \"the harness\"",
+        "model names are garbled throughout",
+        "the Gemini Decisions API announcement at 00:01:29 is a product launch, not part of the harness argument"
+      ],
+      "extracted_at": "2026-11-12T12:41:24-08:00"
+    },
+    "1333169": {
+      "sections_read": 12,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "the speaker's introduction was not recorded",
+        "Qwen garbles some terms: \"poetry\" for code review (00:02:56), \"battle\" for the first attempt (00:00:29), \"Every commonly, your team repeats to the governor\" (00:10:17)"
+      ],
+      "extracted_at": "2026-11-10T18:21:22-05:00"
+    },
+    "1334565": {
+      "sections_read": 11,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "Qwen prompt insertions \"Sonar\" (00:01:20, the MC's introduction) and \"Netflix\" (00:19:44) are not quoted",
+        "\"Zain correctness\" and \"virtual AI\" (00:17:41) are recogniser slips; the claim quotes the clean sentence after them",
+        "case-study figures (00:18:47) and the closing \"vertical AI is one of the largest economic opportunities in history\" (00:25:21) are left out to stay within six claims"
+      ],
+      "extracted_at": "2026-11-10T19:35:50-05:00"
+    },
+    "1341863": {
+      "sections_read": 7,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "the recording starts about five minutes into the talk; the first sections, including how harnesses moved from code to knowledge work, are unrecorded",
+        "\"swarms\" is heard as \"songs\" and \"storms\" throughout; quoted as transcribed",
+        "\"Composio\" in this transcript may come from the Qwen prompt; no claim relies on it"
+      ],
+      "extracted_at": "2026-11-10T18:22:30-05:00"
+    },
+    "1352199": {
+      "sections_read": 12,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "\"Google DeepMind\" (00:25:14) and \"DeepMind solved the connection\" (00:06:49) are likely prompt insertions or misheard \"MCP\"; not quoted",
+        "the line in Devanagari script around 00:25:58 and \"Andumi, beri anda lebih banyak peluang\" (00:17:34) are recogniser misreadings",
+        "\"The next AI\" (00:00:43) is likely xAI, per the operator's note; \"Israeli agents\" and \"Rousey versus Karamu\" are garbled"
+      ],
+      "extracted_at": "2026-11-10T18:34:20-05:00"
+    },
+    "1352467": {
+      "sections_read": 12,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "the MC's introduction was not recorded; the last line is the next introduction",
+        "Qwen garbles some terms: \"asteroid-centric accelerator\" for SRAM-centric (00:08:06), \"in France\" for inference (00:10:37), \"twenty six speed\" for 2026 speed (00:02:57), \"Token Mint Factory\" / \"token min game\" for Token Mint (00:06:33, 00:16:59)"
+      ],
+      "extracted_at": "2026-11-11T11:13:17-08:00"
+    },
+    "1356697": {
+      "sections_read": 13,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "the recording starts in the MC's introduction",
+        "\"At Composio\" at 00:09:53 is a prompt insertion (likely \"At Fivetran\"); not quoted",
+        "\"DPT\" (00:15:24) is likely dbt; companies \"Kai\" and \"Vera\" (00:03:18) are garbled names of Stripe's and another firm's agents"
+      ],
+      "extracted_at": "2026-11-10T18:21:22-05:00"
+    },
+    "1373446": {
+      "sections_read": 10,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "the recording opens on the end of the MC's introduction",
+        "Grok Bot is garbled (\"GAPA\", \"Grokbot\", \"Grovbot\", \"Groppo\", \"Gau\", \"GraphR\"); \"Duckbill\" (00:10:40) is an ASR prompt artifact for bombadil",
+        "Qwen garbles common words: \"polar bears\" for pull requests (00:01:40), \"Coinbase\" for codebase and \"reagents\" for our agents (00:02:55), \"garbage\" likely gardening (00:04:26), \"condoms\" for comments, \"pingers\" for timers, \"mid rules\" for lint rules, \"Asians\" for agents (00:07:54), \"court review\" / \"COVID\" for code review (00:05:56), \"leaning as ball\" unclear (00:10:40), \"documentation\" likely verification (00:12:50)"
+      ],
+      "extracted_at": "2026-11-11T11:13:17-08:00"
+    },
+    "1373457": {
+      "sections_read": 14,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "the recording opens on the MC's introduction (\"Group Product Manager at Club\" for Cloudflare)",
+        "model names are garbled: \"CLUF\", \"CLEF\" for Clef; \"Cleric\", \"Claire\", \"CLiRE\", \"Clarif\", \"playeric\" for Clairic; \"Claflash\" likely Clef-flash; \"Jet\", \"Chat\", \"JAG\", \"Jasper\", \"duck\" for Jev (00:07:50–00:18:14)",
+        "\"new lab\", \"needle app\", \"game lab\" for neolab; the launch dates at 00:09:53 (\"November 15th\", \"September eighteenth\") are garbled",
+        "\"Anthropic\" (00:00:56) and \"Claude\" (00:11:35) may be ASR prompt artifacts; \"PyDurable\" (00:14:06) unidentified"
+      ],
+      "extracted_at": "2026-11-11T11:13:17-08:00"
+    },
+    "1373460": {
+      "sections_read": 20,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "Speakers are never named in the audio; attribution rests on the operator's note. The first speaker hands over at about 00:06:09 to a co-speaker introduced as Asif (likely Khasimul Asif Mohammad), but claims are left unattributed.",
+        "00:01:42 'Holocaustation stops due to racism' likely reads 'hallucination, toxicity, bias'.",
+        "00:02:08 'MCUs' likely 'MCPs'; 'that's where the garden is' likely 'guardrails'.",
+        "00:03:19 'Guna' (OpenAI's model) is unreadable; the passage on small vs large judge models is garbled.",
+        "00:04:55 'ChainPole' likely 'ChainPoll'; 'GAN Deal' likely 'Galileo'.",
+        "00:06:02 'Evans' likely 'evals'.",
+        "00:08:50 opens with a passage rendered as Chinese by the ASR; the customer request there is unreadable.",
+        "00:08:50 and 00:11:22 'stack plan recommendations' likely 'actionable recommendations'; 00:18:24 'DAXM' likely 'taxonomy'.",
+        "00:13:42-00:16:18 demo audio was hard to hear and partly rendered as Hindi; the demo walkthrough is largely unreadable.",
+        "From 00:21:30 the recording is the closing pitch and post-talk conversation, not argument."
+      ],
+      "extracted_at": "2026-11-12T12:41:24-08:00"
+    },
+    "1373462": {
+      "sections_read": 17,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "Mixedbread is garbled as \"Big Spread\" and \"mixbreed\"; \"Splunk\" appears in several places from the transcription prompt",
+        "most dollar figures are garbled and left out",
+        "the access-control answer at 00:17:41 is from the Q&A and partly garbled"
+      ],
+      "extracted_at": "2026-11-12T12:41:24-08:00"
+    },
+    "1373464": {
+      "sections_read": 17,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "The MC's introduction is not captured; the recording starts as the speaker begins.",
+        "'Overcut' may come from the ASR prompt; the Voice Memos transcript renders it 'motorpack', 'overback', 'overpack'. 00:00:19 'overcapacity' likely 'Overcut'.",
+        "00:00:19 'FDI' likely 'FDE' (forward-deployed engineer).",
+        "00:01:56 'Slag, big bucket' likely 'Slack, Bitbucket'; 'fds' likely 'FDEs'.",
+        "00:02:42 'MCD'/'MCB' likely 'MCP'; 00:03:36 'SBLC' likely 'SDLC'; 'identical steps' likely 'agentic steps'.",
+        "00:04:32 'games for human in the loop' likely 'gates'; 'create VR' likely 'create PR'.",
+        "00:11:25 'Aamir Shakir' and 00:10:03 'Sonar' are prompt artifacts, not the audio; the speaker describes an LLM-as-judge.",
+        "00:10:03 'perigentic' likely 'per-agent'; 00:12:45 'audio trail' likely 'audit trail'; 'Gira' and 00:17:17 'Gmail ticket' likely 'Jira'.",
+        "00:12:45 interleaves an unrelated side conversation near the recorder (about 00:14:04-00:15:46), which garbles the governance answer.",
+        "From 00:19:13 the recording is post-talk conversation."
+      ],
+      "extracted_at": "2026-11-12T12:41:24-08:00"
+    },
+    "1373465": {
+      "sections_read": 21,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "Jev is garbled as \"Jeff\", \"Jeb\", \"JEP\", \"Jetting\" and \"Java\"; RLHF as \"Arlo\" and \"R LHF\"; KV cache as \"KB cache\" and \"KDC\"",
+        "the model sizes in the instruction-following example at 00:08:04 are garbled (\"GPT nine\", \"GPT seven to nine\")",
+        "the talk ran past its slot (14:05–14:23); the recording runs 14:07–14:30"
+      ],
+      "extracted_at": "2026-11-12T12:41:24-08:00"
+    },
+    "1373469": {
+      "sections_read": 17,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "the recording opens mid-sentence; the start of the talk is not captured",
+        "agents are garbled as \"Asians\" and LLMs as \"alarms\", \"LMs\" and \"lems\"; prompts as \"problems\"; fork as \"port\"",
+        "\"Niteshift\" (00:14:48) and \"Ramp\" (00:13:54) come from the transcription prompt; the dev server is Vite and the memory is RAM"
+      ],
+      "extracted_at": "2026-11-12T12:41:24-08:00"
+    },
+    "1373470": {
+      "sections_read": 9,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "partial recording: the operator cut the talk short, so it covers about the first seven minutes; the rest of 'Build trust', 'Think bigger' and the closing are not captured",
+        "the recording opens with room chatter; \"Steve Yegge\" at 00:00:52 comes from the transcription prompt",
+        "Inspect is garbled as \"Inspire\" and \"inspects\""
+      ],
+      "extracted_at": "2026-11-12T12:41:24-08:00"
+    },
+    "1373471": {
+      "sections_read": 19,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "Claude Max is garbled as \"CloudMax\"; fuel problem as \"few problem\"; beads as \"beans\" and \"bees\"; Claude as \"Cloud\"",
+        "the agents' names and the chief-of-staff story at 00:14:28 are partly garbled"
+      ],
+      "extracted_at": "2026-11-12T12:41:24-08:00"
+    },
+    "1376191": {
+      "sections_read": 22,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "the recording opens on the end of the MC's introduction",
+        "Fable class is garbled as \"faithful class\", \"stable class\" and \"table class\"; kakapo as \"Kakapo\" and \"cackaloo\"; vibe-coded as \"Byte coded\"; Claude as \"clawed\" and \"Claw\"",
+        "the cycling quote is credited to \"Gregor Mond\", likely Greg LeMond, and broken across the transcript at 00:17:44",
+        "the vulnerability-count benchmark at 00:13:09 is garbled beyond its lab counts"
+      ],
+      "extracted_at": "2026-11-12T12:41:24-08:00"
+    },
+    "1376197": {
+      "sections_read": 1,
+      "claims_found": 2,
+      "thin": true,
+      "gaps": [
+        "only a 28-second closing fragment (204 words) was recorded; the body of the talk is missing",
+        "\"entrusted\" likely \"didn't trust\""
+      ],
+      "extracted_at": "2026-11-12T12:41:24-08:00"
+    },
+    "1376198": {
+      "sections_read": 10,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "the recording opens a few seconds into the talk",
+        "Jev is garbled as \"Jeff\", \"Jeb\", \"Jim\", \"Gem\" and \"Java\"; Qwen as \"Quinn\"; \"Workday\" at 00:04:00 may come from the transcription prompt",
+        "the speaker says the demos use fake data and are not in production"
+      ],
+      "extracted_at": "2026-11-12T12:41:24-08:00"
+    },
+    "1379134": {
+      "sections_read": 16,
+      "claims_found": 6,
+      "thin": false,
+      "gaps": [
+        "\"Databricks\" at 00:14:40 is a prompt insertion, not the audio; no claim quotes it",
+        "\"Japanese piracy\" (00:17:50) is likely pottery; not quoted",
+        "the 52% and 71% figures are paraphrased from the survey slides he reads; the quotes are his framing"
+      ],
+      "extracted_at": "2026-11-10T18:21:22-05:00"
+    }
+  }
+}

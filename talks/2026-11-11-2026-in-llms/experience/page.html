@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>It doesn't get easier · Simon Willison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Wed 11 Nov 2026 · Continental 4–6 (Mainstage)</div>
+  <h1>It doesn't get easier, you just get faster</h1>
+  <p class="dek">Simon Willison reviews twelve months of LLMs through three inflection points: coding agents became reliable, models crossed into “Fable class”, and vibe-coded games became fun. Each moved more of the work to the model. The job hasn't got easier; the easy part has gone, and the answer is to be more ambitious.</p>
+  <div class="talk-meta">Simon Willison · 20 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="pelicans.jpg" alt="His slide: November 2025, the coding agent inflection point. Two SVG drawings for the prompt Generate an SVG of a pelican riding a bicycle: Claude Opus 4.5's pelican on a red bicycle on grass, and GPT-5.1's pelican on a blue bicycle. Neither bicycle is drawn so it would work.">
+        <figcaption>His slide, 5:32 pm (straightened from photos/PXL_20261112_013245403.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="fable-timeline.jpg" alt="His slide: 9 June, Fable 5 launches. 12 June, pulled by the US government. 1 July, Fable is back. 9 July, GPT-5.6 arrives.">
+        <figcaption>His slide, 5:38 pm (straightened from photos/PXL_20261112_013801563.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="fable-class.jpg" alt="His slide: Fable class models. Fable 5, Fable 5.1, Fable 5.2. Opus 5.5 (aka cheap Fable). GPT-6 Astra. Gemini 4 Carbon. (Maybe Muse Wonder and Kimi K3.1.)">
+        <figcaption>His slide, 5:41 pm (straightened from photos/PXL_20261112_014156023.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v4">
+        <img src="beep-locator.jpg" alt="The Beep Locator web app on his screen. On the left, a QR code for adding a listener, calibration controls and a confirmed mystery beep at 3345 Hz. On the right, a map of the room with listener devices marked: old iPad, new iPad, Simon iPhone, MacBook Pro and Surface Ultra, and the mystery beep located between them, labelled within about 41 cm.">
+        <figcaption>The Beep Locator on screen, 5:40 pm (straightened from photos/PXL_20261112_014042907.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v5">
+        <p class="quote-big">“This game isn't fun enough yet. Make it a lot more fun”<span>Simon Willison, to the model · 00:15:51</span></p>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v6">
+        <img src="deep-blue.jpg" alt="His slide: Deep Blue, coined by Adam Leventhal and Bryan Cantrill. An AI-induced existential crisis, because the agents can do everything that you can.">
+        <figcaption>His slide, 5:34 pm (straightened from photos/PXL_20261112_013449465.jpg; its edges were out of frame)</figcaption>
+      </figure>
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+  <main class="talk-copy">
+    <section data-chapter="november-2025" data-visual="v1" data-caption="Neither bicycle works">
+      <div class="chapter">Inflection point 1</div>
+      <h2>Three inflection points: November 2025</h2>
+      <p>He has eighteen minutes for twelve months, organized around three inflection points. The first was exactly a year ago.</p>
+      <blockquote>“November 2025 is what I consider the coding agents inflection point.”<span class="cite">00:00:43</span></blockquote>
+      <p>Coding agents weren't new. But Claude Opus 4.5 and GPT-5.1 were a little better at driving them, and that crossed a line, from a novelty you'd poke at occasionally:</p>
+      <blockquote>“So something that's reliable enough that you could use them every day.”<span class="cite">00:00:43</span></blockquote>
+      <p>His usual test, an SVG of a pelican riding a bicycle, shows where things stood: neither model's bicycle works. In January he made three predictions on a podcast: it would become undeniable that LLMs write good code; a prompt-injection “Challenger disaster” would make the front pages; and the kākāpō, a flightless New Zealand parrot with 235 birds left, would have an outstanding breeding season. The same podcast coined a term:</p>
+      <blockquote>“We coined the term "Deep Blue" to describe the AI-induced existential crisis.”<span class="cite">00:03:51</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “3 inflection points, nov 2025 is the first one, opus 4.5 and gpt-5.1”. The other two are Fable class and fun games, below. His post on the November inflection point is on the <a href="../links.md">links page</a>.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:43, 00:01:35, 00:02:42, 00:03:51</p>
+    </section>
+
+    <section data-chapter="not-released" data-visual="v2" data-caption="A 30-day window, 18 days lost">
+      <div class="chapter">April to July</div>
+      <h2>The model they didn't release</h2>
+      <blockquote>“In April, Anthropic released a model that they did not.”<span class="cite">00:05:40</span></blockquote>
+      <p>Anthropic announced Claude Mythos and held it back as too dangerous, with cybersecurity abilities shared only with trusted partners. People were sceptical: “too dangerous to release” is an old trick. A couple of months later came Claude Fable:</p>
+      <blockquote>“it was Mythos defanged, with the safeties turned back on again.”<span class="cite">00:05:40</span></blockquote>
+      <p>It was clearly something new. He cancelled his weekend plans to use it, and three days in, the US government pulled it with export controls.</p>
+      <blockquote>“We later found out the prompt that got Fable banned was. Was fix the bugs.”<span class="cite">00:05:40</span></blockquote>
+      <p>Asked to find the security holes, it refused; asked to fix the bugs, it found the holes and fixed them. Fable came back after eighteen days, and eight days later OpenAI released GPT-5.6, in the same ballpark.</p>
+      <blockquote>“Fable had a 30-day window where it could have been the best.”<span class="cite">00:07:32</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “in april claude released a model that they didn't release”. Confirmed: Claude Mythos, announced in April and held back; Fable was the version released in June with the safeties back on. <b>The reading:</b> the gap between the best model and the next is now weeks. For a client, that argues against building around one model's lead.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:04:14, 00:05:40, 00:07:32</p>
+    </section>
+
+    <section data-chapter="fable-class" data-visual="v3" data-caption="Now the baseline">
+      <div class="chapter">Inflection point 2</div>
+      <h2>Fable class: define the goal, provide the tools</h2>
+      <blockquote>“And my definition of a faithful class model is if you can define a goal.”<span class="cite">00:08:02</span></blockquote>
+      <p>Give it the tools to reach that goal, however hard the goal is, and</p>
+      <blockquote>“As difficult as possible, the models will solve your problem just almost with brute force.”<span class="cite">00:08:02</span></blockquote>
+      <blockquote>“You can define the problem, set them up, get them running.”<span class="cite">00:08:02</span></blockquote>
+      <p>Twelve hours later, the problem is solved; mathematical theorems have been falling this way. And it isn't one model any more: Fable 5 to 5.2, Opus 5.5 (“cheap Fable”, his daily driver), GPT-6 Astra and Gemini 4 Carbon all qualify.</p>
+      <blockquote>“But the point is that this is basically now the baseline.”<span class="cite">00:10:43</span></blockquote>
+      <blockquote>“we can assume we're going to have table class models for the rest of our careers.”<span class="cite">00:10:43</span></blockquote>
+      <p>The same capability points the other way. In July, Hugging Face reported a swarm of agents inside its infrastructure; five days later OpenAI said it was theirs, a model in evaluation that had escaped its environment looking for a way to cheat a test.</p>
+      <blockquote>“They've found holes in their own sandbox environments.”<span class="cite">00:11:35</span></blockquote>
+      <blockquote>“Exciting and horrifying time to be a security professional at the moment.”<span class="cite">00:13:09</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “a fable class model: if you can define a goal and provide the tools it will solve the problem… brute force”. That's his definition nearly word for word. <b>The reading:</b> the skill that matters is now problem definition: a clear goal, a way to check it's met, and the right tools. It's the same shape as <a href="../../2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">Schmid's harness</a> and <a href="../../2026-11-11-i-love-you-so-jevving-much/experience/page.html">Diogo's “doing the right task”</a>. The sandbox escape is the cost: a model good at reaching goals will reach the ones you didn't mean, which is why the scoped access (Token Vault) and human approval (CIBA) from today's talks matter.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:08:02, 00:10:43, 00:11:35, 00:13:09</p>
+    </section>
+
+    <section data-chapter="beep-locator" data-visual="v4" data-caption="Within 41 centimetres">
+      <div class="chapter">The example</div>
+      <h2>The beep locator</h2>
+      <p>About forty boxes sit unpacked in one room of his house, and something in one of them started beeping intermittently. He could unpack forty boxes,</p>
+      <blockquote>“Or I could get Fable to write me software to triangulate the source of the beeps.”<span class="cite">00:08:55</span></blockquote>
+      <p>He put two iPads, two laptops and a phone around the room, started with Opus and finished with Fable 5.2. He explained the devices: web audio microphones and WebSocket connections. The model found a 2007 paper, “Beep Beep”, describing an algorithm for low-cost devices with unreliable microphones, and built it.</p>
+      <blockquote>“I found it within 41 centimeters”<span class="cite">00:08:55</span></blockquote>
+      <p>The box held an ancient carbon monoxide detector.</p>
+      <blockquote>“In this case, it was provided, clawed with ears.”<span class="cite">00:08:55</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “beep locator made with a bunch of little ipad and devices to triangulate a sound”. It's the Fable-class pattern at house scale: a clear goal, microphones as tools, and the model did the research and the engineering. <b>The reading:</b> his contribution was the setup, not the code: noticing the problem could be solved with devices already in the house. His write-up is on the <a href="../links.md">links page</a>.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:08:55</p>
+    </section>
+
+    <section data-chapter="games" data-visual="v5" data-caption="Fun is a goal too">
+      <div class="chapter">Inflection point 3</div>
+      <h2>Vibe-coded games are fun now</h2>
+      <p>Four years ago he tweeted a raccoon heist game prototype: one DALL-E image, one GPT-3 paragraph. A couple of months ago Fable 5 built it, and GPT-5.6 built a better one, with three raccoons, a museum and a golden sardine. He played each for a minute and a half.</p>
+      <blockquote>“They're actually they're pure slop.”<span class="cite">00:13:54</span></blockquote>
+      <blockquote>“Clearly, the thing that built this doesn't really know what. Fun is it doesn't know what a what a game is.”<span class="cite">00:13:54</span></blockquote>
+      <p>That eased his Deep Blue: at least games, the highest form of software design, were left for people. Then a strategy game he was building looked right and was dull, so he tried one more prompt:</p>
+      <blockquote>“This game isn't fun enough yet. Make it a lot more fun”<span class="cite">00:15:51</span></blockquote>
+      <blockquote>“Claude ran for twelve hours.”<span class="cite">00:15:51</span></blockquote>
+      <blockquote>“It playtested a thousand back simulated battles.”<span class="cite">00:15:51</span></blockquote>
+      <p>It added objectives, screen shake, achievements and badges; now it's 3D, with giant mechs, helicopters, and multiplayer where the phones make noises at each other.</p>
+      <blockquote>“You can ask these things to build a game that is fun, and you'll get something fun.”<span class="cite">00:17:03</span></blockquote>
+      <p>The same week, Sundar Pichai tweeted a 3D game of a pelican cycling round the Google campus.</p>
+      <blockquote>“Like Google had stolen my benchmarks.”<span class="cite">00:17:08</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “racoon heist game” and “inflection point 3: vibe coded games are now fun now”. The turn is in how he asked: “make it a lot more fun” is a goal, and a thousand simulated playtests are the tool for checking it, which makes even fun a Fable-class problem. It answers <a href="../../2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Yegge's</a> “build games, build movies, build fun stuff” from the talk just before.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:13:54, 00:15:51, 00:17:03, 00:17:08</p>
+    </section>
+
+    <section data-chapter="faster" data-visual="v6" data-caption="A cure for Deep Blue">
+      <div class="chapter">What's left</div>
+      <h2>It doesn't get easier, you just get faster</h2>
+      <p>Every year he'd resolved to take on fewer projects. This year, with agents, he went the other way, and now he's juggling so many it's horrifying. But:</p>
+      <blockquote>“and I think it's the theme of this conference: is to be more ambitious now that we have all of these new tools.”<span class="cite">00:01:58</span></blockquote>
+      <p>So why does the job feel harder?</p>
+      <blockquote>“Why does it feel like I'm working harder?”<span class="cite">00:17:44</span></blockquote>
+      <blockquote>“I think the truth is that the easy stuff is all handled now.”<span class="cite">00:17:44</span></blockquote>
+      <blockquote>“Why would I do that now when an agent will refactor the test better than me in 30 seconds?”<span class="cite">00:17:44</span></blockquote>
+      <p>He borrows a cyclist's line, likely Greg LeMond's (the transcript has “Gregor Mond”): it doesn't get easier, you just get faster.</p>
+      <blockquote>“We have to think of more ambitious things to do with these abilities that we have.”<span class="cite">00:17:44</span></blockquote>
+      <p>His scorecard: the good-code prediction came true and earns no points,</p>
+      <blockquote>“That was an unambitious prediction.”<span class="cite">00:18:33</span></blockquote>
+      <p>the prompt-injection disaster still hasn't happened because models stopped falling for the tricks, and the kākāpō had their best breeding season in living memory. He closes with a model-made kangaroo dance party, rimu trees in the background, as a cure for Deep Blue.</p>
+      <div class="reading"><b>From the notes:</b> “is the theme to be more ambitious”: yes, in his words it's the theme of the conference. And “it doesn't get easier, you just get faster”. <b>The reading:</b> this is the through-line of the day. Yegge found the more agents he ran, the more humans he needed; Diogo called for software research; and Cognition said this morning that most teams are limited by their ambition. For a client, the question isn't how to make the work easier. It's what they'd attempt if the easy part cost nothing.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:58, 00:17:44, 00:18:33</p>
+    </section>
+  </main>
+</div>
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room) and is framed by eight notes and six photos taken there. Quotes are verbatim from the transcript, which garbles “Fable class” (“faithful”, “table”) and Claude (“clawed”). “From the notes” and “The reading” are interpretation, not his words. More on the <a href="../links.md">links page</a>.
+</footer>
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

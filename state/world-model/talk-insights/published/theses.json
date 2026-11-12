@@ -1,4 +1,8 @@
 {
+  "1323755": {
+    "thesis": "Each model generation absorbs tools the last harness had to provide, so rebuild the harness from scratch every release: delete what the model now does itself, often down to one bash tool, and keep only what it can't do through a computer.",
+    "confidence": 0.85
+  },
   "1333169": {
     "thesis": "Once AI writes most of the code, a team should stop reviewing diffs and instead capture intent, decisions and evidence, owning the rules that verify the code rather than the code itself.",
     "confidence": 0.85
@@ -30,6 +34,62 @@
   "1373457": {
     "thesis": "Cloudflare became a model lab because small, fast System One models (Clef for decisions, Clairic for extraction) were the missing piece that fit its edge network and agent-cloud primitives, taking routine work off large LLMs.",
     "confidence": 0.8
+  },
+  "1373460": {
+    "thesis": "Evaluating agents is not enough: like an immune system, an agent platform should continuously detect failures across all sessions, diagnose them against a taxonomy, prescribe a fix, and remember it so the failure does not recur.",
+    "confidence": 0.7
+  },
+  "1373462": {
+    "thesis": "Agents over company data should search one index prepared ahead of time, with access rules attached, not query every source live through one connector per tool, because the bottleneck is context, not intelligence.",
+    "confidence": 0.8
+  },
+  "1373464": {
+    "thesis": "Overcut argues that an enterprise software factory should not need forward-deployed engineers: it plugs into the tools and agents you already run, composes specialized governed agents into SDLC workflows with human gates, and improves itself through scored retrospective memories.",
+    "confidence": 0.75
+  },
+  "1373465": {
+    "thesis": "Today's AI is too good to be true at assistance and too bad to be useful at automation because RLHF optimized it to please the human checking it; training for the right task, reliability, makes model calls a fourth logic gate inside ordinary software.",
+    "confidence": 0.85
+  },
+  "1373469": {
+    "thesis": "Because Lovable's output is a business, not code, letting an agent work for ten hours needed a runtime that survives deploys, computers that start and fork in milliseconds, and two verification loops, the outer one fed by business metrics Lovable owns.",
+    "confidence": 0.8
+  },
+  "1373470": {
+    "thesis": "A single shared coding agent with every session public by default changes engineering culture: good practice spreads without training, and the session becomes the evidence that lets reviewers trust a change.",
+    "confidence": 0.75
+  },
+  "1373471": {
+    "thesis": "A year of software factories shows fuel is the hard limit and currently subsidized, agents behave like staff who need managing and pruning, and the more agents you run the more humans you need, so spend the fuel on experiences.",
+    "confidence": 0.8
+  },
+  "1373475": {
+    "thesis": "Cognition grew merged PRs 40x on 2.7x headcount by rebuilding how it works around agents: small pods that own everything, agents that test themselves in local VMs and prove fixes with videos, and long-running jobs instead of tasks, so a team's real limit is its ambition.",
+    "confidence": 0.85
+  },
+  "1376191": {
+    "thesis": "This year models crossed from reliable coding agents to 'Fable class', solving any well-defined goal by brute force when given the tools, even making a game fun; the work doesn't get easier, the easy part goes, so the answer is more ambition.",
+    "confidence": 0.85
+  },
+  "1376197": {
+    "thesis": "Don't trust an LLM judge until you've measured it: run a second check in shadow mode and look where the two disagree.",
+    "confidence": 0.4
+  },
+  "1376198": {
+    "thesis": "A decision model fast and cheap enough to call everywhere replaces both LLM agent loops and retrieval stacks: it picks the right UI card on every keystroke and runs as a function inside a SQL query on every row.",
+    "confidence": 0.85
+  },
+  "1379010": {
+    "thesis": "Claude's frontier is self-organisation: a thousand Fable 5.2 agents given only git and a SQL database built their own coordination to formalise Fermat's Last Theorem, and stronger models write, read and, through dreaming, consolidate memory into better representations.",
+    "confidence": 0.85
+  },
+  "1379011": {
+    "thesis": "To build agents that investigate data on their own, consolidate tools by use case and push deterministic complexity into them, stop pre-chewing context the model can now handle itself, and always give the agent a cheap way to check its own work.",
+    "confidence": 0.75
+  },
+  "1379052": {
+    "thesis": "How much human-in-the-loop an agent needs depends on the stakes, so give agents scoped, short-lived, revocable credentials, step up permissions when they need more, require out-of-band approval (CIBA) for high-stakes actions, and never hand them your card.",
+    "confidence": 0.7
   },
   "1379134": {
     "thesis": "AI coding's compulsive pull and the decisions it demands are wearing developers out, and the remedy is habits and limits, not more tools.",

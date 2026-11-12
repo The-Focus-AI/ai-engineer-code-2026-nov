@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The output is a business · Fabian Hedin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Wed 11 Nov 2026 · Continental 4–6 (Mainstage)</div>
+  <h1>The output is a business</h1>
+  <p class="dek">Lovable's agents now work for ten hours or more, at over a billion tokens a minute. Fabian Hedin shows what that took: a runtime that survives seven hundred deploys a day, computers that start and fork in a fraction of a second, and two loops of verification. The outer one is the one to watch: because Lovable owns payments, email and analytics, the agent can learn from how the product is doing, not just whether the code builds.</p>
+  <div class="talk-meta">Fabian Hedin, Lovable · 19 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="platform.jpg" alt="His slide in three columns. Agent: full-stack apps; build, run and test; browser verification; GitHub and code ownership; generate MCP servers; connect tools and APIs. Cloud: database and authentication; storage and realtime; edge functions and jobs; hosting and custom domains; security scanners; backups and logs. Business: payments and subscriptions; emails; SEO and AI search; Google and Meta ads; analytics and conversions; growth plans and outreach.">
+        <figcaption>His slide, 4:32 pm (straightened from photos/PXL_20261112_003205587.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v2">
+        <div class="lbl">What a ten-hour agent needs</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Three pieces around one long-running agent. The runtime: an inbox, a Git-like trajectory, and a stateless process. The computer: a golden checkpoint, and forks. Verification: an inner loop during the turn and an outer loop between turns.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" text-anchor="middle">
+            <rect x="130" y="10" width="140" height="40" rx="8" fill="var(--accent)"/>
+            <text x="200" y="28" fill="var(--paper)" font-weight="600">one agent</text>
+            <text x="200" y="42" fill="var(--paper)" font-size="10">30 min → 10+ hours</text>
+            <path d="M160 50 L70 92 M200 50 L200 92 M240 50 L330 92" stroke="var(--rule)" stroke-width="2" fill="none"/>
+            <rect x="10" y="92" width="120" height="120" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="70" y="114" fill="var(--ink)" font-weight="600">runtime</text>
+            <text x="70" y="140" fill="var(--muted)" font-size="10">inbox per agent</text>
+            <text x="70" y="158" fill="var(--muted)" font-size="10">Git-like trajectory</text>
+            <text x="70" y="176" fill="var(--muted)" font-size="10">stateless process</text>
+            <text x="70" y="194" fill="var(--muted)" font-size="10">700 deploys/day</text>
+            <rect x="140" y="92" width="120" height="120" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="200" y="114" fill="var(--ink)" font-weight="600">computer</text>
+            <text x="200" y="140" fill="var(--muted)" font-size="10">golden checkpoint</text>
+            <text x="200" y="158" fill="var(--muted)" font-size="10">resume in 230 ms</text>
+            <text x="200" y="176" fill="var(--muted)" font-size="10">fork running VMs</text>
+            <text x="200" y="194" fill="var(--muted)" font-size="10">≈1M sandboxes/day</text>
+            <rect x="270" y="92" width="120" height="120" rx="8" fill="var(--panel)" stroke="var(--accent)"/>
+            <text x="330" y="114" fill="var(--accent)" font-weight="600">verification</text>
+            <text x="330" y="140" fill="var(--muted)" font-size="10">inner loop:</text>
+            <text x="330" y="156" fill="var(--muted)" font-size="10">during the turn</text>
+            <text x="330" y="178" fill="var(--muted)" font-size="10">outer loop:</text>
+            <text x="330" y="194" fill="var(--muted)" font-size="10">between turns</text>
+            <text x="200" y="238" fill="var(--muted)" font-size="10">so it doesn't go off in the wrong direction</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:04:32 to 00:16:03; not his slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="inbox.jpg" alt="His slide, blurry in the photo: The agent runtime: Always-on. You, other agents and a scheduled wake-up send messages to an inbox, which holds a message reading What's the status? Below, the task history (trajectory): request, tool call, result. Caption: Anyone can drop a message in the inbox. The agent copies it into its history between steps.">
+        <figcaption>His slide, 4:35 pm (straightened from photos/PXL_20261112_003527454.jpg; the photo is out of focus)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v4">
+        <div class="lbl">A trajectory modelled on Git</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="An append-only chain of events, each pointing to its parent. At one event the chain forks into two branches, agent A and agent B, which share the history before the fork and do not merge. From the log, a prompt is rendered separately for each model.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" text-anchor="middle">
+            <g fill="var(--panel)" stroke="var(--muted)" stroke-width="2">
+              <circle cx="30" cy="90" r="11"/><circle cx="80" cy="90" r="11"/><circle cx="130" cy="90" r="11"/>
+            </g>
+            <path d="M41 90 L69 90 M91 90 L119 90" stroke="var(--muted)" stroke-width="2"/>
+            <path d="M141 86 L185 50 M141 94 L185 130" stroke="var(--accent)" stroke-width="2" fill="none"/>
+            <g fill="var(--accent)"><circle cx="196" cy="45" r="11"/><circle cx="246" cy="45" r="11"/><circle cx="296" cy="45" r="11"/></g>
+            <path d="M207 45 L235 45 M257 45 L285 45" stroke="var(--accent)" stroke-width="2"/>
+            <g fill="var(--identity)"><circle cx="196" cy="135" r="11"/><circle cx="246" cy="135" r="11"/></g>
+            <path d="M207 135 L235 135" stroke="var(--identity)" stroke-width="2"/>
+            <text x="350" y="49" fill="var(--accent)" font-weight="600" font-size="11">agent A</text>
+            <text x="300" y="139" fill="var(--identity)" font-weight="600" font-size="11">agent B</text>
+            <text x="80" y="122" fill="var(--muted)">shared history</text>
+            <text x="270" y="95" fill="var(--muted)">no merge</text>
+            <text x="200" y="168" fill="var(--muted)">append-only · each event points to its parent</text>
+            <rect x="60" y="186" width="280" height="44" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="200" y="204" fill="var(--ink)" font-weight="600" font-size="11">log → prompt, rendered per model</text>
+            <text x="200" y="220" fill="var(--muted)">compaction depends on context length</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:06:56 and 00:08:00; not his slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v5">
+        <img src="checkpoint.jpg" alt="His slide: New computers start from a golden checkpoint. A golden checkpoint prepared once, with OS and system services, common tools installed, and a dev server ready to start, branches to new computers for projects A, B and C, each a checkpoint plus project code plus dependencies. A VM resumes in 230 ms. We run around 1M sandboxes a day. Reusing setup matters at that scale.">
+        <figcaption>His slide, 4:41 pm (straightened from photos/PXL_20261112_004138678.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v6">
+        <img src="two-loops.jpg" alt="His slide: Two loops: fix it now, improve it later. Inner loop, during the turn, the agent sees it and fixes it right away: build, lint and type errors, automatic; runtime errors, automatic and tools; browser and visual checks, tools; judges in the turn, automatic; domain scanners, tools; backend logs and usage, tools; guardrails and notices, automatic; user-triggered fixes, user. Outer loop, between turns, the horizon between turns is long: product metrics, production signals, visitor behaviour and automatic A/B tests, automatic; what users tell you, explicit; business metrics such as payments, signups and conversions: transactions and conversions, automatic; findings fed back, next turn. Footer: Production outcomes reach the agent only as next-turn findings, never as a training signal.">
+        <figcaption>His slide, 4:46 pm (straightened from photos/PXL_20261112_004621562.jpg)</figcaption>
+      </figure>
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+  <main class="talk-copy">
+    <section data-chapter="outcomes" data-visual="v1" data-caption="Agent, cloud, business">
+      <div class="chapter">The premise</div>
+      <h2>Outcomes, not code</h2>
+      <p>The recording opens on the history: early multi-agent systems, then a simpler single-agent design that was responsive and reliable, and now agents again, at scale.</p>
+      <blockquote>“over a billion tokens per minute on this system that I'm going to talk about.”<span class="cite">00:00:00</span></blockquote>
+      <p>The interface hasn't changed since 2023: a chat where people describe what they want, a preview showing the result. What's changed is how complex the result can be. Lovable's thesis:</p>
+      <blockquote>“You won't have to care about the code in the same way that you had to do before”<span class="cite">00:00:42</span></blockquote>
+      <blockquote>“But in the end, what matters is actually not the code.”<span class="cite">00:02:04</span></blockquote>
+      <p>What matters is the outcome, and for users that means</p>
+      <blockquote>“Is creating a business and monetizing and creating value for others in some type of way.”<span class="cite">00:02:04</span></blockquote>
+      <p>So the platform has three parts: the agent, which builds, verifies and pushes to GitHub; the cloud, hosting primitives it can inspect; and the business part, because the output isn't code. Payments, emails, SEO, Google and Meta ads, analytics on conversions,</p>
+      <blockquote>“and the agent is in the loop. In all of this, right?”<span class="cite">00:02:29</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “i like the business functionality that lovable has built in, that's a key part of the system”. It's key for a reason the talk only reveals at the end: owning payments and analytics is what lets the agent's outer loop see real business results. <b>The reading:</b> most coding agents stop at the pull request. Lovable's can see whether the change sold anything.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:00, 00:00:42, 00:02:04, 00:02:29</p>
+    </section>
+
+    <section data-chapter="ten-hours" data-visual="v2" data-caption="30 minutes to 10 hours">
+      <div class="chapter">The change</div>
+      <h2>From 30 minutes to 10 hours</h2>
+      <blockquote>“we used to limit our agents to work for only thirty minutes.”<span class="cite">00:04:32</span></blockquote>
+      <blockquote>“Because we thought they weren't reliable to work for longer amount of time.”<span class="cite">00:04:32</span></blockquote>
+      <p>Now there's no limit:</p>
+      <blockquote>“And so you can imagine agents working for ten hours.”<span class="cite">00:04:32</span></blockquote>
+      <p>Three pieces made that possible: the runtime, which has to keep going that long; the computer, where each agent runs a web server and checks its work; and verification, because</p>
+      <blockquote>“If you want an agent to work for a long amount of time, you need to make sure that you have these feedback loops in place”<span class="cite">00:05:00</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “lovable used to limit agents to 30 minutes but now its 10+ hours”. It's the horizon Simon Willison described the same evening for Fable-class models: set up the goal and the tools, and twelve hours later it's solved (<a href="../../2026-11-11-2026-in-llms/experience/page.html">It doesn't get easier</a>). This talk is the infrastructure side of that.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:04:32, 00:05:00</p>
+    </section>
+
+    <section data-chapter="inbox" data-visual="v3" data-caption="Anyone can drop a message in">
+      <div class="chapter">The runtime</div>
+      <h2>An inbox per agent</h2>
+      <p>An agent hears from three kinds of sender: a human, other agents, or a system on a schedule waking it up.</p>
+      <blockquote>“And the way we chose to architect this is that for each agent, we have a separate inbox.”<span class="cite">00:05:39</span></blockquote>
+      <p>Messages such as “What's the status?” land while the agent works. When it finishes a step, a request, a tool call and its result, it takes them in:</p>
+      <blockquote>“Since anyone can drop a message into his inbox, the agent then can copy that itself.”<span class="cite">00:05:39</span></blockquote>
+      <p>It copies them into its own task history, which Lovable calls the trajectory.</p>
+      <div class="reading"><b>From the notes:</b> “there is an inbox concept”. The design choice is that nobody writes into an agent's history directly: humans, agents and schedules all post to the inbox, and the agent decides when to take messages in, between steps. That's what makes an always-on agent interruptible without derailing it.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:05:39</p>
+    </section>
+
+    <section data-chapter="trajectory" data-visual="v4" data-caption="Forks, never merges">
+      <div class="chapter">The memory</div>
+      <h2>A trajectory modelled on Git</h2>
+      <blockquote>“And we designed this trajectory with really Git as inspiration”<span class="cite">00:06:56</span></blockquote>
+      <p>It's an append-only log in which each event points to its parent. Two events can share a parent, which makes a fork, so parallel agents can be spun off from any point without copying the history they share. Merging is another matter:</p>
+      <blockquote>“Semantically, it's a bit unclear what would happen if you merge this.”<span class="cite">00:06:56</span></blockquote>
+      <blockquote>“So unlike it, we cannot merge agent trajectories”<span class="cite">00:06:56</span></blockquote>
+      <p>The forked agents talk to each other instead. The log holds everything, and the prompt is built from it, not equal to it; compaction depends on the model's context length.</p>
+      <blockquote>“And so, by separating the prompt from the actual task history.”<span class="cite">00:08:00</span></blockquote>
+      <blockquote>“We're able to render problems for any type of model or any type of task.”<span class="cite">00:08:00</span></blockquote>
+      <p>(“Problems” is the transcript's prompts.) His debug tool re-renders the UI at any of 156 events as he drags a slider. And the process running an agent is almost stateless: after each turn it writes to the history, so any process can pick up the work. That matters because</p>
+      <blockquote>“As a whole, this system we deploy to it 700 times per day.”<span class="cite">00:09:49</span></blockquote>
+      <p>including urgent fixes such as a Linux kernel vulnerability, and a ten-hour agent can't restart each time.</p>
+      <div class="reading"><b>From the notes:</b> “the trajectory is an append only log but it can be forked/split like git”. <b>The reading:</b> it answers two talks from the same afternoon. Yegge warned that agent memory becomes a garbage dump (<a href="../../2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Every problem is a fuel problem</a>); Lovable keeps everything but never feeds the raw log to the model. Diogo asked why parallel agents can't share what they've learned (<a href="../../2026-11-11-i-love-you-so-jevving-much/experience/page.html">Too good to be true</a>); forks share their whole history up to the split. An append-only log is good evidence; the prompt is the working memory.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:06:56, 00:08:00, 00:09:11, 00:09:49</p>
+    </section>
+
+    <section data-chapter="computers" data-visual="v5" data-caption="230 ms from a golden checkpoint">
+      <div class="chapter">The computer</div>
+      <h2>Computers from a golden checkpoint</h2>
+      <blockquote>“And we've been through a lot of situations and a lot of vendors”<span class="cite">00:11:24</span></blockquote>
+      <p>They landed on their own system: checkpointing whole computers. A golden checkpoint holds the OS and system services, common tools and a dev server ready to start, including memory and running processes.</p>
+      <blockquote>“all of them you copy it over in about 230 milliseconds.”<span class="cite">00:11:24</span></blockquote>
+      <p>Each project gets its own checkpoint, saved after every agent turn, so a computer can sleep and come back in moments. The same trick forks running computers, which Lovable's Drafts feature uses to try several versions at once:</p>
+      <blockquote>“we can also port the computer.”<span class="cite">00:13:02</span></blockquote>
+      <p>(“Port” is the transcript's fork.) Memory is copy-on-write, so</p>
+      <blockquote>“Creating one of these forks of a computer is. It's basically free in terms of the RAM that it's using.”<span class="cite">00:13:38</span></blockquote>
+      <p>and memory streams in, so a machine boots before all of it has arrived. Then they forked the JavaScript dev server and rewrote it in Rust:</p>
+      <blockquote>“We went from getting this preview from 40 seconds to three seconds”<span class="cite">00:14:48</span></blockquote>
+      <blockquote>“That made the memory footprint be 6.5 times less in these machines.”<span class="cite">00:14:48</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “they went through a lot of computer providers/sandbox providers”. In the end they built their own, at around a million sandboxes a day. The transcript's “Niteshift” for the dev server comes from the transcription prompt; the dossier identifies it as Vite, forked into OJ, which is open source (see the <a href="../links.md">links page</a>). <b>The reading:</b> fast, forkable computers make parallel exploration cheap: agents can try several fixes and keep the one that works.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:11:24, 00:13:02, 00:13:38, 00:14:48</p>
+    </section>
+
+    <section data-chapter="two-loops" data-visual="v6" data-caption="Fix it now, improve it later">
+      <div class="chapter">The spine</div>
+      <h2>Two loops: fix it now, improve it later</h2>
+      <p>After every action, the agent needs to know whether it was a good one.</p>
+      <blockquote>“You can think of it as this inner loop and this outer loop.”<span class="cite">00:16:03</span></blockquote>
+      <blockquote>“So this inner loop is during the turn of the agent.”<span class="cite">00:16:03</span></blockquote>
+      <p>Within the turn: does the build work, linters and type checkers, runtime errors in the preview, a headless browser exploring the app. His slide adds judges, domain scanners, backend logs, guardrails, and fixes the user triggers.</p>
+      <blockquote>“but then you also have this outer loop, which is. Between each turn”<span class="cite">00:16:03</span></blockquote>
+      <p>Between turns, information arrives from production: how visitors behave, what users say online, automatic A/B tests on a change of copy. And because Lovable runs the payments, transactions and conversions too, the agent can</p>
+      <blockquote>“help you optimize not only. The code right, but the business strategy around your product.”<span class="cite">00:16:03</span></blockquote>
+      <p>His slide's footnote draws a line: production outcomes reach the agent only as next-turn findings, never as a training signal.</p>
+      <div class="reading"><b>From the notes:</b> “the lovable inner and outer loops are super interesting”, the note marked as the key one. <b>The reading:</b> this is where the business functionality pays off. The inner loop checks the code; the outer loop checks the product, and only a platform that owns payments, email and analytics can close it. It answers Diogo's line between assistance and automation: the inner loop makes one turn reliable, and the outer loop gives a ten-hour agent a reason to change course. It also fits two Cognition notes from this morning: teach agents how to test the codebase, and use sessions for self-improvement. For a client: what is their outer loop, and can their agents see it?</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:16:03, 00:17:54</p>
+    </section>
+  </main>
+</div>
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room; the recording starts mid-sentence) and is framed by six notes and six photos taken there. Quotes are verbatim from the transcript. “From the notes” and “The reading” are interpretation, not his words; the two drawn diagrams are illustrative. More on the <a href="../links.md">links page</a>.
+</footer>
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>
