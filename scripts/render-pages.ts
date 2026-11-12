@@ -163,6 +163,11 @@ for (const part of themeBlock.split(/^### /m).slice(1)) {
 type State = "built" | "pending";
 interface Artifact { name: string; state: State; anchor: string; note?: string }
 const pagePath = (slug: string): string | undefined => ["experience/index.html", "experience/page.html"].map((f) => `talks/${slug}/${f}`).find(exists);
+// A talk can carry more than one story: extra pages sit beside page.html in experience/.
+const extraPages = (slug: string): { href: string; title: string }[] =>
+  list(`talks/${slug}/experience`).filter((f) => f.endsWith(".html") && f !== "page.html" && f !== "index.html")
+    .map((f) => `talks/${slug}/experience/${f}`)
+    .map((f) => ({ href: f, title: (read(f).match(/<title>([^<]*)<\/title>/)?.[1] ?? f).split(" · ")[0]!.trim() }));
 const artifacts = (t: Talk): Artifact[] => {
   const p = `talks/${t.slug}`;
   const photos = list(`${p}/photos`).length;
@@ -290,6 +295,7 @@ for (const t of captured) {
   <div class="marginalia mono"><a href="index.html">← All talks</a><span>${builtCount(t)} of 7 built</span></div>
   <div class="pills">${pills(t, up)}</div>
   ${page ? `<a class="cta" href="${up}${page}">Read the story →</a>` : ""}
+  ${extraPages(t.slug).map((e) => `<a class="cta" href="${up}${e.href}">Also: ${esc(e.title)} →</a>`).join("")}
   ${themeChips(t.slug, up) ? `<div class="chips"><span class="mono">Themes</span>${themeChips(t.slug, up)}</div>` : ""}
 
   ${people.length ? `<section class="view" id="people"><div class="view-head"><h2>Speaker${people.length > 1 ? "s" : ""}</h2></div>
@@ -308,7 +314,7 @@ for (const t of captured) {
     ${t.recordings.map((r) => `<div class="rec"><span class="mono">${esc(r.folder)} · ${r.minutes} min · ${esc(r.source)}</span>${r.audio ? `<audio controls preload="none" src="${up}${esc(r.audio)}"></audio>` : ""}</div>`).join("")}
   </section>
 
-  <section class="view" id="story"><div class="view-head"><h2>Story</h2><p class="lede">${page ? `<a href="${up}${page}">The scrolling talk page</a> is built.` : storyMd ? "A draft story, not yet a page." : "Not written yet."}</p></div>
+  <section class="view" id="story"><div class="view-head"><h2>Story</h2><p class="lede">${page ? `<a href="${up}${page}">The scrolling talk page</a> is built.${extraPages(t.slug).length ? ` Also: ${extraPages(t.slug).map((e) => `<a href="${up}${e.href}">${esc(e.title)}</a>`).join(", ")}.` : ""}` : storyMd ? "A draft story, not yet a page." : "Not written yet."}</p></div>
     ${storyMd && !page ? `<details><summary>Read the draft</summary><div class="prose">${md(stripFront(storyMd))}</div></details>` : ""}
   </section>
 
