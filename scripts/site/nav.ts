@@ -4,7 +4,7 @@
 //
 // `up` is the path from the page back to the repo root ("", "../", "../../").
 
-export type Section = "today" | "schedule" | "talks" | "themes" | "people";
+export type Section = "today" | "schedule" | "talks" | "themes" | "people" | "followups";
 
 export const SECTIONS: Array<[Section, string, string]> = [
   ["today", "Today", "index.html"],
@@ -12,6 +12,7 @@ export const SECTIONS: Array<[Section, string, string]> = [
   ["talks", "Talks", "site/talks/index.html"],
   ["themes", "Themes", "site/themes.html"],
   ["people", "People", "site/people.html"],
+  ["followups", "Follow-ups", "site/followups.html"],
 ];
 
 export const topnav = (active: Section | null, up: string, brand = "AIE Code ’26"): string =>

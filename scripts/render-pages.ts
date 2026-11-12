@@ -404,6 +404,35 @@ for (const t of captured) {
   write("site/people.html", shell({ title: "People", active: "people", up, body, script: PEOPLE_JS }));
 }
 
+// Speaker metadata from the roster: bio and links, shown in the schedule's About and on Today.
+const speakerLinkLabel = (u: string): string => {
+  const h = (() => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } })();
+  return /(^|\.)x\.com$|twitter\.com$/.test(h) ? "X" : /linkedin\.com$/.test(h) ? "LinkedIn" : /github\.com$/.test(h) ? "GitHub" : h;
+};
+const speakerMeta = (s: Session): string => s.speaker_ids.map((id) => wm.speakers[id]).filter(Boolean).map((p) => {
+  const links = (p!.links ?? []).map((u) => `<a href="${esc(u)}" rel="noopener">${esc(speakerLinkLabel(u))}</a>`).join(" · ");
+  const bio = (p as { bio?: string }).bio;
+  return `<div class="tt-speaker"><p><b>${esc(p!.name)}</b>${p!.affiliation ? `, ${esc(p!.affiliation)}` : ""}${links ? ` <span class="mono">${links}</span>` : ""}</p>${bio ? `<p class="minor">${esc(bio)}</p>` : ""}</div>`;
+}).join("");
+// ===== Follow-ups: editorial/backlog.md rendered, note references linked to their talk =====
+{
+  const up = "../";
+  const src = exists("editorial/backlog.md") ? read("editorial/backlog.md") : "";
+  const noteTalk = (file: string): string | undefined =>
+    exists(`notes/inbox/${file}`) ? read(`notes/inbox/${file}`).match(/^talk:\s*talks\/([^/\s]+)/m)?.[1] : undefined;
+  // Note paths in the backlog become links to the talk's notes; talk paths link to the talk.
+  const linked = stripFront(src).replace(/^# .*\n/m, "")
+    .replace(/notes\/inbox\/([\w.-]+\.md)/g, (m, f: string) => { const t = noteTalk(f); return t ? `[note](${hubHref(t, up)}#notes)` : `\`${m}\``; })
+    .replace(/(?<![\w/])talks\/([\w-]+)\/(?:[\w.-]+)?/g, (m, slug: string) => (exists(`talks/${slug}`) ? `[${slug}](${talkHref(slug, up)})` : m));
+  const open = (src.match(/^- \[ \]/gm) ?? []).length;
+  const done = (src.match(/^- \[x\]/gim) ?? []).length;
+  const body = `
+  <header class="masthead"><p class="mono agency">${esc(wm.event.name)}</p><h1>Follow-ups</h1><p class="sub">Ideas to write, things to look into, and things to read after the conference.</p></header>
+  <div class="marginalia mono"><span>${open} open · ${done} done</span><span>From editorial/backlog.md</span></div>
+  <section class="view prose followups">${md(linked)}</section>`;
+  write("site/followups.html", shell({ title: "Follow-ups", active: "followups", up, body }));
+}
+
 // ===== Schedule: a plain timetable, one tab per day, track rooms as columns =====
 {
   const up = "../";
@@ -411,16 +440,6 @@ for (const t of captured) {
   const short = (s: Session): string => roomName(s).match(/\(([^)]+)\)/)?.[1] ?? (roomName(s) || "TBA");
   const isTrack = (s: Session): boolean => !!s.room_id && /talk|workshop|keynote/i.test(s.format ?? "talk") && s.format !== "break";
   const who = (s: Session): string => s.speaker_ids.map((id) => { const p = wm.speakers[id]; return p ? p.name + (p.affiliation ? ` (${p.affiliation})` : "") : ""; }).filter(Boolean).join(", ");
-  // Speaker metadata from the roster: bio and links, shown inside each session's About.
-  const linkLabel = (u: string): string => {
-    const h = (() => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } })();
-    return /(^|\.)x\.com$|twitter\.com$/.test(h) ? "X" : /linkedin\.com$/.test(h) ? "LinkedIn" : /github\.com$/.test(h) ? "GitHub" : h;
-  };
-  const speakerMeta = (s: Session): string => s.speaker_ids.map((id) => wm.speakers[id]).filter(Boolean).map((p) => {
-    const links = (p!.links ?? []).map((u) => `<a href="${esc(u)}" rel="noopener">${esc(linkLabel(u))}</a>`).join(" · ");
-    const bio = (p as { bio?: string }).bio;
-    return `<div class="tt-speaker"><p><b>${esc(p!.name)}</b>${p!.affiliation ? `, ${esc(p!.affiliation)}` : ""}${links ? ` <span class="mono">${links}</span>` : ""}</p>${bio ? `<p class="minor">${esc(bio)}</p>` : ""}</div>`;
-  }).join("");
   const pill = (s: Session): string => {
     if (slugBySession.has(s.session_id)) return `<span class="pill call-go">captured</span>`;
     const c = recs[s.session_id]?.call;
@@ -494,7 +513,7 @@ for (const t of captured) {
       main: /mainstage/i.test(roomName(s)),
       who: s.speaker_ids.map((id) => { const p = wm.speakers[id]; return p ? p.name + (p.affiliation ? ` (${p.affiliation})` : "") : ""; }).filter(Boolean).join(", "),
       call: recs[s.session_id]?.call ?? (s.format === "break" ? "break" : ""),
-      why: recs[s.session_id]?.why ?? "", abstract: s.abstract ?? "",
+      why: recs[s.session_id]?.why ?? "", abstract: s.abstract ?? "", speakers: speakerMeta(s),
       hub: slugBySession.has(s.session_id) ? talkHref(slugBySession.get(s.session_id)!, up) : null,
     }))
     .sort((a, b) => a.start.localeCompare(b.start) || Number(b.main) - Number(a.main));
@@ -557,7 +576,7 @@ for (const t of captured) {
       var past=live&&Date.parse(p.end)<now, cur=nowRows.indexOf(p)>=0;
       var pill=p.hub?'<span class="pill call-go">captured</span>':p.call==='go'?'<span class="pill call-go">go</span>':p.call==='maybe'?'<span class="pill call-maybe">maybe</span>':p.call==='break'?'<span class="pill call-skip">break</span>':'';
       var head=(p.hub?'<a href="'+p.hub+'">'+esc(p.title)+'</a>':esc(p.title))+(p.who?'<span class="minor"> · '+esc(p.who)+'</span>':'');
-      var more=(p.abstract||p.why)?'<details><summary>'+head+'</summary>'+(p.why?'<p class="why"><b>Why '+esc(p.call)+':</b> '+esc(p.why)+'</p>':'')+(p.abstract?'<p class="abs">'+esc(p.abstract)+'</p>':'')+'</details>':head;
+      var more=(p.abstract||p.why||p.speakers)?'<details><summary>'+head+'</summary>'+(p.why?'<p class="why"><b>Why '+esc(p.call)+':</b> '+esc(p.why)+'</p>':'')+(p.abstract?'<p class="abs">'+esc(p.abstract)+'</p>':'')+(p.speakers||'')+'</details>':head;
       return '<li class="'+(past?'past ':'')+(cur?'cur ':'')+(p.main?'':'side')+'"><span class="mono">'+fmt(p.start)+'</span><span class="t">'+more+'<span class="room mono">'+esc(p.room)+'</span></span>'+pill+'</li>'}).join('')||'<li class="lede">Nothing scheduled.</li>';
     document.getElementById('dayswitch').innerHTML=D.days.map(function(d){return '<button type="button" title="'+esc(d.full)+'" data-d="'+d.date+'"'+(d.date===date?' aria-pressed="true"':'')+'>'+esc(d.label)+'</button>'}).join('');
   }

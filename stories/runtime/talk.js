@@ -31,7 +31,7 @@
       nav.className = "topnav in-talk";
       nav.setAttribute("aria-label", "Site");
       const items = [["AIE Code ’26", "index.html", "brand"], ["Today", "index.html"], ["Schedule", "site/schedule.html"],
-        ["Talks", "site/talks/index.html", "current"], ["Themes", "site/themes.html"], ["People", "site/people.html"]];
+        ["Talks", "site/talks/index.html", "current"], ["Themes", "site/themes.html"], ["People", "site/people.html"], ["Follow-ups", "site/followups.html"]];
       for (const [label, href, kind] of items) {
         const a = document.createElement("a");
         a.textContent = label;
