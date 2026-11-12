@@ -363,6 +363,29 @@
       "status": "found"
     }
   ],
+  "1373478": [
+    {
+      "name": "Jarred Sumner",
+      "role": "Creator of Bun",
+      "affiliation": "Anthropic",
+      "links": {
+        "site": "https://jarredsumner.com/",
+        "linkedin": null,
+        "x": "https://x.com/jarredsumner",
+        "github": "https://github.com/Jarred-Sumner",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Anthropic; bio \"Jarred Sumner created Bun, the open-source JavaScript and TypeScript toolkit that combines a runtime, bundler, package manager, and test runner.\"",
+        "program title: \"Jarred Sumner, Founder of Bun, Anthropic / Bun\"",
+        "transcript: \"Over the summer, I rewrote Bun and Ross.\"",
+        "page title: \"Jarred-Sumner (Jarred Sumner) · GitHub\"",
+        "page title: \"Jarred Sumner (@jarredsumner) / X\"",
+        "page title: \"Jarred Sumner\""
+      ],
+      "status": "found"
+    }
+  ],
   "1376191": [
     {
       "name": "Simon Willison",
@@ -506,6 +529,27 @@
         "page title: \"Scott Tolinski\"",
         "page title: \"Scott Tolinski (@stolinski) / X\"",
         "page title: \"stolinski (Scott Tolinski) · GitHub\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1381580": [
+    {
+      "name": "Devin Gupta",
+      "role": "Core engineer, Decisions API",
+      "affiliation": "Parallel Web Systems",
+      "links": {
+        "site": "https://devin-gupta.github.io/",
+        "linkedin": null,
+        "x": "https://x.com/devingupta_",
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Parallel; bio \"Devin Gupta is a core engineer at Parallel Web Systems, focusing on building out the next generation of web infrastructure for LLMs. In particular, he works on post-training search models and leading the Parallel Decisions API.\"",
+        "transcript: \"If you use apparel decision API, which asks the same question\"",
+        "page title: \"Devin Gupta\"",
+        "page title: \"Devin Gupta (@devingupta_) / X\""
       ],
       "status": "found"
     }

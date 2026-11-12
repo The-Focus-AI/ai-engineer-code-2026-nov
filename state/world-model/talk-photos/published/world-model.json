@@ -2071,22 +2071,15 @@
       "width": 3000,
       "height": 4000,
       "burst_id": "burst-20261112T1407",
-      "session_id": null,
-      "method": "none",
-      "confidence": 0,
-      "status": "needs-review",
-      "candidates": [
-        "2f9774d5-ce23-415d-8047-2ffd94f4ee61",
-        "1380658",
-        "1373478"
-      ],
-      "placed_path": null,
+      "session_id": "1373478",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/photos/PXL_20261112_220704428.jpg",
       "evidence": [
-        "14:07:04 PT is inside 3 parallel talk windows: 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\" (08:00–17:40 PT, continental-7-token-billionaires-lounge); 1380658 \"Scaling Your Agent Workforce: Lessons from Inside Cognition\" (14:05–14:25 PT, continental-13-expo-sessions); 1373478 \"Jarred Sumner, Founder of Bun, Anthropic / Bun\" (14:05–14:50 PT, continental-46-mainstage)",
-        "no recording is active or matched (recording-intake holds no recording for this slot; recordings/inbox has none after 2026-11-12_1235_lance-martin)",
-        "operator notes notes/inbox/2026-11-12T1407-aot-compiler-better-than-rust-rewrite.md, notes/inbox/2026-11-12T1409-design-for-testability-first.md (captured 14:07 and 14:09, inside the 14:05–14:50 window) carry session_id 1373478 but talk: null — the notes attribute the session by topic, and the contract's session+attribution rule needs a note whose talk: names a talk folder; no talk folder for 1373478 exists yet, so the photo cannot be filed under talks/<slug>/photos/",
-        "room evidence in the image (looked at): Mainstage — the large \"AI\" letter sculpture stage right, Code Summit / Google DeepMind branding on the LED wall and lectern, and Anthropic-branded Bun slides (\"rewrite Bun in Rust\", \"build an ahead-of-time JavaScript compiler\"; \"Build sound types and AoT into bun and webkit\") — points to 1373478 Jarred Sumner (Mainstage), not 1380658 (Expo Sessions)",
-        "resolve on intake of a 1373478 recording (recording-overlap) or an operator decision naming the talk folder; leading candidate 1373478"
+        "recording 2026-11-12_1406_jarred-sumner (2026-11-12T22:06:27.000Z–2026-11-12T22:28:27.700Z) matched to session 1373478 contains 14:07:04 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1380658 \"Scaling Your Agent Workforce: Lessons from Inside Cognition\" also contain the time; the matched recording decides",
+        "was needs-review in run 20261112-141259-1f36b1 (candidates 2f9774d5-ce23-415d-8047-2ffd94f4ee61, 1380658, 1373478; no recording for the slot then); resolved by recording-intake run 20261112-145051-48cb1a, which matched 2026-11-12_1406_jarred-sumner → 1373478; agrees with the room evidence recorded then (Mainstage, Anthropic Bun/AoT-compiler slides) and with operator notes notes/inbox/2026-11-12T1407-aot-compiler-better-than-rust-rewrite.md, notes/inbox/2026-11-12T1409-design-for-testability-first.md (talk: talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/)"
       ]
     },
     "PXL_20261112_220735820.jpg": {
@@ -2097,22 +2090,15 @@
       "width": 3000,
       "height": 4000,
       "burst_id": "burst-20261112T1407",
-      "session_id": null,
-      "method": "none",
-      "confidence": 0,
-      "status": "needs-review",
-      "candidates": [
-        "2f9774d5-ce23-415d-8047-2ffd94f4ee61",
-        "1380658",
-        "1373478"
-      ],
-      "placed_path": null,
+      "session_id": "1373478",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/photos/PXL_20261112_220735820.jpg",
       "evidence": [
-        "14:07:35 PT is inside 3 parallel talk windows: 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\" (08:00–17:40 PT, continental-7-token-billionaires-lounge); 1380658 \"Scaling Your Agent Workforce: Lessons from Inside Cognition\" (14:05–14:25 PT, continental-13-expo-sessions); 1373478 \"Jarred Sumner, Founder of Bun, Anthropic / Bun\" (14:05–14:50 PT, continental-46-mainstage)",
-        "no recording is active or matched (recording-intake holds no recording for this slot; recordings/inbox has none after 2026-11-12_1235_lance-martin)",
-        "operator notes notes/inbox/2026-11-12T1407-aot-compiler-better-than-rust-rewrite.md, notes/inbox/2026-11-12T1409-design-for-testability-first.md (captured 14:07 and 14:09, inside the 14:05–14:50 window) carry session_id 1373478 but talk: null — the notes attribute the session by topic, and the contract's session+attribution rule needs a note whose talk: names a talk folder; no talk folder for 1373478 exists yet, so the photo cannot be filed under talks/<slug>/photos/",
-        "room evidence in the image (looked at): Mainstage — the large \"AI\" letter sculpture stage right, Code Summit / Google DeepMind branding on the LED wall and lectern, and Anthropic-branded Bun slides (\"rewrite Bun in Rust\", \"build an ahead-of-time JavaScript compiler\"; \"Build sound types and AoT into bun and webkit\") — points to 1373478 Jarred Sumner (Mainstage), not 1380658 (Expo Sessions)",
-        "resolve on intake of a 1373478 recording (recording-overlap) or an operator decision naming the talk folder; leading candidate 1373478"
+        "recording 2026-11-12_1406_jarred-sumner (2026-11-12T22:06:27.000Z–2026-11-12T22:28:27.700Z) matched to session 1373478 contains 14:07:35 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1380658 \"Scaling Your Agent Workforce: Lessons from Inside Cognition\" also contain the time; the matched recording decides",
+        "was needs-review in run 20261112-141259-1f36b1 (candidates 2f9774d5-ce23-415d-8047-2ffd94f4ee61, 1380658, 1373478; no recording for the slot then); resolved by recording-intake run 20261112-145051-48cb1a, which matched 2026-11-12_1406_jarred-sumner → 1373478; agrees with the room evidence recorded then (Mainstage, Anthropic Bun/AoT-compiler slides) and with operator notes notes/inbox/2026-11-12T1407-aot-compiler-better-than-rust-rewrite.md, notes/inbox/2026-11-12T1409-design-for-testability-first.md (talk: talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/)"
       ]
     }
   },
@@ -2287,6 +2273,13 @@
         "PXL_20261112_193025663.jpg"
       ]
     },
+    "1373478": {
+      "dir": "talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/photos",
+      "photos": [
+        "PXL_20261112_220704428.jpg",
+        "PXL_20261112_220735820.jpg"
+      ]
+    },
     "1376191": {
       "dir": "talks/2026-11-11-2026-in-llms/photos",
       "photos": [
@@ -2364,12 +2357,12 @@
   "coverage": {
     "photos_dir": "photos",
     "photo_count": 121,
-    "placed_count": 117,
+    "placed_count": 119,
     "event_count": 2,
-    "review_count": 2,
+    "review_count": 0,
     "unplaced_count": 0,
     "timezone": "America/Los_Angeles",
-    "last_checked": "2026-11-12T14:12:59-08:00",
-    "generated_at": "2026-11-12T14:12:59-08:00"
+    "last_checked": "2026-11-12T14:53:55-08:00",
+    "generated_at": "2026-11-12T14:53:55-08:00"
   }
 }

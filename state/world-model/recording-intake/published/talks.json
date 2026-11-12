@@ -546,6 +546,40 @@
     "word_count": 2586,
     "cleaned_at": "2026-11-12T13:14:46-08:00"
   },
+  "1373478": {
+    "slug": "2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun",
+    "path": "talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/transcript.md",
+    "title": "Jarred Sumner, Founder of Bun, Anthropic / Bun",
+    "speakers": [
+      {
+        "name": "Jarred Sumner",
+        "affiliation": "Anthropic"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-12T14:05:00-08:00",
+    "source_recording": "2026-11-12_1406_jarred-sumner",
+    "sections": [
+      "00:00:00 — Introduction: an ahead-of-time compiler",
+      "00:00:53 — Making Claude Code use less memory",
+      "00:01:51 — Constrained by how you test",
+      "00:02:13 — Why compile ahead of time",
+      "00:03:26 — Why not rewrite Claude Code in Rust",
+      "00:04:39 — Results: less memory, faster starts",
+      "00:05:55 — Types as predictions",
+      "00:06:23 — Tests that predate the project",
+      "00:08:30 — Batches, then long-running agents",
+      "00:09:44 — Five rewrites",
+      "00:14:51 — Long-lived agents over workflows",
+      "00:15:40 — How the compiler works",
+      "00:16:08 — Hourly updates and fuzzing",
+      "00:17:38 — Benchmarks",
+      "00:18:49 — What you actually do all day",
+      "00:20:35 — Takeaways"
+    ],
+    "word_count": 2824,
+    "cleaned_at": "2026-11-12T14:50:51-08:00"
+  },
   "1376191": {
     "slug": "2026-11-11-2026-in-llms",
     "path": "talks/2026-11-11-2026-in-llms/transcript.md",
@@ -752,5 +786,32 @@
     ],
     "word_count": 4075,
     "cleaned_at": "2026-11-10T14:34:02-05:00"
+  },
+  "1381580": {
+    "slug": "2026-11-12-the-first-grounded-decision-model",
+    "path": "talks/2026-11-12-the-first-grounded-decision-model/transcript.md",
+    "title": "The first Grounded Decision Model",
+    "speakers": [
+      {
+        "name": "Devin Gupta",
+        "affiliation": "Parallel"
+      }
+    ],
+    "room_id": "continental-13-expo-sessions",
+    "starts_at": "2026-11-12T14:30:00-08:00",
+    "source_recording": "2026-11-12_1433_The-first-Grounded-Decision-Model",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:00:56 — A question a model cannot answer",
+      "00:01:49 — Grounding unlocks calibration",
+      "00:03:05 — How it works",
+      "00:04:05 — Since launch",
+      "00:04:35 — Customer use cases",
+      "00:05:46 — Live demo",
+      "00:07:05 — Pricing",
+      "00:07:45 — Q&A"
+    ],
+    "word_count": 1730,
+    "cleaned_at": "2026-11-12T14:50:51-08:00"
   }
 }

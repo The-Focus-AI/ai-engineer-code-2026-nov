@@ -2,7 +2,7 @@
 captured_at: 2026-11-12T14:40:00-08:00
 kind: observation
 session_id: "1381580"
-talk: null
+talk: talks/2026-11-12-the-first-grounded-decision-model/
 tags: [decision-models, grounding, freshness, examples]
 ---
 

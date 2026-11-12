@@ -269,6 +269,26 @@
       "word_count": 3285,
       "audio_sha256": "549d69c33d8654ba3da06eaa79c76298a07350527d0f656d96ee7baca03c54cd",
       "status": "cleaned"
+    },
+    "2026-11-12_1406_jarred-sumner": {
+      "folder": "2026-11-12_1406_jarred-sumner",
+      "path": "recordings/inbox/2026-11-12_1406_jarred-sumner",
+      "title": "jarred sumner",
+      "recorded_at": "2026-11-12T14:06:27-08:00",
+      "duration_seconds": 1320.7,
+      "word_count": 2912,
+      "audio_sha256": "de922249ee0f306cf8e7e9a35f6cdc2ca3f866f545db67c3c81a768ccfa42383",
+      "status": "cleaned"
+    },
+    "2026-11-12_1433_The-first-Grounded-Decision-Model": {
+      "folder": "2026-11-12_1433_The-first-Grounded-Decision-Model",
+      "path": "recordings/inbox/2026-11-12_1433_The-first-Grounded-Decision-Model",
+      "title": "The first Grounded Decision Model",
+      "recorded_at": "2026-11-12T14:33:14-08:00",
+      "duration_seconds": 645.1,
+      "word_count": 1751,
+      "audio_sha256": "594749931c175fc2c1f742565f9042604368c5645b846dd609f90ce6dbb384b0",
+      "status": "cleaned"
     }
   },
   "matches": {
@@ -1073,6 +1093,66 @@
         }
       ],
       "status": "matched"
+    },
+    "2026-11-12_1406_jarred-sumner": {
+      "session_id": "1373478",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos, transcript in force, unprompted): \"Over the summer, I rewrote Bun and Ross.\" (names the speaker's company and project, Bun; Rust as transcribed)",
+        "transcript.txt (Voice Memos, transcript in force, unprompted): \"Because the bun team, us, ultimately wrote Bun and Rust.\" (the speaker places himself on the Bun team)",
+        "transcript.txt (Voice Memos, transcript in force, unprompted): \"we need to make Clyde code use a lot less memory.\" (names Claude Code, Anthropic's product, as transcribed)",
+        "title: \"jarred sumner\" (Voice Memos title exactly names the speaker of 1373478 — operator confirmation)",
+        "note: notes/inbox/2026-11-12T1407-aot-compiler-better-than-rust-rewrite.md — session_id 1373478, talk: talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/ (captured 14:07, inside the recording)",
+        "note: notes/inbox/2026-11-12T1409-design-for-testability-first.md — session_id 1373478, talk: talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/ (captured 14:09, inside the recording)",
+        "note: notes/inbox/2026-11-12T1423-hourly-loop-posts-updates-to-slack.md — session_id 1373478, talk: talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/ (captured 14:23, inside the recording)",
+        "time: recorded 14:06:27 for 22 min, inside the 14:05–14:50 Mainstage slot",
+        "source: transcript in force is transcript.txt (Voice Memos); the local Qwen3-ASR pass was deferred (on battery) and is not used here"
+      ],
+      "candidates": [
+        {
+          "session_id": "1373478",
+          "why": "Mainstage 14:05–14:50; recording 14:06:27 for 22 min; the speaker says he rewrote Bun and is on the Bun team, and works on Claude Code; exact-name folder title; three operator notes 14:07–14:23 carry this session",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1380658",
+          "why": "Scaling Your Agent Workforce (Theodor Marcu, Cognition), Expo Sessions 14:05–14:25: same slot; no transcript quote names it, Cognition or Devin",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-12_1433_The-first-Grounded-Decision-Model": {
+      "session_id": "1381580",
+      "confidence": 0.85,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos, transcript in force, unprompted): \"If you use apparel decision API, which asks the same question\" (names the speaker's company's product, the Parallel decision API, as transcribed)",
+        "transcript.txt (Voice Memos, transcript in force, unprompted): \"versus like the parallel.\" (names the speaker's company, Parallel)",
+        "transcript.txt (Voice Memos, transcript in force, unprompted): \"it's kind of crazy that you would use a decision model in your workflow\" — abstract: \"Decision models only read.\"",
+        "transcript.txt (Voice Memos, transcript in force, unprompted): \"I'm gonna go and do a really quick live demo.\" — abstract: \"a live demo that grounds 18 typed questions\"",
+        "title: \"The first Grounded Decision Model\" (Voice Memos title exactly names the talk 1381580)",
+        "note: notes/inbox/2026-11-12T1435-how-do-we-ground-the-decision-model.md — session_id 1381580, talk: talks/2026-11-12-the-first-grounded-decision-model/ (captured 14:35, inside the recording)",
+        "note: notes/inbox/2026-11-12T1437-decisions-api-with-grounded-support.md — session_id 1381580, talk: talks/2026-11-12-the-first-grounded-decision-model/ (captured 14:37, inside the recording)",
+        "note: notes/inbox/2026-11-12T1440-is-jensen-still-ceo-of-nvidia-test.md — session_id 1381580, talk: talks/2026-11-12-the-first-grounded-decision-model/ (captured 14:40, inside the recording)",
+        "note: notes/inbox/2026-11-12T1441-follow-up-parallel-for-research.md — session_id 1381580, talk: talks/2026-11-12-the-first-grounded-decision-model/ (captured 14:41, inside the recording)",
+        "time: recorded 14:33:14 for 10¾ min, inside the 14:30–14:50 Expo Sessions slot",
+        "source: transcript in force is transcript.txt (Voice Memos); the local Qwen3-ASR pass was deferred (on battery) and is not used here"
+      ],
+      "candidates": [
+        {
+          "session_id": "1381580",
+          "why": "Expo Sessions 14:30–14:50; recording 14:33:14 for 10¾ min; the speaker names the Parallel decision API (\"apparel\") and Parallel, demos grounding a decision model; folder title is the exact talk title; four operator notes 14:35–14:41 carry this session",
+          "confidence": 0.85
+        },
+        {
+          "session_id": "1373478",
+          "why": "Jarred Sumner (Anthropic / Bun), Mainstage 14:05–14:50: overlaps in time, but the 14:06 recording already captures it and ended 14:28; no quote here names Bun or Claude Code",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
     }
   },
   "talks": {
@@ -1623,6 +1703,40 @@
       "word_count": 2586,
       "cleaned_at": "2026-11-12T13:14:46-08:00"
     },
+    "1373478": {
+      "slug": "2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun",
+      "path": "talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/transcript.md",
+      "title": "Jarred Sumner, Founder of Bun, Anthropic / Bun",
+      "speakers": [
+        {
+          "name": "Jarred Sumner",
+          "affiliation": "Anthropic"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-12T14:05:00-08:00",
+      "source_recording": "2026-11-12_1406_jarred-sumner",
+      "sections": [
+        "00:00:00 — Introduction: an ahead-of-time compiler",
+        "00:00:53 — Making Claude Code use less memory",
+        "00:01:51 — Constrained by how you test",
+        "00:02:13 — Why compile ahead of time",
+        "00:03:26 — Why not rewrite Claude Code in Rust",
+        "00:04:39 — Results: less memory, faster starts",
+        "00:05:55 — Types as predictions",
+        "00:06:23 — Tests that predate the project",
+        "00:08:30 — Batches, then long-running agents",
+        "00:09:44 — Five rewrites",
+        "00:14:51 — Long-lived agents over workflows",
+        "00:15:40 — How the compiler works",
+        "00:16:08 — Hourly updates and fuzzing",
+        "00:17:38 — Benchmarks",
+        "00:18:49 — What you actually do all day",
+        "00:20:35 — Takeaways"
+      ],
+      "word_count": 2824,
+      "cleaned_at": "2026-11-12T14:50:51-08:00"
+    },
     "1376191": {
       "slug": "2026-11-11-2026-in-llms",
       "path": "talks/2026-11-11-2026-in-llms/transcript.md",
@@ -1829,6 +1943,33 @@
       ],
       "word_count": 4075,
       "cleaned_at": "2026-11-10T14:34:02-05:00"
+    },
+    "1381580": {
+      "slug": "2026-11-12-the-first-grounded-decision-model",
+      "path": "talks/2026-11-12-the-first-grounded-decision-model/transcript.md",
+      "title": "The first Grounded Decision Model",
+      "speakers": [
+        {
+          "name": "Devin Gupta",
+          "affiliation": "Parallel"
+        }
+      ],
+      "room_id": "continental-13-expo-sessions",
+      "starts_at": "2026-11-12T14:30:00-08:00",
+      "source_recording": "2026-11-12_1433_The-first-Grounded-Decision-Model",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:00:56 — A question a model cannot answer",
+        "00:01:49 — Grounding unlocks calibration",
+        "00:03:05 — How it works",
+        "00:04:05 — Since launch",
+        "00:04:35 — Customer use cases",
+        "00:05:46 — Live demo",
+        "00:07:05 — Pricing",
+        "00:07:45 — Q&A"
+      ],
+      "word_count": 1730,
+      "cleaned_at": "2026-11-12T14:50:51-08:00"
     }
   },
   "attachments": []

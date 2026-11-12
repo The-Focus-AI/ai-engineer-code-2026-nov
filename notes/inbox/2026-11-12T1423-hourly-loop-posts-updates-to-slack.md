@@ -2,7 +2,7 @@
 captured_at: 2026-11-12T14:23:00-08:00
 kind: observation
 session_id: "1373478"
-talk: null
+talk: talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/
 tags: [agents, monitoring, slack, long-running]
 ---
 

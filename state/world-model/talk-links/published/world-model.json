@@ -364,6 +364,29 @@
         "status": "found"
       }
     ],
+    "1373478": [
+      {
+        "name": "Jarred Sumner",
+        "role": "Creator of Bun",
+        "affiliation": "Anthropic",
+        "links": {
+          "site": "https://jarredsumner.com/",
+          "linkedin": null,
+          "x": "https://x.com/jarredsumner",
+          "github": "https://github.com/Jarred-Sumner",
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Anthropic; bio \"Jarred Sumner created Bun, the open-source JavaScript and TypeScript toolkit that combines a runtime, bundler, package manager, and test runner.\"",
+          "program title: \"Jarred Sumner, Founder of Bun, Anthropic / Bun\"",
+          "transcript: \"Over the summer, I rewrote Bun and Ross.\"",
+          "page title: \"Jarred-Sumner (Jarred Sumner) · GitHub\"",
+          "page title: \"Jarred Sumner (@jarredsumner) / X\"",
+          "page title: \"Jarred Sumner\""
+        ],
+        "status": "found"
+      }
+    ],
     "1376191": [
       {
         "name": "Simon Willison",
@@ -507,6 +530,27 @@
           "page title: \"Scott Tolinski\"",
           "page title: \"Scott Tolinski (@stolinski) / X\"",
           "page title: \"stolinski (Scott Tolinski) · GitHub\""
+        ],
+        "status": "found"
+      }
+    ],
+    "1381580": [
+      {
+        "name": "Devin Gupta",
+        "role": "Core engineer, Decisions API",
+        "affiliation": "Parallel Web Systems",
+        "links": {
+          "site": "https://devin-gupta.github.io/",
+          "linkedin": null,
+          "x": "https://x.com/devingupta_",
+          "github": null,
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Parallel; bio \"Devin Gupta is a core engineer at Parallel Web Systems, focusing on building out the next generation of web infrastructure for LLMs. In particular, he works on post-training search models and leading the Parallel Decisions API.\"",
+          "transcript: \"If you use apparel decision API, which asks the same question\"",
+          "page title: \"Devin Gupta\"",
+          "page title: \"Devin Gupta (@devingupta_) / X\""
         ],
         "status": "found"
       }
@@ -689,6 +733,17 @@
         ]
       }
     ],
+    "1373478": [
+      {
+        "name": "Bun (Anthropic)",
+        "url": "https://bun.com/",
+        "what": "Bundle, install, and run JavaScript & TypeScript — all in Bun. Bun is a fast JavaScript runtime & toolkit with a bundler, test runner, and npm-compatible package manager built in.",
+        "evidence": [
+          "page title: \"Bun — A fast all-in-one JavaScript runtime\"",
+          "transcript: \"Because the bun team, us, ultimately wrote Bun and Rust.\""
+        ]
+      }
+    ],
     "1376191": [],
     "1376197": [
       {
@@ -753,6 +808,17 @@
         "evidence": [
           "page title: \"Syntax - Web Development Podcast\"",
           "transcript: \"And give Syntax a subscribe on YouTube\""
+        ]
+      }
+    ],
+    "1381580": [
+      {
+        "name": "Parallel Web Systems (Decisions API)",
+        "url": "https://parallel.ai/products/decisions",
+        "what": "A decision engine with world knowledge built in. Typed answers grounded in live web data, with citations, in under a second. $1 per 1,000 requests.",
+        "evidence": [
+          "page title: \"Decisions API - Fast Classification Grounded in Live Web Data | Parallel\"",
+          "transcript: \"If you use apparel decision API\""
         ]
       }
     ]
@@ -1605,6 +1671,86 @@
         "verified_at": "2026-11-12T13:24:21-08:00"
       }
     ],
+    "1373478": [
+      {
+        "type": "product",
+        "title": "Ahead-of-time compilation | Bun Docs",
+        "url": "https://bun.com/docs/compiler/aot",
+        "why": "The compiler the talk is about: `bun compile` turns a program into machine code at build time using its TypeScript types, with no JIT, so it starts faster and uses less memory. Marked experimental.",
+        "evidence": [
+          "page title: \"Ahead-of-time compilation | Bun Docs\"",
+          "transcript: \"To add an ahead of time compiler\""
+        ],
+        "first_seen": "20261112-145406-03378c",
+        "published_at": null,
+        "verified_at": "2026-11-12T14:54:06-08:00"
+      },
+      {
+        "type": "blog",
+        "title": "Rewriting Bun in Rust",
+        "url": "https://bun.com/blog/bun-in-rust",
+        "why": "His July post on the summer's Zig-to-Rust port: the rewrite the talk compares this project to, which was safe because Bun's test suite is written in TypeScript, independent of the runtime's language.",
+        "evidence": [
+          "page title: \"Rewriting Bun in Rust | Bun Blog\"",
+          "transcript: \"because all the tests were written in typescript, we could run the tests on both the zinc version and the rest version\""
+        ],
+        "first_seen": "20261112-145406-03378c",
+        "published_at": "2026-07-08",
+        "verified_at": "2026-11-12T14:54:06-08:00"
+      },
+      {
+        "type": "blog",
+        "title": "Bun is joining Anthropic",
+        "url": "https://bun.com/blog/bun-joins-anthropic",
+        "why": "Why Bun is at Anthropic: it is the runtime behind Claude Code, which is what makes a faster, leaner Bun a Claude Code memory and startup win.",
+        "evidence": [
+          "page title: \"Bun is joining Anthropic | Bun Blog\"",
+          "transcript: \"we need to make Clyde code use a lot less memory\""
+        ],
+        "first_seen": "20261112-145406-03378c",
+        "published_at": "2025-12-02",
+        "verified_at": "2026-11-12T14:54:06-08:00"
+      },
+      {
+        "type": "repo",
+        "title": "googleprojectzero/fuzzilli",
+        "url": "https://github.com/googleprojectzero/fuzzilli",
+        "why": "The JavaScript engine fuzzer (transcribed \"Puzzili\") Bun already ran and extended to test the compiler's type predictions.",
+        "evidence": [
+          "page title: \"GitHub - googleprojectzero/fuzzilli: A JavaScript Engine Fuzzer · GitHub\"",
+          "transcript: \"Puzzili is like a Javaister bending buzzer that VA uses.\""
+        ],
+        "first_seen": "20261112-145406-03378c",
+        "published_at": null,
+        "verified_at": "2026-11-12T14:54:06-08:00"
+      },
+      {
+        "type": "repo",
+        "title": "tc39/test262",
+        "url": "https://github.com/tc39/test262",
+        "why": "The official ECMAScript conformance suite, one of the tests that predate the project and so could be trusted against the agents' code.",
+        "evidence": [
+          "page title: \"GitHub - tc39/test262: Official ECMAScript Conformance Test Suite · GitHub\"",
+          "transcript: \"plus web test, plus test 262\""
+        ],
+        "first_seen": "20261112-145406-03378c",
+        "published_at": null,
+        "verified_at": "2026-11-12T14:54:06-08:00"
+      },
+      {
+        "type": "repo",
+        "title": "microsoft/typescript-go",
+        "url": "https://github.com/microsoft/typescript-go",
+        "why": "The native Go port of TypeScript the talk benchmarks against: the AOT-compiled single-threaded TypeScript now beats the single-threaded Go port.",
+        "evidence": [
+          "page title: \"GitHub - microsoft/typescript-go: Staging repo for development of native port of TypeScript · GitHub\"",
+          "transcript: \"the abundant pile is now faster than the single threaded types of go port\""
+        ],
+        "first_seen": "20261112-145406-03378c",
+        "published_at": null,
+        "verified_at": "2026-11-12T14:54:06-08:00"
+      }
+    ],
     "1376191": [
       {
         "type": "blog",
@@ -2009,6 +2155,60 @@
         "published_at": null,
         "verified_at": "2026-11-12T13:24:21-08:00"
       }
+    ],
+    "1381580": [
+      {
+        "type": "blog",
+        "title": "Introducing the Parallel Decisions API: fast classification grounded in live web data",
+        "url": "https://parallel.ai/blog/decisions-api",
+        "why": "The launch post for the product the talk demos: several typed questions about one entity answered in a single call, grounded in live web data, at $1 per 1,000 calls.",
+        "evidence": [
+          "page title: \"Parallel Decisions API: web-grounded classification | Parallel\"",
+          "transcript: \"since we launched 2 weeks ago\""
+        ],
+        "first_seen": "20261112-145406-03378c",
+        "published_at": null,
+        "verified_at": "2026-11-12T14:54:06-08:00"
+      },
+      {
+        "type": "blog",
+        "title": "Introducing PWS-Decisions: A benchmark for web-grounded decisions",
+        "url": "https://parallel.ai/blog/pws-decisions-benchmark",
+        "why": "The open 300-question benchmark from the abstract, with the accuracy gap between grounded and ungrounded decision models the talk shows.",
+        "evidence": [
+          "page title: \"PWS-Decisions: a benchmark for web-grounded decisions | Parallel\"",
+          "transcript: \"there's huge accuracy differences\""
+        ],
+        "first_seen": "20261112-145406-03378c",
+        "published_at": null,
+        "verified_at": "2026-11-12T14:54:06-08:00"
+      },
+      {
+        "type": "repo",
+        "title": "parallel-web/pws-decisions-benchmark",
+        "url": "https://github.com/parallel-web/pws-decisions-benchmark",
+        "why": "The benchmark code, so you can run it against your own model, as the abstract promises.",
+        "evidence": [
+          "page title: \"GitHub - parallel-web/pws-decisions-benchmark: PWS-Decisions: a web-grounded decision API benchmark for agents · GitHub\"",
+          "program abstract: \"You will leave able to run the benchmark against your own model.\""
+        ],
+        "first_seen": "20261112-145406-03378c",
+        "published_at": null,
+        "verified_at": "2026-11-12T14:54:06-08:00"
+      },
+      {
+        "type": "paper",
+        "title": "parallel-web/pws-decisions-benchmark (dataset)",
+        "url": "https://huggingface.co/datasets/parallel-web/pws-decisions-benchmark",
+        "why": "The 300 questions themselves on Hugging Face.",
+        "evidence": [
+          "page title: \"parallel-web/pws-decisions-benchmark · Datasets at Hugging Face\"",
+          "program abstract: \"On PWS-Decisions, our open 300-question benchmark\""
+        ],
+        "first_seen": "20261112-145406-03378c",
+        "published_at": null,
+        "verified_at": "2026-11-12T14:54:06-08:00"
+      }
     ]
   },
   "freshness": {
@@ -2114,6 +2314,12 @@
       "next_check": "2026-11-12T19:24:21-08:00",
       "checks": 1
     },
+    "1373478": {
+      "phase": "live",
+      "last_checked": "2026-11-12T14:54:06-08:00",
+      "next_check": "2026-11-12T20:54:06-08:00",
+      "checks": 1
+    },
     "1376191": {
       "phase": "live",
       "last_checked": "2026-11-12T13:24:21-08:00",
@@ -2155,6 +2361,12 @@
       "last_checked": "2026-11-12T13:24:21-08:00",
       "next_check": "2026-11-12T19:24:21-08:00",
       "checks": 9
+    },
+    "1381580": {
+      "phase": "live",
+      "last_checked": "2026-11-12T14:54:06-08:00",
+      "next_check": "2026-11-12T20:54:06-08:00",
+      "checks": 1
     }
   },
   "coverage": {
@@ -2414,6 +2626,26 @@
       ],
       "generated_at": "2026-11-12T13:24:21-08:00"
     },
+    "1373478": {
+      "searched": [
+        "roster links (github.com/Jarred-Sumner)",
+        "web: Jarred Sumner Bun ahead-of-time compiler JavaScript Claude Code memory",
+        "web: Bun rewrite in Rust Jarred Sumner blog 2026",
+        "web: bun.com blog ahead-of-time compiler bun build --compile AOT JavaScriptCore types Claude Code 2026",
+        "bun.com/blog/bun-in-rust, bun.com/docs/compiler/aot, bun.com/blog/bun-joins-anthropic read"
+      ],
+      "gaps": [
+        "no LinkedIn profile verifiably his (the roster lists none)",
+        "no Bun blog post on the ahead-of-time compiler itself found yet; the talk says it is dogfooded internally and 'will be external soon'; the experimental docs are linked instead",
+        "the 4x-less-memory and 2x-faster-start figures for Claude Code, the five rewrites, the hourly Slack metrics card and the 140-agent batch have no public write-up found",
+        "an aggregator-reported preview (24% faster startup, 48% lower memory for Claude Code) has no primary source; not linked",
+        "bun.com/docs/compiler/internals (from search results) answered 404; dropped",
+        "Simon Willison's note on the Rust rewrite verified but left out as secondary to the primary post",
+        "the recording opens mid-sentence; the MC's introduction is not captured",
+        "no official recording or slides of this talk found yet"
+      ],
+      "generated_at": "2026-11-12T14:54:06-08:00"
+    },
     "1376191": {
       "searched": [
         "roster links (github.com/simonw, simonwillison.net, x.com/simonw)",
@@ -2530,6 +2762,24 @@
         "no official recording or slides of this talk found yet"
       ],
       "generated_at": "2026-11-10T14:19:25-05:00"
+    },
+    "1381580": {
+      "searched": [
+        "roster links (devin-gupta.github.io, linkedin.com/in/devin-gupta, x.com/devingupta_)",
+        "web: Parallel Web Systems Decisions API grounded decision model PWS-Decisions benchmark",
+        "web: \"Devin Gupta\" Parallel Web Systems",
+        "parallel.ai/blog/decisions-api and parallel.ai/blog/pws-decisions-benchmark read"
+      ],
+      "gaps": [
+        "linkedin.com/in/devin-gupta (roster) answered 999 with no page title, so it could not be corroborated; not published",
+        "neither Parallel post names an author; Devin Gupta's role on the Decisions API rests on the roster bio",
+        "the abstract's cost figures (104-token question vs 4,777 tokens of evidence; model share of the bill 86% to 17%), the 4,270-business demo and the entity-resolution failure are not in either post's text (the cost chart is an image); no write-up found",
+        "the live demo's NVIDIA-CEO question and the restaurant reservation-platform classification have no public write-up found",
+        "the ASR is heavily garbled throughout; the Q&A speakers are unlabelled",
+        "the recording opens mid-sentence; the MC's introduction is not captured",
+        "no official recording or slides of this talk found yet"
+      ],
+      "generated_at": "2026-11-12T14:54:06-08:00"
     }
   }
 }

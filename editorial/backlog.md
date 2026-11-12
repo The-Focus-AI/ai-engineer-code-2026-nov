@@ -15,6 +15,7 @@
 - [ ] Follow up on giving the agent a database to store things (from Lance Martin's "Exploring Claude's frontier", which gives agents git and a SQL database as primitives) — notes/inbox/2026-11-12T1239-follow-up-agent-database-to-store-stuff.md
 - [ ] Follow up on building agent memory from session transcripts (from Lance Martin's "Exploring Claude's frontier"; ties to Diogo Almeida and Ramp's Inspect) — notes/inbox/2026-11-12T1249-follow-up-memory-from-transcripts.md
 - [ ] Try Parallel (Parallel Web Systems) for research: its search and Decisions APIs, possibly for talk dossiers (from Devin Gupta's "The first Grounded Decision Model") — notes/inbox/2026-11-12T1441-follow-up-parallel-for-research.md
+- [ ] Try agent swarms ourselves: a lead agent plus helpers on a shared store (git and a SQL database), after Lance Martin's thousand-agent run — notes/inbox/2026-11-12T1500-try-agent-swarms.md
 
 ## Digest later
 

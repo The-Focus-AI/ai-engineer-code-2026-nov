@@ -175,6 +175,17 @@
       ]
     }
   ],
+  "1373478": [
+    {
+      "name": "Bun (Anthropic)",
+      "url": "https://bun.com/",
+      "what": "Bundle, install, and run JavaScript & TypeScript — all in Bun. Bun is a fast JavaScript runtime & toolkit with a bundler, test runner, and npm-compatible package manager built in.",
+      "evidence": [
+        "page title: \"Bun — A fast all-in-one JavaScript runtime\"",
+        "transcript: \"Because the bun team, us, ultimately wrote Bun and Rust.\""
+      ]
+    }
+  ],
   "1376191": [],
   "1376197": [
     {
@@ -239,6 +250,17 @@
       "evidence": [
         "page title: \"Syntax - Web Development Podcast\"",
         "transcript: \"And give Syntax a subscribe on YouTube\""
+      ]
+    }
+  ],
+  "1381580": [
+    {
+      "name": "Parallel Web Systems (Decisions API)",
+      "url": "https://parallel.ai/products/decisions",
+      "what": "A decision engine with world knowledge built in. Typed answers grounded in live web data, with citations, in under a second. $1 per 1,000 requests.",
+      "evidence": [
+        "page title: \"Decisions API - Fast Classification Grounded in Live Web Data | Parallel\"",
+        "transcript: \"If you use apparel decision API\""
       ]
     }
   ]

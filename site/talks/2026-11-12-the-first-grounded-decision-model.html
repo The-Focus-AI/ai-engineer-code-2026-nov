@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The first Grounded Decision Model</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../site/theme.css">
+<link rel="stylesheet" href="../../site/nav.css">
+<link rel="stylesheet" href="../../site/pages.css">
+
+</head>
+<body>
+<nav class="topnav" aria-label="Site"><a class="brand" href="../../index.html">AIE Code ’26</a><a href="../../index.html">Today</a><a href="../../site/schedule.html">Schedule</a><a href="../../site/talks/index.html" aria-current="page">Talks</a><a href="../../site/themes.html">Themes</a><a href="../../site/people.html">People</a><a href="../../site/followups.html">Follow-ups</a></nav>
+<div class="sheet">
+
+  <header class="masthead hub">
+    <p class="mono agency">Thu, Nov 12 · 2:30 PM–2:50 PM · Continental 1–3 (Expo Sessions)</p>
+    <h1>The first Grounded Decision Model</h1>
+    <p class="speakers">Devin Gupta, Parallel</p>
+    
+  </header>
+  <div class="marginalia mono"><a href="index.html">← All talks</a><span>4 of 7 built</span></div>
+  <div class="pills"><a class="pill call-go" href="../../site/talks/2026-11-12-the-first-grounded-decision-model.html#recording">Recording · 11 min</a><a class="pill call-go" href="../../site/talks/2026-11-12-the-first-grounded-decision-model.html#transcript">Transcript · voice-memos-transcript</a><a class="pill call-go" href="../../site/talks/2026-11-12-the-first-grounded-decision-model.html#links">Links</a><a class="pill call-skip" href="../../site/talks/2026-11-12-the-first-grounded-decision-model.html#photos">Photos</a><a class="pill call-go" href="../../site/talks/2026-11-12-the-first-grounded-decision-model.html#notes">Notes · 4</a><a class="pill call-skip" href="../../site/talks/2026-11-12-the-first-grounded-decision-model.html#story">Story</a><a class="pill call-skip" href="../../site/talks/2026-11-12-the-first-grounded-decision-model.html#story">Talk page</a></div>
+  
+  
+  
+
+  <section class="view" id="people"><div class="view-head"><h2>Speaker</h2></div>
+    <div class="people"><div class="person" data-search="devin gupta parallel devingupta_ the first grounded decision model">
+    <div class="who"><b>Devin Gupta</b> <span class="minor">Parallel</span><div class="talkline"><a href="../../site/talks/2026-11-12-the-first-grounded-decision-model.html">The first Grounded Decision Model</a></div></div>
+    <div class="acts"><a class="btn" href="https://x.com/intent/follow?screen_name=devingupta_" target="_blank" rel="noopener">Follow @devingupta_</a><a class="btn ghost" href="https://x.com/intent/post?text=%40devingupta_%20Enjoyed%20your%20talk%20%22The%20first%20Grounded%20Decision%20Model%22%20at%20AI%20Engineer%20Code%20Summit.%20" target="_blank" rel="noopener">Write</a><label class="done"><input type="checkbox" data-handle="devingupta_"> followed</label><a class="ext" href="https://devin-gupta.github.io/" target="_blank" rel="noopener">devin-gupta.github.io</a><a class="ext" href="https://www.linkedin.com/in/devin-gupta/" target="_blank" rel="noopener">LinkedIn</a></div>
+  </div></div></section>
+
+  <section class="view" id="notes"><div class="view-head"><h2>My notes</h2><p class="lede">4 captured during the talk.</p></div>
+    <ol class="notes"><li><span class="mono">2:35 PM · question</span><div class="prose"><p>How do we ground the decision model?</p>
+<p>Linked to Devin Gupta's &quot;The first Grounded Decision Model&quot; (1381580, 14:30–14:50, Expo sessions): the question names its subject. The other talk at 14:35 is Jarred Sumner's on the Mainstage. Connects to the &quot;Decision models&quot; theme (Cloudflare's Clef, TypeSafe's Jev, Workday) in analysis/themes.md.</p>
+</div></li><li><span class="mono">2:37 PM · observation</span><div class="prose"><p>Decisions API with grounded support.</p>
+<p>In Devin Gupta's &quot;The first Grounded Decision Model&quot; (1381580, 14:30–14:50, Expo sessions), following &quot;how do we ground the decision model?&quot; (2026-11-12T1435-how-do-we-ground-the-decision-model.md). This is Parallel's Decisions API: Devin Gupta (Parallel Web Systems; https://devin-gupta.github.io/, https://x.com/devingupta_) leads it, per the conference roster. His abstract: decision models only read, so they cost about 240x less per token read than a frontier LLM and are only as good as the state you hand them, which for most judgments lives on the live web; on Parallel's open PWS-Decisions benchmark (300 questions) the question is 104 tokens and the evidence 4,777, and the model has gone from 86% to 17% of the cost of a grounded answer. Compare the Gemini Decisions API Philipp Schmid announced on Nov 11 (talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/).</p>
+</div></li><li><span class="mono">2:40 PM · observation</span><div class="prose"><p>&quot;Is Jensen still the CEO of Nvidia?&quot; is a hilarious test to do today.</p>
+<p>In Devin Gupta's &quot;The first Grounded Decision Model&quot; (1381580, Expo sessions): an example of a judgment whose answer lives on the live web, not in the model's weights, which is the case for grounding the decision model.</p>
+</div></li><li><span class="mono">2:41 PM · todo</span><div class="prose"><p>Follow up on using Parallel to do research.</p>
+<p>From Devin Gupta's &quot;The first Grounded Decision Model&quot; (1381580). Parallel Web Systems builds web search and research APIs for LLMs, including the Decisions API (2026-11-12T1437-decisions-api-with-grounded-support.md). Candidate use here: grounding talk dossiers and follow-up research, which the talk-links node now does with general web search.</p>
+</div></li></ol>
+  </section>
+
+  <section class="view" id="photos"><div class="view-head"><h2>Photos</h2><p class="lede">None filed.</p></div>
+    
+  </section>
+
+  <section class="view" id="recording"><div class="view-head"><h2>Recording</h2><p class="lede">My Voice Memos from the room.</p></div>
+    <div class="rec"><span class="mono">2026-11-12_1433_The-first-Grounded-Decision-Model · 11 min · voice-memos</span><audio controls preload="none" src="../../recordings/inbox/2026-11-12_1433_The-first-Grounded-Decision-Model/audio.m4a"></audio></div>
+  </section>
+
+  <section class="view" id="story"><div class="view-head"><h2>Story</h2><p class="lede">Not written yet.</p></div>
+    
+  </section>
+
+  <section class="view" id="links"><div class="view-head"><h2>Links and resources</h2></div><div class="prose"><h2>Speaker</h2>
+<p><strong>Devin Gupta</strong>, Core engineer, Decisions API, Parallel Web Systems</p>
+<ul>
+<li>Site: <a href="https://devin-gupta.github.io/">Devin Gupta</a></li>
+<li>X: <a href="https://x.com/devingupta_">@devingupta_</a></li>
+</ul>
+<h2>Company</h2>
+<p><strong><a href="https://parallel.ai/products/decisions">Parallel Web Systems: Decisions API</a></strong>:
+&quot;A decision engine with world knowledge built in. Typed answers grounded in live
+web data, with citations, in under a second. $1 per 1,000 requests.&quot; (from the
+site)</p>
+<h2>Resources</h2>
+<ul>
+<li><strong>Blog</strong> · <a href="https://parallel.ai/blog/decisions-api">Introducing the Parallel Decisions API</a>
+(Parallel). The launch post for the product the talk demos (&quot;since we launched
+2 weeks ago&quot;): several typed questions about one entity in a single grounded call.</li>
+<li><strong>Blog</strong> · <a href="https://parallel.ai/blog/pws-decisions-benchmark">Introducing PWS-Decisions: A benchmark for web-grounded decisions</a>
+(Parallel). The open 300-question benchmark and the grounded-versus-ungrounded
+accuracy gap.</li>
+<li><strong>Repo</strong> · <a href="https://github.com/parallel-web/pws-decisions-benchmark">parallel-web/pws-decisions-benchmark</a>.
+Run the benchmark against your own model.</li>
+<li><strong>Dataset</strong> · <a href="https://huggingface.co/datasets/parallel-web/pws-decisions-benchmark">parallel-web/pws-decisions-benchmark</a>
+(Hugging Face). The 300 questions.</li>
+</ul>
+<h2>Gaps</h2>
+<ul>
+<li>His LinkedIn (from the roster) is login-walled and returned no title, so it is
+not linked.</li>
+<li>Neither Parallel post names an author.</li>
+<li>The abstract's cost figures (104 vs 4,777 tokens; model share 86% to 17%), the
+4,270-business demo and the entity-resolution failure have no write-up found.</li>
+<li>The ASR is heavily garbled; the recording opens mid-sentence.</li>
+<li>No official recording or slides found yet. The dossier rechecks every 6 hours
+during the event.</li>
+</ul>
+</div></section>
+
+  <section class="view" id="transcript"><div class="view-head"><h2>Transcript</h2><p class="lede">Machine transcript (voice-memos-transcript). Garbled words are kept as heard.</p></div>
+    <details><summary>Read the transcript</summary><div class="prose transcript"><blockquote>
+<p>The recording opens mid-sentence (&quot;and useful and functional.&quot;); the MC's introduction is not
+captured, and the speaker never says his name. The ASR is heavily garbled throughout. The Q&amp;A
+turns are left unlabelled: the transcript does not mark who is speaking.</p>
+<p>Rendered from the Voice Memos transcript (word timings), the transcript in force: the local
+Qwen3-ASR upgrade was deferred because the laptop was on battery when it was rendered.
+Names are kept as transcribed: Parallel is &quot;apparel&quot; and &quot;the parallel&quot;, web
+grounding is &quot;web gring&quot; and &quot;low grding&quot;, the live demo's NVIDIA CEO question is &quot;comedia&quot;,
+&quot;video video&quot; and &quot;CO video&quot;, and the model being compared is &quot;Jeff&quot;.</p>
+</blockquote>
+<h3>00:00:00 — Introduction</h3>
+<p>And useful and functional. Model for real or. Cool. Okay, that's what I'm talking about. Now if you're pract with devolutions, we saw yoga yesterday and I think he's like awesome he is, right? But specifically I interview I was talking about is like an on versell of a rout team the explosion can't be explosion of. And that's because it was so much cheaper. And there's so much faster than anything you could do before.</p>
+<p>And specifically because often we that is you leave of Lic relatives, they will be afraid. The right emp not. Like as soon as I understand the concept I'm working with, I can do a lot. I don't really have to like write that much. And so, he's also in the junvolution. Like, there's plenty of requests for travel, 2 models, and also they don't know what on this. And I'm really amazed that, like, grounding for those is extremely exciting.</p>
+<h3>00:00:56 — A question a model cannot answer</h3>
+<p>Okay, so maybe a question. Who won Michigan Zen Grace? This should be easy. This is like well known. I'm happ like a couple days ago if you do Google search, the 1st thing that shows up. But you ask Jeff this question. This is what I'll give you back. My drivers, but 58%, it really doesn't know. Like maybe has some preing by Rogers, maybe mess a appreciate idea a influence yet, but like he doesn't have a good sense to what he answer this by.</p>
+<p>And so it's kind of crazy that you would use a decision model in your workflow that has like almost no understanding of like what is going on. I. What happens to, like, niche entities? And so this is where we think that, like, not only is it wrong, but also it's founded as the 2 young complicated. I Jooga was point about actually like, might use it' not just because of crap, so also makes this how.</p>
+<p>It's no way not.</p>
+<h3>00:01:49 — Grounding unlocks calibration</h3>
+<p>And so we think that part of it is a lot without grounding, is that you completely unlock actual calibration of the operation. So this is like an example of many, where it kind of just feels unfair. Like, using Java just doesn't solve the problem. And so web gring helps to unlock whole person things here. Cool. So, we can add that line of sort of off case example through an event where, I'm releasing over the best market, if you have any questions, where we grew up in our web traffic, it's a real workflow field, over the close, where it's like, it's kind of a very unique, unique decision, the AGIs that have, I'm drafting.</p>
+<p>Don't it doesn't like clearly makes have to ask their questions. And so, sort of the same, the same things you might do to it, that like, there's huge accuracy differences, and huge challenge differences. You can see a girl that from. So here's a adv you about to our I mean, here's a collaboration that part where we show that for prayers for a month fact. I much better calibrated, when correct is much more content than's correct.</p>
+<p>If you use that low grding to grab through. And so, there's like a whole, a whole set of things here that locks, and specifically like calibration is being important to me. Great decision model.</p>
+<h3>00:03:05 — How it works</h3>
+<p>Awesome. Here's kind of how it built that works. About something you take some state input. It's like a rapid it looks exactly like Jeff to the states. We do a live finish web search calls and we get information from our propriary index, which is like on the size of the X release's the higher. And we find a relevant content decision. So, we take a bunch of results, we include it on the state, or...</p>
+<p>It runs under a 2nd and last time it $one per000 plus. So, 2 orders of 19, maybe, or 19 cheaper, but I'll have more clothes you were using to be Mexican for. And then it's also like an organized 2 faster. For that one call, you can also ask, you can say, like, for that, to ask one of the questions about the state, but you don't realize it.</p>
+<p>And so the same for content reuse it all. And like we show here, like there's a bunch of different sort of use cases. There's true false questions play aspects. All normal things.</p>
+<h3>00:04:05 — Since launch</h3>
+<p>Okay, so we talked about introvolution. I think that the 2nd grade of this is that there's a web intervolution where, since we launched 2 weeks ago, we've seen absolutely like the explosion of the music, our teenage eyes. Overgrground our 1st. And so we need decision like the beginning of the special, people have onlying with guns and realize 1st budje will do but then also how men en able you to do lot things Cool.</p>
+<h3>00:04:35 — Customer use cases</h3>
+<p>Okay, we have a bunch of amazing customers. I want to highlight some of the use cases that where jazz and whether're running difference. So some of our customers are using, you have restaurants, they have a list of like 100,000 restaurants in California, and you sort of have a single one of them up. And you can actually classify for every single one of them is a reservation platform, like, not only, because open table is a resi.</p>
+<p>And what is the recipe? I using Sportspace or raising clicks. What are they doing? What is the weather? So if you were if a sales engine, and you might go find for every single every single restaurant all California is $100 last. Because in case, you have some sort of business with QIC flows, you can search a business like anchor of 20, and you want to classify away from business ads, right?</p>
+<p>These are the operating. Because there are all sort of a yoga processor. You can do that for a dollar for 1000 bucks, which is, like, 2 hours back, you can bring a lot of otherwise than people that now. And then another thirdd example of you have some new give you like instant categorization. I' not more by the U got later scheme, but also all the other views on the go.</p>
+<p>So it fresh and extra.</p>
+<h3>00:05:46 — Live demo</h3>
+<p>Is this an example, I'm gonna go and do a really quick live demo. And hopefully it's gonna land well all the rest. So the furious sort cooked up. So if you ask something like, who's CEO, comedia, presented wants to video, I'd say, this is my favorite world as of like right now. We'll give you true a 96% probability. And so I will run this live, just see you guys know this.</p>
+<p>Any time. and it's, again, I don't know, fairly, it doesn't, you just train on, like, years of information, where all I'm seeing is, it just, on his CO video, TV, testimony, it has, like, 30 years. And so it's highly confident and it's like truly metallic. If you use apparel decision API, which asks the same question, Not only will we give you the correct answer, We'll give you the correct answer.</p>
+<p>And so not only did we you together, we also give your presentations, you can go backashing the sour song. And so it'll come from like $100,000 plus. It's super easy to pass. Yeah, that's what I wanted to talk about.</p>
+<h3>00:07:05 — Pricing</h3>
+<p>I have some other slides here that you can sort of look here if you guys are interested. But like the pricing difference between what people currently do, which is that they use those are like, oh, they have a model, go to research, find your output schema, you extend. Versus like the parallel. Anyways, for recording back, like tours, I'm a tour of the capacity. So the something that the things we're seeing are like, people are doing this live in a response.</p>
+<p>Now, as we're tending your business days, we can go search it up, find out what, what the news you're in, but it should or else you're in. How it's like subsecondlyency. So like you don't even get to pay full party the information.</p>
+<h3>00:07:45 — Q&amp;A</h3>
+<p>Yeah. As we're going to say, yeah, I've got all the questions. And you can have like. The size of a web index is whoever oipus probablyly the size of maybe. They drop that a little bit. Which is more than the design of appreciating the, like, so, like, AI does. And so if you have the AIDS, what the next, you know, you should probably... Okay. Yeah, so I was actually playing around with this yesterday.</p>
+<p>Yeah, it works really well. If you don't, it are the fun parallelized questions. Yes. So, like, if you ask 2 questions in parallel, they obviously will share context with the state that you will retrieve. So in your election example, you might be like, who won? Was their position on immigration? What party are they a member of? And because of the same surge will back those materols, it actually be graised as opposed to asking each of those as separate questions.</p>
+<p>You all plan to address that? How do you, where is this in my user area? Yeah, I, I can't even mention behind this about shit is that we want, a single sort of granny or single version. That's an answer your question. We think that there's a lot of news in the part. These very early days was about job. I so World collecting product feedback. And so I think that is somewhat out of scope, but also, I think, for it in the last part, I think, is much better.</p>
+<p>Yeah, Russians. awesome. Yeah, so the question was, do we use intercalibration contains to, all the, all the congregation after this, I think, barely selling bottles. That like the right training right with the distribution we did. Again, like, I think the thing is that when you have the web context information, it's almost very clear what the answer is. Part of the reason why I needed this com collation.</p>
+<p>It didn't have a finance experience, is because you were kind of guessed, like, you had to sort of guess the probability, like, physical percentage of the time is used to not raise attention. But this time we can cr also a lot. Hello, thank you.</p>
+</div></details>
+  </section>
+  <p class="colophon mono">Generated Nov 12, 2026 at 3:02 PM · bun scripts/render-pages.ts</p>
+</div>
+<script>(function(){
+  var key="aie-followed";var done={};try{done=JSON.parse(localStorage.getItem(key)||"{}")}catch(e){}
+  document.querySelectorAll('input[data-handle]').forEach(function(b){
+    var h=b.getAttribute('data-handle').toLowerCase();b.checked=!!done[h];
+    b.closest('.person').classList.toggle('is-done',b.checked);
+    b.addEventListener('change',function(){done[h]=b.checked;b.closest('.person').classList.toggle('is-done',b.checked);try{localStorage.setItem(key,JSON.stringify(done))}catch(e){}});
+  });
+  var q=document.getElementById('find');if(q)q.addEventListener('input',function(){var v=q.value.trim().toLowerCase();
+    document.querySelectorAll('.person[data-search]').forEach(function(p){p.hidden=v&&p.getAttribute('data-search').indexOf(v)<0});});
+})();(function(){function open(){var t=location.hash&&document.getElementById(location.hash.slice(1));var d=t&&t.querySelector('details');if(d){d.open=true;t.scrollIntoView()}}open();addEventListener('hashchange',open)})();</script>
+</body>
+</html>

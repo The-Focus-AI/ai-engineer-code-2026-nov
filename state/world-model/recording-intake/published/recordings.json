@@ -268,5 +268,25 @@
     "word_count": 3285,
     "audio_sha256": "549d69c33d8654ba3da06eaa79c76298a07350527d0f656d96ee7baca03c54cd",
     "status": "cleaned"
+  },
+  "2026-11-12_1406_jarred-sumner": {
+    "folder": "2026-11-12_1406_jarred-sumner",
+    "path": "recordings/inbox/2026-11-12_1406_jarred-sumner",
+    "title": "jarred sumner",
+    "recorded_at": "2026-11-12T14:06:27-08:00",
+    "duration_seconds": 1320.7,
+    "word_count": 2912,
+    "audio_sha256": "de922249ee0f306cf8e7e9a35f6cdc2ca3f866f545db67c3c81a768ccfa42383",
+    "status": "cleaned"
+  },
+  "2026-11-12_1433_The-first-Grounded-Decision-Model": {
+    "folder": "2026-11-12_1433_The-first-Grounded-Decision-Model",
+    "path": "recordings/inbox/2026-11-12_1433_The-first-Grounded-Decision-Model",
+    "title": "The first Grounded Decision Model",
+    "recorded_at": "2026-11-12T14:33:14-08:00",
+    "duration_seconds": 645.1,
+    "word_count": 1751,
+    "audio_sha256": "594749931c175fc2c1f742565f9042604368c5645b846dd609f90ce6dbb384b0",
+    "status": "cleaned"
   }
 }

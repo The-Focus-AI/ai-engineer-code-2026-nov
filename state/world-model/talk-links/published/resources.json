@@ -846,6 +846,86 @@
       "verified_at": "2026-11-12T13:24:21-08:00"
     }
   ],
+  "1373478": [
+    {
+      "type": "product",
+      "title": "Ahead-of-time compilation | Bun Docs",
+      "url": "https://bun.com/docs/compiler/aot",
+      "why": "The compiler the talk is about: `bun compile` turns a program into machine code at build time using its TypeScript types, with no JIT, so it starts faster and uses less memory. Marked experimental.",
+      "evidence": [
+        "page title: \"Ahead-of-time compilation | Bun Docs\"",
+        "transcript: \"To add an ahead of time compiler\""
+      ],
+      "first_seen": "20261112-145406-03378c",
+      "published_at": null,
+      "verified_at": "2026-11-12T14:54:06-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Rewriting Bun in Rust",
+      "url": "https://bun.com/blog/bun-in-rust",
+      "why": "His July post on the summer's Zig-to-Rust port: the rewrite the talk compares this project to, which was safe because Bun's test suite is written in TypeScript, independent of the runtime's language.",
+      "evidence": [
+        "page title: \"Rewriting Bun in Rust | Bun Blog\"",
+        "transcript: \"because all the tests were written in typescript, we could run the tests on both the zinc version and the rest version\""
+      ],
+      "first_seen": "20261112-145406-03378c",
+      "published_at": "2026-07-08",
+      "verified_at": "2026-11-12T14:54:06-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Bun is joining Anthropic",
+      "url": "https://bun.com/blog/bun-joins-anthropic",
+      "why": "Why Bun is at Anthropic: it is the runtime behind Claude Code, which is what makes a faster, leaner Bun a Claude Code memory and startup win.",
+      "evidence": [
+        "page title: \"Bun is joining Anthropic | Bun Blog\"",
+        "transcript: \"we need to make Clyde code use a lot less memory\""
+      ],
+      "first_seen": "20261112-145406-03378c",
+      "published_at": "2025-12-02",
+      "verified_at": "2026-11-12T14:54:06-08:00"
+    },
+    {
+      "type": "repo",
+      "title": "googleprojectzero/fuzzilli",
+      "url": "https://github.com/googleprojectzero/fuzzilli",
+      "why": "The JavaScript engine fuzzer (transcribed \"Puzzili\") Bun already ran and extended to test the compiler's type predictions.",
+      "evidence": [
+        "page title: \"GitHub - googleprojectzero/fuzzilli: A JavaScript Engine Fuzzer · GitHub\"",
+        "transcript: \"Puzzili is like a Javaister bending buzzer that VA uses.\""
+      ],
+      "first_seen": "20261112-145406-03378c",
+      "published_at": null,
+      "verified_at": "2026-11-12T14:54:06-08:00"
+    },
+    {
+      "type": "repo",
+      "title": "tc39/test262",
+      "url": "https://github.com/tc39/test262",
+      "why": "The official ECMAScript conformance suite, one of the tests that predate the project and so could be trusted against the agents' code.",
+      "evidence": [
+        "page title: \"GitHub - tc39/test262: Official ECMAScript Conformance Test Suite · GitHub\"",
+        "transcript: \"plus web test, plus test 262\""
+      ],
+      "first_seen": "20261112-145406-03378c",
+      "published_at": null,
+      "verified_at": "2026-11-12T14:54:06-08:00"
+    },
+    {
+      "type": "repo",
+      "title": "microsoft/typescript-go",
+      "url": "https://github.com/microsoft/typescript-go",
+      "why": "The native Go port of TypeScript the talk benchmarks against: the AOT-compiled single-threaded TypeScript now beats the single-threaded Go port.",
+      "evidence": [
+        "page title: \"GitHub - microsoft/typescript-go: Staging repo for development of native port of TypeScript · GitHub\"",
+        "transcript: \"the abundant pile is now faster than the single threaded types of go port\""
+      ],
+      "first_seen": "20261112-145406-03378c",
+      "published_at": null,
+      "verified_at": "2026-11-12T14:54:06-08:00"
+    }
+  ],
   "1376191": [
     {
       "type": "blog",
@@ -1249,6 +1329,60 @@
       "first_seen": "20261110-141925-902d07",
       "published_at": null,
       "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1381580": [
+    {
+      "type": "blog",
+      "title": "Introducing the Parallel Decisions API: fast classification grounded in live web data",
+      "url": "https://parallel.ai/blog/decisions-api",
+      "why": "The launch post for the product the talk demos: several typed questions about one entity answered in a single call, grounded in live web data, at $1 per 1,000 calls.",
+      "evidence": [
+        "page title: \"Parallel Decisions API: web-grounded classification | Parallel\"",
+        "transcript: \"since we launched 2 weeks ago\""
+      ],
+      "first_seen": "20261112-145406-03378c",
+      "published_at": null,
+      "verified_at": "2026-11-12T14:54:06-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Introducing PWS-Decisions: A benchmark for web-grounded decisions",
+      "url": "https://parallel.ai/blog/pws-decisions-benchmark",
+      "why": "The open 300-question benchmark from the abstract, with the accuracy gap between grounded and ungrounded decision models the talk shows.",
+      "evidence": [
+        "page title: \"PWS-Decisions: a benchmark for web-grounded decisions | Parallel\"",
+        "transcript: \"there's huge accuracy differences\""
+      ],
+      "first_seen": "20261112-145406-03378c",
+      "published_at": null,
+      "verified_at": "2026-11-12T14:54:06-08:00"
+    },
+    {
+      "type": "repo",
+      "title": "parallel-web/pws-decisions-benchmark",
+      "url": "https://github.com/parallel-web/pws-decisions-benchmark",
+      "why": "The benchmark code, so you can run it against your own model, as the abstract promises.",
+      "evidence": [
+        "page title: \"GitHub - parallel-web/pws-decisions-benchmark: PWS-Decisions: a web-grounded decision API benchmark for agents · GitHub\"",
+        "program abstract: \"You will leave able to run the benchmark against your own model.\""
+      ],
+      "first_seen": "20261112-145406-03378c",
+      "published_at": null,
+      "verified_at": "2026-11-12T14:54:06-08:00"
+    },
+    {
+      "type": "paper",
+      "title": "parallel-web/pws-decisions-benchmark (dataset)",
+      "url": "https://huggingface.co/datasets/parallel-web/pws-decisions-benchmark",
+      "why": "The 300 questions themselves on Hugging Face.",
+      "evidence": [
+        "page title: \"parallel-web/pws-decisions-benchmark · Datasets at Hugging Face\"",
+        "program abstract: \"On PWS-Decisions, our open 300-question benchmark\""
+      ],
+      "first_seen": "20261112-145406-03378c",
+      "published_at": null,
+      "verified_at": "2026-11-12T14:54:06-08:00"
     }
   ]
 }

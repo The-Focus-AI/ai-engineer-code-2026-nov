@@ -255,6 +255,26 @@
     ],
     "generated_at": "2026-11-12T13:24:21-08:00"
   },
+  "1373478": {
+    "searched": [
+      "roster links (github.com/Jarred-Sumner)",
+      "web: Jarred Sumner Bun ahead-of-time compiler JavaScript Claude Code memory",
+      "web: Bun rewrite in Rust Jarred Sumner blog 2026",
+      "web: bun.com blog ahead-of-time compiler bun build --compile AOT JavaScriptCore types Claude Code 2026",
+      "bun.com/blog/bun-in-rust, bun.com/docs/compiler/aot, bun.com/blog/bun-joins-anthropic read"
+    ],
+    "gaps": [
+      "no LinkedIn profile verifiably his (the roster lists none)",
+      "no Bun blog post on the ahead-of-time compiler itself found yet; the talk says it is dogfooded internally and 'will be external soon'; the experimental docs are linked instead",
+      "the 4x-less-memory and 2x-faster-start figures for Claude Code, the five rewrites, the hourly Slack metrics card and the 140-agent batch have no public write-up found",
+      "an aggregator-reported preview (24% faster startup, 48% lower memory for Claude Code) has no primary source; not linked",
+      "bun.com/docs/compiler/internals (from search results) answered 404; dropped",
+      "Simon Willison's note on the Rust rewrite verified but left out as secondary to the primary post",
+      "the recording opens mid-sentence; the MC's introduction is not captured",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-12T14:54:06-08:00"
+  },
   "1376191": {
     "searched": [
       "roster links (github.com/simonw, simonwillison.net, x.com/simonw)",
@@ -371,5 +391,23 @@
       "no official recording or slides of this talk found yet"
     ],
     "generated_at": "2026-11-10T14:19:25-05:00"
+  },
+  "1381580": {
+    "searched": [
+      "roster links (devin-gupta.github.io, linkedin.com/in/devin-gupta, x.com/devingupta_)",
+      "web: Parallel Web Systems Decisions API grounded decision model PWS-Decisions benchmark",
+      "web: \"Devin Gupta\" Parallel Web Systems",
+      "parallel.ai/blog/decisions-api and parallel.ai/blog/pws-decisions-benchmark read"
+    ],
+    "gaps": [
+      "linkedin.com/in/devin-gupta (roster) answered 999 with no page title, so it could not be corroborated; not published",
+      "neither Parallel post names an author; Devin Gupta's role on the Decisions API rests on the roster bio",
+      "the abstract's cost figures (104-token question vs 4,777 tokens of evidence; model share of the bill 86% to 17%), the 4,270-business demo and the entity-resolution failure are not in either post's text (the cost chart is an image); no write-up found",
+      "the live demo's NVIDIA-CEO question and the restaurant reservation-platform classification have no public write-up found",
+      "the ASR is heavily garbled throughout; the Q&A speakers are unlabelled",
+      "the recording opens mid-sentence; the MC's introduction is not captured",
+      "no official recording or slides of this talk found yet"
+    ],
+    "generated_at": "2026-11-12T14:54:06-08:00"
   }
 }

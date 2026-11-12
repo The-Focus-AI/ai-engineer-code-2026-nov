@@ -1,0 +1,2368 @@
+{
+  "photos": {
+    "PXL_20261110_175511716.jpg": {
+      "file": "PXL_20261110_175511716.jpg",
+      "captured_at_utc": "2026-11-10T17:55:11+00:00",
+      "captured_at_local": "2026-11-10T09:55:11-08:00",
+      "sha256": "3c2eab0ff025ce95c7fb70edfbd215c1bf6cfa7136f3ca52015033f9fc5cac0a",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1333169",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_0933_Ankir-Jain (2026-11-10T17:33:30.000Z–2026-11-10T17:56:00.600Z) matched to session 1333169"
+      ],
+      "placed_path": "talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/photos/PXL_20261110_175511716.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_181435938.jpg": {
+      "file": "PXL_20261110_181435938.jpg",
+      "captured_at_utc": "2026-11-10T18:14:35+00:00",
+      "captured_at_local": "2026-11-10T10:14:35-08:00",
+      "sha256": "e7efdcf5cd9971bbd82771afec96db7a061baa73348e7dbdc1e6767e7e5238f7",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_181435938.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_181822800.jpg": {
+      "file": "PXL_20261110_181822800.jpg",
+      "captured_at_utc": "2026-11-10T18:18:22+00:00",
+      "captured_at_local": "2026-11-10T10:18:22-08:00",
+      "sha256": "3961cb11b52a056feb12f5bb7bbc69d4095020d5546a450722019b28ecd3e9a6",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_181822800.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182207872.MP.jpg": {
+      "file": "PXL_20261110_182207872.MP.jpg",
+      "captured_at_utc": "2026-11-10T18:22:07+00:00",
+      "captured_at_local": "2026-11-10T10:22:07-08:00",
+      "sha256": "d0df1e66cd7f6da1cc837965f2fb25db5512d0346670cd111d83d629206c23f2",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1022",
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182207872.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182209724.jpg": {
+      "file": "PXL_20261110_182209724.jpg",
+      "captured_at_utc": "2026-11-10T18:22:09+00:00",
+      "captured_at_local": "2026-11-10T10:22:09-08:00",
+      "sha256": "985293f1ab00ab94e047266d08c37be26718fee35b8678d2a20af68e0daa256f",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1022",
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182209724.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182211766.MP.jpg": {
+      "file": "PXL_20261110_182211766.MP.jpg",
+      "captured_at_utc": "2026-11-10T18:22:11+00:00",
+      "captured_at_local": "2026-11-10T10:22:11-08:00",
+      "sha256": "acf394e676728e21db3d920cff5e976cc5d4977f6e0364eb6cd5c211b80e2d43",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1022",
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182211766.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182817402.jpg": {
+      "file": "PXL_20261110_182817402.jpg",
+      "captured_at_utc": "2026-11-10T18:28:17+00:00",
+      "captured_at_local": "2026-11-10T10:28:17-08:00",
+      "sha256": "31558b141195644957adcaba2273bfbbd06f1d1b4954d73a3193c95033885ad5",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1028",
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182817402.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182819090.jpg": {
+      "file": "PXL_20261110_182819090.jpg",
+      "captured_at_utc": "2026-11-10T18:28:19+00:00",
+      "captured_at_local": "2026-11-10T10:28:19-08:00",
+      "sha256": "654d32140f189a9b8f449470fac46342b2613c77b1ea84bbe8ac664a8e6746b5",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1028",
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182819090.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_182820893.jpg": {
+      "file": "PXL_20261110_182820893.jpg",
+      "captured_at_utc": "2026-11-10T18:28:20+00:00",
+      "captured_at_local": "2026-11-10T10:28:20-08:00",
+      "sha256": "4e1554d5ad0ed7ac3a2b54dd42cc0e358002c6fdf8733024349a70cdf04592b2",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261110T1028",
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_182820893.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_183242051.jpg": {
+      "file": "PXL_20261110_183242051.jpg",
+      "captured_at_utc": "2026-11-10T18:32:42+00:00",
+      "captured_at_local": "2026-11-10T10:32:42-08:00",
+      "sha256": "474fcc98532a04e2f446a65ca4a399902ca442b3fa53cd789743f37d27f2cc3b",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1379134",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1009_Scott-Tolinski (2026-11-10T18:09:14.000Z–2026-11-10T18:33:11.400Z) matched to session 1379134"
+      ],
+      "placed_path": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos/PXL_20261110_183242051.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_220127976.jpg": {
+      "file": "PXL_20261110_220127976.jpg",
+      "captured_at_utc": "2026-11-10T22:01:27+00:00",
+      "captured_at_local": "2026-11-10T14:01:27-08:00",
+      "sha256": "e1316045089a342541ca9e1d2e4a45a7eab66d79c4a276cf84b1f90bf9b2dcd0",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1341863",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1355_Karan-Vaidya (2026-11-10T21:55:07.000Z–2026-11-10T22:05:48.100Z) matched to session 1341863"
+      ],
+      "placed_path": "talks/2026-11-10-from-coding-agents-to-knowledge-work-agents/photos/PXL_20261110_220127976.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_221921464.MP.jpg": {
+      "file": "PXL_20261110_221921464.MP.jpg",
+      "captured_at_utc": "2026-11-10T22:19:21+00:00",
+      "captured_at_local": "2026-11-10T14:19:21-08:00",
+      "sha256": "2d8b4114eb93693edb6f6bf0c71ed0d4268a4fcfdf88ae03f76689418b34c158",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1356697",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1418_George-Fraser (2026-11-10T22:18:17.000Z–2026-11-10T22:46:14.300Z) matched to session 1356697"
+      ],
+      "placed_path": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos/PXL_20261110_221921464.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_222347495.jpg": {
+      "file": "PXL_20261110_222347495.jpg",
+      "captured_at_utc": "2026-11-10T22:23:47+00:00",
+      "captured_at_local": "2026-11-10T14:23:47-08:00",
+      "sha256": "0730b389ea3af219cb8b82386f07c89a3047964c232fbd275436bc888759e359",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1356697",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1418_George-Fraser (2026-11-10T22:18:17.000Z–2026-11-10T22:46:14.300Z) matched to session 1356697"
+      ],
+      "placed_path": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos/PXL_20261110_222347495.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_222825483.jpg": {
+      "file": "PXL_20261110_222825483.jpg",
+      "captured_at_utc": "2026-11-10T22:28:25+00:00",
+      "captured_at_local": "2026-11-10T14:28:25-08:00",
+      "sha256": "7ae8770d77654ddbc5ab387588428587746a1f21672aa6e0571603670fe9e8f4",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1356697",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1418_George-Fraser (2026-11-10T22:18:17.000Z–2026-11-10T22:46:14.300Z) matched to session 1356697"
+      ],
+      "placed_path": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos/PXL_20261110_222825483.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_223052728.MP.jpg": {
+      "file": "PXL_20261110_223052728.MP.jpg",
+      "captured_at_utc": "2026-11-10T22:30:52+00:00",
+      "captured_at_local": "2026-11-10T14:30:52-08:00",
+      "sha256": "3b0423eb8ba9225b2486710bf19df8f7d9f19a6910ce95800beadcfc1ec8af79",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1356697",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1418_George-Fraser (2026-11-10T22:18:17.000Z–2026-11-10T22:46:14.300Z) matched to session 1356697"
+      ],
+      "placed_path": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos/PXL_20261110_223052728.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_223144635.jpg": {
+      "file": "PXL_20261110_223144635.jpg",
+      "captured_at_utc": "2026-11-10T22:31:44+00:00",
+      "captured_at_local": "2026-11-10T14:31:44-08:00",
+      "sha256": "324a1cd36b9b0ab9b334255c0824f3824d8a2020fe117469f885a97713baf157",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1356697",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1418_George-Fraser (2026-11-10T22:18:17.000Z–2026-11-10T22:46:14.300Z) matched to session 1356697"
+      ],
+      "placed_path": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos/PXL_20261110_223144635.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_225748351.jpg": {
+      "file": "PXL_20261110_225748351.jpg",
+      "captured_at_utc": "2026-11-10T22:57:48+00:00",
+      "captured_at_local": "2026-11-10T14:57:48-08:00",
+      "sha256": "4ebf63175cfb0f1eb17a20e417ac9ea7023f2da06b15a6a3f068af255105dfab",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1352199",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1457_Utkarsh (2026-11-10T22:57:27.000Z–2026-11-10T23:24:37.500Z) matched to session 1352199"
+      ],
+      "placed_path": "talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/photos/PXL_20261110_225748351.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_230002960.MP.jpg": {
+      "file": "PXL_20261110_230002960.MP.jpg",
+      "captured_at_utc": "2026-11-10T23:00:02+00:00",
+      "captured_at_local": "2026-11-10T15:00:02-08:00",
+      "sha256": "7529174b62b0add35667a25223cf82e834d9efeb4b8205b0b77f24957c5a88e7",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1352199",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1457_Utkarsh (2026-11-10T22:57:27.000Z–2026-11-10T23:24:37.500Z) matched to session 1352199"
+      ],
+      "placed_path": "talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/photos/PXL_20261110_230002960.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_233809826.MP.jpg": {
+      "file": "PXL_20261110_233809826.MP.jpg",
+      "captured_at_utc": "2026-11-10T23:38:09+00:00",
+      "captured_at_local": "2026-11-10T15:38:09-08:00",
+      "sha256": "826f6a1f0a8c20f916cb2d6bc2101ca0cb377348176d93510920072f7c1f01cb",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_233809826.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_234031965.jpg": {
+      "file": "PXL_20261110_234031965.jpg",
+      "captured_at_utc": "2026-11-10T23:40:31+00:00",
+      "captured_at_local": "2026-11-10T15:40:31-08:00",
+      "sha256": "8b81a540116c8741280eafe19ff0fe5043bc798559b56f34519a3cc04f107bf3",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261110T1540",
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_234031965.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_234049175.jpg": {
+      "file": "PXL_20261110_234049175.jpg",
+      "captured_at_utc": "2026-11-10T23:40:49+00:00",
+      "captured_at_local": "2026-11-10T15:40:49-08:00",
+      "sha256": "114586091c687b9f6c781525bfaf03bd6bc843134e3dc55ae625e80963ff9c8b",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261110T1540",
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_234049175.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_234202157.jpg": {
+      "file": "PXL_20261110_234202157.jpg",
+      "captured_at_utc": "2026-11-10T23:42:02+00:00",
+      "captured_at_local": "2026-11-10T15:42:02-08:00",
+      "sha256": "03c3a2685538ce12882b045e592f9ab72995ddabbfe263c937127ae886cd2857",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_234202157.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_234349286.jpg": {
+      "file": "PXL_20261110_234349286.jpg",
+      "captured_at_utc": "2026-11-10T23:43:49+00:00",
+      "captured_at_local": "2026-11-10T15:43:49-08:00",
+      "sha256": "212481eeff14ae55dcacf301791637469fd27385d4d865001bf0d0db43e63e0e",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_234349286.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_235027064.jpg": {
+      "file": "PXL_20261110_235027064.jpg",
+      "captured_at_utc": "2026-11-10T23:50:27+00:00",
+      "captured_at_local": "2026-11-10T15:50:27-08:00",
+      "sha256": "0721f2bf2b8e07127b3ef88a9819a9db83b531b40ab440dad7587af42fd22fb6",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_235027064.jpg",
+      "status": "placed"
+    },
+    "PXL_20261110_235341969.MP.jpg": {
+      "file": "PXL_20261110_235341969.MP.jpg",
+      "captured_at_utc": "2026-11-10T23:53:41+00:00",
+      "captured_at_local": "2026-11-10T15:53:41-08:00",
+      "sha256": "1a32e571f6de6881102f2f6b8f1ace2ccc5eee01d5d14814fa2f5ffed8e9ed66",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1334565",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "evidence": [
+        "recording 2026-11-10_1529_Mihail-Eric (2026-11-10T23:29:42.000Z–2026-11-10T23:59:17.700Z) matched to session 1334565"
+      ],
+      "placed_path": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos/PXL_20261110_235341969.MP.jpg",
+      "status": "placed"
+    },
+    "PXL_20261111_162505741.MP.jpg": {
+      "file": "PXL_20261111_162505741.MP.jpg",
+      "captured_at_utc": "2026-11-11T16:25:05+00:00",
+      "captured_at_local": "2026-11-11T08:25:05-08:00",
+      "sha256": "746cdb437c1245857a1e6e549bac2ad31f3140648c815fb6a51169fa259cbf46",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": null,
+      "method": "event",
+      "confidence": 0.9,
+      "status": "event",
+      "placed_path": "photos/event/2026-11-11/PXL_20261111_162505741.MP.jpg",
+      "evidence": [
+        "event window: Registration (f8b0a0a6-9f29-4434-92fe-694d66d20a34, 08:00–17:40 PT, format registration) contains 08:25 PT; no talk window and no recording active"
+      ]
+    },
+    "PXL_20261111_164545430.TS-000.jpg": {
+      "file": "PXL_20261111_164545430.TS-000.jpg",
+      "captured_at_utc": "2026-11-11T16:45:45+00:00",
+      "captured_at_local": "2026-11-11T08:45:45-08:00",
+      "sha256": "33c1969e6c7655891f1f41f4a9002d5f99f1c720c70a9e7dbd0a907ae3e33da2",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": null,
+      "method": "event",
+      "confidence": 0.9,
+      "status": "event",
+      "placed_path": "photos/event/2026-11-11/PXL_20261111_164545430.TS-000.jpg",
+      "evidence": [
+        "event window: Registration (f8b0a0a6-9f29-4434-92fe-694d66d20a34, 08:00–17:40 PT, format registration) contains 08:45 PT; no talk window and no recording active"
+      ]
+    },
+    "PXL_20261111_170523953.MP.jpg": {
+      "file": "PXL_20261111_170523953.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:05:23+00:00",
+      "captured_at_local": "2026-11-11T09:05:23-08:00",
+      "sha256": "3f4590a7cc1970c193d44d9c8d5ea547e5d1a7fdd998b68c767b3a871b52a53b",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1376240",
+      "method": "time",
+      "confidence": 0.7,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-mc-intro/photos/PXL_20261111_170523953.MP.jpg",
+      "evidence": [
+        "session 1376240 \"MC Intro\" (09:00–09:10 PT) is the only talk window containing 09:05 PT",
+        "recording 2026-11-11_0904_swyx (09:04–09:08 PT) is active but unmatched (session_id null) — cannot decide by recording-overlap",
+        "filed on operator decision notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md (held needs-review in the prior render pending talk-folder approval)"
+      ]
+    },
+    "PXL_20261111_171209055.MP.jpg": {
+      "file": "PXL_20261111_171209055.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:12:09+00:00",
+      "captured_at_local": "2026-11-11T09:12:09-08:00",
+      "sha256": "a2cbe3e0e3cefff94e6e7a293cad2aa9474c32df7b174a98af4506b5c589cfec",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1352467",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos/PXL_20261111_171209055.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_0911_Natalie-Serrino (2026-11-11T17:11:14.000Z–2026-11-11T17:28:44.000Z) matched to session 1352467",
+        "session 1352467 \"What Will You Build When AI Is 10x Faster?\" (09:10–09:30 PT) also contains it; the recording window confirms the operator-approved time placement (notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md)"
+      ]
+    },
+    "PXL_20261111_171601929.jpg": {
+      "file": "PXL_20261111_171601929.jpg",
+      "captured_at_utc": "2026-11-11T17:16:01+00:00",
+      "captured_at_local": "2026-11-11T09:16:01-08:00",
+      "sha256": "94f1e7e12712cef48fb6de0d6f607437ac0c44948de35b5d52167adf60978f5b",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T0916",
+      "session_id": "1352467",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos/PXL_20261111_171601929.jpg",
+      "evidence": [
+        "recording 2026-11-11_0911_Natalie-Serrino (2026-11-11T17:11:14.000Z–2026-11-11T17:28:44.000Z) matched to session 1352467",
+        "session 1352467 \"What Will You Build When AI Is 10x Faster?\" (09:10–09:30 PT) also contains it; the recording window confirms the operator-approved time placement (notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md)"
+      ]
+    },
+    "PXL_20261111_171650670.MP.jpg": {
+      "file": "PXL_20261111_171650670.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:16:50+00:00",
+      "captured_at_local": "2026-11-11T09:16:50-08:00",
+      "sha256": "1f579aced4a017c3db6ef43c60c56ad95a543af0629c95e24db5eeb73f03cce8",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T0916",
+      "session_id": "1352467",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos/PXL_20261111_171650670.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_0911_Natalie-Serrino (2026-11-11T17:11:14.000Z–2026-11-11T17:28:44.000Z) matched to session 1352467",
+        "session 1352467 \"What Will You Build When AI Is 10x Faster?\" (09:10–09:30 PT) also contains it; the recording window confirms the operator-approved time placement (notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md)"
+      ]
+    },
+    "PXL_20261111_172207359.jpg": {
+      "file": "PXL_20261111_172207359.jpg",
+      "captured_at_utc": "2026-11-11T17:22:07+00:00",
+      "captured_at_local": "2026-11-11T09:22:07-08:00",
+      "sha256": "0938c6986c4a786a41456ea77afa35954a2eb5ab5e98b9df9817f2e9bcaff0ff",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1352467",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos/PXL_20261111_172207359.jpg",
+      "evidence": [
+        "recording 2026-11-11_0911_Natalie-Serrino (2026-11-11T17:11:14.000Z–2026-11-11T17:28:44.000Z) matched to session 1352467",
+        "session 1352467 \"What Will You Build When AI Is 10x Faster?\" (09:10–09:30 PT) also contains it; the recording window confirms the operator-approved time placement (notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md)"
+      ]
+    },
+    "PXL_20261111_172722980.MP.jpg": {
+      "file": "PXL_20261111_172722980.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:27:22+00:00",
+      "captured_at_local": "2026-11-11T09:27:22-08:00",
+      "sha256": "0af66201b36084c1cf49ea22eea5a331a8434a634849d6a3de44fb4e16f3ae75",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1352467",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos/PXL_20261111_172722980.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_0911_Natalie-Serrino (2026-11-11T17:11:14.000Z–2026-11-11T17:28:44.000Z) matched to session 1352467",
+        "session 1352467 \"What Will You Build When AI Is 10x Faster?\" (09:10–09:30 PT) also contains it; the recording window confirms the operator-approved time placement (notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md)"
+      ]
+    },
+    "PXL_20261111_172835016.jpg": {
+      "file": "PXL_20261111_172835016.jpg",
+      "captured_at_utc": "2026-11-11T17:28:35+00:00",
+      "captured_at_local": "2026-11-11T09:28:35-08:00",
+      "sha256": "4ae65a9a104d44739f42852d913ac603f34069b06f254b1fdd01bf475680cca9",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1352467",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos/PXL_20261111_172835016.jpg",
+      "evidence": [
+        "recording 2026-11-11_0911_Natalie-Serrino (2026-11-11T17:11:14.000Z–2026-11-11T17:28:44.000Z) matched to session 1352467",
+        "session 1352467 \"What Will You Build When AI Is 10x Faster?\" (09:10–09:30 PT) also contains it; the recording window confirms the operator-approved time placement (notes/inbox/2026-11-11T0940-file-morning-photos-under-talks.md)"
+      ]
+    },
+    "PXL_20261111_174204253.jpg": {
+      "file": "PXL_20261111_174204253.jpg",
+      "captured_at_utc": "2026-11-11T17:42:04+00:00",
+      "captured_at_local": "2026-11-11T09:42:04-08:00",
+      "sha256": "4f63f915331995865739ebea585d7dbcbe6ab5a85492eb47a104f6e955d90d6f",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T0942",
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:42 PT",
+        "program window holds session 1373455 \"Rethinking Claude Code Best Practices\" (09:30–09:50 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_174204253.jpg"
+    },
+    "PXL_20261111_174235183.MP.jpg": {
+      "file": "PXL_20261111_174235183.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:42:35+00:00",
+      "captured_at_local": "2026-11-11T09:42:35-08:00",
+      "sha256": "e9dfc9320850c808836465f7474bc12826b8e665661ed969273b65a65c63fc3f",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T0942",
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:42 PT",
+        "program window holds session 1373455 \"Rethinking Claude Code Best Practices\" (09:30–09:50 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_174235183.MP.jpg"
+    },
+    "PXL_20261111_174332301.MP.jpg": {
+      "file": "PXL_20261111_174332301.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:43:32+00:00",
+      "captured_at_local": "2026-11-11T09:43:32-08:00",
+      "sha256": "e92226185976187a90bb2d13c19d22e33e32104fd9df7ce83a80cafe6a3e2db5",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T0942",
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:43 PT",
+        "program window holds session 1373455 \"Rethinking Claude Code Best Practices\" (09:30–09:50 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_174332301.MP.jpg"
+    },
+    "PXL_20261111_174612522.jpg": {
+      "file": "PXL_20261111_174612522.jpg",
+      "captured_at_utc": "2026-11-11T17:46:12+00:00",
+      "captured_at_local": "2026-11-11T09:46:12-08:00",
+      "sha256": "5cd977aa208e544d073ece713c9c4cd4c6d1736fb3d0f6fa570248bfbb3e6ac8",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:46 PT",
+        "program window holds session 1373455 \"Rethinking Claude Code Best Practices\" (09:30–09:50 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_174612522.jpg"
+    },
+    "PXL_20261111_174749891.MP.jpg": {
+      "file": "PXL_20261111_174749891.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:47:49+00:00",
+      "captured_at_local": "2026-11-11T09:47:49-08:00",
+      "sha256": "0d9840eadbc13f1a83b7fe77f018f03675841686c8f281fca3e3af378329a99d",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:47 PT",
+        "program window holds session 1373455 \"Rethinking Claude Code Best Practices\" (09:30–09:50 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_174749891.MP.jpg"
+    },
+    "PXL_20261111_175158642.MP.jpg": {
+      "file": "PXL_20261111_175158642.MP.jpg",
+      "captured_at_utc": "2026-11-11T17:51:58+00:00",
+      "captured_at_local": "2026-11-11T09:51:58-08:00",
+      "sha256": "e0cd5d67beab5b45bc418f9276157b2c9c45345d87d79d054135a729ea480081",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:51 PT"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_175158642.MP.jpg"
+    },
+    "PXL_20261111_175645827.jpg": {
+      "file": "PXL_20261111_175645827.jpg",
+      "captured_at_utc": "2026-11-11T17:56:45+00:00",
+      "captured_at_local": "2026-11-11T09:56:45-08:00",
+      "sha256": "1da7776d258d0a81477c2016efc7b87f519b271f998a5fc8bf11e06eb3fbb81d",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373457",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_0939_cloudflare (09:39:42–09:59:54 PT) matched to session 1373457 contains 09:56 PT"
+      ],
+      "placed_path": "talks/2026-11-11-cloudflare-is-a-neolab/photos/PXL_20261111_175645827.jpg"
+    },
+    "PXL_20261111_180543709.jpg": {
+      "file": "PXL_20261111_180543709.jpg",
+      "captured_at_utc": "2026-11-11T18:05:43+00:00",
+      "captured_at_local": "2026-11-11T10:05:43-08:00",
+      "sha256": "c4df8463465932629301e008b5211dec776fe1326560e22377cc6022cb943d25",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1005",
+      "session_id": "1373446",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1000_lauren-tan (10:00:25–10:18:52 PT) matched to session 1373446 contains 10:05 PT",
+        "program window holds session 1373457 \"cloudflare is a neolab\" (09:50–10:10 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-all-code-is-slop-except-mine/photos/PXL_20261111_180543709.jpg"
+    },
+    "PXL_20261111_180633895.MP.jpg": {
+      "file": "PXL_20261111_180633895.MP.jpg",
+      "captured_at_utc": "2026-11-11T18:06:33+00:00",
+      "captured_at_local": "2026-11-11T10:06:33-08:00",
+      "sha256": "41d95fcc31c870097a1ad7af726685cacb48ba09a5a91e202bfa45e63c4e0c9a",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1005",
+      "session_id": "1373446",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1000_lauren-tan (10:00:25–10:18:52 PT) matched to session 1373446 contains 10:06 PT",
+        "program window holds session 1373457 \"cloudflare is a neolab\" (09:50–10:10 PT, Mainstage Talk); the program ran about ten minutes early and the matched recording window wins"
+      ],
+      "placed_path": "talks/2026-11-11-all-code-is-slop-except-mine/photos/PXL_20261111_180633895.MP.jpg"
+    },
+    "PXL_20261111_181315486.MP.jpg": {
+      "file": "PXL_20261111_181315486.MP.jpg",
+      "captured_at_utc": "2026-11-11T18:13:15+00:00",
+      "captured_at_local": "2026-11-11T10:13:15-08:00",
+      "sha256": "a7acc7ccbba94c0edd0142f31d3385e23b4b83da693846376bc7157987419d2c",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1373446",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1000_lauren-tan (10:00:25–10:18:52 PT) matched to session 1373446 contains 10:13 PT"
+      ],
+      "placed_path": "talks/2026-11-11-all-code-is-slop-except-mine/photos/PXL_20261111_181315486.MP.jpg"
+    },
+    "PXL_20261111_192121284.jpg": {
+      "file": "PXL_20261111_192121284.jpg",
+      "captured_at_utc": "2026-11-11T19:21:21+00:00",
+      "captured_at_local": "2026-11-11T11:21:21-08:00",
+      "sha256": "1446cb34a1156b5dc4286edd59ee45929d1db172b3e6ad7c06eb0f8449060f04",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1121",
+      "session_id": "1323755",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1120_Phillip-DeepMind (2026-11-11T19:20:37.000Z–2026-11-11T19:36:53.500Z) matched to session 1323755"
+      ],
+      "placed_path": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/photos/PXL_20261111_192121284.jpg"
+    },
+    "PXL_20261111_192124422.MP.jpg": {
+      "file": "PXL_20261111_192124422.MP.jpg",
+      "captured_at_utc": "2026-11-11T19:21:24+00:00",
+      "captured_at_local": "2026-11-11T11:21:24-08:00",
+      "sha256": "11cb432d024167292a24f767c24ff7901e89c3bd605bd18dc40c249e3a6ecbb6",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1121",
+      "session_id": "1323755",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1120_Phillip-DeepMind (2026-11-11T19:20:37.000Z–2026-11-11T19:36:53.500Z) matched to session 1323755"
+      ],
+      "placed_path": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/photos/PXL_20261111_192124422.MP.jpg"
+    },
+    "PXL_20261111_192337423.MP.jpg": {
+      "file": "PXL_20261111_192337423.MP.jpg",
+      "captured_at_utc": "2026-11-11T19:23:37+00:00",
+      "captured_at_local": "2026-11-11T11:23:37-08:00",
+      "sha256": "f46b41c175faa2a844a91f0c126380170ffd38eca231b3dc7f997db9ef8a0888",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1123",
+      "session_id": "1323755",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1120_Phillip-DeepMind (2026-11-11T19:20:37.000Z–2026-11-11T19:36:53.500Z) matched to session 1323755"
+      ],
+      "placed_path": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/photos/PXL_20261111_192337423.MP.jpg"
+    },
+    "PXL_20261111_192437514.jpg": {
+      "file": "PXL_20261111_192437514.jpg",
+      "captured_at_utc": "2026-11-11T19:24:37+00:00",
+      "captured_at_local": "2026-11-11T11:24:37-08:00",
+      "sha256": "0d2656045f74e199324333e83714c07baabbe5d6b020b3c50fc0b34c6d963ec7",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1123",
+      "session_id": "1323755",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1120_Phillip-DeepMind (2026-11-11T19:20:37.000Z–2026-11-11T19:36:53.500Z) matched to session 1323755"
+      ],
+      "placed_path": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/photos/PXL_20261111_192437514.jpg"
+    },
+    "PXL_20261111_192552608.MP.jpg": {
+      "file": "PXL_20261111_192552608.MP.jpg",
+      "captured_at_utc": "2026-11-11T19:25:52+00:00",
+      "captured_at_local": "2026-11-11T11:25:52-08:00",
+      "sha256": "c033221b339cc62b57718a89c3d1c53f4c3df4c4adc1697e121b5effc6352b27",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1323755",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1120_Phillip-DeepMind (2026-11-11T19:20:37.000Z–2026-11-11T19:36:53.500Z) matched to session 1323755"
+      ],
+      "placed_path": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/photos/PXL_20261111_192552608.MP.jpg"
+    },
+    "PXL_20261111_195547531.jpg": {
+      "file": "PXL_20261111_195547531.jpg",
+      "captured_at_utc": "2026-11-11T19:55:47+00:00",
+      "captured_at_local": "2026-11-11T11:55:47-08:00",
+      "sha256": "ada2d0518ddefba48184c9452187fbcc98415cbf432d6e7ba37dd58a46441beb",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1155",
+      "session_id": "1373460",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1148_Heal-your-agents (2026-11-11T19:48:01.000Z–2026-11-11T20:11:25.000Z) matched to session 1373460"
+      ],
+      "placed_path": "talks/2026-11-11-heal-your-agents-dont-just-grade-them/photos/PXL_20261111_195547531.jpg"
+    },
+    "PXL_20261111_195708977.jpg": {
+      "file": "PXL_20261111_195708977.jpg",
+      "captured_at_utc": "2026-11-11T19:57:08+00:00",
+      "captured_at_local": "2026-11-11T11:57:08-08:00",
+      "sha256": "00ef3cc812bbc770a46bb936cc5eca91969640c70d8efa3d07ce9e9f5566a85e",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1155",
+      "session_id": "1373460",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1148_Heal-your-agents (2026-11-11T19:48:01.000Z–2026-11-11T20:11:25.000Z) matched to session 1373460"
+      ],
+      "placed_path": "talks/2026-11-11-heal-your-agents-dont-just-grade-them/photos/PXL_20261111_195708977.jpg"
+    },
+    "PXL_20261111_201809500.jpg": {
+      "file": "PXL_20261111_201809500.jpg",
+      "captured_at_utc": "2026-11-11T20:18:09+00:00",
+      "captured_at_local": "2026-11-11T12:18:09-08:00",
+      "sha256": "f5fbe4118b5647eb93b95b70119ec2d711334b971e521088a546df65c083a96b",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373462",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1215_Aamir-Shakir (2026-11-11T20:15:57.000Z–2026-11-11T20:34:34.400Z) matched to session 1373462"
+      ],
+      "placed_path": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos/PXL_20261111_201809500.jpg"
+    },
+    "PXL_20261111_202017480.jpg": {
+      "file": "PXL_20261111_202017480.jpg",
+      "captured_at_utc": "2026-11-11T20:20:17+00:00",
+      "captured_at_local": "2026-11-11T12:20:17-08:00",
+      "sha256": "be55ce65491ea0c592278b684c06986d9915f0657afeb685e959fde91ee544cb",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373462",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1215_Aamir-Shakir (2026-11-11T20:15:57.000Z–2026-11-11T20:34:34.400Z) matched to session 1373462"
+      ],
+      "placed_path": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos/PXL_20261111_202017480.jpg"
+    },
+    "PXL_20261111_202234302.jpg": {
+      "file": "PXL_20261111_202234302.jpg",
+      "captured_at_utc": "2026-11-11T20:22:34+00:00",
+      "captured_at_local": "2026-11-11T12:22:34-08:00",
+      "sha256": "ec6a5764fd0576d43d04959899f35e65ba65033f7ceed70fc584db2dc743156c",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373462",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1215_Aamir-Shakir (2026-11-11T20:15:57.000Z–2026-11-11T20:34:34.400Z) matched to session 1373462"
+      ],
+      "placed_path": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos/PXL_20261111_202234302.jpg"
+    },
+    "PXL_20261111_202529574.jpg": {
+      "file": "PXL_20261111_202529574.jpg",
+      "captured_at_utc": "2026-11-11T20:25:29+00:00",
+      "captured_at_local": "2026-11-11T12:25:29-08:00",
+      "sha256": "4e7fb9c1d2a59ea3b7b8170ecc9550fdb31046121df0c87573f77c0ffcf65b1c",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373462",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1215_Aamir-Shakir (2026-11-11T20:15:57.000Z–2026-11-11T20:34:34.400Z) matched to session 1373462"
+      ],
+      "placed_path": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos/PXL_20261111_202529574.jpg"
+    },
+    "PXL_20261111_202947151.jpg": {
+      "file": "PXL_20261111_202947151.jpg",
+      "captured_at_utc": "2026-11-11T20:29:47+00:00",
+      "captured_at_local": "2026-11-11T12:29:47-08:00",
+      "sha256": "cb8024358a014544319ddb3f8b86a959cf536880a3d4d489a65a9d0607170c7d",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373462",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "evidence": [
+        "recording 2026-11-11_1215_Aamir-Shakir (2026-11-11T20:15:57.000Z–2026-11-11T20:34:34.400Z) matched to session 1373462"
+      ],
+      "placed_path": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos/PXL_20261111_202947151.jpg"
+    },
+    "PXL_20261111_203144669.MP.jpg": {
+      "file": "PXL_20261111_203144669.MP.jpg",
+      "captured_at_utc": "2026-11-11T20:31:44+00:00",
+      "captured_at_local": "2026-11-11T12:31:44-08:00",
+      "sha256": "98afe310b084b1bf965877510a71127335041d85cd9249b984d742d1589ba50f",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1373462",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos/PXL_20261111_203144669.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_1215_Aamir-Shakir (2026-11-11T20:15:57.000Z–2026-11-11T20:34:34.400Z) matched to session 1373462",
+        "12:31:44 PT is outside session 1373462's slot (12:10–12:30 PT); the matched recording covers it, so recording-overlap decides (the talk ran past its slot)"
+      ]
+    },
+    "PXL_20261111_205517744.MP.jpg": {
+      "file": "PXL_20261111_205517744.MP.jpg",
+      "captured_at_utc": "2026-11-11T20:55:17+00:00",
+      "captured_at_local": "2026-11-11T12:55:17-08:00",
+      "sha256": "fc9b283718c5e1c9d017305ceb5d399c887a4679a16b9025c2faddf13dc544a9",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1373464",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-the-software-factory-that-needs-zero-fdes/photos/PXL_20261111_205517744.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_1236_overcut (2026-11-11T20:36:46.000Z–2026-11-11T20:56:33.500Z) matched to session 1373464",
+        "12:55:17 PT is outside session 1373464's slot (12:35–12:55 PT); the matched recording covers it, so recording-overlap decides (the talk ran past its slot)"
+      ]
+    },
+    "PXL_20261111_220719135.jpg": {
+      "file": "PXL_20261111_220719135.jpg",
+      "captured_at_utc": "2026-11-11T22:07:19+00:00",
+      "captured_at_local": "2026-11-11T14:07:19-08:00",
+      "sha256": "b46ba2fff5381835468e38a626cb4376bd6305bc2743997a6ff99e618d620d38",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1407",
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_220719135.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_220721084.jpg": {
+      "file": "PXL_20261111_220721084.jpg",
+      "captured_at_utc": "2026-11-11T22:07:21+00:00",
+      "captured_at_local": "2026-11-11T14:07:21-08:00",
+      "sha256": "f1299f7e9fcfa3b1aa97c1e4315d93a5d08559d6472f65819d1eac0eaa0efd15",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1407",
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_220721084.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_220808193.MP.jpg": {
+      "file": "PXL_20261111_220808193.MP.jpg",
+      "captured_at_utc": "2026-11-11T22:08:08+00:00",
+      "captured_at_local": "2026-11-11T14:08:08-08:00",
+      "sha256": "411dfd4a0613b3e114a2eb94215e7b39948db2ee71691d4d49f66c4acffd261b",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1407",
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_220808193.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_220941916.jpg": {
+      "file": "PXL_20261111_220941916.jpg",
+      "captured_at_utc": "2026-11-11T22:09:41+00:00",
+      "captured_at_local": "2026-11-11T14:09:41-08:00",
+      "sha256": "76db67d24c737668f28585fe908bf34be1ee548ef74e3d2907a4bdc35c668a42",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1409",
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_220941916.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_220946718.jpg": {
+      "file": "PXL_20261111_220946718.jpg",
+      "captured_at_utc": "2026-11-11T22:09:46+00:00",
+      "captured_at_local": "2026-11-11T14:09:46-08:00",
+      "sha256": "627ad153e310b3a972ca6604431521594b2b5c81a78a6b7ed1a7d6aa37574e69",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1409",
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_220946718.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_221035708.MP.jpg": {
+      "file": "PXL_20261111_221035708.MP.jpg",
+      "captured_at_utc": "2026-11-11T22:10:35+00:00",
+      "captured_at_local": "2026-11-11T14:10:35-08:00",
+      "sha256": "3acad22cce4b33f072de9e48fec2e5ff45bf8a962c9fd130af62325b2c112f71",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1409",
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221035708.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_221152212.MP.jpg": {
+      "file": "PXL_20261111_221152212.MP.jpg",
+      "captured_at_utc": "2026-11-11T22:11:52+00:00",
+      "captured_at_local": "2026-11-11T14:11:52-08:00",
+      "sha256": "76267cb516d2a62a1f09bee7745e574b217343b7744d089e7cfa486c6ddbafed",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1411",
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221152212.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_221254071.jpg": {
+      "file": "PXL_20261111_221254071.jpg",
+      "captured_at_utc": "2026-11-11T22:12:54+00:00",
+      "captured_at_local": "2026-11-11T14:12:54-08:00",
+      "sha256": "7a3e0c82c0cc857f846bdc7132a61a4f1d70746a91c5039927f99234002352f6",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1411",
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221254071.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_221334555.jpg": {
+      "file": "PXL_20261111_221334555.jpg",
+      "captured_at_utc": "2026-11-11T22:13:34+00:00",
+      "captured_at_local": "2026-11-11T14:13:34-08:00",
+      "sha256": "c0b1e1712c31ec5be046a4044375612699af8fe236c4a2f6764d17c2e3977836",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221334555.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_221509505.jpg": {
+      "file": "PXL_20261111_221509505.jpg",
+      "captured_at_utc": "2026-11-11T22:15:09+00:00",
+      "captured_at_local": "2026-11-11T14:15:09-08:00",
+      "sha256": "161986da92bf9a91e4242e481a020e74fe1fb4801fba0572c800dc913291e148",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1415",
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221509505.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_221614856.jpg": {
+      "file": "PXL_20261111_221614856.jpg",
+      "captured_at_utc": "2026-11-11T22:16:14+00:00",
+      "captured_at_local": "2026-11-11T14:16:14-08:00",
+      "sha256": "118c09207746b15c7934da7df12bec231fac15a94a111e9fddb94dc521376e28",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1415",
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221614856.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_221803022.jpg": {
+      "file": "PXL_20261111_221803022.jpg",
+      "captured_at_utc": "2026-11-11T22:18:03+00:00",
+      "captured_at_local": "2026-11-11T14:18:03-08:00",
+      "sha256": "eaf74daa32665771aa9a917e62042b9ace2938bea27a9f11984c2be37bfbb0b7",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1418",
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221803022.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_221846829.jpg": {
+      "file": "PXL_20261111_221846829.jpg",
+      "captured_at_utc": "2026-11-11T22:18:46+00:00",
+      "captured_at_local": "2026-11-11T14:18:46-08:00",
+      "sha256": "91810fbdf549750d8cde7a175826cd0861cf696fbfc5a61f56dbce4796719d67",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1418",
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_221846829.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_222013873.jpg": {
+      "file": "PXL_20261111_222013873.jpg",
+      "captured_at_utc": "2026-11-11T22:20:13+00:00",
+      "captured_at_local": "2026-11-11T14:20:13-08:00",
+      "sha256": "66baf642f2afe7f5569f47ddf99f0d1e0e7a938027d1eeb1459af8183337a067",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_222013873.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_222224555.jpg": {
+      "file": "PXL_20261111_222224555.jpg",
+      "captured_at_utc": "2026-11-11T22:22:24+00:00",
+      "captured_at_local": "2026-11-11T14:22:24-08:00",
+      "sha256": "2f78e224f0df60c5283a1174ab10976e7cff2010549f1305dd9d0078cc16793a",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_222224555.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465"
+      ]
+    },
+    "PXL_20261111_222426885.jpg": {
+      "file": "PXL_20261111_222426885.jpg",
+      "captured_at_utc": "2026-11-11T22:24:26+00:00",
+      "captured_at_local": "2026-11-11T14:24:26-08:00",
+      "sha256": "4d909c5e3af990fac5f2d88641d81ddabef431ef793a54bc0f3d83a40cd56e2f",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_222426885.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465",
+        "14:24:26 PT is outside session 1373465's slot (14:05–14:23 PT); the matched recording covers it, so recording-overlap decides (the talk ran past its slot)",
+        "operator decision notes/inbox/2026-11-11T1444-file-1424-photo-under-diogo.md (session_id 1373465) agrees; previously needs-review between 1373466 and 1373465"
+      ]
+    },
+    "PXL_20261111_222912575.jpg": {
+      "file": "PXL_20261111_222912575.jpg",
+      "captured_at_utc": "2026-11-11T22:29:12+00:00",
+      "captured_at_local": "2026-11-11T14:29:12-08:00",
+      "sha256": "3ec68893a0cc9255112fee0f81867ca4802860263bad1ced6eb7cf1e1724327a",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1373465",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-i-love-you-so-jevving-much/photos/PXL_20261111_222912575.jpg",
+      "evidence": [
+        "recording 2026-11-11_1406_diogo (2026-11-11T22:06:57.000Z–2026-11-11T22:29:57.200Z) matched to session 1373465",
+        "14:29:12 PT is outside session 1373465's slot (14:05–14:23 PT); the matched recording covers it, so recording-overlap decides (the talk ran past its slot)"
+      ]
+    },
+    "PXL_20261111_232705433.jpg": {
+      "file": "PXL_20261111_232705433.jpg",
+      "captured_at_utc": "2026-11-11T23:27:05+00:00",
+      "captured_at_local": "2026-11-11T15:27:05-08:00",
+      "sha256": "9e821ff95e15f9d760a0f1a80b4a5ee5486425ab57ebd4e433fb81c646a1ece7",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1376198",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos/PXL_20261111_232705433.jpg",
+      "evidence": [
+        "recording 2026-11-11_1525_Scott-Roberts (2026-11-11T23:25:01.000Z–2026-11-11T23:36:53.100Z) matched to session 1376198"
+      ]
+    },
+    "PXL_20261111_233341807.jpg": {
+      "file": "PXL_20261111_233341807.jpg",
+      "captured_at_utc": "2026-11-11T23:33:41+00:00",
+      "captured_at_local": "2026-11-11T15:33:41-08:00",
+      "sha256": "12a148813027ce4aa8ef060224eb6a3ae8d6f3c272b5fca04c3914ef08d0c764",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1533",
+      "session_id": "1376198",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos/PXL_20261111_233341807.jpg",
+      "evidence": [
+        "recording 2026-11-11_1525_Scott-Roberts (2026-11-11T23:25:01.000Z–2026-11-11T23:36:53.100Z) matched to session 1376198"
+      ]
+    },
+    "PXL_20261111_233429743.jpg": {
+      "file": "PXL_20261111_233429743.jpg",
+      "captured_at_utc": "2026-11-11T23:34:29+00:00",
+      "captured_at_local": "2026-11-11T15:34:29-08:00",
+      "sha256": "cb7c34e128a3e6981a533358cb131973fceba70fffa07c85b219960d89b3ec9d",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1533",
+      "session_id": "1376198",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos/PXL_20261111_233429743.jpg",
+      "evidence": [
+        "recording 2026-11-11_1525_Scott-Roberts (2026-11-11T23:25:01.000Z–2026-11-11T23:36:53.100Z) matched to session 1376198"
+      ]
+    },
+    "PXL_20261111_233436849.jpg": {
+      "file": "PXL_20261111_233436849.jpg",
+      "captured_at_utc": "2026-11-11T23:34:36+00:00",
+      "captured_at_local": "2026-11-11T15:34:36-08:00",
+      "sha256": "795d46ca1dc153c78701bd9fb3348a5e871e7d16b237e9325f72e5217bee4586",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261111T1533",
+      "session_id": "1376198",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos/PXL_20261111_233436849.jpg",
+      "evidence": [
+        "recording 2026-11-11_1525_Scott-Roberts (2026-11-11T23:25:01.000Z–2026-11-11T23:36:53.100Z) matched to session 1376198"
+      ]
+    },
+    "PXL_20261112_003006513.jpg": {
+      "file": "PXL_20261112_003006513.jpg",
+      "captured_at_utc": "2026-11-12T00:30:06+00:00",
+      "captured_at_local": "2026-11-11T16:30:06-08:00",
+      "sha256": "60b84295badc9a517ddd7c629c9e0f9da90626eebfc65bbeeb7542b4f2ffb04c",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1630",
+      "session_id": "1373469",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-it-takes-to-set-intelligence-free/photos/PXL_20261112_003006513.jpg",
+      "evidence": [
+        "recording 2026-11-11_1629_Lovable (2026-11-12T00:29:13.000Z–2026-11-12T00:48:17.100Z) matched to session 1373469"
+      ]
+    },
+    "PXL_20261112_003010044.jpg": {
+      "file": "PXL_20261112_003010044.jpg",
+      "captured_at_utc": "2026-11-12T00:30:10+00:00",
+      "captured_at_local": "2026-11-11T16:30:10-08:00",
+      "sha256": "85afc6946740a75869eee591f8f79a1b1f4a7e0ae2f11a5b774eda84472daf43",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1630",
+      "session_id": "1373469",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-it-takes-to-set-intelligence-free/photos/PXL_20261112_003010044.jpg",
+      "evidence": [
+        "recording 2026-11-11_1629_Lovable (2026-11-12T00:29:13.000Z–2026-11-12T00:48:17.100Z) matched to session 1373469"
+      ]
+    },
+    "PXL_20261112_003205587.jpg": {
+      "file": "PXL_20261112_003205587.jpg",
+      "captured_at_utc": "2026-11-12T00:32:05+00:00",
+      "captured_at_local": "2026-11-11T16:32:05-08:00",
+      "sha256": "847fbb5bc16ddae842bd488c9cd06a7ba8fbaafea6a6e9c551718d2e8f5eb8f6",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373469",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-it-takes-to-set-intelligence-free/photos/PXL_20261112_003205587.jpg",
+      "evidence": [
+        "recording 2026-11-11_1629_Lovable (2026-11-12T00:29:13.000Z–2026-11-12T00:48:17.100Z) matched to session 1373469"
+      ]
+    },
+    "PXL_20261112_003527454.jpg": {
+      "file": "PXL_20261112_003527454.jpg",
+      "captured_at_utc": "2026-11-12T00:35:27+00:00",
+      "captured_at_local": "2026-11-11T16:35:27-08:00",
+      "sha256": "baf831a2ea5d2bc5340f1c9caa49f5c3a843a85b02a951ac90998877037033aa",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373469",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-it-takes-to-set-intelligence-free/photos/PXL_20261112_003527454.jpg",
+      "evidence": [
+        "recording 2026-11-11_1629_Lovable (2026-11-12T00:29:13.000Z–2026-11-12T00:48:17.100Z) matched to session 1373469"
+      ]
+    },
+    "PXL_20261112_004138678.jpg": {
+      "file": "PXL_20261112_004138678.jpg",
+      "captured_at_utc": "2026-11-12T00:41:38+00:00",
+      "captured_at_local": "2026-11-11T16:41:38-08:00",
+      "sha256": "f5dd38091dd08fcf68ac5a8335d3697ff36e7bd08c252246c0ff7c8e92834c1f",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373469",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-it-takes-to-set-intelligence-free/photos/PXL_20261112_004138678.jpg",
+      "evidence": [
+        "recording 2026-11-11_1629_Lovable (2026-11-12T00:29:13.000Z–2026-11-12T00:48:17.100Z) matched to session 1373469"
+      ]
+    },
+    "PXL_20261112_004621562.jpg": {
+      "file": "PXL_20261112_004621562.jpg",
+      "captured_at_utc": "2026-11-12T00:46:21+00:00",
+      "captured_at_local": "2026-11-11T16:46:21-08:00",
+      "sha256": "cdfd39882efe22fbefbf5d76b1822b133409bb1fcf3710143cdb069ef058667b",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373469",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-what-it-takes-to-set-intelligence-free/photos/PXL_20261112_004621562.jpg",
+      "evidence": [
+        "recording 2026-11-11_1629_Lovable (2026-11-12T00:29:13.000Z–2026-11-12T00:48:17.100Z) matched to session 1373469"
+      ]
+    },
+    "PXL_20261112_005033164.MP.jpg": {
+      "file": "PXL_20261112_005033164.MP.jpg",
+      "captured_at_utc": "2026-11-12T00:50:33+00:00",
+      "captured_at_local": "2026-11-11T16:50:33-08:00",
+      "sha256": "d55da78e9a88b80b4f7b693cae20f640e16c0d859c1b61905e47b1a4a5da441c",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1650",
+      "session_id": "1373470",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/photos/PXL_20261112_005033164.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_1648_Zach-Bruggeman (2026-11-12T00:48:38.000Z–2026-11-12T00:57:04.000Z) matched to session 1373470"
+      ]
+    },
+    "PXL_20261112_005117225.jpg": {
+      "file": "PXL_20261112_005117225.jpg",
+      "captured_at_utc": "2026-11-12T00:51:17+00:00",
+      "captured_at_local": "2026-11-11T16:51:17-08:00",
+      "sha256": "c569babe8dfddee2ff6be3418139e128249ea0cea9da0266a1b4dc8b2a1c22e0",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1650",
+      "session_id": "1373470",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/photos/PXL_20261112_005117225.jpg",
+      "evidence": [
+        "recording 2026-11-11_1648_Zach-Bruggeman (2026-11-12T00:48:38.000Z–2026-11-12T00:57:04.000Z) matched to session 1373470"
+      ]
+    },
+    "PXL_20261112_005452779.jpg": {
+      "file": "PXL_20261112_005452779.jpg",
+      "captured_at_utc": "2026-11-12T00:54:52+00:00",
+      "captured_at_local": "2026-11-11T16:54:52-08:00",
+      "sha256": "0ad474abb1c8fec7c515d3d0ac21b8348b5389c6f514a77d183d21684229a995",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373470",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/photos/PXL_20261112_005452779.jpg",
+      "evidence": [
+        "recording 2026-11-11_1648_Zach-Bruggeman (2026-11-12T00:48:38.000Z–2026-11-12T00:57:04.000Z) matched to session 1373470"
+      ]
+    },
+    "PXL_20261112_010359309.jpg": {
+      "file": "PXL_20261112_010359309.jpg",
+      "captured_at_utc": "2026-11-12T01:03:59+00:00",
+      "captured_at_local": "2026-11-11T17:03:59-08:00",
+      "sha256": "4b4e16f76cbc723acba3d8c408548a63797b7c2ea8a02ee1ee531f26318dd337",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1373470",
+      "method": "time",
+      "confidence": 0.7,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/photos/PXL_20261112_010359309.jpg",
+      "evidence": [
+        "session 1373470 \"How to build an agent that builds the culture\" (16:50–17:10 PT) is the only talk window containing 17:03:59 PT",
+        "recording 2026-11-11_1648_Zach-Bruggeman matched to 1373470 ended 16:57:04 PT, before the photo — a time candidate only, never recording-overlap; no recording active (next: 2026-11-11_1706_Steve-Yegge from 17:06:21 PT)",
+        "also inside non-talk windows Token Billionaires Lounge (e8b1a15a-4a96-4ef0-92d7-99ac83615e72, 08:00–17:40), Registration (f8b0a0a6-9f29-4434-92fe-694d66d20a34, 08:00–17:40); a single talk window takes precedence over the event bucket",
+        "operator note notes/inbox/2026-11-11T1705-cut-talk-short.md (session_id 1373470, captured 17:05) says the talk was cut short; the photo is Ramp's closing \"inspect.com/aie — Thank you! @zachbruggeman\" slide, so the operator saw the end of 1373470"
+      ]
+    },
+    "PXL_20261112_010730772.jpg": {
+      "file": "PXL_20261112_010730772.jpg",
+      "captured_at_utc": "2026-11-12T01:07:30+00:00",
+      "captured_at_local": "2026-11-11T17:07:30-08:00",
+      "sha256": "5b6b988cb89c7a275af59ed37bd301a1c0fd7b47ea8ce19fca896d06734b8706",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373471",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-software-factories-escape-from-trash-mountain/photos/PXL_20261112_010730772.jpg",
+      "evidence": [
+        "recording 2026-11-11_1706_Steve-Yegge (2026-11-12T01:06:21.000Z–2026-11-12T01:27:45.500Z) matched to session 1373471",
+        "17:07:30 PT is outside session 1373471's slot (17:10–17:30 PT); the matched recording covers it, so recording-overlap decides (the talk started early)"
+      ]
+    },
+    "PXL_20261112_011025815.MP.jpg": {
+      "file": "PXL_20261112_011025815.MP.jpg",
+      "captured_at_utc": "2026-11-12T01:10:25+00:00",
+      "captured_at_local": "2026-11-11T17:10:25-08:00",
+      "sha256": "23f54ca9c2073c607c227455131799b8861cba256a491071fedd85708e4aa506",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373471",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-software-factories-escape-from-trash-mountain/photos/PXL_20261112_011025815.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_1706_Steve-Yegge (2026-11-12T01:06:21.000Z–2026-11-12T01:27:45.500Z) matched to session 1373471"
+      ]
+    },
+    "PXL_20261112_011400786.MP.jpg": {
+      "file": "PXL_20261112_011400786.MP.jpg",
+      "captured_at_utc": "2026-11-12T01:14:00+00:00",
+      "captured_at_local": "2026-11-11T17:14:00-08:00",
+      "sha256": "a426753f4b7cbc94e25581722f2545177552df2b1c0409c3e82dde4b40a53550",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1714",
+      "session_id": "1373471",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-software-factories-escape-from-trash-mountain/photos/PXL_20261112_011400786.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_1706_Steve-Yegge (2026-11-12T01:06:21.000Z–2026-11-12T01:27:45.500Z) matched to session 1373471"
+      ]
+    },
+    "PXL_20261112_011449195.jpg": {
+      "file": "PXL_20261112_011449195.jpg",
+      "captured_at_utc": "2026-11-12T01:14:49+00:00",
+      "captured_at_local": "2026-11-11T17:14:49-08:00",
+      "sha256": "99fe85993ce08d4015bb19d2c2383dd5ac34d58161ca7e23151a67fbcf8b8bf8",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1714",
+      "session_id": "1373471",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-software-factories-escape-from-trash-mountain/photos/PXL_20261112_011449195.jpg",
+      "evidence": [
+        "recording 2026-11-11_1706_Steve-Yegge (2026-11-12T01:06:21.000Z–2026-11-12T01:27:45.500Z) matched to session 1373471"
+      ]
+    },
+    "PXL_20261112_011740061.jpg": {
+      "file": "PXL_20261112_011740061.jpg",
+      "captured_at_utc": "2026-11-12T01:17:40+00:00",
+      "captured_at_local": "2026-11-11T17:17:40-08:00",
+      "sha256": "d639cc311e4f1d8186b6f93e674419de5db6225af3d0f80f7730c4a6cfcf7e2c",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373471",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-software-factories-escape-from-trash-mountain/photos/PXL_20261112_011740061.jpg",
+      "evidence": [
+        "recording 2026-11-11_1706_Steve-Yegge (2026-11-12T01:06:21.000Z–2026-11-12T01:27:45.500Z) matched to session 1373471"
+      ]
+    },
+    "PXL_20261112_012207663.MP.jpg": {
+      "file": "PXL_20261112_012207663.MP.jpg",
+      "captured_at_utc": "2026-11-12T01:22:07+00:00",
+      "captured_at_local": "2026-11-11T17:22:07-08:00",
+      "sha256": "03f6fbb00083560a92c8054820bfb64bf375a1c69c29e3e375845c023c2de41c",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373471",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-software-factories-escape-from-trash-mountain/photos/PXL_20261112_012207663.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_1706_Steve-Yegge (2026-11-12T01:06:21.000Z–2026-11-12T01:27:45.500Z) matched to session 1373471"
+      ]
+    },
+    "PXL_20261112_012411791.jpg": {
+      "file": "PXL_20261112_012411791.jpg",
+      "captured_at_utc": "2026-11-12T01:24:11+00:00",
+      "captured_at_local": "2026-11-11T17:24:11-08:00",
+      "sha256": "69756bdb36690c94b230bf6ec23f06605127b7fc2d385f4dd46b3e7cffa3f391",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373471",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-software-factories-escape-from-trash-mountain/photos/PXL_20261112_012411791.jpg",
+      "evidence": [
+        "recording 2026-11-11_1706_Steve-Yegge (2026-11-12T01:06:21.000Z–2026-11-12T01:27:45.500Z) matched to session 1373471"
+      ]
+    },
+    "PXL_20261112_012731950.jpg": {
+      "file": "PXL_20261112_012731950.jpg",
+      "captured_at_utc": "2026-11-12T01:27:31+00:00",
+      "captured_at_local": "2026-11-11T17:27:31-08:00",
+      "sha256": "0fcfe240a33a2fd821f6647e0cfe78b1bdbec587a9cc0150b6488e7cf128818a",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373471",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-software-factories-escape-from-trash-mountain/photos/PXL_20261112_012731950.jpg",
+      "evidence": [
+        "recording 2026-11-11_1706_Steve-Yegge (2026-11-12T01:06:21.000Z–2026-11-12T01:27:45.500Z) matched to session 1373471"
+      ]
+    },
+    "PXL_20261112_013245403.MP.jpg": {
+      "file": "PXL_20261112_013245403.MP.jpg",
+      "captured_at_utc": "2026-11-12T01:32:45+00:00",
+      "captured_at_local": "2026-11-11T17:32:45-08:00",
+      "sha256": "ddad42b150ee944e6143392a17d30d0c3f666715902c76b0c09420b0159ccffc",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1732",
+      "session_id": "1376191",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-2026-in-llms/photos/PXL_20261112_013245403.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_1730_simon-willison (2026-11-12T01:30:50.000Z–2026-11-12T01:50:32.300Z) matched to session 1376191"
+      ]
+    },
+    "PXL_20261112_013345081.jpg": {
+      "file": "PXL_20261112_013345081.jpg",
+      "captured_at_utc": "2026-11-12T01:33:45+00:00",
+      "captured_at_local": "2026-11-11T17:33:45-08:00",
+      "sha256": "429cfbe3aea08208f905206bc372c8214dab13be29f4314839cbbc4143efdffa",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1732",
+      "session_id": "1376191",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-2026-in-llms/photos/PXL_20261112_013345081.jpg",
+      "evidence": [
+        "recording 2026-11-11_1730_simon-willison (2026-11-12T01:30:50.000Z–2026-11-12T01:50:32.300Z) matched to session 1376191"
+      ]
+    },
+    "PXL_20261112_013449465.jpg": {
+      "file": "PXL_20261112_013449465.jpg",
+      "captured_at_utc": "2026-11-12T01:34:49+00:00",
+      "captured_at_local": "2026-11-11T17:34:49-08:00",
+      "sha256": "416200bb238b5bf9175d35e72ca28b4d38d7d5b71e78cc82cbd241781a537654",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1376191",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-2026-in-llms/photos/PXL_20261112_013449465.jpg",
+      "evidence": [
+        "recording 2026-11-11_1730_simon-willison (2026-11-12T01:30:50.000Z–2026-11-12T01:50:32.300Z) matched to session 1376191"
+      ]
+    },
+    "PXL_20261112_013801563.jpg": {
+      "file": "PXL_20261112_013801563.jpg",
+      "captured_at_utc": "2026-11-12T01:38:01+00:00",
+      "captured_at_local": "2026-11-11T17:38:01-08:00",
+      "sha256": "6d1a7d455ca322d6e0de437b623c6eec9877cd18d224289fc060e2fb83f57770",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1376191",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-2026-in-llms/photos/PXL_20261112_013801563.jpg",
+      "evidence": [
+        "recording 2026-11-11_1730_simon-willison (2026-11-12T01:30:50.000Z–2026-11-12T01:50:32.300Z) matched to session 1376191"
+      ]
+    },
+    "PXL_20261112_014042907.MP.jpg": {
+      "file": "PXL_20261112_014042907.MP.jpg",
+      "captured_at_utc": "2026-11-12T01:40:42+00:00",
+      "captured_at_local": "2026-11-11T17:40:42-08:00",
+      "sha256": "8cd24af6e4124d4dfc939a1f13b5ac8aa7615a7d87ff81f047a369d974a1fe70",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1740",
+      "session_id": "1376191",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-2026-in-llms/photos/PXL_20261112_014042907.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_1730_simon-willison (2026-11-12T01:30:50.000Z–2026-11-12T01:50:32.300Z) matched to session 1376191"
+      ]
+    },
+    "PXL_20261112_014156023.MP.jpg": {
+      "file": "PXL_20261112_014156023.MP.jpg",
+      "captured_at_utc": "2026-11-12T01:41:56+00:00",
+      "captured_at_local": "2026-11-11T17:41:56-08:00",
+      "sha256": "9cb2ddf4db4d4f1e8ea96d2bb7ec7d21709fac589dd9a16d6c2b43fb653d7295",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261111T1740",
+      "session_id": "1376191",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-11-2026-in-llms/photos/PXL_20261112_014156023.MP.jpg",
+      "evidence": [
+        "recording 2026-11-11_1730_simon-willison (2026-11-12T01:30:50.000Z–2026-11-12T01:50:32.300Z) matched to session 1376191"
+      ]
+    },
+    "PXL_20261112_192122983.jpg": {
+      "file": "PXL_20261112_192122983.jpg",
+      "captured_at_utc": "2026-11-12T19:21:22+00:00",
+      "captured_at_local": "2026-11-12T11:21:22-08:00",
+      "sha256": "5f5c44663da1090d9723c7cd7b241c2c9722a92356c3ed0dd5d8cb04082a9dd4",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261112T1121",
+      "session_id": "1373475",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-a-new-age-of-software-engineering/photos/PXL_20261112_192122983.jpg",
+      "evidence": [
+        "recording 2026-11-12_1120_walden (2026-11-12T19:20:34.000Z–2026-11-12T19:34:24.800Z) matched to session 1373475 contains 11:21:22 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1373476 \"Connect Agents to Reality: The Context Engine Powering Your Software Factory\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_192236451.jpg": {
+      "file": "PXL_20261112_192236451.jpg",
+      "captured_at_utc": "2026-11-12T19:22:36+00:00",
+      "captured_at_local": "2026-11-12T11:22:36-08:00",
+      "sha256": "6fa5ec3fcf03250e21fcd28a97c7363a7744b81aa2ffee944cb727601afd52f7",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261112T1121",
+      "session_id": "1373475",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-a-new-age-of-software-engineering/photos/PXL_20261112_192236451.jpg",
+      "evidence": [
+        "recording 2026-11-12_1120_walden (2026-11-12T19:20:34.000Z–2026-11-12T19:34:24.800Z) matched to session 1373475 contains 11:22:36 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1373476 \"Connect Agents to Reality: The Context Engine Powering Your Software Factory\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_192852968.MP.jpg": {
+      "file": "PXL_20261112_192852968.MP.jpg",
+      "captured_at_utc": "2026-11-12T19:28:52+00:00",
+      "captured_at_local": "2026-11-12T11:28:52-08:00",
+      "sha256": "f5727fe0b7f0fc612f7438cca3bc0d82767efe03a0fa18a7ac0bb5304e236ff7",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373475",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-a-new-age-of-software-engineering/photos/PXL_20261112_192852968.MP.jpg",
+      "evidence": [
+        "recording 2026-11-12_1120_walden (2026-11-12T19:20:34.000Z–2026-11-12T19:34:24.800Z) matched to session 1373475 contains 11:28:52 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1373476 \"Connect Agents to Reality: The Context Engine Powering Your Software Factory\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_193025663.jpg": {
+      "file": "PXL_20261112_193025663.jpg",
+      "captured_at_utc": "2026-11-12T19:30:25+00:00",
+      "captured_at_local": "2026-11-12T11:30:25-08:00",
+      "sha256": "3cf010d9eade91c7604e05b4b97bff9a4400652c3f6722c15487988166992cb6",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1373475",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-a-new-age-of-software-engineering/photos/PXL_20261112_193025663.jpg",
+      "evidence": [
+        "recording 2026-11-12_1120_walden (2026-11-12T19:20:34.000Z–2026-11-12T19:34:24.800Z) matched to session 1373475 contains 11:30:25 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1373476 \"Connect Agents to Reality: The Context Engine Powering Your Software Factory\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_194819770.jpg": {
+      "file": "PXL_20261112_194819770.jpg",
+      "captured_at_utc": "2026-11-12T19:48:19+00:00",
+      "captured_at_local": "2026-11-12T11:48:19-08:00",
+      "sha256": "7f3b377c1bbe0d7e00a0a52c0229cbda6be040b385808b0ef6ee78dbe7e42f8b",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261112T1148",
+      "session_id": "1379052",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter/photos/PXL_20261112_194819770.jpg",
+      "evidence": [
+        "recording 2026-11-12_1146_trust-by-verify (2026-11-12T19:46:59.000Z–2026-11-12T20:08:40.000Z) matched to session 1379052 contains 11:48:19 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1373477 \"What Your AI Doesn't Know: The latest trends in agent searches\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_194914731.jpg": {
+      "file": "PXL_20261112_194914731.jpg",
+      "captured_at_utc": "2026-11-12T19:49:14+00:00",
+      "captured_at_local": "2026-11-12T11:49:14-08:00",
+      "sha256": "5a94080b47e5dbdc4daf6c0780b4e7271e4b6fcb3cbcabb1044abcb129ce0851",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": "burst-20261112T1148",
+      "session_id": "1379052",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter/photos/PXL_20261112_194914731.jpg",
+      "evidence": [
+        "recording 2026-11-12_1146_trust-by-verify (2026-11-12T19:46:59.000Z–2026-11-12T20:08:40.000Z) matched to session 1379052 contains 11:49:14 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1373477 \"What Your AI Doesn't Know: The latest trends in agent searches\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_195334232.MP.jpg": {
+      "file": "PXL_20261112_195334232.MP.jpg",
+      "captured_at_utc": "2026-11-12T19:53:34+00:00",
+      "captured_at_local": "2026-11-12T11:53:34-08:00",
+      "sha256": "d9753d49fd511c67ffc59263a1571114921411f2a8dd46bbf5190d49cfa783e6",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1379052",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter/photos/PXL_20261112_195334232.MP.jpg",
+      "evidence": [
+        "recording 2026-11-12_1146_trust-by-verify (2026-11-12T19:46:59.000Z–2026-11-12T20:08:40.000Z) matched to session 1379052 contains 11:53:34 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1373477 \"What Your AI Doesn't Know: The latest trends in agent searches\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_201506625.jpg": {
+      "file": "PXL_20261112_201506625.jpg",
+      "captured_at_utc": "2026-11-12T20:15:06+00:00",
+      "captured_at_local": "2026-11-12T12:15:06-08:00",
+      "sha256": "b15463b0183b91e6c165e437e3605b67903862a59c1d37b9e992abc894518f59",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1379011",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/photos/PXL_20261112_201506625.jpg",
+      "evidence": [
+        "recording 2026-11-12_1211_arsln-let-the-agents-cook (2026-11-12T20:11:55.000Z–2026-11-12T20:29:38.900Z) matched to session 1379011 contains 12:15:06 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1375634 \"Ship more as a team with Kiro Crew\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_201950177.jpg": {
+      "file": "PXL_20261112_201950177.jpg",
+      "captured_at_utc": "2026-11-12T20:19:50+00:00",
+      "captured_at_local": "2026-11-12T12:19:50-08:00",
+      "sha256": "f627d1e1e8a78533f39f6de914f320293244d04977519d2e97d9877199a02718",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1379011",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/photos/PXL_20261112_201950177.jpg",
+      "evidence": [
+        "recording 2026-11-12_1211_arsln-let-the-agents-cook (2026-11-12T20:11:55.000Z–2026-11-12T20:29:38.900Z) matched to session 1379011 contains 12:19:50 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1375634 \"Ship more as a team with Kiro Crew\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_202230030.jpg": {
+      "file": "PXL_20261112_202230030.jpg",
+      "captured_at_utc": "2026-11-12T20:22:30+00:00",
+      "captured_at_local": "2026-11-12T12:22:30-08:00",
+      "sha256": "ea946ee1a7180970159f596f6de3c4e5ab7ba02f9ec5d80c59d17bf894496320",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1379011",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/photos/PXL_20261112_202230030.jpg",
+      "evidence": [
+        "recording 2026-11-12_1211_arsln-let-the-agents-cook (2026-11-12T20:11:55.000Z–2026-11-12T20:29:38.900Z) matched to session 1379011 contains 12:22:30 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1375634 \"Ship more as a team with Kiro Crew\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_203545768.jpg": {
+      "file": "PXL_20261112_203545768.jpg",
+      "captured_at_utc": "2026-11-12T20:35:45+00:00",
+      "captured_at_local": "2026-11-12T12:35:45-08:00",
+      "sha256": "3bbc4eed83aaa95b87b137d10602ca36b4b6ef89663091b7bd5dccb6e4a55c4e",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1379010",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-exploring-claudes-frontier/photos/PXL_20261112_203545768.jpg",
+      "evidence": [
+        "recording 2026-11-12_1235_lance-martin (2026-11-12T20:35:29.000Z–2026-11-12T20:53:47.300Z) matched to session 1379010 contains 12:35:45 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1379163 \"Code review without reviewing code\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_203933625.jpg": {
+      "file": "PXL_20261112_203933625.jpg",
+      "captured_at_utc": "2026-11-12T20:39:33+00:00",
+      "captured_at_local": "2026-11-12T12:39:33-08:00",
+      "sha256": "022d3ae44b39c060b94d5ad5fefb63333818e302645e8dd1d6339b576af61917",
+      "width": 4000,
+      "height": 3000,
+      "burst_id": null,
+      "session_id": "1379010",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-exploring-claudes-frontier/photos/PXL_20261112_203933625.jpg",
+      "evidence": [
+        "recording 2026-11-12_1235_lance-martin (2026-11-12T20:35:29.000Z–2026-11-12T20:53:47.300Z) matched to session 1379010 contains 12:39:33 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1379163 \"Code review without reviewing code\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_204152268.MP.jpg": {
+      "file": "PXL_20261112_204152268.MP.jpg",
+      "captured_at_utc": "2026-11-12T20:41:52+00:00",
+      "captured_at_local": "2026-11-12T12:41:52-08:00",
+      "sha256": "42fdf4e27200ecae9f740f78160f4230ec57e368989fa21f4e6db3e38ceebe12",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": null,
+      "session_id": "1379010",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-exploring-claudes-frontier/photos/PXL_20261112_204152268.MP.jpg",
+      "evidence": [
+        "recording 2026-11-12_1235_lance-martin (2026-11-12T20:35:29.000Z–2026-11-12T20:53:47.300Z) matched to session 1379010 contains 12:41:52 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1379163 \"Code review without reviewing code\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_204737535.jpg": {
+      "file": "PXL_20261112_204737535.jpg",
+      "captured_at_utc": "2026-11-12T20:47:37+00:00",
+      "captured_at_local": "2026-11-12T12:47:37-08:00",
+      "sha256": "f731d3048580910a81dfdcf954f5412d725eedaa73e4b7b24e22d71fd6d3e7cc",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261112T1247",
+      "session_id": "1379010",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-exploring-claudes-frontier/photos/PXL_20261112_204737535.jpg",
+      "evidence": [
+        "recording 2026-11-12_1235_lance-martin (2026-11-12T20:35:29.000Z–2026-11-12T20:53:47.300Z) matched to session 1379010 contains 12:47:37 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1379163 \"Code review without reviewing code\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_204747489.MP.jpg": {
+      "file": "PXL_20261112_204747489.MP.jpg",
+      "captured_at_utc": "2026-11-12T20:47:47+00:00",
+      "captured_at_local": "2026-11-12T12:47:47-08:00",
+      "sha256": "7561b00602d8b5d12be3191d8f2f49e798fe00afe48236450ca7efd1b66d0f53",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261112T1247",
+      "session_id": "1379010",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-exploring-claudes-frontier/photos/PXL_20261112_204747489.MP.jpg",
+      "evidence": [
+        "recording 2026-11-12_1235_lance-martin (2026-11-12T20:35:29.000Z–2026-11-12T20:53:47.300Z) matched to session 1379010 contains 12:47:47 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1379163 \"Code review without reviewing code\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_204832330.MP.jpg": {
+      "file": "PXL_20261112_204832330.MP.jpg",
+      "captured_at_utc": "2026-11-12T20:48:32+00:00",
+      "captured_at_local": "2026-11-12T12:48:32-08:00",
+      "sha256": "33d18ec707a43351929094d55bd091fef82953a7cf292f881ad2d7b145de150c",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261112T1247",
+      "session_id": "1379010",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-exploring-claudes-frontier/photos/PXL_20261112_204832330.MP.jpg",
+      "evidence": [
+        "recording 2026-11-12_1235_lance-martin (2026-11-12T20:35:29.000Z–2026-11-12T20:53:47.300Z) matched to session 1379010 contains 12:48:32 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1379163 \"Code review without reviewing code\" also contain the time; the matched recording decides"
+      ]
+    },
+    "PXL_20261112_220704428.jpg": {
+      "file": "PXL_20261112_220704428.jpg",
+      "captured_at_utc": "2026-11-12T22:07:04+00:00",
+      "captured_at_local": "2026-11-12T14:07:04-08:00",
+      "sha256": "5c3465f8eb6290cbbd5a539aede9ec8a5ad6c893fee7f49f7f339721804ee845",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261112T1407",
+      "session_id": "1373478",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/photos/PXL_20261112_220704428.jpg",
+      "evidence": [
+        "recording 2026-11-12_1406_jarred-sumner (2026-11-12T22:06:27.000Z–2026-11-12T22:28:27.700Z) matched to session 1373478 contains 14:07:04 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1380658 \"Scaling Your Agent Workforce: Lessons from Inside Cognition\" also contain the time; the matched recording decides",
+        "was needs-review in run 20261112-141259-1f36b1 (candidates 2f9774d5-ce23-415d-8047-2ffd94f4ee61, 1380658, 1373478; no recording for the slot then); resolved by recording-intake run 20261112-145051-48cb1a, which matched 2026-11-12_1406_jarred-sumner → 1373478; agrees with the room evidence recorded then (Mainstage, Anthropic Bun/AoT-compiler slides) and with operator notes notes/inbox/2026-11-12T1407-aot-compiler-better-than-rust-rewrite.md, notes/inbox/2026-11-12T1409-design-for-testability-first.md (talk: talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/)"
+      ]
+    },
+    "PXL_20261112_220735820.jpg": {
+      "file": "PXL_20261112_220735820.jpg",
+      "captured_at_utc": "2026-11-12T22:07:35+00:00",
+      "captured_at_local": "2026-11-12T14:07:35-08:00",
+      "sha256": "9594c77cea7e1734b1d1aa041d365a7fc7839913bcc1e637cd761c27a8b541df",
+      "width": 3000,
+      "height": 4000,
+      "burst_id": "burst-20261112T1407",
+      "session_id": "1373478",
+      "method": "recording-overlap",
+      "confidence": 0.95,
+      "status": "placed",
+      "placed_path": "talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/photos/PXL_20261112_220735820.jpg",
+      "evidence": [
+        "recording 2026-11-12_1406_jarred-sumner (2026-11-12T22:06:27.000Z–2026-11-12T22:28:27.700Z) matched to session 1373478 contains 14:07:35 PT",
+        "parallel talk window(s) 2f9774d5-ce23-415d-8047-2ffd94f4ee61 \"Token Billionaires Lounge\", 1380658 \"Scaling Your Agent Workforce: Lessons from Inside Cognition\" also contain the time; the matched recording decides",
+        "was needs-review in run 20261112-141259-1f36b1 (candidates 2f9774d5-ce23-415d-8047-2ffd94f4ee61, 1380658, 1373478; no recording for the slot then); resolved by recording-intake run 20261112-145051-48cb1a, which matched 2026-11-12_1406_jarred-sumner → 1373478; agrees with the room evidence recorded then (Mainstage, Anthropic Bun/AoT-compiler slides) and with operator notes notes/inbox/2026-11-12T1407-aot-compiler-better-than-rust-rewrite.md, notes/inbox/2026-11-12T1409-design-for-testability-first.md (talk: talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/)"
+      ]
+    }
+  },
+  "placements": {
+    "1323755": {
+      "dir": "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/photos",
+      "photos": [
+        "PXL_20261111_192121284.jpg",
+        "PXL_20261111_192124422.MP.jpg",
+        "PXL_20261111_192337423.MP.jpg",
+        "PXL_20261111_192437514.jpg",
+        "PXL_20261111_192552608.MP.jpg"
+      ]
+    },
+    "1333169": {
+      "dir": "talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/photos",
+      "photos": [
+        "PXL_20261110_175511716.jpg"
+      ]
+    },
+    "1334565": {
+      "dir": "talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/photos",
+      "photos": [
+        "PXL_20261110_233809826.MP.jpg",
+        "PXL_20261110_234031965.jpg",
+        "PXL_20261110_234049175.jpg",
+        "PXL_20261110_234202157.jpg",
+        "PXL_20261110_234349286.jpg",
+        "PXL_20261110_235027064.jpg",
+        "PXL_20261110_235341969.MP.jpg"
+      ]
+    },
+    "1341863": {
+      "dir": "talks/2026-11-10-from-coding-agents-to-knowledge-work-agents/photos",
+      "photos": [
+        "PXL_20261110_220127976.jpg"
+      ]
+    },
+    "1352199": {
+      "dir": "talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/photos",
+      "photos": [
+        "PXL_20261110_225748351.jpg",
+        "PXL_20261110_230002960.MP.jpg"
+      ]
+    },
+    "1352467": {
+      "dir": "talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/photos",
+      "photos": [
+        "PXL_20261111_171209055.MP.jpg",
+        "PXL_20261111_171601929.jpg",
+        "PXL_20261111_171650670.MP.jpg",
+        "PXL_20261111_172207359.jpg",
+        "PXL_20261111_172722980.MP.jpg",
+        "PXL_20261111_172835016.jpg"
+      ]
+    },
+    "1356697": {
+      "dir": "talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/photos",
+      "photos": [
+        "PXL_20261110_221921464.MP.jpg",
+        "PXL_20261110_222347495.jpg",
+        "PXL_20261110_222825483.jpg",
+        "PXL_20261110_223052728.MP.jpg",
+        "PXL_20261110_223144635.jpg"
+      ]
+    },
+    "1373446": {
+      "dir": "talks/2026-11-11-all-code-is-slop-except-mine/photos",
+      "photos": [
+        "PXL_20261111_180543709.jpg",
+        "PXL_20261111_180633895.MP.jpg",
+        "PXL_20261111_181315486.MP.jpg"
+      ]
+    },
+    "1373457": {
+      "dir": "talks/2026-11-11-cloudflare-is-a-neolab/photos",
+      "photos": [
+        "PXL_20261111_174204253.jpg",
+        "PXL_20261111_174235183.MP.jpg",
+        "PXL_20261111_174332301.MP.jpg",
+        "PXL_20261111_174612522.jpg",
+        "PXL_20261111_174749891.MP.jpg",
+        "PXL_20261111_175158642.MP.jpg",
+        "PXL_20261111_175645827.jpg"
+      ]
+    },
+    "1373460": {
+      "dir": "talks/2026-11-11-heal-your-agents-dont-just-grade-them/photos",
+      "photos": [
+        "PXL_20261111_195547531.jpg",
+        "PXL_20261111_195708977.jpg"
+      ]
+    },
+    "1373462": {
+      "dir": "talks/2026-11-11-how-to-build-agents-over-your-own-data/photos",
+      "photos": [
+        "PXL_20261111_201809500.jpg",
+        "PXL_20261111_202017480.jpg",
+        "PXL_20261111_202234302.jpg",
+        "PXL_20261111_202529574.jpg",
+        "PXL_20261111_202947151.jpg",
+        "PXL_20261111_203144669.MP.jpg"
+      ]
+    },
+    "1373464": {
+      "dir": "talks/2026-11-11-the-software-factory-that-needs-zero-fdes/photos",
+      "photos": [
+        "PXL_20261111_205517744.MP.jpg"
+      ]
+    },
+    "1373465": {
+      "dir": "talks/2026-11-11-i-love-you-so-jevving-much/photos",
+      "photos": [
+        "PXL_20261111_220719135.jpg",
+        "PXL_20261111_220721084.jpg",
+        "PXL_20261111_220808193.MP.jpg",
+        "PXL_20261111_220941916.jpg",
+        "PXL_20261111_220946718.jpg",
+        "PXL_20261111_221035708.MP.jpg",
+        "PXL_20261111_221152212.MP.jpg",
+        "PXL_20261111_221254071.jpg",
+        "PXL_20261111_221334555.jpg",
+        "PXL_20261111_221509505.jpg",
+        "PXL_20261111_221614856.jpg",
+        "PXL_20261111_221803022.jpg",
+        "PXL_20261111_221846829.jpg",
+        "PXL_20261111_222013873.jpg",
+        "PXL_20261111_222224555.jpg",
+        "PXL_20261111_222426885.jpg",
+        "PXL_20261111_222912575.jpg"
+      ]
+    },
+    "1373469": {
+      "dir": "talks/2026-11-11-what-it-takes-to-set-intelligence-free/photos",
+      "photos": [
+        "PXL_20261112_003006513.jpg",
+        "PXL_20261112_003010044.jpg",
+        "PXL_20261112_003205587.jpg",
+        "PXL_20261112_003527454.jpg",
+        "PXL_20261112_004138678.jpg",
+        "PXL_20261112_004621562.jpg"
+      ]
+    },
+    "1373470": {
+      "dir": "talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/photos",
+      "photos": [
+        "PXL_20261112_005033164.MP.jpg",
+        "PXL_20261112_005117225.jpg",
+        "PXL_20261112_005452779.jpg",
+        "PXL_20261112_010359309.jpg"
+      ]
+    },
+    "1373471": {
+      "dir": "talks/2026-11-11-software-factories-escape-from-trash-mountain/photos",
+      "photos": [
+        "PXL_20261112_010730772.jpg",
+        "PXL_20261112_011025815.MP.jpg",
+        "PXL_20261112_011400786.MP.jpg",
+        "PXL_20261112_011449195.jpg",
+        "PXL_20261112_011740061.jpg",
+        "PXL_20261112_012207663.MP.jpg",
+        "PXL_20261112_012411791.jpg",
+        "PXL_20261112_012731950.jpg"
+      ]
+    },
+    "1373475": {
+      "dir": "talks/2026-11-12-a-new-age-of-software-engineering/photos",
+      "photos": [
+        "PXL_20261112_192122983.jpg",
+        "PXL_20261112_192236451.jpg",
+        "PXL_20261112_192852968.MP.jpg",
+        "PXL_20261112_193025663.jpg"
+      ]
+    },
+    "1373478": {
+      "dir": "talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/photos",
+      "photos": [
+        "PXL_20261112_220704428.jpg",
+        "PXL_20261112_220735820.jpg"
+      ]
+    },
+    "1376191": {
+      "dir": "talks/2026-11-11-2026-in-llms/photos",
+      "photos": [
+        "PXL_20261112_013245403.MP.jpg",
+        "PXL_20261112_013345081.jpg",
+        "PXL_20261112_013449465.jpg",
+        "PXL_20261112_013801563.jpg",
+        "PXL_20261112_014042907.MP.jpg",
+        "PXL_20261112_014156023.MP.jpg"
+      ]
+    },
+    "1376198": {
+      "dir": "talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/photos",
+      "photos": [
+        "PXL_20261111_232705433.jpg",
+        "PXL_20261111_233341807.jpg",
+        "PXL_20261111_233429743.jpg",
+        "PXL_20261111_233436849.jpg"
+      ]
+    },
+    "1376240": {
+      "dir": "talks/2026-11-11-mc-intro/photos",
+      "photos": [
+        "PXL_20261111_170523953.MP.jpg"
+      ]
+    },
+    "1379010": {
+      "dir": "talks/2026-11-12-exploring-claudes-frontier/photos",
+      "photos": [
+        "PXL_20261112_203545768.jpg",
+        "PXL_20261112_203933625.jpg",
+        "PXL_20261112_204152268.MP.jpg",
+        "PXL_20261112_204737535.jpg",
+        "PXL_20261112_204747489.MP.jpg",
+        "PXL_20261112_204832330.MP.jpg"
+      ]
+    },
+    "1379011": {
+      "dir": "talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/photos",
+      "photos": [
+        "PXL_20261112_201506625.jpg",
+        "PXL_20261112_201950177.jpg",
+        "PXL_20261112_202230030.jpg"
+      ]
+    },
+    "1379052": {
+      "dir": "talks/2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter/photos",
+      "photos": [
+        "PXL_20261112_194819770.jpg",
+        "PXL_20261112_194914731.jpg",
+        "PXL_20261112_195334232.MP.jpg"
+      ]
+    },
+    "1379134": {
+      "dir": "talks/2026-11-10-scott-tolinski-co-host-syntax/photos",
+      "photos": [
+        "PXL_20261110_181435938.jpg",
+        "PXL_20261110_181822800.jpg",
+        "PXL_20261110_182207872.MP.jpg",
+        "PXL_20261110_182209724.jpg",
+        "PXL_20261110_182211766.MP.jpg",
+        "PXL_20261110_182817402.jpg",
+        "PXL_20261110_182819090.jpg",
+        "PXL_20261110_182820893.jpg",
+        "PXL_20261110_183242051.jpg"
+      ]
+    }
+  },
+  "event_photos": {
+    "2026-11-11": [
+      "PXL_20261111_162505741.MP.jpg",
+      "PXL_20261111_164545430.TS-000.jpg"
+    ]
+  },
+  "coverage": {
+    "photos_dir": "photos",
+    "photo_count": 121,
+    "placed_count": 119,
+    "event_count": 2,
+    "review_count": 0,
+    "unplaced_count": 0,
+    "timezone": "America/Los_Angeles",
+    "last_checked": "2026-11-12T14:53:55-08:00",
+    "generated_at": "2026-11-12T14:53:55-08:00"
+  }
+}
