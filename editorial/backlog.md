@@ -14,6 +14,7 @@
 - [ ] Follow up on which tools to keep in the harness, and which the model now does itself (from today's tools talk; ties to Philipp Schmid's "I deleted 90% of my harness") — notes/inbox/2026-11-12T1221-follow-up-which-harness-tools-to-keep.md
 - [ ] Follow up on giving the agent a database to store things (from Lance Martin's "Exploring Claude's frontier", which gives agents git and a SQL database as primitives) — notes/inbox/2026-11-12T1239-follow-up-agent-database-to-store-stuff.md
 - [ ] Follow up on building agent memory from session transcripts (from Lance Martin's "Exploring Claude's frontier"; ties to Diogo Almeida and Ramp's Inspect) — notes/inbox/2026-11-12T1249-follow-up-memory-from-transcripts.md
+- [ ] Try Parallel (Parallel Web Systems) for research: its search and Decisions APIs, possibly for talk dossiers (from Devin Gupta's "The first Grounded Decision Model") — notes/inbox/2026-11-12T1441-follow-up-parallel-for-research.md
 
 ## Digest later
 
