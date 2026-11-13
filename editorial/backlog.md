@@ -5,6 +5,8 @@
 - [ ] Rebuild Mixedbread: our own search-over-your-data layer, indexed ahead of agent queries (from Aamir Shakir's talk; ties to the lakehouse service idea) — notes/inbox/2026-11-11T1225-rebuild-mixedbread.md
 - [ ] Build out a map of how tools fit with decisions: tools, decision models, checks and humans, and where each belongs (from Diogo Almeida's Jev talk) — notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md
 - [ ] Write about how to use decision models overall (System One models: DeepMind's decision model, Cloudflare's clef/clairic, Jev at Glean and Workday) — notes/inbox/2026-11-11T1122-write-about-decision-models.md
+- [ ] Service idea: brownfield agent factories, bringing agents into a client's existing codebase with tooling for each mode of work (from Justin McCarthy's "Brownfield Factories") — notes/inbox/2026-11-12T1524-something-we-could-work-on-and-sell.md
+- [ ] Start working on the demand factory: a factory for finding what customers actually need, the counterpart to a software factory (from Justin McCarthy's "Brownfield Factories") — notes/inbox/2026-11-12T1535-start-working-on-the-demand-factory.md
 
 ## Review later
 
@@ -16,6 +18,8 @@
 - [ ] Follow up on building agent memory from session transcripts (from Lance Martin's "Exploring Claude's frontier"; ties to Diogo Almeida and Ramp's Inspect) — notes/inbox/2026-11-12T1249-follow-up-memory-from-transcripts.md
 - [ ] Try Parallel (Parallel Web Systems) for research: its search and Decisions APIs, possibly for talk dossiers (from Devin Gupta's "The first Grounded Decision Model") — notes/inbox/2026-11-12T1441-follow-up-parallel-for-research.md
 - [ ] Try agent swarms ourselves: a lead agent plus helpers on a shared store (git and a SQL database), after Lance Martin's thousand-agent run — notes/inbox/2026-11-12T1500-try-agent-swarms.md
+- [ ] Look into Mobbin for UI research (a library of real app screens and flows) — notes/inbox/2026-11-12T1507-look-into-mobbin-for-ui-research.md
+- [ ] Research how to get Sentry into our projects: monitoring for apps and agent runs, and its Seer agent (from Arsalan Bashir's "Let the Agent Cook") — notes/inbox/2026-11-12T1508-research-adding-sentry.md
 
 ## Digest later
 
@@ -25,3 +29,4 @@
 - [ ] Check out the statechart skill (from Lauren Tan's "All Code Is Slop (Except Mine)") — notes/inbox/2026-11-11T1014-check-out-statechart-skill.md
 - [ ] Deep dive: how Cloudflare really works with agents (Durable Objects, Workers AI, the Agents SDK), from Michelle Chen's "cloudflare is a neolab" — notes/inbox/2026-11-11T0949-cloudflare-and-agents-deep-dive.md
 - [ ] Learn what dbt actually is and where it fits in a data stack; it has come up in several talks — notes/inbox/2026-11-12T1222-follow-up-what-is-dbt.md
+- [ ] Read the papers Diffusion has published (Justin McCarthy's company, "Brownfield Factories") — notes/inbox/2026-11-12T1538-look-up-diffusion-papers.md

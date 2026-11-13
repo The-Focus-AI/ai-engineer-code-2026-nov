@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>40× the work · Walden Yan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Thu 12 Nov 2026 · Continental 4–6 (Mainstage)</div>
+  <h1>40× the work on 2.7× the people</h1>
+  <p class="dek">In a year, Cognition's merged pull requests grew forty-fold while its engineering headcount grew 2.7 times. Walden Yan's answer isn't the agent they sell. They reorganized the team, rebuilt how code gets tested, let agents prove their work with videos and improve the factory themselves, and started giving agents jobs instead of tasks. Set up that way, the limit is ambition.</p>
+  <div class="talk-meta">Walden Yan, Cognition · 14 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="capacity.jpg" alt="His slide: Cognition's delivery capacity is exploding. Monthly bars of merged PR volume from November 2025 at 1x to October 2026 at 40.4x, with a dotted line for engineering headcount reaching 2.7x.">
+        <figcaption>His slide, 11:21 am (straightened from photos/PXL_20261112_192122983.jpg; the left edge was out of frame)</figcaption>
+      </figure>
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="verticals.jpg" alt="His slide: We've restructured our teams to ship more. Before, organized by role: a product manager, four engineers, and QA and on-call in separate rows. After, organized by vertical: three pods, such as billing, the mobile app and integrations, each two people with a block of agents, each covering product, engineering, QA and on-call.">
+        <figcaption>His slide, 11:22 am (straightened from photos/PXL_20261112_192236451.jpg)</figcaption>
+      </figure>
+      <figure class="talk-visual quote-card" data-visual="v3">
+        <p class="quote-big">“We've abstracted away all the development to be based on evidence, videos, and I can just send the proof.”<span>Walden Yan · 00:03:09</span></p>
+      </figure>
+      <figure class="talk-visual quote-card" data-visual="v4">
+        <p class="quote-big">“And by the way, these agents. You need to teach them how to test your codebase as well.”<span>Walden Yan · 00:04:06</span></p>
+      </figure>
+      <figure class="talk-visual quote-card" data-visual="v5">
+        <p class="quote-big">“and the agents will go and optimize your software factory for you.”<span>Walden Yan · 00:06:41</span></p>
+      </figure>
+      <figure class="talk-visual photo-card" data-visual="v6">
+        <img src="outcomes.jpg" alt="His slide: From delegating tasks to delegating outcomes. Human: express a desire, Walden asks Make our P99 endpoint latency faster, and starts Devin. Devin defines goals and KPIs: from 840 ms to 500 ms, 5,000 ACUs approved. Devin scans and creates tasks: 14 issues, including batch order lookups, add missing indexes, alert if P99 over one second, weekly report. Devin monitors and reports: a phone notification, P99 is down 65 percent, no regressions.">
+        <figcaption>His slide, 11:28 am (straightened from photos/PXL_20261112_192852968.MP.jpg)</figcaption>
+      </figure>
+      <figure class="talk-visual photo-card" data-visual="v7">
+        <img src="gpus.jpg" alt="His slide: Example 1: 2.8x TPM on NVIDIA Vera Rubins. Output tokens per minute per GPU on an agentic workload, 8-GPU pair, rising in nine steps from about 10K to 27,336 between September 18 and 26, past the GB300 best of 17,185 and the GB200 best of 8,471. What Devin changed: merged GPU-to-GPU steps, batched draft-model guesses, grouped incoming prompts, pre-recorded GPU tasks, more conversations at once, more memory and less waiting, faster memory clock, automated tuning.">
+        <figcaption>His slide, 11:30 am (straightened from photos/PXL_20261112_193025663.jpg)</figcaption>
+      </figure>
+      <figure class="talk-visual quote-card" data-visual="v8">
+        <p class="quote-big">“So I think really most teams are limited by the amount of ambition they have.”<span>Walden Yan · 00:13:07</span></p>
+      </figure>
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+  <main class="talk-copy">
+    <section data-chapter="forty-x" data-visual="v1" data-caption="40× on 2.7×">
+      <div class="chapter">The result</div>
+      <h2>40× the PRs on 2.7× the people</h2>
+      <blockquote>“This 40x. Is a 40x in the number of merged PRs we are producing on our engineering team.”<span class="cite">00:00:00</span></blockquote>
+      <blockquote>“that two point seven x. That is our engineering headcount growth in the same period.”<span class="cite">00:00:00</span></blockquote>
+      <p>So each engineer is more than ten times as productive, and he claims the work hasn't got worse:</p>
+      <blockquote>“And I would dare to say that these PRs are just as high quality, if not higher quality, than they were a year ago.”<span class="cite">00:00:00</span></blockquote>
+      <p>The machinery is a software factory: a pull request goes from bug report to merge, monitoring and maintenance without a person, escalating when human judgment is needed.</p>
+      <blockquote>“By default, everything should be self-driving.”<span class="cite">00:01:18</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:00, 00:01:18</p>
+    </section>
+
+    <section data-chapter="verticals" data-visual="v2" data-caption="Pods, not roles">
+      <div class="chapter">The org</div>
+      <h2>Organized by vertical, not role</h2>
+      <p>In March they told the team that handing tickets to an agent wasn't the job any more:</p>
+      <blockquote>“You're not going to really be set up for success in the age of AI because anything that is described and can be implemented will be able to send to Devin.”<span class="cite">00:01:48</span></blockquote>
+      <p>Large teams became small pods, each with swarms of agents:</p>
+      <blockquote>“So instead, you might have only two or three engineers on a team at a time.”<span class="cite">00:01:48</span></blockquote>
+      <blockquote>“But they're responsible for everything beyond engineering as well.”<span class="cite">00:01:48</span></blockquote>
+      <p>Customer bug reports, QA testing, product management: each engineer runs their own board and sends the work to agents.</p>
+      <div class="reading"><b>From the notes:</b> “they've restructured the team, organized by vertical, no longer by role”. <b>The reading:</b> if implementation is cheap, what's scarce is knowing what to build and whether it works, so the engineer becomes the owner of a product area. It's the same move as Justin McCarthy's “we have a new job” and his demand factory in “Brownfield Factories” this afternoon.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:48</p>
+    </section>
+
+    <section data-chapter="proof" data-visual="v3" data-caption="Evidence, not review">
+      <div class="chapter">The workflow</div>
+      <h2>Proof, not review</h2>
+      <blockquote>“Another thing I'd like to highlight is we work from Slack everywhere.”<span class="cite">00:03:09</span></blockquote>
+      <p>A customer sends a video of a bug; it's forwarded to an internal channel with Devin tagged; Devin opens a pull request and sends back a video of the fix, which he can send straight to the customer.</p>
+      <blockquote>“We've abstracted away all the development to be based on evidence, videos, and I can just send the proof.”<span class="cite">00:03:09</span></blockquote>
+      <blockquote>“A point where you can do your entire development lifecycle without opening up an IDE or without opening up a single coding engine.”<span class="cite">00:03:09</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “they are sharing the videos etc to show that things work”. <b>The reading:</b> the same idea as <a href="../../2026-11-11-how-to-build-an-agent-that-builds-the-culture/experience/page.html">Ramp's “the session is the artifact”</a> and Lauren Tan's review by verification artifacts: evidence travels with the change, so people check proof instead of reading code.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:03:09</p>
+    </section>
+
+    <section data-chapter="testing" data-visual="v4" data-caption="The hard part">
+      <div class="chapter">The infrastructure</div>
+      <h2>Teach the agents to test</h2>
+      <blockquote>“It's not just you purchase a coding agent.”<span class="cite">00:04:06</span></blockquote>
+      <blockquote>“You got to go change the way you build.”<span class="cite">00:04:06</span></blockquote>
+      <p>They used to test against staging with people clicking through flows. Now every service runs locally with Docker Compose, every third party has a mocked version, and it all runs in one virtual machine each agent gets, rebuilt from the latest code every hour; when a rebuild breaks, Devin fixes it first.</p>
+      <blockquote>“And every code agent in our company now does not need to touch any live services at all to test their changes.”<span class="cite">00:04:06</span></blockquote>
+      <blockquote>“Devon will write its own skills for how to test our codebase.”<span class="cite">00:04:06</span></blockquote>
+      <p>As the codebase changes, Devin updates those skills. Engineers no longer need their laptops to test changes; several have moved to iPads, which is also more secure, with no secrets on developer machines. Agents even test multi-user Zoom calls inside one VM.</p>
+      <div class="reading"><b>From the notes:</b> “teach the agents how to test the code base”. <b>The reading:</b> the “Guardrails people own” theme as infrastructure: a reproducible environment the agent can run anything in, and testing knowledge the agent keeps current itself. It's StrongDM's digital-twin idea (mock every third party) and <a href="../../2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">Lovable's golden checkpoints</a>, built for one company's own stack.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:04:06</p>
+    </section>
+
+    <section data-chapter="self-improve" data-visual="v5" data-caption="Agents on the factory">
+      <div class="chapter">The loop</div>
+      <h2>The factory improves itself</h2>
+      <p>Every line, pull request and decision is tracked, so the record becomes input.</p>
+      <blockquote>“So there's no reason why you should also be able to run agents on top of that.”<span class="cite">00:06:41</span></blockquote>
+      <p>Agents analyse where time and tokens go and what tests would help, and every day post ideas to a channel: change the Node setup and save a minute of CI; change a lint script and catch 20% more bugs before AI code review.</p>
+      <blockquote>“And this has actually been a huge unlock, where you can just set up these systems, and the agents will go and optimize your software factory for you.”<span class="cite">00:06:41</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “they are using sessions for self improvement”. <b>The reading:</b> the outer loop of the “Close the loop” theme, pointed at the factory instead of the product: Overcut's scored retrospectives and <a href="../../2026-11-12-exploring-claudes-frontier/experience/memory.html">Lance Martin's dreaming</a> over transcripts, applied to the engineering process itself.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:06:41</p>
+    </section>
+
+    <section data-chapter="jobs" data-visual="v6" data-caption="Delegate outcomes">
+      <div class="chapter">The shift</div>
+      <h2>From tasks to jobs</h2>
+      <blockquote>“moving from the world where you're giving tasks to your agents to giving jobs to your agents.”<span class="cite">00:07:41</span></blockquote>
+      <blockquote>“You really have to start treating these things like coworkers.”<span class="cite">00:07:41</span></blockquote>
+      <p>Instead of instructions, say “improve P99 latency”: the agent adds telemetry, sets targets, breaks down the work, creates Datadog alerts and weekly Slack reports, and updates you daily. His slide shows it: from 840 ms to a 500 ms target, 5,000 ACUs approved, 14 issues filed, and a report that P99 is down 65% with no regressions.</p>
+      <blockquote>“We want you to just be giving your agent goals that they can work.”<span class="cite">00:07:41</span></blockquote>
+      <p>Anything that matters but isn't measured, measure it: click latency, layout shifts, onboarding retention.</p>
+      <blockquote>“And I encourage you that if you can do that, you should just set up an agent to go optimize that number twenty four seven.”<span class="cite">00:07:41</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:07:41</p>
+    </section>
+
+    <section data-chapter="gpus" data-visual="v7" data-caption="2.8× in a week">
+      <div class="chapter">Example</div>
+      <h2>A week on the new GPUs</h2>
+      <p>Cognition got early access to NVIDIA's Vera Rubin GPUs and had to build an inference stack from scratch. They gave an agent a dedicated set of GPUs and one goal, throughput:</p>
+      <blockquote>“Go figure out how to push that to its limits.”<span class="cite">00:09:27</span></blockquote>
+      <p>Over about a week it found eight or nine improvements, and each went to a person before shipping:</p>
+      <blockquote>“It was sent to a human engineer for final approval.”<span class="cite">00:09:27</span></blockquote>
+      <p>His slide: 27,336 tokens per minute per GPU, 2.8× the starting point, against the GB300's best of 17,185.</p>
+      <div class="reading"><b>The reading:</b> it's <a href="../../2026-11-11-2026-in-llms/experience/page.html">Simon Willison's “Fable class”</a> in practice: define the goal, provide the tools, and the agent works it for days. The human role is the last step: approving each change.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:09:27</p>
+    </section>
+
+    <section data-chapter="android" data-visual="v8" data-caption="Time to be ambitious">
+      <div class="chapter">The close</div>
+      <h2>Android parity in 44 days</h2>
+      <p>Cognition is small and can't staff everything. An engineer, Samuel, had an idea:</p>
+      <blockquote>“Can't we just use that as a blueprint for our Android application?”<span class="cite">00:10:45</span></blockquote>
+      <p>Not one session but a standing job: hooks on the iOS codebase, the Slack channel of user feedback, and live QA against the iOS app, pixel for pixel.</p>
+      <blockquote>“and over the course of 44 days, we have a working application, which we'll be putting out soon.”<span class="cite">00:10:45</span></blockquote>
+      <blockquote>“most days there's not a single human message going to the stage I'm working on it.”<span class="cite">00:10:45</span></blockquote>
+      <p>Some days it merged forty or fifty pull requests, escalating only the most important decisions.</p>
+      <blockquote>“it's not a slo—it's not a slop application.”<span class="cite">00:10:45</span></blockquote>
+      <blockquote>“So I think really most teams are limited by the amount of ambition they have.”<span class="cite">00:13:07</span></blockquote>
+      <blockquote>“So it's time to be ambitious.”<span class="cite">00:13:07</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “he asked the dev to make an android app and keep it parity to the ios app” and “most teams are limited by the amount of ambition they have”. <b>The reading:</b> your later note sharpens it: being ambitious isn't doing more. The Android app isn't more volume; it's a thing they wouldn't have attempted with the people they had. For a client, the question isn't how many tickets agents can close but which standing jobs, with a measurable goal and a way to check, they'd hand over. It's also the opposite of <a href="../../2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Steve Yegge's experience</a>: forty PRs a day with almost no human messages, because the iOS app is the spec and pixel-level QA is the check.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:10:45, 00:13:07</p>
+    </section>
+  </main>
+</div>
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room). Quotes are verbatim from the transcript. “From the notes” and “The reading” are interpretation, not his words. More on the <a href="../links.md">links page</a>.
+</footer>
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>
