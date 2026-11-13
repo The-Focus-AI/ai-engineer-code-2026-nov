@@ -9,11 +9,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="../site/theme.css">
 <link rel="stylesheet" href="../site/nav.css">
+<link rel="stylesheet" href="../site/explorer.css">
 <link rel="stylesheet" href="../site/pages.css">
 
 </head>
 <body>
-<nav class="topnav" aria-label="Site"><a class="brand" href="../index.html">AIE Code ’26</a><a href="../index.html">Today</a><a href="../site/schedule.html">Schedule</a><a href="../site/talks/index.html">Talks</a><a href="../site/themes.html">Themes</a><a href="../site/people.html" aria-current="page">People</a><a href="../site/followups.html">Follow-ups</a></nav>
+<nav class="topnav" aria-label="Site"><a class="brand" href="../index.html">AIE Code ’26<span class="brand-badge">Archive</span></a><a href="../index.html">Themes</a><a href="../site/talks/index.html">Talks</a><a href="../site/people.html" aria-current="page">People</a><a href="../site/schedule.html">Schedule</a></nav>
 <div class="sheet">
 
   <header class="masthead"><p class="mono agency">AI Engineer Code Summit 2026</p><h1>People</h1><p class="sub">Follow a speaker, or start a post to them. Each button opens X; nothing is sent until you send it.</p></header>
@@ -291,6 +292,8 @@
     <div class="acts"><a class="btn" href="https://x.com/intent/follow?screen_name=ErikCH" target="_blank" rel="noopener">Follow @ErikCH</a><a class="btn ghost" href="https://x.com/intent/post?text=%40ErikCH%20" target="_blank" rel="noopener">Write</a><label class="done"><input type="checkbox" data-handle="ErikCH"> followed</label><a class="ext" href="https://facebook.com/computation" target="_blank" rel="noopener">facebook.com</a><a class="ext" href="https://www.linkedin.com/in/erikhanchett/" target="_blank" rel="noopener">LinkedIn</a></div>
   </div></div></section>
 </div>
+<script src="../site/xref.js" defer></script>
+<script src="../site/explorer.js" defer></script>
 <script>(function(){
   var key="aie-followed";var done={};try{done=JSON.parse(localStorage.getItem(key)||"{}")}catch(e){}
   document.querySelectorAll('input[data-handle]').forEach(function(b){
