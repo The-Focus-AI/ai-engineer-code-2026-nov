@@ -35,12 +35,13 @@ const report = (o: Record<string, unknown>) => { console.log(JSON.stringify(o));
 
 // Data the site is built from, plus the rendered pages. Code (scripts/, src/,
 // docs, CSS, the runtime) is committed by hand, separately.
-const DATA = ["talks", "notes", "recordings", "state", "analysis", "brief", "editorial", "photos/manifest.json",
-  "site/recommendations.json", "site/index.html", "site/talks", "site/people.html", "site/themes.html", "index.html"];
+const DATA = ["talks", "notes", "recordings", "state", "analysis", "brief", "editorial", "atlases", "photos/manifest.json",
+  "site/recommendations.json", "site/index.html", "site/talks", "site/visuals", "site/people.html", "site/themes.html",
+  "site/schedule.html", "site/today.html", "site/xref.js", "index.html"];
 // Under state/, only a moved fingerprint counts: a render that moved rewrites
 // the node's .version. Ledgers, and world-models re-stamped by an unmoved
 // render (a gateway records received_at every tick), are noise.
-const NOISE = (p: string): boolean => (p.startsWith("state/") && !p.endsWith(".version")) || /\.html$/.test(p);
+const NOISE = (p: string): boolean => (p.startsWith("state/") && !p.endsWith(".version")) || /\.html$/.test(p) || p === "site/xref.js";
 
 const branch = git("rev-parse", "--abbrev-ref", "HEAD").out;
 if (branch !== "main") report({ published: false, why: `on branch ${branch}, not main` });

@@ -18,12 +18,25 @@ Usage:
 Needs ImageMagick (`magick`), Pillow and numpy.
 """
 import argparse
+import importlib.util
 import subprocess
 import sys
+import tempfile
 from collections import deque
+from pathlib import Path
 
 import numpy as np
 from PIL import Image, ImageOps
+
+
+def _load_cleaner():
+    path = Path(__file__).with_name("clean-slides.py")
+    spec = importlib.util.spec_from_file_location("clean_slides", path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Could not load cleaner module from {path}")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
 
 
 def find_corners(path: str, work: int = 640):
@@ -74,6 +87,8 @@ def main() -> None:
     ap.add_argument("--corners", help="x1,y1,x2,y2,x3,y3,x4,y4 in original pixels: TL, TR, BR, BL")
     ap.add_argument("--width", type=int, default=1600)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--no-clean", action="store_true", help="skip tonal/cast restoration (still converts Display P3 to sRGB)")
+    ap.add_argument("--mode", choices=["auto", "dark", "light", "color", "illustration", "stage"], default="auto")
     args = ap.parse_args()
 
     if args.corners:
@@ -111,12 +126,34 @@ def main() -> None:
     print("corners", ", ".join(f"({x:.0f},{y:.0f})" for x, y in corners), f"→ {W}x{H}")
     if args.dry_run:
         return
-    subprocess.run(
-        ["magick", args.src, "-auto-orient", "-virtual-pixel", "black",
-         "-define", f"distort:viewport={W}x{H}+0+0",
-         "-distort", "Perspective", pairs, "+repage", "-quality", "88", args.out],
-        check=True,
-    )
+    cleaner = _load_cleaner()
+    with Image.open(args.src) as src_img:
+        fallback_p3_bytes = src_img.info.get("icc_profile")
+
+    tmp = tempfile.NamedTemporaryFile(suffix=".png", delete=False)
+    tmp_path = Path(tmp.name)
+    tmp.close()
+    try:
+        subprocess.run(
+            ["magick", args.src, "-auto-orient", "-virtual-pixel", "edge",
+             "-define", f"distort:viewport={W}x{H}+0+0",
+             "-distort", "Perspective", pairs, "+repage", str(tmp_path)],
+            check=True,
+        )
+        with Image.open(tmp_path) as warped:
+            if args.no_clean:
+                out_img = cleaner.to_srgb(warped, fallback_p3_bytes=fallback_p3_bytes)
+            else:
+                out_img, cls = cleaner.clean_slide_image(
+                    warped,
+                    path_hint=args.out,
+                    mode=args.mode,
+                    fallback_p3_bytes=fallback_p3_bytes,
+                )
+                print(f"  cleaned ({cls})")
+        cleaner.save_srgb_jpeg(out_img, args.out)
+    finally:
+        tmp_path.unlink(missing_ok=True)
 
 
 if __name__ == "__main__":

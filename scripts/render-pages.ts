@@ -145,8 +145,98 @@ const hubHref = (slug: string, up: string): string => `${up}site/talks/${slug}.h
 const pagePath = (slug: string): string | undefined => ["experience/index.html", "experience/page.html"].map((f) => `talks/${slug}/${f}`).find(exists);
 // A talk's front door: its story page when one is built, otherwise its hub.
 const talkHref = (slug: string, up: string): string => { const pg = pagePath(slug); return pg ? `${up}${pg}` : hubHref(slug, up); };
+const leadSlideImage = (slug: string): string | null => {
+  const f = list(`talks/${slug}/experience`).find((x) => /\.(jpe?g|png|webp)$/i.test(x));
+  return f ? `talks/${slug}/experience/${f}` : null;
+};
 const slugBySession = new Map(captured.filter((t) => t.session).map((t) => [t.session!.session_id, t.slug]));
 const talkBySlug = new Map(captured.map((t) => [t.slug, t]));
+
+const THEME_SLIDES: Record<string, { src: string; alt: string; speaker: string; slug: string }> = {
+  "own-the-verification-loop": {
+    src: "talks/2026-11-11-heal-your-agents-dont-just-grade-them/experience/immune-system.jpg",
+    alt: "Slide: Your immune system doesn't file a Jira ticket — Detect, Respond, Remember",
+    speaker: "Noam Yadin-Evron",
+    slug: "2026-11-11-heal-your-agents-dont-just-grade-them",
+  },
+  "brownfield-and-demand-factories": {
+    src: "talks/2026-11-12-brownfield-factories/experience/brownfield-faster-cheaper-safer.jpg",
+    alt: "Slide: Brownfield Factories: Faster, Cheaper, Safer",
+    speaker: "Justin McCarthy",
+    slug: "2026-11-12-brownfield-factories",
+  },
+  "delete-the-harness-harden-the-runtime": {
+    src: "talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/one-tool.jpg",
+    alt: "Slide: A 1-tool agent: a computer instead of a toolbox",
+    speaker: "Philipp Schmid",
+    slug: "2026-11-11-i-deleted-90-of-my-harness-and-it-got-better",
+  },
+  "system-one-decision-models": {
+    src: "talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/duckdb-live-demo.jpg",
+    alt: "Slide: System One decision model running inline inside a DuckDB SQL query",
+    speaker: "Scott Roberts",
+    slug: "2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db",
+  },
+  "modeled-context-beats-connectors": {
+    src: "talks/2026-11-11-how-to-build-agents-over-your-own-data/experience/one-search-layer.jpg",
+    alt: "Slide: One search layer for company knowledge across Slack, Drive, GitHub, and Notion",
+    speaker: "Aamir Shakir",
+    slug: "2026-11-11-how-to-build-agents-over-your-own-data",
+  },
+  "judgment-when-code-is-free": {
+    src: "talks/2026-11-12-judgement-is-the-last-job/experience/judgement-taste.jpg",
+    alt: "Slide: Judgement and taste when code generation becomes trivial",
+    speaker: "Ishaan Dey",
+    slug: "2026-11-12-judgement-is-the-last-job",
+  },
+};
+
+interface ClayVisual { src: string; alt: string; caption: string }
+
+const HERO_CLAY: ClayVisual = {
+  src: "site/visuals/hero-six-shifts.jpg",
+  alt: "Stop-motion plasticine cutaway dollhouse workshop across six stack layers, from cellar balance scales and recipe-card drawers up to a sunny rooftop terrace where a clay builder looks through a telescope.",
+  caption: "Candy Clay · Six-layer post-diff workshop",
+};
+
+const CONTESTED_CLAY: ClayVisual = {
+  src: "site/visuals/contested-fault-lines.jpg",
+  alt: "Stop-motion plasticine scene of six pairs of clay engineers facing each other across a chalk line on a checkered tabletop, each holding contrasting miniature models.",
+  caption: "Candy Clay · Six open architectural debates",
+};
+
+const THEME_CLAY: Record<string, ClayVisual> = {
+  "own-the-verification-loop": {
+    src: "site/visuals/theme-01-verification-loop.jpg",
+    alt: "Stop-motion plasticine quality-control room where robots send pastel clay loaves through brass sizing rings, scales, and a glass sandbox while an engineer tunes the ring.",
+    caption: "Candy Clay · Own the verification loop",
+  },
+  "brownfield-and-demand-factories": {
+    src: "site/visuals/theme-02-brownfield-factories.jpg",
+    alt: "Stop-motion plasticine brick dollhouse factory with glowing windows, roof repairs, neighbors carrying parcels, a half-full pastel fuel tank, and an untouched green field beside it.",
+    caption: "Candy Clay · Brownfield & demand factories",
+  },
+  "delete-the-harness-harden-the-runtime": {
+    src: "site/visuals/theme-03-delete-the-harness.jpg",
+    alt: "Stop-motion plasticine workshop where discarded pastel pulleys, yarn harnesses, and crutches are swept into a heap while a clay robot builds cleanly with one mint toolbox.",
+    caption: "Candy Clay · Delete the harness",
+  },
+  "system-one-decision-models": {
+    src: "site/visuals/theme-04-system-one-models.jpg",
+    alt: "Stop-motion plasticine railway sorting table where a quick mint clay gatekeeper flicks rolling marbles into pastel bowls while a sleepy philosopher dozes behind.",
+    caption: "Candy Clay · System One decision models",
+  },
+  "modeled-context-beats-connectors": {
+    src: "site/visuals/theme-05-modeled-context.jpg",
+    alt: "Stop-motion plasticine library where a tangled basket of hoses sits aside while a librarian behind a neat card catalog hands one clean index card to a clay robot.",
+    caption: "Candy Clay · Modeled context over connectors",
+  },
+  "judgment-when-code-is-free": {
+    src: "site/visuals/theme-06-judgment.jpg",
+    alt: "Stop-motion plasticine studio where a bespectacled clay architect places a gold star beside one serene buttercream cottage and shuts wooden louvers against outside clutter.",
+    caption: "Candy Clay · Judgment when code is free",
+  },
+};
 
 // --- Structured themes, claims, theses, contested fault lines & singletons.
 interface RawClaim { claim_id: string; section: string; at_seconds: number; quote: string; claim: string; speaker?: string }
@@ -428,6 +518,7 @@ const shell = (o: { title: string; active: Section | null; up: string; body: str
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="${o.up}site/theme.css">
 <link rel="stylesheet" href="${o.up}site/nav.css">
+<link rel="stylesheet" href="${o.up}site/explorer.css">
 <link rel="stylesheet" href="${o.up}site/pages.css">
 ${o.style ? `<style>${o.style}</style>` : ""}
 </head>
@@ -436,6 +527,8 @@ ${topnav(o.active, o.up)}
 <div class="sheet">
 ${o.body}
 </div>
+<script src="${o.up}site/xref.js" defer></script>
+<script src="${o.up}site/explorer.js" defer></script>
 ${o.script ? `<script>${o.script}</script>` : ""}
 </body>
 </html>
@@ -488,10 +581,12 @@ for (const q of contestedList) {
   const xrefTalks: Record<string, {
     slug: string; title: string; speakers: string; when: string; thesis: string;
     storyHref: string; hubHref: string; themeIds: string[];
+    leadImage: string | null; minutes: number; photoCount: number; noteCount: number; builtCount: number;
     contested: ReturnType<typeof talkContestedMap.get>;
     related: RelatedTalk[];
   }> = {};
   for (const t of captured) {
+    const p = `talks/${t.slug}`;
     xrefTalks[t.slug] = {
       slug: t.slug,
       title: t.title,
@@ -501,6 +596,11 @@ for (const q of contestedList) {
       storyHref: talkHref(t.slug, ""),
       hubHref: hubHref(t.slug, ""),
       themeIds: themesForSlug(t.slug).map((th) => th.id),
+      leadImage: leadSlideImage(t.slug),
+      minutes: t.recordings.reduce((n, r) => n + r.minutes, 0),
+      photoCount: list(`${p}/photos`).filter((f) => /\.(jpe?g|png|webp|heic)$/i.test(f)).length,
+      noteCount: t.notes.length,
+      builtCount: builtCount(t),
       contested: talkContestedMap.get(t.slug) ?? [],
       related: relatedFor(t.slug, 5),
     };
@@ -512,17 +612,40 @@ for (const q of contestedList) {
       subtitle: `How all ${themes.length} conference themes fit together across ${corpusMeta.talk_count ?? captured.length} talks`,
       href: masterThemesRel,
     },
-    themes: themes.map((th) => ({
-      num: th.num,
-      id: th.id,
-      name: th.name,
-      claim: th.claim,
-      talkCount: th.slugs.size,
-      claimCount: th.claims.length,
-      counterCount: th.counters.length,
-      deepDiveHref: themeDeepDiveRel(th.id),
-      hubAnchor: `site/themes.html#${th.id}`,
-    })),
+    themes: themes.map((th) => {
+      const sortedSlugs = [...th.slugs].sort((a, b) =>
+        (talkBySlug.get(a)?.session?.starts_at ?? "").localeCompare(talkBySlug.get(b)?.session?.starts_at ?? ""),
+      );
+      const leadClaim = th.claims.find((c) => c.quote && c.quote.trim().length > 0) ?? null;
+      return {
+        num: th.num,
+        id: th.id,
+        name: th.name,
+        claim: th.claim,
+        definition: th.definition,
+        alsoCalled: th.alsoCalled,
+        talkCount: th.slugs.size,
+        claimCount: th.claims.length,
+        counterCount: th.counters.length,
+        whyUncontested: th.whyUncontested,
+        leadSlide: THEME_SLIDES[th.id] ?? null,
+        clayVisual: THEME_CLAY[th.id] ?? null,
+        featuredQuote: leadClaim
+          ? {
+              quote: leadClaim.quote,
+              speaker: leadClaim.speakers,
+              title: leadClaim.title,
+              slug: leadClaim.slug,
+              section: leadClaim.section,
+            }
+          : null,
+        talkSlugs: sortedSlugs,
+        topSpeakers: [...new Set(sortedSlugs.map((sl) => shortSpeakers(sl).split(",")[0]?.trim()).filter(Boolean))].slice(0, 4),
+        deepDiveHref: themeDeepDiveRel(th.id),
+        hubAnchor: `index.html#${th.id}`,
+      };
+    }),
+    contested: contestedList,
     talks: xrefTalks,
     scheduleOrder: captured.map((t) => ({
       slug: t.slug,
@@ -535,10 +658,10 @@ for (const q of contestedList) {
   write("site/xref.js", `window.__AIE_XREF__ = ${JSON.stringify(xrefPayload).replace(/</g, "\\u003c")};\n`);
 }
 
-// ===== Talk hubs =====
+// ===== Talk hubs (Z4 Raw Evidence & Dossier) =====
 const themeChips = (slug: string, up: string): string =>
   themesForSlug(slug).map((th) =>
-    `<a class="chip" href="${up}${themeDeepDiveRel(th.id)}" title="Open Theme ${th.num} deep dive presentation">Theme ${th.num}: ${esc(th.name)} →</a><a class="chip hash" href="${up}site/themes.html#${th.id}" title="Jump to Theme ${th.num} claims on Themes hub">#</a>`
+    `<a class="chip" href="${up}${themeDeepDiveRel(th.id)}" title="Open Theme ${th.num} deep dive presentation">Theme ${th.num}: ${esc(th.name)} →</a><a class="chip hash" href="${up}index.html#${th.id}" title="Jump to Theme ${th.num} claims on Summit hub">#</a>`
   ).join("");
 
 for (let ti = 0; ti < captured.length; ti++) {
@@ -564,11 +687,10 @@ for (let ti = 0; ti < captured.length; ti++) {
     ${s ? `<p class="speakers">${esc(speakerNames(s))}</p>` : ""}
     ${thesis.get(t.slug) ? `<p class="sub">${esc(thesis.get(t.slug)!)}</p>` : ""}
   </header>
-  <div class="marginalia mono"><span><a href="index.html">← All talks</a>${prevT ? ` · <a href="${hubHref(prevT.slug, up)}" title="${esc(prevT.title)}">← Prev talk</a>` : ""}${nextT ? ` · <a href="${hubHref(nextT.slug, up)}" title="${esc(nextT.title)}">Next talk →</a>` : ""}</span><span>${builtCount(t)} of 7 built</span></div>
-  <div class="pills">${pills(t, up)}</div>
-  ${page ? `<a class="cta" href="${up}${page}">Read the story →</a>` : ""}
-  ${watchLink(s, "cta ghost")}
-  ${extraPages(t.slug).map((e) => `<a class="cta" href="${up}${e.href}">Also: ${esc(e.title)} →</a>`).join("")}
+  <div class="marginalia mono"><span><a href="index.html">← All talks</a>${prevT ? ` · <a href="${hubHref(prevT.slug, up)}" title="${esc(prevT.title)}">← Prev talk</a>` : ""}${nextT ? ` · <a href="${hubHref(nextT.slug, up)}" title="${esc(nextT.title)}">Next talk →</a>` : ""}</span><span>${builtCount(t)} of 7 built · Z4 Evidence Hub</span></div>
+  ${page ? `<div class="hub-zoom-banner"><div class="hzb-copy"><span class="mono">Level 4 · Raw Evidence &amp; Dossier</span><strong class="hzb-title">Want the visual narrative with stage slides?</strong></div><div class="card-acts"><a class="cta small" href="${up}${page}">↖ Zoom up to Talk Story →</a>${watchLink(s, "cta small ghost")}</div></div>` : ""}
+  <div class="pills" style="margin-top:.85rem">${pills(t, up)}</div>
+  ${extraPages(t.slug).map((e) => `<a class="cta small" style="margin-top:.6rem" href="${up}${e.href}">Also: ${esc(e.title)} →</a>`).join("")}
   <div class="chips"><span class="mono">Themes</span>${themeChips(t.slug, up) || `<span class="minor">Unassigned</span>`}<a class="chip" href="${up}${masterThemesRel}">Themes presentation →</a></div>
 
   ${people.length ? `<section class="view" id="people"><div class="view-head"><h2>Speaker${people.length > 1 ? "s" : ""}</h2></div>
@@ -594,9 +716,12 @@ for (let ti = 0; ti < captured.length; ti++) {
   <section class="view" id="related">
     <div class="view-head"><h2>Themes & related talks</h2><p class="lede">Cross-references across the ${themes.length} conference themes, contested debates, and connected talks.</p></div>
     <div class="rel-grid">
-      ${tThemes.map((th) => `<article class="rel-card is-theme"><div><span class="mono">Theme ${th.num} · ${th.slugs.size} talks</span><b><a href="${up}${themeDeepDiveRel(th.id)}">${esc(th.name)}</a></b><p>${esc(th.claim)}</p></div><div class="card-acts"><a href="${up}${themeDeepDiveRel(th.id)}">Open deep dive →</a><a href="${up}site/themes.html#${th.id}">Claims</a></div></article>`).join("")}
-      ${tContested.map((c) => `<article class="rel-card is-contested"><div><span class="mono">Contested fault line</span><b>${esc(c.question)}</b><p>Here: ${esc(c.stance)}</p></div><div class="card-acts">${c.peers.map((peer) => `<a href="${up}${peer.storyHref}">Compare: ${esc(peer.speakers || peer.title)} →</a>`).join("")}<a href="${up}site/themes.html#contested">Debate</a></div></article>`).join("")}
-      ${tRelated.map((r) => `<article class="rel-card"><div><span class="mono">${esc(r.speakers || "Speaker")}${r.reasons.length ? ` · ${esc(r.reasons[0]!)}` : ""}</span><b><a href="${up}${r.storyHref}">${esc(r.title)}</a></b>${r.thesis ? `<p>${esc(firstLine(r.thesis, 140))}</p>` : ""}</div><div class="card-acts"><a href="${up}${r.storyHref}">Read story →</a><a href="${up}${r.hubHref}">Hub</a></div></article>`).join("")}
+      ${tThemes.map((th) => `<article class="rel-card is-theme"><div><span class="mono">Theme ${th.num} · ${th.slugs.size} talks</span><b><a href="${up}${themeDeepDiveRel(th.id)}">${esc(th.name)}</a></b><p>${esc(th.claim)}</p></div><div class="card-acts"><a href="${up}${themeDeepDiveRel(th.id)}">Open deep dive →</a><a href="${up}index.html#${th.id}">Claims</a></div></article>`).join("")}
+      ${tContested.map((c) => `<article class="rel-card is-contested"><div><span class="mono">Contested fault line</span><b>${esc(c.question)}</b><p>Here: ${esc(c.stance)}</p></div><div class="card-acts">${c.peers.map((peer) => `<a href="${up}${peer.storyHref}">Compare: ${esc(peer.speakers || peer.title)} →</a>`).join("")}<a href="${up}index.html#contested">Debate</a></div></article>`).join("")}
+      ${tRelated.map((r) => {
+        const img = leadSlideImage(r.slug);
+        return `<article class="rel-card">${img ? `<a class="rel-thumb" href="${up}${r.storyHref}"><img loading="lazy" src="${up}${img}" alt=""></a>` : ""}<div><span class="mono">${esc(r.speakers || "Speaker")}${r.reasons.length ? ` · ${esc(r.reasons[0]!)}` : ""}</span><b><a href="${up}${r.storyHref}">${esc(r.title)}</a></b>${r.thesis ? `<p>${esc(firstLine(r.thesis, 140))}</p>` : ""}</div><div class="card-acts"><a href="${up}${r.storyHref}">Read story →</a><a href="${up}${r.hubHref}">Evidence hub</a></div></article>`;
+      }).join("")}
     </div>
   </section>
 
@@ -609,25 +734,46 @@ for (let ti = 0; ti < captured.length; ti++) {
   write(`site/talks/${t.slug}.html`, shell({ title: t.title, active: "talks", up, body, script: PEOPLE_JS + HUB_JS }));
 }
 
-// ===== Talks index =====
+// ===== Talks index (Z3 Directory) =====
 {
   const up = "../../";
+  const initials = (name: string): string =>
+    name.split(/[\s,]+/).filter(Boolean).slice(0, 2).map((w) => w[0]!.toUpperCase()).join("") || "AI";
   const card = (t: Talk): string => {
     const n = builtCount(t);
     const tThemes = themesForSlug(t.slug);
+    const spk = shortSpeakers(t.slug);
+    const slide = leadSlideImage(t.slug);
+    const mins = t.recordings.reduce((acc, r) => acc + r.minutes, 0);
+    const pCount = list(`talks/${t.slug}/photos`).filter((f) => /\.(jpe?g|png|webp|heic)$/i.test(f)).length;
+    const plate = slide
+      ? `<a class="talk-plate" href="${talkHref(t.slug, up)}"><img loading="lazy" src="${up}${slide}" alt="Slide from ${esc(t.title)}"><span class="talk-plate-badge">${esc(t.session ? day(new Date(t.session.starts_at)) : "Talk")}</span></a>`
+      : `<a class="talk-plate is-typo" href="${talkHref(t.slug, up)}"><span class="tp-mono">${esc(initials(spk || t.title))}</span><span class="tp-lbl">${esc(spk || roomName(t.session!) || "Stage Talk")}</span></a>`;
     const themeChipsHtml = tThemes.length
       ? `<div class="card-themes">${tThemes.map((th) => `<a class="chip mini" href="${up}${themeDeepDiveRel(th.id)}" title="${esc(th.claim)}">${esc(th.name)}</a>`).join("")}</div>`
       : "";
-    return `<article class="card" data-themes="${esc(tThemes.map((th) => th.id).join(" "))}">
-      <div class="mono">${esc(whenLine(t.session))}</div>
-      <h3><a href="${talkHref(t.slug, up)}">${esc(t.title)}</a></h3>
-      ${t.session ? `<p class="speakers">${esc(speakerNames(t.session))}</p>` : ""}
-      ${thesis.get(t.slug) ? `<p class="thesis">${esc(thesis.get(t.slug)!)}</p>` : ""}
-      ${themeChipsHtml}
-      <div class="progress"><span class="mono">${n} of 7 built</span></div>
-      <div class="meter"><i style="width:${Math.round((n / 7) * 100)}%"></i></div>
-      <div class="pills">${pills(t, up)}</div>
-      <div class="card-acts">${pagePath(t.slug) ? `<a class="cta small" href="${talkHref(t.slug, up)}">Read the story →</a><a href="${t.slug}.html">Details</a>` : `<a class="cta small ghost" href="${t.slug}.html">Details →</a>`}${watchLink(t.session)}</div>
+    const evParts = [
+      mins ? `${mins} min` : null,
+      pCount ? `${pCount} photo${pCount === 1 ? "" : "s"}` : null,
+      t.notes.length ? `${t.notes.length} note${t.notes.length === 1 ? "" : "s"}` : null,
+      `${n}/7 built`,
+    ].filter(Boolean);
+    const searchHay = `${t.title} ${spk} ${thesis.get(t.slug) ?? ""} ${tThemes.map((x) => x.name).join(" ")}`.toLowerCase();
+    return `<article class="talk-card" data-themes="${esc(tThemes.map((th) => th.id).join(" "))}" data-search="${esc(searchHay)}">
+      <div>
+        ${plate}
+        <div class="talk-card-body">
+          <div class="mono">${esc(whenLine(t.session))}</div>
+          <h3><a href="${talkHref(t.slug, up)}">${esc(t.title)}</a></h3>
+          ${t.session ? `<p class="speakers">${esc(speakerNames(t.session))}</p>` : ""}
+          ${thesis.get(t.slug) ? `<p class="thesis">${esc(thesis.get(t.slug)!)}</p>` : ""}
+          ${themeChipsHtml}
+        </div>
+      </div>
+      <div class="talk-card-foot">
+        <div class="talk-evidence-line"><span>${esc(evParts.join(" · "))}</span></div>
+        <div class="card-acts">${pagePath(t.slug) ? `<a class="cta small" href="${talkHref(t.slug, up)}">Read the story →</a><a href="${t.slug}.html">Evidence hub</a>` : `<a class="cta small ghost" href="${t.slug}.html">Evidence hub →</a>`}${watchLink(t.session)}</div>
+      </div>
     </article>`;
   };
   // Grouped by day, in time order within each day; talks with no session go last.
@@ -641,48 +787,231 @@ for (let ti = 0; ti < captured.length; ti++) {
     const label = d === "unscheduled" ? "Unscheduled" : new Date(`${d}T12:00:00-08:00`).toLocaleDateString("en-US", { timeZone: TZ, weekday: "long", month: "long", day: "numeric" });
     return `<section class="view day-group" id="day-${d}"><div class="view-head"><h2>${esc(label)}</h2><p class="lede"><span class="day-count">${ts.length} talk${ts.length === 1 ? "" : "s"}</span></p></div><div class="blocks">${ts.map(card).join("\n")}</div></section>`;
   }).join("\n");
-  const filterButtons = `<div class="roomfilter" id="themefilter"><button type="button" data-theme="all" aria-pressed="true">All talks (${captured.length})</button>${themes.map((th) => `<button type="button" data-theme="${th.id}" aria-pressed="false">${esc(th.name)} (${th.slugs.size})</button>`).join("")}</div>`;
-  const filterJs = `(function(){var f=document.getElementById('themefilter');if(!f)return;f.addEventListener('click',function(e){var b=e.target.closest('button[data-theme]');if(!b)return;var id=b.getAttribute('data-theme');f.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});document.querySelectorAll('.day-group').forEach(function(g){var vis=0;g.querySelectorAll('article.card').forEach(function(c){var list=(c.getAttribute('data-themes')||'').split(' ');var ok=id==='all'||list.indexOf(id)>=0;c.hidden=!ok;if(ok)vis++});g.hidden=vis===0;var dc=g.querySelector('.day-count');if(dc)dc.textContent=vis+(vis===1?' talk':' talks')})})})();`;
+  const filterButtons = `<div class="talks-toolbar"><input id="talksearch" class="talks-search" type="search" placeholder="Filter talks by title, speaker, or idea…" aria-label="Filter talks"><div class="roomfilter" id="themefilter"><button type="button" data-theme="all" aria-pressed="true">All talks (${captured.length})</button>${themes.map((th) => `<button type="button" data-theme="${th.id}" aria-pressed="false">${esc(th.name)} (${th.slugs.size})</button>`).join("")}</div></div>`;
+  const filterJs = `(function(){
+    var f=document.getElementById('themefilter');
+    var qEl=document.getElementById('talksearch');
+    var activeTheme='all';
+    var qVal='';
+    function apply(){
+      var tokens=qVal?qVal.toLowerCase().split(/\\s+/).filter(Boolean):[];
+      document.querySelectorAll('.day-group').forEach(function(g){
+        var vis=0;
+        g.querySelectorAll('article.talk-card').forEach(function(c){
+          var list=(c.getAttribute('data-themes')||'').split(' ');
+          var hay=c.getAttribute('data-search')||'';
+          var okTheme=activeTheme==='all'||list.indexOf(activeTheme)>=0;
+          var okQ=!tokens.length||tokens.every(function(tok){return hay.indexOf(tok)>=0});
+          var ok=okTheme&&okQ;
+          c.hidden=!ok;
+          if(ok)vis++;
+        });
+        g.hidden=vis===0;
+        var dc=g.querySelector('.day-count');
+        if(dc)dc.textContent=vis+(vis===1?' talk':' talks');
+      });
+    }
+    function setTheme(id){
+      activeTheme=id||'all';
+      if(f)f.querySelectorAll('button[data-theme]').forEach(function(x){
+        x.setAttribute('aria-pressed',String(x.getAttribute('data-theme')===activeTheme));
+      });
+      apply();
+    }
+    if(f){
+      f.addEventListener('click',function(e){
+        var b=e.target.closest('button[data-theme]');
+        if(!b)return;
+        setTheme(b.getAttribute('data-theme'));
+      });
+    }
+    if(qEl){
+      qEl.addEventListener('input',function(){qVal=qEl.value.trim();apply()});
+    }
+    try{
+      var qt=new URLSearchParams(location.search).get('theme');
+      if(qt&&f&&f.querySelector('button[data-theme="'+qt+'"]'))setTheme(qt);
+    }catch(e){}
+  })();`;
   const body = `
-  <header class="masthead"><p class="mono agency">${esc(wm.event.name)}</p><h1>Talks</h1><p class="sub">Everything collected from each talk I've been in, cross-referenced to all ${themes.length} conference themes.</p></header>
+  <header class="masthead"><p class="mono agency">${esc(wm.event.name)} · Z3 Talk Directory</p><h1>Talks</h1><p class="sub">Every recorded talk with straightened stage slides, interactive stories, and evidence dossiers linked across all ${themes.length} themes.</p></header>
   <div class="marginalia mono"><span>${captured.length} talks · ${themes.length} themes</span><a href="${up}${masterThemesRel}">Themes presentation →</a></div>
   ${filterButtons}
   ${cards}`;
   write("site/talks/index.html", shell({ title: "Talks", active: "talks", up, body, script: filterJs }));
 }
 
-// ===== Themes =====
-{
-  const up = "../";
-  const renderClaimItem = (c: ResolvedClaim): string => {
-    const storyUrl = talkHref(c.slug, up);
-    const transcriptUrl = `talks/${c.slug}.html#transcript`;
-    return `<li><div>${esc(c.claim)}</div>${c.quote ? `<blockquote class="cl-quote">“${esc(c.quote)}”</blockquote>` : ""}<div class="cl-cite"><a href="${storyUrl}">${esc(c.title)}</a><span class="minor">${esc(c.speakers)}</span><a class="mono" href="${transcriptUrl}">${esc(c.section || "transcript")}</a></div></li>`;
+// ===== Themes Explorer (Z1 Summit Root — written to BOTH index.html & site/themes.html) =====
+function renderThemesExplorer(up: string): string {
+  const totalClaims = claimById.size || themes.reduce((acc, th) => acc + th.claims.length, 0) || 191;
+  const maxClaims = Math.max(...themes.map((th) => th.claims.length), 1);
+
+  const renderClaimCard = (c: ResolvedClaim, themeId: string): string => {
+    const storyUrl = `${talkHref(c.slug, up)}?from=${encodeURIComponent(themeId)}`;
+    const transcriptUrl = `${hubHref(c.slug, up)}#transcript`;
+    return `<li class="claim-card"><div class="claim-text">${esc(c.claim)}</div>${c.quote ? `<blockquote class="cl-quote">“${esc(c.quote)}”</blockquote>` : ""}<div class="cl-cite"><a href="${storyUrl}">${esc(c.title)}</a><span><span class="minor">${esc(c.speakers)}</span> · <a class="mono" href="${transcriptUrl}">${esc(c.section || "transcript")}</a></span></div></li>`;
   };
 
-  const heroLayers = themes.map((th) => `<a class="chip mini" href="${up}${themeDeepDiveRel(th.id)}">Theme ${th.num}: ${esc(th.name)}</a>`).join("");
-  const hero = `<article class="theme-hero">
-    <span class="mono">Conference Themes Presentation · 6 layers · ${corpusMeta.talk_count ?? captured.length} talks</span>
-    <h2>Six shifts after the diff</h2>
-    <p>Start with the visual conference presentation mapping all 6 research themes onto one post-generation engineering stack—then jump straight from any layer into its dedicated deep-dive presentation.</p>
-    <div class="theme-hero-layers">${heroLayers}</div>
-    <div class="card-acts"><a class="cta" href="${up}${masterThemesRel}">Open the themes presentation →</a><a class="cta ghost" href="#contested">Jump to contested debates ↓</a></div>
-  </article>`;
+  const hero = `
+  <section class="summit-hero" aria-label="Summit overview">
+    <div class="summit-hero-main">
+      <div class="summit-hero-top">
+        <span class="mono">${esc(wm.event.name)} · Nov 10–12, 2026 · Post-Conference Synthesis</span>
+        <h1>Six shifts after the diff</h1>
+        <p class="sub">The conference is wrapped. Across ${corpusMeta.talk_count ?? captured.length} recorded talks, 101,668 spoken words, and ${totalClaims} transcript-verified claims, code generation stopped being the scarce skill—and engineering reorganized around six architectural layers.</p>
+      </div>
+      <div class="summit-stats">
+        <div class="stat-tile"><span class="mono">Corpus</span><strong>${corpusMeta.talk_count ?? captured.length}</strong><span class="minor">Recorded talks</span></div>
+        <div class="stat-tile"><span class="mono">Evidence</span><strong>${totalClaims}</strong><span class="minor">Transcript claims</span></div>
+        <div class="stat-tile"><span class="mono">Synthesis</span><strong>${themes.length}</strong><span class="minor">Research themes</span></div>
+        <div class="stat-tile"><span class="mono">Tension</span><strong>${contestedList.length}</strong><span class="minor">Contested debates</span></div>
+      </div>
+      <div class="card-acts">
+        <a class="cta" href="${up}${masterThemesRel}">Launch Guided Presentation →</a>
+        <a class="cta ghost" href="#stack-explorer">Explore 6-Layer Stack ↓</a>
+        <a class="cta ghost" href="${up}site/talks/index.html">Browse All ${captured.length} Talks →</a>
+        <a class="cta ghost" href="#contested">${contestedList.length} Contested Debates ↓</a>
+      </div>
+    </div>
+    <figure class="hero-clay-frame">
+      <div class="clay-vitrine">
+        <img src="${up}${HERO_CLAY.src}" alt="${esc(HERO_CLAY.alt)}" width="1280" height="720" fetchpriority="high" decoding="async">
+      </div>
+      <figcaption class="clay-cap mono"><span>${esc(HERO_CLAY.caption)}</span><span>${corpusMeta.talk_count ?? captured.length} talks · ${totalClaims} claims</span></figcaption>
+    </figure>
+  </section>`;
+
+  // Stack ordered top-to-bottom from Human Judgment (06) down to Verification Foundation (01)
+  const stackOrder = [...themes].reverse();
+  const defaultLayerId = themes[0]?.id ?? "";
+
+  const layerButtons = stackOrder.map((th) => {
+    const isSel = th.id === defaultLayerId;
+    const pct = Math.max(18, Math.round((th.claims.length / maxClaims) * 100));
+    const clay = THEME_CLAY[th.id];
+    const slide = THEME_SLIDES[th.id];
+    const thumbSrc = clay?.src ?? slide?.src ?? "";
+    return `<button type="button" class="stack-layer" role="tab" data-layer="${th.id}" aria-selected="${isSel}">
+      ${thumbSrc ? `<span class="sl-thumb"><img src="${up}${thumbSrc}" alt="" loading="lazy" width="160" height="90"></span>` : ""}
+      <div class="sl-main">
+        <div class="sl-top"><span class="sl-num">Layer ${th.num}</span><span class="sl-count">${th.slugs.size} talks · ${th.claims.length} claims</span></div>
+        <div class="sl-name">${esc(th.name)}</div>
+        <div class="sl-bar"><i style="width:${pct}%"></i></div>
+      </div>
+    </button>`;
+  }).join("\n");
+
+  const stagePanels = themes.map((th) => {
+    const slide = THEME_SLIDES[th.id];
+    const clay = THEME_CLAY[th.id];
+    const deepHref = `${up}${themeDeepDiveRel(th.id)}`;
+    const leadClaim = th.claims.find((c) => c.quote && c.quote.trim().length > 0);
+    const sortedSlugs = [...th.slugs].sort((a, b) =>
+      (talkBySlug.get(a)?.session?.starts_at ?? "").localeCompare(talkBySlug.get(b)?.session?.starts_at ?? ""),
+    );
+    const previewPills = sortedSlugs.slice(0, 6).map((slug) => {
+      const spk = shortSpeakers(slug).split(",")[0]?.trim() || talkBySlug.get(slug)?.title || slug;
+      return `<a class="chip mini" href="${talkHref(slug, up)}?from=${encodeURIComponent(th.id)}">${esc(spk)}</a>`;
+    }).join("");
+    const extraTalksCount = Math.max(0, sortedSlugs.length - 6);
+    const statusLabel = th.counters.length ? `${th.counters.length} counter-claim${th.counters.length === 1 ? "" : "s"}` : "Uncontested";
+    const primarySrc = clay ? `${up}${clay.src}` : slide ? `${up}${slide.src}` : "";
+    const primaryAlt = clay ? clay.alt : slide ? slide.alt : "";
+    const primaryCap = clay ? clay.caption : slide ? `Stage slide · ${slide.speaker}` : "";
+    const mediaAttrs = [
+      clay ? `data-clay-src="${up}${clay.src}" data-clay-alt="${esc(clay.alt)}" data-clay-cap="${esc(clay.caption)}"` : "",
+      slide ? `data-slide-src="${up}${slide.src}" data-slide-alt="${esc(slide.alt)}" data-slide-cap="Stage slide · ${esc(slide.speaker)}"` : "",
+    ].filter(Boolean).join(" ");
+
+    return `<article class="stage-panel" data-panel="${th.id}"${th.id === defaultLayerId ? "" : " hidden"}>
+      ${primarySrc ? `<div class="stage-media" ${mediaAttrs}><img src="${primarySrc}" alt="${esc(primaryAlt)}" width="1280" height="720" loading="lazy" decoding="async"><div class="stage-media-cap"><span class="sm-caption">${esc(primaryCap)}</span>${slide ? `<div class="stage-view-switch" role="group" aria-label="Stage visual mode"><button type="button" data-stage-mode="clay" aria-pressed="true">Clay model</button><button type="button" data-stage-mode="slide" aria-pressed="false">Room slide</button><a class="sm-talk-link" href="${talkHref(slide.slug, up)}?from=${encodeURIComponent(th.id)}">Open talk →</a></div>` : ""}</div></div>` : ""}
+      <div class="stage-body">
+        <div class="stage-kicker"><span class="mono">Layer ${th.num} of 06 · ${th.slugs.size} talks · ${th.claims.length} claims</span><span class="pill ${th.counters.length ? "call-maybe" : "call-go"}">${esc(statusLabel)}</span></div>
+        <h3>${esc(th.name)}</h3>
+        <p class="stage-claim">${esc(th.claim)}</p>
+        ${th.definition ? `<p class="stage-def">${esc(th.definition)}</p>` : ""}
+        ${leadClaim ? `<blockquote class="stage-quote">“${esc(leadClaim.quote)}”<cite>${esc(leadClaim.speakers)} · <a href="${talkHref(leadClaim.slug, up)}?from=${encodeURIComponent(th.id)}">${esc(leadClaim.title)}</a> · ${esc(leadClaim.section)}</cite></blockquote>` : ""}
+        <div class="stage-talks"><span class="mono">Key talks</span>${previewPills}${extraTalksCount ? `<a class="chip mini hash" href="${deepHref}#talks-in-theme">+${extraTalksCount} more</a>` : ""}</div>
+        <div class="card-acts">
+          <a class="cta small" href="${deepHref}">Zoom into Theme ${th.num} Deep Dive →</a>
+          <a class="cta small ghost" href="#${th.id}" data-jump-theme="${th.id}">Inspect all ${th.claims.length} claims ↓</a>
+        </div>
+      </div>
+    </article>`;
+  }).join("\n");
+
+  const stackSection = `
+  <section class="view" id="stack-explorer">
+    <div class="view-head">
+      <h2>The 6-layer post-diff stack</h2>
+      <p class="lede">Click any layer to inspect its clay diorama, switch to the room slide, or zoom straight into its scrollytelling deep dive.</p>
+    </div>
+    <div class="stack-workbench">
+      <div class="stack-col">
+        <div class="stack-axis"><span>↑ Human Taste &amp; Direction</span></div>
+        <div class="stack-layers" role="tablist" aria-label="Six conference stack layers">${layerButtons}</div>
+        <div class="stack-axis"><span>↓ Deterministic Foundation</span></div>
+      </div>
+      <div class="stack-stage" aria-live="polite">${stagePanels}</div>
+    </div>
+  </section>`;
 
   const themeCards = themes.map((th) => {
     const deepHref = `${up}${themeDeepDiveRel(th.id)}`;
-    return `<article class="theme-card">
+    const slide = THEME_SLIDES[th.id];
+    const clay = THEME_CLAY[th.id];
+    const plateSrc = clay ? `${up}${clay.src}` : slide ? `${up}${slide.src}` : "";
+    const plateAlt = clay ? clay.alt : slide ? slide.alt : "";
+    const sortedSlugs = [...th.slugs].sort((a, b) =>
+      (talkBySlug.get(a)?.session?.starts_at ?? "").localeCompare(talkBySlug.get(b)?.session?.starts_at ?? ""),
+    );
+    const spkNames = [...new Set(sortedSlugs.map((sl) => shortSpeakers(sl).split(",")[0]?.trim()).filter(Boolean))];
+    const spkLine = spkNames.length > 3 ? `${spkNames.slice(0, 3).join(", ")} +${spkNames.length - 3} more` : spkNames.join(", ");
+
+    return `<article class="theme-card-v2">
       <div>
-        <div class="tc-meta"><span class="mono">Theme ${th.num}</span><span class="mono">${th.slugs.size} talks · ${th.claims.length} claims${th.counters.length ? ` · ${th.counters.length} counter` : ""}</span></div>
-        <h3><a href="${deepHref}">${esc(th.name)}</a></h3>
-        <p class="tc-claim">${esc(th.claim)}</p>
+        ${plateSrc ? `<a class="tc-plate" href="${deepHref}"><img loading="lazy" decoding="async" width="1280" height="720" src="${plateSrc}" alt="${esc(plateAlt)}"><div class="tc-plate-overlay"><span class="tc-num">Theme ${th.num}</span><span class="tc-counts">${th.slugs.size} talks · ${th.claims.length} claims</span></div></a>` : ""}
+        <div class="tc-body">
+          <h3><a href="${deepHref}">${esc(th.name)}</a></h3>
+          <p class="tc-claim">${esc(th.claim)}</p>
+          ${spkLine ? `<div class="tc-speakers">${esc(spkLine)}</div>` : ""}
+        </div>
       </div>
-      <div class="card-acts">
-        <a class="cta small" href="${deepHref}">Open deep dive →</a>
-        <a class="mono" href="#${th.id}">Evidence & talks ↓</a>
+      <div class="tc-foot">
+        <a class="tc-primary" href="${deepHref}">Zoom in: Deep dive →</a>
+        <a href="#${th.id}" data-jump-theme="${th.id}">All ${th.claims.length} claims ↓</a>
       </div>
     </article>`;
-  }).join("");
+  }).join("\n");
+
+  const cardsSection = `
+  <section class="view" id="all-themes">
+    <div class="view-head">
+      <h2>Six research themes</h2>
+      <p class="lede">Tabletop clay models for every shift—opening into stage-slide deep dives, verbatim Qwen3-ASR citations, contested fault lines, and talk directories.</p>
+    </div>
+    <div class="themes-grid">${themeCards}</div>
+  </section>`;
+
+  const contestedHtml = contestedList.length
+    ? `<section class="view" id="contested"><div class="contested-showcase"><div class="contested-showcase-copy"><div class="view-head"><h2>Contested fault lines</h2><p class="lede">Six open architectural disagreements where recorded talks pushed against one another directly.</p></div><div class="contested-jumps">${contestedList.map((q, qi) => `<a class="chip mini" href="#fault-${String(qi + 1).padStart(2, "0")}" title="${esc(q.question)}">Fault ${String(qi + 1).padStart(2, "0")}</a>`).join("")}</div></div><figure class="contested-clay-frame"><div class="clay-vitrine"><img src="${up}${CONTESTED_CLAY.src}" alt="${esc(CONTESTED_CLAY.alt)}" width="1280" height="720" loading="lazy" decoding="async"></div><figcaption class="clay-cap mono"><span>${esc(CONTESTED_CLAY.caption)}</span><span>Position A vs Position B</span></figcaption></figure></div><div class="contested-grid">${contestedList.map((q, qi) =>
+        `<article class="contested-card" id="fault-${String(qi + 1).padStart(2, "0")}"><div><span class="mono">Fault line ${String(qi + 1).padStart(2, "0")}</span><h3>${esc(q.question)}</h3></div><ul class="stance-list">${q.sides.map((s, si) =>
+          `<li class="stance-item"><div class="stance-head"><span class="stance-tag">Position ${String.fromCharCode(65 + si)} · ${esc(s.speakers || "Speaker")}</span>${s.slug ? `<span class="mono"><a href="${talkHref(s.slug, up)}">${esc(s.title)}</a> · <a href="${hubHref(s.slug, up)}#transcript">${esc(s.section || "transcript")}</a></span>` : ""}</div><span>${esc(s.stance)}</span></li>`
+        ).join("")}</ul></article>`
+      ).join("")}</div></section>`
+    : "";
+
+  const evidenceControls = `
+  <section class="view" id="evidence">
+    <div class="view-head">
+      <h2>Evidence ledger (${totalClaims} claims)</h2>
+      <p class="lede">Filter by theme below, or expand any section to inspect the full verbatim quotes linked to every talk story and transcript.</p>
+    </div>
+    <div class="evidence-filter" id="evidence-filter" role="group" aria-label="Filter evidence by theme">
+      <button type="button" data-ev-theme="all" aria-pressed="true">All 6 themes</button>
+      ${themes.map((th) => `<button type="button" data-ev-theme="${th.id}" aria-pressed="false">${th.num} · ${esc(th.name)}</button>`).join("")}
+    </div>
+  </section>`;
 
   const themeSections = themes.map((th) => {
     const deepHref = `${up}${themeDeepDiveRel(th.id)}`;
@@ -691,65 +1020,116 @@ for (let ti = 0; ti < captured.length; ti++) {
       const tObj = talkBySlug.get(slug);
       const spk = shortSpeakers(slug).split(",")[0] ?? "";
       const label = spk ? `${spk}: ${tObj?.title ?? slug}` : (tObj?.title ?? slug);
-      return `<a class="chip mini" href="${talkHref(slug, up)}" title="${esc(thesis.get(slug) ?? "")}">${esc(label)}</a>`;
+      return `<a class="chip mini" href="${talkHref(slug, up)}?from=${encodeURIComponent(th.id)}" title="${esc(thesis.get(slug) ?? "")}">${esc(label)}</a>`;
     }).join("");
     const previewClaims = th.claims.slice(0, 6);
     const extraClaims = th.claims.slice(6);
     const counterHtml = th.counters.length
-      ? `<div class="counter-callout"><span class="mono">Counter-claims (${th.counters.length})</span><ul class="claim-list">${th.counters.map(renderClaimItem).join("")}</ul></div>`
+      ? `<div class="counter-callout"><span class="mono">Counter-claims (${th.counters.length})</span><ul class="claim-grid">${th.counters.map((c) => renderClaimCard(c, th.id)).join("")}</ul></div>`
       : th.whyUncontested
-        ? `<div class="counter-callout"><span class="mono">Uncontested</span><p>${esc(th.whyUncontested)}</p></div>`
+        ? `<div class="counter-callout"><span class="mono">Uncontested consensus</span><p>${esc(th.whyUncontested)}</p></div>`
         : "";
-    return `<section class="view theme-section" id="${th.id}">
+    return `<section class="view theme-section" id="${th.id}" data-theme-sec="${th.id}">
       <div class="view-head">
         <div><span class="mono">Theme ${th.num} · ${th.slugs.size} talks · ${th.claims.length} claims</span><h2>${esc(th.name)}</h2></div>
-        <a class="btn" href="${deepHref}">Open deep dive presentation →</a>
+        <a class="btn" href="${deepHref}">Open Theme ${th.num} Deep Dive →</a>
       </div>
       <p class="th-claim">${esc(th.claim)}</p>
       ${th.definition ? `<p class="th-def">${esc(th.definition)}</p>` : ""}
       ${th.alsoCalled.length ? `<p class="mono minor">Also called: ${esc(th.alsoCalled.join(" · "))}</p>` : ""}
       <div class="theme-talk-pills">${talkPills}</div>
-      ${previewClaims.length ? `<ul class="claim-list">${previewClaims.map(renderClaimItem).join("")}</ul>` : ""}
-      ${extraClaims.length ? `<details class="more-claims"><summary class="mono">Show all ${th.claims.length} extracted claims (${extraClaims.length} more)</summary><ul class="claim-list">${extraClaims.map(renderClaimItem).join("")}</ul></details>` : ""}
+      ${previewClaims.length ? `<ul class="claim-grid">${previewClaims.map((c) => renderClaimCard(c, th.id)).join("")}</ul>` : ""}
+      ${extraClaims.length ? `<details class="more-claims"><summary class="mono">Show all ${th.claims.length} extracted claims (${extraClaims.length} more)</summary><ul class="claim-grid" style="margin-top:.7rem">${extraClaims.map((c) => renderClaimCard(c, th.id)).join("")}</ul></details>` : ""}
       ${counterHtml}
     </section>`;
   }).join("\n");
 
-  const contestedHtml = contestedList.length
-    ? `<section class="view" id="contested"><div class="view-head"><h2>Contested questions</h2><p class="lede">Six open fault lines where recorded talks directly pushed against each other.</p></div><div class="contested-grid">${contestedList.map((q) =>
-        `<article class="contested-card"><h3>${esc(q.question)}</h3><ul>${q.sides.map((s) =>
-          `<li><span>${esc(s.stance)}</span>${s.slug ? `<span class="mono"><a href="${talkHref(s.slug, up)}">${esc(s.speakers ? `${s.speakers} — ` : "")}${esc(s.title)}</a> · <a href="talks/${s.slug}.html#transcript">${esc(s.section || "transcript")}</a></span>` : ""}</li>`
-        ).join("")}</ul></article>`
-      ).join("")}</div></section>`
-    : "";
-
   const singletonsHtml = singletonList.length
     ? `<section class="view" id="singletons"><div class="view-head"><h2>Distinctive singletons</h2><p class="lede">${singletonList.length} claims made by only one talk in the corpus.</p></div><details><summary class="mono">Expand all ${singletonList.length} singletons</summary><ul class="singleton-list">${singletonList.map((c) =>
-        `<li>${esc(c.claim)} — <a href="${talkHref(c.slug, up)}">${esc(c.title)}</a> <span class="mono">(${esc(c.speakers)}, <a href="talks/${c.slug}.html#transcript">${esc(c.section)}</a>)</span></li>`
+        `<li>${esc(c.claim)} — <a href="${talkHref(c.slug, up)}">${esc(c.title)}</a> <span class="mono">(${esc(c.speakers)}, <a href="${hubHref(c.slug, up)}#transcript">${esc(c.section)}</a>)</span></li>`
       ).join("")}</ul></details></section>`
     : "";
 
   const limitsBlock = themesMd.split(/^## Limits\s*$/m)[1]?.trim() ?? "";
   const limitsHtml = limitsBlock
-    ? `<section class="view" id="limits"><div class="view-head"><h2>Corpus & limits</h2></div><div class="prose wide">${md(limitsBlock)}</div></section>`
-    : "";
-  const archiveNote = exists("atlases/own-the-stack/page.html")
-    ? `<section class="view" id="archive"><p class="archive-note">Earlier Day-1 through-line synthesis (6 talks): <a href="${up}atlases/own-the-stack/page.html">Own the stack (Tuesday archive) →</a></p></section>`
+    ? `<section class="view" id="limits"><div class="view-head"><h2>Corpus &amp; limits</h2></div><details><summary class="mono">Methodology &amp; coverage notes</summary><div class="prose wide" style="margin-top:.8rem">${md(limitsBlock)}</div></details></section>`
     : "";
 
-  const totalClaims = claimById.size || themes.reduce((acc, th) => acc + th.claims.length, 0) || 191;
-  const body = `
-  <header class="masthead"><p class="mono agency">${esc(wm.event.name)}</p><h1>Themes</h1><p class="sub">Six standardized research themes synthesized from ${corpusMeta.talk_count ?? captured.length} recorded talks and ${totalClaims || 191} transcript-verified claims.</p></header>
-  <div class="marginalia mono"><span>${themes.length} themes · ${totalClaims || 191} claims · 7 presentations built</span><span>Every claim links to its talk story and transcript</span></div>
-  <section class="view">${hero}</section>
-  <section class="view"><div class="view-head"><h2>Six theme deep dives</h2><p class="lede">Consistent presentations across all six themes, each backed by talk slides and verbatim transcript quotes.</p></div><div class="themes">${themeCards}</div></section>
-  ${themeSections}
-  ${contestedHtml}
-  ${singletonsHtml}
-  ${limitsHtml}
-  ${archiveNote}`;
-  write("site/themes.html", shell({ title: "Themes", active: "themes", up, body }));
+  const archiveFooter = `<section class="view" id="archive"><div class="archive-links">
+    <span>More archive views:</span>
+    ${exists("atlases/own-the-stack/page.html") ? `<a href="${up}atlases/own-the-stack/page.html">Tuesday synthesis (Own the stack) →</a>` : ""}
+    <a href="${up}site/schedule.html">Full 3-day schedule →</a>
+    <a href="${up}site/today.html">Live conference log →</a>
+  </div></section>`;
+
+  return [hero, stackSection, cardsSection, contestedHtml, evidenceControls, themeSections, singletonsHtml, limitsHtml, archiveFooter].join("\n");
 }
+
+const THEMES_JS = `(function(){
+  var layers=[].slice.call(document.querySelectorAll('.stack-layer[data-layer]'));
+  var panels=[].slice.call(document.querySelectorAll('.stage-panel[data-panel]'));
+  function selectLayer(id){
+    layers.forEach(function(b){b.setAttribute('aria-selected',String(b.getAttribute('data-layer')===id))});
+    panels.forEach(function(p){p.hidden=p.getAttribute('data-panel')!==id});
+  }
+  layers.forEach(function(b,idx){
+    b.addEventListener('click',function(){selectLayer(b.getAttribute('data-layer'))});
+    b.addEventListener('keydown',function(e){
+      if(e.key==='ArrowDown'||e.key==='ArrowRight'){e.preventDefault();var n=layers[(idx+1)%layers.length];n.focus();selectLayer(n.getAttribute('data-layer'));}
+      if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();var p=layers[(idx-1+layers.length)%layers.length];p.focus();selectLayer(p.getAttribute('data-layer'));}
+    });
+  });
+
+  var ef=document.getElementById('evidence-filter');
+  var secs=[].slice.call(document.querySelectorAll('.theme-section[data-theme-sec]'));
+  function filterEv(id){
+    if(ef)ef.querySelectorAll('button[data-ev-theme]').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-ev-theme')===id))});
+    secs.forEach(function(s){s.hidden=id!=='all'&&s.getAttribute('data-theme-sec')!==id});
+  }
+  if(ef){
+    ef.addEventListener('click',function(e){
+      var b=e.target.closest('button[data-ev-theme]');
+      if(b)filterEv(b.getAttribute('data-ev-theme'));
+    });
+  }
+  document.querySelectorAll('[data-jump-theme]').forEach(function(a){
+    a.addEventListener('click',function(){filterEv('all')});
+  });
+  document.addEventListener('click',function(e){
+    var btn=e.target.closest('.stage-view-switch button[data-stage-mode]');
+    if(!btn)return;
+    var mode=btn.getAttribute('data-stage-mode');
+    var panel=btn.closest('.stage-panel');
+    var media=panel&&panel.querySelector('.stage-media');
+    if(!media)return;
+    var img=media.querySelector('img');
+    var cap=media.querySelector('.sm-caption');
+    var src=media.getAttribute(mode==='slide'?'data-slide-src':'data-clay-src');
+    var alt=media.getAttribute(mode==='slide'?'data-slide-alt':'data-clay-alt');
+    var txt=media.getAttribute(mode==='slide'?'data-slide-cap':'data-clay-cap');
+    if(img&&src){img.src=src;if(alt!==null)img.alt=alt;}
+    if(cap&&txt!==null)cap.textContent=txt;
+    panel.querySelectorAll('.stage-view-switch button[data-stage-mode]').forEach(function(b){
+      b.setAttribute('aria-pressed',String(b.getAttribute('data-stage-mode')===mode));
+    });
+  });
+
+  function syncHash(){
+    var h=(location.hash||'').slice(1);
+    if(!h)return;
+    var sec=secs.find(function(s){return s.id===h});
+    if(sec){
+      filterEv('all');
+      selectLayer(h);
+      sec.scrollIntoView({block:'start'});
+    }
+  }
+  addEventListener('hashchange',syncHash);
+  syncHash();
+})();`;
+
+write("index.html", shell({ title: "AIE Code ’26 · Six Shifts After the Diff", active: "themes", up: "", body: renderThemesExplorer(""), script: THEMES_JS }));
+write("site/themes.html", shell({ title: "Themes · Six Shifts After the Diff", active: "themes", up: "../", body: renderThemesExplorer("../"), script: THEMES_JS }));
 
 // ===== People =====
 {
@@ -797,7 +1177,7 @@ const speakerMeta = (s: Session): string => s.speaker_ids.map((id) => wm.speaker
   <header class="masthead"><p class="mono agency">${esc(wm.event.name)}</p><h1>Follow-ups</h1><p class="sub">Ideas to write, things to look into, and things to read after the conference.</p></header>
   <div class="marginalia mono"><span>${open} open · ${done} done</span><span>From editorial/backlog.md</span></div>
   <section class="view prose followups">${md(linked)}</section>`;
-  write("site/followups.html", shell({ title: "Follow-ups", active: "followups", up, body }));
+  write("site/followups.html", shell({ title: "Follow-ups", active: null, up, body }));
 }
 
 // ===== Schedule: a plain timetable, one tab per day, track rooms as columns =====
@@ -847,17 +1227,18 @@ const speakerMeta = (s: Session): string => s.speaker_ids.map((id) => wm.speaker
   function rooms_short(r: string): string { const n = rooms.get(r) ?? r; return n.match(/\(([^)]+)\)/)?.[1] ?? n; }
   const body = `
   <header class="masthead"><p class="mono agency">${esc(wm.event.name)}</p><h1>Schedule</h1><p class="sub">Every session, by day and time, room by room.</p></header>
-  <div class="marginalia mono"><span class="tt-tabs" role="tablist">${days.map((d) => `<button type="button" role="tab" data-day="${d.date}" title="${esc(d.full)}">${esc(d.label)}</button>`).join("")}</span><a href="index.html">Planner and floor maps →</a></div>
+  <div class="marginalia mono"><span class="tt-tabs" role="tablist">${days.map((d) => `<button type="button" role="tab" data-day="${d.date}" title="${esc(d.full)}">${esc(d.label)}</button>`).join("")}</span><span><a href="today.html">Daily capture log →</a> · <a href="index.html">Planner &amp; floor maps →</a></span></div>
   <section class="view">${days.map((d) => d.html).join("")}</section>
   <p class="colophon mono">Times are San Francisco time · go / maybe are my picks · captured links open the talk</p>`;
   const script = `(function(){
   var today=new Date().toLocaleDateString('en-CA',{timeZone:${JSON.stringify(TZ)}});
   var tabs=[].slice.call(document.querySelectorAll('.tt-tabs button'));var dates=tabs.map(function(b){return b.getAttribute('data-day')});
-  var pick=dates.indexOf(today)>=0?today:(today<dates[0]?dates[0]:dates[dates.length-1]);
+  var isLiveConf=dates.indexOf(today)>=0;
+  var pick=isLiveConf?today:dates[0];
   try{var h=location.hash.slice(1);if(dates.indexOf(h)>=0)pick=h}catch(e){}
   function show(d){tabs.forEach(function(b){b.setAttribute('aria-selected',String(b.getAttribute('data-day')===d))});
     document.querySelectorAll('.tt-day').forEach(function(s){s.hidden=s.getAttribute('data-day')!==d});mark()}
-  function mark(){var now=Date.now();document.querySelectorAll('.tt-row').forEach(function(r){var a=Date.parse(r.getAttribute('data-start')),b=Date.parse(r.getAttribute('data-end'));
+  function mark(){if(!isLiveConf)return;var now=Date.now();document.querySelectorAll('.tt-row').forEach(function(r){var a=Date.parse(r.getAttribute('data-start')),b=Date.parse(r.getAttribute('data-end'));
     r.classList.toggle('past',b<now);r.classList.toggle('cur',a<=now&&now<b)});
     document.querySelectorAll('.tt-cell').forEach(function(c){var a=Date.parse(c.getAttribute('data-start')),b=Date.parse(c.getAttribute('data-end'));c.classList.toggle('on',a<=now&&now<b)})}
   document.querySelector('.tt-tabs').addEventListener('click',function(e){var b=e.target.closest('button');if(b){show(b.getAttribute('data-day'));try{history.replaceState(null,'','#'+b.getAttribute('data-day'))}catch(x){}}});
@@ -867,9 +1248,9 @@ const speakerMeta = (s: Session): string => s.speaker_ids.map((id) => wm.speaker
   write("site/schedule.html", shell({ title: "Schedule", active: "schedule", up, body, script }));
 }
 
-// ===== Today =====
+// ===== Today (Archival Daily Capture Log at site/today.html) =====
 {
-  const up = "";
+  const up = "../";
   // The whole day, both rooms; all-day items (registration, expo hours, lounges) go on one line.
   const ALL_DAY = 3 * 3600e3;
   const shortRoom = (s: Session): string => roomName(s).match(/\(([^)]+)\)/)?.[1] ?? roomName(s);
@@ -904,14 +1285,14 @@ const speakerMeta = (s: Session): string => s.speaker_ids.map((id) => wm.speaker
   const git = Bun.spawnSync({ cmd: ["git", "status", "--porcelain"], cwd: root, stdout: "pipe" }).stdout.toString().split("\n").filter(Boolean).length;
   const data = JSON.stringify({ plan, allDay, days, tz: TZ }).replace(/</g, "\\u003c");
   const body = `
-  <header class="masthead"><p class="mono agency">${esc(wm.event.name)}</p><h1 id="today-title">Today</h1><p class="sub" id="today-sub">Where the day stands.</p></header>
-  <div class="marginalia mono"><span id="dayswitch"></span><a href="site/schedule.html">Full schedule →</a></div>
+  <header class="masthead"><p class="mono agency">${esc(wm.event.name)} · Live Conference Log</p><h1 id="today-title">Daily Capture Log</h1><p class="sub" id="today-sub">Archive of the three conference days in San Francisco (Nov 10–12, 2026).</p></header>
+  <div class="marginalia mono"><span id="dayswitch"></span><a href="schedule.html">Full schedule →</a></div>
   <section class="view now-next" id="nownext"></section>
   <section class="view"><div class="view-head"><h2>Schedule</h2><p class="lede">Everything on, in time order. GO and maybe are my picks; tap a talk for its abstract.</p>
     <div class="roomfilter" id="roomfilter"><button type="button" data-r="all">Both rooms</button><button type="button" data-r="main">Mainstage only</button></div>
     <p class="minor" id="allday"></p></div>
     <ol class="plan" id="plan"></ol></section>
-  <section class="view"><div class="view-head"><h2>Captured so far</h2><p class="lede"><a href="site/talks/index.html">${captured.length} talks</a> · ${notes.length} notes · <a href="site/themes.html">${themes.length} themes</a></p></div><div>${recent}</div></section>
+  <section class="view"><div class="view-head"><h2>Captured so far</h2><p class="lede"><a href="talks/index.html">${captured.length} talks</a> · ${notes.length} notes · <a href="${up}index.html">${themes.length} themes</a></p></div><div>${recent}</div></section>
   <section class="view"><div class="view-head"><h2>Latest notes</h2></div><div>${latest}</div></section>
   <section class="view"><details><summary class="mono">Pipeline · ${git} files uncommitted · updated ${esc(generatedAt)}</summary><div>${pipeline}</div></details></section>`;
   const script = `var D=${data};
@@ -919,7 +1300,7 @@ const speakerMeta = (s: Session): string => s.speaker_ids.map((id) => wm.speaker
   var fmt=function(iso){return new Date(iso).toLocaleTimeString('en-US',{timeZone:D.tz,hour:'numeric',minute:'2-digit'})};
   var today=new Date().toLocaleDateString('en-CA',{timeZone:D.tz});
   var dates=D.days.map(function(d){return d.date});
-  var pick=dates.indexOf(today)>=0?today:(today<dates[0]?dates[0]:(dates.find(function(d){return d>today})||dates[dates.length-1]));
+  var pick=dates.indexOf(today)>=0?today:dates[0];
   var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
   var room='all';try{room=localStorage.getItem('aie-room')||'all'}catch(e){}
   var cur=pick;
@@ -952,8 +1333,8 @@ const speakerMeta = (s: Session): string => s.speaker_ids.map((id) => wm.speaker
   document.getElementById('roomfilter').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;room=b.getAttribute('data-r');try{localStorage.setItem('aie-room',room)}catch(x){}render(cur)});
   render(pick);setInterval(function(){var b=document.querySelector('#dayswitch [aria-pressed]');render(b?b.getAttribute('data-d'):pick)},60000);
 })();`;
-  write("index.html", shell({ title: "Today", active: "today", up, body, script }));
+  write("site/today.html", shell({ title: "Daily Capture Log · Archive", active: "schedule", up, body, script }));
 }
 
 const people = Object.keys(wm.speakers).length;
-console.log(`wrote index.html, site/talks/ (${captured.length} hubs), site/themes.html (${themes.length}), site/people.html (${people} speakers, ${Object.keys(wm.speakers).filter((id) => handleFor(id)).length} on X)`);
+console.log(`wrote index.html (themes explorer), site/themes.html (${themes.length}), site/talks/ (${captured.length} hubs), site/people.html (${people} speakers, ${Object.keys(wm.speakers).filter((id) => handleFor(id)).length} on X), site/schedule.html, site/today.html`);

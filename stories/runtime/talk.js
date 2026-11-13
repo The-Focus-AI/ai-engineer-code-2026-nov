@@ -23,7 +23,7 @@
     return node;
   };
 
-  // Site chrome: shared top bar, masthead breadcrumbs, and markdown link rewrites.
+  // Site chrome: shared top bar, universal zoom bar CSS/JS, and markdown link rewrites.
   (function siteChrome() {
     if (!src) return;
     if (!document.querySelector(".topnav")) {
@@ -32,59 +32,42 @@
       css.href = up + "site/nav.css";
       document.head.appendChild(css);
 
+      const exCss = document.createElement("link");
+      exCss.rel = "stylesheet";
+      exCss.href = up + "site/explorer.css";
+      document.head.appendChild(exCss);
+
       const nav = document.createElement("nav");
       nav.className = "topnav in-talk";
       nav.setAttribute("aria-label", "Site");
       const currentSection = atlasSlug ? "themes" : "talks";
+
+      const brand = document.createElement("a");
+      brand.className = "brand";
+      brand.href = up + "index.html";
+      brand.appendChild(document.createTextNode("AIE Code ’26"));
+      brand.appendChild(el("span", "brand-badge", "Archive"));
+      nav.appendChild(brand);
+
       const items = [
-        ["AIE Code ’26", "index.html", "brand"],
-        ["Today", "index.html", "today"],
-        ["Schedule", "site/schedule.html", "schedule"],
+        ["Themes", "index.html", "themes"],
         ["Talks", "site/talks/index.html", "talks"],
-        ["Themes", "site/themes.html", "themes"],
         ["People", "site/people.html", "people"],
-        ["Follow-ups", "site/followups.html", "followups"],
+        ["Schedule", "site/schedule.html", "schedule"],
       ];
       for (const [label, href, kind] of items) {
         const a = document.createElement("a");
         a.textContent = label;
         a.href = up + href;
-        if (kind === "brand") a.className = "brand";
         if (kind === currentSection) a.setAttribute("aria-current", "page");
         nav.appendChild(a);
       }
       document.body.prepend(nav);
 
-      const mast = document.querySelector(".talk-masthead");
-      if (mast && (talkSlug || atlasSlug)) {
-        const row = el("div", "talk-back-row");
-        if (talkSlug) {
-          const backHub = el("a", "talk-back", "← Everything from this talk");
-          backHub.href = hub(talkSlug);
-          row.appendChild(backHub);
-          const allTalks = el("a", "talk-back", "All talks");
-          allTalks.href = up + "site/talks/index.html";
-          row.appendChild(allTalks);
-          const allThemes = el("a", "talk-back", "All themes");
-          allThemes.href = up + "site/themes.html";
-          row.appendChild(allThemes);
-        } else if (atlasSlug === "conference-themes") {
-          const themesHub = el("a", "talk-back", "← Themes hub & 191 claims");
-          themesHub.href = up + "site/themes.html";
-          row.appendChild(themesHub);
-          const allTalks = el("a", "talk-back", "All talks");
-          allTalks.href = up + "site/talks/index.html";
-          row.appendChild(allTalks);
-        } else if (atlasSlug) {
-          const themesHub = el("a", "talk-back", "← Themes hub");
-          themesHub.href = up + "site/themes.html";
-          row.appendChild(themesHub);
-          const master = el("a", "talk-back", "← Master themes presentation");
-          master.href = up + "atlases/conference-themes/page.html";
-          row.appendChild(master);
-        }
-        mast.prepend(row);
-      }
+      const exJs = document.createElement("script");
+      exJs.src = up + "site/explorer.js";
+      exJs.defer = true;
+      document.head.appendChild(exJs);
     }
 
     for (const a of document.querySelectorAll('a[href*=".md"]')) {
@@ -94,10 +77,27 @@
       if (s) {
         a.setAttribute("href", hub(s) + "#" + m[2]);
       } else if (atlasSlug && href === "story.md") {
-        a.setAttribute("href", up + "site/themes.html" + (atlasSlug === "conference-themes" || atlasSlug === "own-the-stack" ? "" : "#" + atlasSlug));
+        a.setAttribute("href", up + "index.html" + (atlasSlug === "conference-themes" || atlasSlug === "own-the-stack" ? "" : "#" + atlasSlug));
       }
     }
   })();
+
+  function prependCardThumb(card, imgSrc, linkHref) {
+    if (!imgSrc || card.querySelector(".card-thumb")) return;
+    const thumb = el("a", "card-thumb");
+    thumb.href = linkHref;
+    const img = document.createElement("img");
+    img.src = up + imgSrc;
+    img.alt = "";
+    img.loading = "lazy";
+    thumb.appendChild(img);
+    const first = card.firstElementChild;
+    if (first && first.tagName === "DIV" && !first.className) {
+      first.insertBefore(thumb, first.firstChild);
+    } else {
+      card.insertBefore(thumb, card.firstChild);
+    }
+  }
 
   // Cross-referencing injected deterministically from site/xref.js.
   function renderXref(xref) {
@@ -160,6 +160,7 @@
         top.appendChild(h3);
         top.appendChild(el("p", "xc-desc", th.claim));
         card.appendChild(top);
+        prependCardThumb(card, th.leadSlide && th.leadSlide.src, up + th.deepDiveHref);
         const links = el("div", "xc-links");
         const dLink = el("a", "", "Open deep dive →");
         dLink.href = up + th.deepDiveHref;
@@ -189,7 +190,7 @@
         dLink.href = up + xref.masterPresentation.href;
         links.appendChild(dLink);
         const hLink = el("a", "", "Themes hub");
-        hLink.href = up + "site/themes.html";
+        hLink.href = up + "index.html";
         links.appendChild(hLink);
         card.appendChild(links);
         thGrid.appendChild(card);
@@ -222,7 +223,7 @@
             links.appendChild(pa);
           }
           const allC = el("a", "", "All debates");
-          allC.href = up + "site/themes.html#contested";
+          allC.href = up + "index.html#contested";
           links.appendChild(allC);
           card.appendChild(links);
           cGrid.appendChild(card);
@@ -261,6 +262,8 @@
           }
           if (r.thesis) top.appendChild(el("p", "xc-desc", r.thesis));
           card.appendChild(top);
+          const rInfo = xref.talks && xref.talks[r.slug];
+          prependCardThumb(card, rInfo && rInfo.leadImage, up + r.storyHref);
           const links = el("div", "xc-links");
           const sLink = el("a", "", "Read story →");
           sLink.href = up + r.storyHref;
@@ -310,6 +313,22 @@
     }
 
     if (atlasSlug && themes.length) {
+      for (const card of document.querySelectorAll(".theme-talk-item")) {
+        const talkLink = card.querySelector('a[href*="/talks/"]');
+        if (talkLink) {
+          const m = (talkLink.getAttribute("href") || "").match(/\/talks\/([^/]+)\//);
+          const tInfo = m && xref.talks && xref.talks[m[1]];
+          if (tInfo && tInfo.leadImage) prependCardThumb(card, tInfo.leadImage, talkLink.getAttribute("href"));
+          continue;
+        }
+        const themeLink = card.querySelector('a[href$="/page.html"]');
+        if (themeLink) {
+          const m = (themeLink.getAttribute("href") || "").match(/\.\.\/([^/]+)\/page\.html/);
+          const th = m && themeById.get(m[1]);
+          if (th && th.leadSlide && th.leadSlide.src) prependCardThumb(card, th.leadSlide.src, themeLink.getAttribute("href"));
+        }
+      }
+
       if (atlasSlug === "conference-themes" && document.getElementById("theme-deep-dives")) return;
       const wrap = el("section", "talk-xref");
       wrap.setAttribute("aria-label", "All conference themes");
@@ -354,7 +373,7 @@
         sub.appendChild(document.createTextNode(" · "));
       }
       const hLink = el("a", "", "Themes hub & full claims");
-      hLink.href = up + "site/themes.html";
+      hLink.href = up + "index.html";
       sub.appendChild(hLink);
       head.appendChild(sub);
       block.appendChild(head);
@@ -375,6 +394,7 @@
         top.appendChild(h3);
         top.appendChild(el("p", "xc-desc", th.claim));
         card.appendChild(top);
+        prependCardThumb(card, th.leadSlide && th.leadSlide.src, up + th.deepDiveHref);
         const links = el("div", "xc-links");
         const dLink = el("a", "", isCurrent ? "Reading now" : "Open deep dive →");
         dLink.href = up + th.deepDiveHref;
@@ -408,21 +428,53 @@
   const layout = document.querySelector(".talk-layout");
   const sections = [...document.querySelectorAll(".talk-copy section[data-chapter]")];
   const visuals = [...document.querySelectorAll(".talk-visual[data-visual]")];
-  const caption = document.querySelector(".talk-rail-caption");
-  const progress = document.querySelector(".talk-rail-progress span");
+  const rail = document.querySelector(".talk-rail");
+  const visualsBox = document.querySelector(".talk-visuals");
   if (!layout || !sections.length || !visuals.length) return;
 
-  const byVisual = new Map();
-  for (const v of visuals) byVisual.set(v.getAttribute("data-visual"), v);
+  let caption = document.querySelector(".talk-rail-caption");
+  if (!caption && rail) {
+    caption = el("p", "talk-rail-caption");
+    caption.setAttribute("aria-live", "polite");
+    rail.appendChild(caption);
+  }
+  let progressWrap = document.querySelector(".talk-rail-progress");
+  if (!progressWrap && rail) {
+    progressWrap = el("div", "talk-rail-progress");
+    progressWrap.setAttribute("aria-hidden", "true");
+    progressWrap.appendChild(document.createElement("span"));
+    rail.appendChild(progressWrap);
+  }
+  const progress = progressWrap ? progressWrap.querySelector("span") : null;
 
   let count = document.querySelector(".talk-rail-count");
-  const rail = document.querySelector(".talk-rail");
   if (!count && rail) {
     count = document.createElement("p");
     count.className = "talk-rail-count";
     count.setAttribute("aria-hidden", "true");
     rail.appendChild(count);
   }
+
+  let beatButtons = [];
+  if (rail && visualsBox && !rail.querySelector(".talk-rail-beats")) {
+    const beatsBar = el("div", "talk-rail-beats");
+    beatsBar.setAttribute("aria-label", "Chapters");
+    beatButtons = sections.map((sec, idx) => {
+      const btn = el("button", "talk-rail-beat", String(idx + 1).padStart(2, "0"));
+      btn.type = "button";
+      btn.title = sec.getAttribute("data-caption") || `Chapter ${idx + 1}`;
+      btn.addEventListener("click", () => {
+        sec.scrollIntoView({ behavior: "smooth", block: "center" });
+        activate(sec);
+      });
+      beatsBar.appendChild(btn);
+      return btn;
+    });
+    rail.insertBefore(beatsBar, visualsBox);
+  }
+
+  const byVisual = new Map();
+  for (const v of visuals) byVisual.set(v.getAttribute("data-visual"), v);
 
   // Inline copies for phones: one card above each chapter, built once.
   for (const section of sections) {
@@ -444,6 +496,7 @@
     const i = sections.indexOf(section);
     if (progress) progress.style.width = `${((i + 1) / sections.length) * 100}%`;
     if (count) count.textContent = `${i + 1} / ${sections.length}`;
+    beatButtons.forEach((b, bi) => b.classList.toggle("is-active", bi === i));
   }
 
   const io = new IntersectionObserver(

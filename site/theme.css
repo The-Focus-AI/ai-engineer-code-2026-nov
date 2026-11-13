@@ -29,7 +29,7 @@ body {
   padding-right: max(16px, env(safe-area-inset-right, 0px));
   padding-block: 0 4rem;
 }
-.sheet { max-width: 68rem; margin-inline: auto; display: grid; grid-template-columns: minmax(0, 1fr); }
+.sheet { max-width: 78rem; margin-inline: auto; display: grid; grid-template-columns: minmax(0, 1fr); }
 .sheet > * { min-width: 0; }
 a { color: var(--machine); }
 p { margin: 0; }

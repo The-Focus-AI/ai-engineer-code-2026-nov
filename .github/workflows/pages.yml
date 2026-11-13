@@ -33,7 +33,8 @@ jobs:
         run: |
           mkdir -p _site/stories
           cp index.html _site/
-          cp -R site talks _site/
+          cp -R site talks atlases _site/
+          rm -f _site/site/followups.html
           cp -R stories/runtime _site/stories/
           touch _site/.nojekyll
           du -sh _site
