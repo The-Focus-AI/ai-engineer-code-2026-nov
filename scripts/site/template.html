@@ -378,10 +378,11 @@ function callPill(id) {
 }
 function aboutBlock(s, label = "Read the abstract and speaker notes") {
   const people = s.speakers.map((id) => DATA.speakers[id]).filter((p) => p && (p.bio || (p.links || []).length));
-  if (!s.abstract && !people.length) return null;
+  if (!s.abstract && !people.length && !s.video) return null;
   const d = el("details"); d.append(el("summary", null, label));
   const body = el("div");
   if (s.abstract) body.append(el("p", null, s.abstract));
+  if (s.video && safeUrl(s.video)) { const v = el("p"); v.append(extLink("Watch on the livestream (approximate time)", s.video)); body.append(v); }
   for (const p of people) {
     const para = el("p"); para.append(el("strong", null, p.name));
     if (p.bio) para.append(`: ${p.bio}`);

@@ -10,6 +10,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { topnav } from "./site/nav.ts";
+import { livestreamLookup } from "./site/livestreams.ts";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const argv = process.argv.slice(2);
@@ -78,6 +79,7 @@ const loadRecommendations = () => {
 
 // Only pass the fields the page reads, so a change elsewhere in the truth cannot leak in.
 const titleGap = wm.coverage.gaps.find((g) => g.startsWith("talk title not published"));
+const watch = livestreamLookup(root);
 const data = {
   event: wm.event,
   venue: wm.venue,
@@ -86,6 +88,7 @@ const data = {
     id: s.session_id, title: s.title, abstract: s.abstract, format: s.format, room: s.room_id,
     note: s.location_note, day: s.day, start: s.starts_at, end: s.ends_at,
     speakers: s.speaker_ids, status: s.status, source: s.source_url,
+    video: watch(s)?.url ?? null,
   })),
   speakers: Object.fromEntries(Object.entries(wm.speakers).map(([id, p]) => [id, {
     name: p.name, affiliation: p.affiliation, bio: p.bio, links: p.links,
