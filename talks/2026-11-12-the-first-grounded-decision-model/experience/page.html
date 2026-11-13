@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The first Grounded Decision Model · Devin Gupta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .alongside { margin: 1.2rem 0; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: .3rem; font: .88rem/1.55 var(--sans); }
+  .alongside b { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; display: block; margin-bottom: .2rem; }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.35rem, 2.8vw, 1.9rem)/1.28 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  .quote-card::before { content: none; }
+  code { font: .88em var(--mono); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Thu 12 Nov 2026 · Expo Sessions</div>
+  <h1>Ground the decision model</h1>
+  <p class="dek">Devin Gupta (Parallel Web Systems) argues that cheap, read-only decision models are overconfident and blind to changing facts until you pair them with live web search—yielding calibrated, cited answers in under a second at $1 per 1,000 requests.</p>
+  <div class="talk-meta">Devin Gupta, Parallel Web Systems · 11 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual diagram-card" data-visual="v1">
+        <div class="lbl">Ungrounded weights vs. live web state</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Comparison of an ungrounded LLM guessing Michigan Senate race with 58 percent overconfidence from stale weights versus a grounded decision model querying a 100-billion-page live index.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="18" y="18" width="364" height="44" rx="8" fill="var(--card)" stroke="var(--rule)"/>
+            <text x="200" y="37" text-anchor="middle" fill="var(--muted)" font-size="10">WORLD-STATE QUESTION</text>
+            <text x="200" y="53" text-anchor="middle" fill="var(--ink)" font-weight="600">“Who won the Michigan Senate race?”</text>
+
+            <rect x="18" y="80" width="174" height="148" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="32" y="102" fill="var(--muted)" font-weight="600" font-size="10">UNGROUNDED WEIGHTS</text>
+            <text x="32" y="126" fill="var(--ink)" font-weight="600">Frozen pretraining</text>
+            <text x="32" y="144" fill="var(--muted)" font-size="10">No live search context</text>
+            <line x1="32" y1="160" x2="178" y2="160" stroke="var(--rule)"/>
+            <text x="32" y="182" fill="var(--accent)" font-weight="600">Wrong + 58% confident</text>
+            <text x="32" y="200" fill="var(--muted)" font-size="10">Stale candidate priors</text>
+
+            <rect x="208" y="80" width="174" height="148" rx="8" fill="var(--panel)" stroke="var(--accent)"/>
+            <text x="222" y="102" fill="var(--accent)" font-weight="600" font-size="10">WEB-GROUNDED MODEL</text>
+            <text x="222" y="126" fill="var(--ink)" font-weight="600">Live 100B-page index</text>
+            <text x="222" y="144" fill="var(--muted)" font-size="10">Fresh evidence in state</text>
+            <line x1="222" y1="160" x2="368" y2="160" stroke="var(--rule)"/>
+            <text x="222" y="182" fill="var(--identity)" font-weight="600">Calibrated + cited</text>
+            <text x="222" y="200" fill="var(--muted)" font-size="10">Verifiable source URL</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from his Michigan Senate race example at 00:00:55</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v2">
+        <div class="lbl">PWS-Decisions (300 questions): accuracy &amp; calibration</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="PWS-Decisions 300-question benchmark shows grounding aligns confidence with actual correctness using 104 question tokens and 4,777 evidence tokens.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="18" width="360" height="54" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="34" y="38" fill="var(--muted)" font-size="10" font-weight="600">INPUT RATIO ON PWS-DECISIONS (300 QUESTIONS)</text>
+            <rect x="34" y="48" width="18" height="10" rx="2" fill="var(--accent)"/>
+            <rect x="56" y="48" width="308" height="10" rx="2" fill="var(--machine)"/>
+            <text x="200" y="68" text-anchor="middle" fill="var(--muted)" font-size="9.5">104 question tokens vs. 4,777 live evidence tokens (from abstract)</text>
+
+            <rect x="20" y="88" width="172" height="140" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="34" y="110" fill="var(--muted)" font-weight="600" font-size="10">WITHOUT GROUNDING</text>
+            <text x="34" y="136" fill="var(--ink)" font-weight="600">Guessing probabilities</text>
+            <text x="34" y="156" fill="var(--muted)" font-size="10">High confidence on</text>
+            <text x="34" y="171" fill="var(--muted)" font-size="10">unobserved live facts</text>
+            <text x="34" y="206" fill="var(--accent)" font-weight="600">Uncalibrated errors</text>
+
+            <rect x="208" y="88" width="172" height="140" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="222" y="110" fill="var(--identity)" font-weight="600" font-size="10">WITH WEB GROUNDING</text>
+            <text x="222" y="136" fill="var(--ink)" font-weight="600">Confidence tracks truth</text>
+            <text x="222" y="156" fill="var(--muted)" font-size="10">Correct answers carry</text>
+            <text x="222" y="171" fill="var(--muted)" font-size="10">deserved high certainty</text>
+            <text x="222" y="206" fill="var(--identity)" font-weight="600">Safe to branch in code</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:01:50 and the session abstract in notes</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v3">
+        <div class="lbl">Decisions API pipeline &amp; cost split</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Pipeline: Question enters live search over 100 billion pages, feeds retrieved evidence to a read-only decision model, returning typed answers and citations under 1 second for $1 per 1,000 requests.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="18" y="24" width="104" height="72" rx="8" fill="var(--card)" stroke="var(--rule)"/>
+            <text x="70" y="54" text-anchor="middle" fill="var(--ink)" font-weight="600">State input</text>
+            <text x="70" y="72" text-anchor="middle" fill="var(--muted)" font-size="10">Typed schema</text>
+
+            <path d="M122 60 L146 60" stroke="var(--accent)" stroke-width="2"/>
+
+            <rect x="148" y="24" width="108" height="72" rx="8" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="202" y="50" text-anchor="middle" fill="var(--machine)" font-weight="600">Live index</text>
+            <text x="202" y="68" text-anchor="middle" fill="var(--ink)" font-size="10">~100B pages</text>
+            <text x="202" y="83" text-anchor="middle" fill="var(--muted)" font-size="9.5">reused across Qs</text>
+
+            <path d="M256 60 L280 60" stroke="var(--accent)" stroke-width="2"/>
+
+            <rect x="282" y="24" width="100" height="72" rx="8" fill="var(--panel)" stroke="var(--accent)"/>
+            <text x="332" y="50" text-anchor="middle" fill="var(--accent)" font-weight="600">Read-only</text>
+            <text x="332" y="68" text-anchor="middle" fill="var(--ink)" font-weight="600">Decision model</text>
+            <text x="332" y="83" text-anchor="middle" fill="var(--muted)" font-size="9.5">answer + cite</text>
+
+            <rect x="18" y="118" width="364" height="108" rx="10" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="34" y="142" fill="var(--accent)" font-weight="600" font-size="10">ECONOMICS &amp; LATENCY</text>
+            <text x="34" y="166" fill="var(--ink)" font-weight="600">&lt; 1 second latency · $1 per 1,000 requests</text>
+            <text x="34" y="186" fill="var(--muted)" font-size="10">~240× cheaper per token read than frontier LLMs (abstract)</text>
+            <text x="34" y="204" fill="var(--identity)" font-size="10">Model share of grounded answer cost: 86% → 17%</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:03:01 and notes (2026-11-12T1437)</figcaption>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v4">
+        <p class="quote-big">“Not only do we give you the answer, we also give you the citation, so you can go fact check the source yourself.”<span>Devin Gupta · 00:05:45</span></p>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v5">
+        <div class="lbl">The shared-context boundary in Q&amp;A</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Single search context works cleanly when parallel questions target the same pages, but degrades when divergent questions like election winner and immigration stance share one search.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="20" width="360" height="92" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="34" y="42" fill="var(--identity)" font-weight="600" font-size="10">CO-LOCATED ATTRIBUTES (SAME SEARCH)</text>
+            <text x="34" y="64" fill="var(--ink)" font-weight="600">Restaurant site → reservation tool + CMS</text>
+            <text x="34" y="84" fill="var(--muted)" font-size="10">One retrieved state answers multiple questions</text>
+            <text x="34" y="100" fill="var(--identity)" font-size="10">100,000 CA restaurants classified for ~$100</text>
+
+            <rect x="20" y="130" width="360" height="100" rx="8" fill="var(--panel)" stroke="var(--accent)"/>
+            <text x="34" y="152" fill="var(--accent)" font-weight="600" font-size="10">DIVERGENT SUB-QUESTIONS (SPLIT CALLS)</text>
+            <text x="34" y="174" fill="var(--ink)" font-weight="600">Winner + immigration stance + party</text>
+            <text x="34" y="194" fill="var(--muted)" font-size="10">Sharing one search starves distinct evidence</text>
+            <text x="34" y="212" fill="var(--accent)" font-size="10">Split into separate requests for clean grounding</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:04:34 and Q&amp;A at 00:07:45</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v6">
+        <div class="lbl">Where grounded decisions fit</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Three workloads—KYC checks, sales enrichment, and dossier research—feeding Parallel Decisions API for sub-second typed answers with citations.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <g fill="var(--panel)" stroke="var(--rule)">
+              <rect x="18" y="24" width="150" height="54" rx="8"/>
+              <rect x="18" y="96" width="150" height="54" rx="8"/>
+              <rect x="18" y="168" width="150" height="54" rx="8"/>
+            </g>
+            <text x="32" y="47" fill="var(--ink)" font-weight="600">Sales enrichment</text>
+            <text x="32" y="64" fill="var(--muted)" font-size="10">100k sites @ $1 / 1k</text>
+            <text x="32" y="119" fill="var(--ink)" font-weight="600">Live KYC &amp; onboarding</text>
+            <text x="32" y="136" fill="var(--muted)" font-size="10">Operating status &lt; 1s</text>
+            <text x="32" y="191" fill="var(--ink)" font-weight="600">Research &amp; dossiers</text>
+            <text x="32" y="208" fill="var(--muted)" font-size="10">Fact-checked citations</text>
+
+            <path d="M168 51 L218 123 M168 123 L218 123 M168 195 L218 123" stroke="var(--accent)" stroke-width="1.5"/>
+
+            <rect x="220" y="64" width="162" height="118" rx="10" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="301" y="94" text-anchor="middle" fill="var(--accent)" font-weight="600" font-size="10">GROUNDED PRIMITIVE</text>
+            <text x="301" y="118" text-anchor="middle" fill="var(--ink)" font-weight="600">Typed answer</text>
+            <text x="301" y="136" text-anchor="middle" fill="var(--ink)" font-weight="600">+ calibration</text>
+            <text x="301" y="156" text-anchor="middle" fill="var(--identity)" font-size="10">+ source citation URL</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:04:34, 00:07:03, and notes (2026-11-12T1441)</figcaption>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="why-grounding" data-visual="v1" data-caption="Ungrounded models emit confident guesses from frozen pretraining weights">
+      <div class="chapter">The problem</div>
+      <h2>Ungrounded models guess confidently on stale facts</h2>
+      <p>Cheap inference has caused read-only decision and classification traffic to explode—once a model sees the right context, it takes very little output to make a call. The catch is feeding world-state questions to a model whose knowledge stopped at pretraining:</p>
+      <blockquote>“And I'm here to make the case that like grounding for those is extremely important.”<span class="cite">00:00:00</span></blockquote>
+      <p>Ask an ungrounded model who won the Michigan Senate race—something resolved immediately on any search engine—and it returns a wrong candidate with false mathematical certainty:</p>
+      <blockquote>“Okay, so maybe a question: Who won the Michigan Senate race? This should be easy. This is like well known. I mean, a couple days ago, if you do Google searches, the first thing that shows up. But if you ask Jeff this question, this is what'll give you back. Mike Rogers with fifty-eight percent. It really doesn't know.”<span class="cite">00:00:55</span></blockquote>
+      <blockquote>“And so this is where we think that like not only is it wrong, but also its confidence is too high.”<span class="cite">00:00:55</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “How do we ground the decision model?” (<code>2026-11-12T1435</code>). <b>The reading:</b> Cloudflare’s Clef and Workday’s Jev showed how fast small decision models can run; Gupta starts upstream of speed—an ungrounded classifier simply makes wrong guesses faster when facts move on the web.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:00, 00:00:55</p>
+    </section>
+
+    <section data-chapter="calibration-benchmark" data-visual="v2" data-caption="PWS-Decisions shows grounding restores calibration so confidence matches truth">
+      <div class="chapter">The benchmark</div>
+      <h2>Grounding unlocks calibration, not just accuracy</h2>
+      <p>To measure real-world decision quality beyond trivia, Parallel released the open <a href="https://github.com/parallel-web/pws-decisions-benchmark">PWS-Decisions benchmark</a> (300 questions drawn from live workloads where ungrounded models lack ground truth). Comparing ungrounded models against web-grounded ones shows gains on both accuracy and calibration:</p>
+      <blockquote>“What is correct is much more confident that's correct if you use actual grounding to ground your decision.”<span class="cite">00:01:50</span></blockquote>
+      <blockquote>“Calibration is the important thing about good decision models.”<span class="cite">00:01:50</span></blockquote>
+      <p>In Q&amp;A, Gupta notes that complex calibration schemes exist mostly to compensate when a model is guessing in the dark—once live web evidence is present, the answer is clear enough that calibration follows naturally.</p>
+      <div class="reading"><b>From the notes:</b> “Decisions API with grounded support.” (<code>2026-11-12T1437</code>) records the session abstract numbers on PWS-Decisions: 104 tokens for the question versus 4,777 tokens of retrieved evidence. <b>The reading:</b> Calibration is what turns a demo model into software control flow you can branch on without babysitting.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:50, 00:07:45</p>
+    </section>
+
+    <section data-chapter="architecture-economics" data-visual="v3" data-caption="Live 100B-page search + read-only scoring runs under 1s at $1 per 1,000 requests">
+      <div class="chapter">Architecture &amp; economics</div>
+      <h2>One live search, shared state, $1 per 1,000 requests</h2>
+      <p>The <a href="https://parallel.ai/products/decisions">Decisions API</a> keeps the state-input interface of a standard decision call, runs a live search against Parallel’s ~100-billion-page web index, and attaches the top evidence straight into the context:</p>
+      <blockquote>“We do a live search, web search call, and we get information from our proprietary index, which is like. On the size, I think that's at least their size, which is about 100 billion pages, and we find the most relevant content for that decision.”<span class="cite">00:03:01</span></blockquote>
+      <blockquote>“It runs under a second in response time. It's one dollar per thousand requests.”<span class="cite">00:03:01</span></blockquote>
+      <p>That makes grounded decisions roughly an order of magnitude faster and one to two orders of magnitude cheaper than multi-step LLM search chains—and fast enough that teams run lookups interactively while a user is still typing a company name into an onboarding flow.</p>
+      <div class="reading"><b>From the notes:</b> Per the abstract in <code>2026-11-12T1437</code>, read-only decision models cost ~240× less per token read than frontier LLMs, cutting model inference from 86% down to 17% of a grounded answer’s cost. <b>The reading:</b> Compare Philipp Schmid’s Gemini Decisions API announcement on Nov 11—once reading is cheap, the search index is the moat.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:03:01, 00:04:05, 00:07:03</p>
+    </section>
+
+    <section data-chapter="live-jensen-test" data-visual="v4" data-caption="Every grounded decision returns both a typed answer and a verifiable source citation">
+      <div class="chapter">Demo &amp; workloads</div>
+      <h2>The “Is Jensen still CEO of Nvidia?” test</h2>
+      <p>In the live demo, Gupta asks an ungrounded model whether Jensen Huang is CEO of Nvidia; trained on decades of history, it returns `"true"` at 96% confidence without ever checking today’s reality. Running the same question through the Decisions API returns the current answer alongside a primary citation:</p>
+      <blockquote>“Not only do we give you the answer, we also give you the citation, so you can go fact check the source yourself.”<span class="cite">00:05:45</span></blockquote>
+      <p>Three production patterns illustrate why sub-second cited classification matters at scale: classifying <code>100,000</code> California restaurants by reservation platform and website builder for ~$100, running live business KYC checks, and categorizing breaking news.</p>
+      <blockquote>“They have a list of like a hundred thousand restaurants. California, and you search every single one of them up here on the website, and you can actually classify for every single one of them.”<span class="cite">00:04:34</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “&quot;Is Jensen still the CEO of Nvidia?&quot; is a hilarious test to do today.” (<code>2026-11-12T1440</code>). <b>The reading:</b> The test is funny because the answer hasn’t changed yet—until the day it does, and every ungrounded pipeline keeps swearing with 96% certainty that nothing moved.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:04:34, 00:05:45</p>
+    </section>
+
+    <section data-chapter="shared-context-limit" data-visual="v5" data-caption="Co-located attributes share one search cleanly; divergent questions degrade">
+      <div class="chapter">The boundary</div>
+      <h2>The shared-context trap in parallel questions</h2>
+      <p>In Q&amp;A, an engineer who tested the API reports a sharp edge case: asking single questions works well, but batching orthogonal questions in parallel—such as election winner, immigration stance, and party affiliation—forces all of them onto one retrieved search result set:</p>
+      <blockquote>“Because the same search will back those results, it actually degrades as opposed to asking each of those as. Separate questions.”<span class="cite">00:07:45</span></blockquote>
+      <p>Gupta confirms that the v1 product shape optimizes around one grounding search per entity state rather than multi-query fan-out:</p>
+      <blockquote>“Yeah, I think the intention behind the product shape is that we want. A single sort of grounding or single search to answer a question.”<span class="cite">00:07:45</span></blockquote>
+      <div class="reading"><b>From the notes:</b> Connects directly to the multi-question reuse note (<code>2026-11-12T1437</code>). <b>The reading:</b> Batch attributes that live on the same web pages (like restaurant CMS + reservation provider), and split unrelated research questions into separate calls.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:07:45</p>
+    </section>
+
+    <section data-chapter="research-pipelines" data-visual="v6" data-caption="A sub-second, cited primitive for dossier grounding and client research">
+      <div class="chapter">Where it fits</div>
+      <h2>Automated research, KYC, and dossier pipelines</h2>
+      <p>Put together, web-grounded decision models occupy a clean niche beneath full research agents: sub-second typed classification with source URLs at one-tenth of a cent per call.</p>
+      <blockquote>“And so it all comes to like one dollar per thousand requests. It's super easy. It's super fast.”<span class="cite">00:05:45</span></blockquote>
+      <ul class="key-points">
+        <li><strong>Ground before branching:</strong> use live web retrieval so confidence scores are calibrated rather than overconfident pretraining guesses (<code>00:00:55</code>, <code>00:01:50</code>).</li>
+        <li><strong>Cheap cited enrichment:</strong> classify hundreds of thousands of entities, run live KYC, or corroborate dossier claims for <code>$1 / 1,000</code> requests (<code>00:03:01</code>, <code>00:04:34</code>).</li>
+        <li><strong>Match batching to search scope:</strong> share one grounding search across co-located facts, and split divergent angles into separate calls (<code>00:07:45</code>).</li>
+      </ul>
+      <div class="reading"><b>From the notes:</b> “Follow up on using Parallel to do research.” (<code>2026-11-12T1441</code>). <b>The reading:</b> For Will and TheFocus.AI, the direct next test is using Parallel’s Decisions API to corroborate entity claims and refresh talk dossiers or client market maps without paying slow deep-research latency on every item.</div>
+      <div class="alongside"><b>Read alongside</b><ul><li><a href="https://parallel.ai/blog/decisions-api">Introducing the Parallel Decisions API</a> &amp; <a href="https://parallel.ai/blog/pws-decisions-benchmark">PWS-Decisions benchmark post</a> — Launch details and 300-question evaluation.</li><li><a href="https://github.com/parallel-web/pws-decisions-benchmark">parallel-web/pws-decisions-benchmark</a> — Open repo and Hugging Face dataset.</li><li><a href="../../2026-11-11-cloudflare-is-a-neolab/experience/page.html">Michelle Chen: The missing piece (Cloudflare Clef)</a> — Companion decision-model architecture at the edge.</li><li><a href="../../2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">Philipp Schmid: Deleting 90% of the harness</a> — Context on simplified harnesses and Gemini’s Decisions API.</li></ul></div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:03:01, 00:04:34, 00:05:45</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room — keeping ASR garbles like “Jeff” for “GPT”, “Justin Wong” for “Jensen Huang”, and “the video” for “Nvidia” verbatim) and on notes taken during the talk. “From the notes” and “The reading” are editorial synthesis, not his words. More on the <a href="../links.md">links page</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

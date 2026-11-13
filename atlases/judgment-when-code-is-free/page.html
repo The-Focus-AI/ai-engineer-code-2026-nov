@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Judgment when code is free · Theme 06 Deep Dive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../stories/runtime/talk.css">
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Theme Deep Dive 06 of 06</div>
+  <h1>Judgment when code is free</h1>
+  <p class="dek">Zero-cost implementation shifts engineering value away from typing syntax toward human judgment, taste, ambition, and deliberate attention budgets—protecting teams from high-speed burnout.</p>
+  <div class="talk-meta">13 talks · 28 claims · 2 counter-claims · Also called: asymmetric slop, be more ambitious, capacity, cognitive load, decision fatigue, expected pain, human judgment, knowing what to build, micro decisions, software Renaissance, taste and craft, the theme of the conference</div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual diagram-card" data-visual="v0">
+        <div class="lbl">Asymmetric slop and the expected-pain filter</div>
+        <svg viewBox="0 0 400 280" role="img" aria-label="Diagram contrasting zero-cost code generation with constant-cost human review, producing asymmetric slop unless filtered by expected pain across high-cost vs low-cost decisions.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="18" width="170" height="72" rx="8" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="34" y="42" fill="var(--machine)" font-weight="700" font-size="10">CODE GENERATION</text>
+            <text x="34" y="61" fill="var(--ink)" font-size="10.5">Cost → $0 per 1,000 lines</text>
+            <text x="34" y="77" fill="var(--muted)" font-size="9.5">Instant drafts, docs, PRs</text>
+
+            <rect x="210" y="18" width="170" height="72" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="224" y="42" fill="var(--identity)" font-weight="700" font-size="10">HUMAN COMPREHENSION</text>
+            <text x="224" y="61" fill="var(--ink)" font-size="10.5">Cost ≈ constant</text>
+            <text x="224" y="77" fill="var(--muted)" font-size="9.5">Fixed working memory &amp; hours</text>
+
+            <path d="M105 90 L105 114 M295 90 L295 114" stroke="var(--rule-strong)" stroke-width="1.5"/>
+
+            <rect x="20" y="116" width="360" height="58" rx="8" fill="var(--card)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="34" y="139" fill="var(--accent)" font-weight="700" font-size="10">EXPECTED PAIN TRIAGE = P(CHANGE) × COST(CHANGE)</text>
+            <text x="34" y="159" fill="var(--ink)" font-size="10">Spend review budget on schemas, invariants &amp; specs—never button colors</text>
+
+            <rect x="20" y="190" width="360" height="72" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="34" y="213" fill="var(--muted)" font-weight="700" font-size="10">WHY REVIEW SHIFTS TO DECISIONS</text>
+            <text x="34" y="232" fill="var(--ink)" font-size="10">Unfiltered volume compounds slop; human judgment</text>
+            <text x="34" y="248" fill="var(--ink)" font-size="10">becomes mental-model ownership rather than syntax editing</text>
+          </g>
+        </svg>
+        <figcaption>When writing drops to zero, human comprehension becomes the binding constraint</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="../../talks/2026-11-12-judgement-is-the-last-job/experience/judgement-taste.jpg" alt="Ishaan Dey's conference slide centering the word Judgement surrounded by quotes from Mitchell Hashimoto, Karri Saarinen, Paul Graham, and Nan Yu on knowing what to build and taste.">
+        <figcaption>Ishaan Dey · Judgement is the Last Job · Taste and problem selection replace typing</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="../../talks/2026-11-10-scott-tolinski-co-host-syntax/experience/lost-my-spark.jpg" alt="Scott Tolinski on stage beside a developer quote reading 'I lost my spark, my passion, now it's just money...' describing burnout and decision fatigue from constant AI prompting.">
+        <figcaption>Scott Tolinski · The True Cost of AI Coding · Decision fatigue and the spark drain</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="../../talks/2026-11-12-a-new-age-of-software-engineering/experience/capacity.jpg" alt="Walden Yan's slide titled Cognition's delivery capacity is exploding showing merged PR volume rising 40.4x from Nov 2025 to Oct 2026 alongside 2.7x engineering headcount.">
+        <figcaption>Walden Yan · A New Age of Software Engineering · 40.4x delivery on 2.7x headcount</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v4">
+        <img src="../../talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/experience/be-more-ambitious-claude.jpg" alt="Jarred Sumner's terminal screenshot of a 12-hour Claude Code session with his prompt 'I don't think you're being nearly ambitious enough' pushing the agent off a timid path.">
+        <figcaption>Jarred Sumner · Anthropic / Bun · Steering long-running builds with leading questions</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v5">
+        <img src="../../talks/2026-11-12-thariq-shihipar-independent/experience/industrial-vs-renaissance.jpg" alt="Thariq Shihipar's comparison slide contrasting gray industrial factory blocks on the left with colorful artisanal objects representing a Software Renaissance on the right.">
+        <figcaption>Thariq Shihipar · Independent · Software Renaissance over gray industrial output</figcaption>
+      </figure>
+
+    </div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="v0" data-visual="v0" data-caption="When generation approaches zero cost, comprehension and attention stay fixed">
+      <div class="chapter">01 · Asymmetric Slop &amp; Expected Pain</div>
+      <p>Across 13 talks and 28 claims, the closing message of AI Engineer Code Summit inverted the old software bottleneck: typing and wiring syntax are effectively free, while human review and architectural understanding remain stubbornly constant. Unfiltered generation does not produce leverage—it produces an overwhelm of plausible diffs.</p>
+      <blockquote>“AI cannot replace human judgment. It can only amplify our judgment, or maybe perhaps our lack of judgment in certain cases. And the slop is asymmetric. The cost of producing a thousand line PR or a ten page doc is approaching zero. But the cost of reviewing it is still barely constant.”<span class="who">Dexter Horthy · <a href="../../talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/experience/page.html">12-Factor-Factories: Design Patterns for Agentic Coding</a> · 00:14:43</span></blockquote>
+      <p>Because human attention cannot scale alongside token throughput, teams have to triage where judgment goes. Dexter Horthy multiplies the likelihood of future change by the difficulty of changing it later—ignoring button colors while guarding database schemas. Ankit Jain found that human review comments naturally pivot from syntax to intent:</p>
+      <blockquote>“Most of the comments that humans are providing are actually not about bugs or correctness. It's about decisions.”<span class="who">Ankit Jain · <a href="../../talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/experience/page.html">One team's path to trusting AI generated code</a> · 00:00:29</span></blockquote>
+      <p>Even when an agent runs deterministic tests cleanly, humans still read outputs <em>“for us to build mental models”</em> (Ankit Jain, <code>00:02:56</code>). Without that shared mental model, as Horthy warned, skipping review altogether guarantees the exact same generic output every competitor generates.</p>
+    </section>
+
+    <section data-chapter="v1" data-visual="v1" data-caption="Knowing what to build matters more when anyone can generate software instantly">
+      <div class="chapter">02 · Knowing What to Build</div>
+      <p>If implementation drops toward zero cost, bad product decisions scale just as cleanly as good ones. Lauren Tan put it bluntly: if your loop lacks discipline, automating it just manufactures more waste faster.</p>
+      <blockquote>“Then automating that loop just produces more slop.”<span class="who">Lauren Tan · <a href="../../talks/2026-11-11-all-code-is-slop-except-mine/experience/page.html">All Code Is Slop (Except Mine)</a> · 00:16:10</span></blockquote>
+      <p>Justin McCarthy drew the same boundary for factory-style engineering: factories work on clear customer promises, never on vague greenfield wishlists.</p>
+      <blockquote>“And if we're trying to industrialize something where we don't know what we want. We're certainly we're not going to get the right thing, or we're going to take too long, or we're going to spend too much.”<span class="who">Justin McCarthy · <a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Brownfield Factories</a> · 00:02:12</span></blockquote>
+      <p>Ishaan Dey distilled the entire afternoon into a single design imperative: when production is ubiquitous, taste and direction become the scarce edge.</p>
+      <blockquote>“So, anything can be made by anyone. Then it's more important than ever to know what the right thing to even make is.”<span class="who">Ishaan Dey · <a href="../../talks/2026-11-12-judgement-is-the-last-job/experience/page.html">Judgement is the Last Job</a> · 00:00:39</span></blockquote>
+      <p>Ishaan Dey added that finishing a first working prototype in seconds creates a dangerous illusion of completion: teams must deliberately pause, explore multiple directions, and apply human judgment before locking a direction in.</p>
+    </section>
+
+    <section data-chapter="v2" data-visual="v2" data-caption="Decision fatigue, cognitive load, and protecting human focus">
+      <div class="chapter">03 · Decision Fatigue &amp; Attention Budgets</div>
+      <p>Moving from writing code to supervising five concurrent agents introduces a real cognitive tax. Scott Tolinski surveyed working developers on why high-speed AI coding leaves them drained despite higher raw output.</p>
+      <blockquote>“Obviously, it's decision fatigue.”<span class="who">Scott Tolinski · <a href="../../talks/2026-11-10-scott-tolinski-co-host-syntax/experience/page.html">The True Cost of AI Coding</a> · 00:09:42</span></blockquote>
+      <p>Context-switching across asynchronous agents erodes flow state just as easily as endless review queues. Thariq Shihipar described the trap of fanning out work only to come back alienated from the result:</p>
+      <blockquote>“And I find that like the ball just makes a bunch of choices for me, and then I try it out. I'm like, wow, I have no idea what that actually does. I get distracted pretty easily. I don't feel in the zone very much. You know, I sort of send off a prompt and they start doing something else and I come back. And I honestly make less progress because of these things, right?”<span class="who">Thariq Shihipar · <a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">Thariq Shihipar, Independent</a> · 00:11:06</span></blockquote>
+      <p>Both toolmakers and practitioners converged on protecting the human attention budget. Tolinski advised capping active threads—<em>“Less paralization makes for a calmer mind.”</em> (<code>00:19:50</code>)—while Ishaan Dey proposed hiding noisy raw tool streams behind semantic summaries so humans only spend cognitive load on meaningful forks.</p>
+    </section>
+
+    <section data-chapter="v3" data-visual="v3" data-caption="With easy code handled, ambition becomes the binding team constraint">
+      <div class="chapter">04 · Ambition as the Bottleneck</div>
+      <p>Several speakers noted that once routine CRUD, boilerplate, and easy tickets evaporate, daily work does not feel lighter—it simply compresses toward the hardest unresolved problems. Simon Willison stated the conference thesis directly during his keynote:</p>
+      <blockquote>“and I think it's the theme of this conference: is to be more ambitious now that we have all of these new tools.”<span class="who">Simon Willison · <a href="../../talks/2026-11-11-2026-in-llms/experience/page.html">2026 in LLMs</a> · 00:01:58</span></blockquote>
+      <p>Later in the same talk, Willison captured why senior engineers still feel stretched even as models get stronger: <em>“I think the truth is that the easy stuff is all handled now.”</em> (<code>00:17:44</code>). Walden Yan backed that ambition thesis with hard numbers from Cognition—merged PRs up 40.4x alongside 2.7x headcount:</p>
+      <blockquote>“So I think really most teams are limited by the amount of ambition they have.”<span class="who">Walden Yan · <a href="../../talks/2026-11-12-a-new-age-of-software-engineering/experience/page.html">A New Age of Software Engineering</a> · 00:13:07</span></blockquote>
+    </section>
+
+    <section data-chapter="v4" data-visual="v4" data-caption="Pushing models off timid defaults through active questioning and legible specs">
+      <div class="chapter">05 · Leading Questions &amp; Ground Truth</div>
+      <p>Because models default to safe, incremental compromises, human taste shows up in how builders steer multi-hour runs. Recounting five rewrites of an ahead-of-time JavaScript compiler in 46 days, Jarred Sumner explained that the human role is relentless questioning—forcing the agent to defend slow paths or timid shortcuts:</p>
+      <blockquote>“what you actually do is like. A bunch of leading questions, like why are we doing this? Can we do this? Also, I end up saying like, can you do this faster? Or like, what's taking so long?”<span class="who">Jarred Sumner · <a href="../../talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/experience/page.html">Jarred Sumner, Founder of Bun, Anthropic / Bun</a> · 00:18:48</span></blockquote>
+      <p>To keep that steering grounded in real understanding rather than guessing from diffs, Thariq Shihipar recommended maintaining an English-density spec alongside generated code so the builder always holds an editable mental anchor:</p>
+      <blockquote>“It's supposed to feel like English. It's kind of like a spec, and I'll show you what it looks like. But it's at the density where, if I just read this code, I know what's happening, and I can edit it. I can tweak it. But more importantly, I just like you know can have a bit of a ground truth of like what the what my game looks like.”<span class="who">Thariq Shihipar · <a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">Thariq Shihipar, Independent</a> · 00:13:27</span></blockquote>
+    </section>
+
+    <section data-chapter="v5" data-visual="v5" data-caption="Software Renaissance vs. industrial sameness, and where counter-evidence pushes back">
+      <div class="chapter">06 · Software Renaissance &amp; Counter-Evidence</div>
+      <p>Diogo Almeida reminded the room that generic output is often just reliability failure in disguise (<em>“The root of slop is that AI is unreliable.”</em>, <code>00:19:45</code>). When reliability is solved, Thariq Shihipar argued software enters a Renaissance rather than a factory line: every extra ounce of craft becomes economically valuable.</p>
+      <blockquote>“Something that is happening with software, but at the same time, there's also kind of a Renaissance happening, right? Where people want and higher and higher quality software, and every marginal. Bit of like creativity, utility, like spirit. Like soul that you put into it is like is useful and like economically valuable, right?”<span class="who">Thariq Shihipar · <a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">Thariq Shihipar, Independent</a> · 00:05:09</span></blockquote>
+
+      <div class="counter-box">
+        <strong>Where the counter-claims push back (2 claims):</strong> First, intense speed does not automatically spell burnout or slow process when infrastructure is lightweight—Michelle Chen described Cloudflare training and shipping a custom model over a single weekend:
+        <blockquote>“And we ended up training the model over 48 hours over the weekend, and then we launched it the following week.”<span class="who">Michelle Chen · <a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">cloudflare is a neolab</a> · 00:09:53</span></blockquote>
+        Second, burnout is widespread but not universal: even in Scott Tolinski's own survey asking developers whether AI coding left them exhausted, <em>“Only 195 people said never.”</em> (<a href="../../talks/2026-11-10-scott-tolinski-co-host-syntax/experience/page.html">00:07:54</a>)—confirming that while fatigue hits most engineers, a meaningful minority thrive with tight boundaries.
+      </div>
+
+      <div class="reading">
+        <b>For TheFocus.AI:</b> When code becomes nearly free to generate, clients are not paying TheFocus.AI for keystrokes—they are paying for problem selection, expected-pain architecture, legible specs, and taste. Protect client teams from 1,000-line AI slop by keeping review budgets pointed at schemas and user promises, capping parallel agent churn, and aiming freed capacity at higher-ambition bets.
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<section class="theme-talks-dir" id="talks-in-theme" aria-label="Talks supporting this theme">
+  <div class="dir-head">
+    <h2>Talks in this theme</h2>
+    <span class="dir-count">13 supporting talks · 1 counter-claim talk</span>
+  </div>
+  <div class="theme-talks-grid">
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Dexter Horthy · HumanLayer</span><span>3 claims</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/experience/page.html">12-Factor-Factories: Design Patterns for Agentic Coding</a></h3>
+      <p class="tt-thesis">Defines asymmetric slop and expected-pain planning so engineers stop reading button diffs and guard high-pain schemas.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding.html">Talk dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Ishaan Dey · Google DeepMind</span><span>4 claims</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-judgement-is-the-last-job/experience/page.html">Judgement is the Last Job</a></h3>
+      <p class="tt-thesis">Shows how instant prototyping puts a premium on knowing what to build and cutting UI noise to protect cognitive load.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-judgement-is-the-last-job/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-12-judgement-is-the-last-job.html">Talk dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Scott Tolinski · Syntax</span><span>4 claims · 1 counter</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-10-scott-tolinski-co-host-syntax/experience/page.html">The True Cost of AI Coding</a></h3>
+      <p class="tt-thesis">Documents decision fatigue and compulsive prompting burnout, proposing calmer limits on parallel agents—while noting 195 never feel it.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-10-scott-tolinski-co-host-syntax/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-10-scott-tolinski-co-host-syntax.html">Talk dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Thariq Shihipar · Independent</span><span>4 claims</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">Thariq Shihipar, Independent</a></h3>
+      <p class="tt-thesis">Argues falling implementation cost enables a Software Renaissance when builders keep human-readable specs as ground truth.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-12-thariq-shihipar-independent.html">Talk dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Simon Willison · Independent</span><span>2 claims</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-11-2026-in-llms/experience/page.html">2026 in LLMs</a></h3>
+      <p class="tt-thesis">Declares "be more ambitious" the conference theme once Fable-class models handle the easy parts of software construction.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-11-2026-in-llms/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-11-2026-in-llms.html">Talk dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Walden Yan · Cognition</span><span>1 claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-a-new-age-of-software-engineering/experience/page.html">A New Age of Software Engineering</a></h3>
+      <p class="tt-thesis">Links Cognition's 40.4x surge in merged PR volume to small autonomous pods whose real ceiling is ambition.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-a-new-age-of-software-engineering/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-12-a-new-age-of-software-engineering.html">Talk dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Jarred Sumner · Anthropic</span><span>1 claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/experience/page.html">Jarred Sumner, Founder of Bun, Anthropic / Bun</a></h3>
+      <p class="tt-thesis">Demonstrates how engineers steer long-running compiler rewrites by asking sharp leading questions that reject timid paths.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun.html">Talk dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Ankit Jain · Aviator</span><span>2 claims</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/experience/page.html">One team's path to trusting AI generated code</a></h3>
+      <p class="tt-thesis">Shows code review turning from bug hunting into decision alignment and mental-model maintenance.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code.html">Talk dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Lauren Tan · SpaceXSI (xAI)</span><span>1 claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-11-all-code-is-slop-except-mine/experience/page.html">All Code Is Slop (Except Mine)</a></h3>
+      <p class="tt-thesis">Warns that automating an unverified agent loop simply accelerates the creation of architectural slop.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-11-all-code-is-slop-except-mine/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-11-all-code-is-slop-except-mine.html">Talk dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Justin McCarthy · Diffusion</span><span>2 claims</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Brownfield Factories</a></h3>
+      <p class="tt-thesis">Contrasts clear brownfield customer promises against industrializing ambiguous goals where teams lack judgment on what they want.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-12-brownfield-factories.html">Talk dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Diogo Almeida · TypeSafe AI</span><span>1 claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-11-i-love-you-so-jevving-much/experience/page.html">I love you so jevving much</a></h3>
+      <p class="tt-thesis">Traces AI slop back to uncalibrated probabilistic outputs optimized to flatter human reviewers rather than stay reliable.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-11-i-love-you-so-jevving-much/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-11-i-love-you-so-jevving-much.html">Talk dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Steve Yegge · Independent</span><span>2 claims</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Software Factories: Escape from Trash Mountain</a></h3>
+      <p class="tt-thesis">Argues running more agents increases rather than decreases demand for skilled humans to manage, prune, and direct experience.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-11-software-factories-escape-from-trash-mountain.html">Talk dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Karan Vaidya · Composio</span><span>1 claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-10-from-coding-agents-to-knowledge-work-agents/experience/page.html">What It Takes to Run a Company on Agent Swarms</a></h3>
+      <p class="tt-thesis">Extends judgment and scoped oversight from coding workflows to enterprise knowledge-work swarms across every company app.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-10-from-coding-agents-to-knowledge-work-agents/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-10-from-coding-agents-to-knowledge-work-agents.html">Talk dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item is-counter">
+      <div class="tt-meta"><span>Michelle Chen · Cloudflare</span><span>Counter-claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">cloudflare is a neolab</a></h3>
+      <p class="tt-thesis">Shows a tight team training and launching a specialized model in a single 48-hour weekend—pushing back against process heaviness.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">Interactive page</a><a href="../../site/talks/2026-11-11-cloudflare-is-a-neolab.html">Talk dossier</a></div>
+    </article>
+
+  </div>
+</section>
+
+<footer class="talk-foot">
+  Built from <a href="story.md">the Theme 06 story</a>, synthesizing 13 talks and 28 claims (+ 2 counter-claims) from AI Engineer Code Summit 2026. Every quote is verbatim from its talk transcript (Qwen3-ASR, garbles preserved) and links directly to its interactive talk page. Diagrams are illustrative.
+</footer>
+
+<script src="../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

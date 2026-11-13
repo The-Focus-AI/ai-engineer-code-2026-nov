@@ -1,0 +1,23 @@
+{
+  "title": "brownfield factories",
+  "recorded_at": "2026-11-12T15:21:20-08:00",
+  "duration_seconds": 1063.5,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 3165,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261112 152120.m4a",
+  "audio_sha256": "3f6d1915b837e4b486839080ecf4c796f666dd987abdca16711d93ef40153a5e",
+  "exported_at": "2026-11-12T17:49:26-08:00",
+  "transcript_echo_segments": 0,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 3145,
+      "locale": "en_US"
+    }
+  ]
+}

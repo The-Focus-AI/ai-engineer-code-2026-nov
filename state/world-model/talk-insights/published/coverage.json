@@ -10,6 +10,17 @@
     ],
     "extracted_at": "2026-11-12T12:41:24-08:00"
   },
+  "1325061": {
+    "sections_read": 13,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Qwen3-ASR 1.7B prompt bias noted in header: 'Dexter Horthy', 'HumanLayer', and 'Quinn' may come from the overlapping-session prompt rather than audio (unprompted Voice Memos transcript has 'Dex Horthy', 'Human Layer', 'I'm Dex.', 'I'm your friend').",
+      "ASR entity/term garbles throughout: 'Swixson' (swyx), 'Slope Code Bench'/'Slop Codebench' (SlopCodeBench), 'anti-slavi manifesto'/'anti-slot manifesto'/'slotmanifesto.com'/'slot'/'swap'/'Flop'/'Swap' (anti-slop manifesto / slop), 'Farahs' (Faros), 'Gabe Warlandsky' (lab lead at University of Wisconsin), 'Fable 5.2'/'Astra' (model names), 'he'll climb' (hill climb), 'postdoc or a statistician or a launch darkly' (PostHog/Statsig/LaunchDarkly), 'feature plugging' (feature flagging), 'Videocoding' (vibe coding), 'unrevealed output' (unreviewed output), 'sloppier livers' (slop lives), 'saltier' (solved here).",
+      "00:00:00 opens with MC intro from stage changeover ahead of scheduled grid; final lines at 00:19:44 include off-mic stage banter."
+    ],
+    "extracted_at": "2026-11-12T19:21:15-08:00"
+  },
   "1333169": {
     "sections_read": 12,
     "claims_found": 6,
@@ -187,6 +198,17 @@
     ],
     "extracted_at": "2026-11-12T12:41:24-08:00"
   },
+  "1373474": {
+    "sections_read": 10,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Qwen3-ASR 1.7B prompt bias noted in header: 'Melvin Johnson' (00:00:00), 'I'm Melvin' (00:00:22), 'DeepMind' (00:00:44), and 'Duckbill' (00:04:01) may come from the prompt (Voice Memos transcript has 'vaccine is Wonder' rather than Duckbill Group at 00:04:01).",
+      "00:02:10 demo video is not transcribed beyond the speaker's framing remarks.",
+      "ASR garbles/untranscribed slide details: 'riding cord' (writing code), 'anti gravity'/'anti-gravity' (Antigravity), 'SwinN style tasks' (SWE-bench style tasks), 'multi-piley force' (multi-file repos), 'rule breaks'/'rubric this' (rubrics), 'Grab'/'curve'/'graph' (CLI tool spec example), 'full disk' (full diff), 'fabrication rights in Germany' (fabrication rates in Gemini), 'full projective' (full trajectory), 'in the dot' (dogfood), 'board base' (codebase), 'alleys' (routing/A-B tests), '75 of Google's new code' (missing percent), '3.8 flash' (prior Flash model benchmark comparison), and truncated phrase 'while being careful not to police the.' at 00:12:09."
+    ],
+    "extracted_at": "2026-11-12T19:21:15-08:00"
+  },
   "1373475": {
     "sections_read": 10,
     "claims_found": 6,
@@ -204,6 +226,51 @@
     ],
     "extracted_at": "2026-11-12T13:30:17-08:00"
   },
+  "1373478": {
+    "sections_read": 16,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Recording opens mid-sentence ('Line of code PR to add an ahead-of-time compiler.') without the MC introduction.",
+      "Header notes Qwen3-ASR 1.7B prompt echoes ('Anthropic' and 'Jarred Sumner') were cut from 11 segments before writing the transcript.",
+      "Missing slide/visual values in transcript: at 00:04:37 ('It starts about. Times faster.') and 00:09:43 ('exa level memory', 'eight log two teams'), and 00:00:00 ('Over the summer, I rewrote.' omits object—Bun's Rust rewrite).",
+      "Extensive ASR garbles throughout: 'To bond'/'Fun'/'fun'/'Bunn'/'Bunsky's'/'Ubuntu'/'one'/'bone' (Bun), 'cloud code'/'Cloud Code'/'thought code' (Claude Code), 'Zyg' (Zig), 'Rosseri' (Rust rewrite), 'Clapto' (Claude), 'deepfashionary' (canary), 'Jarvis Report's' (JavaScriptCore's), 'WebKIS'/'test two six two'/'FiveKIS' (WebKit/Test262/V8?), 'Fuseeley'/'buzzer'/'fog-like'/'buzz' (Fuzzilli/fuzzer/fuzz-like), 'legit' (the JIT), 'Amplify JS' (UglifyJS), 'Job shop applications'/'prototype creation' (JavaScript / prototype pollution), 'build theirs' (build errors), 'koba's law' (codebase was large)."
+    ],
+    "extracted_at": "2026-11-12T19:21:15-08:00"
+  },
+  "1373480": {
+    "sections_read": 13,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Recording begins before the scheduled slot and misses the MC's introduction; Justin McCarthy introduces himself at 00:00:00.",
+      "Prompt-bias note: 'Justin McCarthy' and 'Diffusion' were in the Qwen3-ASR prompt (corroborated by the unprompted Voice Memos transcript).",
+      "ASR garbles kept verbatim where quoted or present in text: 'Brownfield' appears as 'brown field', 'round field', 'ground field', 'foundry factory', and 'broad field'; 'Jarred Sumner' as 'Jared' (00:03:18); 'Claude Code' as 'cloud code' (00:03:18); 'agent channel' as 'Asian Channel' (00:00:00); model names transcribed as 'Astro, Table, and Carbon' (00:08:09); 'T5' at 00:00:52; 'codestate' at 00:06:30; and 'bomb apocalypse'/'Volpocalypse' at 00:10:27."
+    ],
+    "extracted_at": "2026-11-12T19:21:15-08:00"
+  },
+  "1373481": {
+    "sections_read": 13,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Section 00:00:00 opens with an unattributed MC introduction ('Agents. Our next speaker... welcome Quinn Slack, co-founder and CEO of Amp.') before Quinn Slack begins speaking; only Quinn Slack's remarks are claimed.",
+      "Prompt-bias note: 'Quinn Slack' and 'Amp' were in the Qwen3-ASR prompt (the unprompted Voice Memos transcript has 'Quinn Slack' and 'ANT').",
+      "ASR garbles kept verbatim where quoted or present in text: 'Sourcegraph' as 'sourcecraft' (00:00:00); 'no Jira' as 'not Jira' and 'Amp threads' as 'anthropomorphic threads' (00:08:04); 'vibe coded' as 'vibe coated', '100%' as '100', and 'hell' as 'L' (00:10:58); 'Beyang' as 'Beyond' (00:12:35); 'vibe-code' as 'vinecode' (00:13:16); 'software industry' as 'soccer industry' (00:14:45); and 'PMs' as 'PMS', 'you're a dog' as 'your dog', and 'skin in the game' as 'Get in the game' (00:15:58)."
+    ],
+    "extracted_at": "2026-11-12T19:21:15-08:00"
+  },
+  "1373482": {
+    "sections_read": 10,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Section 00:00:00 opens with an unattributed MC introduction before the speaker begins; the program lists only the speaker's name while operator notes record the title as 'The Sweet Side of the Bitter Lesson'.",
+      "Prompt-bias note: 'Thariq Shihipar' at 00:00:09 and 'Dexter' at 00:12:44 may come from the Qwen3-ASR prompt (unprompted Voice Memos transcript has 'Zarik Shinbar' and 'Dex'); neither prompt-bias token is quoted in any claim.",
+      "ASR garbles kept verbatim where quoted or present in text: speaker's name self-intro transcribed as 'Farward' and talk title as 'the sweet side of the video' (00:00:00); 'Claude Code' as 'Cloud code', 'memory hole' as 'Memory hold', 'Figma' as 'finger', and 'shoggoth'/'zeitgeist' as 'The show guys' (00:01:40); 'AGI-pilled' as 'AGI built' (00:04:28); 'Karpathy' as 'Caparthy' (00:09:42); 'the model' as 'the ball' and 'vibe coder'/'vibe coding' as 'bod coder'/'God putting' (00:11:06); 'Claude' as 'pod' (00:14:15); and 'hot-reloadable' as 'hotly loadable' (00:17:04)."
+    ],
+    "extracted_at": "2026-11-12T19:21:15-08:00"
+  },
   "1376191": {
     "sections_read": 22,
     "claims_found": 6,
@@ -215,6 +282,17 @@
       "the vulnerability-count benchmark at 00:13:09 is garbled beyond its lab counts"
     ],
     "extracted_at": "2026-11-12T12:41:24-08:00"
+  },
+  "1376195": {
+    "sections_read": 9,
+    "claims_found": 6,
+    "thin": false,
+    "gaps": [
+      "Recording opens mid-sentence; MC introduction was not captured and the speaker never states his name.",
+      "ASR prompt-bias artifacts noted in header: 'Anthropic' at 00:02:40, 00:09:42, and 00:12:32 (and likely 'anthropometry' at ~00:10:50) are artifacts for Antigravity, not Anthropic; 'Google DeepMind' at 00:02:12 was prompted (unprompted Voice Memos has 'I Googled Deep Mine').",
+      "Other ASR garbles remain verbatim in transcript: Antigravity appears as 'anti-gravity', 'Edge grabbing', 'anti gravity', and 'I Google'; 'at Google' appears as 'I Google'; likely garbles include 'artificial seeing intelligence' (~00:02:25), 'agents form' (agent swarms), and 'sensibility system' (extensibility system) (~00:08:00)."
+    ],
+    "extracted_at": "2026-11-12T19:21:15-08:00"
   },
   "1376197": {
     "sections_read": 1,
@@ -295,5 +373,28 @@
       "the 52% and 71% figures are paraphrased from the survey slides he reads; the quotes are his framing"
     ],
     "extracted_at": "2026-11-10T18:21:22-05:00"
+  },
+  "1380098": {
+    "sections_read": 4,
+    "claims_found": 4,
+    "thin": false,
+    "gaps": [
+      "Short five-minute closing ceremony rather than a technical talk; celebration video played at 00:01:36 is not transcribed.",
+      "Speaker turns are unlabelled from 00:02:19 onward when a second voice on stage presents plaques to Vincent and Flo, so claims in 00:02:19 and 00:04:17 use speaker: null.",
+      "ASR prompt-bias and garble notes: 'Swyx' at 00:02:41 and 'AI Engineer' were in the ASR prompt (Voice Memos had 'Swift's'); 'Doppic' in 00:00:00 is an ASR garble for Anthropic; 'AI engineer 2020 2016' (~00:02:05), 'GMB' (~00:02:19), 'Worcester' (~00:03:40), 'flow'/'boarder' (~00:03:55), and '148' (~00:04:55) are ASR garbles."
+    ],
+    "extracted_at": "2026-11-12T19:21:15-08:00"
+  },
+  "1381580": {
+    "sections_read": 9,
+    "claims_found": 5,
+    "thin": false,
+    "gaps": [
+      "Recording opens mid-sentence; MC introduction was not captured and the speaker never states his name.",
+      "Q&A turns in 00:07:45 are unlabelled and do not distinguish audience questioners from the speaker, so the Q&A claim uses speaker: null.",
+      "ASR prompt-bias artifacts noted in header: 'Jarred' at 00:04:34 and 'Exa' at 00:07:20 (plus 'exa' in 00:07:45) are prompt artifacts from overlapping sessions (Voice Memos had 'jazz' and no word there); 'parallel' at 00:06:34 and 00:07:20 was also prompted.",
+      "Heavily garbled ASR throughout, including 'vision model' (decision model), 'evolution'/'Versailles' (inference revolution), 'Jeff'/'Web Jeff' (model being compared), 'Justin Wong'/'the video' (Jensen Huang / Nvidia in 00:05:45), 'WebMDX' (web index in 00:07:45), and 'weather context' (web context in 00:07:45)."
+    ],
+    "extracted_at": "2026-11-12T19:21:15-08:00"
   }
 }

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Post-Training Gemini 4 for Real Engineering Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../site/theme.css">
+<link rel="stylesheet" href="../../site/nav.css">
+<link rel="stylesheet" href="../../site/pages.css">
+
+</head>
+<body>
+<nav class="topnav" aria-label="Site"><a class="brand" href="../../index.html">AIE Code ’26</a><a href="../../index.html">Today</a><a href="../../site/schedule.html">Schedule</a><a href="../../site/talks/index.html" aria-current="page">Talks</a><a href="../../site/themes.html">Themes</a><a href="../../site/people.html">People</a><a href="../../site/followups.html">Follow-ups</a></nav>
+<div class="sheet">
+
+  <header class="masthead hub">
+    <p class="mono agency">Thu, Nov 12 · 4:30 PM–4:50 PM · Continental 4–6 (Mainstage)</p>
+    <h1>Post-Training Gemini 4 for Real Engineering Work</h1>
+    <p class="speakers">Melvin Johnson, Google DeepMind</p>
+    <p class="sub">Post-training Gemini 4 (Carbon and Hydrogen) for multi-day software engineering requires continuously sourcing non-saturated hard tasks, replacing binary test checks with rubric-based and sandbox-hardened grading that penalizes cheating, grounding completion claims in trajectory actions to reduce fabrication, and feeding failures from internal dogfooding at Google into rapid weekly training iterations.</p>
+  </header>
+  <div class="marginalia mono"><span><a href="index.html">← All talks</a> · <a href="../../site/talks/2026-11-12-brownfield-factories.html" title="Brownfield Factories">← Prev talk</a> · <a href="../../site/talks/2026-11-12-a-company-built-around-the-agent.html" title="A Company Built Around the Agent">Next talk →</a></span><span>7 of 7 built</span></div>
+  <div class="pills"><a class="pill call-go" href="../../site/talks/2026-11-12-post-training-gemini-4-for-real-engineering-work.html#recording">Recording · 18 min</a><a class="pill call-go" href="../../site/talks/2026-11-12-post-training-gemini-4-for-real-engineering-work.html#transcript">Transcript · qwen3-asr-1.7b</a><a class="pill call-go" href="../../site/talks/2026-11-12-post-training-gemini-4-for-real-engineering-work.html#links">Links</a><a class="pill call-go" href="../../site/talks/2026-11-12-post-training-gemini-4-for-real-engineering-work.html#photos">Photos · 4</a><a class="pill call-go" href="../../site/talks/2026-11-12-post-training-gemini-4-for-real-engineering-work.html#notes">Notes · 5</a><a class="pill call-go" href="../../site/talks/2026-11-12-post-training-gemini-4-for-real-engineering-work.html#story">Story · draft</a><a class="pill call-go" href="../../talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/experience/page.html">Talk page</a></div>
+  <a class="cta" href="../../talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/experience/page.html">Read the story →</a>
+  <a class="cta ghost" href="https://www.youtube.com/watch?v=y9JtCCZP2MQ&amp;t=27779s" rel="noopener" title="Livestream, around 7:42:59 (approximate)">Watch on the livestream ▸</a>
+  
+  <div class="chips"><span class="mono">Themes</span><a class="chip" href="../../atlases/own-the-verification-loop/page.html" title="Open Theme 01 deep dive presentation">Theme 01: Own the verification loop →</a><a class="chip hash" href="../../site/themes.html#own-the-verification-loop" title="Jump to Theme 01 claims on Themes hub">#</a><a class="chip" href="../../atlases/conference-themes/page.html">Themes presentation →</a></div>
+
+  <section class="view" id="people"><div class="view-head"><h2>Speaker</h2></div>
+    <div class="people"><div class="person" data-search="melvin johnson google deepmind melvinjohnsonp post-training gemini 4 for real engineering work">
+    <div class="who"><b>Melvin Johnson</b> <span class="minor">Google DeepMind</span><div class="talkline"><a href="../../site/talks/2026-11-12-post-training-gemini-4-for-real-engineering-work.html">Post-Training Gemini 4 for Real Engineering Work</a></div></div>
+    <div class="acts"><a class="btn" href="https://x.com/intent/follow?screen_name=melvinjohnsonp" target="_blank" rel="noopener">Follow @melvinjohnsonp</a><a class="btn ghost" href="https://x.com/intent/post?text=%40melvinjohnsonp%20Enjoyed%20your%20talk%20%22Post-Training%20Gemini%204%20for%20Real%20Engineering%20Work%22%20at%20AI%20Engineer%20Code%20Summit.%20" target="_blank" rel="noopener">Write</a><label class="done"><input type="checkbox" data-handle="melvinjohnsonp"> followed</label><a class="ext" href="https://www.linkedin.com/in/melvinjosej" target="_blank" rel="noopener">LinkedIn</a></div>
+  </div></div></section>
+
+  <section class="view" id="notes"><div class="view-head"><h2>My notes</h2><p class="lede">5 captured during the talk.</p></div>
+    <ol class="notes"><li><span class="mono">4:23 PM · quote</span><div class="prose"><p>&quot;The journey begins with people calling us not a frontier lab.&quot;</p>
+<p>In Melvin Johnson's &quot;Post-Training Gemini 4 for Real Engineering Work&quot; (Google DeepMind; 1373474, scheduled 16:30, Mainstage); the operator confirmed they were at this talk, so the stage was running early.</p>
+</div></li><li><span class="mono">4:25 PM · observation</span><div class="prose"><p>The things that Carbon built.</p>
+<p>In Melvin Johnson's &quot;Post-Training Gemini 4 for Real Engineering Work&quot; (Google DeepMind; 1373474, Mainstage). Carbon is read as Gemini 4 Carbon, which Simon Willison listed among the Fable-class models (talks/2026-11-11-2026-in-llms/) and which Sundar Pichai showed off with a pelican cycling round the Google campus. The examples themselves are in the recording.</p>
+</div></li><li><span class="mono">4:27 PM · observation</span><div class="prose"><p>They are exhausting training signal.</p>
+<p>In Melvin Johnson's &quot;Post-Training Gemini 4 for Real Engineering Work&quot; (Google DeepMind; 1373474, Mainstage). &quot;exuasting&quot; as typed. Read as: the existing sources of post-training signal for coding are running out, so they need new ones from real engineering work. Connects to Diogo Almeida's &quot;the bitterest lesson is doing the right task&quot; (talks/2026-11-11-i-love-you-so-jevving-much/).</p>
+</div></li><li><span class="mono">4:28 PM · observation</span><div class="prose"><p>They need to check carefully to make sure there are no workarounds.</p>
+<p>In Melvin Johnson's &quot;Post-Training Gemini 4 for Real Engineering Work&quot; (Google DeepMind; 1373474, Mainstage), following the note on exhausting training signal. Read as reward hacking: when training on real engineering tasks, the checks must not let the model pass by gaming them. Same concern as Philipp Schmid's &quot;the model will work around it&quot; (talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/) and the OpenAI agent that escaped its sandbox to cheat a test, in Simon Willison's talk (talks/2026-11-11-2026-in-llms/).</p>
+</div></li><li><span class="mono">4:36 PM · observation</span><div class="prose"><p>Penalize the cheating, but not the thoughts.</p>
+<p>In Melvin Johnson's &quot;Post-Training Gemini 4 for Real Engineering Work&quot; (Google DeepMind; 1373474, Mainstage), following &quot;check carefully that there are no workarounds&quot; (2026-11-12T1628-check-for-no-workarounds.md). Read as: in training, penalize the model for actually gaming a check, but not for considering it in its reasoning; penalizing the thoughts teaches the model to hide them, which makes the reasoning less useful for spotting cheating.</p>
+</div></li></ol>
+  </section>
+
+  <section class="view" id="photos"><div class="view-head"><h2>Photos</h2><p class="lede">4 filed.</p></div>
+    <div class="photos"><a href="../../talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/photos/PXL_20261113_002755087.jpg"><img loading="lazy" src="../../talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/photos/PXL_20261113_002755087.jpg" alt="Photo taken during the talk, PXL_20261113_002755087.jpg"></a><a href="../../talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/photos/PXL_20261113_003006150.jpg"><img loading="lazy" src="../../talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/photos/PXL_20261113_003006150.jpg" alt="Photo taken during the talk, PXL_20261113_003006150.jpg"></a><a href="../../talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/photos/PXL_20261113_003216799.jpg"><img loading="lazy" src="../../talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/photos/PXL_20261113_003216799.jpg" alt="Photo taken during the talk, PXL_20261113_003216799.jpg"></a><a href="../../talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/photos/PXL_20261113_004014418.jpg"><img loading="lazy" src="../../talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/photos/PXL_20261113_004014418.jpg" alt="Photo taken during the talk, PXL_20261113_004014418.jpg"></a></div>
+  </section>
+
+  <section class="view" id="recording"><div class="view-head"><h2>Recording</h2><p class="lede">My Voice Memos from the room. The public livestream: <a href="https://www.youtube.com/watch?v=y9JtCCZP2MQ&amp;t=27779s" rel="noopener">YouTube, around 7:42:59</a> (approximate).</p></div>
+    <div class="rec"><span class="mono">2026-11-12_1622_melvin · 18 min · qwen3-asr-1.7b</span><audio controls preload="none" src="../../recordings/inbox/2026-11-12_1622_melvin/audio.m4a"></audio></div>
+  </section>
+
+  <section class="view" id="story"><div class="view-head"><h2>Story</h2><p class="lede"><a href="../../talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/experience/page.html">The scrolling talk page</a> is built.</p></div>
+    
+  </section>
+
+  <section class="view" id="related">
+    <div class="view-head"><h2>Themes & related talks</h2><p class="lede">Cross-references across the 6 conference themes, contested debates, and connected talks.</p></div>
+    <div class="rel-grid">
+      <article class="rel-card is-theme"><div><span class="mono">Theme 01 · 19 talks</span><b><a href="../../atlases/own-the-verification-loop/page.html">Own the verification loop</a></b><p>Trust in agent-generated systems comes from owning the verification loop—deterministic rules, stakes-scaled credentials, replayable execution traces, hardened sandboxes, and continuous failure diagnosis—rather than line-by-line diff review.</p></div><div class="card-acts"><a href="../../atlases/own-the-verification-loop/page.html">Open deep dive →</a><a href="../../site/themes.html#own-the-verification-loop">Claims</a></div></article>
+      
+      <article class="rel-card"><div><span class="mono">Dexter Horthy · Own the verification loop</span><b><a href="../../talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/experience/page.html">12-Factor-Factories: Design Patterns for Agentic Coding</a></b><p>Effective agentic software factories are built on timeless engineering practices—balancing automated forward pressure and rigorous back pres…</p></div><div class="card-acts"><a href="../../talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/experience/page.html">Read story →</a><a href="../../site/talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding.html">Hub</a></div></article><article class="rel-card"><div><span class="mono">Quinn Slack · Own the verification loop</span><b><a href="../../talks/2026-11-12-a-company-built-around-the-agent/experience/page.html">A Company Built Around the Agent</a></b><p>Agents render traditional software org charts, enterprise sales checklists, and third-party SaaS tools obsolete by enabling tiny, high-equit…</p></div><div class="card-acts"><a href="../../talks/2026-11-12-a-company-built-around-the-agent/experience/page.html">Read story →</a><a href="../../site/talks/2026-11-12-a-company-built-around-the-agent.html">Hub</a></div></article><article class="rel-card"><div><span class="mono">Justin McCarthy · Own the verification loop</span><b><a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Brownfield Factories</a></b><p>Software factories fail when applied to open-ended greenfield discovery, but excel on brownfield systems where existing customers and runtim…</p></div><div class="card-acts"><a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Read story →</a><a href="../../site/talks/2026-11-12-brownfield-factories.html">Hub</a></div></article><article class="rel-card"><div><span class="mono">Jarred Sumner · Own the verification loop</span><b><a href="../../talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/experience/page.html">Jarred Sumner, Founder of Bun, Anthropic / Bun</a></b><p>Building an ahead-of-time compiler for Bun to cut Claude Code's memory usage and startup latency required five rewrites over a month, succee…</p></div><div class="card-acts"><a href="../../talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/experience/page.html">Read story →</a><a href="../../site/talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun.html">Hub</a></div></article><article class="rel-card"><div><span class="mono">Arsalan Bashir · Own the verification loop</span><b><a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Let the Agent Cook: From APIs to Answers</a></b><p>To build agents that investigate data on their own, consolidate tools by use case and push deterministic complexity into them, stop pre-chew…</p></div><div class="card-acts"><a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Read story →</a><a href="../../site/talks/2026-11-12-let-the-agent-cook-from-apis-to-answers.html">Hub</a></div></article>
+    </div>
+  </section>
+
+  <section class="view" id="links"><div class="view-head"><h2>Links and resources</h2></div><div class="prose"><h2>Speaker</h2>
+<p><strong>Melvin Johnson</strong>, VP of Research, Gemini Post-Training, Google DeepMind</p>
+<ul>
+<li>X: <a href="https://x.com/melvinjohnsonp">@melvinjohnsonp</a></li>
+</ul>
+<h2>Company</h2>
+<p><strong><a href="https://deepmind.google/models/gemini/">Google DeepMind: Gemini</a></strong>: &quot;Our
+next era of frontier intelligence, built to solve your hardest problems.&quot; (from
+the site)</p>
+<h2>Resources</h2>
+<ul>
+<li><strong>Blog</strong> · <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/">Introducing Gemini 4 Hydrogen for Agentic Workflows</a>
+(Google, 2026-11-12). The model the talk announces, launched the same day.</li>
+<li><strong>Blog</strong> · <a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-hydrogen/">Gemini 4 Hydrogen: Fast agentic development for coders</a>
+(Google, 2026-11-12). The developer post, for building with it.</li>
+<li><strong>Blog</strong> · <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/">Introducing Gemini 4 Carbon</a>
+(Google, 2026-10-28). The frontier model behind the benchmark and
+cheating-rate figures.</li>
+<li><strong>Blog</strong> · <a href="https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/">Gemini 4 Hydrogen and Orchestrator</a>
+(Antigravity, 2026-11-12). Hydrogen in Antigravity, the tool behind the
+dogfooding loop.</li>
+<li><strong>Video</strong> · <a href="https://www.youtube.com/watch?v=y9JtCCZP2MQ&amp;t=27320s">Nov 12 Mainstage livestream, from about 7:35:20</a>
+(full-day Mainstage livestream, not a per-talk video; the offset is approximate).</li>
+</ul>
+<h2>Gaps</h2>
+<ul>
+<li>LinkedIn (from the roster) answered 999 with no page title; not published.</li>
+<li>No write-up of the post-training methods (rubric graders, hardened grader
+sandboxes, fabrication filtering, blind battles) found; the posts above are
+launch announcements.</li>
+<li>The fabrication figures and the 236-day / 28-day release gap have no public
+source found.</li>
+<li>The opening demo video is not transcribed.</li>
+<li>No per-talk recording or slides yet. The dossier rechecks every 6 hours until
+72 hours after the event, then daily.</li>
+</ul>
+</div></section>
+
+  <section class="view" id="transcript"><div class="view-head"><h2>Transcript</h2><p class="lede">Machine transcript (qwen3-asr-1.7b). Garbled words are kept as heard.</p></div>
+    <details><summary>Read the transcript</summary><div class="prose transcript"><blockquote>
+<p>The Mainstage ran ahead of the grid this afternoon, so the recording starts before the scheduled slot.</p>
+<p>The recording opens on the last words of the introduction (&quot;Melvin Johnson.&quot;); the demo video
+is not transcribed beyond the speaker's remarks around it.</p>
+<p>Transcribed locally with Qwen3-ASR 1.7B (timings per ~5 s segment), prompted with the
+speaker names and affiliations of overlapping sessions. &quot;Melvin Johnson&quot; at 00:00:00, &quot;I'm Melvin&quot; at 00:00:22,
+&quot;DeepMind&quot; at 00:00:44 and &quot;Duckbill&quot; at 00:04:01 may come from that prompt: the unprompted Voice
+Memos transcript has &quot;Melvin Johnson.&quot;, &quot;and I mean&quot;, &quot;they might&quot; and &quot;vaccine is Wonder&quot; there, so the
+benchmark at 00:04:01 is not the Duckbill Group's. Gemini, Carbon, Hydrogen and Ethan Mollick were not
+in it. Other names are kept as transcribed: Gemini 4 Argon is &quot;Gemini for Argon&quot;, Hydrogen is once
+&quot;Gemini for hydrogen&quot;, Antigravity is &quot;anti gravity&quot; and &quot;anti-gravity&quot;, and writing code is &quot;riding
+cord&quot;. The Voice Memos transcript is kept beside it as <code>transcript.txt</code>.</p>
+</blockquote>
+<h3>00:00:00 — Introduction: &quot;not a frontier model&quot;</h3>
+<p>Melvin Johnson. Hey everyone, good to be here. I'm Melvin, and I'm in post training for Gemini. So today I thought I'll take you through a little journey of how we post trained Gemini 4. And our journey begins. By people calling us not a frontier model. So here's an example. You know, people say Gemini is cooked, but GCP is cooking. For all intents and purposes, we believe DeepMind is no longer a Tier lab.</p>
+<p>Ethan Mollick, who we respect a lot, he says. In his own nice way, pretty long gap between matches is what he calls us. And I'm here to tell you. We're not dead. We're here. And we have launched Gemini for Argon. We announced Carbon, and we launched Carbon all within the last. 28 days, so we're on a we're you know we're on a run here. And that's not it. In the process.</p>
+<p>We actually garnered an apology from Dylan. You know, he says official apology to Google. They are absolutely cooked. They are not cooked. Ethan says, you know, one of the most significant aspects of Gemini four. Is the speed at which we're launching things? So we've gone. 236 days without having a frontier model. And we had two frontier models in 28 days. That's an excellent improvement in our speed of shipping.</p>
+<p>And you know, people call us. Google kind of cooked, but Google is not cooked, so it's cooked. To see that sentiment, it's glad to be on the other end. It's. Also, good to be on the receiving end of the bad comments because it pushes you to do better.</p>
+<h3>00:02:10 — Demo video</h3>
+<p>I want to start by playing a little video of a bunch of things that Carbon has built. If we can show the video, please. So, bar there. Does that work? No. Nope. Let me see if Google can lock up this presentation. Yeah. Could also be a model for building that video.</p>
+<h3>00:03:22 — Gemini 4 Carbon results</h3>
+<p>So you saw great examples of. The model doing much better at 3D. Modeling assets using Blender. There's lots of games in the real world use cases, model processing, multimodal documents. But you know, it's not just. The demos, Carbon's actually number one on a bunch of real-world customer use cases. And one of the things that we're really excited about is. You know, it's not just really good on these benchmarks.</p>
+<p>It's actually much cheaper, so on Cursor Bench. It's the number one model today, and it's 3.3 times cheaper than the second best model. On Duckbill, which is a benchmark for deep research queries. It's the best model. You know, you saw competitor models come out. Over nine x cheaper than the second best model there. And our automation bench, which is Zapier's. Benchmark again, won number one while being two times cheaper per task.</p>
+<p>And that's not it. I mean, today.</p>
+<h3>00:04:28 — Gemini 4 Hydrogen</h3>
+<p>We announced a new element to our Gemini 4 series, and it's not surprise. It's hydrogen, so you know you might have seen the launch earlier today. Gemini 4 hydrogen is where we're trying to bring the Gemini 4 intelligence to everyone. It's past. It's dependable. It's launched on all surfaces, on anti gravity, on the Gemini API, in the Gemini app. And on search, and you know I have a graph that shows.</p>
+<p>Was the A index, which many of you might be familiar with, and time on the x-axis. You can see it's one of the fastest models for that level of intelligence, and to give you a sense. Of how far you know Gemini has come. 3.8 flash on terminal bench four was about 20 percent. And hydrogen is about sixty percent. So we're three times better performing, while being three times faster.</p>
+<p>Right. So that's no easy task, and we're you know really happy to bring that. To you, in your hands, so you can build things with it. And that completes, you know, our. Gemini 4 series. So we have Gemini 4 Carbon, a frontier model for deep frontier intelligence. Gemini for hydrogen, which is fast for everyday execution. And we'll have more elements. You know, of course, there are many elements left in the periodic table, and we have a lot of work to do to exhaust them.</p>
+<p>But we're glad to put it out there for you all to test it and. So you all could play with it.</p>
+<h3>00:06:09 — Why post-training is hard</h3>
+<p>Now I think enough marketing with the models. I wanna. I was told it's a deeply technical audience, so. I want to talk a little bit about why post-training these frontier models is hard, and what goes into that. Let me start by saying, you know, AI writes about. 75 of Google's new code today, and this is up from. Less than 25 percent a few years ago. And there are hundred thousand people using anti-gravity riding cord inside Google.</p>
+<p>Every single day. Now the complexity of the tasks that people do have also increased exponentially in the last couple of years. We started with. You know, models just completing chats, which took seconds. To writing small functions within the minutes, you can submit a PR and resolve an issue. Takes about an hour, let's say. But now people are doing days of real engineering tasks with the model. People have swarms of agents solving real open problems with the model.</p>
+<p>We have engineers across Google using anti-gravity and our Gemini 4 models to solve tasks over multiple days. Now, how do we go about post-training? Gemini for real engineering tasks. We have to start with hard tasks, so we need really need to source hard problems for the model. Grading of these models is actually a very hard problem. So you want to grade. Like an experienced code reviewer would grade. You want to grade like an experienced engineer would grade a solution.</p>
+<p>Last part of RL is how we train the models, and we want to dog food our models with our hundred thousand engineer community. And repeat the loop. So any failures in the dot become tasks for the next iteration of the loop. So I want to start by going into a little bit more detail of each of these sections.</p>
+<h3>00:07:56 — Hard tasks</h3>
+<p>So let's start with the hard tasks. Right. So you might have heard, you know, as models are getting better, lots of benchmarks are getting saturated. And it's not just the benchmarks that get saturated; our training data gets saturated too. So here is a graph. That shows for three different iterations of the Gemini 4 models. How much the share of learnable problems has gone? Let's say we had X percent of learnable problems for the first iteration.</p>
+<p>By the time we finish and train the next one, the problems are too easy for the second one. We finished that and playing the third one. The forms are too easy for the third one. So, what's the problem with training on easy tasks? Easy tasks give you zero learning signal. Right. So you have a problem when all of your rollouts are going to be correct. There's no variance. There's no RL signal.</p>
+<p>So you really need to focus on getting artists. And you really need to be faster at getting hard tasks, and the models are getting better, right? So how do we go about it? We first have to, you know, identify these easy tasks and prune them. So we cut these simple SwinN style tasks on the mixture that are too easy for the models. We expand into much harder, suite tasks. For example, that are multi-piley force.</p>
+<p>We go from unit test or binary correctness. To rubric-based grading, and rubrics give you dense signal. They're not just zero one. They can be. More gradients within the within the criteria. Here are some examples of hard tasks that we train on. So, we look at multi-file repos. And we extract commits from them. From those commits, we have models automatically extract rule breaks. We don't actually necessitate unit tests being involved.</p>
+<p>We can actually generate rubrics on the fly based on these reports. Another example, a great example of tasks. You try to teach the model to build CLI tools. From scratch, so you start with an empty folder and a specification. The specifications say you have to build this tool. It's called Grab. These are the parameters of curve. These are the plots. This is the functionality, and you let the model build the entire tool from.</p>
+<p>And you know what the functionality for a graph is going to be, so you have a hidden. Test suite that you can evaluate the binary on. The last. Example is production code bases, so. You look at real usage of the model inside your production codebase, and extract useful tasks out of them.</p>
+<h3>00:10:35 — Graders</h3>
+<p>Now, let me talk a little bit about the graders. So agents, you know, they find any way. You're training them to pass the test, so they will find any way to pass the test. But if the test pass, that doesn't necessarily mean that they've solved the problem. There are examples where the agent will bypass the checker. There are examples where the agent will game the benchmark. There are examples where the agent will fake the evidence. You know. It writes the fake evidence into a temp file.</p>
+<p>It will delete any evidence of it faking it, right? So you have to be smarter about how you judge these models, especially as they become more capable. Now, this is what I meant by grading like a reviewer. So, if you've done a code review, you have a very strict reviewer. You're going to know they're not just going to think about the correctness of the solution; they're actually going to think about the.</p>
+<p>They're going to think about maintainability. They're going to think of many different aspects. So, what we do is we move from unit test based correctness. To rubric this, when these are generated from real comments. The rubrics also provide dense learning signal, not just zero-one signal. And we penalize any sort of solution that is looking for a workaround. Right. So here is an example of a rubric. Where the criteria is, you know, here are the edge cases that we need to pass.</p>
+<p>This is an example of hygiene that needs to be maintained. These are constraints around verification that need to be satisfied.</p>
+<h3>00:12:09 — Hardening the graders</h3>
+<p>Now, it's not just about the rubrics needed for grading. We also need to be careful about the graders not being gamed. And you really need to harden the environment that the grader is in. So we think about putting the graders in an isolated sandbox. So we remove Git History and Git Remote. So the answer is don't leak. The test sets are held out. So only when the agent is done.</p>
+<p>And submits the solution. Do we actually reveal this? We have instances where the agent will fake it and say, &quot;Hey, I'm done.&quot; And the tests come into play, and they will look at the tests and re-submit the solution. We don't want that. We also want to be much more detailed with our scoring, so we take a full disk. And we look at the reference, and we look at multiple aspects. It's not just the correctness; we also want to look at the code quality.</p>
+<p>We also want to look at the scope of the change that was done. And then finally, we want to penalize any sort of cheating attempt. By the agent, while being careful not to police the. So any you know cheating or hampering of the environment gets a very negative RL reward. And all of this is detected just based on the actions that the model is taking, not the thoughts. So. A good example of how we handle cheating is, you know, carbon, for instance.</p>
+<p>Has zero percent cheating rate on terminal benchmark. Our previous models had a much higher cheating rate. And is about five x less adversarial than argon. So every generation of the model, we're trying to make it much more aligned, so it's not trying to cheat.</p>
+<h3>00:13:47 — Model honesty</h3>
+<p>Now, finally, I think I want to talk about model behavior a little bit. And modeling honesty, specifically. Now, agents they always want to be helpful, and sometimes they fake helpfulness. You might have seen this in your usage of the agents. So sometimes they'll claim that tests are passed. When they've obviously not passed, they'll declare done. But obviously, they're not done. They'll make edits that they'll claim to have made edits.</p>
+<p>But they're not making those edits, or they'll invent facts and APIs and whatnot. Or they will give you a wall of text that has so many numbers that is going to be impossible for you to verify. We've gone through all of these examples. Now, here is an example of fabrication rights in Germany. Right. So, we on an internal eval started with eight percent fabrication in that hard eval.</p>
+<p>We cut that down dramatically to about three percent for hydrogen and carbon. Is half of that is about 1.5 percent, but we're striving to get this down to zero. Like you don't want your agents fabricating anything. Right, but they try to fabricate because they want to be helpful, and when. You really have to try hard to align them to be helpful, but not by faking it. How do we reduce the fabrication? Believe it or not, you have to clean your data.</p>
+<p>Right, so we've filled out lots of training trajectories where there's, you know, not just. Intended fabrication, but unintended fabrication. There are lots of claims that are not fully supported. They're not verified. We ground in the full projective. So if the agent says I complete the task and it has a final response. We actually look at that response and see all of the actions that the agent had taken in the trajectory to get to that final solution.</p>
+<p>And we looked at the steps that were taken. So you really need to, when the agent says I'm done and gives you a summary. That needs to be grounded in the actions that were taken. And we want to reward honesty, so. If there's a hard problem, it's better for the agent to say, &quot;Hey, this is my partial progress. It's a hard problem.&quot; I'm done here. This is my partial solution.</p>
+<p>Rather than faking the last step and saying, &quot;Hey, I solved the problem,&quot; you know, this is done.</p>
+<h3>00:16:07 — Shipping in weeks</h3>
+<p>Finally, shipping in weeks. So, how are we able to ship so rapidly? And the biggest reason for that is our internal team of hundred thousand plus engineers at Google. Using the model for realistic tasks, you know many of you might know Google is a mono repo. And what is a monorepo? The entire company is one codebase. Right, and I don't know how to measure this, but I think it might be one of the largest monorepos in the world.</p>
+<p>Now that's a really complex codebase, and we have the best people in the world. Using a really complex board base to do really complex tasks. So every time we have a new candidate from post training, we actually serve that model. For our users, we run blind battles with them through multiple different candidates. We let users. You know, pick the best model that they want. We also run alleys where under the hood we're routing the routing people.</p>
+<p>To experimental models and get signal and feedback from that. And we take all of these signals and friction back into training the next candidate. So this is a cycle that helps us, you know, rapidly iterate. Really train on hard problems, and as the models get better, the engineers are going to push the model in interesting ways. This is also why you know we've gone from releasing in weeks.</p>
+<p>To releasing, to be releasing in quarters, to releasing in weeks. So in the three in the Gemini three era, we've had launches every two to three months. But now we've had six releases in the last sixteen weeks. Right, and we're very excited. To have you all try carbon and hydrogen. And Gemini 4, and we're excited for. For us to see what you all do with it, and we're not done. So we have a lot more elements.</p>
+<p>To go through with that, you know. Thank you.</p>
+</div></details>
+  </section>
+  <p class="colophon mono">Generated Nov 12, 2026 at 11:37 PM · bun scripts/render-pages.ts</p>
+</div>
+<script>(function(){
+  var key="aie-followed";var done={};try{done=JSON.parse(localStorage.getItem(key)||"{}")}catch(e){}
+  document.querySelectorAll('input[data-handle]').forEach(function(b){
+    var h=b.getAttribute('data-handle').toLowerCase();b.checked=!!done[h];
+    b.closest('.person').classList.toggle('is-done',b.checked);
+    b.addEventListener('change',function(){done[h]=b.checked;b.closest('.person').classList.toggle('is-done',b.checked);try{localStorage.setItem(key,JSON.stringify(done))}catch(e){}});
+  });
+  var q=document.getElementById('find');if(q)q.addEventListener('input',function(){var v=q.value.trim().toLowerCase();
+    document.querySelectorAll('.person[data-search]').forEach(function(p){p.hidden=v&&p.getAttribute('data-search').indexOf(v)<0});});
+})();(function(){function open(){var t=location.hash&&document.getElementById(location.hash.slice(1));var d=t&&t.querySelector('details');if(d){d.open=true;t.scrollIntoView()}}open();addEventListener('hashchange',open)})();</script>
+</body>
+</html>

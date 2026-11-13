@@ -275,7 +275,7 @@
     "title": "jarred sumner",
     "recorded_at": "2026-11-12T14:06:27-08:00",
     "duration_seconds": 1320.7,
-    "word_count": 2912,
+    "word_count": 2803,
     "audio_sha256": "de922249ee0f306cf8e7e9a35f6cdc2ca3f866f545db67c3c81a768ccfa42383",
     "status": "cleaned"
   },
@@ -285,8 +285,78 @@
     "title": "The first Grounded Decision Model",
     "recorded_at": "2026-11-12T14:33:14-08:00",
     "duration_seconds": 645.1,
-    "word_count": 1751,
+    "word_count": 1754,
     "audio_sha256": "594749931c175fc2c1f742565f9042604368c5645b846dd609f90ce6dbb384b0",
+    "status": "cleaned"
+  },
+  "2026-11-12_1455_judgement-is-the-last-job": {
+    "folder": "2026-11-12_1455_judgement-is-the-last-job",
+    "path": "recordings/inbox/2026-11-12_1455_judgement-is-the-last-job",
+    "title": "judgement is the last job",
+    "recorded_at": "2026-11-12T14:55:31-08:00",
+    "duration_seconds": 802.6,
+    "word_count": 2199,
+    "audio_sha256": "94fa657d8427d1a8a44888fbcb055e5a974578406c799a285d37e2f040fe5e1b",
+    "status": "cleaned"
+  },
+  "2026-11-12_1521_brownfield-factories": {
+    "folder": "2026-11-12_1521_brownfield-factories",
+    "path": "recordings/inbox/2026-11-12_1521_brownfield-factories",
+    "title": "brownfield factories",
+    "recorded_at": "2026-11-12T15:21:20-08:00",
+    "duration_seconds": 1063.5,
+    "word_count": 3165,
+    "audio_sha256": "3f6d1915b837e4b486839080ecf4c796f666dd987abdca16711d93ef40153a5e",
+    "status": "cleaned"
+  },
+  "2026-11-12_1622_melvin": {
+    "folder": "2026-11-12_1622_melvin",
+    "path": "recordings/inbox/2026-11-12_1622_melvin",
+    "title": "melvin",
+    "recorded_at": "2026-11-12T16:22:25-08:00",
+    "duration_seconds": 1098.6,
+    "word_count": 2763,
+    "audio_sha256": "9659c596735c38a3712f9a3d3583d3592f63a1a4011d980d9ad89ca487c500cb",
+    "status": "cleaned"
+  },
+  "2026-11-12_1642_amp": {
+    "folder": "2026-11-12_1642_amp",
+    "path": "recordings/inbox/2026-11-12_1642_amp",
+    "title": "amp",
+    "recorded_at": "2026-11-12T16:42:00-08:00",
+    "duration_seconds": 1150.9,
+    "word_count": 3908,
+    "audio_sha256": "cfa931f5cfade086e5c187933724793f0357642fb6655d9f4287137e4179b0a9",
+    "status": "cleaned"
+  },
+  "2026-11-12_1702_dex": {
+    "folder": "2026-11-12_1702_dex",
+    "path": "recordings/inbox/2026-11-12_1702_dex",
+    "title": "dex",
+    "recorded_at": "2026-11-12T17:02:24-08:00",
+    "duration_seconds": 1244.2,
+    "word_count": 4303,
+    "audio_sha256": "81100f2a8469c39b83106443a9d10b034eb3f63d338ab3f2bab62361f3c5c625",
+    "status": "cleaned"
+  },
+  "2026-11-12_1724_Thariq": {
+    "folder": "2026-11-12_1724_Thariq",
+    "path": "recordings/inbox/2026-11-12_1724_Thariq",
+    "title": "Thariq",
+    "recorded_at": "2026-11-12T17:24:20-08:00",
+    "duration_seconds": 1173.3,
+    "word_count": 3538,
+    "audio_sha256": "7c6a0ff870fbbe369cae6300640ff72429e157c9dc7c0d7368c3d37ef0717186",
+    "status": "cleaned"
+  },
+  "2026-11-12_1744_sywx": {
+    "folder": "2026-11-12_1744_sywx",
+    "path": "recordings/inbox/2026-11-12_1744_sywx",
+    "title": "sywx",
+    "recorded_at": "2026-11-12T17:44:02-08:00",
+    "duration_seconds": 312.1,
+    "word_count": 847,
+    "audio_sha256": "82bcc18f80d586db1fb6d8dd76801c6b91578de20de3d17f63deaef4f9b97410",
     "status": "cleaned"
   }
 }

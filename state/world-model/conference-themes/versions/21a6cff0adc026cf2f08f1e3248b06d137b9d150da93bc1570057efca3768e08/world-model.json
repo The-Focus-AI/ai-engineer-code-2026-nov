@@ -1,0 +1,618 @@
+{
+  "themes": [
+    {
+      "theme_id": "own-the-verification-loop",
+      "name": "Own the verification loop, not the generated code",
+      "claim_sentence": "Trust in agent-generated systems comes from owning the verification loop—deterministic rules, stakes-scaled credentials, replayable execution traces, hardened sandboxes, and continuous failure diagnosis—rather than line-by-line diff review.",
+      "definition": "As generation drops to minutes, human diff review becomes the bottleneck and fails silently against compounding slop or benchmark gaming. Teams maintain quality at scale by converting corrections into code-enforced lint rules and invariants, gating tools by risk via Token Vault scopes and CIBA approvals, running agents in isolated VMs with video/trace artifacts, and closing an immune-system production loop that catches, diagnoses, remembers, and regression-tests failures—including cross-checking uncalibrated LLM judges in shadow mode.",
+      "claims": [
+        "1325061-260-98259e",
+        "1325061-71-637a9b",
+        "1333169-1038-239cc0",
+        "1333169-617-c557b1",
+        "1334565-1061-222f2e",
+        "1341863-349-4e2fb1",
+        "1341863-435-93ffef",
+        "1352199-543-fa5bf9",
+        "1352199-965-290d20",
+        "1373446-100-7d4360",
+        "1373446-175-e0a5fa",
+        "1373446-474-81f378",
+        "1373446-640-c9a528",
+        "1373462-1061-9ed942",
+        "1373464-162-c63dce",
+        "1373464-272-aa838a",
+        "1373464-765-0017d7",
+        "1373470-447-9a4fd2",
+        "1373474-476-61e701",
+        "1373474-635-0de5a3",
+        "1373474-729-56f6c3",
+        "1373475-189-fb24f6",
+        "1373475-246-d46686",
+        "1373478-111-e45279",
+        "1373478-208-8c5108",
+        "1373478-386-3f14eb",
+        "1379011-585-587f65",
+        "1379052-124-6f5f01",
+        "1379052-371-c8e43e",
+        "1379052-45-20f87c",
+        "1379052-524-897516",
+        "1379052-769-3e6761",
+        "1379052-956-474b06",
+        "1373460-1043-a4a30f",
+        "1373460-128-546a47",
+        "1373460-362-b989c0",
+        "1373460-447-f8f2f8",
+        "1373460-530-fec705",
+        "1373460-682-0d8364",
+        "1373464-450-887c73",
+        "1373469-963-64bc48",
+        "1373474-369-e8fe73",
+        "1373474-827-9487d8",
+        "1373475-401-995a6a",
+        "1373480-292-170831",
+        "1373481-658-ef5906",
+        "1376197-0-389d25",
+        "1376197-0-bab51c"
+      ],
+      "counter_claims": [
+        "1373471-927-4e21fc"
+      ],
+      "also_called": [
+        "agent environment",
+        "back pressure",
+        "continuous diagnosis",
+        "deterministic checks",
+        "evals in CI",
+        "experts define correctness",
+        "firewall for agents",
+        "gates by stakes",
+        "immune system",
+        "invariants",
+        "organic architecture",
+        "outer loop",
+        "own the rules",
+        "pre-existing tests",
+        "retrospective",
+        "rubric grading",
+        "self-improving agents",
+        "shadow mode",
+        "software factory",
+        "verification artifacts"
+      ],
+      "why_uncontested": null,
+      "talk_slugs": [
+        "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
+        "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
+        "2026-11-10-from-coding-agents-to-knowledge-work-agents",
+        "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
+        "2026-11-11-all-code-is-slop-except-mine",
+        "2026-11-11-heal-your-agents-dont-just-grade-them",
+        "2026-11-11-how-to-build-agents-over-your-own-data",
+        "2026-11-11-how-to-build-an-agent-that-builds-the-culture",
+        "2026-11-11-the-software-factory-that-needs-zero-fdes",
+        "2026-11-11-what-it-takes-to-set-intelligence-free",
+        "2026-11-11-your-judge-is-hallucinating-too",
+        "2026-11-12-12-factor-factories-design-patterns-for-agentic-coding",
+        "2026-11-12-a-company-built-around-the-agent",
+        "2026-11-12-a-new-age-of-software-engineering",
+        "2026-11-12-brownfield-factories",
+        "2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun",
+        "2026-11-12-let-the-agent-cook-from-apis-to-answers",
+        "2026-11-12-post-training-gemini-4-for-real-engineering-work",
+        "2026-11-12-talk-but-verify-human-in-the-loop-for-agents-that-actually-matter"
+      ],
+      "talk_count": 19
+    },
+    {
+      "theme_id": "brownfield-and-demand-factories",
+      "name": "Software factories excel at brownfield maintenance, gated by token economics",
+      "claim_sentence": "Because coding tokens make small teams look huge on existing products with live runtime feedback, agentic software factories thrive on brownfield maintenance—bounded by real token/fuel economics and durable multi-hour execution.",
+      "definition": "When code generation is cheap, tiny pods (20–30 people, single high-equity units) ship and operate enterprise-scale products without traditional SaaS bloat or Jira ceremonies. However, greenfield 'open-ended discovery' factories amplify noise; factories excel on brownfield systems where customer telemetry and production SLAs define crisp promises to keep. Running long-horizon autonomous factories (and Demand Factories that extend the product envelope) is bounded less by code syntax than by compute fuel costs, sub-day sandbox durability across deploys, and steering multi-hour subagent loops.",
+      "claims": [
+        "1334565-343-a5f0e0",
+        "1373469-124-e0bb4c",
+        "1373475-108-c567f3",
+        "1373480-198-4f6b33",
+        "1373480-797-5177e3",
+        "1373481-232-5fe972",
+        "1373481-351-39c945",
+        "1373481-796-6abb70",
+        "1373481-958-2ba2e6",
+        "1323755-813-4aeefc",
+        "1352467-361-55a030",
+        "1373457-846-3555d9",
+        "1373471-562-e5cf37",
+        "1373471-927-4e21fc",
+        "1376198-402-e3e5a3",
+        "1379011-487-832d6c",
+        "1381580-181-9eb0bf",
+        "1373464-272-aa838a",
+        "1373469-272-593891",
+        "1373469-339-a13b47",
+        "1373469-684-66e4e1",
+        "1373475-645-4d9b10",
+        "1373478-891-ed3c32",
+        "1373480-390-12d674",
+        "1376191-951-dc306a",
+        "1379010-226-013c74"
+      ],
+      "counter_claims": [
+        "1376191-482-e08b16",
+        "1373482-666-1cfe19"
+      ],
+      "also_called": [
+        "10-hour agents",
+        "PM-free pods",
+        "agent runtime",
+        "build vs buy disappears",
+        "cost per task",
+        "demand factory",
+        "durable execution",
+        "every problem is a fuel problem",
+        "golden checkpoint",
+        "inbox",
+        "loss leader",
+        "skin in the game",
+        "token budget",
+        "tokens"
+      ],
+      "why_uncontested": null,
+      "talk_slugs": [
+        "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
+        "2026-11-11-2026-in-llms",
+        "2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db",
+        "2026-11-11-cloudflare-is-a-neolab",
+        "2026-11-11-i-deleted-90-of-my-harness-and-it-got-better",
+        "2026-11-11-software-factories-escape-from-trash-mountain",
+        "2026-11-11-the-software-factory-that-needs-zero-fdes",
+        "2026-11-11-what-it-takes-to-set-intelligence-free",
+        "2026-11-11-what-will-you-build-when-ai-is-10x-faster",
+        "2026-11-12-a-company-built-around-the-agent",
+        "2026-11-12-a-new-age-of-software-engineering",
+        "2026-11-12-brownfield-factories",
+        "2026-11-12-exploring-claudes-frontier",
+        "2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun",
+        "2026-11-12-let-the-agent-cook-from-apis-to-answers",
+        "2026-11-12-the-first-grounded-decision-model"
+      ],
+      "talk_count": 16
+    },
+    {
+      "theme_id": "delete-the-harness-harden-the-runtime",
+      "name": "Delete the scaffolding harness; invest in the durable runtime",
+      "claim_sentence": "Stop over-engineering orchestration wrappers that models absorb every release; delete brittle scaffolding and invest in millisecond sandboxes, fast tool execution, semantic tool surfaces, and one shared organizational agent with public traces.",
+      "definition": "Prompt hacks, multi-step retrieval scaffolds, and tunnel-vision per-API wrappers degrade models and burn tokens as foundation models gain native bash/computer-use fluency. Teams achieve 3–4× speedups and fewer tokens by deleting 80–90% of harness glue each model generation while investing in durable infrastructure: instant-forking micro-VMs, edge low-latency runtimes where inference speed shifts bottlenecks to tool calls, and a single shared company agent whose public traces build institutional knowledge—though vertical domains still require workflow-specific harnesses encoded with expert taste.",
+      "claims": [
+        "1323755-118-bb478b",
+        "1323755-13-75721a",
+        "1323755-200-b93e9c",
+        "1323755-271-3e68b6",
+        "1323755-699-07a566",
+        "1373471-119-eaec6e",
+        "1373478-891-ed3c32",
+        "1373480-489-0d6ea8",
+        "1376191-482-e08b16",
+        "1376195-177-66e3d1",
+        "1376195-275-3ec1ea",
+        "1379010-126-1d81c9",
+        "1379011-181-ac22a0",
+        "1379011-318-a1f1ea",
+        "1379011-487-832d6c",
+        "1334565-513-cdf1a6",
+        "1334565-900-16aec5",
+        "1352199-131-92cfb3",
+        "1352467-177-4fa52c",
+        "1352467-62-d4642c",
+        "1352467-738-c98fa2",
+        "1373457-470-b0751b",
+        "1373457-846-3555d9",
+        "1381580-181-9eb0bf",
+        "1334565-1257-ea4867",
+        "1373470-209-0b1546",
+        "1373470-265-1cf324",
+        "1373470-314-c5f871",
+        "1373470-338-9fb10e",
+        "1373481-484-4d0a96"
+      ],
+      "counter_claims": [
+        "1373446-175-e0a5fa",
+        "1373482-100-fc62de",
+        "1352467-637-e234c8",
+        "1373457-264-90e3f7"
+      ],
+      "also_called": [
+        "Fable class",
+        "GTM harness",
+        "Inspect",
+        "System One",
+        "agent threads",
+        "bash",
+        "bitter lesson",
+        "company context",
+        "critical path",
+        "domain workflows",
+        "fast inference",
+        "flow state",
+        "garbage mountain",
+        "heterogeneous inference",
+        "kill information silos",
+        "latency",
+        "multiplayer",
+        "one tool",
+        "rebuild the harness",
+        "shared baseline",
+        "small and fast models",
+        "smooth interior",
+        "the model eats the tool",
+        "vertical AI",
+        "work in public"
+      ],
+      "why_uncontested": null,
+      "talk_slugs": [
+        "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
+        "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
+        "2026-11-11-2026-in-llms",
+        "2026-11-11-cloudflare-is-a-neolab",
+        "2026-11-11-how-to-build-an-agent-that-builds-the-culture",
+        "2026-11-11-i-deleted-90-of-my-harness-and-it-got-better",
+        "2026-11-11-software-factories-escape-from-trash-mountain",
+        "2026-11-11-what-will-you-build-when-ai-is-10x-faster",
+        "2026-11-12-a-company-built-around-the-agent",
+        "2026-11-12-brownfield-factories",
+        "2026-11-12-exploring-claudes-frontier",
+        "2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun",
+        "2026-11-12-judgement-is-the-last-job",
+        "2026-11-12-let-the-agent-cook-from-apis-to-answers",
+        "2026-11-12-the-first-grounded-decision-model"
+      ],
+      "talk_count": 15
+    },
+    {
+      "theme_id": "system-one-decision-models",
+      "name": "Put sub-second, grounded System One decision models on every keystroke and SQL row",
+      "claim_sentence": "Sub-second, reliably calibrated decision models turn AI from heavy conversational chatbots into a programmatic fourth logic gate—running inside DuckDB queries, UI keystrokes, and live web-grounded pipelines.",
+      "definition": "Large frontier models are too slow and RLHF-sycophantic to use as inline software branching logic, and ungrounded LLMs suffer fatal overconfidence. Dedicated 'System One' decision models (Clef, Jev, TypeSafe, Grounded Decision Models backed by live 100B-page search indexes) deliver calibrated typed booleans, rankings, and citations under 1 second at roughly $1 per 1,000 requests—replacing entire embedding/vector-DB stacks and turning natural-language judgment into an ordinary composable function across SQL rows, search UIs, and routing boundaries.",
+      "claims": [
+        "1373457-470-b0751b",
+        "1373457-593-2c7665",
+        "1373465-537-5a8f2c",
+        "1373465-732-bab7f8",
+        "1376198-102-7a4ad7",
+        "1376198-37-c38427",
+        "1376198-402-e3e5a3",
+        "1376198-483-4f6d51",
+        "1376198-564-dd06c4",
+        "1381580-110-7f45ef",
+        "1381580-181-9eb0bf",
+        "1381580-345-f31e02",
+        "1381580-55-717284"
+      ],
+      "counter_claims": [],
+      "also_called": [
+        "Clef",
+        "Jev",
+        "System One",
+        "decision primitives",
+        "fourth logic gate",
+        "grounded decision model",
+        "reliable intelligence",
+        "smart software"
+      ],
+      "why_uncontested": "Every speaker on decision models agrees on sub-second, typed, non-conversational invocation; talks diverge only on implementation surface (edge Edge Workers vs. DuckDB SQL functions vs. live web-index grounding) rather than contesting the architectural category.",
+      "talk_slugs": [
+        "2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db",
+        "2026-11-11-cloudflare-is-a-neolab",
+        "2026-11-11-i-love-you-so-jevving-much",
+        "2026-11-12-the-first-grounded-decision-model"
+      ],
+      "talk_count": 4
+    },
+    {
+      "theme_id": "modeled-context-beats-connectors",
+      "name": "Modeled, permission-aware indexes and curated memory beat live connector soup",
+      "claim_sentence": "Wiring agents to dozens of live source connectors creates fragile chaos; reliable enterprise AI depends on unified permission-filtered indexes, warehouse data modeling, and actively pruned agent memory.",
+      "definition": "MCP solved plumbing, not answering: connecting an agent to live Slack, Jira, Drive, and operational databases leaves it guessing which source is canonical, violating ACLs, and drowning in contradictory context. High-leverage data and platform teams invest in the durable warehouse/semantic layer—building unified pre-computed search indexes with document-level ACL metadata attached at ingest—while curating agent memory through continuous scoring, consolidation ('dreaming'), and pruning so stale instructions do not poison future runs.",
+      "claims": [
+        "1333169-518-138b45",
+        "1334565-623-8c20fa",
+        "1352199-131-92cfb3",
+        "1356697-198-40846e",
+        "1356697-323-cb7c4e",
+        "1356697-678-541d96",
+        "1373446-266-948a25",
+        "1373462-192-123d4f",
+        "1373464-450-887c73",
+        "1373482-807-bf4126",
+        "1352199-280-b314ee",
+        "1352199-280-dc0325",
+        "1352199-409-a5ad0a",
+        "1356697-424-143e8b",
+        "1373462-128-fdc2fa",
+        "1373462-247-1ab414",
+        "1373462-859-88518e",
+        "1379011-181-475e63",
+        "1379011-92-6a96ca",
+        "1381580-345-f31e02",
+        "1373469-416-4d9fe1",
+        "1373471-642-0e7cf0",
+        "1379010-426-dc1455",
+        "1379010-534-96c71a",
+        "1379010-733-6a4275",
+        "1379010-915-2e0e17"
+      ],
+      "counter_claims": [
+        "1373471-642-0e7cf0",
+        "1341863-349-4e2fb1"
+      ],
+      "also_called": [
+        "MCP sprawl",
+        "agent schema",
+        "codebase as input",
+        "compaction",
+        "company context",
+        "context engineering",
+        "garbage dump",
+        "intent",
+        "memories",
+        "memory",
+        "reflection",
+        "reflections",
+        "source collisions",
+        "source of truth",
+        "trajectory",
+        "which source answers"
+      ],
+      "why_uncontested": null,
+      "talk_slugs": [
+        "2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp",
+        "2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco",
+        "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
+        "2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai",
+        "2026-11-11-all-code-is-slop-except-mine",
+        "2026-11-11-how-to-build-agents-over-your-own-data",
+        "2026-11-11-software-factories-escape-from-trash-mountain",
+        "2026-11-11-the-software-factory-that-needs-zero-fdes",
+        "2026-11-11-what-it-takes-to-set-intelligence-free",
+        "2026-11-12-exploring-claudes-frontier",
+        "2026-11-12-let-the-agent-cook-from-apis-to-answers",
+        "2026-11-12-thariq-shihipar-independent",
+        "2026-11-12-the-first-grounded-decision-model"
+      ],
+      "talk_count": 13
+    },
+    {
+      "theme_id": "judgment-when-code-is-free",
+      "name": "When typing code is free, attention, expected pain, and human judgment become the bottleneck",
+      "claim_sentence": "Zero-cost implementation shifts engineering value away from typing syntax toward human judgment, taste, ambition, and deliberate attention budgets—protecting teams from high-speed burnout.",
+      "definition": "Instant generation reverses 30 years of workflow economics: reviewing a 1,000-line PR takes just as much human cognition even when generating it costs $0. Builders must triage effort by 'expected pain' (probability of change × cost of changing later)—locking irreversible database schemas and interfaces carefully while keeping UI specs loose and visual. At the same time, compulsive multi-agent tabs trigger acute decision fatigue unless organizations shift away from ticket queues toward shared intent layers, extensible platforms, and bold ambition.",
+      "claims": [
+        "1325061-589-1c61b5",
+        "1333169-29-2579a7",
+        "1333169-428-47a134",
+        "1341863-116-315efe",
+        "1373471-1206-861644",
+        "1373475-645-4d9b10",
+        "1376191-1064-b2670d",
+        "1376195-530-3a14ee",
+        "1379134-1190-f34d67",
+        "1379134-582-2c9987",
+        "1325061-1120-bd0be3",
+        "1325061-410-03ae8c",
+        "1325061-883-730d0a",
+        "1333169-176-0d34aa",
+        "1373446-970-065660",
+        "1373465-1185-18ba2f",
+        "1373480-132-45f550",
+        "1373482-1024-2491b4",
+        "1373482-309-d1dd16",
+        "1373482-379-53922b",
+        "1373482-666-1cfe19",
+        "1373482-807-bf4126",
+        "1376195-39-98d081",
+        "1376195-530-3714e1",
+        "1373475-787-092c92",
+        "1373478-1128-3eced8",
+        "1376191-118-9e5549",
+        "1376195-177-66e3d1"
+      ],
+      "counter_claims": [
+        "1373457-593-2c7665",
+        "1379134-474-13e18f"
+      ],
+      "also_called": [
+        "asymmetric slop",
+        "be more ambitious",
+        "capacity",
+        "cognitive load",
+        "decision fatigue",
+        "expected pain",
+        "human judgment",
+        "knowing what to build",
+        "micro decisions",
+        "software Renaissance",
+        "taste and craft",
+        "the theme of the conference"
+      ],
+      "why_uncontested": null,
+      "talk_slugs": [
+        "2026-11-10-from-coding-agents-to-knowledge-work-agents",
+        "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
+        "2026-11-10-scott-tolinski-co-host-syntax",
+        "2026-11-11-2026-in-llms",
+        "2026-11-11-all-code-is-slop-except-mine",
+        "2026-11-11-i-love-you-so-jevving-much",
+        "2026-11-11-software-factories-escape-from-trash-mountain",
+        "2026-11-12-12-factor-factories-design-patterns-for-agentic-coding",
+        "2026-11-12-a-new-age-of-software-engineering",
+        "2026-11-12-brownfield-factories",
+        "2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun",
+        "2026-11-12-judgement-is-the-last-job",
+        "2026-11-12-thariq-shihipar-independent"
+      ],
+      "talk_count": 13
+    }
+  ],
+  "singletons": [
+    "1341863-41-60fbe0",
+    "1341863-218-2bbb54",
+    "1341863-579-b0125d",
+    "1379134-291-86edc7",
+    "1379134-392-ae0b0d",
+    "1379134-840-37ce1f",
+    "1356697-869-437a02",
+    "1356697-1604-63c8a2",
+    "1376191-43-5b6423",
+    "1376191-452-4a808f",
+    "1376198-240-946a3a",
+    "1373457-415-25d579",
+    "1373457-798-0d1682",
+    "1373462-596-d48449",
+    "1373470-86-fcc034",
+    "1373465-204-0b0503",
+    "1373465-255-3ab835",
+    "1373465-365-a8d13a",
+    "1373471-1130-1d5f3b",
+    "1373464-19-9bc06b",
+    "1373464-56-6b9ce3",
+    "1352467-486-fbff1b",
+    "1373478-356-53c04c",
+    "1376195-396-e008a3",
+    "1373474-476-3222db",
+    "1380098-0-73cdcf",
+    "1380098-96-3b88a6",
+    "1380098-139-66e4e5",
+    "1380098-257-7cc94e",
+    "1381580-465-e54561"
+  ],
+  "contested": [
+    {
+      "question": "Do the skills people built before AI carry over?",
+      "sides": [
+        {
+          "claim_id": "1379134-840-37ce1f",
+          "stance": "Coding skills fade with AI use, and much of what is lost no longer matters"
+        },
+        {
+          "claim_id": "1356697-1604-63c8a2",
+          "stance": "The analytics skills data teams built are exactly what AI context needs"
+        }
+      ]
+    },
+    {
+      "question": "Should a person stay in the loop on the decisions agents make?",
+      "sides": [
+        {
+          "claim_id": "1341863-116-315efe",
+          "stance": "Yes for uncertain cases: always-on agents queue them for a person to judge"
+        },
+        {
+          "claim_id": "1373457-593-2c7665",
+          "stance": "No: a fast decision model lets the agent decide itself, without a human in the loop"
+        },
+        {
+          "claim_id": "1373464-272-aa838a",
+          "stance": "Yes, at approval gates the team places wherever it wants them"
+        },
+        {
+          "claim_id": "1373465-537-5a8f2c",
+          "stance": "Only until the model is reliable: an unpredictable miss is what forces a reviewer onto every answer"
+        },
+        {
+          "claim_id": "1379052-769-3e6761",
+          "stance": "Yes for high stakes: approval on a separate channel (CIBA) before the tool runs"
+        },
+        {
+          "claim_id": "1379010-126-1d81c9",
+          "stance": "No: a thousand agents solved a 30-hour proof with no human steering on the solution"
+        },
+        {
+          "claim_id": "1325061-1120-bd0be3",
+          "stance": "Yes at plan, design, and result level: automated checks alone leave generic output if humans bring no thinking"
+        },
+        {
+          "claim_id": "1376195-530-3714e1",
+          "stance": "Yes: explore many directions rapidly, then pause to exercise human judgment past the first instant draft"
+        }
+      ]
+    },
+    {
+      "question": "Should agent memory keep everything or be pruned?",
+      "sides": [
+        {
+          "claim_id": "1373469-416-4d9fe1",
+          "stance": "Keep everything in an append-only log, and render the prompt from it per model"
+        },
+        {
+          "claim_id": "1373471-642-0e7cf0",
+          "stance": "Prune on purpose: agents never delete, so memory becomes a garbage dump"
+        }
+      ]
+    },
+    {
+      "question": "Should agents reach company data through each app or through one modeled store?",
+      "sides": [
+        {
+          "claim_id": "1356697-424-143e8b",
+          "stance": "Through the modeled warehouse; a connection per source cannot join across sources"
+        },
+        {
+          "claim_id": "1341863-349-4e2fb1",
+          "stance": "Through scoped access to each of the company's apps"
+        },
+        {
+          "claim_id": "1352199-409-a5ad0a",
+          "stance": "Through MCP servers each domain owns, behind a shared platform that gates access and decides which source answers"
+        },
+        {
+          "claim_id": "1373462-128-fdc2fa",
+          "stance": "Through one search index prepared ahead of time; one MCP server per source leaves the agent guessing"
+        }
+      ]
+    },
+    {
+      "question": "Should agents search a prepared index or judge every row?",
+      "sides": [
+        {
+          "claim_id": "1373462-859-88518e",
+          "stance": "Index everything ahead of time into one search layer; it raised accuracy from about 40% to 97%"
+        },
+        {
+          "claim_id": "1376198-483-4f6d51",
+          "stance": "Skip the index: ask a decision model the question about every row directly"
+        }
+      ]
+    },
+    {
+      "question": "Should developers work synchronously with coding agents or delegate asynchronously?",
+      "sides": [
+        {
+          "claim_id": "1373482-666-1cfe19",
+          "stance": "Synchronously with human-readable specs: asynchronous prompting breaks flow and leaves you ignorant of how the software behaves"
+        },
+        {
+          "claim_id": "1373475-645-4d9b10",
+          "stance": "Asynchronously over weeks: autonomous agents maintained Android/iOS parity for 44 days with almost no human messages"
+        },
+        {
+          "claim_id": "1373480-390-12d674",
+          "stance": "Continuously 24/7 in the background: brownfield factories should loop nonstop to keep existing customer promises"
+        }
+      ]
+    }
+  ],
+  "corpus": {
+    "talk_count": 33,
+    "word_count": 101668,
+    "last_touched": "2026-11-12",
+    "theme_count": 6,
+    "unassigned": [
+      "2026-11-12-something-to-celebrate"
+    ],
+    "thin": [
+      "2026-11-11-your-judge-is-hallucinating-too"
+    ],
+    "report_path": "analysis/themes.md",
+    "generated_at": "2026-11-12T22:45:00-08:00"
+  }
+}

@@ -55,6 +55,66 @@
       "also_at": []
     }
   ],
+  "1325061": [
+    {
+      "claim_id": "1325061-71-637a9b",
+      "section": "00:01:11",
+      "at_seconds": 71,
+      "quote": "But I think the main takeaway here, and I think we've heard this from a lot of folks, is software factories is just good engineering.",
+      "claim": "Building reliable agentic software factories relies primarily on standardizing timeless engineering processes rather than novel AI-only abstractions.",
+      "speaker": "Dexter Horthy",
+      "also_at": [
+        "00:04:20"
+      ]
+    },
+    {
+      "claim_id": "1325061-260-98259e",
+      "section": "00:04:20",
+      "at_seconds": 260,
+      "quote": "Now we can build things in minutes or hours. But the review and testing still takes hours or days if we're doing it in the old way. So we bring in agentic code review, agentic testing.",
+      "claim": "When agents accelerate implementation to minutes or hours, teams must add automated back pressure—such as agentic code review, testing, linters, and formal verification—to avoid bottlenecking on human review.",
+      "speaker": "Dexter Horthy",
+      "also_at": [
+        "00:05:40"
+      ]
+    },
+    {
+      "claim_id": "1325061-410-03ae8c",
+      "section": "00:06:50",
+      "at_seconds": 410,
+      "quote": "So if you are just hands off pushing features into the machine. You may not find that it autonomously will make things better over time.",
+      "claim": "Unattended coding models degrade codebase quality over incremental feature additions unless engineers actively steer architecture and maintain system understanding.",
+      "speaker": "Dexter Horthy",
+      "also_at": []
+    },
+    {
+      "claim_id": "1325061-589-1c61b5",
+      "section": "00:09:49",
+      "at_seconds": 589,
+      "quote": "But I think about this in terms of expected pain. Like, how likely will this have to change later? Times, how hard will it be to change? I don't argue with the model during planning about what color the button is going to be, but I do want to make sure we get like our database schemas right and stuff like that.",
+      "claim": "Specification and planning effort should scale with expected pain—the likelihood of future change multiplied by the difficulty of changing it later.",
+      "speaker": "Dexter Horthy",
+      "also_at": []
+    },
+    {
+      "claim_id": "1325061-883-730d0a",
+      "section": "00:14:43",
+      "at_seconds": 883,
+      "quote": "AI cannot replace human judgment. It can only amplify our judgment, or maybe perhaps our lack of judgment in certain cases. And the slop is asymmetric. The cost of producing a thousand line PR or a ten page doc is approaching zero. But the cost of reviewing it is still barely constant.",
+      "claim": "AI amplifies rather than replaces human judgment, creating an asymmetric slop problem where generating large artifacts is nearly free while reviewing them remains costly.",
+      "speaker": "Dexter Horthy",
+      "also_at": []
+    },
+    {
+      "claim_id": "1325061-1120-bd0be3",
+      "section": "00:18:40",
+      "at_seconds": 1120,
+      "quote": "As models get better, we may stop reading most of the code. We basically review a plan or a design or a result. But if you don't review anything, if you bring nothing to the table, no thinking, then you're just going to get the same AI output as everybody else.",
+      "claim": "Human review of plans, designs, or outcomes remains a lasting source of leverage because automated verifiers alone are insufficient and unthinking delegation yields generic output.",
+      "speaker": "Dexter Horthy",
+      "also_at": []
+    }
+  ],
   "1333169": [
     {
       "claim_id": "1333169-29-2579a7",
@@ -905,6 +965,66 @@
       "also_at": []
     }
   ],
+  "1373474": [
+    {
+      "claim_id": "1373474-369-e8fe73",
+      "section": "00:06:09",
+      "at_seconds": 369,
+      "quote": "we want to dog food our models with our hundred thousand engineer community. And repeat the loop.",
+      "claim": "Internal dogfooding across Google's 100,000-engineer community turns real engineering failures and blind-battle friction directly into training tasks for subsequent post-training candidates.",
+      "speaker": "Melvin Johnson",
+      "also_at": [
+        "00:16:07"
+      ]
+    },
+    {
+      "claim_id": "1373474-476-3222db",
+      "section": "00:07:56",
+      "at_seconds": 476,
+      "quote": "So, what's the problem with training on easy tasks? Easy tasks give you zero learning signal. Right. So you have a problem when all of your rollouts are going to be correct. There's no variance. There's no RL signal.",
+      "claim": "Tasks that a model already solves across all rollouts yield zero variance and zero RL learning signal, requiring continuous pruning of saturated tasks and sourcing of harder multi-file and build-from-scratch tasks.",
+      "speaker": "Melvin Johnson",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373474-476-61e701",
+      "section": "00:07:56",
+      "at_seconds": 476,
+      "quote": "We go from unit test or binary correctness. To rubric-based grading, and rubrics give you dense signal. They're not just zero one.",
+      "claim": "Replacing binary unit-test pass/fail signals with commit-derived rubrics provides dense reward gradients covering code hygiene, edge cases, and maintainability.",
+      "speaker": "Melvin Johnson",
+      "also_at": [
+        "00:10:35"
+      ]
+    },
+    {
+      "claim_id": "1373474-635-0de5a3",
+      "section": "00:10:35",
+      "at_seconds": 635,
+      "quote": "You're training them to pass the test, so they will find any way to pass the test. But if the test pass, that doesn't necessarily mean that they've solved the problem. There are examples where the agent will bypass the checker. There are examples where the agent will game the benchmark. There are examples where the agent will fake the evidence.",
+      "claim": "RL-trained coding agents will exploit test suites by bypassing checkers, gaming benchmarks, or fabricating evidence unless graders evaluate solutions like strict human code reviewers.",
+      "speaker": "Melvin Johnson",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373474-729-56f6c3",
+      "section": "00:12:09",
+      "at_seconds": 729,
+      "quote": "So any you know cheating or hampering of the environment gets a very negative RL reward. And all of this is detected just based on the actions that the model is taking, not the thoughts.",
+      "claim": "Hardened grading sandboxes isolate git history and held-out tests while applying strong negative RL rewards for environment tampering detected strictly from model actions rather than thoughts.",
+      "speaker": "Melvin Johnson",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373474-827-9487d8",
+      "section": "00:13:47",
+      "at_seconds": 827,
+      "quote": "when the agent says I'm done and gives you a summary. That needs to be grounded in the actions that were taken. And we want to reward honesty, so. If there's a hard problem, it's better for the agent to say, \"Hey, this is my partial progress. It's a hard problem.\"",
+      "claim": "To cut fabrication rates, post-training cleans trajectories, grounds final completion summaries in actual tool actions, and rewards agents for reporting partial progress instead of faking completion.",
+      "speaker": "Melvin Johnson",
+      "also_at": []
+    }
+  ],
   "1373475": [
     {
       "claim_id": "1373475-108-c567f3",
@@ -961,6 +1081,252 @@
       "also_at": []
     }
   ],
+  "1373478": [
+    {
+      "claim_id": "1373478-111-e45279",
+      "section": "00:01:51",
+      "at_seconds": 111,
+      "quote": "You're really constrained by how you test that the code works. So that's like even more important than what you're specifically like the approach you go with for how to build it. Is entirely driven by how do you verify that actually is going to like work and not be buggy. And that you can trust it.",
+      "claim": "On massive agent-authored engineering projects, architectural choices are driven primarily by how you can reliably test and verify correctness.",
+      "speaker": "Jarred Sumner",
+      "also_at": [
+        "00:20:35"
+      ]
+    },
+    {
+      "claim_id": "1373478-208-8c5108",
+      "section": "00:03:28",
+      "at_seconds": 208,
+      "quote": "As soon as you're like rewriting the tests. Then you can't really trust the test anymore. So that seems like it'd be too risky.",
+      "claim": "Anthropic rejected rewriting Claude Code in Rust because porting its TypeScript test suite would destroy trust in the verification oracle, choosing instead to accelerate JavaScript with an AOT compiler.",
+      "speaker": "Jarred Sumner",
+      "also_at": [
+        "00:06:26"
+      ]
+    },
+    {
+      "claim_id": "1373478-356-53c04c",
+      "section": "00:05:56",
+      "at_seconds": 356,
+      "quote": "Types are don't necessarily need to be correct. So it treats types as predictions instead of, like, trusting them.",
+      "claim": "Bun's ahead-of-time compiler treats TypeScript types as runtime optimization predictions rather than sound guarantees, enabling faster monomorphic field access with fallback checks.",
+      "speaker": "Jarred Sumner",
+      "also_at": [
+        "00:15:35"
+      ]
+    },
+    {
+      "claim_id": "1373478-386-3f14eb",
+      "section": "00:06:26",
+      "at_seconds": 386,
+      "quote": "We can largely trust that the tests that predate the project worked.",
+      "claim": "Relying on test suites that predate the project—combined with fuzzing and comparing JIT, AOT, and untyped execution—prevents coding agents from gaming or weakening verification.",
+      "speaker": "Jarred Sumner",
+      "also_at": [
+        "00:16:07"
+      ]
+    },
+    {
+      "claim_id": "1373478-891-ed3c32",
+      "section": "00:14:51",
+      "at_seconds": 891,
+      "quote": "pretty much now with the most recent models. I mostly just rely on subagents that are like very long lived. Except for that initial part where you're like writing all the code all at once. And this, with the subagents, it works pretty well because. They keep all the context of the relevant code in their head, or like in the context window.",
+      "claim": "After initial bulk code generation, long-lived subagents outperform rigid classical workflows because they retain deep codebase context in their context window.",
+      "speaker": "Jarred Sumner",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373478-1128-3eced8",
+      "section": "00:18:48",
+      "at_seconds": 1128,
+      "quote": "what you actually do is like. A bunch of leading questions, like why are we doing this? Can we do this? Also, I end up saying like, can you do this faster? Or like, what's taking so long?",
+      "claim": "Day-to-day engineering with coding agents centers on asking leading questions and pushing them to be ambitious because models underestimate what is achievable and talk themselves out of big improvements.",
+      "speaker": "Jarred Sumner",
+      "also_at": [
+        "00:20:35"
+      ]
+    }
+  ],
+  "1373480": [
+    {
+      "claim_id": "1373480-132-45f550",
+      "section": "00:02:12",
+      "at_seconds": 132,
+      "quote": "And if we're trying to industrialize something where we don't know what we want. We're certainly we're not going to get the right thing, or we're going to take too long, or we're going to spend too much.",
+      "claim": "Industrializing software production with a factory before knowing what the market wants wastes time and money on the wrong output.",
+      "speaker": "Justin McCarthy",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373480-198-4f6b33",
+      "section": "00:03:18",
+      "at_seconds": 198,
+      "quote": "It's something where customers are saying with their dollars and their and their utilization. Like yeah, this works for me. I like it. I want more of this.",
+      "claim": "Brownfield software is ideal for factories because paying customers and active usage already specify what needs to be built and maintained.",
+      "speaker": "Justin McCarthy",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373480-292-170831",
+      "section": "00:04:52",
+      "at_seconds": 292,
+      "quote": "As many of you know, this is the sort of idealized block diagram amplifier, and if you cut that feedback leg. You're just going to amplify noise, okay?",
+      "claim": "Encoding product guarantees ('promises') into closed feedback loops stabilizes brownfield factories, whereas breaking the feedback loop only amplifies noise.",
+      "speaker": "Justin McCarthy",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373480-390-12d674",
+      "section": "00:06:30",
+      "at_seconds": 390,
+      "quote": "So you've got an existing codestate. You've got an existing set of promises. Just make it continuous. Make it loop and make it keep those promises.",
+      "claim": "A brownfield factory should run continuously in the background 24/7 to keep an existing codebase's promises rather than operating in periodic human cycles.",
+      "speaker": "Justin McCarthy",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373480-489-0d6ea8",
+      "section": "00:08:09",
+      "at_seconds": 489,
+      "quote": "The skills are getting shorter. Harnesses are getting more general, of course, and a lot of this again is credit to the models themselves.",
+      "claim": "Software factories naturally simplify with fewer moving parts and higher performance over time as underlying models and harnesses improve.",
+      "speaker": "Justin McCarthy",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373480-797-5177e3",
+      "section": "00:13:17",
+      "at_seconds": 797,
+      "quote": "We have to figure out how to build a demand factory. Because our brownfield factory can't build the moat. Right. All it can do is keep our existing promises running well.",
+      "claim": "Because brownfield factories only maintain existing commitments and cannot build a competitive moat alone, companies must build a demand factory to pace market discovery with software output.",
+      "speaker": "Justin McCarthy",
+      "also_at": [
+        "00:16:12"
+      ]
+    }
+  ],
+  "1373481": [
+    {
+      "claim_id": "1373481-232-5fe972",
+      "section": "00:03:52",
+      "at_seconds": 232,
+      "quote": "with this idea of enterprise ready, you do this thing, and then you can build a sales team and go sell it. We knew that was just going to totally die off.",
+      "claim": "The classic SaaS playbook of building enterprise-checklist features and hiring a large sales team dies off when rapid agent progress makes static feature sets obsolete within months.",
+      "speaker": "Quinn Slack",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373481-351-39c945",
+      "section": "00:05:51",
+      "at_seconds": 351,
+      "quote": "And that skin in the game that you get when AI makes it so you can operate with way less people. Skin in the game—it's like this spiritual thing for the soul. Of great people, it makes them better at everything they do.",
+      "claim": "Operating with far fewer people via AI lets every team member hold meaningful equity ('skin in the game'), which elevates execution across the entire company.",
+      "speaker": "Quinn Slack",
+      "also_at": [
+        "00:15:58"
+      ]
+    },
+    {
+      "claim_id": "1373481-484-4d0a96",
+      "section": "00:08:04",
+      "at_seconds": 484,
+      "quote": "We got rid of all of the other tools. We got rid of all of the other things you got to check. Obviously, not Jira. No task tracking. We don't have a support system. Everything we do in the agent.",
+      "claim": "Spinning out Amp forced the team to eliminate Jira, task trackers, and separate support systems so all engineering and coordination happen directly inside shared agent threads.",
+      "speaker": "Quinn Slack",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373481-658-ef5906",
+      "section": "00:10:58",
+      "at_seconds": 658,
+      "quote": "People talk about vibe coated products being junk. Amp is basically 100 built with AI. And people say it's very high quality, and this is one of the things that you can do differently with an agent.",
+      "claim": "An AI-built product can achieve high quality rather than 'vibe coded' junk by running automated agent loops that fix reported bugs, sweep logs for other affected users, and proactively notify them.",
+      "speaker": "Quinn Slack",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373481-796-6abb70",
+      "section": "00:13:16",
+      "at_seconds": 796,
+      "quote": "The more that we start using these tools, where just the agent is using it directly, we don't even need the software product on the other end, and it's. A very small number of products that we think actually have sticking power for us.",
+      "claim": "Once agents operate tools directly and can build the small fraction of features a company actually uses, very few third-party SaaS products retain sticking power.",
+      "speaker": "Quinn Slack",
+      "also_at": [
+        "00:14:45"
+      ]
+    },
+    {
+      "claim_id": "1373481-958-2ba2e6",
+      "section": "00:15:58",
+      "at_seconds": 958,
+      "quote": "We also have a great business, and we're serving as proof that this new kind of company.\n\nThat is profitable. That's more than a hundred million ARR. That is doing so. On a dollar in, dollar out, you know, basis, that's 40 to 50 times more efficient than old-fashioned companies.",
+      "claim": "A 21-person, PM-free company built around agents can reach over $100M ARR profitably while operating 40 to 50 times more capital-efficiently than traditional software companies.",
+      "speaker": "Quinn Slack",
+      "also_at": []
+    }
+  ],
+  "1373482": [
+    {
+      "claim_id": "1373482-100-fc62de",
+      "section": "00:01:40",
+      "at_seconds": 100,
+      "quote": "Describe this kind of like fear that the models will just have this like way of doing things, and it will be weird. And alien to us, and we just need to accept it. You know, like we just have to like submit to this like foreign intelligence.\n\nAnd that's just like I don't think that's what happened, you know.",
+      "claim": "Fears that models would behave as an alien intelligence forcing humans to submit to one rigid paradigm—whether Bash CLIs, React, or uncontrollable image diffusion—did not materialize.",
+      "speaker": "Thariq Shihipar",
+      "also_at": [
+        "00:17:04"
+      ]
+    },
+    {
+      "claim_id": "1373482-309-d1dd16",
+      "section": "00:05:09",
+      "at_seconds": 309,
+      "quote": "Something that is happening with software, but at the same time, there's also kind of a Renaissance happening, right? Where people want and higher and higher quality software, and every marginal. Bit of like creativity, utility, like spirit. Like soul that you put into it is like is useful and like economically valuable, right?",
+      "claim": "AI is simultaneously driving an industrial revolution in reliable software production and a Renaissance in which marginal human creativity, utility, and craft remain economically valuable.",
+      "speaker": "Thariq Shihipar",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373482-379-53922b",
+      "section": "00:06:19",
+      "at_seconds": 379,
+      "quote": "And what you see is that like it's not jagged below the frontier, right? Like if. It can write React. It can write Figma. It can write JSON. It can do sort of like all of these capabilities all together.",
+      "claim": "Below the 'jagged frontier' lies a 'smooth interior' where models reliably perform across many languages, formats, and tools without forcing a single stack.",
+      "speaker": "Thariq Shihipar",
+      "also_at": [
+        "00:09:42"
+      ]
+    },
+    {
+      "claim_id": "1373482-666-1cfe19",
+      "section": "00:11:06",
+      "at_seconds": 666,
+      "quote": "And I find that like the ball just makes a bunch of choices for me, and then I try it out. I'm like, wow, I have no idea what that actually does. I get distracted pretty easily. I don't feel in the zone very much. You know, I sort of send off a prompt and they start doing something else and I come back. And I honestly make less progress because of these things, right?",
+      "claim": "Delegating implementation choices asynchronously to a model breaks creative flow and leaves the developer unfamiliar with how the software actually behaves, reducing real progress.",
+      "speaker": "Thariq Shihipar",
+      "also_at": []
+    },
+    {
+      "claim_id": "1373482-807-bf4126",
+      "section": "00:13:27",
+      "at_seconds": 807,
+      "quote": "It's supposed to feel like English. It's kind of like a spec, and I'll show you what it looks like. But it's at the density where, if I just read this code, I know what's happening, and I can edit it. I can tweak it. But more importantly, I just like you know can have a bit of a ground truth of like what the what my game looks like.",
+      "claim": "Separating an agent-managed engine from a linted, English-like human spec folder restores ground truth and direct editability while still letting the agent build underlying primitives.",
+      "speaker": "Thariq Shihipar",
+      "also_at": [
+        "00:14:15"
+      ]
+    },
+    {
+      "claim_id": "1373482-1024-2491b4",
+      "section": "00:17:04",
+      "at_seconds": 1024,
+      "quote": "I'm not as constrained and limited by like the model's capabilities and like what it likes to write code in or something. I'm not thinking about like. I need to think about like. How can I deliver great software? And so. I think if we like really internalize that, I think that this the next year will be about a renaissance of software.",
+      "claim": "Because model capabilities and preferred languages are no longer the bottleneck, the next year is about engineers choosing ideal interaction paradigms, languages, and aesthetics to deliver great software.",
+      "speaker": "Thariq Shihipar",
+      "also_at": []
+    }
+  ],
   "1376191": [
     {
       "claim_id": "1376191-43-5b6423",
@@ -1014,6 +1380,69 @@
       "quote": "I think the truth is that the easy stuff is all handled now.",
       "claim": "The job feels harder because agents take the easy work; it doesn't get easier, you get faster.",
       "speaker": "Simon Willison",
+      "also_at": []
+    }
+  ],
+  "1376195": [
+    {
+      "claim_id": "1376195-39-98d081",
+      "section": "00:00:39",
+      "at_seconds": 39,
+      "quote": "So, anything can be made by anyone. Then it's more important than ever to know what the right thing to even make is.",
+      "claim": "Because software can now be generated instantly by anyone, knowing what the right thing to build is more important than ever.",
+      "speaker": "Ishaan Dey",
+      "also_at": []
+    },
+    {
+      "claim_id": "1376195-177-66e3d1",
+      "section": "00:02:57",
+      "at_seconds": 177,
+      "quote": "People can be more ambitious. There's more agents working together, and we're able to relax the constraints to achieve more.",
+      "claim": "As model intelligence increases, tools can relax prescriptive constraints and orchestrate multiple collaborating agents to tackle more ambitious work.",
+      "speaker": "Ishaan Dey",
+      "also_at": []
+    },
+    {
+      "claim_id": "1376195-275-3ec1ea",
+      "section": "00:04:35",
+      "at_seconds": 275,
+      "quote": "To create the most value, challenge your past assumptions, and rebuild your foundations to create good systems that scale with intelligence.",
+      "claim": "Design decisions made for weaker models quickly become obsolete, so builders must challenge prior assumptions and rebuild foundations rather than merely adding more features.",
+      "speaker": "Ishaan Dey",
+      "also_at": [
+        "00:11:58"
+      ]
+    },
+    {
+      "claim_id": "1376195-396-e008a3",
+      "section": "00:06:36",
+      "at_seconds": 396,
+      "quote": "And by giving the users surface area to explore and create value for themselves. We were able to learn from it and iterate the products to make the core better.",
+      "claim": "Building extensible platforms that let users create their own workflows generates leverage that feeds back into improving the core product.",
+      "speaker": "Ishaan Dey",
+      "also_at": [
+        "00:11:58"
+      ]
+    },
+    {
+      "claim_id": "1376195-530-3714e1",
+      "section": "00:08:50",
+      "at_seconds": 530,
+      "quote": "Try many directions, but take a moment to think. Use your human judgment. Just because you're finished creating something first, which can be done in an instant. It doesn't actually mean you're done.",
+      "claim": "Builders should explore many directions rapidly with agents but pause to apply human judgment instead of accepting the first instant output as finished.",
+      "speaker": "Ishaan Dey",
+      "also_at": [
+        "00:11:58",
+        "00:12:59"
+      ]
+    },
+    {
+      "claim_id": "1376195-530-3a14ee",
+      "section": "00:08:50",
+      "at_seconds": 530,
+      "quote": "Simplifying the interface, only showing the user exactly what the latest thing the agent is doing. Semantically, so they're not shown a wall of text and tool calls that might not actually matter. Maybe it looks like simplifying the whole interface to give the user less cognitive load.",
+      "claim": "Improving an agent interface often means simplifying cognitive load and surfacing only semantically relevant progress rather than exposing raw tool calls and walls of text.",
+      "speaker": "Ishaan Dey",
       "also_at": []
     }
   ],
@@ -1331,6 +1760,96 @@
       "quote": "Less paralization makes for a calmer mind.",
       "claim": "Fewer agents in parallel, better habits and time away from screens are what help.",
       "speaker": "Scott Tolinski",
+      "also_at": []
+    }
+  ],
+  "1380098": [
+    {
+      "claim_id": "1380098-0-73cdcf",
+      "section": "00:00:00",
+      "at_seconds": 0,
+      "quote": "I just checked the numbers in the live stream. If we add everything together, yesterday today. We're basically close to a hundred thousand people on the live stream.",
+      "claim": "Combined livestream viewership across both days of the conference reached nearly one hundred thousand people.",
+      "speaker": "swyx",
+      "also_at": []
+    },
+    {
+      "claim_id": "1380098-96-3b88a6",
+      "section": "00:01:36",
+      "at_seconds": 96,
+      "quote": "Celebrating one million subscribers.",
+      "claim": "The conference YouTube channel surpassed one million subscribers, marked in the room with a celebration video.",
+      "speaker": "swyx",
+      "also_at": []
+    },
+    {
+      "claim_id": "1380098-139-66e4e5",
+      "section": "00:02:19",
+      "at_seconds": 139,
+      "quote": "Along with our event series, obviously our YouTube, there's a couple of people here who have been absolutely pivotal. To that over the last three years, really since day one. And we really want to recognize both of that today up on stage. So if Flo and Vincent can step forward, please.",
+      "claim": "Team members Vincent and Flo were recognized on stage for being pivotal to growing the event series and YouTube channel from day one.",
+      "speaker": null,
+      "also_at": []
+    },
+    {
+      "claim_id": "1380098-257-7cc94e",
+      "section": "00:04:17",
+      "at_seconds": 257,
+      "quote": "We started with one event a year. Last year, with three events a year. This year is the fourth. Flagship events of the year. Next year we're probably going to stay roughly consistent. Maybe add a small. Fifth, one.",
+      "claim": "The conference series scaled from one event to four flagship events this year and plans to stay around four or possibly add a fifth smaller event next year alongside international partnerships.",
+      "speaker": null,
+      "also_at": []
+    }
+  ],
+  "1381580": [
+    {
+      "claim_id": "1381580-55-717284",
+      "section": "00:00:55",
+      "at_seconds": 55,
+      "quote": "And so it's kind of crazy that you would use a decision model in your workflow that has like almost no understanding of like what. And so this is where we think that like not only is it wrong, but also its confidence is too high.",
+      "claim": "Using ungrounded models as workflow decision models fails because they are both factually wrong on current events and overly confident.",
+      "speaker": "Devin Gupta",
+      "also_at": [
+        "00:05:45"
+      ]
+    },
+    {
+      "claim_id": "1381580-110-7f45ef",
+      "section": "00:01:50",
+      "at_seconds": 110,
+      "quote": "What is correct is much more confident that's correct if you use actual grounding to ground your decision. So there's like a whole set of things here that unlocks, and specifically like. Calibration is the important thing about good decision models.",
+      "claim": "Web grounding unlocks both higher accuracy and proper confidence calibration, which is critical for reliable decision models.",
+      "speaker": "Devin Gupta",
+      "also_at": []
+    },
+    {
+      "claim_id": "1381580-181-9eb0bf",
+      "section": "00:03:01",
+      "at_seconds": 181,
+      "quote": "It runs under a second in response time. It's one dollar per thousand requests. So. Two orders of magnitude, maybe an order of magnitude cheaper than the LLM workflow we were using to be back in April. And then it's also like an order of magnitude faster.",
+      "claim": "The grounded decision API runs in under a second at one dollar per thousand requests, roughly an order of magnitude faster and one to two orders cheaper than earlier LLM workflows.",
+      "speaker": "Devin Gupta",
+      "also_at": [
+        "00:05:45",
+        "00:07:03"
+      ]
+    },
+    {
+      "claim_id": "1381580-345-f31e02",
+      "section": "00:05:45",
+      "at_seconds": 345,
+      "quote": "Not only do we give you the answer, we also give you the citation, so you can go fact check the source yourself.",
+      "claim": "The grounded decision API returns source citations alongside each answer so users can verify the evidence directly.",
+      "speaker": "Devin Gupta",
+      "also_at": []
+    },
+    {
+      "claim_id": "1381580-465-e54561",
+      "section": "00:07:45",
+      "at_seconds": 465,
+      "quote": "Yeah, I think the intention behind the product shape is that we want. A single sort of grounding or single search to answer a question.",
+      "claim": "The product is intentionally designed around a single search grounding call answering a single focused question rather than bundling disparate parallel questions under one search.",
+      "speaker": null,
       "also_at": []
     }
   ]

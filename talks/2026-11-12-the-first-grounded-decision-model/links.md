@@ -2,8 +2,8 @@
 session_id: "1381580"
 title: "The first Grounded Decision Model"
 phase: live
-last_checked: 2026-11-12T14:54:06-08:00
-render: 20261112-145406-03378c
+last_checked: 2026-11-12T18:52:58-08:00
+render: 20261113-025258-ddff00
 ---
 
 # Links: The first Grounded Decision Model
@@ -26,7 +26,7 @@ site)
 
 - **Blog** · [Introducing the Parallel Decisions API](https://parallel.ai/blog/decisions-api)
   (Parallel). The launch post for the product the talk demos ("since we launched
-  2 weeks ago"): several typed questions about one entity in a single grounded call.
+  two weeks ago"): several typed questions about one entity in a single grounded call.
 - **Blog** · [Introducing PWS-Decisions: A benchmark for web-grounded decisions](https://parallel.ai/blog/pws-decisions-benchmark)
   (Parallel). The open 300-question benchmark and the grounded-versus-ungrounded
   accuracy gap.

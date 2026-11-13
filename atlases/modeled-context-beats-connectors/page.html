@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modeled context over connectors · Theme 05 of 06</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Theme Deep Dive 05 of 06</div>
+  <h1>Modeled context over connectors</h1>
+  <p class="dek">Wiring agents to dozens of live source connectors creates fragile chaos; reliable enterprise AI depends on unified permission-filtered indexes, warehouse data modeling, and actively pruned agent memory.</p>
+  <div class="talk-meta">13 talks · 26 claims · 2 counter-claims · Also called: MCP sprawl, agent schema, codebase as input, compaction, company context, context engineering, garbage dump, intent, memories, memory, reflection, reflections, source collisions, source of truth, trajectory, which source answers</div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/experience/iceberg.jpg" alt="Utkarsh Shrivastava's slide: Company context is the key—showing the AI tool as the tip of the iceberg above water, while Agent harness, Enterprise skills and MCPs, and Human in the loop sit below the surface.">
+        <figcaption>Utkarsh Shrivastava (Netflix) · slide from <a href="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/experience/page.html">Platform Challenges Beyond MCP</a></figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="../../talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/experience/agents-schema.jpg" alt="George Fraser's slide: AGENTS schema showing a compact metadata map from root to dbt_tables to dbt_columns and dbt_joins.">
+        <figcaption>George Fraser (Fivetran) · slide from <a href="../../talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/experience/page.html">Providing Context to AI</a></figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="../../talks/2026-11-11-how-to-build-agents-over-your-own-data/experience/one-search-layer.jpg" alt="Aamir Shakir's slide: One search layer for company knowledge—Slack, Gmail, Google Drive, GitHub, Linear, and Notion parsed, indexed, and kept in sync inside one search layer before reaching agents.">
+        <figcaption>Aamir Shakir (Mixedbread) · slide from <a href="../../talks/2026-11-11-how-to-build-agents-over-your-own-data/experience/page.html">Agents Over Your Own Data</a></figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v4">
+        <div class="lbl">Engineering artifacts as live context</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Four engineering context inputs beyond databases: pristine codebase patterns (Lauren Tan), captured intent (Ankit Jain), linted English-like spec files (Thariq Shihipar), and append-only trajectories (Fabian Hedin).">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="18" width="172" height="92" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="34" y="39" fill="var(--identity)" font-weight="600" font-size="10">CODEBASE AS INPUT</text>
+            <text x="34" y="60" fill="var(--ink)" font-weight="600">Lauren Tan (SpaceXSI)</text>
+            <text x="34" y="79" fill="var(--muted)" font-size="10">Agents imitate existing debt;</text>
+            <text x="34" y="95" fill="var(--muted)" font-size="10">keep patterns pristine</text>
+
+            <rect x="208" y="18" width="172" height="92" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="222" y="39" fill="var(--machine)" font-weight="600" font-size="10">CAPTURED INTENT</text>
+            <text x="222" y="60" fill="var(--ink)" font-weight="600">Ankit Jain (Aviator)</text>
+            <text x="222" y="79" fill="var(--muted)" font-size="10">Record why behind diffs</text>
+            <text x="222" y="95" fill="var(--muted)" font-size="10">from session traces</text>
+
+            <rect x="20" y="126" width="172" height="92" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="34" y="147" fill="var(--accent)" font-weight="600" font-size="10">LINTED SPEC LAYER</text>
+            <text x="34" y="168" fill="var(--ink)" font-weight="600">Thariq Shihipar</text>
+            <text x="34" y="187" fill="var(--muted)" font-size="10">English-like spec ground</text>
+            <text x="34" y="203" fill="var(--muted)" font-size="10">truth above agent engine</text>
+
+            <rect x="208" y="126" width="172" height="92" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="222" y="147" fill="var(--muted)" font-weight="600" font-size="10">APPEND-ONLY LOG</text>
+            <text x="222" y="168" fill="var(--ink)" font-weight="600">Fabian Hedin (Lovable)</text>
+            <text x="222" y="187" fill="var(--muted)" font-size="10">Forkable task log rendered</text>
+            <text x="222" y="203" fill="var(--muted)" font-size="10">cleanly per model</text>
+
+            <text x="200" y="238" text-anchor="middle" fill="var(--muted)" font-size="10">Context engineering governs code, intent, specs, and logs together</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from Tan, Jain, Shihipar, and Hedin</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v5">
+        <img src="../../talks/2026-11-12-exploring-claudes-frontier/experience/dreaming.jpg" alt="Lance Martin's slide: Dreaming loop taking searchable event-log transcripts and Claude's memory notes to synthesize computed memory representations like wikis and inject curated context into the next session.">
+        <figcaption>Lance Martin (Anthropic) · slide from <a href="../../talks/2026-11-12-exploring-claudes-frontier/experience/page.html">Exploring Claude’s frontier</a></figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v6">
+        <div class="lbl">Two unresolved fault lines</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Two contested boundaries: append-only memory logs vs. aggressive manual pruning (Steve Yegge), and single prepared indexes vs. granular scoped per-app access for action swarms (Karan Vaidya).">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="20" width="360" height="94" rx="8" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="34" y="42" fill="var(--machine)" font-weight="600" font-size="10">COUNTER 1 · MEMORY HYGIENE (STEVE YEGGE)</text>
+            <text x="34" y="65" fill="var(--ink)" font-weight="600">Append-only logs vs. Aggressive pruning</text>
+            <text x="34" y="85" fill="var(--muted)" font-size="10">Agents write notes as gospel and never delete — without</text>
+            <text x="34" y="101" fill="var(--muted)" font-size="10">deliberate slashing, memory turns into a garbage dump.</text>
+
+            <rect x="20" y="130" width="360" height="94" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="34" y="152" fill="var(--accent)" font-weight="600" font-size="10">COUNTER 2 · LIVE ACTIONS (KARAN VAIDYA / COMPOSIO)</text>
+            <text x="34" y="175" fill="var(--ink)" font-weight="600">Unified index vs. Scoped per-app swarm access</text>
+            <text x="34" y="195" fill="var(--muted)" font-size="10">Read queries belong on a pre-indexed warehouse, yet action</text>
+            <text x="34" y="211" fill="var(--muted)" font-size="10">swarms still need granular, firewalled access to each live app.</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from Yegge (00:10:42) and Vaidya (00:05:49)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v7">
+        <img src="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/tools-by-use-case.jpg" alt="Arsalan Bashir's slide: Agent calling consolidated use-case tools find_user() across CRM and Database and find_pending_tasks() across GitHub and Linear.">
+        <figcaption>Arsalan Bashir (Sentry) · slide from <a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Let the Agent Cook</a></figcaption>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="mcp-sprawl" data-visual="v1" data-caption="MCP made connecting data cheap, leaving source ownership unresolved">
+      <div class="chapter">Beyond plumbing</div>
+      <h2>MCP solved plumbing, not which source answers</h2>
+      <p>Rolling out an assistant for 10,000 people at Netflix taught Utkarsh Shrivastava that chat interfaces and models change quickly; the durable moat lives below the waterline in governed company context:</p>
+      <blockquote>“The company context is the key here.”<span class="who">Utkarsh Shrivastava · <a href="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/experience/page.html">Platform Challenges Beyond MCP</a> · 00:02:11</span></blockquote>
+      <p>When two live connectors answered the same live-event question with different numbers—one from analytics, one from transactional metrics—neither tool was buggy. Adding uncurated MCP servers simply multiplies ways an agent can pick an unauthoritative source:</p>
+      <blockquote>“You would be very disappointed, but the tool was never wrong.”<span class="who">Utkarsh Shrivastava · <a href="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/experience/page.html">Platform Challenges Beyond MCP</a> · 00:04:40</span></blockquote>
+      <blockquote>“Is another way for the agent to choose wrong.”<span class="who">Utkarsh Shrivastava · <a href="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/experience/page.html">Platform Challenges Beyond MCP</a> · 00:04:40</span></blockquote>
+      <blockquote>“The M C Ps have made it very cheap to make a lot of information accessible, but.”<span class="who">Utkarsh Shrivastava · <a href="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/experience/page.html">Platform Challenges Beyond MCP</a> · 00:06:49</span></blockquote>
+      <p class="watch">Evidence: <a href="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/transcript.md">Netflix transcript</a> 00:02:11, 00:04:40, 00:06:49</p>
+    </section>
+
+    <section data-chapter="modeled-warehouse" data-visual="v2" data-caption="Point agents at the modeled BI warehouse with a small AGENTS map schema">
+      <div class="chapter">The data stack</div>
+      <h2>Model the warehouse instead of wiring raw apps</h2>
+      <p>George Fraser points out that data teams already spent a decade solving inconsistent definitions for human analysts. Wiring an AI assistant directly to raw operational APIs fails immediately on multi-system questions:</p>
+      <blockquote>“And you can't even do joins across sources, right?”<span class="who">George Fraser · <a href="../../talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/experience/page.html">The new job of the data team</a> · 00:07:04</span></blockquote>
+      <p>The high-leverage move is pointing agents at the modeled warehouse tables—and adding a compact <code>AGENTS</code> metadata schema acting as a database map of tables, columns, and safe joins:</p>
+      <blockquote>“They are using as a source of truth for AI agents for questions about data.”<span class="who">George Fraser · <a href="../../talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/experience/page.html">The new job of the data team</a> · 00:03:18</span></blockquote>
+      <blockquote>“You're presenting a simplified view of what is probably some very messy and complicated data.”<span class="who">George Fraser · <a href="../../talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/experience/page.html">The new job of the data team</a> · 00:05:23</span></blockquote>
+      <blockquote>“Local tables in a special schema, a map of the rest of the database that acts as a guide.”<span class="who">George Fraser · <a href="../../talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/experience/page.html">The new job of the data team</a> · 00:11:18</span></blockquote>
+      <p class="watch">Evidence: <a href="../../talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/transcript.md">Fivetran transcript</a> 00:03:18, 00:05:23, 00:07:04, 00:11:18</p>
+    </section>
+
+    <section data-chapter="one-search-index" data-visual="v3" data-caption="One pre-computed ACL-tagged index jumped bank accuracy from ~40% to 97%">
+      <div class="chapter">Unified retrieval</div>
+      <h2>One permission-filtered index jumped 40% to 97%</h2>
+      <p>For unstructured knowledge across Slack, Jira, Drive, and GitHub, Aamir Shakir shows why one-MCP-per-tool breaks down: the agent wastes turns guessing where documents live, and hits the slowest or most rate-limited API in the chain:</p>
+      <blockquote>“Like getting the right data and access to data is actually the bottleneck, and not intelligence.”<span class="who">Aamir Shakir · <a href="../../talks/2026-11-11-how-to-build-agents-over-your-own-data/experience/page.html">How to build agents over your own data</a> · 00:03:12</span></blockquote>
+      <blockquote>“And then your agent has the task to guess, basically, what might be the right tool containing this information.”<span class="who">Aamir Shakir · <a href="../../talks/2026-11-11-how-to-build-agents-over-your-own-data/experience/page.html">How to build agents over your own data</a> · 00:02:08</span></blockquote>
+      <blockquote>“We always say you are only as good as your data, but in this case, you're only as good as your weakest connector.”<span class="who">Aamir Shakir · <a href="../../talks/2026-11-11-how-to-build-agents-over-your-own-data/experience/page.html">How to build agents over your own data</a> · 00:04:07</span></blockquote>
+      <p>Preparing one unified search layer upfront—with document ACLs attached at ingest—transformed a banking assistant’s accuracy from ~40% to 97%, echoed by Parallel’s requirement to return source citations on every grounded lookup:</p>
+      <blockquote>“The answer accuracy jumped from very forty percent to ninety-seven percent”<span class="who">Aamir Shakir · <a href="../../talks/2026-11-11-how-to-build-agents-over-your-own-data/experience/page.html">How to build agents over your own data</a> · 00:14:19</span></blockquote>
+      <blockquote>“Not only do we give you the answer, we also give you the citation, so you can go fact check the source yourself.”<span class="who">Devin Gupta · <a href="../../talks/2026-11-12-the-first-grounded-decision-model/experience/page.html">The first Grounded Decision Model</a> · 00:05:45</span></blockquote>
+      <p class="watch">Evidence: <a href="../../talks/2026-11-11-how-to-build-agents-over-your-own-data/transcript.md">Mixedbread transcript</a> 00:02:08, 00:03:12, 00:04:07, 00:14:19</p>
+    </section>
+
+    <section data-chapter="codebase-and-specs" data-visual="v4" data-caption="Codebases, captured intent, English-like spec layers, and trajectories are all context">
+      <div class="chapter">Software artifacts</div>
+      <h2>Code, intent, specs, and trajectories are context</h2>
+      <p>Context engineering governs software repositories as tightly as data warehouses. Lauren Tan warns that coding agents treat the existing repo as their primary prompt—replicating messy hacks unless teams keep patterns clean:</p>
+      <blockquote>“It's now likely to be just copied by the next agent, since it looks like the established pattern in the codebase.”<span class="who">Lauren Tan · <a href="../../talks/2026-11-11-all-code-is-slop-except-mine/experience/page.html">All Code Is Slop (Except Mine)</a> · 00:04:26</span></blockquote>
+      <p>Three builders model the surrounding decision layer explicitly: Ankit Jain captures why a change happened directly from agent sessions; Thariq Shihipar maintains a linted, English-like spec layer above the agent-written engine; and Fabian Hedin stores task execution in an append-only, Git-like trajectory:</p>
+      <blockquote>“Intent is why are we making whatever change.”<span class="who">Ankit Jain · <a href="../../talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/experience/page.html">One team's path to trusting AI generated code</a> · 00:08:38</span></blockquote>
+      <blockquote>“It's supposed to feel like English. It's kind of like a spec, and I'll show you what it looks like. But it's at the density where, if I just read this code, I know what's happening, and I can edit it. I can tweak it. But more importantly, I just like you know can have a bit of a ground truth of like what the what my game looks like.”<span class="who">Thariq Shihipar · <a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">Thariq Shihipar, Independent</a> · 00:13:27</span></blockquote>
+      <blockquote>“So unlike it, we cannot merge agent trajectories”<span class="who">Fabian Hedin · <a href="../../talks/2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">What it takes to set intelligence free</a> · 00:06:56</span></blockquote>
+      <p class="watch">Evidence: <a href="../../talks/2026-11-11-all-code-is-slop-except-mine/transcript.md">SpaceXSI</a> · <a href="../../talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/transcript.md">Aviator</a> · <a href="../../talks/2026-11-12-thariq-shihipar-independent/transcript.md">Shihipar</a> · <a href="../../talks/2026-11-11-what-it-takes-to-set-intelligence-free/transcript.md">Lovable</a></p>
+    </section>
+
+    <section data-chapter="memory-dreaming-and-reflections" data-visual="v5" data-caption="Consolidate raw session notes via reflections, scored memories, and dreaming">
+      <div class="chapter">Curating memory</div>
+      <h2>Reflections, scoring, and dreaming into wikis</h2>
+      <p>Unattended agents that append notes forever degrade into noisy prompts. Vertical AI builder Mihail Eric promotes customer context via structured <em>reflections</em>, while Overcut scores retrospective memories so low-value traces never re-enter context:</p>
+      <blockquote>“This is where we developed a concept called reflections”<span class="who">Mihail Eric · <a href="../../talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/experience/page.html">Learnings from Monaco</a> · 00:10:23</span></blockquote>
+      <blockquote>“We are scoring them, so the next run we run only on top of the memories that have the highest score.”<span class="who">Raz Berman Gold · <a href="../../talks/2026-11-11-the-software-factory-that-needs-zero-fdes/experience/page.html">The Software Factory That Needs Zero FDEs</a> · 00:07:30</span></blockquote>
+      <p>Lance Martin formalizes this at frontier scale: stronger models know when to read and write memory natively, yet greedy in-session notes still conflict globally—requiring an offline <em>dreaming</em> pass that compiles transcripts into structured wikis (outperforming semantic search alone on the Stainless corpus):</p>
+      <blockquote>“This is a fundamental paradox of agent memory because agents write memory typically as they go about a task.”<span class="who">Lance Martin · <a href="../../talks/2026-11-12-exploring-claudes-frontier/experience/page.html">Exploring Claude’s frontier</a> · 00:07:06</span></blockquote>
+      <blockquote>“They know intrinsically when to write to memory, and they kind of know intrinsically when to read from memory to retrieve information.”<span class="who">Lance Martin · <a href="../../talks/2026-11-12-exploring-claudes-frontier/experience/page.html">Exploring Claude’s frontier</a> · 00:08:54</span></blockquote>
+      <blockquote>“Dreaming lets you reflect over transcripts and these written notes, and re-represent them.”<span class="who">Lance Martin · <a href="../../talks/2026-11-12-exploring-claudes-frontier/experience/page.html">Exploring Claude’s frontier</a> · 00:12:13</span></blockquote>
+      <blockquote>“The wiki gets better and better and better, allowing Claude answers questions.”<span class="who">Lance Martin · <a href="../../talks/2026-11-12-exploring-claudes-frontier/experience/page.html">Exploring Claude’s frontier</a> · 00:15:15</span></blockquote>
+      <p class="watch">Evidence: <a href="../../talks/2026-11-12-exploring-claudes-frontier/transcript.md">Anthropic transcript</a> 00:07:06, 00:08:54, 00:12:13, 00:15:15</p>
+    </section>
+
+    <section data-chapter="counter-arguments" data-visual="v6" data-caption="Two sharp counters: slash bloated memory by hand, and scope live app access for actions">
+      <div class="chapter">Counter-claims</div>
+      <h2>Two fault lines: prune memory, scope live apps</h2>
+      <p>While teams agree modeled context beats raw connector sprawl, two counter-claims define the operational limits of passive logs and unified read indexes:</p>
+      <div class="counter-box"><b>Counter-claim 1 — Append-only memory turns into a garbage dump:</b> Steve Yegge argues that because agents never delete and obey stale notes like gospel, passive accumulation poisons sessions unless engineers actively prune it.</div>
+      <blockquote>“So you just gotta go in there and just aggressively slash the crap out of it.”<span class="who">Steve Yegge · <a href="../../talks/2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Escape from Trash Mountain</a> · 00:10:42</span></blockquote>
+      <div class="counter-box"><b>Counter-claim 2 — Knowledge-work swarms still need live app access:</b> Karan Vaidya (Composio) notes that when agents execute workflows across CRM, billing, and ticketing rather than merely querying data, they need broad yet granularly scoped access to each app behind an input/action firewall.</div>
+      <blockquote>“So to be able to do that correctly, you need to give right amount of access to all of these agents.”<span class="who">Karan Vaidya · <a href="../../talks/2026-11-10-from-coding-agents-to-knowledge-work-agents/experience/page.html">Run a Company on Agent Swarms</a> · 00:05:49</span></blockquote>
+      <p class="watch">Evidence: <a href="../../talks/2026-11-11-software-factories-escape-from-trash-mountain/transcript.md">Yegge</a> 00:10:42 · <a href="../../talks/2026-11-10-from-coding-agents-to-knowledge-work-agents/transcript.md">Composio</a> 00:05:49</p>
+    </section>
+
+    <section data-chapter="for-the-focus" data-visual="v7" data-caption="Consolidate APIs into use-case tools, model data first, and prune memory">
+      <div class="chapter">Playbook</div>
+      <h2>Organize tools by use case—then curate context</h2>
+      <p>Arsalan Bashir (Sentry) bridges read modeling and live API execution: stop handing agents 1:1 raw REST endpoints where they confuse similar tools and loop on pagination. Wrap cross-source ID resolution and deterministic joins inside clean use-case tools:</p>
+      <blockquote>“The agent starts picking the wrong tools sometimes.”<span class="who">Arsalan Bashir · <a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Let the Agent Cook</a> · 00:01:32</span></blockquote>
+      <blockquote>“You know, organize tools by a clear use case.”<span class="who">Arsalan Bashir · <a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Let the Agent Cook</a> · 00:03:01</span></blockquote>
+      <ul class="key-points">
+        <li><strong>Separate reads from writes:</strong> route analytical and knowledge queries to one modeled warehouse or ACL-filtered search index; keep scoped per-app tokens solely for governed write actions (<code>00:03:18</code>, <code>00:14:19</code>, <code>00:05:49</code>).</li>
+        <li><strong>Push joins and pagination into code:</strong> consolidate endpoint sprawl into outcome-oriented tools (<code>00:03:01</code>).</li>
+        <li><strong>Consolidate and slash memory:</strong> combine offline dreaming/scoring passes with deliberate pruning so stale notes never harden into dogma (<code>00:07:30</code>, <code>00:12:13</code>, <code>00:10:42</code>).</li>
+      </ul>
+      <div class="reading"><b>For TheFocus.AI:</b> When a client asks to “connect an agent to all our tools,” flip the order. First unify truth in their warehouse or one permission-aware index, second wrap multi-step endpoints into deterministic use-case tools, and third install a scored, pruned memory loop—never raw MCP sprawl.</div>
+      <p class="watch"><a href="../conference-themes/page.html">← Back to Conference Themes Overview</a></p>
+    </section>
+
+  </main>
+</div>
+
+<section class="theme-talks-dir" id="talks-in-theme">
+  <div class="dir-head">
+    <h2>Talks in this theme</h2>
+    <span class="lbl">13 core talks + 1 counter-claim talk · 26 claims</span>
+  </div>
+  <div class="theme-talks-grid">
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Utkarsh Shrivastava</span><span>Netflix</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/experience/page.html">Building a Shared AI Assistant: The Platform Challenges Beyond MCP</a></h3>
+        <p class="tt-thesis">Connecting company data to a shared AI assistant is now cheap; the platform's real job is deciding which source answers, who owns that answer, and how hard to gate by stakes, with evals in CI and company context as the lasting investment.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Mihail Eric</span><span>Monaco</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/experience/page.html">Building World-class Agentic GTM: Learnings from Monaco for Monaco</a></h3>
+        <p class="tt-thesis">A vertical AI company is a shared harness (data, an agent workspace with memory, expert-guided workflows and evaluation) plus domain nuance, and it wins by putting its best domain experts inside the product and tracing everything, because correctness is whatever those experts say it is.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Ankit Jain</span><span>Aviator</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/experience/page.html">One team's path to trusting AI generated code</a></h3>
+        <p class="tt-thesis">Once AI writes most of the code, a team should stop reviewing diffs and instead capture intent, decisions and evidence, owning the rules that verify the code rather than the code itself.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>George Fraser</span><span>Fivetran</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/experience/page.html">The new job of the data team is providing context to AI</a></h3>
+        <p class="tt-thesis">The data stack built for business intelligence is now the context layer for AI, so data teams should connect agents to modeled warehouse data rather than wiring them to every source system.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Lauren Tan</span><span>SpaceXSI (xAI)</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-11-all-code-is-slop-except-mine/experience/page.html">All Code Is Slop (Except Mine)</a></h3>
+        <p class="tt-thesis">Agent-written code can improve in quality at hundreds of PRs a day only if every correction is encoded into the codebase as a deterministic check and review shifts to verification artifacts; automating a sloppy loop just produces more slop.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-11-all-code-is-slop-except-mine/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-11-all-code-is-slop-except-mine.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Aamir Shakir</span><span>Mixedbread</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-11-how-to-build-agents-over-your-own-data/experience/page.html">How to build agents over your own data</a></h3>
+        <p class="tt-thesis">Agents over company data should search one index prepared ahead of time, with access rules attached, not query every source live through one connector per tool, because the bottleneck is context, not intelligence.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-11-how-to-build-agents-over-your-own-data/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-11-how-to-build-agents-over-your-own-data.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item is-counter">
+      <div>
+        <div class="tt-meta"><span>Steve Yegge · Core + Counter</span><span>Independent</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Software Factories: Escape from Trash Mountain</a></h3>
+        <p class="tt-thesis">A year of software factories shows fuel is the hard limit and currently subsidized, agents behave like staff who need managing and pruning, and the more agents you run the more humans you need, so spend the fuel on experiences.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-11-software-factories-escape-from-trash-mountain.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Raz Berman Gold</span><span>Overcut</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-11-the-software-factory-that-needs-zero-fdes/experience/page.html">The Software Factory That Needs Zero FDEs</a></h3>
+        <p class="tt-thesis">Overcut argues that an enterprise software factory should not need forward-deployed engineers: it plugs into the tools and agents you already run, composes specialized governed agents into SDLC workflows with human gates, and improves itself through scored retrospective memories.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-11-the-software-factory-that-needs-zero-fdes/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-11-the-software-factory-that-needs-zero-fdes.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Fabian Hedin</span><span>Lovable</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">What it takes to set intelligence free</a></h3>
+        <p class="tt-thesis">Because Lovable's output is a business, not code, letting an agent work for ten hours needed a runtime that survives deploys, computers that start and fork in milliseconds, and two verification loops, the outer one fed by business metrics Lovable owns.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-11-what-it-takes-to-set-intelligence-free.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Lance Martin</span><span>Anthropic</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-12-exploring-claudes-frontier/experience/page.html">Exploring Claude’s frontier</a></h3>
+        <p class="tt-thesis">Claude's frontier is self-organisation: a thousand Fable 5.2 agents given only git and a SQL database built their own coordination to formalise Fermat's Last Theorem, and stronger models write, read and, through dreaming, consolidate memory into better representations.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-12-exploring-claudes-frontier/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-12-exploring-claudes-frontier.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Arsalan Bashir</span><span>Sentry</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Let the Agent Cook: From APIs to Answers</a></h3>
+        <p class="tt-thesis">To build agents that investigate data on their own, consolidate tools by use case and push deterministic complexity into them, stop pre-chewing context the model can now handle itself, and always give the agent a cheap way to check its own work.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-12-let-the-agent-cook-from-apis-to-answers.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Thariq Shihipar</span><span>Independent</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">Thariq Shihipar, Independent</a></h3>
+        <p class="tt-thesis">Rather than acting as an alien intelligence that forces developers into a single narrow interface like Bash or React, improving models form a broad 'smooth interior' of capabilities that enables a software Renaissance—provided builders pair agentic engines with human-readable specs to stay in creative control.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-12-thariq-shihipar-independent.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Devin Gupta</span><span>Parallel</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-12-the-first-grounded-decision-model/experience/page.html">The first Grounded Decision Model</a></h3>
+        <p class="tt-thesis">Grounding decision models with live web search from a large proprietary index solves uncalibrated overconfidence in ungrounded LLMs, delivering higher accuracy, verifiable citations, sub-second latency, and one-dollar-per-thousand-request pricing.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-12-the-first-grounded-decision-model/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-12-the-first-grounded-decision-model.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item is-counter">
+      <div>
+        <div class="tt-meta"><span>Karan Vaidya · Counter-claim</span><span>Composio</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-10-from-coding-agents-to-knowledge-work-agents/experience/page.html">What It Takes to Run a Company on Agent Swarms</a></h3>
+        <p class="tt-thesis">Running agent swarms across a company means giving each one scoped access to every app it needs and a firewall on what goes in and what it does, because attackers already use agents.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-10-from-coding-agents-to-knowledge-work-agents/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-10-from-coding-agents-to-knowledge-work-agents.html">Talk hub</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer class="talk-foot">
+  Built from <a href="story.md">the theme story</a>, synthesizing 13 core talks, 26 claims, and 2 counter-claims across the AI Engineer Code Summit corpus (verbatim Qwen3-ASR quotes, keeping ASR garbles intact and prompt-bias tokens excluded).
+</footer>
+
+<script src="../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

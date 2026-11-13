@@ -22,6 +22,28 @@
         "status": "found"
       }
     ],
+    "1325061": [
+      {
+        "name": "Dexter Horthy",
+        "role": "CEO and co-founder (HumanLayer, now part of Factory)",
+        "affiliation": "HumanLayer",
+        "links": {
+          "site": "https://theouterloop.substack.com/",
+          "linkedin": null,
+          "x": "https://x.com/dexhorthy",
+          "github": null,
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation HumanLayer; bio \"Dex is CEO and co-founder at HumanLayer\"",
+          "transcript: \"up until about a week ago, I was the CEO and co-founder at a company called HumanLayer.\"",
+          "transcript: \"We are now a part of Factory\"",
+          "page title: \"The Outer Loop | Dex Horthy | Substack\"",
+          "page title: \"dex (@dexhorthy) / X\""
+        ],
+        "status": "found"
+      }
+    ],
     "1333169": [
       {
         "name": "Ankit Jain",
@@ -341,6 +363,26 @@
         "status": "found"
       }
     ],
+    "1373474": [
+      {
+        "name": "Melvin Johnson",
+        "role": "VP of Research, Gemini Post-Training",
+        "affiliation": "Google DeepMind",
+        "links": {
+          "site": null,
+          "linkedin": null,
+          "x": "https://x.com/melvinjohnsonp",
+          "github": null,
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Google DeepMind; bio \"Melvin Johnson is a Vice President of Research at Google DeepMind, where he leads Gemini Post-Training\"",
+          "transcript: \"So today I thought I'll take you through a little journey of how we post trained Gemini 4.\"",
+          "page title: \"Melvin Johnson (@melvinjohnsonp) / X\""
+        ],
+        "status": "found"
+      }
+    ],
     "1373475": [
       {
         "name": "Walden Yan",
@@ -379,10 +421,76 @@
         "evidence": [
           "roster: affiliation Anthropic; bio \"Jarred Sumner created Bun, the open-source JavaScript and TypeScript toolkit that combines a runtime, bundler, package manager, and test runner.\"",
           "program title: \"Jarred Sumner, Founder of Bun, Anthropic / Bun\"",
-          "transcript: \"Over the summer, I rewrote Bun and Ross.\"",
+          "transcript: \"Because the Bun team, us, rewrote Bun and Rust.\"",
           "page title: \"Jarred-Sumner (Jarred Sumner) · GitHub\"",
           "page title: \"Jarred Sumner (@jarredsumner) / X\"",
           "page title: \"Jarred Sumner\""
+        ],
+        "status": "found"
+      }
+    ],
+    "1373480": [
+      {
+        "name": "Justin McCarthy",
+        "role": "Founder and CEO",
+        "affiliation": "Diffusion",
+        "links": {
+          "site": null,
+          "linkedin": null,
+          "x": "https://x.com/BuiltByJustin",
+          "github": "https://github.com/jmccarthy",
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Diffusion; bio \"Justin McCarthy is the founder and CEO of Diffusion.\"",
+          "transcript: \"my name is Justin McCarthy. I'm the founder and CEO at.\"",
+          "page title: \"jmccarthy (Justin McCarthy) · GitHub\"",
+          "page title: \"Justin McCarthy (@BuiltByJustin) / X\""
+        ],
+        "status": "found"
+      }
+    ],
+    "1373481": [
+      {
+        "name": "Quinn Slack",
+        "role": "Co-founder and CEO",
+        "affiliation": "Amp",
+        "links": {
+          "site": "https://slack.org/",
+          "linkedin": null,
+          "x": "https://x.com/sqs",
+          "github": "https://github.com/sqs",
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Amp; bio \"Quinn Slack is the co-founder and chief executive of Amp, the coding-agent company\"",
+          "transcript: \"my name is Quinn Slack. I am one of the founders of Amp. An invented sourcecraft before.\"",
+          "page title: \"Quinn Slack\"",
+          "page title: \"Quinn Slack (@sqs) / X\"",
+          "page title: \"sqs (Quinn Slack) · GitHub\""
+        ],
+        "status": "found"
+      }
+    ],
+    "1373482": [
+      {
+        "name": "Thariq Shihipar",
+        "role": "Independent engineer (formerly Claude Code, Anthropic)",
+        "affiliation": "Independent",
+        "links": {
+          "site": "https://www.thariq.io/",
+          "linkedin": null,
+          "x": "https://x.com/trq212",
+          "github": "https://github.com/thariqs",
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Independent; bio \"Thariq Shihipar is an independent engineer who worked on Claude Code at Anthropic.\"",
+          "transcript: \"please welcome independent engineer and former Anthropic team member.\"",
+          "transcript: \"I wanted to talk to you about a couple things I've been thinking about since I left Anthropic.\"",
+          "page title: \"Home • Thariq Shihipar\"",
+          "page title: \"Thariq (@trq212) / X\"",
+          "page title: \"ThariqS (Thariq Shihipar) · GitHub\""
         ],
         "status": "found"
       }
@@ -405,6 +513,26 @@
           "page title: \"Simon Willison’s Weblog\"",
           "page title: \"Simon Willison (@simonw) / X\"",
           "page title: \"simonw (Simon Willison) · GitHub\""
+        ],
+        "status": "found"
+      }
+    ],
+    "1376195": [
+      {
+        "name": "Ishaan Dey",
+        "role": "Design and engineering, Antigravity",
+        "affiliation": "Google DeepMind",
+        "links": {
+          "site": null,
+          "linkedin": null,
+          "x": "https://x.com/ishaandey_",
+          "github": null,
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation Google DeepMind; bio \"Ishaan works on design and engineering for Antigravity at Google Deepmind.\"",
+          "transcript: \"I've gone from the scale of working at startups to now at Google DeepMind\"",
+          "page title: \"ishaan dey (@ishaandey_) / X\""
         ],
         "status": "found"
       }
@@ -534,6 +662,25 @@
         "status": "found"
       }
     ],
+    "1380098": [
+      {
+        "name": "swyx",
+        "role": "Co-founder and CEO, AI Engineer",
+        "affiliation": "AI Engineer",
+        "links": {
+          "site": null,
+          "linkedin": null,
+          "x": "https://x.com/swyx",
+          "github": null,
+          "scholar": null
+        },
+        "evidence": [
+          "roster: affiliation AI Engineer; bio \"swyx, also known as Shawn Wang, is the co-founder and chief executive of AI Engineer\"",
+          "page title: \"swyx @aiDotEngineer CODE (@swyx) / X\""
+        ],
+        "status": "found"
+      }
+    ],
     "1381580": [
       {
         "name": "Devin Gupta",
@@ -548,7 +695,7 @@
         },
         "evidence": [
           "roster: affiliation Parallel; bio \"Devin Gupta is a core engineer at Parallel Web Systems, focusing on building out the next generation of web infrastructure for LLMs. In particular, he works on post-training search models and leading the Parallel Decisions API.\"",
-          "transcript: \"If you use apparel decision API, which asks the same question\"",
+          "transcript: \"If you use a parallel decision API, which asks the same question\"",
           "page title: \"Devin Gupta\"",
           "page title: \"Devin Gupta (@devingupta_) / X\""
         ],
@@ -565,6 +712,26 @@
         "evidence": [
           "page title: \"Docs - Gemini API | Google AI Studio\"",
           "transcript: \"Happy to share that we launched the Gemini Decisions API.\""
+        ]
+      }
+    ],
+    "1325061": [
+      {
+        "name": "HumanLayer",
+        "url": "https://www.humanlayer.dev/",
+        "what": "A multiplayer coding agent IDE and cloud that brings agent sessions, plan artifacts, and code diffs together in one place for your team to collaborate and ship.",
+        "evidence": [
+          "page title: \"HumanLayer - The multiplayer control plane for your software factory\"",
+          "transcript: \"The multiplayer coding agent workspace\""
+        ]
+      },
+      {
+        "name": "Factory",
+        "url": "https://factory.ai/",
+        "what": "Build faster with AI coding agents. Factory Droids automate coding, testing, and deployment for startups and enterprises.",
+        "evidence": [
+          "page title: \"Factory | Agent-Native Software Development\"",
+          "transcript: \"One of the reasons I'm really excited to be working with Factory\""
         ]
       }
     ],
@@ -722,6 +889,17 @@
       }
     ],
     "1373471": [],
+    "1373474": [
+      {
+        "name": "Google DeepMind (Gemini)",
+        "url": "https://deepmind.google/models/gemini/",
+        "what": "Our next era of frontier intelligence, built to solve your hardest problems.",
+        "evidence": [
+          "page title: \"Gemini — Google DeepMind\"",
+          "transcript: \"we have launched Gemini for Argon\""
+        ]
+      }
+    ],
     "1373475": [
       {
         "name": "Cognition (Devin)",
@@ -740,11 +918,45 @@
         "what": "Bundle, install, and run JavaScript & TypeScript — all in Bun. Bun is a fast JavaScript runtime & toolkit with a bundler, test runner, and npm-compatible package manager built in.",
         "evidence": [
           "page title: \"Bun — A fast all-in-one JavaScript runtime\"",
-          "transcript: \"Because the bun team, us, ultimately wrote Bun and Rust.\""
+          "transcript: \"we can modify either WebKit or Bun\""
         ]
       }
     ],
+    "1373480": [
+      {
+        "name": "Diffusion",
+        "url": "https://www.diffusion.io/",
+        "what": "We build software factories with teams like yours.",
+        "evidence": [
+          "page title: \"Software Factories for Enterprise AI Transformation — Diffusion\"",
+          "transcript: \"we are diffusing the capabilities of the model into the global economy\""
+        ]
+      }
+    ],
+    "1373481": [
+      {
+        "name": "Amp",
+        "url": "https://ampcode.com/",
+        "what": "Coding agent and dev environment built for the frontier.",
+        "evidence": [
+          "page title: \"Amp: Coding agent and dev environment built for the frontier\"",
+          "transcript: \"So I want to talk about the ways in which we built Amp, which is our agent product.\""
+        ]
+      }
+    ],
+    "1373482": [],
     "1376191": [],
+    "1376195": [
+      {
+        "name": "Google DeepMind (Antigravity)",
+        "url": "https://antigravity.google/",
+        "what": "Experience liftoff with the next-gen agent platform",
+        "evidence": [
+          "page title: \"Google Antigravity\"",
+          "transcript: \"Edge grabbing is a tool to get work done with agents\""
+        ]
+      }
+    ],
     "1376197": [
       {
         "name": "ZoomInfo",
@@ -811,6 +1023,17 @@
         ]
       }
     ],
+    "1380098": [
+      {
+        "name": "AI Engineer",
+        "url": "https://www.ai.engineer/",
+        "what": "AI Engineer is the community and conference series for software engineers building with AI.",
+        "evidence": [
+          "page title: \"AI Engineer\"",
+          "program abstract: \"To close Code Summit 2026, swyx invites everyone to celebrate together\""
+        ]
+      }
+    ],
     "1381580": [
       {
         "name": "Parallel Web Systems (Decisions API)",
@@ -818,7 +1041,7 @@
         "what": "A decision engine with world knowledge built in. Typed answers grounded in live web data, with citations, in under a second. $1 per 1,000 requests.",
         "evidence": [
           "page title: \"Decisions API - Fast Classification Grounded in Live Web Data | Parallel\"",
-          "transcript: \"If you use apparel decision API\""
+          "transcript: \"we get information from our proprietary index\""
         ]
       }
     ]
@@ -889,6 +1112,86 @@
         "first_seen": "20261111-191748-d7910b",
         "published_at": null,
         "verified_at": "2026-11-12T13:24:21-08:00"
+      }
+    ],
+    "1325061": [
+      {
+        "type": "blog",
+        "title": "No AI Slop: A Manifesto",
+        "url": "https://www.slopmanifesto.com/",
+        "why": "The anti-slop manifesto the talk announces, written with Code Summit speakers and attendees; he is among its signers.",
+        "evidence": [
+          "page title: \"No AI Slop: A Manifesto\"",
+          "transcript: \"So you can read and sign the manifesto at slotmanifesto.com.\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": null,
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "paper",
+        "title": "SlopCodeBench: Benchmarking How Coding Agents Degrade Over Long-Horizon Iterative Tasks",
+        "url": "https://arxiv.org/abs/2603.24755",
+        "why": "The UW-Madison benchmark the talk cites: models extend their own code across checkpoints, and quality erodes.",
+        "evidence": [
+          "page title: \"[2603.24755] SlopCodeBench: Benchmarking How Coding Agents Degrade Over Long-Horizon Iterative Tasks\"",
+          "transcript: \"There's a benchmark called Slope Code Bench\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-03",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "repo",
+        "title": "SprocketLab/slop-code-bench",
+        "url": "https://github.com/SprocketLab/slop-code-bench",
+        "why": "The benchmark's code and quality rules, to run it yourself.",
+        "evidence": [
+          "page title: \"GitHub - SprocketLab/slop-code-bench: SlopCodeBench: Measuring Code Erosion Under Iterative Specification Refinement · GitHub\"",
+          "transcript: \"this is a benchmark that measures a model's ability to.\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": null,
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "blog",
+        "title": "HumanLayer is joining Factory",
+        "url": "https://www.humanlayer.dev/blog/humanlayer-joins-factory",
+        "why": "The Nov 4 announcement behind 'we are now a part of factory'.",
+        "evidence": [
+          "page title: \"HumanLayer is joining Factory | HumanLayer Blog\"",
+          "transcript: \"We are now a part of Factory\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-11-04",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "blog",
+        "title": "show-me: a coding agent skill for compact visual representations",
+        "url": "https://www.humanlayer.dev/blog/show-me-skill",
+        "why": "The Show Me skill from 'align visually': HTML mockups, tables and diagrams instead of walls of text.",
+        "evidence": [
+          "page title: \"show-me: a coding agent skill for compact visual representations | HumanLayer Blog\"",
+          "transcript: \"I published a skill called Show Me\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-08-12",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "youtube",
+        "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 8:15:20)",
+        "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=29720s",
+        "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 8:15:20 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+        "evidence": [
+          "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\"",
+          "transcript: \"Please welcome Dexter Horthy, CEO and founder of HumanLayer.\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-11-12",
+        "verified_at": "2026-11-12T18:52:58-08:00"
       }
     ],
     "1333169": [
@@ -1617,6 +1920,72 @@
         "verified_at": "2026-11-12T13:24:21-08:00"
       }
     ],
+    "1373474": [
+      {
+        "type": "blog",
+        "title": "Introducing Gemini 4 Hydrogen for Agentic Workflows",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+        "why": "The launch the talk announces: the fast Gemini 4 model, out the same day on Antigravity, the Gemini API, the Gemini app and Search.",
+        "evidence": [
+          "page title: \"Introducing Gemini 4 Hydrogen for Agentic Workflows\"",
+          "transcript: \"It's hydrogen, so you know you might have seen the launch earlier today.\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-11-12",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "blog",
+        "title": "Gemini 4 Hydrogen: Fast agentic development for coders",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-hydrogen/",
+        "why": "The developer post for Hydrogen: coding, debugging and its thinking levels, for building with it.",
+        "evidence": [
+          "page title: \"Gemini 4 Hydrogen: Fast agentic development for coders\"",
+          "transcript: \"so you can build things with it\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-11-12",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "blog",
+        "title": "Introducing Gemini 4 Carbon",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "why": "The frontier model the talk's benchmark and cheating-rate figures are about.",
+        "evidence": [
+          "page title: \"Introducing Gemini 4 Carbon\"",
+          "transcript: \"Has zero percent cheating rate on terminal benchmark.\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-10-28",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "blog",
+        "title": "Gemini 4 Hydrogen and Orchestrator",
+        "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+        "why": "Hydrogen in Antigravity, the tool the talk says 100,000 Google engineers use daily, and the dogfooding loop behind weekly releases.",
+        "evidence": [
+          "page title: \"Gemini 4 Hydrogen and Orchestrator | Google Antigravity Blog\"",
+          "transcript: \"there are hundred thousand people using anti-gravity riding cord inside Google\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-11-12",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "youtube",
+        "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 7:35:20)",
+        "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=27320s",
+        "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 7:35:20 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+        "evidence": [
+          "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-11-12",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      }
+    ],
     "1373475": [
       {
         "type": "blog",
@@ -1679,11 +2048,11 @@
         "why": "The compiler the talk is about: `bun compile` turns a program into machine code at build time using its TypeScript types, with no JIT, so it starts faster and uses less memory. Marked experimental.",
         "evidence": [
           "page title: \"Ahead-of-time compilation | Bun Docs\"",
-          "transcript: \"To add an ahead of time compiler\""
+          "transcript: \"add an ahead-of-time compiler\""
         ],
         "first_seen": "20261112-145406-03378c",
         "published_at": null,
-        "verified_at": "2026-11-12T14:54:06-08:00"
+        "verified_at": "2026-11-12T18:52:58-08:00"
       },
       {
         "type": "blog",
@@ -1692,11 +2061,11 @@
         "why": "His July post on the summer's Zig-to-Rust port: the rewrite the talk compares this project to, which was safe because Bun's test suite is written in TypeScript, independent of the runtime's language.",
         "evidence": [
           "page title: \"Rewriting Bun in Rust | Bun Blog\"",
-          "transcript: \"because all the tests were written in typescript, we could run the tests on both the zinc version and the rest version\""
+          "transcript: \"because all the tests were written in TypeScript. We could run the test on both the Zyg version and the Rust version\""
         ],
         "first_seen": "20261112-145406-03378c",
         "published_at": "2026-07-08",
-        "verified_at": "2026-11-12T14:54:06-08:00"
+        "verified_at": "2026-11-12T18:52:58-08:00"
       },
       {
         "type": "blog",
@@ -1705,11 +2074,11 @@
         "why": "Why Bun is at Anthropic: it is the runtime behind Claude Code, which is what makes a faster, leaner Bun a Claude Code memory and startup win.",
         "evidence": [
           "page title: \"Bun is joining Anthropic | Bun Blog\"",
-          "transcript: \"we need to make Clyde code use a lot less memory\""
+          "transcript: \"we need to make cloud code use a lot less memory\""
         ],
         "first_seen": "20261112-145406-03378c",
         "published_at": "2025-12-02",
-        "verified_at": "2026-11-12T14:54:06-08:00"
+        "verified_at": "2026-11-12T18:52:58-08:00"
       },
       {
         "type": "repo",
@@ -1718,11 +2087,11 @@
         "why": "The JavaScript engine fuzzer (transcribed \"Puzzili\") Bun already ran and extended to test the compiler's type predictions.",
         "evidence": [
           "page title: \"GitHub - googleprojectzero/fuzzilli: A JavaScript Engine Fuzzer · GitHub\"",
-          "transcript: \"Puzzili is like a Javaister bending buzzer that VA uses.\""
+          "transcript: \"Fuseeley is like a JavaScript engine buzzer that EA uses.\""
         ],
         "first_seen": "20261112-145406-03378c",
         "published_at": null,
-        "verified_at": "2026-11-12T14:54:06-08:00"
+        "verified_at": "2026-11-12T18:52:58-08:00"
       },
       {
         "type": "repo",
@@ -1731,11 +2100,11 @@
         "why": "The official ECMAScript conformance suite, one of the tests that predate the project and so could be trusted against the agents' code.",
         "evidence": [
           "page title: \"GitHub - tc39/test262: Official ECMAScript Conformance Test Suite · GitHub\"",
-          "transcript: \"plus web test, plus test 262\""
+          "transcript: \"Plus WebKIS test plus test two six two\""
         ],
         "first_seen": "20261112-145406-03378c",
         "published_at": null,
-        "verified_at": "2026-11-12T14:54:06-08:00"
+        "verified_at": "2026-11-12T18:52:58-08:00"
       },
       {
         "type": "repo",
@@ -1744,11 +2113,120 @@
         "why": "The native Go port of TypeScript the talk benchmarks against: the AOT-compiled single-threaded TypeScript now beats the single-threaded Go port.",
         "evidence": [
           "page title: \"GitHub - microsoft/typescript-go: Staging repo for development of native port of TypeScript · GitHub\"",
-          "transcript: \"the abundant pile is now faster than the single threaded types of go port\""
+          "transcript: \"the Ubuntu file is now faster than the single-threaded TypeScript Go port\""
         ],
         "first_seen": "20261112-145406-03378c",
         "published_at": null,
-        "verified_at": "2026-11-12T14:54:06-08:00"
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      }
+    ],
+    "1373480": [
+      {
+        "type": "blog",
+        "title": "Brownfield rewrite resources",
+        "url": "https://diffusion.io/brownfield",
+        "why": "The talk's own companion page (the QR code 'for your agents'): tools, papers and case studies for verifying a rewrite: replay and comparison, generated inputs, testing the tests, specification and proof, simulated users, migration and cutover.",
+        "evidence": [
+          "page title: \"Brownfield rewrite resources — Diffusion\"",
+          "transcript: \"we do have some technical resources attached there on some ground field techniques\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": null,
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "blog",
+        "title": "Software Factories And The Agentic Moment",
+        "url": "https://factory.strongdm.ai/",
+        "why": "His February write-up of the StrongDM software factory, the 'first software factory' the talk starts from.",
+        "evidence": [
+          "page title: \"StrongDM Software Factory\"",
+          "transcript: \"So that was the story of the beginning of the software factory that I built together with.\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-02-06",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "youtube",
+        "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 6:34:10)",
+        "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=23650s",
+        "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 6:34:10 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+        "evidence": [
+          "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-11-12",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      }
+    ],
+    "1373481": [
+      {
+        "type": "blog",
+        "title": "Amp Frontier Corporation",
+        "url": "https://ampcode.com/news/amp-frontier-corporation",
+        "why": "The December 2025 post announcing the spin-out from Sourcegraph, signed by Amp's co-founders: the start of the story the talk tells.",
+        "evidence": [
+          "page title: \"Amp Frontier Corporation - Amp\"",
+          "transcript: \"We decided to spin out Amp.\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2025-12-02",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "product",
+        "title": "Writing A Compiler In Go",
+        "url": "https://compilerbook.com/",
+        "why": "The compiler book by Thorsten Ball, the teammate in the talk's Frankfurt-airport story.",
+        "evidence": [
+          "page title: \"Writing A Compiler In Go | Thorsten Ball\"",
+          "transcript: \"He wrote that compiler book.\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": null,
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "youtube",
+        "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 7:54:50)",
+        "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=28490s",
+        "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 7:54:50 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+        "evidence": [
+          "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\"",
+          "transcript: \"Ladies and gentlemen, please welcome Quinn Slack, co-founder and CEO of Amp.\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-11-12",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      }
+    ],
+    "1373482": [
+      {
+        "type": "podcast",
+        "title": "Claude Code's Next Era — Thariq Shihipar, Anthropic",
+        "url": "https://latent.space/p/thariq",
+        "why": "His Latent Space episode from just before he left Anthropic: AskUserQuestion, elicitation and HTML as agent output, the things the talk says he was right about.",
+        "evidence": [
+          "page title: \"Claude Code’s Next Era — Thariq Shihipar, Anthropic — Latent Space\"",
+          "transcript: \"I was right about models being able to use HTML to understand their work.\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-09-29",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "youtube",
+        "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 8:37:10)",
+        "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=31030s",
+        "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 8:37:10 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+        "evidence": [
+          "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\"",
+          "transcript: \"Ladies and gentlemen, please welcome independent engineer and former Anthropic team member\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-11-12",
+        "verified_at": "2026-11-12T18:52:58-08:00"
       }
     ],
     "1376191": [
@@ -1829,6 +2307,72 @@
         "first_seen": "20261111-211018-ef4694",
         "published_at": "2026-09-27",
         "verified_at": "2026-11-12T13:24:21-08:00"
+      }
+    ],
+    "1376195": [
+      {
+        "type": "blog",
+        "title": "Google Antigravity built an OS (and more)",
+        "url": "https://antigravity.google/blog/google-antigravity-built-an-os",
+        "why": "The Antigravity team's May post on the agent-built operating system the talk opens with.",
+        "evidence": [
+          "page title: \"Google Antigravity built an OS (and more) | Google Antigravity Blog\"",
+          "transcript: \"A sentence can turn into an operating system\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-05-19",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "blog",
+        "title": "Teamwork: when AI becomes a research partner",
+        "url": "https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner",
+        "why": "Teamwork, Antigravity's multi-agent framework where agents propose, critique and refine each other's work: lesson one's 'systems for teamwork'.",
+        "evidence": [
+          "page title: \"Teamwork: when AI becomes a research partner | Google Antigravity Blog\"",
+          "transcript: \"We created systems for teamwork for to do more ambitious work.\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-08-27",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "blog",
+        "title": "Gemini 4 Carbon and /swarm",
+        "url": "https://antigravity.google/blog/gemini-4-carbon-in-google-antigravity",
+        "why": "The /swarm preview, a coordinator agent running parallel workers: the 'agents' workers' the talk says you can try now in Antigravity.",
+        "evidence": [
+          "page title: \"Gemini 4 Carbon and /swarm | Google Antigravity Blog\"",
+          "transcript: \"You can actually try this now in anti gravity.\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-11-10",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "blog",
+        "title": "Plugin Marketplace in Antigravity",
+        "url": "https://antigravity.google/blog/plugin-marketplace-in-antigravity",
+        "why": "The extensibility system of lesson three: users build their own plug-ins, and the platform learns from them.",
+        "evidence": [
+          "page title: \"Plugin Marketplace in Antigravity | Google Antigravity Blog\"",
+          "transcript: \"In our products, there's a lot of room for extensibility.\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-10-29",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "youtube",
+        "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 6:08:30)",
+        "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=22110s",
+        "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 6:08:30 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+        "evidence": [
+          "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-11-12",
+        "verified_at": "2026-11-12T18:52:58-08:00"
       }
     ],
     "1376197": [
@@ -2156,6 +2700,34 @@
         "verified_at": "2026-11-12T13:24:21-08:00"
       }
     ],
+    "1380098": [
+      {
+        "type": "product",
+        "title": "AI Engineer India — Bangalore, Q1 2027",
+        "url": "https://www.ai.engineer/india",
+        "why": "The next partnership event the closing announces.",
+        "evidence": [
+          "page title: \"AI Engineer India — Bangalore, Q1 2027\"",
+          "transcript: \"we're just announcing India as well next year\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": null,
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      },
+      {
+        "type": "youtube",
+        "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 8:57:00)",
+        "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=32220s",
+        "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 8:57:00 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+        "evidence": [
+          "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\"",
+          "transcript: \"We're basically close to a hundred thousand people on the live stream\""
+        ],
+        "first_seen": "20261113-021047-a4c692",
+        "published_at": "2026-11-12",
+        "verified_at": "2026-11-12T18:52:58-08:00"
+      }
+    ],
     "1381580": [
       {
         "type": "blog",
@@ -2164,11 +2736,11 @@
         "why": "The launch post for the product the talk demos: several typed questions about one entity answered in a single call, grounded in live web data, at $1 per 1,000 calls.",
         "evidence": [
           "page title: \"Parallel Decisions API: web-grounded classification | Parallel\"",
-          "transcript: \"since we launched 2 weeks ago\""
+          "transcript: \"since we launched two weeks ago\""
         ],
         "first_seen": "20261112-145406-03378c",
         "published_at": null,
-        "verified_at": "2026-11-12T14:54:06-08:00"
+        "verified_at": "2026-11-12T18:52:58-08:00"
       },
       {
         "type": "blog",
@@ -2177,11 +2749,11 @@
         "why": "The open 300-question benchmark from the abstract, with the accuracy gap between grounded and ungrounded decision models the talk shows.",
         "evidence": [
           "page title: \"PWS-Decisions: a benchmark for web-grounded decisions | Parallel\"",
-          "transcript: \"there's huge accuracy differences\""
+          "transcript: \"huge accuracy differences and huge calibration differences\""
         ],
         "first_seen": "20261112-145406-03378c",
         "published_at": null,
-        "verified_at": "2026-11-12T14:54:06-08:00"
+        "verified_at": "2026-11-12T18:52:58-08:00"
       },
       {
         "type": "repo",
@@ -2194,7 +2766,7 @@
         ],
         "first_seen": "20261112-145406-03378c",
         "published_at": null,
-        "verified_at": "2026-11-12T14:54:06-08:00"
+        "verified_at": "2026-11-12T18:52:58-08:00"
       },
       {
         "type": "paper",
@@ -2207,7 +2779,7 @@
         ],
         "first_seen": "20261112-145406-03378c",
         "published_at": null,
-        "verified_at": "2026-11-12T14:54:06-08:00"
+        "verified_at": "2026-11-12T18:52:58-08:00"
       }
     ]
   },
@@ -2216,6 +2788,12 @@
       "phase": "live",
       "last_checked": "2026-11-12T13:24:21-08:00",
       "next_check": "2026-11-12T19:24:21-08:00",
+      "checks": 2
+    },
+    "1325061": {
+      "phase": "live",
+      "last_checked": "2026-11-12T18:52:58-08:00",
+      "next_check": "2026-11-13T00:52:58-08:00",
       "checks": 2
     },
     "1333169": {
@@ -2308,6 +2886,12 @@
       "next_check": "2026-11-12T19:24:21-08:00",
       "checks": 2
     },
+    "1373474": {
+      "phase": "live",
+      "last_checked": "2026-11-12T18:52:58-08:00",
+      "next_check": "2026-11-13T00:52:58-08:00",
+      "checks": 2
+    },
     "1373475": {
       "phase": "live",
       "last_checked": "2026-11-12T13:24:21-08:00",
@@ -2316,14 +2900,38 @@
     },
     "1373478": {
       "phase": "live",
-      "last_checked": "2026-11-12T14:54:06-08:00",
-      "next_check": "2026-11-12T20:54:06-08:00",
-      "checks": 1
+      "last_checked": "2026-11-12T18:52:58-08:00",
+      "next_check": "2026-11-13T00:52:58-08:00",
+      "checks": 2
+    },
+    "1373480": {
+      "phase": "live",
+      "last_checked": "2026-11-12T18:52:58-08:00",
+      "next_check": "2026-11-13T00:52:58-08:00",
+      "checks": 2
+    },
+    "1373481": {
+      "phase": "live",
+      "last_checked": "2026-11-12T18:52:58-08:00",
+      "next_check": "2026-11-13T00:52:58-08:00",
+      "checks": 2
+    },
+    "1373482": {
+      "phase": "live",
+      "last_checked": "2026-11-12T18:52:58-08:00",
+      "next_check": "2026-11-13T00:52:58-08:00",
+      "checks": 2
     },
     "1376191": {
       "phase": "live",
       "last_checked": "2026-11-12T13:24:21-08:00",
       "next_check": "2026-11-12T19:24:21-08:00",
+      "checks": 2
+    },
+    "1376195": {
+      "phase": "live",
+      "last_checked": "2026-11-12T18:52:58-08:00",
+      "next_check": "2026-11-13T00:52:58-08:00",
       "checks": 2
     },
     "1376197": {
@@ -2362,11 +2970,17 @@
       "next_check": "2026-11-12T19:24:21-08:00",
       "checks": 9
     },
+    "1380098": {
+      "phase": "live",
+      "last_checked": "2026-11-12T18:52:58-08:00",
+      "next_check": "2026-11-13T00:52:58-08:00",
+      "checks": 2
+    },
     "1381580": {
       "phase": "live",
-      "last_checked": "2026-11-12T14:54:06-08:00",
-      "next_check": "2026-11-12T20:54:06-08:00",
-      "checks": 1
+      "last_checked": "2026-11-12T18:52:58-08:00",
+      "next_check": "2026-11-13T00:52:58-08:00",
+      "checks": 2
     }
   },
   "coverage": {
@@ -2386,6 +3000,25 @@
         "no official recording or slides of this talk found yet"
       ],
       "generated_at": "2026-11-11T19:17:48-05:00"
+    },
+    "1325061": {
+      "searched": [
+        "roster links (theouterloop.substack.com, twitter.com/dexhorthy, linkedin.com/in/dexterihorthy)",
+        "web: anti-slop manifesto Dex Horthy SlopCodeBench",
+        "web: HumanLayer joins Factory Dex Horthy November 2026",
+        "web: Factory acquires HumanLayer factory.ai news",
+        "slopmanifesto.com and humanlayer.dev/blog read"
+      ],
+      "gaps": [
+        "linkedin.com/in/dexterihorthy (roster) answered 999 with no page title, so it could not be corroborated; not published",
+        "twitter.com/dexhorthy (roster) redirects to x.com/dexhorthy; the x.com URL is published",
+        "the manifesto page carries no publication date",
+        "no Factory-side announcement of the acquisition found on factory.ai/news; HumanLayer's own post is linked",
+        "the new SlopCodeBench paper 'released today' is not identified with certainty; the March arXiv paper is linked. The re-transcription names the anti-slop lint repo's author ('Dylan Mulroy, who's a principal engineer. Cloudflare anti-slop'); not searched, the dossier is at the six-resource limit",
+        "12-factor-agents (github.com/humanlayer/12-factor-agents) verified but left out as background to the title, bounded out",
+        "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+      ],
+      "generated_at": "2026-11-12T18:52:58-08:00"
     },
     "1333169": {
       "searched": [
@@ -2610,6 +3243,22 @@
       ],
       "generated_at": "2026-11-11T21:10:18-05:00"
     },
+    "1373474": {
+      "searched": [
+        "roster links (linkedin.com/in/melvinjosej, x.com/melvinjohnsonp)",
+        "web: Gemini 4 Hydrogen launch blog (twice)",
+        "web: Gemini 4 Carbon Google DeepMind model announcement",
+        "web: Melvin Johnson Gemini post-training VP DeepMind interview 2026"
+      ],
+      "gaps": [
+        "linkedin.com/in/melvinjosej (roster) answered 999 with no page title, so it could not be corroborated; not published",
+        "no write-up of the post-training methods (rubric graders, hardened grader sandboxes, fabrication filtering, blind battles) found; the launch posts are product announcements",
+        "the fabrication figures (8% to about 3% and 1.5%) and the 236-day / 28-day release gap have no public source found",
+        "the opening demo video is not transcribed",
+        "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+      ],
+      "generated_at": "2026-11-12T18:52:58-08:00"
+    },
     "1373475": {
       "searched": [
         "roster links (github.com/walnutwaldo, walnutwaldo.github.io, x.com/walden_yan)",
@@ -2644,7 +3293,55 @@
         "the recording opens mid-sentence; the MC's introduction is not captured",
         "no official recording or slides of this talk found yet"
       ],
-      "generated_at": "2026-11-12T14:54:06-08:00"
+      "generated_at": "2026-11-12T18:52:58-08:00"
+    },
+    "1373480": {
+      "searched": [
+        "roster links (github.com/jmccarthy, linkedin.com/in/justinmccarthy, x.com/builtbyjustin)",
+        "operator lead: diffusion.io/brownfield (read)",
+        "diffusion.io and factory.strongdm.ai read"
+      ],
+      "gaps": [
+        "linkedin.com/in/justinmccarthy (roster) answered 999 with no page title, so it could not be corroborated; not published",
+        "diffusion.io/brownfield calls itself the talk's companion but does not name him; it links his X account",
+        "the demand-factory and brand-envelope ideas have no write-up found",
+        "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+      ],
+      "generated_at": "2026-11-12T18:52:58-08:00"
+    },
+    "1373481": {
+      "searched": [
+        "roster links (github.com/sqs, slack.org, linkedin.com/in/quinnslack, x.com/sqs)",
+        "web: Amp spin out Sourcegraph Quinn Slack 21 cofounders",
+        "ampcode.com/news/amp-frontier-corporation read"
+      ],
+      "gaps": [
+        "linkedin.com/in/quinnslack (roster) answered 999 with no page title, so it could not be corroborated; not published",
+        "the spin-out post is signed by 20 co-founders and does not state a count; the talk and abstract say 21",
+        "the $100M+ ARR, one-meeting-a-week, bug-report apology loop and in-house CRM have no public write-up found",
+        "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+      ],
+      "generated_at": "2026-11-12T18:52:58-08:00"
+    },
+    "1373482": {
+      "searched": [
+        "roster links (github.com/thariqs, linkedin.com/in/thariqshihipar, thariq.io, x.com/trq212)",
+        "web: Thariq Shihipar \"Sweet Side of the Bitter Lesson\"",
+        "web: Thariq Shihipar leaves Anthropic game isometric spec human-readable",
+        "web: Thariq trq212 elemental fighting game vibe UI",
+        "thariq.io and latent.space/p/thariq read",
+        "web: Karpathy land or water latitude longitude map (re-transcription lead)"
+      ],
+      "gaps": [
+        "linkedin.com/in/thariqshihipar (roster) answered 999 with no page title, so it could not be corroborated; not published",
+        "the program carries no talk title; the operator's notes give 'The Sweet Side of the Bitter Lesson', and no page with that title was found",
+        "no company: he speaks as an independent engineer",
+        "thariq.io still describes him as working on Claude Code at Anthropic; the roster and the MC say he has left",
+        "the fighting game and its human-readable spec folder have no public write-up or repository found; his posts about it are on X and were not individually verified",
+        "the land-or-water world-map comparison of Opus models has no source found; the re-transcription attributes it ('I think Caparthy posted it', the Voice Memos transcript has 'apart the hosted it'), but one search found only the original method write-up ('How does a blind model see the earth'), not the Opus comparison or a Karpathy post; not linked",
+        "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+      ],
+      "generated_at": "2026-11-12T18:52:58-08:00"
     },
     "1376191": {
       "searched": [
@@ -2662,6 +3359,22 @@
         "no official recording or slides of this talk found yet"
       ],
       "generated_at": "2026-11-11T21:10:18-05:00"
+    },
+    "1376195": {
+      "searched": [
+        "roster links (x.com/ishaandey_)",
+        "web: Ishaan Dey Antigravity Google DeepMind",
+        "web: Ishaan Dey Antigravity design engineer site",
+        "antigravity.google/blog index read; four posts matched to the talk's examples"
+      ],
+      "gaps": [
+        "no personal site, GitHub or LinkedIn verifiably his (the roster lists only X)",
+        "the Antigravity blog posts carry no individual author; they are linked for the features the talk describes, not as his writing",
+        "the agent-manager redesign, the science team's plug-ins and the 'last 2 weeks' launch slide have no single public write-up found",
+        "the recording opens mid-sentence; the MC's introduction is not captured",
+        "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+      ],
+      "generated_at": "2026-11-12T18:52:58-08:00"
     },
     "1376197": {
       "searched": [
@@ -2763,6 +3476,20 @@
       ],
       "generated_at": "2026-11-10T14:19:25-05:00"
     },
+    "1380098": {
+      "searched": [
+        "roster links (x.com/swyx)",
+        "web: AI Engineer India 2027 announced swyx AIE Shanghai"
+      ],
+      "gaps": [
+        "the speaker never says his name; attribution rests on the program and roster",
+        "no public page for 'AI in Shanghai last week' found",
+        "the celebration video and the two team members' earlier talks are not identified",
+        "the after-party location is not stated",
+        "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+      ],
+      "generated_at": "2026-11-12T18:52:58-08:00"
+    },
     "1381580": {
       "searched": [
         "roster links (devin-gupta.github.io, linkedin.com/in/devin-gupta, x.com/devingupta_)",
@@ -2779,7 +3506,7 @@
         "the recording opens mid-sentence; the MC's introduction is not captured",
         "no official recording or slides of this talk found yet"
       ],
-      "generated_at": "2026-11-12T14:54:06-08:00"
+      "generated_at": "2026-11-12T18:52:58-08:00"
     }
   }
 }

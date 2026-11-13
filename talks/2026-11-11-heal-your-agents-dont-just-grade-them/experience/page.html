@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heal Your Agents, Don't Just Grade Them · Asif Mohammad &amp; Sudhir Tonse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .alongside { margin: 1.2rem 0; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: .3rem; font: .88rem/1.55 var(--sans); }
+  .alongside b { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; display: block; margin-bottom: .2rem; }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  .quote-card::before { content: none; }
+  code { font: .88em var(--mono); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Wed 11 Nov 2026 · Expo Sessions</div>
+  <h1>Your immune system doesn't file a Jira ticket</h1>
+  <p class="dek">Khasimul Asif Mohammad and Sudhir Tonse argue that offline evals only grade what you predicted—production agents need an immune system that detects unknown failures across every trace, prescribes exact fixes, and verifies they never recur.</p>
+  <div class="talk-meta">Khasimul Asif Mohammad &amp; Sudhir Tonse, Splunk · 23 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual diagram-card" data-visual="v1">
+        <div class="lbl">Why the regular eval loop breaks in production</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Comparison showing OpenTelemetry traces and pre-written LLM-as-judge evals catching known issues while missing user drift, model shifts, and adversarial attacks across millions of traces.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="18" width="360" height="72" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="34" y="40" fill="var(--identity)" font-weight="600">KNOWN-FAILURE GRADING LOOP</text>
+            <text x="34" y="59" fill="var(--ink)" font-size="10">OTel Sessions / Traces / Spans → Pre-written Evals &amp; Judges</text>
+            <text x="34" y="76" fill="var(--muted)" font-size="10">Only detects issues you already imagined and wrote checks for</text>
+
+            <rect x="20" y="112" width="360" height="114" rx="10" fill="var(--panel)" stroke="var(--accent)"/>
+            <text x="34" y="134" fill="var(--accent)" font-weight="600">PRODUCTION BLIND SPOTS (AT SCALE)</text>
+            <g fill="var(--card)" stroke="var(--rule)">
+              <rect x="34" y="148" width="102" height="58" rx="6"/>
+              <rect x="149" y="148" width="102" height="58" rx="6"/>
+              <rect x="264" y="148" width="102" height="58" rx="6"/>
+            </g>
+            <g fill="var(--ink)" text-anchor="middle" font-weight="600" font-size="10">
+              <text x="85" y="172">User Input Drift</text>
+              <text x="200" y="172">Model Shifts</text>
+              <text x="315" y="172">Adversarial Risk</text>
+            </g>
+            <g fill="var(--muted)" text-anchor="middle" font-size="9">
+              <text x="85" y="190">unseen prompts</text>
+              <text x="200" y="190">behavior changes</text>
+              <text x="315" y="190">millions of traces</text>
+            </g>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:04:28 and 00:06:02; not their slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="immune-system.jpg" alt="Slide titled Your immune system doesn't file a jira ticket showing Detect (Spot what nobody predicted), Respond (Treat the cause), and Remember (Don't get sick twice) with the line Stop just grading your agents. Start healing them.">
+        <figcaption>Their slide, 11:55 am (straightened from photos/PXL_20261111_195547531.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="diagnosis-prognosis.jpg" alt="Slide titled Healing requires clear diagnosis &amp; prognosis mapping four customer asks to Scheduled runs, Every session in scope, An opinionated taxonomy: 45 types, 8 families, and Opinionated remediations: code fix, guardrail, eval, alert — That became Signals 2.0, live this week.">
+        <figcaption>Their slide, 11:57 am (straightened from photos/PXL_20261111_195708977.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v4">
+        <div class="lbl">The closed healing loop in production</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Four-step loop: 1 Continuous sweep across all sessions, 2 Taxonomy classification across 45 types in 8 families, 3 Prescriptive fix via code, prompt, guardrail, or eval, and 4 Production verification confirming failure trends drop.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="24" y="24" width="160" height="78" rx="8" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="38" y="47" fill="var(--machine)" font-weight="600" font-size="10">1. CONTINUOUS SWEEP</text>
+            <text x="38" y="67" fill="var(--ink)" font-weight="600">All production traces</text>
+            <text x="38" y="85" fill="var(--muted)" font-size="10">daily / weekly, not samples</text>
+
+            <path d="M184 63 L214 63" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="216" y="24" width="160" height="78" rx="8" fill="var(--panel)" stroke="var(--accent)"/>
+            <text x="230" y="47" fill="var(--accent)" font-weight="600" font-size="10">2. DIAGNOSE &amp; GROUP</text>
+            <text x="230" y="67" fill="var(--ink)" font-weight="600">45 types / 8 families</text>
+            <text x="230" y="85" fill="var(--muted)" font-size="10">e.g. 1 in 10 payment fail</text>
+
+            <path d="M296 102 L296 136" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="216" y="138" width="160" height="78" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="230" y="161" fill="var(--accent)" font-weight="600" font-size="10">3. PRESCRIBE FIX</text>
+            <text x="230" y="181" fill="var(--ink)" font-weight="600">Code / prompt / rule</text>
+            <text x="230" y="199" fill="var(--muted)" font-size="10">hand off to Codex / team</text>
+
+            <path d="M216 177 L186 177" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="24" y="138" width="160" height="78" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="38" y="161" fill="var(--identity)" font-weight="600" font-size="10">4. VERIFY &amp; REMEMBER</text>
+            <text x="38" y="181" fill="var(--ink)" font-weight="600">Watch live trend drop</text>
+            <text x="38" y="199" fill="var(--muted)" font-size="10">prevent recurrence</text>
+
+            <path d="M104 138 L104 104" stroke="var(--identity)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:12:42 and 00:13:42; not their slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v5">
+        <p class="quote-big">“The reason we talk about this accuracy is that for enterprise customers, even one percent data point accuracy. Makes a big difference, especially when you have like millions of sessions.”<span>Khasimul Asif Mohammad · 00:17:23</span></p>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="regular-evals" data-visual="v1" data-caption="Pre-written evals catch anticipated errors but miss live drift at trace scale">
+      <div class="chapter">The baseline</div>
+      <h2>Regular evals only grade what you already thought to test</h2>
+      <p>Tonse starts with the standard observability baseline: instrument sessions, traces, and spans with OpenTelemetry, attach evaluators for hallucinations, tool use, and context adherence, and wire guardrails to steer bad actions before they hit users:</p>
+      <blockquote>“And then, of course, what's the point of observing if you can't do anything about it?”<span class="cite">00:02:08</span></blockquote>
+      <p>Galileo’s trajectory from its 2023 ChainPoll work pushed toward compact, low-latency evaluation models rather than expensive LLM-as-judge prompts. Yet when Mohammad takes over, he points out the structural gap in every static eval suite—you only test what you anticipated, and searching individual trace IDs collapses when user inputs drift, models change, and adversaries probe production:</p>
+      <blockquote>“And why just the regular eval loop is not enough? Regular evaluation is just not enough.”<span class="cite">00:06:02</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:02:08, 00:03:19, 00:04:28, 00:06:02</p>
+    </section>
+
+    <section data-chapter="immune-system" data-visual="v2" data-caption="Detect unknown pathogens, treat root causes, and remember to prevent recurrence">
+      <div class="chapter">The metaphor</div>
+      <h2>Your immune system doesn't file a Jira ticket</h2>
+      <p>Instead of dumping alerts into another ticketing queue, the team modeled Signals on biological immunity. Your body does not wait for someone to write a regression test before reacting to a new pathogen—it detects the anomaly, treats the root cause, and remembers it afterward:</p>
+      <blockquote>“Pathogen entering, it's not waiting for some test. Is trying to understand the problem, trying to respond in terms of getting to the root cause of it, and then he tries to remember. So that going forward, if you have a similar situation, it makes sure it prevents you from falling sick again.”<span class="cite">00:07:27</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “taking inspirating from the immune system not a ticketing system”. <b>The reading:</b> dashboards that merely open tickets turn operator attention into the bottleneck; agent observability has to diagnose root causes and carry fixes forward automatically.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:07:27</p>
+    </section>
+
+    <section data-chapter="diagnosis-prognosis" data-visual="v3" data-caption="Signals 2.0 pairs continuous full-session sweeps with a 45-type taxonomy and prescriptive fixes">
+      <div class="chapter">Signals 2.0</div>
+      <h2>Clear diagnosis and prognosis across every session</h2>
+      <p>Signals 1.0 surfaced unknown failures for enterprise buyers, who immediately asked for four things to turn discovery into healing: run continuously on a daily or weekly schedule; scan <em>every</em> session instead of small samples; name the exact failure category; and prescribe what to change:</p>
+      <blockquote>“Look at all the sessions. And then, can you be a little more opinionated about them? Like, tell me. What kind of failure is it?”<span class="cite">00:08:50</span></blockquote>
+      <p>That feedback shipped as Signals 2.0—built on an opinionated taxonomy of 45 problem types across 8 families (<a href="https://arxiv.org/abs/2611.04507">arXiv:2611.04507</a>) paired with actionable fixes across prompts, model selection, guardrails, and new evals:</p>
+      <blockquote>“Just because an issue has emerged, it's not enough.”<span class="cite">00:11:22</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:08:50, 00:10:14, 00:10:56, 00:11:22</p>
+    </section>
+
+    <section data-chapter="closed-loop" data-visual="v4" data-caption="Pinpoint systemic payment failures, hand fixes to coding tools, and verify production trends drop">
+      <div class="chapter">In production</div>
+      <h2>Closing the loop from trace to fix verification</h2>
+      <p>Walking through an insurance workflow and a live payment-agent demo, Mohammad shows Signals flagging a systemic failure occurring in one out of ten sessions reaching a payment step—the agent transferred money to the wrong account, detected the mismatch only afterward, and could not reverse it:</p>
+      <blockquote>“Agent used that account and send the money, and afterwards it checked. There was a problem, but it couldn't make the money back.”<span class="cite">00:13:42</span></blockquote>
+      <p>Diagnosis links straight into remediation (integrating with Codex in their demo to locate and apply the code change), followed by the step most teams skip—verifying in live telemetry that the failure rate stays down:</p>
+      <blockquote>“Once you fix it, you want to verify that it's. Indeed, and as a trend, the number of people fix so we can. Keep going in production, and make sure that it doesn't recur.”<span class="cite">00:12:42</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:12:42, 00:13:42, 00:16:29</p>
+    </section>
+
+    <section data-chapter="specialized-accuracy" data-visual="v5" data-caption="At half a million sessions a day, tuned small detectors beat raw LLM prompts on cost and F1">
+      <div class="chapter">Why not prompt an LLM</div>
+      <h2>Every percentage point matters across millions of sessions</h2>
+      <p>Customers often ask why they cannot paste trace dumps into a frontier LLM prompt to generate the same recommendations. At half a million sessions per day, token costs explode—and benchmarks against generic prompting show double-digit F1 gaps that tuned small models and structured pipelines close:</p>
+      <blockquote>“The reason we talk about this accuracy is that for enterprise customers, even one percent data point accuracy. Makes a big difference, especially when you have like millions of sessions.”<span class="cite">00:17:23</span></blockquote>
+      <p>Because catching silent failures before customers encounter them determines whether enterprises trust autonomous multi-agent systems in production, buyers keep pushing the precision bar higher:</p>
+      <blockquote>“One of the enterprises was like, hey, for me, 92% accuracy is not good enough. I wanted to go to like 95, 98.”<span class="cite">00:19:48</span></blockquote>
+      <ul class="key-points">
+        <li><strong>Grading is only half the loop:</strong> pre-written evals miss user drift, model changes, and adversarial edge cases that continuous full-session sweeps catch (<code>00:06:02</code>, <code>00:08:50</code>).</li>
+        <li><strong>Opinionated taxonomy + remediation:</strong> 45 failure types in 8 families map directly to code fixes, prompt edits, guardrails, or evals, then verify recurrence drops (<code>00:10:56</code>, <code>00:12:42</code>).</li>
+        <li><strong>Specialized detection wins at scale:</strong> across 500k+ daily sessions, dedicated small models beat ad-hoc LLM prompts on both token cost and F1 accuracy (<code>00:17:23</code>, <code>00:18:24</code>, <code>00:19:48</code>).</li>
+      </ul>
+      <div class="alongside"><b>Read alongside</b><ul><li><a href="https://arxiv.org/abs/2611.04507">Signals: Continuous Diagnostics of AI Agents (arXiv:2611.04507)</a> — Full 45-type taxonomy and 91.43% F1 evaluation.</li><li><a href="../../2026-11-11-your-judge-is-hallucinating-too/experience/page.html">Brian Kennedy: Your judge is hallucinating too</a> — Why unmeasured LLM judges need a second check in shadow mode.</li><li><a href="../../2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/experience/page.html">Dexter Horthy: 12-Factor Factories</a> — Wiring forward pressure and automated backpressure into production loops.</li></ul></div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:17:23, 00:18:24, 00:19:48</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room — keeping ASR garbles like “ChainPole” for ChainPoll, “SignalFlow Control” for Signals 2.0, and “S one accuracy” for F1 accuracy verbatim) and on notes taken during the talk. “From the notes” and “The reading” are editorial synthesis, not their words. More on the <a href="../links.md">links page</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

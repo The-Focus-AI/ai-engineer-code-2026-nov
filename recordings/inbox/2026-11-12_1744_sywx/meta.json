@@ -1,0 +1,23 @@
+{
+  "title": "sywx",
+  "recorded_at": "2026-11-12T17:44:02-08:00",
+  "duration_seconds": 312.1,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 847,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261112 174402.m4a",
+  "audio_sha256": "82bcc18f80d586db1fb6d8dd76801c6b91578de20de3d17f63deaef4f9b97410",
+  "exported_at": "2026-11-12T17:49:27-08:00",
+  "transcript_echo_segments": 0,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 836,
+      "locale": "en_US"
+    }
+  ]
+}

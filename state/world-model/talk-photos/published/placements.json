@@ -9,6 +9,15 @@
       "PXL_20261111_192552608.MP.jpg"
     ]
   },
+  "1325061": {
+    "dir": "talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/photos",
+    "photos": [
+      "PXL_20261113_010629420.jpg",
+      "PXL_20261113_010644949.jpg",
+      "PXL_20261113_011613499.MP.jpg",
+      "PXL_20261113_011655806.MP.jpg"
+    ]
+  },
   "1333169": {
     "dir": "talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/photos",
     "photos": [
@@ -160,6 +169,15 @@
       "PXL_20261112_012731950.jpg"
     ]
   },
+  "1373474": {
+    "dir": "talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/photos",
+    "photos": [
+      "PXL_20261113_002755087.jpg",
+      "PXL_20261113_003006150.jpg",
+      "PXL_20261113_003216799.jpg",
+      "PXL_20261113_004014418.jpg"
+    ]
+  },
   "1373475": {
     "dir": "talks/2026-11-12-a-new-age-of-software-engineering/photos",
     "photos": [
@@ -173,7 +191,47 @@
     "dir": "talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/photos",
     "photos": [
       "PXL_20261112_220704428.jpg",
-      "PXL_20261112_220735820.jpg"
+      "PXL_20261112_220735820.jpg",
+      "PXL_20261112_221526161.jpg",
+      "PXL_20261112_221615006.jpg",
+      "PXL_20261112_222208677.jpg",
+      "PXL_20261112_222619918.jpg"
+    ]
+  },
+  "1373480": {
+    "dir": "talks/2026-11-12-brownfield-factories/photos",
+    "photos": [
+      "PXL_20261112_232236736.jpg",
+      "PXL_20261112_232412481.jpg",
+      "PXL_20261112_233028749.jpg",
+      "PXL_20261112_233242374.jpg",
+      "PXL_20261112_233528265.MP.jpg",
+      "PXL_20261112_233651471.MP.jpg",
+      "PXL_20261112_233826254.jpg",
+      "PXL_20261112_233840456.jpg"
+    ]
+  },
+  "1373481": {
+    "dir": "talks/2026-11-12-a-company-built-around-the-agent/photos",
+    "photos": [
+      "PXL_20261113_004408772.TS-000.jpg",
+      "PXL_20261113_004415509.jpg",
+      "PXL_20261113_004514950.jpg",
+      "PXL_20261113_004654887.jpg",
+      "PXL_20261113_004802860.MP.jpg",
+      "PXL_20261113_005524636.MP.jpg",
+      "PXL_20261113_010122172.MACRO_FOCUS.jpg"
+    ]
+  },
+  "1373482": {
+    "dir": "talks/2026-11-12-thariq-shihipar-independent/photos",
+    "photos": [
+      "PXL_20261113_012514487.jpg",
+      "PXL_20261113_012832389.jpg",
+      "PXL_20261113_012939440.jpg",
+      "PXL_20261113_013435497.MP.jpg",
+      "PXL_20261113_013532470.jpg",
+      "PXL_20261113_014241094.MP.jpg"
     ]
   },
   "1376191": {
@@ -185,6 +243,13 @@
       "PXL_20261112_013801563.jpg",
       "PXL_20261112_014042907.MP.jpg",
       "PXL_20261112_014156023.MP.jpg"
+    ]
+  },
+  "1376195": {
+    "dir": "talks/2026-11-12-judgement-is-the-last-job/photos",
+    "photos": [
+      "PXL_20261112_225737866.jpg",
+      "PXL_20261112_230825038.jpg"
     ]
   },
   "1376198": {

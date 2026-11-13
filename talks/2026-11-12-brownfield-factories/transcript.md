@@ -1,0 +1,142 @@
+---
+title: "Brownfield Factories"
+speakers:
+  - name: Justin McCarthy
+    affiliation: Diffusion
+room: "Continental 4–6 (Mainstage)"
+starts_at: 2026-11-12T15:20:00-08:00
+ends_at: 2026-11-12T15:40:00-08:00
+format: talk
+recording: 2026-11-12_1521_brownfield-factories
+duration: 1063.5
+source: qwen3-asr-1.7b
+---
+
+> The Mainstage ran ahead of the grid this afternoon, so the recording starts before the scheduled slot.
+>
+> The speaker introduces himself at the start; the MC's introduction is not captured.
+>
+> Transcribed locally with Qwen3-ASR 1.7B (timings per ~5 s segment), prompted with the
+> speaker names and affiliations of overlapping sessions. "Justin McCarthy" and "Diffusion" were in that prompt; the
+> unprompted Voice Memos transcript has the same self-introduction. Rube Goldberg, Bun and Claude were not
+> in it. Other names are kept as transcribed: Brownfield is also "brown field", "round field" and "ground
+> field", Jarred Sumner is "Jared", Claude Code is "cloud code", the models are "Astro, Table, and Carbon", and
+> the agent channel is "the Asian Channel". The Voice Memos transcript is kept beside it as `transcript.txt`.
+
+### 00:00:00 — Introduction
+
+All right, folks. Hopefully, everything's on. See the Brownfield Factory here. All right, my name is Justin McCarthy. I'm the founder and CEO at. Diffusion, and we are diffusing the capabilities of the model into the global economy. It's a big place out there. There's a hundred trillion dollars of it. There's a billion of us. There's a lot to do. And that's that's what we're doing, and one way we're doing it is by building software factories.
+
+This talk, actually, you know, I don't. I guess it's got the factory thing in the name. It's not going to be super technical. There's a QR code at the end that is going to have some technical stuff. For you, so I would encourage you to pick up, or have your agents pick things up. I'm sending a lot of dual-channel messages these days, where I say. The human stuff up here, and then I attach something for the agent down there. So that's kind of this presentation. I'm gonna say human things to you.
+
+And then your agents are going to pick up the Asian Channel stuff at the end.
+
+### 00:00:52 — The first software factory
+
+Okay, so this started for me in July last year. We were on the Claude four series models, and you know I had the privilege of being able to dive very deep. And really, ask what happens when you begin looping these things. So that was the story of the beginning of the software factory that I built together with. The team and I'll say that you know even on the four series of models, even as we were awaiting.
+
+T5 and the initial Codex harness. You know, even then, we could see glimmers that this thing was going to work. But at tremendous token expense, and only in the presence of a real. Rube Goldberg action. Okay, so only when the loops were. Very duct taped together and very sort of handcrafted. Would you be able to see these glimmers? Of some kind of an output that would stabilize the input that would lead to the kinds of reliability.
+
+That we would ultimately want. Okay. So I'll just say that feeling. If you judge from the number of software factory talks that have been present here at the conference, that feeling. I think what we know now is software factories, and it's sort of accepted in the zeitgeist that at least some part of this. Just kind of happens now, and it requires substantially less of our creativity and input to achieve.
+
+### 00:02:12 — Please stop building software factories
+
+So that's of course the time for me to say, please stop building software factories. Right. So. So I and I and I'm you know obviously you know a little bit tongue in cheek here, but also serious. I think you really should stop. Subjecting your ideas and your ambitions and your goals to a factory process. You know, because most of the time we don't know what we want.
+
+Or at least a lot of the time, we're creating something new. We don't yet know what we want. And if we're trying to industrialize something where we don't know what we want. We're certainly we're not going to get the right thing, or we're going to take too long, or we're going to spend too much. We're going to have all. It's going to be. Sad in multiple ways. Okay, so what I would say is let's.
+
+Begin to use some discernment about whether we're discovering product market fit, we're breaking new ground. We're conquering new territory, or whether we are doing something that, you know, already has a precedent and is already working. Okay, and that discernment about sort of what way, what mode we're working in.
+
+### 00:03:18 — Why brownfield
+
+You know I find it really helpful because the great thing about a round field effect. Is it's something that we're already being paid for. It's something where customers are saying with their dollars and their and their utilization. Like yeah, this works for me. I like it. I want more of this. Okay, it's the existing things: keeping the lights on, paying the bills. Keeping customers happy, and you don't need to discover anything about it because everything you need to know.
+
+To loop the stability of that system is just built into the runtime, okay. So everything that's happening, all the ways your customers are using it, everything they're saying about it, maybe even the. Support tickets. Those are reinforcing the integrity and the. Vitality and the utility of whatever you've got in that brown field. Okay, and then of course we're going to talk about this, but. The another exciting thing, as we heard from many of our other speakers, you know, Jared just.
+
+Talked all about rewriting, Bun, and cloud code. You can rewrite a lot of that brownfield, of course. Okay, so this becomes all of that technical debt, all those sort of boat anchors that are slowing us down historically. All that you know, impossibly long backlog. We can see those drying up now. And we don't have to spend much energy asking what the customer wants because the customer is arriving every day and they're saying.
+
+What I'm using is what I want. Okay, so we know what to build. We build we build the existing thing.
+
+### 00:04:52 — Promises and loops
+
+And a couple of a couple of notes. About just ways of thinking about working with your ground field. And you know, cleaning it up and making it self-sustaining. At Diffusion, we use the word promise. To represent, you know, some guarantee, some aspect, some priority, and some dimension within the product that we value. Okay. Feature is a promise. You know the cost and price of a thing is a promise.
+
+The security of a thing is a promise. And it's rare that you want to revert and regress on your promises. Okay, so if you can start talking about the ways that we have expectations that are against an existing. You can begin to encode those in loops. Okay. And a loop, just like any of the. Factory teams we've been discussing, whether represented in YAML file, or Python, or Graph.
+
+You know, a loop has the characteristic of somehow taking an input. And an output, and then somehow feeding it back. Okay. As many of you know, this is the sort of idealized block diagram amplifier, and if you cut that feedback leg. You're just going to amplify noise, okay? And I think we all have this feeling now that we've been working with software factories and working with loops.
+
+There has to be some way of feeding back that fidelity into the input of the system. But if you do it and you tune it right. It can work, right? So, so this is what we should. Strive for, especially in a brown field, we're getting all the signal we need to cure, stabilize, and improve those loops.
+
+### 00:06:30 — Continuous, in the background
+
+The next attribute of a brownfield factory is. You know, it really should be continuous. If you look at the history, the before times of when commits would arrive. There was some seasonality to those commits. There would be a daily and hourly seasonality. There'd be a weekly cycle, and you would see those commits come in at intervals. It can happen continuously now, when your loops are being maintained by your agents in a factory.
+
+I don't know. Like it might look like a straight line. Just. Just a solid list of activity that's happening twenty four seven because there's always something to worry about. Is it a little bit slow? Is it a little bit insecure? Is it a little bit whatever? All those worries apply around the clock, and if you're building your brown brownfield factory the right way. It should be. It should be compatible with continuous intelligence. Continuous application of this question.
+
+And it should just run, okay. So you've got an existing codestate. You've got an existing set of promises. Just make it continuous. Make it loop and make it keep those promises. Okay, so. So another way to summarize that is, you know, my brownfield factory on an existing set of promises, it should just be. Continuous. It should be background. It should be keeping those promises. Okay, so I'm a strong advocate of building a system like this.
+
+And it's going to give you the. Freedom and creativity to begin asking what you should be doing. You know. Probably not with the same level of looping rigor. Probably with more true product market fit discovery sort of energy.
+
+### 00:08:09 — Factories simplify over time
+
+Okay. All right. One other really fascinating property. This is certainly something that I've experienced. Over the last year, I mentioned earlier. You know, a year ago, it would work, but there was a lot of componentry. Okay, getting it to work was still very much engineering. As we heard from some others, from Zach and from Potato, these systems are—they're getting a little bit easier. And a lot of credit goes to the model itself as well as the harnesses, but one thing you can expect from your factory.
+
+Is that it is going to simplify over time? Okay. This is something that we've seen in our skills. The skills are getting shorter. Harnesses are getting more general, of course, and a lot of this again is credit to the models themselves. I'll note that there's a there's a famous AI company. That also makes these widgets, and this is kind of a famous progression. So the Raptor One engine from that AI company was really fiddly, but it worked.
+
+Okay. It looked like this. There were a lot of tubes. But it definitely propelled the rocket. Okay, in that same package, right? That same. Approximate external dimension. The second version had higher performance and fewer moving parts. Okay, the delta between this one and this one was a tremendous application of intelligence. Okay, like literal rocket scientists and engineers, focusing on how can we make this thing simpler. Okay, you know that's hard. It's hard to get those people, and it's hard to concentrate that amount of difficult problem.
+
+We have been allies in the simplification of work because we have Astro, Table, and Carbon. Right, and so they are trying to take our factory from version one to two to three. So that by the time you know we come back, we come back and you know start our jobs. On Monday or whatever, maybe we have a much simpler factory than when we started. Right, or we wait one more model version, and our factory has fewer moving parts yet.
+
+Twice the performance. Okay, so this is a really interesting feature at this moment that hasn't existed before. So, if you can just barely get the thing to work. You can expect a smoother, laminar flow, higher performance. You know, suit. Okay. Without much of your creative contribution in between.
+
+### 00:10:27 — The same but faster
+
+Okay, so. Let's make a foundry factory. A great instruction to give that factory is. The same, but faster. I've been in very few meetings where someone debated, you know, increasing the performance of the system, right? As long as you are at some sort of a Pareto equilibrium, where you're not trading faster for cheaper. Or trading safer for faster. Okay, then this is just good. Okay. So, so it should be faster.
+
+It should be cheaper. It should be safer. Note that sometimes we include better in this mix, and better may be difficult to achieve in a broad field. Better may involve more of your intent. Better may involve more of your judgment and taste, so maybe that's where you go into discovery and use different techniques. But gosh, faster, cheaper, safer, especially on the other side of the bomb apocalypse.
+
+Sorry, other side. Still the beginning of the Volpocalypse. Like we definitely need these things to just autonomously get safer, right? Okay. So you should have that. Okay. So. So I think everyone should have the ground field factory. You should have it for your existing commitments. You should have it. It should become better, faster, and cheaper over time. I find that this takes like a week. So if you haven't spent that week yet, just do it. Just like whenever you get home, like go spend a week.
+
+Say you're on vacation next week, and just standard round field factory on all your existing commitments. If you don't have a way to do that, or you feel like you need help, you can always reach out to me, and we're standing by to help.
+
+### 00:12:03 — Elevate your ambition
+
+So brownfield factories, you should do them, but also too easy, okay. Like too easy, okay. You need you need to elevate your ambition as well. Okay, so in my remaining couple minutes here, we're going to talk about how to elevate our ambition. Okay, so one of the things that I think we are all struggling with at this moment is, gosh, there's a lot of code coming out.
+
+Even worse, it's working. That's a lot of stuff. It's maybe too much stuff. We maybe have a glut of stuff. And it could be the case that our customers didn't want all this software. They actually, they actually weren't asking for software. They were asking for more gross margin. They were asking for more customers. They were asking for more brand differentiation, okay, and just giving them more windows to click on, and buttons to click on.
+
+That's not doing it for them anymore. Okay, and this is where all of us. Are beginning to see the emergence of our new job. Okay, we can communicate with the models quite well. That's why you're here. Right. There are other people in your firms who are not as fluent in communicating with these things.
+
+### 00:13:17 — The demand factory
+
+So that means like we have a new job now. We have to figure out how to build a demand factory. Because our brownfield factory can't build the moat. Right. All it can do is keep our existing promises running well. That's great because it allows us to focus on sort of outside the building and look toward the market and look toward the future. But gosh, we need to start working on the demand factory, okay.
+
+I don't really know what Diffusion Factory is, but it probably looks something like this. It probably looks like the thing that we need, so that when we boost. Performance in the backend here at Software Factory, we don't end up spilling software all over the floor, and we rate match. The demand systems to our production systems. Okay, but there's a lot of discovery that needs to go into the demand factor.
+
+This is a this is a new idea, okay? But I think you are. Absolutely, the ones who can begin pushing your organizations ask these questions. Like, don't wait for sales and marketing to come to you on this question. Like, you can see that within. The envelope of your brand. There's something more you can ship. But you're going to need to explain that to the world, and you're going to need to explain it using new words and new imagery and new product lines and so forth.
+
+I think your demand factory helps you ask better questions of your market. Because the agents can help prioritize what to ask next. I think it can help with better listening, because the agents can synthesize the answers you get back from those questions. And can help you re-rank, and they can help you re-rank overnight, and they can compare it to everything else you've heard. Okay, and therefore I think they can schedule better experiments. How do we get the price elasticity of demand on the?
+
+This particular offering, you have a finite amount of experimental bandwidth. How do you allocate it? The models are going to help you with that. I think this could lead to lower latency responses, where we are saying yes faster. Okay, and customers begin uncensoring themselves, and they start asking for more. That would be great. I think, like weirdly, you know, even though our competitors have the same models.
+
+There's some version of some new equilibrium where we're all doing game theory optimal competition, and yet still, if we start first. There'll be some edge. Okay, so get started now.
+
+### 00:15:32 — The brand envelope
+
+And then figure out what is the maximum extent of what I can possibly promise to the market, and that's my brand envelope. And let's. Fill it up, and just quick digression on brand envelope. Let's say we're Spindrift. We're selling some awesome sparkling water. Fruit juice. I propose, hey, you know what? Let's throw some caffeine in there. Like maybe that gets by the committee. Like maybe we ship that.
+
+And then the next week, I come in and I say, like, and motor oil, okay? You know, that's gonna get shut down. But energy drink—that's a good expansion of our brand up a level. For every one of your companies, you have the same thing. Maybe you can't sell motor oil, but maybe you can sell an energy drink. So figure out what your energy drink is and start selling it now.
+
+### 00:16:12 — Building the demand factory
+
+Okay, so let's build your demand factory. It's going to have a high volume of high quality signal. Coming in from customers, coming in from the market, coming in from any place where you can measure demand. Okay, and it's going to be. It's going to have a high volume flow. Okay. But in order for that flow to not overwhelm change management desire. It can't blow out the needs of your customer.
+
+So therefore, you need to have more customers. Okay, you in fact need to have more of everything, but you need to have more wallet within those customers. Okay, to get more share of wallet within those customers, you're going to have to sell. More SKUs. Okay, in addition to more SKUs, you're going to have to organize them into coherent product lines. You're going to have more. Horizon lines. Okay, and once you maxed out all of that, you're going to need to just acquire your competitor.
+
+Okay, and if you get started now, you're going to be the one doing the acquiring.
+
+### 00:17:07 — Closing
+
+Okay, so this is it. This brownfield factories. I think you can build. Your brownfield factory. I think you can absolutely build your demand factory beginning now. I also obviously think you can reboot your product management and reboot, and wake up your executive team. And we are standing by at Diffusion, so we do have some technical resources attached there on some ground field techniques that. I really like, and yeah, look forward to connecting with many of you.
+
+Okay. Take care. Thanks.

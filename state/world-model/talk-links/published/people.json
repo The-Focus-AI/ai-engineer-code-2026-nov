@@ -21,6 +21,28 @@
       "status": "found"
     }
   ],
+  "1325061": [
+    {
+      "name": "Dexter Horthy",
+      "role": "CEO and co-founder (HumanLayer, now part of Factory)",
+      "affiliation": "HumanLayer",
+      "links": {
+        "site": "https://theouterloop.substack.com/",
+        "linkedin": null,
+        "x": "https://x.com/dexhorthy",
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation HumanLayer; bio \"Dex is CEO and co-founder at HumanLayer\"",
+        "transcript: \"up until about a week ago, I was the CEO and co-founder at a company called HumanLayer.\"",
+        "transcript: \"We are now a part of Factory\"",
+        "page title: \"The Outer Loop | Dex Horthy | Substack\"",
+        "page title: \"dex (@dexhorthy) / X\""
+      ],
+      "status": "found"
+    }
+  ],
   "1333169": [
     {
       "name": "Ankit Jain",
@@ -340,6 +362,26 @@
       "status": "found"
     }
   ],
+  "1373474": [
+    {
+      "name": "Melvin Johnson",
+      "role": "VP of Research, Gemini Post-Training",
+      "affiliation": "Google DeepMind",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": "https://x.com/melvinjohnsonp",
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Google DeepMind; bio \"Melvin Johnson is a Vice President of Research at Google DeepMind, where he leads Gemini Post-Training\"",
+        "transcript: \"So today I thought I'll take you through a little journey of how we post trained Gemini 4.\"",
+        "page title: \"Melvin Johnson (@melvinjohnsonp) / X\""
+      ],
+      "status": "found"
+    }
+  ],
   "1373475": [
     {
       "name": "Walden Yan",
@@ -378,10 +420,76 @@
       "evidence": [
         "roster: affiliation Anthropic; bio \"Jarred Sumner created Bun, the open-source JavaScript and TypeScript toolkit that combines a runtime, bundler, package manager, and test runner.\"",
         "program title: \"Jarred Sumner, Founder of Bun, Anthropic / Bun\"",
-        "transcript: \"Over the summer, I rewrote Bun and Ross.\"",
+        "transcript: \"Because the Bun team, us, rewrote Bun and Rust.\"",
         "page title: \"Jarred-Sumner (Jarred Sumner) · GitHub\"",
         "page title: \"Jarred Sumner (@jarredsumner) / X\"",
         "page title: \"Jarred Sumner\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1373480": [
+    {
+      "name": "Justin McCarthy",
+      "role": "Founder and CEO",
+      "affiliation": "Diffusion",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": "https://x.com/BuiltByJustin",
+        "github": "https://github.com/jmccarthy",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Diffusion; bio \"Justin McCarthy is the founder and CEO of Diffusion.\"",
+        "transcript: \"my name is Justin McCarthy. I'm the founder and CEO at.\"",
+        "page title: \"jmccarthy (Justin McCarthy) · GitHub\"",
+        "page title: \"Justin McCarthy (@BuiltByJustin) / X\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1373481": [
+    {
+      "name": "Quinn Slack",
+      "role": "Co-founder and CEO",
+      "affiliation": "Amp",
+      "links": {
+        "site": "https://slack.org/",
+        "linkedin": null,
+        "x": "https://x.com/sqs",
+        "github": "https://github.com/sqs",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Amp; bio \"Quinn Slack is the co-founder and chief executive of Amp, the coding-agent company\"",
+        "transcript: \"my name is Quinn Slack. I am one of the founders of Amp. An invented sourcecraft before.\"",
+        "page title: \"Quinn Slack\"",
+        "page title: \"Quinn Slack (@sqs) / X\"",
+        "page title: \"sqs (Quinn Slack) · GitHub\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1373482": [
+    {
+      "name": "Thariq Shihipar",
+      "role": "Independent engineer (formerly Claude Code, Anthropic)",
+      "affiliation": "Independent",
+      "links": {
+        "site": "https://www.thariq.io/",
+        "linkedin": null,
+        "x": "https://x.com/trq212",
+        "github": "https://github.com/thariqs",
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Independent; bio \"Thariq Shihipar is an independent engineer who worked on Claude Code at Anthropic.\"",
+        "transcript: \"please welcome independent engineer and former Anthropic team member.\"",
+        "transcript: \"I wanted to talk to you about a couple things I've been thinking about since I left Anthropic.\"",
+        "page title: \"Home • Thariq Shihipar\"",
+        "page title: \"Thariq (@trq212) / X\"",
+        "page title: \"ThariqS (Thariq Shihipar) · GitHub\""
       ],
       "status": "found"
     }
@@ -404,6 +512,26 @@
         "page title: \"Simon Willison’s Weblog\"",
         "page title: \"Simon Willison (@simonw) / X\"",
         "page title: \"simonw (Simon Willison) · GitHub\""
+      ],
+      "status": "found"
+    }
+  ],
+  "1376195": [
+    {
+      "name": "Ishaan Dey",
+      "role": "Design and engineering, Antigravity",
+      "affiliation": "Google DeepMind",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": "https://x.com/ishaandey_",
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation Google DeepMind; bio \"Ishaan works on design and engineering for Antigravity at Google Deepmind.\"",
+        "transcript: \"I've gone from the scale of working at startups to now at Google DeepMind\"",
+        "page title: \"ishaan dey (@ishaandey_) / X\""
       ],
       "status": "found"
     }
@@ -533,6 +661,25 @@
       "status": "found"
     }
   ],
+  "1380098": [
+    {
+      "name": "swyx",
+      "role": "Co-founder and CEO, AI Engineer",
+      "affiliation": "AI Engineer",
+      "links": {
+        "site": null,
+        "linkedin": null,
+        "x": "https://x.com/swyx",
+        "github": null,
+        "scholar": null
+      },
+      "evidence": [
+        "roster: affiliation AI Engineer; bio \"swyx, also known as Shawn Wang, is the co-founder and chief executive of AI Engineer\"",
+        "page title: \"swyx @aiDotEngineer CODE (@swyx) / X\""
+      ],
+      "status": "found"
+    }
+  ],
   "1381580": [
     {
       "name": "Devin Gupta",
@@ -547,7 +694,7 @@
       },
       "evidence": [
         "roster: affiliation Parallel; bio \"Devin Gupta is a core engineer at Parallel Web Systems, focusing on building out the next generation of web infrastructure for LLMs. In particular, he works on post-training search models and leading the Parallel Decisions API.\"",
-        "transcript: \"If you use apparel decision API, which asks the same question\"",
+        "transcript: \"If you use a parallel decision API, which asks the same question\"",
         "page title: \"Devin Gupta\"",
         "page title: \"Devin Gupta (@devingupta_) / X\""
       ],

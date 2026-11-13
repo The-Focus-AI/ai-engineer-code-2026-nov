@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Let the Agent Cook · Arsalan Bashir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .alongside { margin: 1.2rem 0; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: .3rem; font: .88rem/1.55 var(--sans); }
+  .alongside b { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; display: block; margin-bottom: .2rem; }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.35rem, 2.8vw, 1.85rem)/1.28 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  .quote-card::before { content: none; }
+  code { font: .88em var(--mono); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Thu 12 Nov 2026 · Continental 1–3 (Expo Sessions)</div>
+  <h1>From APIs to answers: let the agent cook</h1>
+  <p class="dek">One tool per API endpoint breaks on overlapping descriptions, pagination, and OLAP schema mismatches. Arsalan Bashir distills three lessons from Lightbox and Sentry: bundle tools by semantic use case (or let the model write code), strip out tunnel-vision harness optimizations for 4× speed and 30% fewer tokens, and keep cheap deterministic checks.</p>
+  <div class="talk-meta">Arsalan Bashir, Sentry · 18 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual diagram-card" data-visual="v1">
+        <div class="lbl">Three failure modes of one-tool-per-API</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Three failure modes when giving an agent raw API wrappers: overlapping tool descriptions like Jira versus Linear, pagination and rate-limit loops, and ID or OLAP schema modality mismatches.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="18" width="360" height="62" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="34" y="40" fill="var(--accent)" font-weight="600" font-size="10">1. OVERLAPPING TOOL DESCRIPTIONS</text>
+            <text x="34" y="59" fill="var(--ink)">Jira vs. Linear ticket search confuses tool selection</text>
+
+            <rect x="20" y="94" width="360" height="62" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="34" y="116" fill="var(--accent)" font-weight="600" font-size="10">2. PAGINATION &amp; RATE-LIMIT LOOPS</text>
+            <text x="34" y="135" fill="var(--ink)">Agent burns turns retrying failures and paging cursors</text>
+
+            <rect x="20" y="170" width="360" height="64" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="34" y="192" fill="var(--accent)" font-weight="600" font-size="10">3. ID &amp; OLAP MODALITY MISMATCHES</text>
+            <text x="34" y="211" fill="var(--ink)">CRM email vs. Stripe ID; stops on first OLAP table</text>
+            <text x="34" y="226" fill="var(--muted)" font-size="10">Asserts wrong source of truth with high confidence</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from his failure-mode breakdown at 00:01:32</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="tools-by-use-case.jpg" alt="His slide: Agent calling semantic use-case tools find_user() which unifies CRM and Database, and find_pending_tasks() which unifies GitHub and Linear.">
+        <figcaption>His slide, 12:15 pm (straightened from photos/PXL_20261112_201506625.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="let-model-choose-path.jpg" alt="His slide quoting OpenAI: Reduce or remove detailed step-by-step process guidance. Let the model choose the path unless the product requires that path.">
+        <figcaption>His slide, 12:19 pm (straightened from photos/PXL_20261112_201950177.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v4">
+        <div class="lbl">What to keep vs. delete in the harness</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Split between the thin deterministic perimeter to keep (permissions, execution limits, PII scrubbing) and cognitive scaffolding to delete (intent classifiers, schema pre-fetchers, forced step-by-step routing).">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="18" width="172" height="148" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="34" y="40" fill="var(--identity)" font-weight="600" font-size="10">KEEP (THIN DETERMINISTIC)</text>
+            <text x="34" y="66" fill="var(--ink)" font-weight="600">• User permissions</text>
+            <text x="34" y="88" fill="var(--ink)" font-weight="600">• Execution limits</text>
+            <text x="34" y="110" fill="var(--ink)" font-weight="600">• PII redaction</text>
+            <text x="34" y="140" fill="var(--muted)" font-size="10">Hard security invariants</text>
+
+            <rect x="208" y="18" width="172" height="148" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="222" y="40" fill="var(--accent)" font-weight="600" font-size="10">DELETE (TRAINING WHEELS)</text>
+            <text x="222" y="66" fill="var(--muted)">✕ Intent classifiers</text>
+            <text x="222" y="88" fill="var(--muted)">✕ Schema pre-fetchers</text>
+            <text x="222" y="110" fill="var(--muted)">✕ Step-by-step prompts</text>
+            <text x="222" y="140" fill="var(--muted)" font-size="10">Causes tunnel vision</text>
+
+            <rect x="20" y="182" width="360" height="50" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="200" y="203" text-anchor="middle" fill="var(--accent)" font-weight="600">RESULT AFTER REMOVING SCAFFOLDING</text>
+            <text x="200" y="220" text-anchor="middle" fill="var(--ink)" font-size="10">4× faster responses · 30% fewer tokens · resilient to new models</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:05:18, 00:08:07, and Q&amp;A at 00:12:07</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v5">
+        <img src="agent-validates-work.jpg" alt="His slide: Agent running analyze('when did audit logs launch?') and validating via BigQuery dry run, dbt matches definition, and data checks (joins, counts, freshness) to produce a verified answer.">
+        <figcaption>His slide, 12:22 pm (straightened from photos/PXL_20261112_202230030.jpg)</figcaption>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="why-raw-api-tools-fail" data-visual="v1" data-caption="Raw API wrappers break on overlap, pagination, and schema modality">
+      <div class="chapter">Where it breaks</div>
+      <h2>Why one-tool-per-API breaks in production</h2>
+      <p>Rolling your own harness with one tool per SaaS integration handles toy prompts like fetching your latest GitHub issue on day one. Under real workloads, agents stall across three failure modes: picking between similar tool descriptions (like Jira versus Linear), looping on pagination and API rate limits, and tripping over cross-system IDs—searching a CRM by email while Stripe keys on customer ID:</p>
+      <blockquote>“The agent starts picking the wrong tools sometimes. So it gets confused between tools that have similar descriptions.”<span class="cite">00:01:32</span></blockquote>
+      <p>At his earlier data-agent company, connecting agents straight to OLAP cubes like Snowflake and Databricks exposed the sharpest trap: without semantic guardrails, the agent inspects the very first table it finds and asserts a wrong answer with total certainty:</p>
+      <blockquote>“You can either like look at the first table and stop. And declare that this is the ultimate source of truth, and give you the wrong answer pretty confidently.”<span class="cite">00:01:32</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “I like the list of things he says: the modality of values when you connect directly to the OLAP cubes.” (<code>2026-11-12T1215</code>). <b>The reading:</b> raw warehouse access isn’t semantic understanding—without consolidated lookup paths, agents treat the first schema they touch as canonical truth.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:32, 00:01:32</p>
+    </section>
+
+    <section data-chapter="organize-tools-by-use-case" data-visual="v2" data-caption="Push pagination and ID stitching into semantic tools—or let the model write code">
+      <div class="chapter">Lesson 01</div>
+      <h2>Organize tools by use case—or let the model write code</h2>
+      <p>Following Anthropic’s <a href="https://www.anthropic.com/research/writing-tools-for-agents">guidance on writing effective tools</a>, push deterministic plumbing—pagination, retries, parameter mismatches, and cross-source joins—out of the model’s reasoning loop and into code. Replace separate CRM, database, GitHub, and Linear wrappers with semantic use-case tools like <code>find_user()</code> and <code>find_pending_tasks()</code>:</p>
+      <blockquote>“There are deterministic things that should still be in code, and your agent would benefit from something like that.”<span class="cite">00:03:01</span></blockquote>
+      <blockquote>“The first key is not categorize the tools, but actually combine the tools into some sort of semantic meaning.”<span class="cite">00:12:07</span></blockquote>
+      <p>At Sentry, Bashir’s team pushes the idea further with <a href="https://www.anthropic.com/research/advanced-tool-use">programmatic tooling</a>—letting the model write and execute code against APIs directly rather than maintaining dozens of hand-written wrappers (collapsing in Sentry’s setup toward two tools: write code and run):</p>
+      <blockquote>“We don't even write our tools. We do something called programmatic tooling, which allows our model to kind of write tools.”<span class="cite">00:03:01</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “Organize tools by use case.” (<code>2026-11-12T1215</code>) and “He likes the ‘write the code’ tools.” (<code>2026-11-12T1217</code>). <b>The reading:</b> whether you bundle plumbing into <code>find_user()</code> or hand the model a code sandbox, the rule is identical—never waste LLM turns on deterministic pagination and ID translation.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:03:01, 00:12:07</p>
+    </section>
+
+    <section data-chapter="optimization-gives-tunnel-vision" data-visual="v3" data-caption="Pre-classifying intent and schemas slows agents down and breaks on new models">
+      <div class="chapter">Lesson 02</div>
+      <h2>Pre-optimizing the harness gives the agent tunnel vision</h2>
+      <p>Early on, Bashir’s team worried the model would fumble table names and joins, so they built an elaborate pre-processing pipeline: classify intent, pre-fetch schemas, and steer the prompt before the model saw anything. Instead of helping, those heuristics blinded the agent and broke with every frontier model release:</p>
+      <blockquote>“The first and obvious one was if this optimization kind of became a blind spot for the model. And it's also not very resilient to new models coming out.”<span class="cite">00:05:18</span></blockquote>
+      <p>Stripping out those “training wheels” and letting the agent explore with clean tools paid off immediately—mirroring <a href="https://vercel.com/blog/we-removed-80-percent-of-our-agents-tools">Vercel deleting 80% of its tool code</a>:</p>
+      <blockquote>“The agent only got four times faster, but also used 30 percent. Fewer tokens across all of our kind of user queries”<span class="cite">00:08:07</span></blockquote>
+      <blockquote>“That as models get better, you might find your harness kind of compensating for a model that you use. Six months ago, that's a common like pitfall”<span class="cite">00:08:07</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “The optimization is giving the agent tunnel vision.” (<code>2026-11-12T1218</code>). <b>The reading:</b> treat pre-routing and schema-trimming heuristics as temporary scaffolding—every model generation renders more of your harness counterproductive.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:05:18, 00:08:07</p>
+    </section>
+
+    <section data-chapter="what-to-keep-in-the-harness" data-visual="v4" data-caption="Keep permissions, execution limits, and PII scrubbing strictly deterministic">
+      <div class="chapter">The boundary</div>
+      <h2>What deterministic guardrails to keep in the harness</h2>
+      <p>Letting the model choose its investigation path does not mean putting security inside the prompt. Bashir draws a clean boundary between cognitive routing (delete) and hard product invariants (keep deterministic and thin):</p>
+      <blockquote>“Things like handling permissions, execution limits. Stripping out personally identifiable information, etc. These things do make sense to do outside of standard models.”<span class="cite">00:05:18</span></blockquote>
+      <blockquote>“On the other hand, you also want to have deterministic systems that are like libraries that kind of encapsulate. The absolute requirements that you have, for example, user A should not be able to. Kind of access into these tools. That stuff should be deterministic. It should be outright, but that layer should be super thin, as thin as possible”<span class="cite">00:12:07</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “We should do a follow-up on what sort of tools in the harness we want to keep around.” (<code>2026-11-12T1221</code>). <b>The reading:</b> paired with <a href="../../2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">Philipp Schmid’s “I deleted 90% of my harness”</a>, the keep-list for our stack is short: deterministic auth scopes, execution caps, PII scrubbing, and high-leverage semantic or code-execution tools.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:05:18, 00:12:07</p>
+    </section>
+
+    <section data-chapter="let-the-agent-check-its-work" data-visual="v5" data-caption="Pair autonomy with fast, deterministic dry runs and data checks">
+      <div class="chapter">Lesson 03</div>
+      <h2>Cheap deterministic checks build user trust</h2>
+      <p>When you stop micromanaging how the agent investigates, you replace step-by-step guidance with fast, cheap validation at the output boundary. In a data agent, that means BigQuery dry runs, dbt metric definition checks, and automated join/count/freshness checks; in a coding agent, it means linters and unit tests feeding exact errors back into the loop:</p>
+      <blockquote>“You have some sort of cheap, deterministic, fast way to validate results.”<span class="cite">00:09:45</span></blockquote>
+      <blockquote>“We're getting better results, which means the agent writes better SQL queries, writes better Python code. But also, you know, give confidence to the user.”<span class="cite">00:09:45</span></blockquote>
+      <blockquote>“So in summary, these are the three things we learned: automate what you know. But the second one is to let the agent explore and find out things you don't know. And finally, try to allow your agent to check its work whenever possible.”<span class="cite">00:11:40</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “Research how to get Sentry into our stuff.” (<code>2026-11-12T1508</code>). <b>The reading:</b> wiring Sentry telemetry into Will’s apps and agent loops feeds directly into <a href="https://blog.sentry.io/introducing-seer-agent/">Sentry’s Seer model</a>—combining traces, logs, source, and deterministic test checks so bugs turn into verified fixes.</div>
+      <ul class="key-points">
+        <li><strong>Combine overlapping APIs into semantic tools:</strong> own pagination, retries, and ID stitching in code, or use programmatic code-writing tools (<code>00:03:01</code>, <code>00:12:07</code>).</li>
+        <li><strong>Delete tunnel-vision heuristics:</strong> stripping intent routers and schema pre-fetchers made Sentry’s agent 4× faster and 30% cheaper in tokens (<code>00:05:18</code>, <code>00:08:07</code>).</li>
+        <li><strong>Keep a thin deterministic perimeter + cheap validators:</strong> enforce permissions, limits, and PII scrubbing outside the model, and validate outputs with dry runs, dbt checks, or tests (<code>00:05:18</code>, <code>00:09:45</code>).</li>
+      </ul>
+      <div class="alongside"><b>Read alongside</b><ul><li><a href="https://www.anthropic.com/research/writing-tools-for-agents">Writing effective tools for AI agents</a> &amp; <a href="https://www.anthropic.com/research/advanced-tool-use">Advanced tool use</a> — Anthropic research behind use-case consolidation and programmatic tool calling.</li><li><a href="https://vercel.com/blog/we-removed-80-percent-of-our-agents-tools">Vercel: We removed 80% of our agent’s tools</a> — Parallel case study on deleting harness complexity.</li><li><a href="https://blog.sentry.io/introducing-seer-agent/">Introducing Seer Agent</a> &amp; <a href="https://docs.sentry.io/product/ai-in-sentry/seer/">Seer docs</a> — Sentry’s investigative agent built on traces, logs, and checks.</li><li><a href="../../2026-11-11-how-to-build-agents-over-your-own-data/experience/page.html">How to build agents over your own data</a> — Companion data-agent architecture talk from Day 1.</li></ul></div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:09:45, 00:11:40, 00:12:07</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room — keeping ASR garbles like “Werzel” for “Vercel” and “Europe” for “Jira” verbatim) and on notes taken during the talk. “From the notes” and “The reading” are editorial synthesis, not his words. More on the <a href="../links.md">links page</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

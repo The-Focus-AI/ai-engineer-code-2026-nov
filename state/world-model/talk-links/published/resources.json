@@ -66,6 +66,86 @@
       "verified_at": "2026-11-12T13:24:21-08:00"
     }
   ],
+  "1325061": [
+    {
+      "type": "blog",
+      "title": "No AI Slop: A Manifesto",
+      "url": "https://www.slopmanifesto.com/",
+      "why": "The anti-slop manifesto the talk announces, written with Code Summit speakers and attendees; he is among its signers.",
+      "evidence": [
+        "page title: \"No AI Slop: A Manifesto\"",
+        "transcript: \"So you can read and sign the manifesto at slotmanifesto.com.\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": null,
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "paper",
+      "title": "SlopCodeBench: Benchmarking How Coding Agents Degrade Over Long-Horizon Iterative Tasks",
+      "url": "https://arxiv.org/abs/2603.24755",
+      "why": "The UW-Madison benchmark the talk cites: models extend their own code across checkpoints, and quality erodes.",
+      "evidence": [
+        "page title: \"[2603.24755] SlopCodeBench: Benchmarking How Coding Agents Degrade Over Long-Horizon Iterative Tasks\"",
+        "transcript: \"There's a benchmark called Slope Code Bench\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-03",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "repo",
+      "title": "SprocketLab/slop-code-bench",
+      "url": "https://github.com/SprocketLab/slop-code-bench",
+      "why": "The benchmark's code and quality rules, to run it yourself.",
+      "evidence": [
+        "page title: \"GitHub - SprocketLab/slop-code-bench: SlopCodeBench: Measuring Code Erosion Under Iterative Specification Refinement · GitHub\"",
+        "transcript: \"this is a benchmark that measures a model's ability to.\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": null,
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "HumanLayer is joining Factory",
+      "url": "https://www.humanlayer.dev/blog/humanlayer-joins-factory",
+      "why": "The Nov 4 announcement behind 'we are now a part of factory'.",
+      "evidence": [
+        "page title: \"HumanLayer is joining Factory | HumanLayer Blog\"",
+        "transcript: \"We are now a part of Factory\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-11-04",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "show-me: a coding agent skill for compact visual representations",
+      "url": "https://www.humanlayer.dev/blog/show-me-skill",
+      "why": "The Show Me skill from 'align visually': HTML mockups, tables and diagrams instead of walls of text.",
+      "evidence": [
+        "page title: \"show-me: a coding agent skill for compact visual representations | HumanLayer Blog\"",
+        "transcript: \"I published a skill called Show Me\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-08-12",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "youtube",
+      "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 8:15:20)",
+      "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=29720s",
+      "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 8:15:20 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+      "evidence": [
+        "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\"",
+        "transcript: \"Please welcome Dexter Horthy, CEO and founder of HumanLayer.\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-11-12",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    }
+  ],
   "1333169": [
     {
       "type": "blog",
@@ -792,6 +872,72 @@
       "verified_at": "2026-11-12T13:24:21-08:00"
     }
   ],
+  "1373474": [
+    {
+      "type": "blog",
+      "title": "Introducing Gemini 4 Hydrogen for Agentic Workflows",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "why": "The launch the talk announces: the fast Gemini 4 model, out the same day on Antigravity, the Gemini API, the Gemini app and Search.",
+      "evidence": [
+        "page title: \"Introducing Gemini 4 Hydrogen for Agentic Workflows\"",
+        "transcript: \"It's hydrogen, so you know you might have seen the launch earlier today.\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-11-12",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Gemini 4 Hydrogen: Fast agentic development for coders",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-hydrogen/",
+      "why": "The developer post for Hydrogen: coding, debugging and its thinking levels, for building with it.",
+      "evidence": [
+        "page title: \"Gemini 4 Hydrogen: Fast agentic development for coders\"",
+        "transcript: \"so you can build things with it\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-11-12",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Introducing Gemini 4 Carbon",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+      "why": "The frontier model the talk's benchmark and cheating-rate figures are about.",
+      "evidence": [
+        "page title: \"Introducing Gemini 4 Carbon\"",
+        "transcript: \"Has zero percent cheating rate on terminal benchmark.\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-10-28",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Gemini 4 Hydrogen and Orchestrator",
+      "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+      "why": "Hydrogen in Antigravity, the tool the talk says 100,000 Google engineers use daily, and the dogfooding loop behind weekly releases.",
+      "evidence": [
+        "page title: \"Gemini 4 Hydrogen and Orchestrator | Google Antigravity Blog\"",
+        "transcript: \"there are hundred thousand people using anti-gravity riding cord inside Google\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-11-12",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "youtube",
+      "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 7:35:20)",
+      "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=27320s",
+      "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 7:35:20 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+      "evidence": [
+        "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-11-12",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    }
+  ],
   "1373475": [
     {
       "type": "blog",
@@ -854,11 +1000,11 @@
       "why": "The compiler the talk is about: `bun compile` turns a program into machine code at build time using its TypeScript types, with no JIT, so it starts faster and uses less memory. Marked experimental.",
       "evidence": [
         "page title: \"Ahead-of-time compilation | Bun Docs\"",
-        "transcript: \"To add an ahead of time compiler\""
+        "transcript: \"add an ahead-of-time compiler\""
       ],
       "first_seen": "20261112-145406-03378c",
       "published_at": null,
-      "verified_at": "2026-11-12T14:54:06-08:00"
+      "verified_at": "2026-11-12T18:52:58-08:00"
     },
     {
       "type": "blog",
@@ -867,11 +1013,11 @@
       "why": "His July post on the summer's Zig-to-Rust port: the rewrite the talk compares this project to, which was safe because Bun's test suite is written in TypeScript, independent of the runtime's language.",
       "evidence": [
         "page title: \"Rewriting Bun in Rust | Bun Blog\"",
-        "transcript: \"because all the tests were written in typescript, we could run the tests on both the zinc version and the rest version\""
+        "transcript: \"because all the tests were written in TypeScript. We could run the test on both the Zyg version and the Rust version\""
       ],
       "first_seen": "20261112-145406-03378c",
       "published_at": "2026-07-08",
-      "verified_at": "2026-11-12T14:54:06-08:00"
+      "verified_at": "2026-11-12T18:52:58-08:00"
     },
     {
       "type": "blog",
@@ -880,11 +1026,11 @@
       "why": "Why Bun is at Anthropic: it is the runtime behind Claude Code, which is what makes a faster, leaner Bun a Claude Code memory and startup win.",
       "evidence": [
         "page title: \"Bun is joining Anthropic | Bun Blog\"",
-        "transcript: \"we need to make Clyde code use a lot less memory\""
+        "transcript: \"we need to make cloud code use a lot less memory\""
       ],
       "first_seen": "20261112-145406-03378c",
       "published_at": "2025-12-02",
-      "verified_at": "2026-11-12T14:54:06-08:00"
+      "verified_at": "2026-11-12T18:52:58-08:00"
     },
     {
       "type": "repo",
@@ -893,11 +1039,11 @@
       "why": "The JavaScript engine fuzzer (transcribed \"Puzzili\") Bun already ran and extended to test the compiler's type predictions.",
       "evidence": [
         "page title: \"GitHub - googleprojectzero/fuzzilli: A JavaScript Engine Fuzzer · GitHub\"",
-        "transcript: \"Puzzili is like a Javaister bending buzzer that VA uses.\""
+        "transcript: \"Fuseeley is like a JavaScript engine buzzer that EA uses.\""
       ],
       "first_seen": "20261112-145406-03378c",
       "published_at": null,
-      "verified_at": "2026-11-12T14:54:06-08:00"
+      "verified_at": "2026-11-12T18:52:58-08:00"
     },
     {
       "type": "repo",
@@ -906,11 +1052,11 @@
       "why": "The official ECMAScript conformance suite, one of the tests that predate the project and so could be trusted against the agents' code.",
       "evidence": [
         "page title: \"GitHub - tc39/test262: Official ECMAScript Conformance Test Suite · GitHub\"",
-        "transcript: \"plus web test, plus test 262\""
+        "transcript: \"Plus WebKIS test plus test two six two\""
       ],
       "first_seen": "20261112-145406-03378c",
       "published_at": null,
-      "verified_at": "2026-11-12T14:54:06-08:00"
+      "verified_at": "2026-11-12T18:52:58-08:00"
     },
     {
       "type": "repo",
@@ -919,11 +1065,120 @@
       "why": "The native Go port of TypeScript the talk benchmarks against: the AOT-compiled single-threaded TypeScript now beats the single-threaded Go port.",
       "evidence": [
         "page title: \"GitHub - microsoft/typescript-go: Staging repo for development of native port of TypeScript · GitHub\"",
-        "transcript: \"the abundant pile is now faster than the single threaded types of go port\""
+        "transcript: \"the Ubuntu file is now faster than the single-threaded TypeScript Go port\""
       ],
       "first_seen": "20261112-145406-03378c",
       "published_at": null,
-      "verified_at": "2026-11-12T14:54:06-08:00"
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    }
+  ],
+  "1373480": [
+    {
+      "type": "blog",
+      "title": "Brownfield rewrite resources",
+      "url": "https://diffusion.io/brownfield",
+      "why": "The talk's own companion page (the QR code 'for your agents'): tools, papers and case studies for verifying a rewrite: replay and comparison, generated inputs, testing the tests, specification and proof, simulated users, migration and cutover.",
+      "evidence": [
+        "page title: \"Brownfield rewrite resources — Diffusion\"",
+        "transcript: \"we do have some technical resources attached there on some ground field techniques\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": null,
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Software Factories And The Agentic Moment",
+      "url": "https://factory.strongdm.ai/",
+      "why": "His February write-up of the StrongDM software factory, the 'first software factory' the talk starts from.",
+      "evidence": [
+        "page title: \"StrongDM Software Factory\"",
+        "transcript: \"So that was the story of the beginning of the software factory that I built together with.\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-02-06",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "youtube",
+      "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 6:34:10)",
+      "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=23650s",
+      "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 6:34:10 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+      "evidence": [
+        "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-11-12",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    }
+  ],
+  "1373481": [
+    {
+      "type": "blog",
+      "title": "Amp Frontier Corporation",
+      "url": "https://ampcode.com/news/amp-frontier-corporation",
+      "why": "The December 2025 post announcing the spin-out from Sourcegraph, signed by Amp's co-founders: the start of the story the talk tells.",
+      "evidence": [
+        "page title: \"Amp Frontier Corporation - Amp\"",
+        "transcript: \"We decided to spin out Amp.\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2025-12-02",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "product",
+      "title": "Writing A Compiler In Go",
+      "url": "https://compilerbook.com/",
+      "why": "The compiler book by Thorsten Ball, the teammate in the talk's Frankfurt-airport story.",
+      "evidence": [
+        "page title: \"Writing A Compiler In Go | Thorsten Ball\"",
+        "transcript: \"He wrote that compiler book.\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": null,
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "youtube",
+      "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 7:54:50)",
+      "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=28490s",
+      "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 7:54:50 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+      "evidence": [
+        "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\"",
+        "transcript: \"Ladies and gentlemen, please welcome Quinn Slack, co-founder and CEO of Amp.\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-11-12",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    }
+  ],
+  "1373482": [
+    {
+      "type": "podcast",
+      "title": "Claude Code's Next Era — Thariq Shihipar, Anthropic",
+      "url": "https://latent.space/p/thariq",
+      "why": "His Latent Space episode from just before he left Anthropic: AskUserQuestion, elicitation and HTML as agent output, the things the talk says he was right about.",
+      "evidence": [
+        "page title: \"Claude Code’s Next Era — Thariq Shihipar, Anthropic — Latent Space\"",
+        "transcript: \"I was right about models being able to use HTML to understand their work.\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-09-29",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "youtube",
+      "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 8:37:10)",
+      "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=31030s",
+      "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 8:37:10 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+      "evidence": [
+        "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\"",
+        "transcript: \"Ladies and gentlemen, please welcome independent engineer and former Anthropic team member\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-11-12",
+      "verified_at": "2026-11-12T18:52:58-08:00"
     }
   ],
   "1376191": [
@@ -1004,6 +1259,72 @@
       "first_seen": "20261111-211018-ef4694",
       "published_at": "2026-09-27",
       "verified_at": "2026-11-12T13:24:21-08:00"
+    }
+  ],
+  "1376195": [
+    {
+      "type": "blog",
+      "title": "Google Antigravity built an OS (and more)",
+      "url": "https://antigravity.google/blog/google-antigravity-built-an-os",
+      "why": "The Antigravity team's May post on the agent-built operating system the talk opens with.",
+      "evidence": [
+        "page title: \"Google Antigravity built an OS (and more) | Google Antigravity Blog\"",
+        "transcript: \"A sentence can turn into an operating system\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-05-19",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Teamwork: when AI becomes a research partner",
+      "url": "https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner",
+      "why": "Teamwork, Antigravity's multi-agent framework where agents propose, critique and refine each other's work: lesson one's 'systems for teamwork'.",
+      "evidence": [
+        "page title: \"Teamwork: when AI becomes a research partner | Google Antigravity Blog\"",
+        "transcript: \"We created systems for teamwork for to do more ambitious work.\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-08-27",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Gemini 4 Carbon and /swarm",
+      "url": "https://antigravity.google/blog/gemini-4-carbon-in-google-antigravity",
+      "why": "The /swarm preview, a coordinator agent running parallel workers: the 'agents' workers' the talk says you can try now in Antigravity.",
+      "evidence": [
+        "page title: \"Gemini 4 Carbon and /swarm | Google Antigravity Blog\"",
+        "transcript: \"You can actually try this now in anti gravity.\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-11-10",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "blog",
+      "title": "Plugin Marketplace in Antigravity",
+      "url": "https://antigravity.google/blog/plugin-marketplace-in-antigravity",
+      "why": "The extensibility system of lesson three: users build their own plug-ins, and the platform learns from them.",
+      "evidence": [
+        "page title: \"Plugin Marketplace in Antigravity | Google Antigravity Blog\"",
+        "transcript: \"In our products, there's a lot of room for extensibility.\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-10-29",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "youtube",
+      "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 6:08:30)",
+      "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=22110s",
+      "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 6:08:30 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+      "evidence": [
+        "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-11-12",
+      "verified_at": "2026-11-12T18:52:58-08:00"
     }
   ],
   "1376197": [
@@ -1331,6 +1652,34 @@
       "verified_at": "2026-11-12T13:24:21-08:00"
     }
   ],
+  "1380098": [
+    {
+      "type": "product",
+      "title": "AI Engineer India — Bangalore, Q1 2027",
+      "url": "https://www.ai.engineer/india",
+      "why": "The next partnership event the closing announces.",
+      "evidence": [
+        "page title: \"AI Engineer India — Bangalore, Q1 2027\"",
+        "transcript: \"we're just announcing India as well next year\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": null,
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    },
+    {
+      "type": "youtube",
+      "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al (full-day Mainstage livestream, from about 8:57:00)",
+      "url": "https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=32220s",
+      "why": "The full-day Nov 12 Mainstage livestream, not a per-talk video; this talk starts at about 8:57:00 (offset from the recording's start time; approximate, the stage ran ahead of the grid).",
+      "evidence": [
+        "page title: \"AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al - YouTube\"",
+        "transcript: \"We're basically close to a hundred thousand people on the live stream\""
+      ],
+      "first_seen": "20261113-021047-a4c692",
+      "published_at": "2026-11-12",
+      "verified_at": "2026-11-12T18:52:58-08:00"
+    }
+  ],
   "1381580": [
     {
       "type": "blog",
@@ -1339,11 +1688,11 @@
       "why": "The launch post for the product the talk demos: several typed questions about one entity answered in a single call, grounded in live web data, at $1 per 1,000 calls.",
       "evidence": [
         "page title: \"Parallel Decisions API: web-grounded classification | Parallel\"",
-        "transcript: \"since we launched 2 weeks ago\""
+        "transcript: \"since we launched two weeks ago\""
       ],
       "first_seen": "20261112-145406-03378c",
       "published_at": null,
-      "verified_at": "2026-11-12T14:54:06-08:00"
+      "verified_at": "2026-11-12T18:52:58-08:00"
     },
     {
       "type": "blog",
@@ -1352,11 +1701,11 @@
       "why": "The open 300-question benchmark from the abstract, with the accuracy gap between grounded and ungrounded decision models the talk shows.",
       "evidence": [
         "page title: \"PWS-Decisions: a benchmark for web-grounded decisions | Parallel\"",
-        "transcript: \"there's huge accuracy differences\""
+        "transcript: \"huge accuracy differences and huge calibration differences\""
       ],
       "first_seen": "20261112-145406-03378c",
       "published_at": null,
-      "verified_at": "2026-11-12T14:54:06-08:00"
+      "verified_at": "2026-11-12T18:52:58-08:00"
     },
     {
       "type": "repo",
@@ -1369,7 +1718,7 @@
       ],
       "first_seen": "20261112-145406-03378c",
       "published_at": null,
-      "verified_at": "2026-11-12T14:54:06-08:00"
+      "verified_at": "2026-11-12T18:52:58-08:00"
     },
     {
       "type": "paper",
@@ -1382,7 +1731,7 @@
       ],
       "first_seen": "20261112-145406-03378c",
       "published_at": null,
-      "verified_at": "2026-11-12T14:54:06-08:00"
+      "verified_at": "2026-11-12T18:52:58-08:00"
     }
   ]
 }

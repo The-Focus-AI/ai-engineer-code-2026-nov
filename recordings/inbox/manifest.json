@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T14:46:54-08:00",
+  "generated_at": "2026-11-12T18:43:32-08:00",
   "source": "/Users/wschenk/Library/Group Containers/group.com.apple.VoiceMemos.shared/Recordings",
   "recordings": [
     {
@@ -654,29 +654,217 @@
       "title": "jarred sumner",
       "recorded_at": "2026-11-12T14:06:27-08:00",
       "duration_seconds": 1320.7,
-      "transcript": "transcript.txt",
-      "transcript_word_count": 2912,
-      "transcript_locale": "en_US",
-      "transcript_source": "voice-memos",
-      "transcript_timing": "word",
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 2803,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
       "source_file": "20261112 140627.m4a",
       "audio_sha256": "de922249ee0f306cf8e7e9a35f6cdc2ca3f866f545db67c3c81a768ccfa42383",
       "exported_at": "2026-11-12T14:46:54-08:00",
+      "transcript_echo_segments": 11,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 2912,
+          "locale": "en_US"
+        }
+      ],
       "folder": "2026-11-12_1406_jarred-sumner"
     },
     {
       "title": "The first Grounded Decision Model",
       "recorded_at": "2026-11-12T14:33:14-08:00",
       "duration_seconds": 645.1,
-      "transcript": "transcript.txt",
-      "transcript_word_count": 1751,
-      "transcript_locale": "en_US",
-      "transcript_source": "voice-memos",
-      "transcript_timing": "word",
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 1754,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
       "source_file": "20261112 143314.m4a",
       "audio_sha256": "594749931c175fc2c1f742565f9042604368c5645b846dd609f90ce6dbb384b0",
       "exported_at": "2026-11-12T14:46:54-08:00",
+      "transcript_echo_segments": 6,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 1751,
+          "locale": "en_US"
+        }
+      ],
       "folder": "2026-11-12_1433_The-first-Grounded-Decision-Model"
+    },
+    {
+      "title": "judgement is the last job",
+      "recorded_at": "2026-11-12T14:55:31-08:00",
+      "duration_seconds": 802.6,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 2199,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261112 145531.m4a",
+      "audio_sha256": "94fa657d8427d1a8a44888fbcb055e5a974578406c799a285d37e2f040fe5e1b",
+      "exported_at": "2026-11-12T17:49:26-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 2217,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-12_1455_judgement-is-the-last-job"
+    },
+    {
+      "title": "brownfield factories",
+      "recorded_at": "2026-11-12T15:21:20-08:00",
+      "duration_seconds": 1063.5,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 3165,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261112 152120.m4a",
+      "audio_sha256": "3f6d1915b837e4b486839080ecf4c796f666dd987abdca16711d93ef40153a5e",
+      "exported_at": "2026-11-12T17:49:26-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 3145,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-12_1521_brownfield-factories"
+    },
+    {
+      "title": "melvin",
+      "recorded_at": "2026-11-12T16:22:25-08:00",
+      "duration_seconds": 1098.6,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 2763,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261112 162225.m4a",
+      "audio_sha256": "9659c596735c38a3712f9a3d3583d3592f63a1a4011d980d9ad89ca487c500cb",
+      "exported_at": "2026-11-12T17:49:26-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 2772,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-12_1622_melvin"
+    },
+    {
+      "title": "amp",
+      "recorded_at": "2026-11-12T16:42:00-08:00",
+      "duration_seconds": 1150.9,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 3908,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261112 164200.m4a",
+      "audio_sha256": "cfa931f5cfade086e5c187933724793f0357642fb6655d9f4287137e4179b0a9",
+      "exported_at": "2026-11-12T17:49:26-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 3903,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-12_1642_amp"
+    },
+    {
+      "title": "dex",
+      "recorded_at": "2026-11-12T17:02:24-08:00",
+      "duration_seconds": 1244.2,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 4303,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261112 170224.m4a",
+      "audio_sha256": "81100f2a8469c39b83106443a9d10b034eb3f63d338ab3f2bab62361f3c5c625",
+      "exported_at": "2026-11-12T17:49:27-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 4302,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-12_1702_dex"
+    },
+    {
+      "title": "Thariq",
+      "recorded_at": "2026-11-12T17:24:20-08:00",
+      "duration_seconds": 1173.3,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 3538,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261112 172420.m4a",
+      "audio_sha256": "7c6a0ff870fbbe369cae6300640ff72429e157c9dc7c0d7368c3d37ef0717186",
+      "exported_at": "2026-11-12T17:49:27-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 3570,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-12_1724_Thariq"
+    },
+    {
+      "title": "sywx",
+      "recorded_at": "2026-11-12T17:44:02-08:00",
+      "duration_seconds": 312.1,
+      "transcript": "transcript.qwen3-asr-1.7b.txt",
+      "transcript_word_count": 847,
+      "transcript_locale": null,
+      "transcript_source": "qwen3-asr-1.7b",
+      "transcript_timing": "segment",
+      "source_file": "20261112 174402.m4a",
+      "audio_sha256": "82bcc18f80d586db1fb6d8dd76801c6b91578de20de3d17f63deaef4f9b97410",
+      "exported_at": "2026-11-12T17:49:27-08:00",
+      "transcript_echo_segments": 0,
+      "transcript_alternates": [
+        {
+          "file": "transcript.txt",
+          "source": "voice-memos",
+          "timing": "word",
+          "word_count": 836,
+          "locale": "en_US"
+        }
+      ],
+      "folder": "2026-11-12_1744_sywx"
     }
   ]
 }

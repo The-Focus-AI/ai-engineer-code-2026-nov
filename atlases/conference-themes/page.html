@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Six shifts after the diff · Conference Themes Presentation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../stories/runtime/talk.css">
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Conference Themes Presentation</div>
+  <h1>Six shifts after the diff</h1>
+  <p class="dek">Across 33 recorded talks, 101,668 words, and 191 extracted claims, engineering focus left syntax generation behind and reorganized around six architectural layers—and six live disagreements.</p>
+  <div class="talk-meta">33 recorded talks · 191 claims · 6 deep-dive presentations · Nov 10–12, 2026</div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual diagram-card" data-visual="v0">
+        <div class="lbl">The six-layer stack after the diff (191 claims)</div>
+        <svg viewBox="0 0 400 328" role="img" aria-label="Six-layer conference stack ordered from human judgment and attention budgets at the top down through modeled context, System One decision models, minimal hardened runtime, brownfield and demand factories, and owned verification loops at the foundation.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="10.5">
+            <rect x="20" y="14" width="360" height="44" rx="7" fill="var(--card)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="34" y="33" fill="var(--accent)" font-weight="700" font-size="10">06 · JUDGMENT WHEN CODE IS FREE</text>
+            <text x="34" y="49" fill="var(--ink)" font-size="9.5">13 talks · 28 claims · Taste, ambition, expected pain</text>
+
+            <rect x="20" y="66" width="360" height="44" rx="7" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="34" y="85" fill="var(--identity)" font-weight="700" font-size="10">05 · MODELED CONTEXT OVER CONNECTORS</text>
+            <text x="34" y="101" fill="var(--ink)" font-size="9.5">13 talks · 26 claims · Unified indexes, pruned memory</text>
+
+            <rect x="20" y="118" width="360" height="44" rx="7" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="34" y="137" fill="var(--machine)" font-weight="700" font-size="10">04 · SYSTEM ONE DECISION MODELS</text>
+            <text x="34" y="153" fill="var(--ink)" font-size="9.5">4 talks · 13 claims · Sub-second 4th logic gate (uncontested)</text>
+
+            <rect x="20" y="170" width="360" height="44" rx="7" fill="var(--panel)" stroke="var(--rule-strong)"/>
+            <text x="34" y="189" fill="var(--ink)" font-weight="700" font-size="10">03 · DELETE THE HARNESS</text>
+            <text x="34" y="205" fill="var(--muted)" font-size="9.5">15 talks · 30 claims · Fast sandboxes, one shared agent</text>
+
+            <rect x="20" y="222" width="360" height="44" rx="7" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="34" y="241" fill="var(--machine)" font-weight="700" font-size="10">02 · BROWNFIELD &amp; DEMAND FACTORIES</text>
+            <text x="34" y="257" fill="var(--ink)" font-size="9.5">16 talks · 26 claims · Existing promises, fuel economics</text>
+
+            <rect x="20" y="274" width="360" height="44" rx="7" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="34" y="293" fill="var(--identity)" font-weight="700" font-size="10">01 · OWN THE VERIFICATION LOOP</text>
+            <text x="34" y="309" fill="var(--ink)" font-size="9.5">19 talks · 48 claims · Deterministic checks, immune loops</text>
+          </g>
+        </svg>
+        <figcaption>Six durable engineering layers replace hand-written diffs as the center of work</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="../../talks/2026-11-11-heal-your-agents-dont-just-grade-them/experience/immune-system.jpg" alt="Conference slide titled Your immune system doesn't file a Jira ticket showing a three-step loop: Detect (spot what nobody predicted), Respond (treat the cause), Remember (don't get sick twice).">
+        <figcaption>Theme 01 · Own the verification loop · 19 talks · 48 claims · 1 counter-claim</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="../../talks/2026-11-12-brownfield-factories/experience/brownfield-faster-cheaper-safer.jpg" alt="Justin McCarthy's Diffusion slide titled Brownfield Factories: Faster, Cheaper, Safer illustrating automated robotic assembly operating along an existing conveyor line.">
+        <figcaption>Theme 02 · Brownfield &amp; demand factories · 16 talks · 26 claims · 2 counter-claims</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="../../talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/one-tool.jpg" alt="Philipp Schmid's slide titled A 1-tool agent: a computer instead of a toolbox showing a model invoking a single bash tool inside a sandboxed Linux workspace.">
+        <figcaption>Theme 03 · Delete the harness · 15 talks · 30 claims · 4 counter-claims</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v4">
+        <img src="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/duckdb-live-demo.jpg" alt="Live terminal and SQL editor demo running a Jev System One decision function inline inside a DuckDB SELECT query against candidate rows.">
+        <figcaption>Theme 04 · System One decision models · 4 talks · 13 claims · Uncontested</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v5">
+        <img src="../../talks/2026-11-11-how-to-build-agents-over-your-own-data/experience/one-search-layer.jpg" alt="Aamir Shakir's slide titled One search layer for company knowledge showing Slack, Gmail, Google Drive, GitHub, Linear, and Notion consolidated into a single indexed store.">
+        <figcaption>Theme 05 · Modeled context over connectors · 13 talks · 26 claims · 2 counter-claims</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v6">
+        <img src="../../talks/2026-11-12-judgement-is-the-last-job/experience/judgement-taste.jpg" alt="Ishaan Dey's slide centering the word Judgement surrounded by observations on knowing what to build and taste when code generation becomes trivial.">
+        <figcaption>Theme 06 · Judgment when code is free · 13 talks · 28 claims · 2 counter-claims</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v7">
+        <div class="lbl">Six live fault lines across the 33 talks</div>
+        <svg viewBox="0 0 400 320" role="img" aria-label="Diagram summarizing the six unresolved technical debates across the summit: Context modeling vs index vs pruning; single shared agent vs parallel swarms; delete prompts vs encode checks; System One vs general loops; steady brownfield loops vs weekend model drops; hard pause stops vs overfencing.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="10">
+            <rect x="18" y="14" width="364" height="44" rx="6" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="30" y="32" fill="var(--accent)" font-weight="700">1. CONTEXT</text>
+            <text x="30" y="48" fill="var(--ink)">Warehouse models vs. unified index vs. slash stale files</text>
+
+            <rect x="18" y="66" width="364" height="44" rx="6" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="30" y="84" fill="var(--identity)" font-weight="700">2. AUTONOMY</text>
+            <text x="30" y="100" fill="var(--ink)">Unmergeable trajectories vs. supervised agent fleets</text>
+
+            <rect x="18" y="118" width="364" height="44" rx="6" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="30" y="136" fill="var(--machine)" font-weight="700">3. HARNESSES</text>
+            <text x="30" y="152" fill="var(--ink)">Delete scaffolding vs. encode rules in runnable code</text>
+
+            <rect x="18" y="170" width="364" height="44" rx="6" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="30" y="188" fill="var(--identity)" font-weight="700">4. DECISION LOOPS</text>
+            <text x="30" y="204" fill="var(--ink)">Skip embeddings with System One vs. general tool agents</text>
+
+            <rect x="18" y="222" width="364" height="44" rx="6" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="30" y="240" fill="var(--machine)" font-weight="700">5. PACING</text>
+            <text x="30" y="256" fill="var(--ink)">Continuous brownfield cadence vs. 48-hour sprints</text>
+
+            <rect x="18" y="274" width="364" height="44" rx="6" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="30" y="292" fill="var(--accent)" font-weight="700">6. GUARDRAILS</text>
+            <text x="30" y="308" fill="var(--ink)">Deterministic pause gates vs. paralyzing overfencing</text>
+          </g>
+        </svg>
+        <figcaption>Consensus on the six layers hides six fierce engineering tradeoffs underneath</figcaption>
+      </figure>
+
+    </div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="v0" data-visual="v0" data-caption="191 claims across 33 talks converge on a six-layer software stack after the diff">
+      <div class="chapter">Overview</div>
+      <h2>Six layers replace the diff</h2>
+      <p>Over three days in November 2026—33 recorded talks, 101,668 transcribed words, and 191 structured claims—one shift dwarfed every model announcement: code generation is no longer the scarce skill, and the pull-request diff is no longer the primary unit of software trust.</p>
+      <p>Instead, engineering value snapped into six reinforcing layers. Teams anchor safety at the bottom with owned verification loops, scale continuous maintenance through brownfield factories, strip away brittle prompt harnesses in favor of fast sandboxes, offload inline classification to sub-second System One models, replace sprawling connectors with modeled context, and spend human judgment at the top on taste and ambition.</p>
+    </section>
+
+    <section data-chapter="v1" data-visual="v1" data-caption="Theme 01 · Own the verification loop (19 talks, 48 claims, 1 counter)">
+      <div class="chapter">Theme 01 · 19 talks · 48 claims</div>
+      <h2>Own the verification loop</h2>
+      <p>The deepest consensus of the summit: trust in agent-generated systems comes from owning the verification loop—deterministic checks, stakes-scaled credentials, replayable execution traces, hardened sandboxes, and continuous failure diagnosis—rather than reading diffs line by line.</p>
+      <blockquote>“Now we can build things in minutes or hours. But the review and testing still takes hours or days if we're doing it in the old way. So we bring in agentic code review, agentic testing.”<span class="who">Dexter Horthy · <a href="../../talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/experience/page.html">12-Factor-Factories: Design Patterns for Agentic Coding</a> · 00:04:20</span></blockquote>
+      <blockquote>“So instead of thinking about owning the code. Own the guardrails. Own the rules.”<span class="who">Ankit Jain · <a href="../../talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/experience/page.html">One team's path to trusting AI generated code</a> · 00:17:18</span></blockquote>
+      <p><a class="deep-dive-cta" href="../own-the-verification-loop/page.html">Open Theme 01 Deep Dive: Own the verification loop (19 talks) →</a></p>
+    </section>
+
+    <section data-chapter="v2" data-visual="v2" data-caption="Theme 02 · Brownfield & demand factories (16 talks, 26 claims, 2 counters)">
+      <div class="chapter">Theme 02 · 16 talks · 26 claims</div>
+      <h2>Brownfield &amp; demand factories</h2>
+      <p>Because coding tokens make tiny teams perform like large organizations whenever live runtime feedback exists, agentic factories flourish on existing brownfield codebases—bounded by real token economics, durable multi-hour runtimes, and companion demand loops that grow the moat.</p>
+      <blockquote>“But in the end, what matters is actually not the code.”<span class="who">Fabian Hedin · <a href="../../talks/2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">What it takes to set intelligence free</a> · 00:02:04</span></blockquote>
+      <blockquote>“We have to figure out how to build a demand factory. Because our brownfield factory can't build the moat. Right. All it can do is keep our existing promises running well.”<span class="who">Justin McCarthy · <a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Brownfield Factories</a> · 00:13:17</span></blockquote>
+      <p><a class="deep-dive-cta" href="../brownfield-and-demand-factories/page.html">Open Theme 02 Deep Dive: Brownfield &amp; demand factories (16 talks) →</a></p>
+    </section>
+
+    <section data-chapter="v3" data-visual="v3" data-caption="Theme 03 · Delete the harness (15 talks, 30 claims, 4 counters)">
+      <div class="chapter">Theme 03 · 15 talks · 30 claims</div>
+      <h2>Delete the harness</h2>
+      <p>Every model release absorbs scaffolding the previous generation required. Speakers repeatedly advised deleting over-engineered orchestration wrappers and investing instead in millisecond sandboxes, fast tool execution, semantic tool surfaces, and one shared company agent with public traces.</p>
+      <blockquote>“General methods that leverage computations are ultimately the most effective by a large margin”<span class="who">Philipp Schmid · <a href="../../talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">I deleted 90% of my harness (And It Got Better)</a> · 00:00:13</span></blockquote>
+      <blockquote>“how much of the harness do I really need to achieve the Same task, and what is overhead to the model”<span class="who">Philipp Schmid · <a href="../../talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">I deleted 90% of my harness (And It Got Better)</a> · 00:03:20</span></blockquote>
+      <p><a class="deep-dive-cta" href="../delete-the-harness-harden-the-runtime/page.html">Open Theme 03 Deep Dive: Delete the harness (15 talks) →</a></p>
+    </section>
+
+    <section data-chapter="v4" data-visual="v4" data-caption="Theme 04 · System One decision models (4 talks, 13 claims, 0 counters)">
+      <div class="chapter">Theme 04 · 4 talks · 13 claims</div>
+      <h2>System One decision models</h2>
+      <p>Uncontested across four talks, sub-second calibrated decision models move AI out of heavyweight conversational chat loops and turn model inference into a fast, deterministic fourth logic gate embedded straight inside DuckDB queries, UI keystrokes, and live web-grounded pipelines.</p>
+      <blockquote>“We don't have to send every request to an LLM.”<span class="who">Michelle Chen · <a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">cloudflare is a neolab</a> · 00:07:50</span></blockquote>
+      <blockquote>“I often call it you get Einstein ninety five percent of the time, but Mr Bean five.”<span class="who">Diogo Almeida · <a href="../../talks/2026-11-11-i-love-you-so-jevving-much/experience/page.html">I love you so jevving much</a> · 00:08:57</span></blockquote>
+      <p><a class="deep-dive-cta" href="../system-one-decision-models/page.html">Open Theme 04 Deep Dive: System One decision models (4 talks) →</a></p>
+    </section>
+
+    <section data-chapter="v5" data-visual="v5" data-caption="Theme 05 · Modeled context over connectors (13 talks, 26 claims, 2 counters)">
+      <div class="chapter">Theme 05 · 13 talks · 26 claims</div>
+      <h2>Modeled context over connectors</h2>
+      <p>Wiring agents directly to dozens of uncurated SaaS connectors multiplies latency, broken permissions, and conflicting facts. Enterprise builders pushed context upstream into governed warehouse data models, unified permission-filtered search indexes, and actively pruned agent memory.</p>
+      <blockquote>“The company context is the key here.”<span class="who">Utkarsh Shrivastava · <a href="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/experience/page.html">Building a Shared AI Assistant: The Platform Challenges Beyond MCP</a> · 00:02:11</span></blockquote>
+      <blockquote>“Intent is why are we making whatever change.”<span class="who">Ankit Jain · <a href="../../talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/experience/page.html">One team's path to trusting AI generated code</a> · 00:08:38</span></blockquote>
+      <p><a class="deep-dive-cta" href="../modeled-context-beats-connectors/page.html">Open Theme 05 Deep Dive: Modeled context over connectors (13 talks) →</a></p>
+    </section>
+
+    <section data-chapter="v6" data-visual="v6" data-caption="Theme 06 · Judgment when code is free (13 talks, 28 claims, 2 counters)">
+      <div class="chapter">Theme 06 · 13 talks · 28 claims</div>
+      <h2>Judgment when code is free</h2>
+      <p>Zero-cost implementation shifts engineering value away from typing syntax toward human judgment, taste, ambition, and deliberate attention budgets—forcing teams to triage expected pain and guard engineers from high-speed decision fatigue.</p>
+      <blockquote>“AI cannot replace human judgment. It can only amplify our judgment, or maybe perhaps our lack of judgment in certain cases. And the slop is asymmetric. The cost of producing a thousand line PR or a ten page doc is approaching zero. But the cost of reviewing it is still barely constant.”<span class="who">Dexter Horthy · <a href="../../talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/experience/page.html">12-Factor-Factories: Design Patterns for Agentic Coding</a> · 00:14:43</span></blockquote>
+      <blockquote>“and I think it's the theme of this conference: is to be more ambitious now that we have all of these new tools.”<span class="who">Simon Willison · <a href="../../talks/2026-11-11-2026-in-llms/experience/page.html">2026 in LLMs</a> · 00:01:58</span></blockquote>
+      <p><a class="deep-dive-cta" href="../judgment-when-code-is-free/page.html">Open Theme 06 Deep Dive: Judgment when code is free (13 talks) →</a></p>
+    </section>
+
+    <section data-chapter="v7" data-visual="v7" data-caption="Six sharp operational disagreements behind the conference consensus">
+      <div class="chapter">Contested debates</div>
+      <h2>Six fault lines where speakers disagreed</h2>
+      <p>Beneath the shared six-layer blueprint, builders divided sharply on six practical bets:</p>
+      <p><strong>1. Warehouse modeling vs. unified search vs. ruthless pruning.</strong> Data teams such as Claire Carroll argued agents should read governed analytics tables (<em>“The exact same skills that made them good at delivering analytics are going to make them good.”</em>, <a href="../../talks/2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/experience/page.html">00:26:44</a>), Aamir Shakir advocated one pre-indexed search layer, and Steve Yegge told teams drowning in bloated rule files:</p>
+      <blockquote>“So you just gotta go in there and just aggressively slash the crap out of it.”<span class="who">Steve Yegge · <a href="../../talks/2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Software Factories: Escape from Trash Mountain</a> · 00:10:42</span></blockquote>
+      <p><strong>2. Single-agent threads vs. supervised swarms.</strong> While Karan Vaidya and Steve Yegge scaled multi-agent fleets across code and knowledge work, Fabian Hedin argued concurrent agent edits remain fundamentally hard to reconcile:</p>
+      <blockquote>“So unlike it, we cannot merge agent trajectories”<span class="who">Fabian Hedin · <a href="../../talks/2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">What it takes to set intelligence free</a> · 00:06:56</span></blockquote>
+      <p><strong>3. Deleting the harness vs. encoding rules in code.</strong> Philipp Schmid stripped orchestration down to raw bash, whereas Lauren Tan insisted on codifying team lessons directly into deterministic codebase checks: <em>“Instead of adding another line to your rules or your agent's dot md, because it's far more reproducible, it's in code.”</em> (<a href="../../talks/2026-11-11-all-code-is-slop-except-mine/experience/page.html">00:02:55</a>).</p>
+      <p><strong>4. Inline System One calls vs. general agent loops.</strong> Diogo Almeida bypassed multi-step embeddings and agent retrieval entirely (<em>“But with Jeff, we basically take out all the embedding steps.”</em>, <a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/page.html">00:08:03</a>), whereas retrieval platforms kept general tool-calling loops for ambiguous queries.</p>
+      <p><strong>5. Continuous brownfield cadence vs. 48-hour weekend drops.</strong> Justin McCarthy grounded factories in steady maintenance (<em>“So you've got an existing codestate. You've got an existing set of promises. Just make it continuous. Make it loop and make it keep those promises.”</em>, <a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">00:06:30</a>), while Michelle Chen showed Cloudflare shipping a custom trained model inside one 48-hour weekend.</p>
+      <p><strong>6. Hard pause gates vs. overfencing paralysis.</strong> Raz Berman Gold enforced explicit deterministic stops (<em>“You can define pausing, deterministic stop, where the agent will stop.”</em>, <a href="../../talks/2026-11-11-the-software-factory-that-needs-zero-fdes/experience/page.html">00:04:32</a>), while Steve Yegge warned teams can lock agents down so tightly that nothing ever ships.</p>
+
+      <div class="reading">
+        <b>For TheFocus.AI:</b> This six-layer map is Will and TheFocus.AI's blueprint for client engineering systems: anchor trust in Theme 01 deterministic verification and trace artifacts, target Theme 02 brownfield promises first, keep Theme 03 harnesses disposable around fast sandboxes, deploy Theme 04 System One models for sub-second inline gates, feed Theme 05 modeled and permissioned context, and aim freed client capacity at Theme 06 judgment and higher-ambition bets.
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<section class="theme-talks-dir" id="theme-deep-dives" aria-label="Theme deep-dive presentations">
+  <div class="dir-head">
+    <h2>Explore all six theme deep dives</h2>
+    <span class="dir-count">6 themes · 191 claims across 33 talks</span>
+  </div>
+  <div class="theme-talks-grid">
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Theme 01 of 06</span><span>19 talks · 48 claims</span></div>
+      <h3 class="tt-title"><a href="../own-the-verification-loop/page.html">Own the verification loop</a></h3>
+      <p class="tt-thesis">Deterministic rules, stakes-scaled credentials, replayable traces, hardened sandboxes, and continuous failure diagnosis.</p>
+      <div class="tt-links"><a href="../own-the-verification-loop/page.html">Open deep dive</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Theme 02 of 06</span><span>16 talks · 26 claims</span></div>
+      <h3 class="tt-title"><a href="../brownfield-and-demand-factories/page.html">Brownfield &amp; demand factories</a></h3>
+      <p class="tt-thesis">Continuous maintenance on existing products with live feedback, bounded by token economics and demand expansion.</p>
+      <div class="tt-links"><a href="../brownfield-and-demand-factories/page.html">Open deep dive</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Theme 03 of 06</span><span>15 talks · 30 claims</span></div>
+      <h3 class="tt-title"><a href="../delete-the-harness-harden-the-runtime/page.html">Delete the harness</a></h3>
+      <p class="tt-thesis">Strip brittle orchestration wrappers and invest in millisecond sandboxes, semantic tools, and one shared company agent.</p>
+      <div class="tt-links"><a href="../delete-the-harness-harden-the-runtime/page.html">Open deep dive</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Theme 04 of 06</span><span>4 talks · 13 claims</span></div>
+      <h3 class="tt-title"><a href="../system-one-decision-models/page.html">System One decision models</a></h3>
+      <p class="tt-thesis">Sub-second calibrated models acting as an inline fourth logic gate inside DuckDB queries, UI keystrokes, and pipelines.</p>
+      <div class="tt-links"><a href="../system-one-decision-models/page.html">Open deep dive</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Theme 05 of 06</span><span>13 talks · 26 claims</span></div>
+      <h3 class="tt-title"><a href="../modeled-context-beats-connectors/page.html">Modeled context over connectors</a></h3>
+      <p class="tt-thesis">Unified permission-filtered indexes, governed warehouse schemas, and actively pruned memory over raw connector sprawl.</p>
+      <div class="tt-links"><a href="../modeled-context-beats-connectors/page.html">Open deep dive</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Theme 06 of 06</span><span>13 talks · 28 claims</span></div>
+      <h3 class="tt-title"><a href="../judgment-when-code-is-free/page.html">Judgment when code is free</a></h3>
+      <p class="tt-thesis">Zero-cost implementation shifts value to human judgment, taste, ambition, expected-pain triage, and attention budgets.</p>
+      <div class="tt-links"><a href="../judgment-when-code-is-free/page.html">Open deep dive</a></div>
+    </article>
+
+  </div>
+</section>
+
+<footer class="talk-foot">
+  Built from <a href="story.md">the conference themes story</a>, synthesizing 33 talks, 101,668 spoken words, and 191 claims from AI Engineer Code Summit 2026. Every quote is verbatim from its talk transcript (Qwen3-ASR, garbles preserved) and links directly to its interactive talk page. Diagrams are illustrative.
+</footer>
+
+<script src="../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

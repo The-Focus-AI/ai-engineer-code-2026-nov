@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete the harness · Theme 03 of 06</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Theme Deep Dive 03 of 06</div>
+  <h1>Delete the harness</h1>
+  <p class="dek">Stop over-engineering orchestration wrappers that models absorb every release; delete brittle scaffolding and invest in millisecond sandboxes, fast tool execution, semantic tool surfaces, and one shared organizational agent with public traces.</p>
+  <div class="talk-meta">15 talks · 30 claims · 4 counter-claims · Also called: bash, bitter lesson, one tool, rebuild the harness, work in public, smooth interior</div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="../../talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/one-tool.jpg" alt="Philipp Schmid's slide: 'A 1-tool agent: a computer instead of a toolbox', showing Prompt -> Model -> bash (the only tool) -> Computer sandbox with cat, sed, rg, python, git, pytest, curl, and other agents.">
+        <figcaption>Philipp Schmid's 1-tool agent slide · <a href="../../talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">I deleted 90% of my harness</a></figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/tools-by-use-case.jpg" alt="Arsalan Bashir's Sentry slide showing an Agent calling consolidated use-case tools find_user() across CRM and Database and find_pending_tasks() across GitHub and Linear.">
+        <figcaption>Sentry's use-case tool consolidation · <a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Let the Agent Cook</a></figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="../../talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/experience/bottleneck.jpg" alt="Natalie Serrino's Gimlet Labs slide: 'Big speedups in one area lead to new bottlenecks in other areas', showing a 105s turn (82% inference, 18% tool calls) shrinking to a 28s turn at 10x inference where tool calls jump to 67%.">
+        <figcaption>Tool calls become 67% of a 10x turn · <a href="../../talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/experience/page.html">When AI Is 10x Faster</a></figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v4">
+        <img src="../../talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/experience/public.jpg" alt="Zach Bruggeman's Ramp slide: 'Easier to work in public than in private — Every session is public inside the company, No how to use AI trainings, Learn by watching your teammates.'">
+        <figcaption>Ramp's single shared Inspect agent · <a href="../../talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/experience/page.html">Agent that builds the culture</a></figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v5">
+        <div class="lbl">Delete every release vs. harden forever</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Comparison: Delete brittle orchestration wrappers (step-by-step prompts, pre-fetched schemas, per-API MCPs, private dotfiles) while hardening sandboxes, deterministic code checks, readable specs, and shared traces.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="18" y="18" width="174" height="214" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="32" y="40" fill="var(--muted)" font-weight="700" font-size="10">DELETE EVERY RELEASE</text>
+            <text x="32" y="68" fill="var(--ink)" font-weight="600">Step-by-step prompts</text>
+            <text x="32" y="84" fill="var(--muted)" font-size="10">model outgrows choreography</text>
+            <text x="32" y="112" fill="var(--ink)" font-weight="600">Pre-fetched schemas</text>
+            <text x="32" y="128" fill="var(--muted)" font-size="10">creates tunnel vision</text>
+            <text x="32" y="156" fill="var(--ink)" font-weight="600">Per-API wrappers</text>
+            <text x="32" y="172" fill="var(--muted)" font-size="10">replace with code / semantic</text>
+            <text x="32" y="200" fill="var(--ink)" font-weight="600">Private agent dotfiles</text>
+            <text x="32" y="216" fill="var(--muted)" font-size="10">traps best practice in silos</text>
+
+            <rect x="208" y="18" width="174" height="214" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="222" y="40" fill="var(--accent)" font-weight="700" font-size="10">HARDEN &amp; KEEP</text>
+            <text x="222" y="68" fill="var(--ink)" font-weight="600">Sandboxes &amp; fast tools</text>
+            <text x="222" y="84" fill="var(--muted)" font-size="10">67% of 10× faster turns</text>
+            <text x="222" y="112" fill="var(--ink)" font-weight="600">Deterministic checks</text>
+            <text x="222" y="128" fill="var(--muted)" font-size="10">types, lints, APIs over prose</text>
+            <text x="222" y="156" fill="var(--ink)" font-weight="600">Readable specs &amp; context</text>
+            <text x="222" y="172" fill="var(--muted)" font-size="10">domain nuance &amp; warehouse</text>
+            <text x="222" y="200" fill="var(--ink)" font-weight="600">One shared public agent</text>
+            <text x="222" y="216" fill="var(--identity)" font-size="10">traces compound across org</text>
+          </g>
+        </svg>
+        <figcaption>Synthesized from Schmid, Bashir, Tan, Shihipar, Eric, and Bruggeman</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v6">
+        <div class="lbl">The six-month harness audit</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Five-step six-month harness audit: Benchmark baseline, Strip scaffolding to Bash and semantic tools, Measure speed and tokens, Harden VM and tool latency plus deterministic checks, Ship one shared public agent.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <g fill="var(--panel)" stroke="var(--rule)">
+              <rect x="24" y="16" width="352" height="36" rx="6"/>
+              <rect x="24" y="62" width="352" height="36" rx="6"/>
+              <rect x="24" y="108" width="352" height="36" rx="6"/>
+              <rect x="24" y="154" width="352" height="36" rx="6"/>
+            </g>
+            <rect x="24" y="200" width="352" height="36" rx="6" fill="var(--card)" stroke="var(--accent)"/>
+
+            <text x="40" y="38" fill="var(--accent)" font-weight="700">01</text>
+            <text x="64" y="38" fill="var(--ink)" font-weight="600">Lock a regression benchmark before touching code</text>
+            <text x="40" y="84" fill="var(--accent)" font-weight="700">02</text>
+            <text x="64" y="84" fill="var(--ink)" font-weight="600">Strip routing &amp; wrappers down to bash + semantic tools</text>
+            <text x="40" y="130" fill="var(--accent)" font-weight="700">03</text>
+            <text x="64" y="130" fill="var(--ink)" font-weight="600">Measure latency &amp; token drop (expect ~3–4× wins)</text>
+            <text x="40" y="176" fill="var(--accent)" font-weight="700">04</text>
+            <text x="64" y="176" fill="var(--ink)" font-weight="600">Harden VM execution speed, git/SQL state &amp; lints</text>
+            <text x="40" y="222" fill="var(--accent)" font-weight="700">05</text>
+            <text x="64" y="222" fill="var(--identity)" font-weight="600">Roll out one shared agent with public team traces</text>
+          </g>
+        </svg>
+        <figcaption>Playbook for TheFocus.AI from Schmid (00:03:20) and Dey (00:04:35)</figcaption>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="bitter-lesson" data-visual="v1" data-caption="Post-training absorbs 90% of yesterday's agent harness every six months">
+      <div class="chapter">01 · The bitter lesson</div>
+      <h2>The model eats the harness</h2>
+      <p>Every model release invalidates a layer of prompt engineering and custom tool glue that engineers built to work around last year’s blind spots. Philipp Schmid invokes Rich Sutton’s Bitter Lesson: because post-training optimizes directly for task outcomes rather than obeying hand-wired tool trees, models learn cheaper paths and custom harnesses turn into dead weight.</p>
+      <blockquote>“General methods that leverage computations are ultimately the most effective by a large margin”<span class="who">Philipp Schmid · <a href="../../talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">I deleted 90% of my harness</a> · 00:00:13</span></blockquote>
+      <p>Rebuilding the Gemini agent harness from scratch every six months revealed that 90% of his custom file tools, planners, and memory helpers had become pure overhead—collapsing cleanly into one <code>bash</code> tool inside a sandbox where the agent writes inline Python scripts when needed.</p>
+      <blockquote>“If the agent itself is a CLI, it can call itself using bash.”<span class="who">Philipp Schmid · <a href="../../talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">I deleted 90% of my harness</a> · 00:04:31</span></blockquote>
+      <p>Across the summit, builders saw the same shrinkage from opposite ends. Justin McCarthy watches brownfield factory skills shrink without manual rewrites; Steve Yegge warns that refusal to prune turns yesterday’s scaffolding into “garbage mountain” (`00:01:59`); and Ishaan Dey urges teams to relax rigid constraints as intelligence scales (`00:02:57`).</p>
+      <blockquote>“The skills are getting shorter. Harnesses are getting more general, of course, and a lot of this again is credit to the models themselves.”<span class="who">Justin McCarthy · <a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Brownfield Factories</a> · 00:08:09</span></blockquote>
+    </section>
+
+    <section data-chapter="semantic-tools" data-visual="v2" data-caption="Pre-chewed routers create blind spots; semantic tools and code get 4× speedups">
+      <div class="chapter">02 · Tool surfaces</div>
+      <h2>Swap API wrappers for semantic tools and primitives</h2>
+      <p>Pre-classifying user intent and pre-fetching schemas used to feel like helpful optimization. At Sentry, Arsalan Bashir found those guardrails aged terribly across model upgrades—hiding information the model could actually use when investigating production issues.</p>
+      <blockquote>“The first and obvious one was if this optimization kind of became a blind spot for the model.”<span class="who">Arsalan Bashir · <a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Let the Agent Cook</a> · 00:05:18</span></blockquote>
+      <p>Consolidating overlapping per-API wrappers into clean, use-case-shaped tools—and pairing them with programmatic tooling where the model writes code directly against APIs (`00:03:01`)—produced immediate latency and cost gains.</p>
+      <blockquote>“The agent only got four times faster, but also used 30 percent.”<span class="who">Arsalan Bashir · <a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Let the Agent Cook</a> · 00:08:07</span></blockquote>
+      <p>Take that pruning all the way down to multi-agent coordination and even workflow graphs disappear. Lance Martin’s 1,000-agent math formalization ran with no bespoke orchestration DSL, Jarred Sumner replaced rigid workflows with long-lived subagents holding deep codebase context (`00:14:51`), and Simon Willison notes that Fable-class models brute-force hard problems once given clear tools and goals (`00:08:02`).</p>
+      <blockquote>“Two different things: Git and a SQL database.”<span class="who">Lance Martin · <a href="../../talks/2026-11-12-exploring-claudes-frontier/experience/page.html">Exploring Claude’s frontier</a> · 00:02:06</span></blockquote>
+    </section>
+
+    <section data-chapter="harden-runtime" data-visual="v3" data-caption="At 10× inference speed, tool calls jump from 18% to 67% of every turn">
+      <div class="chapter">03 · Runtime latency</div>
+      <h2>Harden the runtime for 10× faster inference</h2>
+      <p>When orchestration shrinks, execution speed becomes the real product constraint. Natalie Serrino cites June benchmarks showing why coding agents still break developer flow—forcing context switches far past the 10-second human attention boundary (`00:01:02`).</p>
+      <blockquote>“From data from June, the median coding agent turn is 63 seconds.”<span class="who">Natalie Serrino · <a href="../../talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/experience/page.html">When AI Is 10x Faster</a> · 00:02:57</span></blockquote>
+      <p>Crossing 10× inference speed pulls agents onto the live critical path—such as blocking malicious uploads inline (`00:12:18`)—and immediately exposes a new bottleneck inside the runtime itself:</p>
+      <div class="counter-box"><b>Counter-claim (bottleneck shift):</b> Cutting inference latency 10× does not automatically make turns 10× faster. Tool execution balloons from 18% to 67% of wall-clock time, forcing builders to harden sandbox boot speed and tool pipelines next.</div>
+      <blockquote>“And have 10x faster inference. We can see that 67% of that will be tool.”<span class="who">Natalie Serrino · <a href="../../talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/experience/page.html">When AI Is 10x Faster</a> · 00:10:37</span></blockquote>
+      <p>Teams are also cutting runtime overhead by routing routine classification away from heavy LLM loops—Cloudflare pairs System One models with a single LLM call for 94% fewer tokens, and Parallel’s grounded decision API answers in under a second at $1 per 1,000 requests (`00:03:01`).</p>
+      <blockquote>“We shrunk our LLM calls from five down to one. It was about 94 percent less tokens.”<span class="who">Michelle Chen · <a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">cloudflare is a neolab</a> · 00:14:06</span></blockquote>
+    </section>
+
+    <section data-chapter="shared-public-agent" data-visual="v4" data-caption="One shared organizational agent with public sessions compounds engineering taste">
+      <div class="chapter">04 · Organizational surface</div>
+      <h2>One shared agent with public traces</h2>
+      <p>Deleting brittle harnesses at the model layer only helps if teams stop reinventing private agent configs at the org layer. Zach Bruggeman shows that letting every developer tune separate dotfiles wastes days across a company (`00:03:29`). Ramp standardized on one shared <code>Inspect</code> agent (`00:05:14`) where every session is public by default—eliminating training decks because engineers watch how peers steer agents.</p>
+      <blockquote>“Build tools that kill information silos.”<span class="who">Zach Bruggeman · <a href="../../talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/experience/page.html">Agent that builds the culture</a> · 00:04:25</span></blockquote>
+      <blockquote>“It's actually easier to work in public than in private.”<span class="who">Zach Bruggeman · <a href="../../talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/experience/page.html">Agent that builds the culture</a> · 00:05:38</span></blockquote>
+      <p>Quinn Slack took that convergence to the entire company when spinning out Amp—replacing separate trackers and support queues with shared agent threads—while Utkarsh Shrivastava emphasizes at Netflix that the chat UI is merely the replaceable tip above durable company context (`00:02:11`).</p>
+      <blockquote>“We got rid of all of the other tools. We got rid of all of the other things you got to check. Obviously, not Jira. No task tracking. We don't have a support system. Everything we do in the agent.”<span class="who">Quinn Slack · <a href="../../talks/2026-11-12-a-company-built-around-the-agent/experience/page.html">A Company Built Around the Agent</a> · 00:08:04</span></blockquote>
+    </section>
+
+    <section data-chapter="counter-claims" data-visual="v5" data-caption="Four counter-claims mark what still belongs in code, specs, and domain workflows">
+      <div class="chapter">05 · Counter-claims</div>
+      <h2>Where deleting too much breaks</h2>
+      <p>Deleting orchestration glue does not mean abandoning engineering structure. Three additional counter-claims—alongside Serrino’s tool-latency warning—draw the exact boundary between disposable scaffolding and durable systems:</p>
+      <div class="counter-box"><b>1. Deterministic code beats prose rules:</b> Lauren Tan warns that deleting tools only to stuff instructions into Markdown rules makes systems less reliable. Constrain agents in APIs, types, and lint rules first.</div>
+      <blockquote>“Instead of adding another line to your rules or your agent's dot md, because it's far more reproducible, it's in code.”<span class="who">Lauren Tan · <a href="../../talks/2026-11-11-all-code-is-slop-except-mine/experience/page.html">All Code Is Slop</a> · 00:02:55</span></blockquote>
+      <div class="counter-box"><b>2. No single alien CLI wins everything:</b> Thariq Shihipar rejects the fear that frontier models force humans to submit to one bare Bash paradigm; models form a broad “smooth interior” that works best when paired with linted, human-readable spec layers.</div>
+      <blockquote>“Describe this kind of like fear that the models will just have this like way of doing things, and it will be weird. And alien to us, and we just need to accept it. You know, like we just have to like submit to this like foreign intelligence. And that's just like I don't think that's what happened, you know.”<span class="who">Thariq Shihipar · <a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">The Sweet Side of the Bitter Lesson</a> · 00:01:40</span></blockquote>
+      <div class="counter-box"><b>3. Edge &amp; vertical nuances stay:</b> Michelle Chen notes Cloudflare’s initial bet that models would shrink to fit edge nodes missed trillion-parameter scaling, while Mihail Eric shows vertical AI still relies on shared chassis patterns filled with expert-guided domain workflows (`00:15:00`, `00:20:57`).</div>
+      <blockquote>“Our hypothesis was that models were going to get smaller.”<span class="who">Michelle Chen · <a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">cloudflare is a neolab</a> · 00:04:24</span></blockquote>
+      <blockquote>“there are principles and primitives that are true to any vertical company, vertical AI company.”<span class="who">Mihail Eric · <a href="../../talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/experience/page.html">Agentic GTM at Monaco</a> · 00:08:33</span></blockquote>
+    </section>
+
+    <section data-chapter="audit-playbook" data-visual="v6" data-caption="Schedule a six-month harness audit and reinvest in runtime speed and shared context">
+      <div class="chapter">06 · Playbook</div>
+      <h2>Rebuild on a six-month cadence</h2>
+      <p>The architectural shift across all 15 talks is an inversion of where engineering hours compound. Design choices tailored to yesterday’s weaker models actively throttle today’s models—so teams have to treat harness deletion as recurring hygiene rather than a one-time refactor.</p>
+      <blockquote>“To create the most value, challenge your past assumptions, and rebuild your foundations to create good systems that scale with intelligence.”<span class="who">Ishaan Dey · <a href="../../talks/2026-11-12-judgement-is-the-last-job/experience/page.html">Judgement is the Last Job</a> · 00:04:35</span></blockquote>
+      <div class="reading"><b>For TheFocus.AI:</b> Turn this into a repeatable client audit every model cycle: benchmark real tasks, delete custom routing and per-API wrappers in favor of <code>bash</code> or coarse use-case tools, harden sandbox and tool-call latency, encode invariants in deterministic checks, and consolidate the team onto one shared agent with visible sessions.</div>
+    </section>
+
+  </main>
+</div>
+
+<section class="theme-talks-dir" id="talks-in-theme">
+  <div class="dir-head">
+    <h2>Talks in this theme (15 assigned · 2 counter-claim speakers)</h2>
+    <a class="deep-dive-cta" href="../conference-themes/page.html">Back to Conference Themes →</a>
+  </div>
+  <div class="theme-talks-grid">
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Philipp Schmid · Google DeepMind</span><span>5 claims</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">I deleted 90% of my harness</a></h3>
+      <p class="tt-thesis">Rebuild the harness every six months and delete what models absorb—often down to one bash tool and inline scripts.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Arsalan Bashir · Sentry</span><span>3 claims</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Let the Agent Cook</a></h3>
+      <p class="tt-thesis">Delete pre-chewed intent routers and per-API wrappers; semantic use-case tools ran 4× faster with 30% fewer tokens.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-12-let-the-agent-cook-from-apis-to-answers.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Natalie Serrino · Gimlet Labs</span><span>3 claims · 1 counter</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/experience/page.html">What Will You Build When AI Is 10x Faster?</a></h3>
+      <p class="tt-thesis">10× inference puts agents on the live critical path—and turns tool execution into 67% of every turn.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Zach Bruggeman · Ramp</span><span>4 claims</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/experience/page.html">How to build an agent that builds the culture</a></h3>
+      <p class="tt-thesis">One shared company agent with public sessions kills silos and spreads best practice without training.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-11-how-to-build-an-agent-that-builds-the-culture.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Quinn Slack · Amp</span><span>1 claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-a-company-built-around-the-agent/experience/page.html">A Company Built Around the Agent</a></h3>
+      <p class="tt-thesis">Replaced Jira, task trackers, and SaaS support tools by running engineering and ops inside shared agent threads.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-a-company-built-around-the-agent/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-12-a-company-built-around-the-agent.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Lance Martin · Anthropic</span><span>1 claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-exploring-claudes-frontier/experience/page.html">Exploring Claude’s frontier</a></h3>
+      <p class="tt-thesis">1,000 agents coordinated a formal proof with zero orchestration harness—only isolated sandboxes, git, and SQL.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-exploring-claudes-frontier/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-12-exploring-claudes-frontier.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Michelle Chen · Cloudflare</span><span>2 claims · 1 counter</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">cloudflare is a neolab</a></h3>
+      <p class="tt-thesis">Edge small-model thesis shifted to pairing fast System One classifiers with frontier LLMs, cutting tokens 94%.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-11-cloudflare-is-a-neolab.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Mihail Eric · Monaco</span><span>3 claims</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/experience/page.html">Agentic GTM at Monaco</a></h3>
+      <p class="tt-thesis">Vertical AI shares a generic harness chassis, differentiated by expert-guided domain workflows and traced nuance.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Ishaan Dey · Google DeepMind</span><span>2 claims</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-judgement-is-the-last-job/experience/page.html">Judgement is the Last Job</a></h3>
+      <p class="tt-thesis">Assumptions built for weaker models decay quickly; relax prescriptive constraints and rebuild foundations.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-judgement-is-the-last-job/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-12-judgement-is-the-last-job.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Utkarsh Shrivastava · Netflix</span><span>1 claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/experience/page.html">Platform Challenges Beyond MCP</a></h3>
+      <p class="tt-thesis">The UI tool is the tip of the iceberg; the durable investment sits in shared company context beneath it.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-10-building-a-shared-ai-assistant-the-platform-challenges-beyond-mcp.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Steve Yegge · Independent</span><span>1 claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Escape from Trash Mountain</a></h3>
+      <p class="tt-thesis">Models outgrow yesterday’s over-engineered factory; the next generation burns down the garbage mountain.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-11-software-factories-escape-from-trash-mountain.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Justin McCarthy · Diffusion</span><span>1 claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Brownfield Factories</a></h3>
+      <p class="tt-thesis">Like SpaceX Raptor 1→2→3, skills shrink and harnesses generalize automatically as models improve.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-12-brownfield-factories.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Jarred Sumner · Anthropic / Bun</span><span>1 claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/experience/page.html">Ahead-of-Time Bun for Claude Code</a></h3>
+      <p class="tt-thesis">Long-lived subagents retaining codebase context outperformed rigid workflows across five compiler rewrites.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Simon Willison · Independent</span><span>1 claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-11-2026-in-llms/experience/page.html">2026 in LLMs</a></h3>
+      <p class="tt-thesis">Fable-class models solve hard goals by brute force when given clear problem definitions and plain tools.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-11-2026-in-llms/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-11-2026-in-llms.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div class="tt-meta"><span>Devin Gupta · Parallel</span><span>1 claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-the-first-grounded-decision-model/experience/page.html">The first Grounded Decision Model</a></h3>
+      <p class="tt-thesis">Sub-second web-grounded decision calls replace slow multi-step LLM search loops at $1 per 1,000 requests.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-the-first-grounded-decision-model/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-12-the-first-grounded-decision-model.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item is-counter">
+      <div class="tt-meta"><span>Lauren Tan · SpaceXSI (xAI)</span><span>Counter-claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-11-all-code-is-slop-except-mine/experience/page.html">All Code Is Slop (Except Mine)</a></h3>
+      <p class="tt-thesis">Do not replace harnesses with prose rules—push constraints into deterministic APIs, types, and lint rules.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-11-all-code-is-slop-except-mine/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-11-all-code-is-slop-except-mine.html">Dossier</a></div>
+    </article>
+
+    <article class="theme-talk-item is-counter">
+      <div class="tt-meta"><span>Thariq Shihipar · Independent</span><span>Counter-claim</span></div>
+      <h3 class="tt-title"><a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">The Sweet Side of the Bitter Lesson</a></h3>
+      <p class="tt-thesis">Models form a smooth interior rather than forcing everyone into bare Bash—pair engines with linted specs.</p>
+      <div class="tt-links"><a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">Talk page</a><a href="../../site/talks/2026-11-12-thariq-shihipar-independent.html">Dossier</a></div>
+    </article>
+
+  </div>
+</section>
+
+<footer class="talk-foot">
+  Built from <a href="story.md">the theme story</a> and indexed claims across 15 talks (plus 2 counter-claim talks) from the AI Engineer Code Summit. Every quote is verbatim from its local Qwen3-ASR transcript, keeping ASR garbles untouched.
+</footer>
+
+<script src="../../stories/runtime/talk.js"></script>
+</body>
+</html>

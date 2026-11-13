@@ -276,7 +276,7 @@
       "title": "jarred sumner",
       "recorded_at": "2026-11-12T14:06:27-08:00",
       "duration_seconds": 1320.7,
-      "word_count": 2912,
+      "word_count": 2803,
       "audio_sha256": "de922249ee0f306cf8e7e9a35f6cdc2ca3f866f545db67c3c81a768ccfa42383",
       "status": "cleaned"
     },
@@ -286,8 +286,78 @@
       "title": "The first Grounded Decision Model",
       "recorded_at": "2026-11-12T14:33:14-08:00",
       "duration_seconds": 645.1,
-      "word_count": 1751,
+      "word_count": 1754,
       "audio_sha256": "594749931c175fc2c1f742565f9042604368c5645b846dd609f90ce6dbb384b0",
+      "status": "cleaned"
+    },
+    "2026-11-12_1455_judgement-is-the-last-job": {
+      "folder": "2026-11-12_1455_judgement-is-the-last-job",
+      "path": "recordings/inbox/2026-11-12_1455_judgement-is-the-last-job",
+      "title": "judgement is the last job",
+      "recorded_at": "2026-11-12T14:55:31-08:00",
+      "duration_seconds": 802.6,
+      "word_count": 2199,
+      "audio_sha256": "94fa657d8427d1a8a44888fbcb055e5a974578406c799a285d37e2f040fe5e1b",
+      "status": "cleaned"
+    },
+    "2026-11-12_1521_brownfield-factories": {
+      "folder": "2026-11-12_1521_brownfield-factories",
+      "path": "recordings/inbox/2026-11-12_1521_brownfield-factories",
+      "title": "brownfield factories",
+      "recorded_at": "2026-11-12T15:21:20-08:00",
+      "duration_seconds": 1063.5,
+      "word_count": 3165,
+      "audio_sha256": "3f6d1915b837e4b486839080ecf4c796f666dd987abdca16711d93ef40153a5e",
+      "status": "cleaned"
+    },
+    "2026-11-12_1622_melvin": {
+      "folder": "2026-11-12_1622_melvin",
+      "path": "recordings/inbox/2026-11-12_1622_melvin",
+      "title": "melvin",
+      "recorded_at": "2026-11-12T16:22:25-08:00",
+      "duration_seconds": 1098.6,
+      "word_count": 2763,
+      "audio_sha256": "9659c596735c38a3712f9a3d3583d3592f63a1a4011d980d9ad89ca487c500cb",
+      "status": "cleaned"
+    },
+    "2026-11-12_1642_amp": {
+      "folder": "2026-11-12_1642_amp",
+      "path": "recordings/inbox/2026-11-12_1642_amp",
+      "title": "amp",
+      "recorded_at": "2026-11-12T16:42:00-08:00",
+      "duration_seconds": 1150.9,
+      "word_count": 3908,
+      "audio_sha256": "cfa931f5cfade086e5c187933724793f0357642fb6655d9f4287137e4179b0a9",
+      "status": "cleaned"
+    },
+    "2026-11-12_1702_dex": {
+      "folder": "2026-11-12_1702_dex",
+      "path": "recordings/inbox/2026-11-12_1702_dex",
+      "title": "dex",
+      "recorded_at": "2026-11-12T17:02:24-08:00",
+      "duration_seconds": 1244.2,
+      "word_count": 4303,
+      "audio_sha256": "81100f2a8469c39b83106443a9d10b034eb3f63d338ab3f2bab62361f3c5c625",
+      "status": "cleaned"
+    },
+    "2026-11-12_1724_Thariq": {
+      "folder": "2026-11-12_1724_Thariq",
+      "path": "recordings/inbox/2026-11-12_1724_Thariq",
+      "title": "Thariq",
+      "recorded_at": "2026-11-12T17:24:20-08:00",
+      "duration_seconds": 1173.3,
+      "word_count": 3538,
+      "audio_sha256": "7c6a0ff870fbbe369cae6300640ff72429e157c9dc7c0d7368c3d37ef0717186",
+      "status": "cleaned"
+    },
+    "2026-11-12_1744_sywx": {
+      "folder": "2026-11-12_1744_sywx",
+      "path": "recordings/inbox/2026-11-12_1744_sywx",
+      "title": "sywx",
+      "recorded_at": "2026-11-12T17:44:02-08:00",
+      "duration_seconds": 312.1,
+      "word_count": 847,
+      "audio_sha256": "82bcc18f80d586db1fb6d8dd76801c6b91578de20de3d17f63deaef4f9b97410",
       "status": "cleaned"
     }
   },
@@ -1099,15 +1169,17 @@
       "confidence": 0.95,
       "method": "time+title+transcript",
       "evidence": [
-        "transcript.txt (Voice Memos, transcript in force, unprompted): \"Over the summer, I rewrote Bun and Ross.\" (names the speaker's company and project, Bun; Rust as transcribed)",
-        "transcript.txt (Voice Memos, transcript in force, unprompted): \"Because the bun team, us, ultimately wrote Bun and Rust.\" (the speaker places himself on the Bun team)",
-        "transcript.txt (Voice Memos, transcript in force, unprompted): \"we need to make Clyde code use a lot less memory.\" (names Claude Code, Anthropic's product, as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"Over the summer, I rewrote Bun and Ross.\" (names the speaker's company and project, Bun; Rust as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"Because the bun team, us, ultimately wrote Bun and Rust.\" (the speaker places himself on the Bun team)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"we need to make Clyde code use a lot less memory.\" (names Claude Code, Anthropic's product, as transcribed)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Because the Bun team, us, rewrote Bun and Rust.\" (the speaker places himself on the Bun team; Bun was not in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"This is particularly important for something like Claude Code\" (names Anthropic's product; not in the prompt)",
         "title: \"jarred sumner\" (Voice Memos title exactly names the speaker of 1373478 — operator confirmation)",
         "note: notes/inbox/2026-11-12T1407-aot-compiler-better-than-rust-rewrite.md — session_id 1373478, talk: talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/ (captured 14:07, inside the recording)",
         "note: notes/inbox/2026-11-12T1409-design-for-testability-first.md — session_id 1373478, talk: talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/ (captured 14:09, inside the recording)",
         "note: notes/inbox/2026-11-12T1423-hourly-loop-posts-updates-to-slack.md — session_id 1373478, talk: talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/ (captured 14:23, inside the recording)",
         "time: recorded 14:06:27 for 22 min, inside the 14:05–14:50 Mainstage slot",
-        "source: transcript in force is transcript.txt (Voice Memos); the local Qwen3-ASR pass was deferred (on battery) and is not used here"
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos \"Bun\" quotes and the exact-name folder title; neither \"Jarred Sumner\" nor \"Anthropic\" from the prompt appears in Qwen."
       ],
       "candidates": [
         {
@@ -1128,17 +1200,20 @@
       "confidence": 0.85,
       "method": "time+title+transcript",
       "evidence": [
-        "transcript.txt (Voice Memos, transcript in force, unprompted): \"If you use apparel decision API, which asks the same question\" (names the speaker's company's product, the Parallel decision API, as transcribed)",
-        "transcript.txt (Voice Memos, transcript in force, unprompted): \"versus like the parallel.\" (names the speaker's company, Parallel)",
-        "transcript.txt (Voice Memos, transcript in force, unprompted): \"it's kind of crazy that you would use a decision model in your workflow\" — abstract: \"Decision models only read.\"",
-        "transcript.txt (Voice Memos, transcript in force, unprompted): \"I'm gonna go and do a really quick live demo.\" — abstract: \"a live demo that grounds 18 typed questions\"",
+        "transcript.txt (Voice Memos alternate, unprompted): \"If you use apparel decision API, which asks the same question\" (names the speaker's company's product, the Parallel decision API, as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"versus like the parallel.\" (names the speaker's company, Parallel)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"it's kind of crazy that you would use a decision model in your workflow\" — abstract: \"Decision models only read.\"",
+        "transcript.txt (Voice Memos alternate, unprompted): \"I'm gonna go and do a really quick live demo.\" — abstract: \"a live demo that grounds 18 typed questions\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"If you use a parallel decision API, which asks the same question.\" (\"Parallel\" was in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"And so it's kind of crazy that you would use a decision model in your workflow\" — abstract: \"Decision models only read.\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I'm going to go and do a really quick live demo.\" — abstract: \"a live demo that grounds 18 typed questions\"",
         "title: \"The first Grounded Decision Model\" (Voice Memos title exactly names the talk 1381580)",
         "note: notes/inbox/2026-11-12T1435-how-do-we-ground-the-decision-model.md — session_id 1381580, talk: talks/2026-11-12-the-first-grounded-decision-model/ (captured 14:35, inside the recording)",
         "note: notes/inbox/2026-11-12T1437-decisions-api-with-grounded-support.md — session_id 1381580, talk: talks/2026-11-12-the-first-grounded-decision-model/ (captured 14:37, inside the recording)",
         "note: notes/inbox/2026-11-12T1440-is-jensen-still-ceo-of-nvidia-test.md — session_id 1381580, talk: talks/2026-11-12-the-first-grounded-decision-model/ (captured 14:40, inside the recording)",
         "note: notes/inbox/2026-11-12T1441-follow-up-parallel-for-research.md — session_id 1381580, talk: talks/2026-11-12-the-first-grounded-decision-model/ (captured 14:41, inside the recording)",
         "time: recorded 14:33:14 for 10¾ min, inside the 14:30–14:50 Expo Sessions slot",
-        "source: transcript in force is transcript.txt (Voice Memos); the local Qwen3-ASR pass was deferred (on battery) and is not used here"
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos \"apparel decision API\" and \"the parallel\"; Qwen's \"Jarred\" (00:04:34) and \"Exa\" (00:07:20) are prompt artifacts (Voice Memos \"jazz\" and no word) and name no session that fits this recording."
       ],
       "candidates": [
         {
@@ -1149,6 +1224,267 @@
         {
           "session_id": "1373478",
           "why": "Jarred Sumner (Anthropic / Bun), Mainstage 14:05–14:50: overlaps in time, but the 14:06 recording already captures it and ended 14:28; no quote here names Bun or Claude Code",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-12_1455_judgement-is-the-last-job": {
+      "session_id": "1376195",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"I Googled Deep Mine\" (names the speaker's company, Google DeepMind, as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"So, Enter Gravity is a tool to get work done with agents\" — abstract: \"Building Antigravity\" (Antigravity as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"I'll argue that human judgment is more important than ever.\" — abstract: \"keeping human judgement at the center\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I've gone from the scale of working at startups to now at Google DeepMind\" (\"Google DeepMind\" was in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"And some lessons that we've learned from shipping anti-gravity.\" — abstract: \"Building Antigravity\" (not in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I'll argue that human judgment is more important than ever.\" — abstract: \"keeping human judgement at the center\"",
+        "title: \"judgement is the last job\" (Voice Memos title exactly names the talk 1376195)",
+        "time: recorded 14:55:31 for 13⅓ min, inside the 14:55–15:15 Mainstage slot",
+        "note: notes/inbox/2026-11-12T1458-will-we-be-able-to-judge-taste.md — session_id 1376195, talk: talks/2026-11-12-judgement-is-the-last-job/ (captured 14:58, inside the recording)",
+        "note: notes/inbox/2026-11-12T1500-try-agent-swarms.md — session_id 1376195, talk: talks/2026-11-12-judgement-is-the-last-job/ (captured 15:00, inside the recording)",
+        "note: notes/inbox/2026-11-12T1501-ambition-is-not-doing-more.md — session_id 1376195, talk: talks/2026-11-12-judgement-is-the-last-job/ (captured 15:01, inside the recording)",
+        "note: notes/inbox/2026-11-12T1504-rebuild-your-foundations.md — session_id 1376195, talk: talks/2026-11-12-judgement-is-the-last-job/ (captured 15:04, inside the recording)",
+        "note: notes/inbox/2026-11-12T1505-rewrite-the-slideshow-in-rust.md — session_id 1376195, talk: talks/2026-11-12-judgement-is-the-last-job/ (captured 15:05, inside the recording)",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos \"I Googled Deep Mine\"; Qwen's \"Anthropic\" at 00:02:40, 00:09:42 and 00:12:32 is prompt-biased (Voice Memos has Antigravity there) and is not evidence for any Anthropic session."
+      ],
+      "candidates": [
+        {
+          "session_id": "1376195",
+          "why": "Mainstage 14:55–15:15; recording 14:55:31 for 13⅓ min; the speaker is at Google DeepMind (\"Deep Mine\") building Antigravity and argues for human judgment; folder title is the exact talk title",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1373479",
+          "why": "Your agent pays twice for every search (Louis Walsh, Exa), Expo Sessions 14:55–15:15: same slot; no quote names Exa or search spend",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-12_1521_brownfield-factories": {
+      "session_id": "1373480",
+      "confidence": 0.98,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"All right, my name is Justin McCarthy.\" (the speaker's self-introduction)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"I'm the founder and CEO at Diffusion\" (names the speaker's company)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"You can see the Brownfield factor in here.\" (names the talk)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"All right, my name is Justin McCarthy.\" (the same self-introduction; the name was in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Diffusion, and we are diffusing the capabilities of the model into the global economy.\" (\"Diffusion\" was in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"See the Brownfield Factory here.\" (names the talk; titles are not in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"You can rewrite a lot of that brownfield, of course.\" — abstract: \"Rewrite that boat anchor\"",
+        "title: \"brownfield factories\" (Voice Memos title exactly names the talk 1373480)",
+        "time: recorded 15:21:20 for 17¾ min, inside the 15:20–15:40 Mainstage slot",
+        "note: notes/inbox/2026-11-12T1521-diffusion-company-name-pun.md — session_id 1373480, talk: talks/2026-11-12-brownfield-factories/ (captured 15:21, inside the recording)",
+        "note: notes/inbox/2026-11-12T1523-different-things-for-different-modes.md — session_id 1373480, talk: talks/2026-11-12-brownfield-factories/ (captured 15:23, inside the recording)",
+        "note: notes/inbox/2026-11-12T1524-something-we-could-work-on-and-sell.md — session_id 1373480, talk: talks/2026-11-12-brownfield-factories/ (captured 15:24, inside the recording)",
+        "note: notes/inbox/2026-11-12T1526-promise-as-a-type-of-invariant.md — session_id 1373480, talk: talks/2026-11-12-brownfield-factories/ (captured 15:26, inside the recording)",
+        "note: notes/inbox/2026-11-12T1527-loop-then-continuous.md — session_id 1373480, talk: talks/2026-11-12-brownfield-factories/ (captured 15:27, inside the recording)",
+        "note: notes/inbox/2026-11-12T1528-continuous-background-promise-keeping.md — session_id 1373480, talk: talks/2026-11-12-brownfield-factories/ (captured 15:28, inside the recording)",
+        "note: notes/inbox/2026-11-12T1530-credit-to-the-models-things-will-simplify.md — session_id 1373480, talk: talks/2026-11-12-brownfield-factories/ (captured 15:30, inside the recording)",
+        "note: notes/inbox/2026-11-12T1531-spacex-metaphor-for-simplification.md — session_id 1373480, talk: talks/2026-11-12-brownfield-factories/ (captured 15:31, inside the recording)",
+        "note: notes/inbox/2026-11-12T1533-customers-may-want-something-else.md — session_id 1373480, talk: talks/2026-11-12-brownfield-factories/ (captured 15:33, inside the recording)",
+        "note: notes/inbox/2026-11-12T1534-that-means-we-have-a-new-job.md — session_id 1373480, talk: talks/2026-11-12-brownfield-factories/ (captured 15:34, inside the recording)",
+        "note: notes/inbox/2026-11-12T1535-start-working-on-the-demand-factory.md — session_id 1373480, talk: talks/2026-11-12-brownfield-factories/ (captured 15:35, inside the recording)",
+        "note: notes/inbox/2026-11-12T1537-expansion-of-the-brand-envelope.md — session_id 1373480, talk: talks/2026-11-12-brownfield-factories/ (captured 15:37, inside the recording)",
+        "note: notes/inbox/2026-11-12T1538-look-up-diffusion-papers.md — session_id 1373480, talk: talks/2026-11-12-brownfield-factories/ (captured 15:38, inside the recording)",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos self-introduction; Qwen agrees word for word."
+      ],
+      "candidates": [
+        {
+          "session_id": "1373480",
+          "why": "Mainstage 15:20–15:40; recording 15:21:20 for 17¾ min; the speaker says he is Justin McCarthy, founder and CEO at Diffusion; exact-title folder",
+          "confidence": 0.98
+        },
+        {
+          "session_id": "1375635",
+          "why": "Agents That Don't Clock Out (Erik Hanchett, AWS), Expo Sessions 15:20–15:40: same slot; no quote names AWS or the speaker",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-12_1622_melvin": {
+      "session_id": "1373474",
+      "confidence": 0.95,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"Melvin Johnson.\" (the last words of the introduction name the speaker of 1373474)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"So today, I thought I will take you to a little journey of how we post time in Gemini 4.\" (names Gemini 4 and post-training, as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"Now, how do we go about poststanding Gemini for real engineering task?\" (the talk title, as transcribed)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Melvin Johnson. Hey everyone, good to be here.\" (the name was in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"So today I thought I'll take you through a little journey of how we post trained Gemini 4.\" (Gemini was not in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Gemini for real engineering tasks.\" (the talk title, as transcribed; titles are not in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Now, let me talk a little bit about the graders.\" — abstract: \"Graders that can't be gamed.\"",
+        "title: \"melvin\" (Voice Memos title names the speaker's first name — attribution, not an exact-name confirmation)",
+        "time: recorded 16:22:25 for 18⅓ min; the slot is 16:30–16:50 Mainstage, starting 8 min early (the Mainstage ran ahead of the grid this afternoon)",
+        "note: notes/inbox/2026-11-12T1623-journey-begins-not-a-frontier-lab.md — session_id 1373474, talk: talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/ (captured 16:23, inside the recording)",
+        "note: notes/inbox/2026-11-12T1625-things-carbon-built.md — session_id 1373474, talk: talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/ (captured 16:25, inside the recording)",
+        "note: notes/inbox/2026-11-12T1627-exhausting-training-signal.md — session_id 1373474, talk: talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/ (captured 16:27, inside the recording)",
+        "note: notes/inbox/2026-11-12T1628-check-for-no-workarounds.md — session_id 1373474, talk: talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/ (captured 16:28, inside the recording)",
+        "note: notes/inbox/2026-11-12T1636-penalize-cheating-not-thoughts.md — session_id 1373474, talk: talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/ (captured 16:36, inside the recording)",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos \"Melvin Johnson.\"; Qwen's \"I'm Melvin\", \"DeepMind\" and \"Duckbill\" are prompt-biased (Voice Memos \"and I mean\", \"they might\", \"vaccine is Wonder\"); \"Duckbill\" is the MC's company, not the benchmark the speaker named."
+      ],
+      "candidates": [
+        {
+          "session_id": "1373474",
+          "why": "Post-Training Gemini 4 for Real Engineering Work (Melvin Johnson, Google DeepMind), Mainstage 16:30–16:50; recording 16:22:25 for 18⅓ min opens on \"Melvin Johnson.\"; the talk is about post-training Gemini 4",
+          "confidence": 0.95
+        },
+        {
+          "session_id": "1380097",
+          "why": "MC Intro (Corey Quinn), Mainstage 16:20–16:30: the recording catches only the end of an introduction naming Melvin Johnson; the body is one speaker on Gemini 4",
+          "confidence": 0.03
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-12_1642_amp": {
+      "session_id": "1373481",
+      "confidence": 0.98,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"Ladies and gentlemen, please welcome Quinn Slack, cofounder and CEO of ANT.\" (the MC's introduction names the speaker; Amp as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"that said, my name is Quinn Slack.\" (the speaker's self-introduction)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"we decided to spin out amp.\" (names the speaker's company)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Ladies and gentlemen, please welcome Quinn Slack, co-founder and CEO of Amp.\" (the same introduction; \"Quinn Slack\" and \"Amp\" were in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"So inside of Sourcegraph.\" (the speaker's company before Amp; not in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"and now we just got twenty one people on Amp.\" — abstract: \"a 21-cofounder team\"",
+        "title: \"amp\" (Voice Memos title names the speaker's company)",
+        "time: recorded 16:42:00 for 19 min; the slot is 16:50–17:10 Mainstage, starting 8 min early (the Mainstage ran ahead of the grid this afternoon)",
+        "note: notes/inbox/2026-11-12T1640-amp-and-dropping-sourcegraph.md — session_id 1373481, talk: talks/2026-11-12-a-company-built-around-the-agent/ (captured 16:40, before the recording started)",
+        "note: notes/inbox/2026-11-12T1641-enterprise-ready-vs-frontier.md — session_id 1373481, talk: talks/2026-11-12-a-company-built-around-the-agent/ (captured 16:41, inside the recording)",
+        "note: notes/inbox/2026-11-12T1643-hard-to-say-how-things-differ-honestly.md — session_id 1373481, talk: talks/2026-11-12-a-company-built-around-the-agent/ (captured 16:43, inside the recording)",
+        "note: notes/inbox/2026-11-12T1644-no-real-differentiation.md — session_id 1373481, talk: talks/2026-11-12-a-company-built-around-the-agent/ (captured 16:44, inside the recording)",
+        "note: notes/inbox/2026-11-12T1645-good-example-of-org-in-age-of-ai.md — session_id 1373481, talk: talks/2026-11-12-a-company-built-around-the-agent/ (captured 16:45, inside the recording)",
+        "note: notes/inbox/2026-11-12T1650-21-people-to-100m-arr.md — session_id 1373481, talk: talks/2026-11-12-a-company-built-around-the-agent/ (captured 16:50, inside the recording)",
+        "note: notes/inbox/2026-11-12T1652-feedback-mechanism-is-amazing.md — session_id 1373481, talk: talks/2026-11-12-a-company-built-around-the-agent/ (captured 16:52, inside the recording)",
+        "note: notes/inbox/2026-11-12T1654-once-agent-plugged-in-we-dont-use-tools.md — session_id 1373481, talk: talks/2026-11-12-a-company-built-around-the-agent/ (captured 16:54, inside the recording)",
+        "note: notes/inbox/2026-11-12T1656-look-into-customink-team-merch.md — session_id 1373481, talk: talks/2026-11-12-a-company-built-around-the-agent/ (captured 16:56, inside the recording)",
+        "note: notes/inbox/2026-11-12T1657-follow-your-energy.md — session_id 1373481, talk: talks/2026-11-12-a-company-built-around-the-agent/ (captured 16:57, inside the recording)",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos MC introduction and self-introduction; Qwen's \"Sourcegraph\" and \"Thorsten Ball\" are unprompted."
+      ],
+      "candidates": [
+        {
+          "session_id": "1373481",
+          "why": "A Company Built Around the Agent (Quinn Slack, Amp), Mainstage 16:50–17:10; the MC introduces Quinn Slack and he says his name; folder title is the company",
+          "confidence": 0.98
+        },
+        {
+          "session_id": "1373474",
+          "why": "Melvin Johnson, Mainstage 16:30–16:50: overlaps in time, but the 16:22 recording already captures it and ended 16:40; no quote here names Gemini",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-12_1702_dex": {
+      "session_id": "1325061",
+      "confidence": 0.98,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"please welcome Dex Horthy, CEO and founder of Human Layer.\" (the MC's introduction names the speaker and his company)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"Hi, everybody. I'm Dex.\" (the speaker's self-introduction)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"This is 12 Factor Factories, which started as a joke title\" (names the talk)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Please welcome Dexter Horthy, CEO and founder of HumanLayer.\" (the same introduction; name and company were in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"This is Twelve Factor Factories, which started as a joke title\" (names the talk; titles are not in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"So I'm very excited to announce the anti-slavi manifesto.\" (the anti-slop manifesto, as transcribed)",
+        "title: \"dex\" (Voice Memos title names the speaker's first name — attribution, not an exact-name confirmation)",
+        "time: recorded 17:02:24 for 20¾ min; the slot is 17:10–17:30 Mainstage, starting 8 min early (the Mainstage ran ahead of the grid this afternoon)",
+        "note: notes/inbox/2026-11-12T1658-factories-were-the-hype-3-months-ago.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 16:58, before the recording started)",
+        "note: notes/inbox/2026-11-12T1700-pre-ai-software-factory.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 17:00, before the recording started)",
+        "note: notes/inbox/2026-11-12T1702-forward-and-backward-pressure.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 17:02, inside the recording)",
+        "note: notes/inbox/2026-11-12T1703-loops-are-forward-plus-backpressure.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 17:03, inside the recording)",
+        "note: notes/inbox/2026-11-12T1705-look-up-slop-bench.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 17:05, inside the recording)",
+        "note: notes/inbox/2026-11-12T1707-maintain-and-understand-the-codebase.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 17:07, inside the recording)",
+        "note: notes/inbox/2026-11-12T1708-dont-over-plan.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 17:08, inside the recording)",
+        "note: notes/inbox/2026-11-12T1709-expected-pain-vs-cost-of-change.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 17:09, inside the recording)",
+        "note: notes/inbox/2026-11-12T1710-show-me-skills.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 17:10, inside the recording)",
+        "note: notes/inbox/2026-11-12T1711-help-agents-test-their-work.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 17:11, inside the recording)",
+        "note: notes/inbox/2026-11-12T1712-anti-slop-repo.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 17:12, inside the recording)",
+        "note: notes/inbox/2026-11-12T1713-the-forge-lifecycle.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 17:13, inside the recording)",
+        "note: notes/inbox/2026-11-12T1714-what-to-buy-vs-own.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 17:14, inside the recording)",
+        "note: notes/inbox/2026-11-12T1715-slop-is-asymmetric.md — session_id 1325061, talk: talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/ (captured 17:15, inside the recording)",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos MC introduction; Qwen's \"Dexter\", \"HumanLayer\" and \"Quinn\" are prompt-biased (Voice Memos \"Dex\", \"Human Layer\", \"I'm your friend\")."
+      ],
+      "candidates": [
+        {
+          "session_id": "1325061",
+          "why": "12-Factor-Factories (Dexter Horthy, HumanLayer), Mainstage 17:10–17:30; the MC introduces Dex Horthy of Human Layer and he names the talk",
+          "confidence": 0.98
+        },
+        {
+          "session_id": "1373481",
+          "why": "Quinn Slack, Mainstage 16:50–17:10: overlaps in time, but the 16:42 recording already captures it and ended 17:01; no quote here names Amp",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-12_1724_Thariq": {
+      "session_id": "1373482",
+      "confidence": 0.9,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"please welcome independent engineer and former anthropic team member, Zarik Shinbar.\" (the MC's introduction: Independent, as the program lists him; Thariq Shihipar as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"I've been thinking about since I left Anthropic.\" (the speaker's former company)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"I think the bitter lesson\" (the topic of the operator-reported title, The Sweet Side of the Bitter Lesson)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"please welcome independent engineer and former Anthropic team member.\" (the same introduction; \"Anthropic\" was not in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"Thariq Shihipar.\" (the name was in the prompt, attribution only; the Voice Memos alternate has \"Zarik Shinbar\")",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"I've been thinking about since I left Anthropic.\" (the speaker's former company; not in the prompt)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"The bitter lesson, you know, our alien intelligence.\" (the topic of the operator-reported title)",
+        "title: \"Thariq\" (Voice Memos title names the speaker's first name — attribution, not an exact-name confirmation)",
+        "time: recorded 17:24:20 for 19½ min; the slot is 17:30–17:50 Mainstage, starting 6 min early (the Mainstage ran ahead of the grid this afternoon)",
+        "note: notes/inbox/2026-11-12T1723-bash-is-not-all-you-need.md — session_id 1373482, talk: talks/2026-11-12-thariq-shihipar-independent/ (captured 17:23, before the recording started)",
+        "note: notes/inbox/2026-11-12T1724-industrial-revolution-vs-renaissance.md — session_id 1373482, talk: talks/2026-11-12-thariq-shihipar-independent/ (captured 17:24, inside the recording)",
+        "note: notes/inbox/2026-11-12T1725-jagged-edge-vs-smooth-interior.md — session_id 1373482, talk: talks/2026-11-12-thariq-shihipar-independent/ (captured 17:25, inside the recording)",
+        "note: notes/inbox/2026-11-12T1736-comments-then-tab-interactive-style.md — session_id 1373482, talk: talks/2026-11-12-thariq-shihipar-independent/ (captured 17:36, inside the recording)",
+        "note: notes/inbox/2026-11-12T1737-taxonomy-of-interaction-modes.md — session_id 1373482, talk: talks/2026-11-12-thariq-shihipar-independent/ (captured 17:37, inside the recording)",
+        "note: notes/inbox/2026-11-12T1738-revisit-old-hci-research.md — session_id 1373482, talk: talks/2026-11-12-thariq-shihipar-independent/ (captured 17:38, inside the recording)",
+        "note: notes/inbox/2026-11-12T1739-our-job-is-to-bring-about-the-renaissance.md — session_id 1373482, talk: talks/2026-11-12-thariq-shihipar-independent/ (captured 17:39, inside the recording)",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos MC introduction (\"independent engineer and former anthropic team member\"); Qwen spells the name \"Thariq Shihipar\" but that name was in the prompt, so it stays attribution; confidence unchanged."
+      ],
+      "candidates": [
+        {
+          "session_id": "1373482",
+          "why": "Thariq Shihipar, Independent, Mainstage 17:30–17:50; the MC introduces an independent engineer and former Anthropic team member (\"Zarik Shinbar\"); folder title is his first name; operator notes 17:23–17:39 carry this session",
+          "confidence": 0.9
+        },
+        {
+          "session_id": "1325061",
+          "why": "Dex Horthy, Mainstage 17:10–17:30: overlaps in time, but the 17:02 recording already captures it and ended 17:23; no quote here names HumanLayer",
+          "confidence": 0.02
+        }
+      ],
+      "status": "matched"
+    },
+    "2026-11-12_1744_sywx": {
+      "session_id": "1380098",
+      "confidence": 0.8,
+      "method": "time+title+transcript",
+      "evidence": [
+        "transcript.txt (Voice Memos alternate, unprompted): \"So, as Swift's insane, we've grown dramatically in the last year\" (a co-presenter names swyx, as transcribed)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"the only 2 team members after the meet have spoken at AIE\" (names the speaker's organisation, AI Engineer)",
+        "transcript.txt (Voice Memos alternate, unprompted): \"So there's lots to celebrate.\" — abstract: \"swyx invites everyone to celebrate together\"",
+        "transcript.txt (Voice Memos alternate, unprompted): \"Shout out your favorite workshops.\" — abstract: \"three days of talks, workshops\"",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"So as Swyx is saying, we've grown dramatically in the last year.\" (\"swyx\" was in the prompt, attribution only)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"the only two team members other than me that have spoken at AIE.\" (names the organiser, AI Engineer)",
+        "transcript.qwen3-asr-1.7b.txt (Qwen, transcript in force): \"So there's lots to celebrate, but there's one really particular milestone\" — abstract: \"swyx invites everyone to celebrate together\"",
+        "title: \"sywx\" (Voice Memos title resembles the speaker's name, swyx — attribution, not an exact-name confirmation)",
+        "time: recorded 17:44:02 for 5¼ min; the slot is 17:50–18:00 Mainstage, starting 6 min early (the Mainstage ran ahead of the grid this afternoon)",
+        "source: transcript in force is transcript.qwen3-asr-1.7b.txt (Qwen, prompted with the speaker names and affiliations of overlapping sessions); transcript.txt (Voice Memos, unprompted) is the alternate. Re-decided on the Qwen upgrade: same session; the named evidence is the unprompted Voice Memos \"Swift's\"; Qwen's \"Swyx\" is prompt-biased."
+      ],
+      "candidates": [
+        {
+          "session_id": "1380098",
+          "why": "Something to Celebrate (swyx, AI Engineer), Mainstage 17:50–18:00; a 5-minute closing that celebrates the two days and the AIE team; a co-presenter names \"Swift's\" (swyx)",
+          "confidence": 0.8
+        },
+        {
+          "session_id": "1373482",
+          "why": "Thariq Shihipar, Mainstage 17:30–17:50: overlaps in time, but the 17:24 recording already captures it and ended 17:43; no quote here names him",
           "confidence": 0.02
         }
       ],
@@ -1189,6 +1525,37 @@
       ],
       "word_count": 2859,
       "cleaned_at": "2026-11-11T16:09:53-08:00"
+    },
+    "1325061": {
+      "slug": "2026-11-12-12-factor-factories-design-patterns-for-agentic-coding",
+      "path": "talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/transcript.md",
+      "title": "12-Factor-Factories: Design Patterns for Agentic Coding",
+      "speakers": [
+        {
+          "name": "Dexter Horthy",
+          "affiliation": "HumanLayer"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-12T17:10:00-08:00",
+      "source_recording": "2026-11-12_1702_dex",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:01:11 — Why software factories fail, revisited",
+        "00:03:03 — The pre-AI software factory",
+        "00:04:20 — Forward pressure and back pressure",
+        "00:05:40 — Twelve practices",
+        "00:06:50 — Know your enemy",
+        "00:09:49 — Plan before you build",
+        "00:11:26 — Align visually, test, fight slop",
+        "00:13:00 — Compound, and unify your forge",
+        "00:13:50 — You cannot buy everything",
+        "00:14:43 — The anti-slop manifesto",
+        "00:18:40 — Always alpha in reviewing",
+        "00:19:44 — Closing"
+      ],
+      "word_count": 4297,
+      "cleaned_at": "2026-11-12T18:44:25-08:00"
     },
     "1333169": {
       "slug": "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
@@ -1675,6 +2042,34 @@
       "word_count": 3950,
       "cleaned_at": "2026-11-11T18:23:47-08:00"
     },
+    "1373474": {
+      "slug": "2026-11-12-post-training-gemini-4-for-real-engineering-work",
+      "path": "talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/transcript.md",
+      "title": "Post-Training Gemini 4 for Real Engineering Work",
+      "speakers": [
+        {
+          "name": "Melvin Johnson",
+          "affiliation": "Google DeepMind"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-12T16:30:00-08:00",
+      "source_recording": "2026-11-12_1622_melvin",
+      "sections": [
+        "00:00:00 — Introduction: \"not a frontier model\"",
+        "00:02:10 — Demo video",
+        "00:03:22 — Gemini 4 Carbon results",
+        "00:04:28 — Gemini 4 Hydrogen",
+        "00:06:09 — Why post-training is hard",
+        "00:07:56 — Hard tasks",
+        "00:10:35 — Graders",
+        "00:12:09 — Hardening the graders",
+        "00:13:47 — Model honesty",
+        "00:16:07 — Shipping in weeks"
+      ],
+      "word_count": 2761,
+      "cleaned_at": "2026-11-12T18:44:25-08:00"
+    },
     "1373475": {
       "slug": "2026-11-12-a-new-age-of-software-engineering",
       "path": "talks/2026-11-12-a-new-age-of-software-engineering/transcript.md",
@@ -1720,22 +2115,112 @@
         "00:00:00 — Introduction: an ahead-of-time compiler",
         "00:00:53 — Making Claude Code use less memory",
         "00:01:51 — Constrained by how you test",
-        "00:02:13 — Why compile ahead of time",
-        "00:03:26 — Why not rewrite Claude Code in Rust",
-        "00:04:39 — Results: less memory, faster starts",
-        "00:05:55 — Types as predictions",
-        "00:06:23 — Tests that predate the project",
-        "00:08:30 — Batches, then long-running agents",
-        "00:09:44 — Five rewrites",
+        "00:02:15 — Why compile ahead of time",
+        "00:03:28 — Why not rewrite Claude Code in Rust",
+        "00:04:37 — Results: less memory, faster starts",
+        "00:05:56 — Types as predictions",
+        "00:06:26 — Tests that predate the project",
+        "00:08:28 — Batches, then long-running agents",
+        "00:09:43 — Five rewrites",
         "00:14:51 — Long-lived agents over workflows",
-        "00:15:40 — How the compiler works",
-        "00:16:08 — Hourly updates and fuzzing",
-        "00:17:38 — Benchmarks",
-        "00:18:49 — What you actually do all day",
+        "00:15:35 — How the compiler works",
+        "00:16:07 — Hourly updates and fuzzing",
+        "00:17:36 — Benchmarks",
+        "00:18:48 — What you actually do all day",
         "00:20:35 — Takeaways"
       ],
-      "word_count": 2824,
-      "cleaned_at": "2026-11-12T14:50:51-08:00"
+      "word_count": 2783,
+      "cleaned_at": "2026-11-12T18:44:25-08:00"
+    },
+    "1373480": {
+      "slug": "2026-11-12-brownfield-factories",
+      "path": "talks/2026-11-12-brownfield-factories/transcript.md",
+      "title": "Brownfield Factories",
+      "speakers": [
+        {
+          "name": "Justin McCarthy",
+          "affiliation": "Diffusion"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-12T15:20:00-08:00",
+      "source_recording": "2026-11-12_1521_brownfield-factories",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:00:52 — The first software factory",
+        "00:02:12 — Please stop building software factories",
+        "00:03:18 — Why brownfield",
+        "00:04:52 — Promises and loops",
+        "00:06:30 — Continuous, in the background",
+        "00:08:09 — Factories simplify over time",
+        "00:10:27 — The same but faster",
+        "00:12:03 — Elevate your ambition",
+        "00:13:17 — The demand factory",
+        "00:15:32 — The brand envelope",
+        "00:16:12 — Building the demand factory",
+        "00:17:07 — Closing"
+      ],
+      "word_count": 3144,
+      "cleaned_at": "2026-11-12T18:44:25-08:00"
+    },
+    "1373481": {
+      "slug": "2026-11-12-a-company-built-around-the-agent",
+      "path": "talks/2026-11-12-a-company-built-around-the-agent/transcript.md",
+      "title": "A Company Built Around the Agent",
+      "speakers": [
+        {
+          "name": "Quinn Slack",
+          "affiliation": "Amp"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-12T16:50:00-08:00",
+      "source_recording": "2026-11-12_1642_amp",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:01:31 — The day an agent blew my mind",
+        "00:02:39 — Inside Sourcegraph",
+        "00:03:52 — What we knew would change",
+        "00:05:51 — Spinning out Amp",
+        "00:08:04 — Building around the agent",
+        "00:09:54 — Agents that prove their work",
+        "00:10:58 — The bug-report loop",
+        "00:12:35 — Dictation",
+        "00:13:16 — Building your own tools",
+        "00:14:45 — SaaS starts to break down",
+        "00:15:58 — A new kind of company",
+        "00:17:57 — Get out of the cage"
+      ],
+      "word_count": 3903,
+      "cleaned_at": "2026-11-12T18:44:25-08:00"
+    },
+    "1373482": {
+      "slug": "2026-11-12-thariq-shihipar-independent",
+      "path": "talks/2026-11-12-thariq-shihipar-independent/transcript.md",
+      "title": "Thariq Shihipar, Independent",
+      "speakers": [
+        {
+          "name": "Thariq Shihipar",
+          "affiliation": "Independent"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-12T17:30:00-08:00",
+      "source_recording": "2026-11-12_1724_Thariq",
+      "sections": [
+        "00:00:00 — Introduction",
+        "00:01:40 — What I was wrong about",
+        "00:04:28 — AGI-pilled and human-centered",
+        "00:05:09 — Industrial revolution and Renaissance",
+        "00:06:19 — The jagged frontier and the smooth interior",
+        "00:09:42 — A map of what the model knows",
+        "00:11:06 — Building a game",
+        "00:13:27 — A human-readable spec",
+        "00:14:15 — Demo",
+        "00:17:04 — A Renaissance of software"
+      ],
+      "word_count": 3506,
+      "cleaned_at": "2026-11-12T18:44:25-08:00"
     },
     "1376191": {
       "slug": "2026-11-11-2026-in-llms",
@@ -1776,6 +2261,33 @@
       ],
       "word_count": 3880,
       "cleaned_at": "2026-11-11T18:23:47-08:00"
+    },
+    "1376195": {
+      "slug": "2026-11-12-judgement-is-the-last-job",
+      "path": "talks/2026-11-12-judgement-is-the-last-job/transcript.md",
+      "title": "Judgement is the Last Job",
+      "speakers": [
+        {
+          "name": "Ishaan Dey",
+          "affiliation": "Google DeepMind"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-12T14:55:00-08:00",
+      "source_recording": "2026-11-12_1455_judgement-is-the-last-job",
+      "sections": [
+        "00:00:00 — Introduction: what is left for us",
+        "00:00:39 — A new paradigm every year",
+        "00:02:12 — Building at Google DeepMind",
+        "00:02:57 — Lesson one: tools scale with intelligence",
+        "00:04:35 — Lesson two: ambition is not always adding more",
+        "00:06:36 — Lesson three: a platform for ambition",
+        "00:08:50 — Human judgment matters more than ever",
+        "00:11:58 — Summary",
+        "00:12:59 — Closing"
+      ],
+      "word_count": 2199,
+      "cleaned_at": "2026-11-12T18:44:25-08:00"
     },
     "1376197": {
       "slug": "2026-11-11-your-judge-is-hallucinating-too",
@@ -1944,6 +2456,28 @@
       "word_count": 4075,
       "cleaned_at": "2026-11-10T14:34:02-05:00"
     },
+    "1380098": {
+      "slug": "2026-11-12-something-to-celebrate",
+      "path": "talks/2026-11-12-something-to-celebrate/transcript.md",
+      "title": "Something to Celebrate",
+      "speakers": [
+        {
+          "name": "swyx",
+          "affiliation": "AI Engineer"
+        }
+      ],
+      "room_id": "continental-46-mainstage",
+      "starts_at": "2026-11-12T17:50:00-08:00",
+      "source_recording": "2026-11-12_1744_sywx",
+      "sections": [
+        "00:00:00 — Celebrating the two days",
+        "00:01:36 — One milestone to celebrate",
+        "00:02:19 — The team behind the scenes",
+        "00:04:17 — What comes next"
+      ],
+      "word_count": 833,
+      "cleaned_at": "2026-11-12T18:44:25-08:00"
+    },
     "1381580": {
       "slug": "2026-11-12-the-first-grounded-decision-model",
       "path": "talks/2026-11-12-the-first-grounded-decision-model/transcript.md",
@@ -1959,17 +2493,17 @@
       "source_recording": "2026-11-12_1433_The-first-Grounded-Decision-Model",
       "sections": [
         "00:00:00 — Introduction",
-        "00:00:56 — A question a model cannot answer",
-        "00:01:49 — Grounding unlocks calibration",
-        "00:03:05 — How it works",
+        "00:00:55 — A question a model cannot answer",
+        "00:01:50 — Grounding unlocks calibration",
+        "00:03:01 — How it works",
         "00:04:05 — Since launch",
-        "00:04:35 — Customer use cases",
-        "00:05:46 — Live demo",
-        "00:07:05 — Pricing",
+        "00:04:34 — Customer use cases",
+        "00:05:45 — Live demo",
+        "00:07:03 — Pricing",
         "00:07:45 — Q&A"
       ],
-      "word_count": 1730,
-      "cleaned_at": "2026-11-12T14:50:51-08:00"
+      "word_count": 1741,
+      "cleaned_at": "2026-11-12T18:44:25-08:00"
     }
   },
   "attachments": []

@@ -33,6 +33,37 @@
     "word_count": 2859,
     "cleaned_at": "2026-11-11T16:09:53-08:00"
   },
+  "1325061": {
+    "slug": "2026-11-12-12-factor-factories-design-patterns-for-agentic-coding",
+    "path": "talks/2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/transcript.md",
+    "title": "12-Factor-Factories: Design Patterns for Agentic Coding",
+    "speakers": [
+      {
+        "name": "Dexter Horthy",
+        "affiliation": "HumanLayer"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-12T17:10:00-08:00",
+    "source_recording": "2026-11-12_1702_dex",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:01:11 — Why software factories fail, revisited",
+      "00:03:03 — The pre-AI software factory",
+      "00:04:20 — Forward pressure and back pressure",
+      "00:05:40 — Twelve practices",
+      "00:06:50 — Know your enemy",
+      "00:09:49 — Plan before you build",
+      "00:11:26 — Align visually, test, fight slop",
+      "00:13:00 — Compound, and unify your forge",
+      "00:13:50 — You cannot buy everything",
+      "00:14:43 — The anti-slop manifesto",
+      "00:18:40 — Always alpha in reviewing",
+      "00:19:44 — Closing"
+    ],
+    "word_count": 4297,
+    "cleaned_at": "2026-11-12T18:44:25-08:00"
+  },
   "1333169": {
     "slug": "2026-11-10-one-teams-path-to-trusting-ai-generated-code",
     "path": "talks/2026-11-10-one-teams-path-to-trusting-ai-generated-code/transcript.md",
@@ -518,6 +549,34 @@
     "word_count": 3950,
     "cleaned_at": "2026-11-11T18:23:47-08:00"
   },
+  "1373474": {
+    "slug": "2026-11-12-post-training-gemini-4-for-real-engineering-work",
+    "path": "talks/2026-11-12-post-training-gemini-4-for-real-engineering-work/transcript.md",
+    "title": "Post-Training Gemini 4 for Real Engineering Work",
+    "speakers": [
+      {
+        "name": "Melvin Johnson",
+        "affiliation": "Google DeepMind"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-12T16:30:00-08:00",
+    "source_recording": "2026-11-12_1622_melvin",
+    "sections": [
+      "00:00:00 — Introduction: \"not a frontier model\"",
+      "00:02:10 — Demo video",
+      "00:03:22 — Gemini 4 Carbon results",
+      "00:04:28 — Gemini 4 Hydrogen",
+      "00:06:09 — Why post-training is hard",
+      "00:07:56 — Hard tasks",
+      "00:10:35 — Graders",
+      "00:12:09 — Hardening the graders",
+      "00:13:47 — Model honesty",
+      "00:16:07 — Shipping in weeks"
+    ],
+    "word_count": 2761,
+    "cleaned_at": "2026-11-12T18:44:25-08:00"
+  },
   "1373475": {
     "slug": "2026-11-12-a-new-age-of-software-engineering",
     "path": "talks/2026-11-12-a-new-age-of-software-engineering/transcript.md",
@@ -563,22 +622,112 @@
       "00:00:00 — Introduction: an ahead-of-time compiler",
       "00:00:53 — Making Claude Code use less memory",
       "00:01:51 — Constrained by how you test",
-      "00:02:13 — Why compile ahead of time",
-      "00:03:26 — Why not rewrite Claude Code in Rust",
-      "00:04:39 — Results: less memory, faster starts",
-      "00:05:55 — Types as predictions",
-      "00:06:23 — Tests that predate the project",
-      "00:08:30 — Batches, then long-running agents",
-      "00:09:44 — Five rewrites",
+      "00:02:15 — Why compile ahead of time",
+      "00:03:28 — Why not rewrite Claude Code in Rust",
+      "00:04:37 — Results: less memory, faster starts",
+      "00:05:56 — Types as predictions",
+      "00:06:26 — Tests that predate the project",
+      "00:08:28 — Batches, then long-running agents",
+      "00:09:43 — Five rewrites",
       "00:14:51 — Long-lived agents over workflows",
-      "00:15:40 — How the compiler works",
-      "00:16:08 — Hourly updates and fuzzing",
-      "00:17:38 — Benchmarks",
-      "00:18:49 — What you actually do all day",
+      "00:15:35 — How the compiler works",
+      "00:16:07 — Hourly updates and fuzzing",
+      "00:17:36 — Benchmarks",
+      "00:18:48 — What you actually do all day",
       "00:20:35 — Takeaways"
     ],
-    "word_count": 2824,
-    "cleaned_at": "2026-11-12T14:50:51-08:00"
+    "word_count": 2783,
+    "cleaned_at": "2026-11-12T18:44:25-08:00"
+  },
+  "1373480": {
+    "slug": "2026-11-12-brownfield-factories",
+    "path": "talks/2026-11-12-brownfield-factories/transcript.md",
+    "title": "Brownfield Factories",
+    "speakers": [
+      {
+        "name": "Justin McCarthy",
+        "affiliation": "Diffusion"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-12T15:20:00-08:00",
+    "source_recording": "2026-11-12_1521_brownfield-factories",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:00:52 — The first software factory",
+      "00:02:12 — Please stop building software factories",
+      "00:03:18 — Why brownfield",
+      "00:04:52 — Promises and loops",
+      "00:06:30 — Continuous, in the background",
+      "00:08:09 — Factories simplify over time",
+      "00:10:27 — The same but faster",
+      "00:12:03 — Elevate your ambition",
+      "00:13:17 — The demand factory",
+      "00:15:32 — The brand envelope",
+      "00:16:12 — Building the demand factory",
+      "00:17:07 — Closing"
+    ],
+    "word_count": 3144,
+    "cleaned_at": "2026-11-12T18:44:25-08:00"
+  },
+  "1373481": {
+    "slug": "2026-11-12-a-company-built-around-the-agent",
+    "path": "talks/2026-11-12-a-company-built-around-the-agent/transcript.md",
+    "title": "A Company Built Around the Agent",
+    "speakers": [
+      {
+        "name": "Quinn Slack",
+        "affiliation": "Amp"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-12T16:50:00-08:00",
+    "source_recording": "2026-11-12_1642_amp",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:01:31 — The day an agent blew my mind",
+      "00:02:39 — Inside Sourcegraph",
+      "00:03:52 — What we knew would change",
+      "00:05:51 — Spinning out Amp",
+      "00:08:04 — Building around the agent",
+      "00:09:54 — Agents that prove their work",
+      "00:10:58 — The bug-report loop",
+      "00:12:35 — Dictation",
+      "00:13:16 — Building your own tools",
+      "00:14:45 — SaaS starts to break down",
+      "00:15:58 — A new kind of company",
+      "00:17:57 — Get out of the cage"
+    ],
+    "word_count": 3903,
+    "cleaned_at": "2026-11-12T18:44:25-08:00"
+  },
+  "1373482": {
+    "slug": "2026-11-12-thariq-shihipar-independent",
+    "path": "talks/2026-11-12-thariq-shihipar-independent/transcript.md",
+    "title": "Thariq Shihipar, Independent",
+    "speakers": [
+      {
+        "name": "Thariq Shihipar",
+        "affiliation": "Independent"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-12T17:30:00-08:00",
+    "source_recording": "2026-11-12_1724_Thariq",
+    "sections": [
+      "00:00:00 — Introduction",
+      "00:01:40 — What I was wrong about",
+      "00:04:28 — AGI-pilled and human-centered",
+      "00:05:09 — Industrial revolution and Renaissance",
+      "00:06:19 — The jagged frontier and the smooth interior",
+      "00:09:42 — A map of what the model knows",
+      "00:11:06 — Building a game",
+      "00:13:27 — A human-readable spec",
+      "00:14:15 — Demo",
+      "00:17:04 — A Renaissance of software"
+    ],
+    "word_count": 3506,
+    "cleaned_at": "2026-11-12T18:44:25-08:00"
   },
   "1376191": {
     "slug": "2026-11-11-2026-in-llms",
@@ -619,6 +768,33 @@
     ],
     "word_count": 3880,
     "cleaned_at": "2026-11-11T18:23:47-08:00"
+  },
+  "1376195": {
+    "slug": "2026-11-12-judgement-is-the-last-job",
+    "path": "talks/2026-11-12-judgement-is-the-last-job/transcript.md",
+    "title": "Judgement is the Last Job",
+    "speakers": [
+      {
+        "name": "Ishaan Dey",
+        "affiliation": "Google DeepMind"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-12T14:55:00-08:00",
+    "source_recording": "2026-11-12_1455_judgement-is-the-last-job",
+    "sections": [
+      "00:00:00 — Introduction: what is left for us",
+      "00:00:39 — A new paradigm every year",
+      "00:02:12 — Building at Google DeepMind",
+      "00:02:57 — Lesson one: tools scale with intelligence",
+      "00:04:35 — Lesson two: ambition is not always adding more",
+      "00:06:36 — Lesson three: a platform for ambition",
+      "00:08:50 — Human judgment matters more than ever",
+      "00:11:58 — Summary",
+      "00:12:59 — Closing"
+    ],
+    "word_count": 2199,
+    "cleaned_at": "2026-11-12T18:44:25-08:00"
   },
   "1376197": {
     "slug": "2026-11-11-your-judge-is-hallucinating-too",
@@ -787,6 +963,28 @@
     "word_count": 4075,
     "cleaned_at": "2026-11-10T14:34:02-05:00"
   },
+  "1380098": {
+    "slug": "2026-11-12-something-to-celebrate",
+    "path": "talks/2026-11-12-something-to-celebrate/transcript.md",
+    "title": "Something to Celebrate",
+    "speakers": [
+      {
+        "name": "swyx",
+        "affiliation": "AI Engineer"
+      }
+    ],
+    "room_id": "continental-46-mainstage",
+    "starts_at": "2026-11-12T17:50:00-08:00",
+    "source_recording": "2026-11-12_1744_sywx",
+    "sections": [
+      "00:00:00 — Celebrating the two days",
+      "00:01:36 — One milestone to celebrate",
+      "00:02:19 — The team behind the scenes",
+      "00:04:17 — What comes next"
+    ],
+    "word_count": 833,
+    "cleaned_at": "2026-11-12T18:44:25-08:00"
+  },
   "1381580": {
     "slug": "2026-11-12-the-first-grounded-decision-model",
     "path": "talks/2026-11-12-the-first-grounded-decision-model/transcript.md",
@@ -802,16 +1000,16 @@
     "source_recording": "2026-11-12_1433_The-first-Grounded-Decision-Model",
     "sections": [
       "00:00:00 — Introduction",
-      "00:00:56 — A question a model cannot answer",
-      "00:01:49 — Grounding unlocks calibration",
-      "00:03:05 — How it works",
+      "00:00:55 — A question a model cannot answer",
+      "00:01:50 — Grounding unlocks calibration",
+      "00:03:01 — How it works",
       "00:04:05 — Since launch",
-      "00:04:35 — Customer use cases",
-      "00:05:46 — Live demo",
-      "00:07:05 — Pricing",
+      "00:04:34 — Customer use cases",
+      "00:05:45 — Live demo",
+      "00:07:03 — Pricing",
       "00:07:45 — Q&A"
     ],
-    "word_count": 1730,
-    "cleaned_at": "2026-11-12T14:50:51-08:00"
+    "word_count": 1741,
+    "cleaned_at": "2026-11-12T18:44:25-08:00"
   }
 }

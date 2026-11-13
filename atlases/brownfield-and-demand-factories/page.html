@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brownfield &amp; demand factories — AI Engineer Code Summit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../stories/runtime/talk.css" />
+  <style>
+    .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+    .svg-panel svg { width: 100%; height: auto; display: block; }
+  </style>
+  <script src="../../stories/runtime/talk.js" defer></script>
+</head>
+<body>
+
+  <header class="talk-head">
+    <div class="talk-kicker">AI Engineer Code Summit · Theme Deep Dive 02 of 06</div>
+    <h1>Brownfield &amp; demand factories</h1>
+    <p class="dek">Because coding tokens make small teams look huge on existing products with live runtime feedback, agentic software factories thrive on brownfield maintenance—bounded by real token/fuel economics and durable multi-hour execution.</p>
+    <div class="talk-meta">16 talks · 26 claims · 2 counter-claims · Also called: 10-hour agents · PM-free pods · demand factory · durable execution · every problem is a fuel problem · golden checkpoint · skin in the game · token budget</div>
+  </header>
+
+  <div class="talk-layout">
+    <aside class="talk-rail">
+      <div class="talk-visuals">
+
+        <figure class="talk-visual photo-card is-active" data-visual="v1">
+          <img src="../../talks/2026-11-12-brownfield-factories/experience/rarely-know-what-we-want.jpg" alt="Diffusion slide titled '... we rarely know what we want!' showing a user thinking 'my commute is too long' while asking for 'a faster horse' beside a spec document." />
+          <figcaption>Justin McCarthy (Diffusion) · Greenfield specs capture the wrong wish; existing usage specifies the real promise</figcaption>
+        </figure>
+
+        <figure class="talk-visual photo-card" data-visual="v2">
+          <img src="../../talks/2026-11-12-a-company-built-around-the-agent/experience/old-vs-future-company.jpg" alt="Amp slide comparing Old-fashioned companies (mandatory PRs, departments, PMs, sprint planning, SaaS bloat, token budgets) against Companies of the future (push to main, one team, fix it now, mini apps in sandboxes, no token limits)." />
+          <figcaption>Quinn Slack (Amp) · High-equity 21-person team operating without middle management, Jira sprints, or traditional SaaS sprawl</figcaption>
+        </figure>
+
+        <figure class="talk-visual svg-panel" data-visual="v3">
+          <svg viewBox="0 0 640 420" role="img" aria-label="Four constraints of agent fuel economics: supply ceiling, turn latency, typed wrappers, and grounded decision tiers">
+            <rect x="20" y="18" width="286" height="172" rx="10" fill="var(--raised)" stroke="var(--accent)" stroke-width="1.5" />
+            <text x="38" y="48" fill="var(--accent)" font-family="Barlow Condensed, sans-serif" font-size="19" font-weight="700" letter-spacing="0.06em">01 · FUEL &amp; SUBSIDY CLIFF</text>
+            <text x="38" y="78" fill="var(--ink)" font-size="14" font-weight="600">$1.5M/yr API burn on $10k/mo plans</text>
+            <text x="38" y="102" fill="var(--muted)" font-size="13">• Consumer subscriptions remain loss leaders</text>
+            <text x="38" y="124" fill="var(--muted)" font-size="13">• Overfencing stalls autonomous progress</text>
+            <text x="38" y="146" fill="var(--muted)" font-size="13">• True factory ROI tracks cost per task</text>
+
+            <rect x="334" y="18" width="286" height="172" rx="10" fill="var(--raised)" stroke="var(--rule-strong)" stroke-width="1.5" />
+            <text x="352" y="48" fill="var(--machine)" font-family="Barlow Condensed, sans-serif" font-size="19" font-weight="700" letter-spacing="0.06em">02 · LATENCY &amp; RUNTIME TRIM</text>
+            <text x="352" y="78" fill="var(--ink)" font-size="14" font-weight="600">63s median turn breaks human flow</text>
+            <text x="352" y="102" fill="var(--muted)" font-size="13">• Rebuilds delete 90% of stale scaffolding</text>
+            <text x="352" y="124" fill="var(--muted)" font-size="13">• AOT JS bundling cuts Claude Code memory 4×</text>
+            <text x="352" y="146" fill="var(--muted)" font-size="13">• Faster turns keep sync loops viable</text>
+
+            <rect x="20" y="216" width="286" height="176" rx="10" fill="var(--raised)" stroke="var(--rule-strong)" stroke-width="1.5" />
+            <text x="38" y="246" fill="var(--identity)" font-family="Barlow Condensed, sans-serif" font-size="19" font-weight="700" letter-spacing="0.06em">03 · TYPED TOOLS OVER RAW APIS</text>
+            <text x="38" y="276" fill="var(--ink)" font-size="14" font-weight="600">4× faster · 30% fewer tokens (Sentry)</text>
+            <text x="38" y="300" fill="var(--muted)" font-size="13">• 1-tool-per-endpoint causes ID &amp; schema traps</text>
+            <text x="38" y="322" fill="var(--muted)" font-size="13">• Dynamic discovery replaces giant manifests</text>
+            <text x="38" y="344" fill="var(--muted)" font-size="13">• Zero-FDE factories plug into existing trackers</text>
+
+            <rect x="334" y="216" width="286" height="176" rx="10" fill="var(--raised)" stroke="var(--accent)" stroke-width="1.5" />
+            <text x="352" y="246" fill="var(--accent)" font-family="Barlow Condensed, sans-serif" font-size="19" font-weight="700" letter-spacing="0.06em">04 · DECISION MODEL ROUTING</text>
+            <text x="352" y="276" fill="var(--ink)" font-size="14" font-weight="600">Pennies per 1k calibrated judgments</text>
+            <text x="352" y="300" fill="var(--muted)" font-size="13">• CI triage cuts tokens 94% on repeat runs</text>
+            <text x="352" y="322" fill="var(--muted)" font-size="13">• Grounded search restores confidence calibration</text>
+            <text x="352" y="344" fill="var(--muted)" font-size="13">• Save frontier synthesis for novel code paths</text>
+          </svg>
+          <figcaption>Unit economics across the summit: token supply, turn speed, tool shaping, and cheap decision tiers</figcaption>
+        </figure>
+
+        <figure class="talk-visual photo-card" data-visual="v4">
+          <img src="../../talks/2026-11-11-what-it-takes-to-set-intelligence-free/experience/checkpoint.jpg" alt="Lovable slide titled 'New computers start from a golden checkpoint' showing a 230 ms VM resume time across ~1M daily sandboxes." />
+          <figcaption>Fabian Hedin (Lovable) · Copy-on-write golden checkpoints resume VMs in 230 ms across ~1M daily sandboxes</figcaption>
+        </figure>
+
+        <figure class="talk-visual photo-card" data-visual="v5">
+          <img src="../../talks/2026-11-12-brownfield-factories/experience/demand-factory.jpg" alt="Diffusion slide titled 'Build Your Demand Factory' showing the SW Factory feeding a widening Demand Factory cone toward Customers, Wallet, SKUs, Product Lines, and M&amp;A." />
+          <figcaption>Justin McCarthy (Diffusion) · Once the brownfield factory holds existing promises steady, advantage shifts to the demand factory</figcaption>
+        </figure>
+
+        <figure class="talk-visual svg-panel" data-visual="v6">
+          <svg viewBox="0 0 640 420" role="img" aria-label="Contested operating modes: continuous 24/7 brownfield loops versus multi-week asynchronous runs versus synchronous human-readable specs">
+            <rect x="20" y="16" width="600" height="58" rx="8" fill="var(--panel)" stroke="var(--rule-strong)" stroke-width="1.5" />
+            <text x="320" y="42" text-anchor="middle" fill="var(--accent)" font-family="Barlow Condensed, sans-serif" font-size="20" font-weight="700" letter-spacing="0.06em">SUMMIT FAULT LINE · HOW CLOSELY SHOULD ENGINEERS COUPLE TO CODING AGENTS?</text>
+            <text x="320" y="62" text-anchor="middle" fill="var(--muted)" font-size="12">Three competing answers grounded in live conference deployments</text>
+
+            <rect x="20" y="94" width="188" height="302" rx="10" fill="var(--raised)" stroke="var(--identity)" stroke-width="1.5" />
+            <text x="36" y="124" fill="var(--identity)" font-family="Barlow Condensed, sans-serif" font-size="18" font-weight="700">1 · CONTINUOUS 24/7</text>
+            <text x="36" y="148" fill="var(--ink)" font-size="13" font-weight="600">Justin McCarthy</text>
+            <text x="36" y="176" fill="var(--muted)" font-size="12">Loop nonstop against</text>
+            <text x="36" y="194" fill="var(--muted)" font-size="12">existing code and live</text>
+            <text x="36" y="212" fill="var(--muted)" font-size="12">customer promises.</text>
+            <text x="36" y="248" fill="var(--ink)" font-size="12" font-weight="600">Works best when:</text>
+            <text x="36" y="268" fill="var(--muted)" font-size="12">Usage &amp; tests already</text>
+            <text x="36" y="286" fill="var(--muted)" font-size="12">define correctness.</text>
+            <text x="36" y="376" fill="var(--identity)" font-size="11">00:06:30 · Brownfield Factories</text>
+
+            <rect x="226" y="94" width="188" height="302" rx="10" fill="var(--raised)" stroke="var(--machine)" stroke-width="1.5" />
+            <text x="242" y="124" fill="var(--machine)" font-family="Barlow Condensed, sans-serif" font-size="18" font-weight="700">2 · MULTI-WEEK ASYNC</text>
+            <text x="242" y="148" fill="var(--ink)" font-size="13" font-weight="600">Walden Yan · Simon Willison</text>
+            <text x="242" y="176" fill="var(--muted)" font-size="12">44-day Android parity</text>
+            <text x="242" y="194" fill="var(--muted)" font-size="12">with sparse human msgs;</text>
+            <text x="242" y="212" fill="var(--muted)" font-size="12">12-hour game playtests.</text>
+            <text x="242" y="248" fill="var(--ink)" font-size="12" font-weight="600">Works best when:</text>
+            <text x="242" y="268" fill="var(--muted)" font-size="12">Goal &amp; parity oracle are</text>
+            <text x="242" y="286" fill="var(--muted)" font-size="12">explicitly stated upfront.</text>
+            <text x="242" y="376" fill="var(--machine)" font-size="11">00:10:45 · Cognition / Willison</text>
+
+            <rect x="432" y="94" width="188" height="302" rx="10" fill="var(--raised)" stroke="var(--accent)" stroke-width="1.5" />
+            <text x="448" y="124" fill="var(--accent)" font-family="Barlow Condensed, sans-serif" font-size="18" font-weight="700">3 · SYNCHRONOUS FLOW</text>
+            <text x="448" y="148" fill="var(--ink)" font-size="13" font-weight="600">Thariq Shihipar (Counter)</text>
+            <text x="448" y="176" fill="var(--muted)" font-size="12">Async dispatch breaks</text>
+            <text x="448" y="194" fill="var(--muted)" font-size="12">focus and hides what the</text>
+            <text x="448" y="212" fill="var(--muted)" font-size="12">software actually does.</text>
+            <text x="448" y="248" fill="var(--ink)" font-size="12" font-weight="600">Works best when:</text>
+            <text x="448" y="268" fill="var(--muted)" font-size="12">Architecture &amp; taste are</text>
+            <text x="448" y="286" fill="var(--muted)" font-size="12">still taking shape.</text>
+            <text x="448" y="376" fill="var(--accent)" font-size="11">00:11:06 · Counter-claim</text>
+          </svg>
+          <figcaption>Contested workflow fault line: autonomous background loops versus staying synchronously in the zone</figcaption>
+        </figure>
+
+      </div>
+      <figcaption class="talk-rail-caption"></figcaption>
+      <div class="talk-rail-progress"></div>
+    </aside>
+
+    <main class="talk-copy">
+
+      <section data-chapter="brownfield-vs-greenfield" data-visual="v1" data-caption="Greenfield guesses waste factory throughput; brownfield usage locks down the spec">
+        <div class="chapter">01 · Brownfield Over Greenfield</div>
+        <p>Justin McCarthy—who led the StrongDM Software Factory work before founding Diffusion—opened his summit talk with a deliberate provocation aimed straight at teams rushing to automate unproven ideas.</p>
+        <blockquote>
+          “So that's of course the time for me to say, please stop building software factories.”
+          <span class="who">Justin McCarthy · <a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Brownfield Factories</a> · 00:02:12</span>
+        </blockquote>
+        <p>When product-market fit is still an open question, human spec writers routinely ask for "a faster horse" because nobody yet knows what the software should do. Autonomous factories simply burn tokens hardening the wrong assumptions. Brownfield systems invert that geometry: an established codebase already has customer telemetry, support tickets, production traces, and revenue proving what works.</p>
+        <blockquote>
+          “It's something where customers are saying with their dollars and their and their utilization. Like yeah, this works for me. I like it. I want more of this.”
+          <span class="who">Justin McCarthy · <a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Brownfield Factories</a> · 00:03:18</span>
+        </blockquote>
+        <p>From the commercial product side at Lovable, Fabian Hedin reached the same boundary condition from a different direction: code is never the asset a factory optimizes for on its own—live business loops around payments, analytics, SEO, and customer outcomes are.</p>
+        <blockquote>
+          “But in the end, what matters is actually not the code.”
+          <span class="who">Fabian Hedin · <a href="../../talks/2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">What it takes to set intelligence free</a> · 00:02:04</span>
+        </blockquote>
+      </section>
+
+      <section data-chapter="small-high-equity-pods" data-visual="v2" data-caption="Tiny agent-native teams outship coordinated hierarchies when equity replaces middle layers">
+        <div class="chapter">02 · High-Equity Pods Replace Coordination</div>
+        <p>Once brownfield specifications are legible to coding agents, coordination overhead—not typing speed—becomes the main drag on throughput. Quinn Slack described spinning out a 20–21 person team under an external hiring freeze, shedding departmental silos, mandatory PR queues, PM layers, and 96% of external SaaS seats in favor of internal mini-apps running in agent sandboxes.</p>
+        <blockquote>
+          “And that skin in the game that you get when AI makes it so you can operate with way less people. Skin in the game—it's like this spiritual thing for the soul. Of great people, it makes them better at everything they do.”
+          <span class="who">Quinn Slack · <a href="../../talks/2026-11-12-a-company-built-around-the-agent/experience/page.html">A Company Built Around the Agent</a> · 00:05:51</span>
+        </blockquote>
+        <p>Slack grounded the cultural claim in hard financials: eliminating legacy enterprise sales-and-process checklists let a small team compete directly at massive capital efficiency.</p>
+        <blockquote>
+          “That is profitable. That's more than a hundred million ARR. That is doing so. On a dollar in, dollar out, you know, basis, that's 40 to 50 times more efficient than old-fashioned companies.”
+          <span class="who">Quinn Slack · <a href="../../talks/2026-11-12-a-company-built-around-the-agent/experience/page.html">A Company Built Around the Agent</a> · 00:15:58</span>
+        </blockquote>
+        <p>Walden Yan reported a parallel restructuring at Cognition, where merged pull requests grew 40× on 2.7× headcount after shrinking teams into two-to-three-engineer pods that own everything from implementation to triage and customer issues—while Raz Berman Gold (Overcut) cautioned that enterprise factories fail ROI whenever they require months of Forward Deployed Engineers rather than plugging cleanly into existing repos and trackers.</p>
+        <blockquote>
+          “But they're responsible for everything beyond engineering as well.”
+          <span class="who">Walden Yan · <a href="../../talks/2026-11-12-a-new-age-of-software-engineering/experience/page.html">A New Age of Software Engineering</a> · 00:01:48</span>
+        </blockquote>
+      </section>
+
+      <section data-chapter="fuel-and-unit-economics" data-visual="v3" data-caption="Real factory scale exposes token budgets, latency cliffs, and cheap decision-model routing">
+        <div class="chapter">03 · Every Problem Is a Fuel Problem</div>
+        <p>Behind Amp's "no token limits" posture sits a sharp economic warning from Steve Yegge. Running fleets of parallel agents quickly exposes who is actually paying the compute bill—Yegge estimated his 22 consumer Max plans ($10k/month) represented roughly $1.5M/year at raw API pricing—and panicked enterprises routinely break factories by clamping down too hard.</p>
+        <blockquote>
+          “but I tell you, every problem is a few problem.”
+          <span class="who">Steve Yegge · <a href="../../talks/2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Software Factories: Escape from Trash Mountain</a> · 00:09:22</span>
+        </blockquote>
+        <blockquote>
+          “That they put all these rules in place to make sure nothing bad ever happened, and so nothing ever happened. Okay, let's call it overfencing.”
+          <span class="who">Steve Yegge · <a href="../../talks/2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Software Factories: Escape from Trash Mountain</a> · 00:15:27</span>
+        </blockquote>
+        <p>Rather than throttling developers blindly, infrastructure and harness builders attacked waste directly. Natalie Serrino (Gimlet Labs) showed why the 63-second median coding-agent turn shatters focus and forces asynchronous drift. Philipp Schmid rebuilt his agent harness every six months to delete 90% of obsolete scaffolding, while Jarred Sumner kept Claude Code in TypeScript and cut memory ~4× with ahead-of-time JavaScript bundling.</p>
+        <p>At the tool and classifier layer, Arsalan Bashir (Sentry) replaced naive 1-tool-per-API wrappers with dynamic discovery and typed execution, running 4× faster with 30% fewer tokens. Scott Roberts (Workday) and Devin Gupta (Parallel) demonstrated cheap, calibrated decision models running inside SQL queries and CI triage for pennies per thousand judgments—cutting repeat CI-triage token consumption by 94% while reserving frontier tokens for genuine synthesis.</p>
+      </section>
+
+      <section data-chapter="durable-multi-hour-execution" data-visual="v4" data-caption="Golden checkpoints and isolated inboxes turn 30-minute loops into multi-day runs">
+        <div class="chapter">04 · Golden Checkpoints &amp; Multi-Hour Runtimes</div>
+        <p>Multi-hour factory work breaks if every deploy, crash, or dependency install forces a cold restart. Lovable graduated from a hard 30-minute limit to 10+ hour runs across roughly a million sandboxes a day by isolating per-agent message inboxes and booting containers from copy-on-write golden checkpoints in a fraction of a second.</p>
+        <blockquote>
+          “all of them you copy it over in about 230 milliseconds.”
+          <span class="who">Fabian Hedin · <a href="../../talks/2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">What it takes to set intelligence free</a> · 00:11:24</span>
+        </blockquote>
+        <p>Across the runtime stack, Michelle Chen explained how Cloudflare paired Workers, Durable Objects, and edge containers to close the remaining gap in its agent cloud, while Jarred Sumner noted that long-lived subagents outperform rigid step-by-step workflows precisely because they preserve working mental context across files. When given bare infrastructure without brittle orchestration, frontier models even construct their own persistence layers.</p>
+        <blockquote>
+          “So agents now are sufficiently advanced that they can actually build primitives if they need to solve hard problems.”
+          <span class="who">Lance Martin · <a href="../../talks/2026-11-12-exploring-claudes-frontier/experience/page.html">Exploring Claude’s frontier</a> · 00:03:46</span>
+        </blockquote>
+      </section>
+
+      <section data-chapter="demand-factory-and-gtm" data-visual="v5" data-caption="Continuous brownfield maintenance frees teams to build an agentic demand factory">
+        <div class="chapter">05 · From Promise-Keeping to the Demand Factory</div>
+        <p>McCarthy's operational blueprint for brownfield codebases is deliberately unglamorous: wire agents directly to production reality so they continuously protect existing user contracts without waiting on sprint ceremonies.</p>
+        <blockquote>
+          “So you've got an existing codestate. You've got an existing set of promises. Just make it continuous. Make it loop and make it keep those promises.”
+          <span class="who">Justin McCarthy · <a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Brownfield Factories</a> · 00:06:30</span>
+        </blockquote>
+        <p>Yet keeping promises steady is table stakes once competitors run the same brownfield loops. McCarthy argued that durable moat shifts outward from delivery to demand creation—expanding customers, wallet share, SKUs, and product lines—echoing Mihail Eric's lesson from building Monaco's agentic go-to-market platform.</p>
+        <blockquote>
+          “We have to figure out how to build a demand factory. Because our brownfield factory can't build the moat. Right. All it can do is keep our existing promises running well.”
+          <span class="who">Justin McCarthy · <a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Brownfield Factories</a> · 00:13:17</span>
+        </blockquote>
+        <blockquote>
+          “Go to market is one of the few remaining sources of alpha”
+          <span class="who">Mihail Eric · <a href="../../talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/experience/page.html">Building World-class Agentic GTM: Learnings from Monaco for Monaco</a> · 00:05:43</span>
+        </blockquote>
+      </section>
+
+      <section data-chapter="contested-sync-vs-async" data-visual="v6" data-caption="The summit's sharpest divide: autonomous multi-week factories versus synchronous human flow">
+        <div class="chapter">06 · The Fault Line: Async Loops vs. Sync Flow</div>
+        <p>While McCarthy pushed for 24/7 continuous brownfield loops, Walden Yan offered the most extreme long-horizon proof point: autonomous agents sustaining cross-platform parity over more than six weeks with minimal human steering.</p>
+        <blockquote>
+          “Go manage the entire Android application, and over the course of 44 days, we have a working application, which we'll be putting out soon.”
+          <span class="who">Walden Yan · <a href="../../talks/2026-11-12-a-new-age-of-software-engineering/experience/page.html">A New Age of Software Engineering</a> · 00:10:45</span>
+        </blockquote>
+        <p>Simon Willison paired that autonomy with a second counterpoint to elaborate factory architectures: once frontier models can solve hard problems almost by brute force over 12-hour test runs, defining the problem and verifying taste often beats elaborate multi-stage scaffolding.</p>
+        <blockquote>
+          “As difficult as possible, the models will solve your problem just almost with brute force.”
+          <span class="who">Simon Willison · <a href="../../talks/2026-11-11-2026-in-llms/experience/page.html">2026 in LLMs</a> · 00:08:02</span>
+        </blockquote>
+
+        <div class="counter-box">
+          <div class="lbl">Counter-Claim · Synchronous Flow &amp; Readable Specs</div>
+          <p>Looking back after leaving the Claude Code team, Thariq Shihipar challenged the entire fire-and-forget asynchronous workflow. Delegating background runs breaks deep flow and leaves engineers ignorant of the system they are supposed to maintain:</p>
+          <blockquote>
+            “And I find that like the ball just makes a bunch of choices for me, and then I try it out. I'm like, wow, I have no idea what that actually does. I get distracted pretty easily. I don't feel in the zone very much. You know, I sort of send off a prompt and they start doing something else and I come back. And I honestly make less progress because of these things, right?”
+            <span class="who">Thariq Shihipar · <a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">Thariq Shihipar, Independent</a> · 00:11:06</span>
+          </blockquote>
+        </div>
+
+        <div class="reading">
+          <b>For TheFocus.AI:</b> Don't pitch enterprise clients an autonomous greenfield factory on day one—and don't assume consumer flat-rate subscriptions will subsidize real workloads forever. Start with brownfield systems where production telemetry and customer contracts already define "done," install durable checkpointed sandboxes and typed wrappers, route high-volume checks through cheap grounded decision models, and keep senior engineers synchronously driving architectural specs while continuous loops guard existing promises.
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <section class="theme-talks-dir" id="talks-in-theme">
+    <div class="dir-head">
+      <h2>Talks in this theme (16 assigned + 1 counter-evidence)</h2>
+      <p>Every talk mapped to Brownfield &amp; demand factories, plus the synchronous-flow counter-claim.</p>
+    </div>
+    <div class="theme-talks-grid">
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Mihail Eric · Monaco</div>
+        <div class="tt-title"><a href="../../talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/experience/page.html">Building World-class Agentic GTM: Learnings from Monaco for Monaco</a></div>
+        <div class="tt-thesis">Encodes top domain operators' workflows onto a generic agent chassis as GTM becomes core alpha.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-10-building-world-class-agentic-gtm-learnings-from-monaco-for-monaco.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Simon Willison · Independent · also holds counter-claim</div>
+        <div class="tt-title"><a href="../../talks/2026-11-11-2026-in-llms/experience/page.html">2026 in LLMs</a></div>
+        <div class="tt-thesis">Twelve-hour playtest loops show brute-force model capability shifting engineering toward problem framing.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-11-2026-in-llms/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-11-2026-in-llms.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Scott Roberts · Workday</div>
+        <div class="tt-title"><a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/page.html">Autocomplete for Actions: System One from the UI to the DB</a></div>
+        <div class="tt-thesis">Runs fast decision models inside SQL queries and CI triage, cutting repeat token burn by 94%.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Michelle Chen · Cloudflare</div>
+        <div class="tt-title"><a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">cloudflare is a neolab</a></div>
+        <div class="tt-thesis">Combines edge network, Durable Objects, Workers, and sandboxes to complete an agent execution cloud.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-11-cloudflare-is-a-neolab.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Philipp Schmid · Google DeepMind</div>
+        <div class="tt-title"><a href="../../talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">I deleted 90% of my harness (And It Got Better)</a></div>
+        <div class="tt-thesis">Rebuilds agent harnesses every six months to strip obsolete scaffolding and lower cost per task.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-11-i-deleted-90-of-my-harness-and-it-got-better.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Steve Yegge · Independent</div>
+        <div class="tt-title"><a href="../../talks/2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Software Factories: Escape from Trash Mountain</a></div>
+        <div class="tt-thesis">Shows how consumer loss-leader pricing hides real token fuel burn and how overfencing stalls teams.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-11-software-factories-escape-from-trash-mountain.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Raz Berman Gold · Overcut</div>
+        <div class="tt-title"><a href="../../talks/2026-11-11-the-software-factory-that-needs-zero-fdes/experience/page.html">The Software Factory That Needs Zero FDEs</a></div>
+        <div class="tt-thesis">Plugs autonomous factory loops into existing enterprise repos and trackers without FDE lock-in.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-11-the-software-factory-that-needs-zero-fdes/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-11-the-software-factory-that-needs-zero-fdes.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Fabian Hedin · Lovable</div>
+        <div class="tt-title"><a href="../../talks/2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">What it takes to set intelligence free</a></div>
+        <div class="tt-thesis">Uses 230 ms golden checkpoints and persistent agent inboxes to scale runs past 10 hours.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-11-what-it-takes-to-set-intelligence-free.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Natalie Serrino · Gimlet Labs</div>
+        <div class="tt-title"><a href="../../talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/experience/page.html">What Will You Build When AI Is 10x Faster?</a></div>
+        <div class="tt-thesis">Breaks down how 63-second median agent turns shatter developer flow and why 10× inference changes UX.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-11-what-will-you-build-when-ai-is-10x-faster.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Quinn Slack · Amp</div>
+        <div class="tt-title"><a href="../../talks/2026-11-12-a-company-built-around-the-agent/experience/page.html">A Company Built Around the Agent</a></div>
+        <div class="tt-thesis">High-equity 21-person org scales past $100M ARR at 40–50× capital efficiency by shedding SaaS and PM sprawl.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-12-a-company-built-around-the-agent/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-12-a-company-built-around-the-agent.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Walden Yan · Cognition</div>
+        <div class="tt-title"><a href="../../talks/2026-11-12-a-new-age-of-software-engineering/experience/page.html">A New Age of Software Engineering</a></div>
+        <div class="tt-thesis">Grew merged PRs 40× on 2.7× headcount via PM-free pods and 44-day autonomous parity runs.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-12-a-new-age-of-software-engineering/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-12-a-new-age-of-software-engineering.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Justin McCarthy · Diffusion</div>
+        <div class="tt-title"><a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Brownfield Factories</a></div>
+        <div class="tt-thesis">Keep factories pointed at paying brownfield promises continuously, then build a demand factory for the moat.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-12-brownfield-factories/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-12-brownfield-factories.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Lance Martin · Anthropic</div>
+        <div class="tt-title"><a href="../../talks/2026-11-12-exploring-claudes-frontier/experience/page.html">Exploring Claude’s frontier</a></div>
+        <div class="tt-thesis">Frontier agents given only git and SQL invent their own coordination primitives across 30-hour builds.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-12-exploring-claudes-frontier/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-12-exploring-claudes-frontier.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Jarred Sumner · Anthropic / Bun</div>
+        <div class="tt-title"><a href="../../talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/experience/page.html">Jarred Sumner, Founder of Bun, Anthropic / Bun</a></div>
+        <div class="tt-thesis">AOT JS compilation cuts Claude Code memory 4×; long-lived subagents preserve code context across edits.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-12-jarred-sumner-founder-of-bun-anthropic-bun.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Arsalan Bashir · Sentry</div>
+        <div class="tt-title"><a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Let the Agent Cook: From APIs to Answers</a></div>
+        <div class="tt-thesis">Replaces 1-tool-per-API wrappers with dynamic typed execution, running 4× faster with 30% fewer tokens.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-12-let-the-agent-cook-from-apis-to-answers/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-12-let-the-agent-cook-from-apis-to-answers.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item">
+        <div class="tt-meta">Devin Gupta · Parallel</div>
+        <div class="tt-title"><a href="../../talks/2026-11-12-the-first-grounded-decision-model/experience/page.html">The first Grounded Decision Model</a></div>
+        <div class="tt-thesis">Grounds cheap classification models in live search so predicted probabilities match real-world accuracy.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-12-the-first-grounded-decision-model/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-12-the-first-grounded-decision-model.html">Hub</a></div>
+      </div>
+
+      <div class="theme-talk-item is-counter">
+        <div class="tt-meta">Counter-claim · Thariq Shihipar · Independent</div>
+        <div class="tt-title"><a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">Thariq Shihipar, Independent</a></div>
+        <div class="tt-thesis">Argues fire-and-forget asynchronous prompting breaks engineering flow and leaves builders ignorant of behavior.</div>
+        <div class="tt-links"><a href="../../talks/2026-11-12-thariq-shihipar-independent/experience/page.html">Talk page</a> <a href="../../site/talks/2026-11-12-thariq-shihipar-independent.html">Hub</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="talk-foot">
+    <span>Theme Deep Dive 02 of 06 · Brownfield &amp; demand factories</span>
+    <span><a href="../../site/index.html">Conference Hub</a> · <a href="./story.md">Markdown source</a></span>
+  </footer>
+
+</body>
+</html>

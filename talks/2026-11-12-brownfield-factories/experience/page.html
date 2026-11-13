@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brownfield Factories · Justin McCarthy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .alongside { margin: 1.2rem 0; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: .3rem; font: .88rem/1.55 var(--sans); }
+  .alongside b { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; display: block; margin-bottom: .2rem; }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.35rem, 2.8vw, 1.9rem)/1.28 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  .quote-card::before { content: none; }
+  code { font: .88em var(--mono); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Thu 12 Nov 2026 · Mainstage</div>
+  <h1>Brownfield factories, promises, and the demand factory</h1>
+  <p class="dek">Justin McCarthy (Diffusion) tells teams to stop building software factories for unvalidated ideas—point continuous background loops at brownfield promises customers already pay for, then build a Demand Factory to expand your brand envelope.</p>
+  <div class="talk-meta">Justin McCarthy, Diffusion · 18 min · <a href="../links.md">Links and further reading</a> · <a href="https://www.youtube.com/watch?v=y9JtCCZP2MQ&amp;t=23650s">Video</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="software-factories-moment.jpg" alt="His slide showing StrongDM AI Software Factories And The Agentic Moment (Feb 6, 2026), Simon Willison's write-up, Dan Shapiro's Five Levels from Spicy Autocomplete to the Dark Factory, and posts from Ethan Mollick and Garry Tan.">
+        <figcaption>His slide, 3:22 pm (straightened from photos/PXL_20261112_232236736.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="rarely-know-what-we-want.jpg" alt="His slide titled '... we rarely know what we want!' showing a commuter thinking 'my commute is too long' while saying 'I'd love a faster horse' next to a Word spec document.">
+        <figcaption>His slide, 3:24 pm (straightened from photos/PXL_20261112_232412481.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v3">
+        <div class="lbl">Continuous background promise-keeping</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Diagram: Brownfield promises (features, cost, price, security) enter a closed feedback loop where runtime telemetry feeds back continuously 24/7 instead of cutting the feedback leg and amplifying noise.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="20" width="166" height="92" rx="8" fill="var(--panel)" stroke="var(--accent)"/>
+            <text x="34" y="42" fill="var(--accent)" font-weight="600" font-size="10">PROMISES (INVARIANTS)</text>
+            <text x="34" y="64" fill="var(--ink)" font-weight="600">Features · Cost · Security</text>
+            <text x="34" y="83" fill="var(--muted)" font-size="10">Guarantees you refuse to</text>
+            <text x="34" y="98" fill="var(--muted)" font-size="10">regress on in production</text>
+
+            <path d="M186 66 L214 66" stroke="var(--accent)" stroke-width="2"/>
+
+            <rect x="216" y="20" width="164" height="92" rx="8" fill="var(--card)" stroke="var(--identity)"/>
+            <text x="230" y="42" fill="var(--identity)" font-weight="600" font-size="10">24/7 CONTINUOUS LOOP</text>
+            <text x="230" y="64" fill="var(--ink)" font-weight="600">Background commits</text>
+            <text x="230" y="83" fill="var(--muted)" font-size="10">Replaces daily / weekly</text>
+            <text x="230" y="98" fill="var(--muted)" font-size="10">human commit seasonality</text>
+
+            <path d="M298 112 L298 148 L103 148 L103 114" fill="none" stroke="var(--machine)" stroke-width="2"/>
+            <rect x="116" y="135" width="168" height="24" rx="4" fill="var(--paper)" stroke="var(--machine)"/>
+            <text x="200" y="151" text-anchor="middle" fill="var(--machine)" font-weight="600" font-size="10">FEEDBACK LEG (runtime truth)</text>
+
+            <rect x="20" y="178" width="360" height="52" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="200" y="200" text-anchor="middle" fill="var(--ink)" font-weight="600">Cut the feedback leg → amplify noise</text>
+            <text x="200" y="217" text-anchor="middle" fill="var(--muted)" font-size="10">Tune it with customer usage &amp; telemetry → self-sustaining brownfield</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from his promises &amp; amplifier loop section (00:04:52–00:06:30)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v4">
+        <img src="factories-simplify-over-time.jpg" alt="His slide titled 'Factories Simplify Over Time' comparing SpaceX Raptor 1 (dense external piping), Raptor 2, and Raptor 3 (clean, minimal moving parts).">
+        <figcaption>His slide, 3:30 pm (straightened from photos/PXL_20261112_233028749.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v5">
+        <img src="brownfield-faster-cheaper-safer.jpg" alt="His slide titled 'Brownfield Factories: Faster / Cheaper / Safer' alongside an illustration of a robotic gantry over an assembly line.">
+        <figcaption>His slide, 3:32 pm (straightened from photos/PXL_20261112_233242374.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v6">
+        <img src="demand-factory.jpg" alt="His slide titled 'Build Your Demand Factory' showing SW Factory feeding Demand Factory with high-volume signal returning from the right across Customers, Wallet, SKUs, Product Lines, and M&amp;A.">
+        <figcaption>His slide, 3:38 pm (straightened from photos/PXL_20261112_233826254.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v7">
+        <img src="lower-latency-demand.jpg" alt="His slide titled 'Lower latency response to demand / Game theory optimal competition' showing a small sailboat moving at speed.">
+        <figcaption>His slide, 3:36 pm (straightened from photos/PXL_20261112_233651471.MP.jpg)</figcaption>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="rube-goldberg-to-discernment" data-visual="v1" data-caption="From July 2025 Rube Goldberg factory loops to mode discernment">
+      <div class="chapter">The setup</div>
+      <h2>From Rube Goldberg loops to mode discernment</h2>
+      <p>McCarthy opens with a pun on Diffusion—diffusing model capability out into the hundred-trillion-dollar global economy—and tells the room this talk is dual-channel: human framing on stage, plus a closing QR link (<code>diffusion.io/brownfield</code>) packed with technical verification papers for your agents. Back in July 2025 on Claude 4, getting factory loops to stabilize required enormous token spend and fragile hand-wiring:</p>
+      <blockquote>“You know, even then, we could see glimmers that this thing was going to work. But at tremendous token expense, and only in the presence of a real. Rube Goldberg action.”<span class="cite">00:00:52</span></blockquote>
+      <p>Now that software factories have moved into the conference mainstream, the mistake is applying one process to every engineering mode:</p>
+      <blockquote>“Begin to use some discernment about whether we're discovering product market fit, we're breaking new ground. We're conquering new territory, or whether we are doing something that, you know, already has a precedent and is already working.”<span class="cite">00:02:12</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “Diffusion is the name of the company, which is a big pun.” (<code>2026-11-12T1521</code>) and “He's suggesting that we need different things for the different modes we're working in.” (<code>2026-11-12T1523</code>). <b>The reading:</b> After helping spark the “Dark Factory” wave at StrongDM (<code>factory.strongdm.ai</code>), McCarthy draws the boundary line before anyone else does.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:00, 00:00:52, 00:02:12</p>
+    </section>
+
+    <section data-chapter="why-brownfield-wins" data-visual="v2" data-caption="Don’t industrialize greenfield guessing; point factories at brownfield revenue">
+      <div class="chapter">Where factories belong</div>
+      <h2>Why greenfield stalls and brownfield wins</h2>
+      <p>When building something brand new, teams rarely know what they want—like a commuter asking for a faster horse in a Word spec. Trying to industrialize ambiguous discovery only manufactures the wrong software faster:</p>
+      <blockquote>“So that's of course the time for me to say, please stop building software factories.”<span class="cite">00:02:12</span></blockquote>
+      <p>Brownfield codebases flip the problem on its head. Customers already vote with dollars, daily utilization, and support tickets—giving your loops an existing behavioral oracle so teams can clear technical debt and rewrite legacy bottlenecks without guessing what to build:</p>
+      <blockquote>“Is it's something that we're already being paid for. It's something where customers are saying with their dollars and their and their utilization. Like yeah, this works for me. I like it. I want more of this.”<span class="cite">00:03:18</span></blockquote>
+      <blockquote>“What I'm using is what I want. Okay, so we know what to build. We build we build the existing thing.”<span class="cite">00:03:18</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “This is another thing that we could work on and sell.” (<code>2026-11-12T1524</code>). <b>The reading:</b> For Will and TheFocus.AI, brownfield factories are a concrete client service line: existing products come with live production contracts, so modernization and rewrites carry far less specification risk than greenfield experiments.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:02:12, 00:03:18</p>
+    </section>
+
+    <section data-chapter="promises-and-continuous-loops" data-visual="v3" data-caption="Encode promises as invariants inside 24/7 closed feedback loops">
+      <div class="chapter">The mechanism</div>
+      <h2>Promises as invariants in continuous loops</h2>
+      <p>Diffusion calls each core product guarantee—a feature, cost ceiling, price, or security boundary—a <strong>promise</strong>: an invariant you refuse to regress on. Encoding promises into closed loops only stabilizes a system when runtime truth feeds back; cut the feedback leg, and an amplifier just amplifies noise:</p>
+      <blockquote>“Feature is a promise. You know the cost and price of a thing is a promise.”<span class="cite">00:04:52</span></blockquote>
+      <blockquote>“As many of you know, this is the sort of idealized block diagram amplifier, and if you cut that feedback leg. You're just going to amplify noise, okay?”<span class="cite">00:04:52</span></blockquote>
+      <p>With promises encoded, commits stop following human daily and weekly seasonality and run around the clock—constantly checking whether anything got slower or less secure:</p>
+      <blockquote>“So another way to summarize that is, you know, my brownfield factory on an existing set of promises, it should just be. Continuous. It should be background. It should be keeping those promises.”<span class="cite">00:06:30</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “They use 'promise' as a type of invariant” (<code>2026-11-12T1526</code>), “That's under 'loop', but the next thing is 'continuous'” (<code>2026-11-12T1527</code>), and “Continuous, background, and promise-keeping” (<code>2026-11-12T1528</code>). <b>The reading:</b> Compare <a href="../../2026-11-10-one-teams-path-to-trusting-ai-generated-code/experience/page.html">Ankit Jain’s review invariants</a> and <a href="../../2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/experience/page.html">Dexter Horthy’s automated backpressure</a>—McCarthy turns those invariants into always-on background upkeep.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:04:52, 00:06:30</p>
+    </section>
+
+    <section data-chapter="factories-simplify" data-visual="v4" data-caption="Model progress turns Raptor-1 plumbing into simpler, faster factories">
+      <div class="chapter">Trajectory</div>
+      <h2>Factories simplify over time</h2>
+      <p>Builders who struggled with sprawling agent scaffolding a year ago are watching harnesses generalize and skills shrink—with most of the credit going to stronger underlying models:</p>
+      <blockquote>“The skills are getting shorter. Harnesses are getting more general, of course, and a lot of this again is credit to the models themselves.”<span class="cite">00:08:09</span></blockquote>
+      <p>He maps that curve onto SpaceX’s Raptor 1, Raptor 2, and Raptor 3 rocket engines. Raptor 1 flew despite a maze of external piping; each successor packed higher thrust into fewer moving parts. In aerospace, that took armies of rocket engineers—whereas software teams inherit simplification automatically every model release:</p>
+      <blockquote>“We have been allies in the simplification of work because we have Astro, Table, and Carbon. Right, and so they are trying to take our factory from version one to two to three.”<span class="cite">00:08:09</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “A lot of the credit goes to the models; things will simplify over time.” (<code>2026-11-12T1530</code>) and “SpaceX metaphor for how things simplified.” (<code>2026-11-12T1531</code>). <b>The reading:</b> Echoes <a href="../../2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">Philipp Schmid deleting 90% of his harness</a>—invest in durable verification and promises rather than intricate orchestration plumbing.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:08:09</p>
+    </section>
+
+    <section data-chapter="faster-cheaper-safer" data-visual="v5" data-caption="A one-week brownfield factory targets faster, cheaper, safer on the Pareto curve">
+      <div class="chapter">The playbook</div>
+      <h2>One week to faster, cheaper, safer</h2>
+      <p>Give a brownfield factory a clean instruction—the same system, without trading safety for speed along the Pareto curve—and leave subjective “better” for human taste and discovery:</p>
+      <blockquote>“So, so it should be faster. It should be cheaper. It should be safer.”<span class="cite">00:10:27</span></blockquote>
+      <blockquote>“So I think everyone should have the ground field factory. You should have it for your existing commitments. You should have it. It should become better, faster, and cheaper over time. I find that this takes like a week.”<span class="cite">00:10:27</span></blockquote>
+      <p>The companion library behind his closing QR code (<a href="https://diffusion.io/brownfield">diffusion.io/brownfield</a>) lays out the verification primitives behind safe rewrites: shadow replay and differential testing, coverage-guided fuzzing, property-based and deterministic simulation, mutation testing and held-out checks, specification proofs (including AWS Cedar), simulated users, and canary cutover.</p>
+      <div class="reading"><b>From the notes:</b> “Look up the papers they've published.” (<code>2026-11-12T1538</code>) captures the full taxonomy on <code>diffusion.io/brownfield</code> alongside his earlier <a href="https://factory.strongdm.ai/">StrongDM factory</a> work (Digital Twin Universe, Attractor). <b>The reading:</b> This turns “brownfield factory” from a slogan into a concrete verification checklist for client rewrites.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:10:27, 00:17:07</p>
+    </section>
+
+    <section data-chapter="the-demand-factory" data-visual="v6" data-caption="When code is abundant, build a Demand Factory to expand your brand envelope">
+      <div class="chapter">The pivot</div>
+      <h2>Elevate your ambition: the demand factory</h2>
+      <p>Once a brownfield factory keeps promises running reliably, the real constraint flips. Teams are churning out working software—only to realize buyers weren’t asking for more buttons to click:</p>
+      <blockquote>“They actually, they actually weren't asking for software. They were asking for more gross margin. They were asking for more customers. They were asking for more brand differentiation, okay, and just giving them more windows to click on, and buttons to click on. That's not doing it for them anymore.”<span class="cite">00:12:03</span></blockquote>
+      <p>Because engineers fluent with models can build supply at will, they inherit a new job: building a <strong>Demand Factory</strong> to rate-match market learning to software output and expand the company’s <strong>brand envelope</strong>—like Spindrift launching an energy drink (credible adjacent promise) rather than motor oil:</p>
+      <blockquote>“So that means like we have a new job now. We have to figure out how to build a demand factory. Because our brownfield factory can't build the moat. Right. All it can do is keep our existing promises running well.”<span class="cite">00:13:17</span></blockquote>
+      <blockquote>“And then figure out what is the maximum extent of what I can possibly promise to the market, and that's my brand envelope.”<span class="cite">00:15:32</span></blockquote>
+      <blockquote>“Maybe you can't sell motor oil, but maybe you can sell an energy drink. So figure out what your energy drink is and start selling it now.”<span class="cite">00:15:32</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “It could be the case that the customers weren't asking for this software” (<code>2026-11-12T1533</code>), “That means we have a new job.” (<code>2026-11-12T1534</code>), “Start working on the demand factory.” (<code>2026-11-12T1535</code>), and “Expansion of the brand envelope” (<code>2026-11-12T1537</code>). <b>The reading:</b> Sits squarely beside <a href="../../2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Steve Yegge’s warning</a> about shipping features nobody wanted and <a href="../../2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">Lovable’s outer business loop</a>.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:12:03, 00:13:17, 00:15:32, 00:16:12</p>
+    </section>
+
+    <section data-chapter="game-theory-edge" data-visual="v7" data-caption="Lower-latency demand response creates an edge even with identical models">
+      <div class="chapter">Competition &amp; action</div>
+      <h2>Lower-latency demand and the first-mover edge</h2>
+      <p>Even in a world where every competitor rents the same frontier models, the team that pairs fast agents with sharper market questioning, overnight synthesis, and rapid elasticity experiments wins a latency edge—causing customers to stop self-censoring and ask for more:</p>
+      <blockquote>“I think your demand factory helps you ask better questions of your market. Because the agents can help prioritize what to ask next.”<span class="cite">00:13:17</span></blockquote>
+      <p>Expanding across customers, wallet share, SKUs, and coherent product lines eventually runs out of organic headroom—leaving consolidation to whoever built the faster loop first:</p>
+      <blockquote>“Okay, and if you get started now, you're going to be the one doing the acquiring.”<span class="cite">00:16:12</span></blockquote>
+      <ul class="key-points">
+        <li><strong>Reserve factories for brownfield promises:</strong> stop industrializing unvalidated greenfield guesses; use continuous background loops where paying usage already defines invariants (<code>00:02:12</code>, <code>00:03:18</code>, <code>00:04:52</code>).</li>
+        <li><strong>Rely on model-driven simplification:</strong> like Raptor 1→2→3, cleaner models slim down skills and harnesses while verification gates keep rewrites faster, cheaper, and safer (<code>00:08:09</code>, <code>00:10:27</code>).</li>
+        <li><strong>Pair supply with a Demand Factory:</strong> use agents to ask better market questions, allocate experiments, and sell adjacent lines inside your brand envelope (<code>00:13:17</code>, <code>00:15:32</code>, <code>00:16:12</code>).</li>
+      </ul>
+      <div class="reading"><b>From the notes:</b> Synthesizes <code>2026-11-12T1524</code>, <code>2026-11-12T1535</code>, and <code>2026-11-12T1538</code>. <b>The reading:</b> McCarthy closes by telling engineers to reboot product management and wake up their executive team—a direct playbook for Will and TheFocus.AI when advising clients after the easy software supply shock hits.</div>
+      <div class="alongside"><b>Read alongside</b><ul><li><a href="https://diffusion.io/brownfield">Diffusion: Brownfield rewrite resources</a> — Companion reading list behind the closing QR code (replay, fuzzing, mutation tests, proofs, Cedar case study).</li><li><a href="https://factory.strongdm.ai/">StrongDM Software Factory</a> &amp; <a href="https://simonwillison.net/2026/Feb/7/software-factory/">Simon Willison’s write-up</a> — Context on Digital Twin Universes, Attractor, and the Dark Factory origin.</li><li><a href="../../2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/experience/page.html">Dexter Horthy: 12-Factor Factories</a> — Companion Thursday talk on forward pressure, backpressure, and asymmetric slop.</li><li><a href="../../2026-11-12-a-new-age-of-software-engineering/experience/page.html">Walden Yan: A New Age of Software Engineering</a> — Self-optimizing factories and 40× merged PRs at Cognition.</li></ul></div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:13:17, 00:16:12, 00:17:07</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room — keeping ASR garbles like “ground field” for “brownfield”, “Astro, Table, and Carbon”, and “Diffusion Factory” for “Demand Factory” verbatim) and on notes and slide photos taken during the talk. “From the notes” and “The reading” are editorial synthesis, not his words. More on the <a href="../links.md">links page</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autocomplete for Actions · Scott Roberts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .alongside { margin: 1.2rem 0; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: .3rem; font: .88rem/1.55 var(--sans); }
+  .alongside b { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; display: block; margin-bottom: .2rem; }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  .quote-card::before { content: none; }
+  code { font: .88em var(--mono); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Wed 11 Nov 2026 · Mainstage</div>
+  <h1>A judgment in a SQL query</h1>
+  <p class="dek">Workday puts TypeSafe’s System One decision model, Jev, inside a DuckDB SQL function to filter rows in plain English without embeddings or training—and runs the exact same model at typing speed in the search box to pick action cards.</p>
+  <div class="talk-meta">Scott Roberts, Workday · 12 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="natural-language-query.jpg" alt="Slide titled Natural language inside the query showing scratch.sql with SELECT substr(name, 1, 22) AS candidate, round(jev_noul(resume_body, 'Has this person worked on fraud, or trust and safety problems?'), 2) AS score FROM pool ORDER BY score DESC LIMIT 20; and the tagline No classifier to train. No index to build.">
+        <figcaption>His slide, 3:34 pm (straightened from photos/PXL_20261111_233429743.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="duckdb-live-demo.jpg" alt="Live terminal and editor split showing scratch.sql on the left with jev_noul resume screening queries and the Jev DuckDB resume screening shell on the right listing jev_noul, jev_score, jev_choice, and jev_ask functions.">
+        <figcaption>Live DuckDB demo, 3:34 pm (straightened from photos/PXL_20261111_233436849.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="retrieval-three-ways.jpg" alt="Slide titled Retrieval three ways: Qwen, Cohere and Jev contrasting multi-step embedding, vector database, similarity search, and reranking pipelines against Jev asking a yes/no question of every row directly.">
+        <figcaption>His slide, 3:33 pm (straightened from photos/PXL_20261111_233341807.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v4">
+        <img src="in-code-conditional.jpg" alt="Scott Roberts on stage beside a slide titled In code, it's a conditional showing IF/THEN and SWITCH/CASE harness branches mapped to Jev's NOUL, CHOICE, and SCORE primitives.">
+        <figcaption>Stage &amp; slide, 3:27 pm (straightened from photos/PXL_20261111_232705433.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v5">
+        <p class="quote-big">“Where we go from predicting what you want to say. To predicting what you want to do”<span>Scott Roberts · 00:04:00</span></p>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v6">
+        <div class="lbl">Two-step UI architecture: card selection + domain questions</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Flow diagram showing user keystrokes feeding Jev to pick a card at $20 per million judgments, then domain-team questions filling the card to complete the task, protected by a pre-merge collision check.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="22" width="110" height="58" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="75" y="47" text-anchor="middle" fill="var(--ink)" font-weight="600">Keystrokes</text>
+            <text x="75" y="64" text-anchor="middle" fill="var(--muted)" font-size="10">as words arrive</text>
+
+            <path d="M130 51 L148 51" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="148" y="22" width="116" height="58" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="206" y="47" text-anchor="middle" fill="var(--accent)" font-weight="600">1. Jev picks card</text>
+            <text x="206" y="64" text-anchor="middle" fill="var(--muted)" font-size="10">intent (~$20 / 1M)</text>
+
+            <path d="M264 51 L282 51" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="282" y="22" width="98" height="58" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="331" y="47" text-anchor="middle" fill="var(--identity)" font-weight="600">2. Team fills it</text>
+            <text x="331" y="64" text-anchor="middle" fill="var(--muted)" font-size="10">domain questions</text>
+
+            <rect x="52" y="108" width="296" height="50" rx="8" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="200" y="129" text-anchor="middle" fill="var(--machine)" font-weight="600">Pre-merge collision check (7 cards → 96% accuracy)</text>
+            <text x="200" y="146" text-anchor="middle" fill="var(--muted)" font-size="10">verify new cards never collide with existing intents before shipping</text>
+
+            <rect x="90" y="182" width="220" height="44" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="200" y="209" text-anchor="middle" fill="var(--ink)" font-weight="600">Action card rendered · Task done</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:06:42; not his slide</figcaption>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="natural-language-query" data-visual="v1" data-caption="SQL selects and sorts rows by asking Jev a plain-English question">
+      <div class="chapter">The demo</div>
+      <h2>Natural language inside the query</h2>
+      <p>The problem is a recruiter’s: a pile of resumes, and the need to find who fits. Roberts answers it not with an LLM agent loop, but with a single SQL select statement:</p>
+      <blockquote>“So this is against a DuckDB, where we have a function.”<span class="cite">00:09:24</span></blockquote>
+      <p>The function calls Jev on each resume with a question in plain English, returns the probability as a score, and sorts descending:</p>
+      <p><code>SELECT substr(name, 1, 22) AS candidate, round(jev_noul(resume_body, 'Has this person worked on fraud, or trust and safety problems?'), 2) AS score FROM pool ORDER BY score DESC LIMIT 20;</code></p>
+      <div class="reading"><b>From the notes:</b> “he is calling jev inside of a sql statement inside of a duckdb”. <b>The reading:</b> a model judgment becomes a composable SQL primitive—filtering, sorting, joining, and grouping data where it already lives, echoing <a href="../../2026-11-10-the-new-job-of-the-data-team-is-providing-context-to-ai/experience/page.html">George Fraser’s warehouse-as-context thesis</a>.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:09:24</p>
+    </section>
+
+    <section data-chapter="adversarial-plumbing" data-visual="v2" data-caption="117 synthetic resumes scored in 2.3s; adversarial plumbing test rejects AI/data pipelines">
+      <div class="chapter">Adversarial test</div>
+      <h2>Pipelines vs. plumbing in 2.3 seconds</h2>
+      <p>The pool holds 117 synthetic, ML-heavy resumes with made-up names, so fraud and trust-and-safety prompts score high immediately. To prove the model isn’t matching keywords, Roberts swaps the prompt inside <code>scratch.sql</code> to an adversarial question—every resume contains the word “pipeline” (data pipelines, AI pipelines), so he asks whether each candidate is qualified to perform plumbing:</p>
+      <blockquote>“If you were going to just do a lexical search, it might pick up some of these.”<span class="cite">00:09:24</span></blockquote>
+      <p>Jev scores them all near zero without touching an index or training set, scanning the full table live:</p>
+      <blockquote>“So we went over one hundred seventeen records.”<span class="cite">00:09:24</span></blockquote>
+      <blockquote>“We had 2.3 seconds of wall time and spent almost nothing on this query.”<span class="cite">00:09:24</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:09:24</p>
+    </section>
+
+    <section data-chapter="retrieval-without-stack" data-visual="v3" data-caption="Skip embeddings and vector DBs when a fast reranker-style judgment fits every row">
+      <div class="chapter">The pipeline</div>
+      <h2>Retrieval without the retrieval stack</h2>
+      <p>Normally, the recruiter problem requires an entire retrieval pipeline: chunk and embed resumes, load a vector database, run similarity search, and finish with a reranker. Looking closely at modern rerankers reveals why Jev collapses the stack:</p>
+      <blockquote>“One interesting callout is the Quinn reranker.”<span class="cite">00:08:03</span></blockquote>
+      <p>Qwen’s reranker already asks a yes/no relevance question at the end of the pipeline. If the judgment model is fast and cheap enough to check every row directly, everything upstream disappears:</p>
+      <blockquote>“But with Jeff, we basically take out all the embedding steps.”<span class="cite">00:08:03</span></blockquote>
+      <blockquote>“I don't have to train anything up. I don't have to do embedding. I don't have to put things in a vector database.”<span class="cite">00:08:03</span></blockquote>
+      <div class="reading"><b>The reading:</b> this sits directly opposite <a href="../../2026-11-11-how-to-build-agents-over-your-own-data/experience/page.html">Mixedbread’s “index ahead of the agent”</a> from the same day. Both hold at different scales: evaluate every row directly for hundreds or thousands of records; narrow the candidate set with SQL filters or an index at millions, then let the decision model score what remains.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:08:03</p>
+    </section>
+
+    <section data-chapter="why-decision-model" data-visual="v4" data-caption="Every harness loop is full of conditionals that don't need System Two LLMs">
+      <div class="chapter">The primitives</div>
+      <h2>Why a decision model, not an LLM</h2>
+      <p>Calling a model on every row or keystroke fails if every branch pays full LLM latency and cost. In a standard agent loop—request, decide, tool call, judge, repeat—invoking a frontier model at every branch puts slow System Two reasoning on trivial routing decisions:</p>
+      <blockquote>“So one is there's too much intelligence.”<span class="cite">00:00:37</span></blockquote>
+      <blockquote>“So you know, LLMs a lot of times are just a hammer looking for a nail.”<span class="cite">00:00:37</span></blockquote>
+      <p>Look at those harness branches in code and they reduce to plain control flow:</p>
+      <blockquote>“it's really just a conditional.”<span class="cite">00:01:42</span></blockquote>
+      <p>Jev exposes three primitives mapped directly to code: probability (<code>if/then</code>), choice across up to 255 options (<code>switch/case</code>), and scoring (<code>sorted</code>). Unlike traditional classifiers that demand labeled datasets and retraining, plugging in a question generalizes zero-shot—Roberts tests “is a fish a pet?” (50/50) and disambiguates it 20 ms later with context:</p>
+      <blockquote>“Oh, is a fish on my plate a pet? Clearly not.”<span class="cite">00:03:17</span></blockquote>
+      <div class="reading"><b>The reading:</b> these are the same conditional gates Diogo presented from the model builder’s side in <a href="../../2026-11-11-i-love-you-so-jevving-much/experience/page.html">Too good to be true</a>—seen here inside Workday’s engineering harness.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:37, 00:01:42, 00:02:24, 00:03:17</p>
+    </section>
+
+    <section data-chapter="say-to-do" data-visual="v5" data-caption="Typeahead shifts from guessing your next word to rendering the action card">
+      <div class="chapter">The interface</div>
+      <h2>From what you want to say to what you want to do</h2>
+      <p>Standard autocomplete predicts the words of your question without moving you closer to completing the task. Workday’s prototype (fake data, not yet in production) flips the search box into an action surface that adapts live as you type—requesting time off, pulling a hidden payslip card, booking Friday’s 2 p.m. meeting with your boss, or popping up an org owner’s contact card with an email button:</p>
+      <blockquote>“Where we go from predicting what you want to say. To predicting what you want to do”<span class="cite">00:04:00</span></blockquote>
+      <blockquote>“This is not something that we could have done with an LLM.”<span class="cite">00:04:00</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “predicting what you want to say vs what you want to do”. <b>The reading:</b> this is Cloudflare’s <a href="../../2026-11-11-cloudflare-is-a-neolab/experience/page.html">System One model pattern</a> applied directly to enterprise UI—instant decision models handle routing in the search bar while slow deliberation waits until needed.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:04:00</p>
+    </section>
+
+    <section data-chapter="picks-the-card" data-visual="v6" data-caption="Jev picks the UI card at typing speed; the domain team owns the questions inside it">
+      <div class="chapter">Ownership split</div>
+      <h2>Jev picks the card; the team fills it in</h2>
+      <p>Running at typeahead cadence stays economically viable because each routing judgment costs next to nothing:</p>
+      <blockquote>“And you know we can do this at about twenty bucks for a million judgments.”<span class="cite">00:06:42</span></blockquote>
+      <p>Architecture splits cleanly into two steps: Jev gets the user in the front door, and the domain team owning that workflow defines the progressive questions that complete the task:</p>
+      <blockquote>“So first, Jeb is picking the card”<span class="cite">00:06:42</span></blockquote>
+      <p>Before merging any new card into the library, teams test for intent collisions against existing cards—hitting 96% accuracy in initial seven-card experiments:</p>
+      <blockquote>“We were able to get ninety-six percent accuracy on that.”<span class="cite">00:06:42</span></blockquote>
+      <p>Front-door intent routing and in-database SQL filtering share the same thesis: wherever an LLM felt too slow or expensive, small decision models open new territory:</p>
+      <blockquote>“imagine the things that you can do when you have a decision model installed.”<span class="cite">00:10:57</span></blockquote>
+      <ul class="key-points">
+        <li><strong>Decision models replace retrieval stacks on focused pools:</strong> calling Jev inside DuckDB scored 117 resumes in 2.3s with no embeddings, vector DB, or training (<code>00:08:03</code>, <code>00:09:24</code>).</li>
+        <li><strong>Action autocomplete runs at keystroke latency:</strong> at ~$20 per million judgments, UI cards adapt live while the user types (<code>00:04:00</code>, <code>00:06:42</code>).</li>
+        <li><strong>Split intent selection from domain logic:</strong> Jev picks the card (96% across 7 cards); the owning team defines how the card finishes the work (<code>00:06:42</code>).</li>
+      </ul>
+      <div class="alongside"><b>Read alongside</b><ul><li><a href="../../2026-11-11-i-love-you-so-jevving-much/experience/page.html">Diogo on TypeSafe &amp; Jev</a> — The decision primitives from the model creator’s perspective.</li><li><a href="../../2026-11-11-cloudflare-is-a-neolab/experience/page.html">Cloudflare’s Clef</a> &amp; <a href="../../2026-11-11-i-deleted-90-of-my-harness-and-it-got-better/experience/page.html">Gemini Decisions</a> — Companion System One routing patterns.</li><li><a href="../../2026-11-11-how-to-build-agents-over-your-own-data/experience/page.html">Mixedbread: search ahead of the agent</a> — The opposite indexing trade-off at million-document scale.</li></ul></div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:06:42, 00:10:57</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room — keeping ASR variants like “Jeff”, “Jeb”, “Jim”, “Java” for Jev and “Quinn” for Qwen verbatim) and on notes taken during the talk. “From the notes” and “The reading” are editorial synthesis, not his words. More on the <a href="../links.md">links page</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

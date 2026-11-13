@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talk But Verify · Michael Liendo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .alongside { margin: 1.2rem 0; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: .3rem; font: .88rem/1.55 var(--sans); }
+  .alongside b { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; display: block; margin-bottom: .2rem; }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.35rem, 2.8vw, 1.85rem)/1.28 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  .quote-card::before { content: none; }
+  code { font: .88em var(--mono); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Thu 12 Nov 2026 · Continental 1–3 (Expo Sessions)</div>
+  <h1>Scale human-in-the-loop to the stakes</h1>
+  <p class="dek">Once agents book flights, touch GitHub, and move money, pasting long-lived API keys on a laptop breaks down. Michael Liendo lays out four verification rungs: conversational bounds, Token Vault scoped OAuth, CIBA out-of-band push approvals, and capped HTTP 402 payment tokens.</p>
+  <div class="talk-meta">Michael Liendo, Auth0 · 22 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="the-shift-real-world-consequence.jpg" alt="His slide: The Shift — Agents aren't just answering questions anymore. They're booking flights, sending emails, moving money. Going wrong no longer means a bad answer — it means a real-world consequence. The question isn't whether to trust your agent. It's when — and how much.">
+        <figcaption>His slide, 11:48 am (straightened from photos/PXL_20261112_194819770.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="four-checkpoints-map.jpg" alt="His slide: The Map — As the stakes rise, the type of check changes. Four columns: 01 Conversational Just ask me, 02 Token Vault Act for me, 03 CIBA step-up Prove it's me, 04 Payments Move my money.">
+        <figcaption>His slide, 11:49 am (straightened from photos/PXL_20261112_194914731.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v3">
+        <div class="lbl">Token Vault · Step-up scoped exchange</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Token Vault step-up flow: User logs in with email and password, agent hits a tool requiring Google Calendar or GitHub write scope, Token Vault prompts user consent and returns a short-lived scoped token without exposing the upstream refresh token.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="18" width="160" height="58" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="34" y="40" fill="var(--identity)" font-weight="600" font-size="10">1. BASELINE SESSION</text>
+            <text x="34" y="59" fill="var(--ink)">User logged in (no OAuth)</text>
+
+            <rect x="220" y="18" width="160" height="58" rx="8" fill="var(--panel)" stroke="var(--accent)"/>
+            <text x="234" y="40" fill="var(--accent)" font-weight="600" font-size="10">2. TOOL INTERRUPT</text>
+            <text x="234" y="59" fill="var(--ink)">Needs Calendar / GitHub</text>
+
+            <path d="M180 47 L218 47" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="20" y="102" width="360" height="58" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="34" y="124" fill="var(--accent)" font-weight="600" font-size="10">3. TOKEN VAULT STEP-UP</text>
+            <text x="34" y="143" fill="var(--ink)">User grants narrow scope; Vault holds upstream credentials</text>
+
+            <path d="M300 76 L300 100 M200 160 L200 184" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="40" y="186" width="320" height="48" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="200" y="207" text-anchor="middle" fill="var(--identity)" font-weight="600">SHORT-LIVED SCOPED TOKEN → AGENT</text>
+            <text x="200" y="224" text-anchor="middle" fill="var(--muted)" font-size="10">No Drive, no YouTube, no raw keys on disk</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from his Token Vault walkthrough at 00:06:11 and 00:08:44</figcaption>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v4">
+        <p class="quote-big">“Ciba client-initiated back-channel authentication. It's really just a fancy way of saying we're going to send you an email, push notification, or an SMS. To make sure that it is in fact you.”<span>Michael Liendo · 00:12:49</span></p>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v5">
+        <div class="lbl">Agent payments · HTTP 402 &amp; spend caps</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Three agent payment options over Stripe MPP and Coinbase x402: Raw credit card never shared, Virtual card for capped single use, and Shared Payment Token with a hard maximum dollar threshold against hidden HTML spoofing.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="16" width="360" height="44" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="34" y="36" fill="var(--muted)" font-weight="600" font-size="10">AVOID</text>
+            <text x="90" y="36" fill="var(--ink)" font-weight="600">Raw Card Number</text>
+            <text x="220" y="36" fill="var(--muted)" font-size="10">Full balance exposed on leak</text>
+
+            <rect x="20" y="72" width="360" height="44" rx="8" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="34" y="92" fill="var(--machine)" font-weight="600" font-size="10">BETTER</text>
+            <text x="90" y="92" fill="var(--ink)" font-weight="600">Virtual Card</text>
+            <text x="220" y="92" fill="var(--muted)" font-size="10">Merchant &amp; limit constrained</text>
+
+            <rect x="20" y="128" width="360" height="54" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="34" y="149" fill="var(--accent)" font-weight="600" font-size="10">AGENT-NATIVE</text>
+            <text x="128" y="149" fill="var(--ink)" font-weight="600">Shared Payment Token (402)</text>
+            <text x="34" y="169" fill="var(--muted)" font-size="10">Stripe MPP &amp; Coinbase x402 · cards + stablecoins</text>
+
+            <rect x="20" y="196" width="360" height="42" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="200" y="215" text-anchor="middle" fill="var(--identity)" font-weight="600">ENFORCE HARD MAX THRESHOLD</text>
+            <text x="200" y="230" text-anchor="middle" fill="var(--muted)" font-size="10">Blocks hidden-div price spoofing ($12 → $15)</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from his HTTP 402 payment flow at 00:15:56</figcaption>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="from-raw-keys-to-stakes" data-visual="v1" data-caption="Agents now trigger real-world side effects, not just bad answers">
+      <div class="chapter">The shift</div>
+      <h2>From raw API keys to real-world consequences</h2>
+      <p>The early wave of desktop agents moved fast by dropping long-lived API keys directly onto local developer machines. Once agents book travel, alter calendars, commit to repositories, and spend money, raw keys become impossible to scope or revoke cleanly when something goes sideways:</p>
+      <blockquote>“Is just give us an API key to this service and that service and this one over here. It was great. We were building really, really fast. And then we realized, well, those are long-lived APIs. Probably not the best thing.”<span class="cite">00:00:45</span></blockquote>
+      <p>Before wiring any tool, you have to answer a basic identity question that harness frameworks often skip:</p>
+      <blockquote>“If I have an agent going off and doing its own thing, is it acting on behalf of me? Does the agent have its own identity?”<span class="cite">00:00:45</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:45, 00:02:04</p>
+    </section>
+
+    <section data-chapter="the-four-tier-ladder" data-visual="v2" data-caption="Match friction to stakes across four distinct checkpoints">
+      <div class="chapter">The map</div>
+      <h2>Four checkpoints as the stakes rise</h2>
+      <p>Stopping the user on every read or search destroys the point of an agent, while rubber-stamping destructive calls invites outages. Instead, calibrate the check to the stakes across four tiers—from conversational back-and-forth up to out-of-band confirmation and spend limits:</p>
+      <blockquote>“Well, it doesn't make sense to have a human in the loop at every single stage of the application, but sometimes it's implied. And sometimes it's right there, staring at us in the face, waiting for us to approve.”<span class="cite">00:02:04</span></blockquote>
+      <p>Even at the lowest tier—a conversational booking assistant for a dog grooming shop built with the Vercel AI SDK—you still place hard bounds on how far an agent can wander before pausing:</p>
+      <blockquote>“Let's say you have a back. You say, Hey, I don't want this to exceed more than you know eight steps or twelve steps.”<span class="cite">00:04:30</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:02:04, 00:04:30, 00:07:19</p>
+    </section>
+
+    <section data-chapter="token-vault-scoped-access" data-visual="v3" data-caption="Step-up OAuth keeps upstream tokens out of the agent context">
+      <div class="chapter">Gate 02 · Act for me</div>
+      <h2>Token Vault: limit what the agent can touch</h2>
+      <p>A user signed in with email and password has an identity, yet their agent still shouldn’t hold blanket access to Google Drive or YouTube just to add a grooming appointment to Calendar. With step-up authorization, the agent hits the missing permission at runtime and pauses until the user connects only the narrow scope needed:</p>
+      <blockquote>“So I'm authenticated, but my agent needs to do more. So now we have this authorization stuff.”<span class="cite">00:06:11</span></blockquote>
+      <p>In both the calendar booking flow and his live “Party Animals” audience drawing demo—where a nightly cron agent posts doodles to a GitHub repo—Token Vault holds the connected credentials and issues a short-lived, scoped access token to the agent or MCP server:</p>
+      <blockquote>“A short-lived token. OAuth 2 has solved this for decades now, and I'm going to associate that with my user.”<span class="cite">00:06:11</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “Token vault is a super interesting idea: limiting the scopes of what the agents can do.” (<code>2026-11-12T1154</code>). <b>The reading:</b> for client apps and MCP servers, Token Vault replaces static <code>.env</code> personal access tokens with per-user, just-in-time OAuth scope grants that expire quickly.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:06:11, 00:08:44</p>
+    </section>
+
+    <section data-chapter="ciba-out-of-band-approval" data-visual="v4" data-caption="Verify destructive mutations outside the browser chat session">
+      <div class="chapter">Gate 03 · Prove it’s me</div>
+      <h2>CIBA: verify outside the browser session</h2>
+      <p>Creating an entry is reversible; cancelling or deleting a customer booking crosses into high-stakes territory. Even if someone sits in an authenticated browser tab, an agent should not rely on a plain chat “yes” for destructive mutations:</p>
+      <blockquote>“I don't trust the human that's in the browser session.”<span class="cite">00:12:49</span></blockquote>
+      <p>Client-Initiated Backchannel Authentication (CIBA) routes the authorization step out of band—sending an email, SMS, or push notification directly from the identity provider while the app polls for confirmation before invoking the delete tool:</p>
+      <blockquote>“Ciba client-initiated back-channel authentication. It's really just a fancy way of saying we're going to send you an email, push notification, or an SMS. To make sure that it is in fact you.”<span class="cite">00:12:49</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “CIBA... Paired with Token Vault (scoped access to third-party APIs), it's the pattern for agents: limit what they can touch, and ask a human before the sensitive step.” (<code>2026-11-12T1204</code>). <b>The reading:</b> Token Vault constrains <em>blast radius</em> across APIs; CIBA proves <em>present human intent</em> on an independent device when an action cannot be undone.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:12:49</p>
+    </section>
+
+    <section data-chapter="agent-payments-402" data-visual="v5" data-caption="Use Shared Payment Tokens and hard dollar caps against spoofing">
+      <div class="chapter">Gate 04 · Move my money</div>
+      <h2>Agent payments: HTTP 402 and hard spend caps</h2>
+      <p>When an agent reaches checkout, both <a href="https://docs.stripe.com/payments/machine/mpp">Stripe’s Machine Payments Protocol (MPP)</a> and <a href="https://www.x402.org/">Coinbase’s x402</a> revive HTTP status code <code>402</code> to challenge an unauthenticated client for payment across cards or stablecoins:</p>
+      <blockquote>“It just says you are not authenticated, just like a 401, because you owe me money.”<span class="cite">00:15:56</span></blockquote>
+      <p>Liendo ranks three ways to fund an agent—raw card numbers, capped virtual cards, and Stripe Shared Payment Tokens:</p>
+      <blockquote>“You can share your card with the agent. Please don't do that.”<span class="cite">00:15:56</span></blockquote>
+      <p>Even with a Shared Payment Token, every call carries a required 100-character context string—and because web pages can hide malicious <code>&lt;div&gt;</code> prompts that turn a $12 shirt into a $15 charge, hard server-side maximum thresholds are non-negotiable:</p>
+      <blockquote>“The context is also human generated, which means it is subject to spoofing.”<span class="cite">00:15:56</span></blockquote>
+      <blockquote>“There's nothing stopping. That came from going through because you set a maximum threshold. That's super important.”<span class="cite">00:15:56</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “The agent payment flow is super interesting.” (<code>2026-11-12T1204</code>). <b>The reading:</b> enforce dollar caps outside the prompt, and cross-check screenshots against DOM text before letting an agent settle an HTTP <code>402</code> challenge.</div>
+      <ul class="key-points">
+        <li><strong>Retire static local keys:</strong> wrap external APIs behind Token Vault so agents receive narrow, short-lived OAuth tokens rather than raw credentials (<code>00:00:45</code>, <code>00:06:11</code>).</li>
+        <li><strong>Decouple destructive approvals with CIBA:</strong> verify high-stakes mutations via out-of-band push, SMS, or email and poll before running the tool (<code>00:12:49</code>).</li>
+        <li><strong>Bound autonomous spend:</strong> pair Shared Payment Tokens over HTTP <code>402</code> with hard dollar caps that hold even if hidden HTML spoofs the agent’s context (<code>00:15:56</code>).</li>
+      </ul>
+      <div class="alongside"><b>Read alongside</b><ul><li><a href="https://auth0.com/ai/docs/intro/asynchronous-authorization">Auth0 Asynchronous Authorization (CIBA)</a> &amp; <a href="https://auth0.com/docs/secure/call-apis-on-users-behalf/token-vault">Token Vault docs</a> — Reference flows for step-up OAuth and backchannel consent.</li><li><a href="https://www.focusotter.com/articles/your-ai-agent-doesnt-need-your-card-number">Your AI Agent Doesn’t Need Your Card Number</a> — Liendo’s breakdown of virtual cards vs. Shared Payment Tokens.</li><li><a href="https://docs.stripe.com/payments/machine/mpp">Stripe MPP</a> &amp; <a href="https://www.x402.org/">x402</a> — Machine payment protocols built on HTTP <code>402</code>.</li></ul></div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:15:56</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room — keeping ASR garbles like “Open Club” for “OpenClaw” and “Ciba” for “CIBA” verbatim) and on notes taken during the talk. “From the notes” and “The reading” are editorial synthesis, not his words. More on the <a href="../links.md">links page</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

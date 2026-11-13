@@ -2,7 +2,7 @@
 captured_at: 2026-11-12T15:00:00-08:00
 kind: todo
 session_id: "1376195"
-talk: null
+talk: talks/2026-11-12-judgement-is-the-last-job/
 tags: [agent-swarms, multi-agent, follow-up]
 bucket: review
 ---

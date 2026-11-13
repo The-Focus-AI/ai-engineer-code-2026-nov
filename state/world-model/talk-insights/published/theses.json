@@ -3,6 +3,10 @@
     "thesis": "Each model generation absorbs tools the last harness had to provide, so rebuild the harness from scratch every release: delete what the model now does itself, often down to one bash tool, and keep only what it can't do through a computer.",
     "confidence": 0.85
   },
+  "1325061": {
+    "thesis": "Effective agentic software factories are built on timeless engineering practices—balancing automated forward pressure and rigorous back pressure, planning according to expected pain, and preserving human judgment—rather than unreviewed output. Because generation cost is approaching zero while review cost stays constant, teams must actively fight compounding AI slop and retain ownership over system understanding and verification.",
+    "confidence": "high"
+  },
   "1333169": {
     "thesis": "Once AI writes most of the code, a team should stop reviewing diffs and instead capture intent, decisions and evidence, owning the rules that verify the code rather than the code itself.",
     "confidence": 0.85
@@ -63,13 +67,37 @@
     "thesis": "A year of software factories shows fuel is the hard limit and currently subsidized, agents behave like staff who need managing and pruning, and the more agents you run the more humans you need, so spend the fuel on experiences.",
     "confidence": 0.8
   },
+  "1373474": {
+    "thesis": "Post-training Gemini 4 (Carbon and Hydrogen) for multi-day software engineering requires continuously sourcing non-saturated hard tasks, replacing binary test checks with rubric-based and sandbox-hardened grading that penalizes cheating, grounding completion claims in trajectory actions to reduce fabrication, and feeding failures from internal dogfooding at Google into rapid weekly training iterations.",
+    "confidence": "high"
+  },
   "1373475": {
     "thesis": "Cognition grew merged PRs 40x on 2.7x headcount by rebuilding how it works around agents: small pods that own everything, agents that test themselves in local VMs and prove fixes with videos, and long-running jobs instead of tasks, so a team's real limit is its ambition.",
     "confidence": 0.85
   },
+  "1373478": {
+    "thesis": "Building an ahead-of-time compiler for Bun to cut Claude Code's memory usage and startup latency required five rewrites over a month, succeeding because pre-existing JavaScript/WebKit test suites, differential JIT-versus-AOT execution, and long-lived subagents made large-scale agent-written code verifiable—provided the human continuously nudges models with leading questions so they do not settle for timid improvements.",
+    "confidence": "high"
+  },
+  "1373480": {
+    "thesis": "Software factories fail when applied to open-ended greenfield discovery, but excel on brownfield systems where existing customers and runtime signals already define the promises to maintain continuously in the background. Once a brownfield factory simplifies over time and runs autonomously, teams must build a companion demand factory to expand within their brand envelope rather than spilling excess software.",
+    "confidence": "high"
+  },
+  "1373481": {
+    "thesis": "Agents render traditional software org charts, enterprise sales checklists, and third-party SaaS tools obsolete by enabling tiny, high-equity teams to ship continuously, run closed-loop customer bug fixes, and build custom internal software from scratch.",
+    "confidence": "high"
+  },
+  "1373482": {
+    "thesis": "Rather than acting as an alien intelligence that forces developers into a single narrow interface like Bash or React, improving models form a broad 'smooth interior' of capabilities that enables a software Renaissance—provided builders pair agentic engines with human-readable specs to stay in creative control.",
+    "confidence": "high"
+  },
   "1376191": {
     "thesis": "This year models crossed from reliable coding agents to 'Fable class', solving any well-defined goal by brute force when given the tools, even making a game fun; the work doesn't get easier, the easy part goes, so the answer is more ambition.",
     "confidence": 0.85
+  },
+  "1376195": {
+    "thesis": "As AI models scale in intelligence and make building software nearly instantaneous, teams must rebuild past workflow assumptions, give users extensible platforms for ambition, and protect human judgment as the decisive differentiator.",
+    "confidence": "high"
   },
   "1376197": {
     "thesis": "Don't trust an LLM judge until you've measured it: run a second check in shadow mode and look where the two disagree.",
@@ -94,5 +122,13 @@
   "1379134": {
     "thesis": "AI coding's compulsive pull and the decisions it demands are wearing developers out, and the remedy is habits and limits, not more tools.",
     "confidence": 0.8
+  },
+  "1380098": {
+    "thesis": "Closing the conference, the organizer celebrates major community reach—nearly 100,000 livestream viewers and one million YouTube subscribers—while recognizing key behind-the-scenes team members and outlining steady flagship growth plus international partnerships.",
+    "confidence": "medium"
+  },
+  "1381580": {
+    "thesis": "Grounding decision models with live web search from a large proprietary index solves uncalibrated overconfidence in ungrounded LLMs, delivering higher accuracy, verifiable citations, sub-second latency, and one-dollar-per-thousand-request pricing.",
+    "confidence": "medium"
   }
 }

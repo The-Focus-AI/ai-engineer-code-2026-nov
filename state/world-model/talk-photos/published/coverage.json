@@ -1,11 +1,11 @@
 {
   "photos_dir": "photos",
-  "photo_count": 121,
-  "placed_count": 119,
+  "photo_count": 157,
+  "placed_count": 154,
   "event_count": 2,
-  "review_count": 0,
+  "review_count": 1,
   "unplaced_count": 0,
   "timezone": "America/Los_Angeles",
-  "last_checked": "2026-11-12T14:53:55-08:00",
-  "generated_at": "2026-11-12T14:53:55-08:00"
+  "last_checked": "2026-11-12T18:07:36-08:00",
+  "generated_at": "2026-11-12T18:07:36-08:00"
 }

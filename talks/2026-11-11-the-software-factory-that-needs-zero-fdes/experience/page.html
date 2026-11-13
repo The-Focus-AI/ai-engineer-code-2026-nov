@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Software Factory That Needs Zero FDEs · Raz Berman Gold</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .alongside { margin: 1.2rem 0; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: .3rem; font: .88rem/1.55 var(--sans); }
+  .alongside b { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; display: block; margin-bottom: .2rem; }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  .quote-card::before { content: none; }
+  code { font: .88em var(--mono); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Wed 11 Nov 2026 · Expo Sessions</div>
+  <h1>The software factory that needs zero FDEs</h1>
+  <p class="dek">Raz Berman Gold argues that automated software factories should not require Forward Deployed Engineers to wire them in—connect your existing repos, models, and trackers behind scoped agents, deterministic pause gates, and scored retrospective memory.</p>
+  <div class="talk-meta">Raz Berman Gold, Overcut · 20 min · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual diagram-card" data-visual="v1">
+        <div class="lbl">Plug into your existing stack without FDEs</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Diagram showing existing tools (GitHub, Jira, Bitbucket, Slack), repo skills, and any LLM model or harness feeding directly into a governed zero-FDE software factory on SaaS, private cloud, or on-prem.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <g fill="var(--panel)" stroke="var(--rule)">
+              <rect x="20" y="22" width="108" height="62" rx="8"/>
+              <rect x="146" y="22" width="108" height="62" rx="8"/>
+              <rect x="272" y="22" width="108" height="62" rx="8"/>
+            </g>
+            <g fill="var(--ink)" text-anchor="middle" font-weight="600">
+              <text x="74" y="48">Trackers &amp; Git</text>
+              <text x="200" y="48">Models &amp; MCPs</text>
+              <text x="326" y="48">Existing Skills</text>
+            </g>
+            <g fill="var(--muted)" text-anchor="middle" font-size="9">
+              <text x="74" y="66">GitHub, Jira, Slack</text>
+              <text x="200" y="66">any LLM / harness</text>
+              <text x="326" y="66">scanned from repos</text>
+            </g>
+
+            <path d="M74 84 L165 118 M200 84 L200 118 M326 84 L235 118" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="40" y="120" width="320" height="58" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="200" y="144" text-anchor="middle" fill="var(--accent)" font-weight="600">GOVERNED SOFTWARE FACTORY (ZERO FDEs)</text>
+            <text x="200" y="162" text-anchor="middle" fill="var(--ink)" font-size="10">Centralized governance, roles, token &amp; cycle-time metrics</text>
+
+            <rect x="64" y="196" width="272" height="36" rx="6" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="200" y="218" text-anchor="middle" fill="var(--identity)" font-size="10" font-weight="600">Deploy: Isolated On-Prem · Private Cloud · SaaS</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:00:56 and 00:01:56; not her slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v2">
+        <div class="lbl">Ticket-to-PR workflow with human pause gate</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Flowchart showing a Jira or Slack trigger running auto ticket triage, routing to root-cause analysis or design review, pausing at a deterministic human approval gate that can loop back with feedback, and creating a PR.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="34" width="96" height="54" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="68" y="57" text-anchor="middle" fill="var(--ink)" font-weight="600">Trigger</text>
+            <text x="68" y="74" text-anchor="middle" fill="var(--muted)" font-size="9">Jira / Slack alert</text>
+
+            <path d="M116 61 L138 61" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="138" y="34" width="112" height="54" rx="8" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="194" y="57" text-anchor="middle" fill="var(--machine)" font-weight="600">Auto Triage</text>
+            <text x="194" y="74" text-anchor="middle" fill="var(--muted)" font-size="9">bug vs. feature</text>
+
+            <path d="M250 61 L272 61" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="272" y="34" width="108" height="54" rx="8" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="326" y="57" text-anchor="middle" fill="var(--machine)" font-weight="600">RCA / Design</text>
+            <text x="326" y="74" text-anchor="middle" fill="var(--muted)" font-size="9">scoped agent</text>
+
+            <path d="M326 88 L326 122" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="148" y="122" width="232" height="58" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="264" y="146" text-anchor="middle" fill="var(--accent)" font-weight="600">DETERMINISTIC PAUSE GATE</text>
+            <text x="264" y="164" text-anchor="middle" fill="var(--ink)" font-size="10">Human replies: approve / reject / suggest</text>
+
+            <path d="M148 151 L88 151 L88 184" stroke="var(--identity)" stroke-width="1.5"/>
+            <path d="M264 122 L264 102 L308 102 L308 88" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <text x="215" y="110" fill="var(--accent)" font-size="9">reject + feedback loops back</text>
+
+            <rect x="20" y="184" width="136" height="44" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="88" y="210" text-anchor="middle" fill="var(--identity)" font-weight="600">Create PR</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:04:32 and 00:05:49; not her slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v3">
+        <div class="lbl">Self-improving workflows via scored memory</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Loop diagram showing completed workflow runs audited by a background retrospective that checks downstream comment uptake (61% addressed), scores memory layers to prevent drift, and injects only top-scored memories into future runs.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="28" y="24" width="156" height="70" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="106" y="50" text-anchor="middle" fill="var(--ink)" font-weight="600">Workflow Runs</text>
+            <text x="106" y="69" text-anchor="middle" fill="var(--muted)" font-size="10">code review, triage, PRs</text>
+
+            <path d="M184 59 L216 59" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="216" y="24" width="156" height="70" rx="8" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="294" y="50" text-anchor="middle" fill="var(--machine)" font-weight="600">Retrospective Job</text>
+            <text x="294" y="69" text-anchor="middle" fill="var(--muted)" font-size="10">e.g. 61% comments fixed</text>
+
+            <path d="M294 94 L294 134" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="216" y="136" width="156" height="70" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="294" y="162" text-anchor="middle" fill="var(--accent)" font-weight="600">Score Memories</text>
+            <text x="294" y="181" text-anchor="middle" fill="var(--muted)" font-size="10">prune ineffective rules</text>
+
+            <path d="M216 171 L184 171" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="28" y="136" width="156" height="70" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="106" y="162" text-anchor="middle" fill="var(--identity)" font-weight="600">Top-Scored Context</text>
+            <text x="106" y="181" text-anchor="middle" fill="var(--muted)" font-size="10">injected without drift</text>
+
+            <path d="M106 136 L106 96" stroke="var(--identity)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:07:30 and 00:08:43; not her slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v4">
+        <p class="quote-big">“You can define pausing, deterministic stop, where the agent will stop. And ask for your approval before it continues.”<span>Raz Berman Gold · 00:04:32</span></p>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v5">
+        <img src="what-should-factory-do.jpg" alt="Closing slide showing Overcut's plain-language factory builder: WHAT SHOULD YOUR FACTORY DO? One agent today, a full crew tomorrow. Your infra, your models, your rules, with example prompt Set up a factory that handles our bug backlog with human approval before every merge and a TRY IT QR code.">
+        <figcaption>Her closing slide, 12:55 pm (straightened from photos/PXL_20261111_205517744.MP.jpg)</figcaption>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="fde-paradox" data-visual="v1" data-caption="Drop into existing repos, skills, models, and trackers without Forward Deployed Engineers">
+      <div class="chapter">The premise</div>
+      <h2>The FDE paradox and bring-your-own stack</h2>
+      <p>Enterprise teams buying autonomous software-factory products keep hitting an ironic bottleneck: the platform shows up with Forward Deployed Engineers who take months to integrate it before the customer sees value:</p>
+      <blockquote>“there is something strange about the fact that. You need to buy a product that automate your. Workflows, software development, but actually you need a human to integrate.”<span class="cite">00:00:19</span></blockquote>
+      <p>Berman Gold’s alternative plugs directly into tools teams already operate—GitHub, Jira, Bitbucket, Slack, existing repository skills, and any LLM provider or harness—deployable on isolated on-prem infrastructure, private cloud, or SaaS with no vendor lock-in:</p>
+      <blockquote>“You can read any model. You can reach any tool, any harness. So we know how to get your existing tools and skills, and agents that you already built.”<span class="cite">00:00:56</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:19, 00:00:56, 00:01:56</p>
+    </section>
+
+    <section data-chapter="pause-gates" data-visual="v2" data-caption="Single-purpose agents run inside deterministic workflows with human approval gates">
+      <div class="chapter">Workflows</div>
+      <h2>Specialized agents, deterministic steps, and pause gates</h2>
+      <p>Instead of giving one generalist agent access to every secret and tool, each agent has its own identity, narrow mission, and exact MCPs and skills—yielding higher quality at lower latency and token spend:</p>
+      <blockquote>“You don't need an agent to do a lot of different missions. Any agent who has the access and the permission that it needs, invests this way.”<span class="cite">00:02:42</span></blockquote>
+      <p>Playbooks for auto ticket triage, code review, technical design review, and ticket-to-PR chain deterministic steps, agentic steps, and mandatory human checkpoints:</p>
+      <blockquote>“You can define pausing, deterministic stop, where the agent will stop. And ask for your approval before it continues.”<span class="cite">00:04:32</span></blockquote>
+      <p>In her live ticket-to-PR run, a production bug triggers triage, runs root-cause analysis, proposes a fix, and pauses. Replying <code>approve</code> creates the PR; rejecting with a security critique routes the orchestrator back to revise the root-cause step before continuing—and Q&amp;A confirms failed runs can resume straight from the failing step rather than restarting from scratch.</p>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:02:42, 00:03:36, 00:04:32, 00:05:49, 00:16:53</p>
+    </section>
+
+    <section data-chapter="scored-memory" data-visual="v3" data-caption="Background retrospectives distill and score memories so context stays sharp without drift">
+      <div class="chapter">Self-improvement</div>
+      <h2>Retrospectives and scored memory layers</h2>
+      <p>After workflows execute, a background retrospective audits real outcomes—for example measuring that 61% of AI code-review comments over the past week were addressed while 39% went unaddressed—and extracts memory layers injected into subsequent runs. During Q&amp;A, audience members ask whether recalling accumulated memories bloats context or causes drift. Her answer is scoring:</p>
+      <blockquote>“Not only that, we also scoring those memories. So over time, to make sure there is no drift. We are scoring them, so the next run we run only on top of the memories that have the highest score.”<span class="cite">00:07:30</span></blockquote>
+      <p>Internal evaluations verify whether a newly added memory actually improved subsequent runs and down-rank ineffective memories automatically.</p>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:07:30, 00:08:43, 00:10:03</p>
+    </section>
+
+    <section data-chapter="governance-limits" data-visual="v4" data-caption="Workspace roles, execution caps per workflow/project, and exportable audit trails">
+      <div class="chapter">Governance</div>
+      <h2>Usage limits, permissions, and audit trails</h2>
+      <p>Asked how enterprises keep autonomous workflows from burning through tokens or crossing access boundaries, Berman Gold points to three controls built into the workspace layer: independent permissions separating shared libraries, projects, and MCPs; exportable audit trails (including Prometheus export) tracking every human approval, PR cycle time, and token spend; and hard execution caps:</p>
+      <blockquote>“So we have the ability to create limits. A of times of number of executions. Per workflow, over a level that you disconnected. Over a project.”<span class="cite">00:12:45</span></blockquote>
+      <p>Capping runs per workflow, project, day, and month lets teams ship autonomous triggers across GitHub, Jira, and Slack safely:</p>
+      <blockquote>“if you have a very high governance and very high observability on the flows.”<span class="cite">00:12:45</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:31, 00:11:25, 00:12:45</p>
+    </section>
+
+    <section data-chapter="plain-words-factory" data-visual="v5" data-caption="Describe your desired factory workflow in plain words to spin up an initial workspace">
+      <div class="chapter">Build your own</div>
+      <h2>Describe your factory in plain words</h2>
+      <p>At the close, she shares a QR-linked builder where teams describe what they want automated in plain English—such as deduplicating Slack alerts, opening tickets, dispatching a fix workflow, and shipping safe patches—and receive a configured workspace with step-by-step setup instructions:</p>
+      <blockquote>“here you have a place where you can just describe by words. What do you want to have in your software factory? And we will show you how we created just for you.”<span class="cite">00:17:17</span></blockquote>
+      <ul class="key-points">
+        <li><strong>Zero-FDE integration:</strong> connect existing repos, skills, models, harnesses, and trackers across on-prem, private cloud, or SaaS without months of services (<code>00:00:19</code>, <code>00:00:56</code>).</li>
+        <li><strong>Deterministic human gates + scoped agents:</strong> constrain each agent’s tools and insert hard approve/reject feedback loops before code turns into PRs (<code>00:02:42</code>, <code>00:04:32</code>, <code>00:05:49</code>).</li>
+        <li><strong>Scored memory + hard caps:</strong> background retrospectives keep only high-scoring lessons while per-workflow and per-project execution limits bound cost (<code>00:07:30</code>, <code>00:12:45</code>).</li>
+      </ul>
+      <div class="alongside"><b>Read alongside</b><ul><li><a href="https://github.com/overcut-ai/overcut-playbooks">overcut-ai/overcut-playbooks</a> — Open SDLC playbook definitions shown in the talk.</li><li><a href="../../2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/experience/page.html">Dexter Horthy: 12-Factor Factories</a> — Forward pressure, backpressure, and owning layer-08 verification.</li><li><a href="../../2026-11-11-software-factories-escape-from-trash-mountain/experience/page.html">Software Factories: Escape from Trash Mountain</a> — Companion factory architecture talk from Day 1.</li></ul></div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:17:17</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room — keeping ASR garbles like “FDI” for FDE, “VR” for PR, “Gira” for Jira, and “audio trail” for audit trail verbatim). More on the <a href="../links.md">links page</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

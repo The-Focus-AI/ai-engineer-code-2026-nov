@@ -2,12 +2,22 @@
   "title": "The first Grounded Decision Model",
   "recorded_at": "2026-11-12T14:33:14-08:00",
   "duration_seconds": 645.1,
-  "transcript": "transcript.txt",
-  "transcript_word_count": 1751,
-  "transcript_locale": "en_US",
-  "transcript_source": "voice-memos",
-  "transcript_timing": "word",
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 1754,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
   "source_file": "20261112 143314.m4a",
   "audio_sha256": "594749931c175fc2c1f742565f9042604368c5645b846dd609f90ce6dbb384b0",
-  "exported_at": "2026-11-12T14:46:54-08:00"
+  "exported_at": "2026-11-12T14:46:54-08:00",
+  "transcript_echo_segments": 6,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 1751,
+      "locale": "en_US"
+    }
+  ]
 }

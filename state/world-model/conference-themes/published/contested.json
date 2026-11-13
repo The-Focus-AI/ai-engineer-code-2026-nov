@@ -38,6 +38,14 @@
       {
         "claim_id": "1379010-126-1d81c9",
         "stance": "No: a thousand agents solved a 30-hour proof with no human steering on the solution"
+      },
+      {
+        "claim_id": "1325061-1120-bd0be3",
+        "stance": "Yes at plan, design, and result level: automated checks alone leave generic output if humans bring no thinking"
+      },
+      {
+        "claim_id": "1376195-530-3714e1",
+        "stance": "Yes: explore many directions rapidly, then pause to exercise human judgment past the first instant draft"
       }
     ]
   },
@@ -85,6 +93,23 @@
       {
         "claim_id": "1376198-483-4f6d51",
         "stance": "Skip the index: ask a decision model the question about every row directly"
+      }
+    ]
+  },
+  {
+    "question": "Should developers work synchronously with coding agents or delegate asynchronously?",
+    "sides": [
+      {
+        "claim_id": "1373482-666-1cfe19",
+        "stance": "Synchronously with human-readable specs: asynchronous prompting breaks flow and leaves you ignorant of how the software behaves"
+      },
+      {
+        "claim_id": "1373475-645-4d9b10",
+        "stance": "Asynchronously over weeks: autonomous agents maintained Android/iOS parity for 44 days with almost no human messages"
+      },
+      {
+        "claim_id": "1373480-390-12d674",
+        "stance": "Continuously 24/7 in the background: brownfield factories should loop nonstop to keep existing customer promises"
       }
     ]
   }

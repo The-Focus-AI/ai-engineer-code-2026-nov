@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12-Factor Factories · Dexter Horthy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .alongside { margin: 1.2rem 0; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: .3rem; font: .88rem/1.55 var(--sans); }
+  .alongside b { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; display: block; margin-bottom: .2rem; }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  .quote-card::before { content: none; }
+  code { font: .88em var(--mono); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Thu 12 Nov 2026 · Engineering Track</div>
+  <h1>Loops, backpressure, and asymmetric slop</h1>
+  <p class="dek">Dexter Horthy brought HumanLayer into Factory a week before the talk; a software factory is forward pressure plus automated backpressure—buy the undifferentiated stack below, but own verification and human judgment because slop is asymmetric.</p>
+  <div class="talk-meta">Dexter Horthy, HumanLayer / Factory · 20 min · <a href="../links.md">Links and further reading</a> · <a href="https://www.youtube.com/watch?v=y9JtCCZP2MQ&amp;t=29720s">Video</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="factory-2022.jpg" alt="His slide: A Software Factory Circa 2022 showing CEO/Vision, Product Managers, and Engineers feeding stuff to do into builds with automated and browser testing, pull requests gated by CI/CD checks plus human test and human review, rollout to PROD, and feedback loops from USERS and MONITORING.">
+        <figcaption>His slide, 5:06 pm (straightened from photos/PXL_20261113_010644949.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v2">
+        <div class="lbl">One-shot clone vs. sequential checkpoints</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="SlopCodeBench comparison: one-shot builds pass tests, while sequential checkpoints across 200+ lint and complexity rules erode structure to roughly 15 to 16.3 percent pass rates unless automated backpressure stops drift.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="18" width="360" height="58" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="34" y="40" fill="var(--identity)" font-weight="600">ONE-SHOT CLONE (spec fixed upfront)</text>
+            <text x="34" y="59" fill="var(--muted)" font-size="10">Tests pass immediately; hides maintainability decay across edits</text>
+
+            <rect x="20" y="92" width="360" height="128" rx="10" fill="var(--panel)" stroke="var(--accent)"/>
+            <text x="34" y="114" fill="var(--accent)" font-weight="600">SEQUENTIAL CHECKPOINTS (SlopCodeBench)</text>
+            <g fill="var(--card)" stroke="var(--rule)">
+              <rect x="34" y="128" width="98" height="52" rx="6"/>
+              <rect x="151" y="128" width="98" height="52" rx="6"/>
+              <rect x="268" y="128" width="98" height="52" rx="6"/>
+            </g>
+            <g fill="var(--ink)" text-anchor="middle" font-weight="600">
+              <text x="83" y="150">Checkpoint 1</text>
+              <text x="200" y="150">Checkpoint 2</text>
+              <text x="317" y="150">Checkpoint N</text>
+            </g>
+            <g fill="var(--muted)" text-anchor="middle" font-size="10">
+              <text x="83" y="167">green tests</text>
+              <text x="200" y="167">bloat creeps</text>
+              <text x="317" y="167" fill="var(--accent)">~15–16.3%</text>
+            </g>
+            <path d="M132 154 L150 154 M249 154 L267 154" stroke="var(--muted)" stroke-width="1.5"/>
+            <text x="200" y="204" text-anchor="middle" fill="var(--muted)" font-size="10">200+ static &amp; complexity rules measure drift over iterations</text>
+            <text x="200" y="238" text-anchor="middle" fill="var(--machine)" font-size="10">anti-slop linters + human grasp keep structure clean</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from his SlopCodeBench discussion at 00:06:50; not his slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v3">
+        <div class="lbl">Scale planning to expected pain</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Expected Pain equals probability of later change times cost of changing later: low pain UI tweaks use Show Me screenshots and browsers, while high pain database schemas and contracts get upfront human planning.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="30" y="18" width="340" height="50" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="200" y="39" text-anchor="middle" fill="var(--accent)" font-weight="600" font-size="10">PLANNING BUDGET</text>
+            <text x="200" y="57" text-anchor="middle" fill="var(--ink)" font-weight="600" font-size="12">Expected Pain = P(change later) × Cost(change)</text>
+
+            <path d="M120 68 L102 98 M280 68 L298 98" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="20" y="100" width="170" height="124" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="34" y="122" fill="var(--identity)" font-weight="600" font-size="10">LOW EXPECTED PAIN</text>
+            <text x="34" y="144" fill="var(--ink)" font-weight="600">UI tweaks &amp; flagged spikes</text>
+            <text x="34" y="164" fill="var(--muted)" font-size="10">button colors, fast prototypes</text>
+            <line x1="34" y1="176" x2="176" y2="176" stroke="var(--rule)"/>
+            <text x="34" y="196" fill="var(--identity)" font-weight="600">Show Me + visual QA</text>
+            <text x="34" y="212" fill="var(--muted)" font-size="10">screenshots, browsers, videos</text>
+
+            <rect x="210" y="100" width="170" height="124" rx="8" fill="var(--panel)" stroke="var(--accent)"/>
+            <text x="224" y="122" fill="var(--accent)" font-weight="600" font-size="10">HIGH EXPECTED PAIN</text>
+            <text x="224" y="144" fill="var(--ink)" font-weight="600">Schemas &amp; contracts</text>
+            <text x="224" y="164" fill="var(--muted)" font-size="10">data models, APIs, auth</text>
+            <line x1="224" y1="176" x2="366" y2="176" stroke="var(--rule)"/>
+            <text x="224" y="196" fill="var(--accent)" font-weight="600">Align plan upfront</text>
+            <text x="224" y="212" fill="var(--muted)" font-size="10">human judgment before code</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from 00:09:49 and 00:11:26; not his slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v4">
+        <img src="forge-lifecycle.jpg" alt="His slide: The Forge Lifecycle contrasting Before GitHub (email patches), After GitHub (centralized commits), Before AI-Native Forge (plans, session traces, architecture docs, product specs, and Figma designs scattered across Slack, GDocs, Notion, Linear, GitHub, and workstations), and Centralized AI Native Forge.">
+        <figcaption>His slide, 5:16 pm (straightened from photos/PXL_20261113_011613499.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v5">
+        <img src="building-blocks.jpg" alt="His slide: building blocks for the undifferentiated stuff, flexibility for what's unique to you, showing layers 01 Models through 07 Surfaces with 06 Orchestration highlighted, topped by 08 Yours (Your repos, skills, automations, quality gates) and Governance across every layer.">
+        <figcaption>His slide, 5:16 pm (straightened from photos/PXL_20261113_011655806.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual quote-card" data-visual="v6">
+        <p class="quote-big">“AI cannot replace human judgment. It can only amplify our judgment, or maybe perhaps our lack of judgment in certain cases. And the slop is asymmetric. The cost of producing a thousand line PR or a ten page doc is approaching zero. But the cost of reviewing it is still barely constant.”<span>Dexter Horthy · 00:14:43</span></p>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="loops" data-visual="v1" data-caption="Forward pressure starts work; backpressure rejects bad outputs">
+      <div class="chapter">The loop</div>
+      <h2>Forward pressure and automated backpressure</h2>
+      <p>Three months after “software factories” peaked online—and right alongside studies showing roughly 30% of AI-authored PRs merging unreviewed—people took his earlier talk, <em>“Why software factories fail”</em>, to mean he rejected factories altogether. His real claim is simpler:</p>
+      <blockquote>“But I think the main takeaway here, and I think we've heard this from a lot of folks, is software factories is just good engineering.”<span class="cite">00:01:11</span></blockquote>
+      <p>Walk through a software team circa 2022 and every box is already familiar: product and leadership queue work in a tracker, engineers implement and poke at a local build, and pull requests wait for CI checks and peer review before rollout.</p>
+      <blockquote>“We're around for thirty years, right? You take stuff off the tracker, you build it, run some unit tests, automated tests. Maybe you poke it locally when you're ready. You make a pull request.”<span class="cite">00:03:03</span></blockquote>
+      <p>Dropping an agent into implementation speeds up only one node. <strong>Forward pressure</strong> is what triggers work automatically from customer complaints or 3 a.m. incidents; <strong>backpressure</strong> is everything—agentic code review, headless browsers, screenshots, linters, and formal checks—that pushes back before a person reads the diff.</p>
+      <blockquote>“So, forward pressure—what causes new work? Start and back pressure, which is sort of like okay, cool. Now we can build things in minutes or hours. But the review and testing still takes hours or days if we're doing it in the old way. So we bring in agentic code review, agentic testing.”<span class="cite">00:04:20</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “Forward pressure, backward pressure: what are these ideas in the new factory? What causes new work to start?” and “Loops = forward pressure + backpressure”. <b>The reading:</b> loops stop being buzzwords when you split pull triggers from automated verification gates so human review only touches diffs that survived machine critique—the same move behind Cognition’s self-testing VMs.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:11, 00:03:03, 00:04:20</p>
+    </section>
+
+    <section data-chapter="know-your-enemy" data-visual="v2" data-caption="Sequential edits erode codebases even when unit tests pass">
+      <div class="chapter">The failure mode</div>
+      <h2>Know your enemy: SlopCodeBench</h2>
+      <p>Agents can clone Redis or Excel in days when the full specification is known upfront. Real product engineering lands one incremental change at a time, and without deliberate refactoring, unattended models quietly pile on dead code and brittle abstractions:</p>
+      <blockquote>“So if you are just hands off pushing features into the machine. You may not find that it autonomously will make things better over time.”<span class="cite">00:06:50</span></blockquote>
+      <p>To measure that decay instead of relying on vibes, he cites <strong>SlopCodeBench</strong> (<a href="https://arxiv.org/abs/2603.24755">paper</a>, <a href="https://github.com/SprocketLab/slop-code-bench">benchmark repo</a>), which scores models over sequential codebase checkpoints across more than 200 rules checking complexity, verbosity, broken abstractions, and even regressions back to Python 2 patterns—where frontier models drop around 15%–16.3%.</p>
+      <blockquote>“We should probably maintain understanding of the system and the code.”<span class="cite">00:06:50</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “Look up the 'slop bench' stuff”, “We should maintain and understand the codebase”, and “Anti-slop repo”. <b>The reading:</b> SlopCodeBench supplies the empirical evidence behind <a href="../../2026-11-11-all-code-is-slop-except-mine/experience/page.html">Lauren Tan’s “Code is memory”</a>—unless repo-level linters and complexity gates push back on every checkpoint, each agent turn teaches the next turn worse habits.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:06:50, 00:11:26</p>
+    </section>
+
+    <section data-chapter="expected-pain" data-visual="v3" data-caption="Budget review by expected pain; verify visually with Show Me">
+      <div class="chapter">Where to spend attention</div>
+      <h2>Expected pain and Show Me</h2>
+      <p>When coding gets cheap, teams often overcorrect into six-hour Markdown specification sessions. Rather than planning every pixel identically, budget human friction using <strong>expected pain</strong>: how likely something is to change later multiplied by how hard it will be to change once shipped.</p>
+      <blockquote>“But I think about this in terms of expected pain. Like, how likely will this have to change later? Times, how hard will it be to change? I don't argue with the model during planning about what color the button is going to be, but I do want to make sure we get like our database schemas right and stuff like that.”<span class="cite">00:09:49</span></blockquote>
+      <p>Where behavior is visual or easy to iterate, replace walls of text with artifacts humans and models can both inspect—using tools like <code>Show Me</code> (~40k installs) alongside screenshots, real browsers, and video runs so agents hill-climb against observed outcomes:</p>
+      <blockquote>“You should help agents test their work, screenshots, browsers, videos. Whatever you can do to help the agent, again, he'll climb against an outcome.”<span class="cite">00:11:26</span></blockquote>
+      <p>He also draws a pragmatic boundary around “slop”: temporary prototypes belong in isolated buckets behind feature flags rather than shared core paths.</p>
+      <blockquote>“Not all slop is bad. Vibe coding prototypes. Side projects. If you have something behind a feature flag, you just need to like figure out if people even want it.”<span class="cite">00:11:26</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “Don't over-plan”, “Expected pain vs how hard it is to change”, and “‘Show me skills.’” <b>The reading:</b> expected pain gives engineering leaders an explicit attention budget—spend human precision on irreversible schemas and interfaces, and push UI validation onto visual evidence loops.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:09:49, 00:11:26</p>
+    </section>
+
+    <section data-chapter="unify-forge" data-visual="v4" data-caption="Centralize specs, prompts, plans, and sessions beside commits">
+      <div class="chapter">The forge</div>
+      <h2>Unify the AI-native forge</h2>
+      <p>Before GitHub, maintainers wrangled Git patches over mailing lists; GitHub centralized commits and pull requests. Right now, engineering teams sit in a fragmented <em>Before AI-Native Forge</em> state: commits live in GitHub, while product specs, Figma designs, Slack pastes, Linear issues, plans, and agent session traces scatter across half a dozen tools and laptops.</p>
+      <p>When agents write most of the implementation, reading the final Git diff alone hides why the architecture took the shape it did. Centralizing specs, prompts, plans, designs, and coding sessions beside the commit turns every run into inspectable evidence:</p>
+      <blockquote>“So you can understand not just the code about what something was built, but all the decisions that went into it.”<span class="cite">00:13:00</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “The forge lifecycle.” <b>The reading:</b> look at his four-stage diagram alongside <a href="../../2026-11-11-how-to-build-an-agent-that-builds-the-culture/experience/page.html">Ramp’s public Inspect sessions</a>—the session log and plan are becoming part of the permanent engineering record, not scratchpad chat history.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:13:00</p>
+    </section>
+
+    <section data-chapter="buy-vs-own" data-visual="v5" data-caption="Layers 01–07 are building blocks; layer 08 verification is yours">
+      <div class="chapter">Build vs. buy</div>
+      <h2>Buy the plumbing, own verification</h2>
+      <p>His stack diagram divides the modern software factory into eight horizontal layers—Models (01), Compute (02), Routing (03), Integrations (04), Agent harness (05), Orchestration across workstreams, automations, and sessions (06), and Surfaces from Slack to IDE and CLI (07)—flanked by cross-cutting Governance.</p>
+      <p>Layers <code>01–07</code> are undifferentiated infrastructure you can adopt off the shelf or swap as models evolve. Layer <code>08 Yours</code>—your repos, skills, automations, and quality gates—cannot be bought as a turnkey vendor box:</p>
+      <blockquote>“I don't think anyone can sell you verification of your code because only you know. If you have hundreds of engineers and hundreds of repos.”<span class="cite">00:13:50</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “What can you buy, and what must you own?” <b>The reading:</b> commodities in the agent harness race to parity quickly; competitive reliability comes from domain-specific invariants encoded in layer 08’s automated backpressure and quality gates.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:13:50</p>
+    </section>
+
+    <section data-chapter="asymmetric-slop" data-visual="v6" data-caption="Generation approaches zero cost while review stays constant">
+      <div class="chapter">Human judgment</div>
+      <h2>Slop is asymmetric</h2>
+      <p>Closing with <a href="https://www.slopmanifesto.com/">the Slop Manifesto</a>, Horthy defines slop around economic asymmetry rather than model aesthetics: producing a 1,000-line PR or a 10-page design doc approaches zero cost, while the cost for another person to verify and understand it barely moves.</p>
+      <blockquote>“AI cannot replace human judgment. It can only amplify our judgment, or maybe perhaps our lack of judgment in certain cases. And the slop is asymmetric. The cost of producing a thousand line PR or a ten page doc is approaching zero. But the cost of reviewing it is still barely constant.”<span class="cite">00:14:43</span></blockquote>
+      <blockquote>“And we own the intent and the taste and the consequences of what we ship. However much AI helps us to make it.”<span class="cite">00:14:43</span></blockquote>
+      <p>Even as humans stop inspecting every line of syntax, review simply moves up to plans, designs, and shipped outcomes—and teams that delegate thinking completely end up indistinguishable from everyone else’s default model output:</p>
+      <blockquote>“As models get better, we may stop reading most of the code. We basically review a plan or a design or a result. But if you don't review anything, if you bring nothing to the table, no thinking, then you're just going to get the same AI output as everybody else.”<span class="cite">00:18:40</span></blockquote>
+      <blockquote>“Swap is bad when it undermines our outcomes. We want to make a good product, maintainable system. We want to save people time and energy. If slop undermines that, then it's bad.”<span class="cite">00:18:40</span></blockquote>
+      <ul class="key-points">
+        <li><strong>Factories are closed-loop engineering:</strong> speed in code generation only backs up PR review unless you pair forward pressure with automated, agentic backpressure (<code>00:01:11</code>, <code>00:04:20</code>, <code>00:11:26</code>).</li>
+        <li><strong>SlopCodeBench proves unattended drift:</strong> green unit tests do not prevent complexity and bloat across sequential checkpoints without repo-owned anti-slop rules (<code>00:06:50</code>, <code>00:11:26</code>).</li>
+        <li><strong>Buy layers 01–07, own verification and judgment:</strong> generation costs approach zero while review cost stays flat, so direct human thinking at high-pain plans and quality gates (<code>00:13:50</code>, <code>00:14:43</code>, <code>00:18:40</code>).</li>
+      </ul>
+      <div class="alongside"><b>Read alongside</b><ul><li><a href="https://www.slopmanifesto.com/">The Slop Manifesto</a> — Core commitments on owning intent, taste, and review asymmetry.</li><li><a href="https://arxiv.org/abs/2603.24755">SlopCodeBench paper (arXiv:2603.24755)</a> &amp; <a href="https://github.com/SprocketLab/slop-code-bench">SprocketLab/slop-code-bench</a> — Multi-checkpoint maintainability benchmark.</li><li><a href="https://www.humanlayer.dev/blog/show-me-skill">Show Me skill</a> &amp; <a href="https://www.humanlayer.dev/blog/humanlayer-joins-factory">HumanLayer joining Factory</a> — Context on visual review loops and the AI-native forge.</li><li><a href="../../2026-11-12-a-new-age-of-software-engineering/experience/page.html">Walden Yan: 40× the work on 2.7× the people</a> — Companion perspective on video proof and self-improving factories.</li></ul></div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:14:43, 00:18:40, 00:19:44</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room — keeping ASR garbles like “Swap is bad” for “Slop is bad” and “he'll climb” for “hill climb” verbatim) and on notes taken during the talk. “From the notes” and “The reading” are editorial synthesis, not his words. More on the <a href="../links.md">links page</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js"></script>
+</body>
+</html>

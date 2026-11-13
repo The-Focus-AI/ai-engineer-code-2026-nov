@@ -16,6 +16,25 @@
     ],
     "generated_at": "2026-11-11T19:17:48-05:00"
   },
+  "1325061": {
+    "searched": [
+      "roster links (theouterloop.substack.com, twitter.com/dexhorthy, linkedin.com/in/dexterihorthy)",
+      "web: anti-slop manifesto Dex Horthy SlopCodeBench",
+      "web: HumanLayer joins Factory Dex Horthy November 2026",
+      "web: Factory acquires HumanLayer factory.ai news",
+      "slopmanifesto.com and humanlayer.dev/blog read"
+    ],
+    "gaps": [
+      "linkedin.com/in/dexterihorthy (roster) answered 999 with no page title, so it could not be corroborated; not published",
+      "twitter.com/dexhorthy (roster) redirects to x.com/dexhorthy; the x.com URL is published",
+      "the manifesto page carries no publication date",
+      "no Factory-side announcement of the acquisition found on factory.ai/news; HumanLayer's own post is linked",
+      "the new SlopCodeBench paper 'released today' is not identified with certainty; the March arXiv paper is linked. The re-transcription names the anti-slop lint repo's author ('Dylan Mulroy, who's a principal engineer. Cloudflare anti-slop'); not searched, the dossier is at the six-resource limit",
+      "12-factor-agents (github.com/humanlayer/12-factor-agents) verified but left out as background to the title, bounded out",
+      "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+    ],
+    "generated_at": "2026-11-12T18:52:58-08:00"
+  },
   "1333169": {
     "searched": [
       "roster links (aviator.co, blog author page, x.com/ankitxg, github.com/jainankit, linkedin.com/in/ankitjaindce)",
@@ -239,6 +258,22 @@
     ],
     "generated_at": "2026-11-11T21:10:18-05:00"
   },
+  "1373474": {
+    "searched": [
+      "roster links (linkedin.com/in/melvinjosej, x.com/melvinjohnsonp)",
+      "web: Gemini 4 Hydrogen launch blog (twice)",
+      "web: Gemini 4 Carbon Google DeepMind model announcement",
+      "web: Melvin Johnson Gemini post-training VP DeepMind interview 2026"
+    ],
+    "gaps": [
+      "linkedin.com/in/melvinjosej (roster) answered 999 with no page title, so it could not be corroborated; not published",
+      "no write-up of the post-training methods (rubric graders, hardened grader sandboxes, fabrication filtering, blind battles) found; the launch posts are product announcements",
+      "the fabrication figures (8% to about 3% and 1.5%) and the 236-day / 28-day release gap have no public source found",
+      "the opening demo video is not transcribed",
+      "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+    ],
+    "generated_at": "2026-11-12T18:52:58-08:00"
+  },
   "1373475": {
     "searched": [
       "roster links (github.com/walnutwaldo, walnutwaldo.github.io, x.com/walden_yan)",
@@ -273,7 +308,55 @@
       "the recording opens mid-sentence; the MC's introduction is not captured",
       "no official recording or slides of this talk found yet"
     ],
-    "generated_at": "2026-11-12T14:54:06-08:00"
+    "generated_at": "2026-11-12T18:52:58-08:00"
+  },
+  "1373480": {
+    "searched": [
+      "roster links (github.com/jmccarthy, linkedin.com/in/justinmccarthy, x.com/builtbyjustin)",
+      "operator lead: diffusion.io/brownfield (read)",
+      "diffusion.io and factory.strongdm.ai read"
+    ],
+    "gaps": [
+      "linkedin.com/in/justinmccarthy (roster) answered 999 with no page title, so it could not be corroborated; not published",
+      "diffusion.io/brownfield calls itself the talk's companion but does not name him; it links his X account",
+      "the demand-factory and brand-envelope ideas have no write-up found",
+      "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+    ],
+    "generated_at": "2026-11-12T18:52:58-08:00"
+  },
+  "1373481": {
+    "searched": [
+      "roster links (github.com/sqs, slack.org, linkedin.com/in/quinnslack, x.com/sqs)",
+      "web: Amp spin out Sourcegraph Quinn Slack 21 cofounders",
+      "ampcode.com/news/amp-frontier-corporation read"
+    ],
+    "gaps": [
+      "linkedin.com/in/quinnslack (roster) answered 999 with no page title, so it could not be corroborated; not published",
+      "the spin-out post is signed by 20 co-founders and does not state a count; the talk and abstract say 21",
+      "the $100M+ ARR, one-meeting-a-week, bug-report apology loop and in-house CRM have no public write-up found",
+      "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+    ],
+    "generated_at": "2026-11-12T18:52:58-08:00"
+  },
+  "1373482": {
+    "searched": [
+      "roster links (github.com/thariqs, linkedin.com/in/thariqshihipar, thariq.io, x.com/trq212)",
+      "web: Thariq Shihipar \"Sweet Side of the Bitter Lesson\"",
+      "web: Thariq Shihipar leaves Anthropic game isometric spec human-readable",
+      "web: Thariq trq212 elemental fighting game vibe UI",
+      "thariq.io and latent.space/p/thariq read",
+      "web: Karpathy land or water latitude longitude map (re-transcription lead)"
+    ],
+    "gaps": [
+      "linkedin.com/in/thariqshihipar (roster) answered 999 with no page title, so it could not be corroborated; not published",
+      "the program carries no talk title; the operator's notes give 'The Sweet Side of the Bitter Lesson', and no page with that title was found",
+      "no company: he speaks as an independent engineer",
+      "thariq.io still describes him as working on Claude Code at Anthropic; the roster and the MC say he has left",
+      "the fighting game and its human-readable spec folder have no public write-up or repository found; his posts about it are on X and were not individually verified",
+      "the land-or-water world-map comparison of Opus models has no source found; the re-transcription attributes it ('I think Caparthy posted it', the Voice Memos transcript has 'apart the hosted it'), but one search found only the original method write-up ('How does a blind model see the earth'), not the Opus comparison or a Karpathy post; not linked",
+      "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+    ],
+    "generated_at": "2026-11-12T18:52:58-08:00"
   },
   "1376191": {
     "searched": [
@@ -291,6 +374,22 @@
       "no official recording or slides of this talk found yet"
     ],
     "generated_at": "2026-11-11T21:10:18-05:00"
+  },
+  "1376195": {
+    "searched": [
+      "roster links (x.com/ishaandey_)",
+      "web: Ishaan Dey Antigravity Google DeepMind",
+      "web: Ishaan Dey Antigravity design engineer site",
+      "antigravity.google/blog index read; four posts matched to the talk's examples"
+    ],
+    "gaps": [
+      "no personal site, GitHub or LinkedIn verifiably his (the roster lists only X)",
+      "the Antigravity blog posts carry no individual author; they are linked for the features the talk describes, not as his writing",
+      "the agent-manager redesign, the science team's plug-ins and the 'last 2 weeks' launch slide have no single public write-up found",
+      "the recording opens mid-sentence; the MC's introduction is not captured",
+      "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+    ],
+    "generated_at": "2026-11-12T18:52:58-08:00"
   },
   "1376197": {
     "searched": [
@@ -392,6 +491,20 @@
     ],
     "generated_at": "2026-11-10T14:19:25-05:00"
   },
+  "1380098": {
+    "searched": [
+      "roster links (x.com/swyx)",
+      "web: AI Engineer India 2027 announced swyx AIE Shanghai"
+    ],
+    "gaps": [
+      "the speaker never says his name; attribution rests on the program and roster",
+      "no public page for 'AI in Shanghai last week' found",
+      "the celebration video and the two team members' earlier talks are not identified",
+      "the after-party location is not stated",
+      "no per-talk recording or slides found yet; the full-day Mainstage livestream is linked at an approximate offset instead"
+    ],
+    "generated_at": "2026-11-12T18:52:58-08:00"
+  },
   "1381580": {
     "searched": [
       "roster links (devin-gupta.github.io, linkedin.com/in/devin-gupta, x.com/devingupta_)",
@@ -408,6 +521,6 @@
       "the recording opens mid-sentence; the MC's introduction is not captured",
       "no official recording or slides of this talk found yet"
     ],
-    "generated_at": "2026-11-12T14:54:06-08:00"
+    "generated_at": "2026-11-12T18:52:58-08:00"
   }
 }

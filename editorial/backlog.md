@@ -2,6 +2,8 @@
 
 ## Ideas
 
+- [ ] Execute TheFocus.AI 6-part research & newsletter series (`After the Diff`), starting with the shadow-mode LLM judge + locked oracle spike (`editorial/newsletter-series.md`, hooks in `editorial/hooks/2026-11-12-research-themes-hooks.md`)
+- [ ] Run harness-subtraction benchmark (strip 80% scaffolding down to CLI + programmatic tools + dry-run checks, Issue 3 in `editorial/newsletter-series.md`) and DuckDB semantic `WHERE` + Grounded Decision prototype (Issue 4 in `editorial/newsletter-series.md`)
 - [ ] Rebuild Mixedbread: our own search-over-your-data layer, indexed ahead of agent queries (from Aamir Shakir's talk; ties to the lakehouse service idea) — notes/inbox/2026-11-11T1225-rebuild-mixedbread.md
 - [ ] Build out a map of how tools fit with decisions: tools, decision models, checks and humans, and where each belongs (from Diogo Almeida's Jev talk) — notes/inbox/2026-11-11T1417-2-map-tools-and-decisions.md
 - [ ] Write about how to use decision models overall (System One models: DeepMind's decision model, Cloudflare's clef/clairic, Jev at Glean and Workday) — notes/inbox/2026-11-11T1122-write-about-decision-models.md
@@ -20,6 +22,10 @@
 - [ ] Try agent swarms ourselves: a lead agent plus helpers on a shared store (git and a SQL database), after Lance Martin's thousand-agent run — notes/inbox/2026-11-12T1500-try-agent-swarms.md
 - [ ] Look into Mobbin for UI research (a library of real app screens and flows) — notes/inbox/2026-11-12T1507-look-into-mobbin-for-ui-research.md
 - [ ] Research how to get Sentry into our projects: monitoring for apps and agent runs, and its Seer agent (from Arsalan Bashir's "Let the Agent Cook") — notes/inbox/2026-11-12T1508-research-adding-sentry.md
+- [ ] Look into CustomInk for team merch (mentioned in Quinn Slack's "A Company Built Around the Agent") — notes/inbox/2026-11-12T1656-look-into-customink-team-merch.md
+- [ ] Build a taxonomy of development interaction modes (comments-then-tab, chat, loop, continuous, background, promise-keeping, …) — notes/inbox/2026-11-12T1737-taxonomy-of-interaction-modes.md
+- [ ] Follow up on the ArtCraft talk: Brandon Thomas, "Let's Open Source the World" (1378217), open-source software recreated in Rust by agentic factories — notes/inbox/2026-11-12T1740-follow-up-artcraft-talk.md
+- [ ] Follow up on the Pi talk: Armin Ronacher, "The Software Atelier" (1373472), craft better software, not just more — notes/inbox/2026-11-12T1740-follow-up-pi-talk.md
 
 ## Digest later
 
@@ -30,3 +36,5 @@
 - [ ] Deep dive: how Cloudflare really works with agents (Durable Objects, Workers AI, the Agents SDK), from Michelle Chen's "cloudflare is a neolab" — notes/inbox/2026-11-11T0949-cloudflare-and-agents-deep-dive.md
 - [ ] Learn what dbt actually is and where it fits in a data stack; it has come up in several talks — notes/inbox/2026-11-12T1222-follow-up-what-is-dbt.md
 - [ ] Read the papers Diffusion has published (Justin McCarthy's company, "Brownfield Factories") — notes/inbox/2026-11-12T1538-look-up-diffusion-papers.md
+- [ ] Read up on SlopCodeBench (coding agents degrading over long iterative tasks) and Dex Horthy's runs of it (from "12-Factor-Factories") — notes/inbox/2026-11-12T1705-look-up-slop-bench.md
+- [ ] Revisit old HCI research, as input to the interaction-modes taxonomy (from Thariq Shihipar's "The Sweet Side of the Bitter Lesson") — notes/inbox/2026-11-12T1738-revisit-old-hci-research.md

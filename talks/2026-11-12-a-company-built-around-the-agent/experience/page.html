@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Company Built Around the Agent · Quinn Slack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .alongside { margin: 1.2rem 0; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: .3rem; font: .88rem/1.55 var(--sans); }
+  .alongside b { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; display: block; margin-bottom: .2rem; }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  .quote-card::before { content: none; }
+  code { font: .88em var(--mono); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Thu 12 Nov 2026 · Mainstage</div>
+  <h1>A company built around the agent</h1>
+  <p class="dek">Quinn Slack spun a 21-person team out of a 200-person enterprise vendor under a hiring freeze—replacing Jira, PR gates, and 96% of SaaS with shared agent threads, one weekly meeting, and a closed customer bug loop past $100M ARR.</p>
+  <div class="talk-meta">Quinn Slack, Amp · 19 min · <a href="../links.md">Links and further reading</a> · <a href="https://www.youtube.com/watch?v=y9JtCCZP2MQ&amp;t=28490s">Video</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="sourcegraph-vs-amp.jpg" alt="His slide: I was the CEO. I could change anything. Org chart of Sourcegraph (~200 people across Engineering 75, Sales &amp; Marketing 75, and other departments) next to a highlighted green circle labeled Amp - 15.">
+        <figcaption>His slide, 4:45 pm (straightened from photos/PXL_20261113_004514950.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v2">
+        <img src="how-is-this-better.jpg" alt="His slide: How is this better? No intellectually honest way to answer that, displaying three posts comparing Amp, Codex, Claude Code, and Conductor remote workspaces.">
+        <figcaption>His slide, 4:46 pm (straightened from photos/PXL_20261113_004654887.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="old-vs-future-company.jpg" alt="His slide: Old-fashioned companies vs. companies of the future, crossing out 11 practices such as mandatory PRs, departments, roadmaps, sprint points, standing meetings, and SaaS in favor of push to main with agent proof, one team, one meeting a week, softer-than-software mini apps, and no token limits.">
+        <figcaption>His slide, 4:48 pm (straightened from photos/PXL_20261113_004802860.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v4">
+        <div class="lbl">The closed bug-report loop</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Closed bug-report loop: one user bug report triggers an agent fix and deploy, then a log sweep finds 17 silent affected users, sends proactive $10 credit apologies, and drives higher trust and future feedback.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="18" width="165" height="54" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="34" y="40" fill="var(--accent)" font-weight="600" font-size="10">1. REPORT</text>
+            <text x="34" y="57" fill="var(--ink)" font-weight="600">User reports obscure bug</text>
+
+            <path d="M185 45 L213 45" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="215" y="18" width="165" height="54" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="229" y="40" fill="var(--identity)" font-weight="600" font-size="10">2. FIX &amp; CREDIT</text>
+            <text x="229" y="57" fill="var(--ink)" font-weight="600">Agent fixes + thanks user</text>
+
+            <path d="M297 72 L297 98" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="20" y="100" width="360" height="58" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="34" y="122" fill="var(--accent)" font-weight="600" font-size="10">3. LOG SWEEP (NO HUMAN WOULD SPARE TIME FOR)</text>
+            <text x="34" y="142" fill="var(--ink)" font-weight="600">Agent finds 17 other silent users who hit the same error</text>
+
+            <path d="M200 158 L200 182" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="20" y="184" width="170" height="50" rx="8" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="34" y="204" fill="var(--machine)" font-weight="600" font-size="10">4. PROACTIVE APOLOGY</text>
+            <text x="34" y="221" fill="var(--ink)" font-weight="600">Email + $10 credit to all 17</text>
+
+            <path d="M190 209 L210 209" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="212" y="184" width="168" height="50" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="226" y="204" fill="var(--identity)" font-weight="600" font-size="10">5. FLYWHEEL</text>
+            <text x="226" y="221" fill="var(--ink)" font-weight="600">More trust, more feedback</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from his bug-loop walkthrough at 00:10:58; not his slide</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v5">
+        <img src="custom-tools.jpg" alt="His slide: Custom tools our agent can use — Plugins and MCP servers, hooked up to every thread, showing 12 tiles: CRM, Bug reports, Amp admin, Hiring, Gmail &amp; Calendar, Slack, Grafana, Buildkite, App Store &amp; Play, GitHub &amp; Linear, Offer cards, and CustomInk.">
+        <figcaption>His slide, 4:55 pm (straightened from photos/PXL_20261113_005524636.MP.jpg)</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v6">
+        <img src="agents-change-everything.jpg" alt="His opening slide: Agents Change Everything — How software is built, sold, and distributed; How teams are organized to build it, with waveform visual, early agent thread, and timeline from Jan 2025 Amp starts through Today 21 co-founders.">
+        <figcaption>His slide, 4:44 pm (straightened from photos/PXL_20261113_004415509.jpg)</figcaption>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="spin-out" data-visual="v1" data-caption="Carving out 21 co-owners from a 200-person enterprise vendor">
+      <div class="chapter">The break</div>
+      <h2>From a 200-person org to a 21-person spin-out</h2>
+      <p>The break began in January 2025 at the Frankfurt Airport with teammate Thorsten Ball, watching an early pre-Claude-Code agent change a background color—and realizing the feedback loop changed everything:</p>
+      <blockquote>“When I saw an agent actually work for the first time. It ran commands. It looked at itself. It gave itself some feedback loops. That blew my mind”<span class="cite">00:01:31</span></blockquote>
+      <p>Even as CEO of Sourcegraph, roughly 200 people across engineering and go-to-market, Slack found he could not simply declare mandatory PR reviews dead inside an established enterprise vendor. He first carved out a small group that skipped sales calls and executive meetings, then spun the company out completely—where months of legal friction blocked hiring and options, forcing the team to stay at 21 people:</p>
+      <blockquote>“And that skin in the game that you get when AI makes it so you can operate with way less people. Skin in the game—it's like this spiritual thing for the soul. Of great people, it makes them better at everything they do.”<span class="cite">00:05:51</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “They just started building Amp and dropped Sourcegraph.” and “This is a good example of how an organization works in the age of AI.” <b>The reading:</b> authority on a legacy org chart was not enough—spinning out under a hiring freeze created the forcing function to reorganize around the agent.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:01:31, 00:02:39, 00:05:51</p>
+    </section>
+
+    <section data-chapter="no-differentiation" data-visual="v2" data-caption="When features copy fast, enterprise checklists kill velocity">
+      <div class="chapter">The market shift</div>
+      <h2>Enterprise checklists vs. frontier love</h2>
+      <p>By early 2025, the classic startup sequence—land early adopters, check every median enterprise procurement box, hire a sales army—had turned lethal:</p>
+      <blockquote>“To make the median enterprise buyer happy, your product was going to go obsolete in like three months. And the whole game had to change. Nothing mattered other than making it so that the people at these other companies love your product”<span class="cite">00:03:52</span></blockquote>
+      <p>Developers constantly ask how one coding agent differs from Codex or Claude Code. Slack refuses to pretend a three-bullet feature list is a moat: any capability one lab proves—cloud orbs, multiplayer threads—competitors can match quickly. What cannot be copied overnight is removing the corporate apparatus between builders and users:</p>
+      <blockquote>“Having a whole product management team, a design team, an engineering team that's so disconnected from the actual customers, a whole company apparatus. If that's the best way that you can market a product, it's really tough.”<span class="cite">00:03:52</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “Enterprise-ready vs frontier.”, “It's hard to answer how things are different in an intellectually honest way.”, and “A lot of this is that there's no real kind of differentiation.” <b>The reading:</b> echoes <a href="../../2026-11-11-how-to-build-an-agent-that-builds-the-culture/experience/page.html">Ramp’s Inspect thesis</a>—when model harnesses converge, organizational speed and direct customer contact are the differentiation.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:03:52</p>
+    </section>
+
+    <section data-chapter="new-company" data-visual="v3" data-caption="21 co-owners, shared threads, one weekly meeting, $100M+ ARR">
+      <div class="chapter">Operating model</div>
+      <h2>21 people to $100M ARR: follow your energy</h2>
+      <p>With no room to hire, the team stripped out every external coordination system and moved work, discussion, and debugging into shared multiplayer threads fed by voice dictation:</p>
+      <blockquote>“We got rid of all of the other tools. We got rid of all of the other things you got to check. Obviously, not Jira. No task tracking. We don't have a support system. Everything we do in the agent.”<span class="cite">00:08:04</span></blockquote>
+      <p>Pushing straight to main stays safe because changes are tiny, backed by shadow systems and visual frame-by-frame proof. Without PMs, sprint points, or departments, everyone talks to customers—an SDR two years out of college ships ACH wire billing; teammates tell buyers the blunt truth instead of pitching for commissions. Everyone owns roughly 1/21st of the company:</p>
+      <blockquote>“We have one meeting per week, and then everything else. The guidance is follow your energy.”<span class="cite">00:15:58</span></blockquote>
+      <blockquote>“On a dollar in, dollar out, you know, basis, that's 40 to 50 times more efficient than old-fashioned companies.”<span class="cite">00:15:58</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “They stayed at 21 people up to $100M ARR.” and “"Follow your energy."” <b>The reading:</b> pairs directly with <a href="../../2026-11-12-a-new-age-of-software-engineering/experience/page.html">Cognition’s 40× PRs on 2.7× headcount</a>—removing handoff layers multiplies output once agents absorb implementation and verification.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:08:04, 00:09:54, 00:12:35, 00:15:58</p>
+    </section>
+
+    <section data-chapter="bug-loop" data-visual="v4" data-caption="One bug report triggers a fix, a log sweep, and proactive credits">
+      <div class="chapter">Close the loop</div>
+      <h2>Sweeping the logs for the 17 silent victims</h2>
+      <p>How does an AI-built codebase avoid becoming fragile “vibe-coded” junk? Slack walks through their automated customer bug loop. When a user reports a bug, the agent fixes it and thanks them with free credits—and then does the step no human PM or support queue would ever have time to do:</p>
+      <blockquote>“So you find the seventeen other people that hit that same obscure error. They remember it probably, and you proactively tell them.”<span class="cite">00:10:58</span></blockquote>
+      <p>Getting an email out of nowhere—<em>“we saw you hit an error yesterday, we fixed it, here’s $10”</em>—turns customer frustration into lasting loyalty:</p>
+      <blockquote>“It's a self-perpetuating cycle where then people who get that know that you care, and they're going to send more feedback in the future.”<span class="cite">00:10:58</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “The feedback mechanism is pretty amazing.” <b>The reading:</b> alongside <a href="../../2026-11-11-what-it-takes-to-set-intelligence-free/experience/page.html">Lovable’s outer business loop</a>, this turns production telemetry directly into product quality and customer trust without ticket triage.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:10:58</p>
+    </section>
+
+    <section data-chapter="custom-tools" data-visual="v5" data-caption="Once agents call the tools, 96% of enterprise SaaS disappears">
+      <div class="chapter">Headless SaaS</div>
+      <h2>Custom tools—and building the 4% of Salesforce</h2>
+      <p>As the team wired twelve internal connectors and MCP servers—CRM, Bug reports, Admin, Hiring, Gmail &amp; Calendar, Slack, Grafana, Buildkite, App Store &amp; Play, GitHub &amp; Linear, QR Offer cards, and CustomInk merch—into every agent thread, employees stopped opening third-party web apps altogether:</p>
+      <blockquote>“The more that we start using these tools, where just the agent is using it directly, we don't even need the software product on the other end, and it's. A very small number of products that we think actually have sticking power for us.”<span class="cite">00:13:16</span></blockquote>
+      <p>People used to mock the idea of vibe-coding Salesforce from scratch because nobody wants all of Salesforce. You only want the 2% you actually use, plus 2% deep integration with your own stack:</p>
+      <blockquote>“Actually, would you code the two percent subset of Salesforce features? And then another two percent that integrate with the rest of your stack in the most perfect way because the agent is so good at that.”<span class="cite">00:13:16</span></blockquote>
+      <div class="reading"><b>From the notes:</b> “Once it's plugged into the tools, we don't need to use the tools.” and “They use CustomInk for team merch; we should look into that.” <b>The reading:</b> when the agent thread is the primary workspace, “softer-than-software mini apps” beat waiting on a SaaS vendor’s Q4 roadmap.</div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:13:16</p>
+    </section>
+
+    <section data-chapter="out-of-the-cage" data-visual="v6" data-caption="Get out of the gossip channel and into an agent-shaped org">
+      <div class="chapter">The challenge</div>
+      <h2>Get out of the cage</h2>
+      <p>If tiny, high-equity teams stop buying bloated ten-year SaaS contracts with $100K sales commissions, traditional enterprise software starts to fracture:</p>
+      <blockquote>“Once you have seen how the new kind of companies that are two orders of magnitude smaller. Where everyone can do everything, where everyone has skin in the game, then you know you don't want anything else.”<span class="cite">00:14:45</span></blockquote>
+      <p>Slack closes with a blunt warning for engineers sitting in internal Slack gossip channels complaining that leadership refuses to adapt:</p>
+      <blockquote>“Let agents really shape how you work, and get to a company that's willing to be shaped by the agents.”<span class="cite">00:17:57</span></blockquote>
+      <ul class="key-points">
+        <li><strong>Spin out or insulate to break legacy habits:</strong> 21 co-owners under a hiring freeze replaced Jira, PR queues, and departments with shared threads, one weekly meeting, and 40–50× capital efficiency past $100M ARR (<code>00:05:51</code>, <code>00:08:04</code>, <code>00:15:58</code>).</li>
+        <li><strong>Close the loop on customer pain:</strong> agents fix reported bugs, sweep logs for the 17 silent victims, and credit them proactively—turning speed into quality (<code>00:10:58</code>).</li>
+        <li><strong>Build the 4% you need:</strong> once agents drive plugins and MCP servers directly, custom mini-apps replace bloated SaaS seats (<code>00:13:16</code>, <code>00:14:45</code>).</li>
+      </ul>
+      <div class="alongside"><b>Read alongside</b><ul><li><a href="https://ampcode.com/news/amp-frontier-corporation">Amp Frontier Corporation</a> — The December 2025 spin-out letter from Sourcegraph.</li><li><a href="../../2026-11-12-a-new-age-of-software-engineering/experience/page.html">Walden Yan: A New Age of Software Engineering</a> — Cognition’s vertical pods and 40× PR volume.</li><li><a href="../../2026-11-11-how-to-build-an-agent-that-builds-the-culture/experience/page.html">Ramp: How to build an agent that builds the culture</a> — Shared public agent threads across an engineering org.</li><li><a href="../../2026-11-12-12-factor-factories-design-patterns-for-agentic-coding/experience/page.html">Dexter Horthy: 12-Factor Factories</a> — Forward pressure, backpressure, and the AI-native forge.</li></ul></div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:14:45, 00:17:57</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, recorded in the room — keeping ASR garbles like “sourcecraft”, “vinecode”, and “anthropomorphic threads” verbatim) and on notes taken during the talk. “From the notes” and “The reading” are editorial synthesis, not his words. More on the <a href="../links.md">links page</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

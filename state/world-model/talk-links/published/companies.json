@@ -10,6 +10,26 @@
       ]
     }
   ],
+  "1325061": [
+    {
+      "name": "HumanLayer",
+      "url": "https://www.humanlayer.dev/",
+      "what": "A multiplayer coding agent IDE and cloud that brings agent sessions, plan artifacts, and code diffs together in one place for your team to collaborate and ship.",
+      "evidence": [
+        "page title: \"HumanLayer - The multiplayer control plane for your software factory\"",
+        "transcript: \"The multiplayer coding agent workspace\""
+      ]
+    },
+    {
+      "name": "Factory",
+      "url": "https://factory.ai/",
+      "what": "Build faster with AI coding agents. Factory Droids automate coding, testing, and deployment for startups and enterprises.",
+      "evidence": [
+        "page title: \"Factory | Agent-Native Software Development\"",
+        "transcript: \"One of the reasons I'm really excited to be working with Factory\""
+      ]
+    }
+  ],
   "1333169": [
     {
       "name": "Aviator",
@@ -164,6 +184,17 @@
     }
   ],
   "1373471": [],
+  "1373474": [
+    {
+      "name": "Google DeepMind (Gemini)",
+      "url": "https://deepmind.google/models/gemini/",
+      "what": "Our next era of frontier intelligence, built to solve your hardest problems.",
+      "evidence": [
+        "page title: \"Gemini — Google DeepMind\"",
+        "transcript: \"we have launched Gemini for Argon\""
+      ]
+    }
+  ],
   "1373475": [
     {
       "name": "Cognition (Devin)",
@@ -182,11 +213,45 @@
       "what": "Bundle, install, and run JavaScript & TypeScript — all in Bun. Bun is a fast JavaScript runtime & toolkit with a bundler, test runner, and npm-compatible package manager built in.",
       "evidence": [
         "page title: \"Bun — A fast all-in-one JavaScript runtime\"",
-        "transcript: \"Because the bun team, us, ultimately wrote Bun and Rust.\""
+        "transcript: \"we can modify either WebKit or Bun\""
       ]
     }
   ],
+  "1373480": [
+    {
+      "name": "Diffusion",
+      "url": "https://www.diffusion.io/",
+      "what": "We build software factories with teams like yours.",
+      "evidence": [
+        "page title: \"Software Factories for Enterprise AI Transformation — Diffusion\"",
+        "transcript: \"we are diffusing the capabilities of the model into the global economy\""
+      ]
+    }
+  ],
+  "1373481": [
+    {
+      "name": "Amp",
+      "url": "https://ampcode.com/",
+      "what": "Coding agent and dev environment built for the frontier.",
+      "evidence": [
+        "page title: \"Amp: Coding agent and dev environment built for the frontier\"",
+        "transcript: \"So I want to talk about the ways in which we built Amp, which is our agent product.\""
+      ]
+    }
+  ],
+  "1373482": [],
   "1376191": [],
+  "1376195": [
+    {
+      "name": "Google DeepMind (Antigravity)",
+      "url": "https://antigravity.google/",
+      "what": "Experience liftoff with the next-gen agent platform",
+      "evidence": [
+        "page title: \"Google Antigravity\"",
+        "transcript: \"Edge grabbing is a tool to get work done with agents\""
+      ]
+    }
+  ],
   "1376197": [
     {
       "name": "ZoomInfo",
@@ -253,6 +318,17 @@
       ]
     }
   ],
+  "1380098": [
+    {
+      "name": "AI Engineer",
+      "url": "https://www.ai.engineer/",
+      "what": "AI Engineer is the community and conference series for software engineers building with AI.",
+      "evidence": [
+        "page title: \"AI Engineer\"",
+        "program abstract: \"To close Code Summit 2026, swyx invites everyone to celebrate together\""
+      ]
+    }
+  ],
   "1381580": [
     {
       "name": "Parallel Web Systems (Decisions API)",
@@ -260,7 +336,7 @@
       "what": "A decision engine with world knowledge built in. Typed answers grounded in live web data, with citations, in under a second. $1 per 1,000 requests.",
       "evidence": [
         "page title: \"Decisions API - Fast Classification Grounded in Live Web Data | Parallel\"",
-        "transcript: \"If you use apparel decision API\""
+        "transcript: \"we get information from our proprietary index\""
       ]
     }
   ]

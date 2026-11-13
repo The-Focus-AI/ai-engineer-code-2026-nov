@@ -1,0 +1,21 @@
+{
+  "note": "Public YouTube livestreams of the Mainstage, one per day. started_at is the stream's actual start (YouTube release_timestamp). Session links are approximate: offset = scheduled start − started_at, and the stage ran early or late at times.",
+  "streams": [
+    {
+      "day": "2026-11-11",
+      "room_id": "continental-46-mainstage",
+      "video_id": "ZZ19zhYnDKY",
+      "title": "AIE CODE: Google DeepMind, Anthropic, SpaceXSI, TypeSafe, Lovable, Ramp, etc (System One theme)",
+      "started_at": "2026-11-11T08:20:07-08:00",
+      "duration_seconds": 32300
+    },
+    {
+      "day": "2026-11-12",
+      "room_id": "continental-46-mainstage",
+      "video_id": "y9JtCCZP2MQ",
+      "title": "AIE CODE: OpenAI, ArtCraft, Cognition, Exa, Anthropic, Amp, et al",
+      "started_at": "2026-11-12T08:47:01-08:00",
+      "duration_seconds": 32710
+    }
+  ]
+}

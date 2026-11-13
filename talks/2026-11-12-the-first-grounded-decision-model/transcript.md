@@ -9,85 +9,90 @@ ends_at: 2026-11-12T14:50:00-08:00
 format: talk
 recording: 2026-11-12_1433_The-first-Grounded-Decision-Model
 duration: 645.1
-source: voice-memos-transcript
+source: qwen3-asr-1.7b
 ---
 
-> The recording opens mid-sentence ("and useful and functional."); the MC's introduction is not
-> captured, and the speaker never says his name. The ASR is heavily garbled throughout. The Q&A
-> turns are left unlabelled: the transcript does not mark who is speaking.
+> The recording opens mid-sentence ("It's really important to make Chat a useful and functional vision
+> model"); the MC's introduction is not captured, and the speaker never says his name. The ASR is
+> heavily garbled throughout. The Q&A turns are left unlabelled: the transcript does not mark who is
+> speaking.
 >
-> Rendered from the Voice Memos transcript (word timings), the transcript in force: the local
-> Qwen3-ASR upgrade was deferred because the laptop was on battery when it was rendered.
-> Names are kept as transcribed: Parallel is "apparel" and "the parallel", web
-> grounding is "web gring" and "low grding", the live demo's NVIDIA CEO question is "comedia",
-> "video video" and "CO video", and the model being compared is "Jeff".
+> Transcribed locally with Qwen3-ASR 1.7B (timings per ~5 s segment), prompted with the
+> speaker names and affiliations of overlapping sessions. "parallel" at 00:06:34 and 00:07:20 was in that prompt (the
+> unprompted Voice Memos transcript has "apparel" and "parallel" there). "Jarred" at 00:04:34 and "Exa"
+> at 00:07:20 are prompt artifacts naming other sessions: the Voice Memos transcript has "jazz" and no
+> word there. Echoes of the prompt were cut from 6 segments before this text was written. Other words
+> are kept as transcribed: the inference revolution is "evolution" and "Versailles", the model being
+> compared is "Jeff" and "Web Jeff", and the speaker's product is a "vision model". The Voice Memos transcript is kept beside it as `transcript.txt`.
 
 ### 00:00:00 — Introduction
 
-And useful and functional. Model for real or. Cool. Okay, that's what I'm talking about. Now if you're pract with devolutions, we saw yoga yesterday and I think he's like awesome he is, right? But specifically I interview I was talking about is like an on versell of a rout team the explosion can't be explosion of. And that's because it was so much cheaper. And there's so much faster than anything you could do before.
+It's really important to make Chat a useful and functional vision model for real world. Cool. Please. That's that's the bar contest. Now we're here talking about evolution. We saw Yogo yesterday, and I think he's like awesome. He thinks of it in a very different way, but specifically, I think the thing I want to talk about is like. On Versailles, the crowd has seen the explosion, the very explosion of Versailles, and that's because it was.
 
-And specifically because often we that is you leave of Lic relatives, they will be afraid. The right emp not. Like as soon as I understand the concept I'm working with, I can do a lot. I don't really have to like write that much. And so, he's also in the junvolution. Like, there's plenty of requests for travel, 2 models, and also they don't know what on this. And I'm really amazed that, like, grounding for those is extremely exciting.
+So much cheaper and so much faster than anything could do before, and specifically because often what we find is we'll read code. Of L1 intelligence, it will be important, and the right point, it will be not. Like as soon as I understand the content I'm working with, I can do a lot, and I don't really have to like write that much. And so, results of the evolution, like the quantity of requests for chat GPT models, has absolutely blown up.
 
-### 00:00:56 — A question a model cannot answer
+And I'm here to make the case that like grounding for those is extremely important.
 
-Okay, so maybe a question. Who won Michigan Zen Grace? This should be easy. This is like well known. I'm happ like a couple days ago if you do Google search, the 1st thing that shows up. But you ask Jeff this question. This is what I'll give you back. My drivers, but 58%, it really doesn't know. Like maybe has some preing by Rogers, maybe mess a appreciate idea a influence yet, but like he doesn't have a good sense to what he answer this by.
+### 00:00:55 — A question a model cannot answer
 
-And so it's kind of crazy that you would use a decision model in your workflow that has like almost no understanding of like what is going on. I. What happens to, like, niche entities? And so this is where we think that, like, not only is it wrong, but also it's founded as the 2 young complicated. I Jooga was point about actually like, might use it' not just because of crap, so also makes this how.
+Okay, so maybe a question: Who won the Michigan Senate race? This should be easy. This is like well known. I mean, a couple days ago, if you do Google searches, the first thing that shows up. But if you ask Jeff this question, this is what'll give you back. Mike Rogers with fifty-eight percent. It really doesn't know. Like maybe he had some pre-trained idea about Mike Rogers. Maybe had some pre-trained idea about Julian Sanchez. But like. He doesn't have a good sense of what the anthropic question is.
 
-It's no way not.
+And so it's kind of crazy that you would use a decision model in your workflow that has like almost no understanding of like what. And so this is where we think that like not only is it wrong, but also its confidence is too high. So I think Joe made a really good point about actually like. The thing about using jobs is not just because of crap, but ultimately because no one is content with jobs, and so we think that.
 
-### 00:01:49 — Grounding unlocks calibration
+### 00:01:50 — Grounding unlocks calibration
 
-And so we think that part of it is a lot without grounding, is that you completely unlock actual calibration of the operation. So this is like an example of many, where it kind of just feels unfair. Like, using Java just doesn't solve the problem. And so web gring helps to unlock whole person things here. Cool. So, we can add that line of sort of off case example through an event where, I'm releasing over the best market, if you have any questions, where we grew up in our web traffic, it's a real workflow field, over the close, where it's like, it's kind of a very unique, unique decision, the AGIs that have, I'm drafting.
+Part of what this unlocks with web grounding is that you completely unlock actual calibration of the. So this is like an example of many. Where it kind of just feels unfair, like. Using Java just doesn't solve the problem, and so web grinding helps to unlock the whole portion of things here. Cool. So we understand that one sort of. Offcase example: We've been for release of open source benchmark for many questions where.
 
-Don't it doesn't like clearly makes have to ask their questions. And so, sort of the same, the same things you might do to it, that like, there's huge accuracy differences, and huge challenge differences. You can see a girl that from. So here's a adv you about to our I mean, here's a collaboration that part where we show that for prayers for a month fact. I much better calibrated, when correct is much more content than's correct.
+We direct our web traffic to real workloads. Where it's like it's kind of a very unique, unique decision. The AIs that have underground things don't. It doesn't really make sense to ask them. And so, sort of the same the same things you might intuit that like. There's huge accuracy differences and huge calibration differences you can see in real benchmarks too. So here's a here's an accuracy benchmark, and then here's a calibration benchmark where we show that.
 
-If you use that low grding to grab through. And so, there's like a whole, a whole set of things here that locks, and specifically like calibration is being important to me. Great decision model.
+For the prayers, for it's much more accurate, much better calibrated. What is correct is much more confident that's correct if you use actual grounding to ground your decision. So there's like a whole set of things here that unlocks, and specifically like. Calibration is the important thing about good decision models.
 
-### 00:03:05 — How it works
+### 00:03:01 — How it works
 
-Awesome. Here's kind of how it built that works. About something you take some state input. It's like a rapid it looks exactly like Jeff to the states. We do a live finish web search calls and we get information from our propriary index, which is like on the size of the X release's the higher. And we find a relevant content decision. So, we take a bunch of results, we include it on the state, or...
+Awesome. Here's kind of how it's built and how it works. Effectively, you take some state input. It's like a wrap. It looks exactly like Jeff in terms of state. We do a live search, web search call, and we get information from our proprietary index, which is like. On the size, I think that's at least their size, which is about 100 billion pages, and we find the most relevant content for that decision. So. We take a bunch of results and we include that part of the state.
 
-It runs under a 2nd and last time it $one per000 plus. So, 2 orders of 19, maybe, or 19 cheaper, but I'll have more clothes you were using to be Mexican for. And then it's also like an organized 2 faster. For that one call, you can also ask, you can say, like, for that, to ask one of the questions about the state, but you don't realize it.
+It runs under a second in response time. It's one dollar per thousand requests. So. Two orders of magnitude, maybe an order of magnitude cheaper than the LLM workflow we were using to be back in April. And then it's also like an order of magnitude faster. For that one call, you can also ask the same way project. Ask how much quantum state they want to parallelize. And so the same search content can be reused across the whole.
 
-And so the same for content reuse it all. And like we show here, like there's a bunch of different sort of use cases. There's true false questions play aspects. All normal things.
+And like like we show here, like there's a bunch of different sort of use cases. There's true false questions. Employee benefits, all normal things.
 
 ### 00:04:05 — Since launch
 
-Okay, so we talked about introvolution. I think that the 2nd grade of this is that there's a web intervolution where, since we launched 2 weeks ago, we've seen absolutely like the explosion of the music, our teenage eyes. Overgrground our 1st. And so we need decision like the beginning of the special, people have onlying with guns and realize 1st budje will do but then also how men en able you to do lot things Cool.
+Okay, so we talked about the industrial revolution. I think that the second phase of this is that there's a web industrial revolution. Where since we launched two weeks ago, we've seen absolutely. Like explosion of number of amazing AI community guys, both on the proprietary and on the proprietary, on our first-rate. And so we think this is just like the beginning of the exponential. People have only begun to realize.
 
-### 00:04:35 — Customer use cases
+First, what Jeff can do, but also how Web Jeff enables you to do other things around.
 
-Okay, we have a bunch of amazing customers. I want to highlight some of the use cases that where jazz and whether're running difference. So some of our customers are using, you have restaurants, they have a list of like 100,000 restaurants in California, and you sort of have a single one of them up. And you can actually classify for every single one of them is a reservation platform, like, not only, because open table is a resi.
+### 00:04:34 — Customer use cases
 
-And what is the recipe? I using Sportspace or raising clicks. What are they doing? What is the weather? So if you were if a sales engine, and you might go find for every single every single restaurant all California is $100 last. Because in case, you have some sort of business with QIC flows, you can search a business like anchor of 20, and you want to classify away from business ads, right?
+Cool. Okay, we have a bunch of amazing customers. I want to highlight some of the use cases of where Jarred. And web running. So some of our customers are using. You have a restaurant. They have a list of like a hundred thousand restaurants. California, and you search every single one of them up here on the website, and you can actually classify for every single one of them.
 
-These are the operating. Because there are all sort of a yoga processor. You can do that for a dollar for 1000 bucks, which is, like, 2 hours back, you can bring a lot of otherwise than people that now. And then another thirdd example of you have some new give you like instant categorization. I' not more by the U got later scheme, but also all the other views on the go.
+Is a reservation platform like phone only? Is OpenTable? Is a Resy and. What is the website platform? So I'm using Squarespace. I'm using Wix. What are they doing? What is the website? So if you were if you're a sales engine. And you want to go find for every single for every single question in all of California, this is a hundred dollars to classify, and then you build this model for every single question.
 
-So it fresh and extra.
+Second case, you have some sort of business Kyc flow. You search a business like Anchor Holdings Ltd. And you want to contemplate: What is the business model? Is it currently operating? Is there any sort of real threat against it? You can do that for a dollar per thousand epochs, which is like. And then a third example: If you have some news, you can do like instant categorization. That's not just a form of Theorized later scenes, but also all the other views.
 
-### 00:05:46 — Live demo
+So it shouldn't crash and extremely. These are some examples.
 
-Is this an example, I'm gonna go and do a really quick live demo. And hopefully it's gonna land well all the rest. So the furious sort cooked up. So if you ask something like, who's CEO, comedia, presented wants to video, I'd say, this is my favorite world as of like right now. We'll give you true a 96% probability. And so I will run this live, just see you guys know this.
+### 00:05:45 — Live demo
 
-Any time. and it's, again, I don't know, fairly, it doesn't, you just train on, like, years of information, where all I'm seeing is, it just, on his CO video, TV, testimony, it has, like, 30 years. And so it's highly confident and it's like truly metallic. If you use apparel decision API, which asks the same question, Not only will we give you the correct answer, We'll give you the correct answer.
+I'm going to go and do a really quick live demo. And hopefully, it's going to land well. Always a risk. So here is sort of an example that we cooked up. So, if you ask something like, "Who is the CEO?" Will give you true with a 96% probability. So I will run this live. Just so you guys know that this is nice. And seven people. And it's again kind of unfair. It doesn't. It's trained on like years worth of information.
 
-And so not only did we you together, we also give your presentations, you can go backashing the sour song. And so it'll come from like $100,000 plus. It's super easy to pass. Yeah, that's what I wanted to talk about.
+We're all seeing is that Justin Wong is CEO of the video. Justin Wong is the CEO of the video for 30 years. And so it's highly confident, and it's. It's like truly uncalibrated. If you use a parallel decision API, which asks the same question. Not only will we give you the correct answer. Not only do we give you the answer, we also give you the citation, so you can go fact check the source yourself.
 
-### 00:07:05 — Pricing
+And so it all comes to like one dollar per thousand requests. It's super easy. It's super fast.
 
-I have some other slides here that you can sort of look here if you guys are interested. But like the pricing difference between what people currently do, which is that they use those are like, oh, they have a model, go to research, find your output schema, you extend. Versus like the parallel. Anyways, for recording back, like tours, I'm a tour of the capacity. So the something that the things we're seeing are like, people are doing this live in a response.
+### 00:07:03 — Pricing
 
-Now, as we're tending your business days, we can go search it up, find out what, what the news you're in, but it should or else you're in. How it's like subsecondlyency. So like you don't even get to pay full party the information.
+Yeah, that's what I wanted to talk about. I have some other slides here that we can sort of look through if you guys are interested about like. The pricing difference between what people currently do, which is that they use some sort of like open AI model. Go to research. Find your outfit scheme that you attend. Versus like the parallel system, which is using the Exa. Anyways, recorded back like two or three gigabits.
+
+So something that we're seeing is like people are doing this live in every single hotel. As you're typing your business name. We can go search it up, find out what institutes you're in, what institutions you're in. How it's like. Sub-second latency, so like you—you don't even get to the paid part of the information.
 
 ### 00:07:45 — Q&A
 
-Yeah. As we're going to say, yeah, I've got all the questions. And you can have like. The size of a web index is whoever oipus probablyly the size of maybe. They drop that a little bit. Which is more than the design of appreciating the, like, so, like, AI does. And so if you have the AIDS, what the next, you know, you should probably... Okay. Yeah, so I was actually playing around with this yesterday.
+Yeah. As We have our own deep models. And you can imagine, like anyone looking at that, would say, Wow! The size of our web index is. Is we'll get more specific, but it's roughly the size of the exa. We talked about a little bit. Which is more than the size of pretraining, like something like AI does. And so, if you have OpenAI's WebMDX, if you have LLMs, you should probably.
 
-Yeah, it works really well. If you don't, it are the fun parallelized questions. Yes. So, like, if you ask 2 questions in parallel, they obviously will share context with the state that you will retrieve. So in your election example, you might be like, who won? Was their position on immigration? What party are they a member of? And because of the same surge will back those materols, it actually be graised as opposed to asking each of those as separate questions.
+So I was actually playing around with this. Yesterday, it works really well if you don't. The cards are fun. Parallelize questions. Yes. So, like, if you ask two questions in parallel, they obviously will share context, the state that you. You all retrieve. So, in your election example, you might be like, "Who won?" What's their position on immigration? What party are they a member of? Because the same search will back those results, it actually degrades as opposed to asking each of those as.
 
-You all plan to address that? How do you, where is this in my user area? Yeah, I, I can't even mention behind this about shit is that we want, a single sort of granny or single version. That's an answer your question. We think that there's a lot of news in the part. These very early days was about job. I so World collecting product feedback. And so I think that is somewhat out of scope, but also, I think, for it in the last part, I think, is much better.
+Separate questions. Do you all have plans to address that? How do you? Where is this my user area? Yeah, I think the intention behind the product shape is that we want. A single sort of grounding or single search to answer a question. We think that there's a lot we can do to the project. It's very early days in terms of object, and so we're collecting product feedback.
 
-Yeah, Russians. awesome. Yeah, so the question was, do we use intercalibration contains to, all the, all the congregation after this, I think, barely selling bottles. That like the right training right with the distribution we did. Again, like, I think the thing is that when you have the web context information, it's almost very clear what the answer is. Part of the reason why I needed this com collation.
+And so I think that is somewhat out of scope, but also I think we're going to do a lot of work to make it much better than today. Yeah. So the question was, do we use it for calibration techniques to? Also, the also the calibration. Again, like I think that the thing is, is that when you have the weather context information. It's almost very clear what the answer is. Part of the reason why you needed this complex calibration, you didn't have a complex calibration.
 
-It didn't have a finance experience, is because you were kind of guessed, like, you had to sort of guess the probability, like, physical percentage of the time is used to not raise attention. But this time we can cr also a lot. Hello, thank you.
+Is because you were kind of guessing, like you had to sort of guess some probability, like this percentage of the time is used, and that percentage. Awesome. Thank you.

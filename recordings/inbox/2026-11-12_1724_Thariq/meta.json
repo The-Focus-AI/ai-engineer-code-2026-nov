@@ -1,0 +1,23 @@
+{
+  "title": "Thariq",
+  "recorded_at": "2026-11-12T17:24:20-08:00",
+  "duration_seconds": 1173.3,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 3538,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261112 172420.m4a",
+  "audio_sha256": "7c6a0ff870fbbe369cae6300640ff72429e157c9dc7c0d7368c3d37ef0717186",
+  "exported_at": "2026-11-12T17:49:27-08:00",
+  "transcript_echo_segments": 0,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 3570,
+      "locale": "en_US"
+    }
+  ]
+}

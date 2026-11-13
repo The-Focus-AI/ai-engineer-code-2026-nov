@@ -1,12 +1,14 @@
 {
-  "talk_count": 24,
-  "word_count": 76501,
+  "talk_count": 33,
+  "word_count": 101668,
   "last_touched": "2026-11-12",
-  "theme_count": 14,
-  "unassigned": [],
+  "theme_count": 6,
+  "unassigned": [
+    "2026-11-12-something-to-celebrate"
+  ],
   "thin": [
     "2026-11-11-your-judge-is-hallucinating-too"
   ],
   "report_path": "analysis/themes.md",
-  "generated_at": "2026-11-12T13:31:05-08:00"
+  "generated_at": "2026-11-12T23:10:00-08:00"
 }

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Judge Is Hallucinating Too · Brian Kennedy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+  .reading { margin: 1.2rem 0; padding: .7rem .9rem; background: var(--panel); border-radius: .3rem; font: .92rem/1.55 var(--sans); }
+  .reading b { color: var(--accent); }
+  .alongside { margin: 1.2rem 0; padding: .7rem .9rem; border: 1px solid var(--rule); border-radius: .3rem; font: .88rem/1.55 var(--sans); }
+  .alongside b { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; display: block; margin-bottom: .2rem; }
+  .lbl { font: 600 .66rem/1.3 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .quote-big { font: italic clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
+  .quote-big span { display: block; margin-top: .8rem; font: 600 .7rem/1 var(--mono); letter-spacing: .14em; color: var(--muted); font-style: normal; }
+  .quote-card::before { content: none; }
+  code { font: .88em var(--mono); }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Wed 11 Nov 2026 · Mainstage · 28s Closing Fragment</div>
+  <h1>We trusted our judge until we measured it</h1>
+  <p class="dek">Only the final 28 seconds of Brian Kennedy’s talk were captured—yet the closing rule stands on its own: never trust an unmeasured LLM judge; run a second check in shadow mode and read the disagreements.</p>
+  <div class="talk-meta">Brian Kennedy, ZoomInfo · 28s fragment · <a href="../links.md">Links and further reading</a></div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual quote-card" data-visual="v1">
+        <p class="quote-big">“We entrusted our judge until we measured it. Measure yours.”<span>Brian Kennedy · 00:00:00</span></p>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v2">
+        <div class="lbl">Shadow-mode judge check</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Diagram showing agent output routed in parallel to the Primary Judge (live) and a Second Check (shadow mode), feeding a Disagreement Log where the two diverge.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="115" y="18" width="170" height="46" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="200" y="45" text-anchor="middle" fill="var(--ink)" font-weight="600">Evaluated Agent Step</text>
+
+            <path d="M160 64 L105 96 M240 64 L295 96" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="24" y="98" width="162" height="62" rx="8" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="105" y="124" text-anchor="middle" fill="var(--machine)" font-weight="600">Primary Judge (Live)</text>
+            <text x="105" y="143" text-anchor="middle" fill="var(--muted)" font-size="10">existing production score</text>
+
+            <rect x="214" y="98" width="162" height="62" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="295" y="124" text-anchor="middle" fill="var(--identity)" font-weight="600">Second Check (Shadow)</text>
+            <text x="295" y="143" text-anchor="middle" fill="var(--muted)" font-size="10">non-blocking parallel check</text>
+
+            <path d="M105 160 L165 186 M295 160 L235 186" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="64" y="186" width="272" height="46" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="200" y="213" text-anchor="middle" fill="var(--accent)" font-weight="600">Where the Two Disagree → Inspect</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from the 00:00:00 closing fragment; no slides captured</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v3">
+        <div class="lbl">Minimal audit loop: don't overthink it</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Three-step linear loop: 1 Start small with shadow runs, 2 Read the disagreement cases by hand, 3 Uncover where your judge hallucinates.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="34" y="24" width="332" height="54" rx="8" fill="var(--panel)" stroke="var(--identity)"/>
+            <text x="52" y="47" fill="var(--identity)" font-weight="600">1. JUST START SMALL</text>
+            <text x="52" y="64" fill="var(--muted)" font-size="10">No heavy upfront rewrite—enable shadow checks on real traffic</text>
+
+            <path d="M200 78 L200 96" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="34" y="98" width="332" height="54" rx="8" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="52" y="121" fill="var(--machine)" font-weight="600">2. READ THE DISAGREEMENT CASES</text>
+            <text x="52" y="138" fill="var(--muted)" font-size="10">Inspect concrete splits between judge #1 and judge #2</text>
+
+            <path d="M200 152 L200 170" stroke="var(--muted)" stroke-width="1.5"/>
+
+            <rect x="34" y="172" width="332" height="54" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="52" y="195" fill="var(--accent)" font-weight="600">3. FIND SURPRISES IN YOUR JUDGE</text>
+            <text x="52" y="212" fill="var(--ink)" font-size="10">Surface silent hallucinations you previously trusted</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from the 00:00:00 closing fragment; no slides captured</figcaption>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="measure-your-judge" data-visual="v1" data-caption="Assume your LLM judge fails silently until you measure it">
+      <div class="chapter">Fragment scope · 00:00:00</div>
+      <h2>Don't trust an unmeasured judge</h2>
+      <p>The recorder caught only the final 28 seconds of this session (<code>15:22:39–15:23:07</code>), so the body of the talk is absent from the archive. What survived is the punchline: teams treat an LLM-as-judge as settled infrastructure right up until they actually test it:</p>
+      <blockquote>“We entrusted our judge until we measured it. Measure yours.”<span class="cite">00:00:00</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:00</p>
+    </section>
+
+    <section data-chapter="shadow-mode" data-visual="v2" data-caption="Run a second check in shadow mode and log disagreements without blocking production">
+      <div class="chapter">The check</div>
+      <h2>Run a second check in shadow mode</h2>
+      <p>Auditing your evaluator does not require pausing production or swapping out your stack upfront. Run a second check alongside the primary judge in shadow mode and record where the two scores part ways:</p>
+      <blockquote>“Run a second check. Run in shadow mode, seeing where it disagrees.”<span class="cite">00:00:00</span></blockquote>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:00</p>
+    </section>
+
+    <section data-chapter="read-the-cases" data-visual="v3" data-caption="Start small and inspect actual disagreement cases by hand">
+      <div class="chapter">Closing rule</div>
+      <h2>Start small and read the disagreements</h2>
+      <p>Skip designing an elaborate benchmark suite before looking at real diffs. Start with a small slice, pull up the cases where the two checks disagreed, and read them directly—because the failures hiding inside a trusted judge rarely look like what you expect:</p>
+      <blockquote>“Then read the cases, see where the two disagree, and don't overthink it. Just start small.”<span class="cite">00:00:00</span></blockquote>
+      <blockquote>“You may be surprised at what you find.”<span class="cite">00:00:00</span></blockquote>
+      <ul class="key-points">
+        <li><strong>Honest archive note:</strong> only the final 28 seconds (46 words in <code>transcript.md</code>) were recorded; speaker and company attribution follow the folder title and session abstract (<a href="../links.md">links</a>).</li>
+        <li><strong>Measure the grader:</strong> run a second check in shadow mode alongside your live LLM judge instead of treating judge scores as ground truth (<code>00:00:00</code>).</li>
+        <li><strong>Inspect diffs directly:</strong> start small and read the disagreement cases—surprises show up quickly once two checks are compared side by side (<code>00:00:00</code>).</li>
+      </ul>
+      <div class="alongside"><b>Read alongside</b><ul><li><a href="../../2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/page.html">Scott Roberts: Autocomplete for Actions</a> &amp; <a href="../../2026-11-11-i-love-you-so-jevving-much/experience/page.html">Diogo on TypeSafe &amp; Jev</a> — Decision-model context referenced in the <a href="../links.md">session dossier</a>.</li><li><a href="../../2026-11-11-heal-your-agents-dont-just-grade-them/experience/page.html">Asif Mohammad &amp; Sudhir Tonse: Heal Your Agents</a> — Moving beyond static LLM-as-judge grading to continuous production diagnostics.</li></ul></div>
+      <p class="watch">Evidence: <a href="../transcript.md">transcript</a> 00:00:00</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="talk-foot">
+  Built from <a href="../story.md">the story</a>, which draws on <a href="../transcript.md">the transcript</a> (Qwen3-ASR, a 28-second closing fragment recorded in the room). Attribution to Brian Kennedy and ZoomInfo comes from the session folder and <a href="../links.md">dossier</a>.
+</footer>
+
+<script src="../../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

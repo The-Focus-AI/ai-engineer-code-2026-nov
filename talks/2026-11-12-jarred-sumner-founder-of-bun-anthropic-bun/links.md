@@ -2,8 +2,8 @@
 session_id: "1373478"
 title: "Jarred Sumner, Founder of Bun, Anthropic / Bun"
 phase: live
-last_checked: 2026-11-12T14:54:06-08:00
-render: 20261112-145406-03378c
+last_checked: 2026-11-12T18:52:58-08:00
+render: 20261113-025258-ddff00
 ---
 
 # Links: Jarred Sumner, Founder of Bun, Anthropic / Bun
@@ -34,7 +34,7 @@ manager built in." (from the site)
   (Bun, 2025-12-02, Jarred Sumner). Why Bun's memory and startup matter to
   Claude Code.
 - **Repo** · [googleprojectzero/fuzzilli](https://github.com/googleprojectzero/fuzzilli).
-  The JavaScript engine fuzzer (transcribed "Puzzili") extended to test type
+  The JavaScript engine fuzzer (transcribed "Fuseeley") extended to test type
   predictions.
 - **Repo** · [tc39/test262](https://github.com/tc39/test262). The ECMAScript
   conformance suite, one of the tests that predate the project.

@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>System One decision models · Theme 04 of 06</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../stories/runtime/talk.css">
+<style>
+  .photo-card img { flex: 1 1 0; min-height: 0; height: auto; }
+</style>
+</head>
+<body>
+<header class="talk-masthead">
+  <div class="talk-kicker">AI Engineer Code Summit · Theme Deep Dive 04 of 06</div>
+  <h1>System One decision models</h1>
+  <p class="dek">Sub-second, reliably calibrated decision models turn AI from heavy conversational chatbots into a programmatic fourth logic gate—running inside DuckDB queries, UI keystrokes, and live web-grounded pipelines.</p>
+  <div class="talk-meta">4 talks · 13 claims · Uncontested across 4 talks · Also called: Clef, Jev, System One, decision primitives, fourth logic gate, grounded decision model, reliable intelligence, smart software</div>
+  <div class="talk-controls"><button type="button" data-talk-collapse aria-pressed="false">Hide visuals</button></div>
+</header>
+
+<div class="talk-layout">
+  <aside class="talk-rail" aria-label="Visuals">
+    <div class="talk-visuals">
+
+      <figure class="talk-visual photo-card" data-visual="v1">
+        <img src="../../talks/2026-11-11-i-love-you-so-jevving-much/experience/smart-software.jpg" alt="Diogo Almeida's slide contrasting Traditional Software (rigid branching), Just-in-time Software (stressed agent loop hitting SOS), and Smart Software (inline semantic decision gates inside normal code).">
+        <figcaption>Diogo Almeida (TypeSafe AI) · slide from <a href="../../talks/2026-11-11-i-love-you-so-jevving-much/experience/page.html">I love you so jevving much</a></figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v2">
+        <div class="lbl">Conditionals replace slow LLM loops</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Mapping ordinary code control flow—if/then, switch/case, and sort—onto sub-second decision primitives P(yes/no), choice(255), and score() at $20 per million judgments.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="18" width="166" height="170" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="34" y="40" fill="var(--muted)" font-weight="600" font-size="10">CODE BRANCH</text>
+            <text x="34" y="68" fill="var(--ink)" font-weight="600">if / elif / else</text>
+            <text x="34" y="84" fill="var(--muted)" font-size="10">binary gate in a loop</text>
+            <text x="34" y="114" fill="var(--ink)" font-weight="600">match / switch</text>
+            <text x="34" y="130" fill="var(--muted)" font-size="10">route across UI cards</text>
+            <text x="34" y="160" fill="var(--ink)" font-weight="600">sorted(rows, key)</text>
+            <text x="34" y="176" fill="var(--muted)" font-size="10">rank records inline</text>
+
+            <path d="M188 103 L212 103" stroke="var(--accent)" stroke-width="2"/>
+            <polygon points="210,98 218,103 210,108" fill="var(--accent)"/>
+
+            <rect x="218" y="18" width="162" height="170" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="232" y="40" fill="var(--accent)" font-weight="600" font-size="10">SYSTEM ONE PRIMITIVES</text>
+            <text x="232" y="68" fill="var(--ink)" font-weight="600">P(yes / no) &gt; 0.8</text>
+            <text x="232" y="84" fill="var(--identity)" font-size="10">calibrated probability</text>
+            <text x="232" y="114" fill="var(--ink)" font-weight="600">choice(msg, cards)</text>
+            <text x="232" y="130" fill="var(--identity)" font-size="10">up to 255 typed options</text>
+            <text x="232" y="160" fill="var(--ink)" font-weight="600">score(criteria)</text>
+            <text x="232" y="176" fill="var(--identity)" font-size="10">ordinal levels, no chat</text>
+
+            <text x="200" y="218" text-anchor="middle" fill="var(--muted)" font-size="10">Typing-speed autocomplete at ~$20 per million judgments (Scott Roberts)</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from Scott Roberts at 00:01:42 and 00:06:42</figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v3">
+        <img src="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/retrieval-three-ways.jpg" alt="Scott Roberts's slide: Retrieval three ways: Qwen, Cohere and Jev—showing Jev eliminating embedding, vector database, and similarity search to ask yes/no directly per row.">
+        <figcaption>Scott Roberts (Workday) · slide from <a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/page.html">Autocomplete for Actions</a></figcaption>
+      </figure>
+
+      <figure class="talk-visual photo-card" data-visual="v4">
+        <img src="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/clairic.jpg" alt="Michelle Chen's slide: Clairic: for answers you can't list up front—showing extract, compute, estimate, and forecast in one forward pass with zero output tokens and a confidence score.">
+        <figcaption>Michelle Chen (Cloudflare) · slide from <a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">cloudflare is a neolab</a></figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v5">
+        <div class="lbl">Web-grounded decision pipeline</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="Parallel Grounded Decision Model pipeline: typed state input queries a 100-billion-page live web index to return a sub-second calibrated answer with source citation at $1 per 1,000 requests.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="24" width="110" height="88" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="75" y="48" text-anchor="middle" fill="var(--muted)" font-weight="600" font-size="10">STATE INPUT</text>
+            <text x="75" y="72" text-anchor="middle" fill="var(--ink)" font-weight="600">Entity + query</text>
+            <text x="75" y="92" text-anchor="middle" fill="var(--muted)" font-size="10">KYC, news, sales</text>
+
+            <path d="M132 68 L152 68" stroke="var(--machine)" stroke-width="1.8"/>
+
+            <rect x="154" y="24" width="114" height="88" rx="8" fill="var(--panel)" stroke="var(--machine)"/>
+            <text x="211" y="48" text-anchor="middle" fill="var(--machine)" font-weight="600" font-size="10">WEB INDEX</text>
+            <text x="211" y="72" text-anchor="middle" fill="var(--ink)" font-weight="600">~100B pages</text>
+            <text x="211" y="92" text-anchor="middle" fill="var(--muted)" font-size="10">live retrieval</text>
+
+            <path d="M270 68 L290 68" stroke="var(--accent)" stroke-width="1.8"/>
+
+            <rect x="292" y="24" width="88" height="88" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="336" y="48" text-anchor="middle" fill="var(--accent)" font-weight="600" font-size="10">DECISION</text>
+            <text x="336" y="72" text-anchor="middle" fill="var(--ink)" font-weight="600">&lt; 1s · $1/1k</text>
+            <text x="336" y="92" text-anchor="middle" fill="var(--identity)" font-size="10">calibrated + URL</text>
+
+            <rect x="20" y="136" width="360" height="82" rx="8" fill="var(--raised)" stroke="var(--rule)"/>
+            <text x="36" y="160" fill="var(--identity)" font-weight="600" font-size="10">WHY UNGROUNDED MODELS FAIL</text>
+            <text x="36" y="182" fill="var(--ink)" font-size="10">Stale pretraining guesses wrong with 96% confidence on current events.</text>
+            <text x="36" y="200" fill="var(--muted)" font-size="10">Live grounding aligns probability with evidence and yields a clickable source.</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative, drawn from Devin Gupta (Parallel) at 00:01:50 and 00:03:01</figcaption>
+      </figure>
+
+      <figure class="talk-visual diagram-card" data-visual="v6">
+        <div class="lbl">Uncontested category, three surfaces</div>
+        <svg viewBox="0 0 400 250" role="img" aria-label="All four talks converge on sub-second, typed, non-conversational invocation across three runtime surfaces: app code and DuckDB SQL, Cloudflare edge Workers, and live web-grounded APIs.">
+          <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+            <rect x="20" y="18" width="360" height="46" rx="8" fill="var(--card)" stroke="var(--accent)"/>
+            <text x="200" y="38" text-anchor="middle" fill="var(--accent)" font-weight="700" font-size="10">SHARED CONSENSUS (UNCONTESTED)</text>
+            <text x="200" y="55" text-anchor="middle" fill="var(--ink)" font-weight="600">Sub-second · Typed output · Calibrated · Zero chat loop</text>
+
+            <rect x="20" y="84" width="112" height="122" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="76" y="106" text-anchor="middle" fill="var(--identity)" font-weight="600" font-size="10">APP &amp; SQL</text>
+            <text x="76" y="128" text-anchor="middle" fill="var(--ink)" font-weight="600">Jev / TypeSafe</text>
+            <text x="76" y="148" text-anchor="middle" fill="var(--muted)" font-size="10">UI keystrokes</text>
+            <text x="76" y="164" text-anchor="middle" fill="var(--muted)" font-size="10">DuckDB rows</text>
+            <text x="76" y="186" text-anchor="middle" fill="var(--muted)" font-size="10">$20 / 1M calls</text>
+
+            <rect x="144" y="84" width="112" height="122" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="200" y="106" text-anchor="middle" fill="var(--machine)" font-weight="600" font-size="10">EDGE WORKERS</text>
+            <text x="200" y="128" text-anchor="middle" fill="var(--ink)" font-weight="600">Clef / Clairic</text>
+            <text x="200" y="148" text-anchor="middle" fill="var(--muted)" font-size="10">1 forward pass</text>
+            <text x="200" y="164" text-anchor="middle" fill="var(--muted)" font-size="10">0 output tokens</text>
+            <text x="200" y="186" text-anchor="middle" fill="var(--muted)" font-size="10">Tandem w/ LLM</text>
+
+            <rect x="268" y="84" width="112" height="122" rx="8" fill="var(--panel)" stroke="var(--rule)"/>
+            <text x="324" y="106" text-anchor="middle" fill="var(--accent)" font-weight="600" font-size="10">LIVE WEB</text>
+            <text x="324" y="128" text-anchor="middle" fill="var(--ink)" font-weight="600">Parallel API</text>
+            <text x="324" y="148" text-anchor="middle" fill="var(--muted)" font-size="10">100B-page index</text>
+            <text x="324" y="164" text-anchor="middle" fill="var(--muted)" font-size="10">Source citations</text>
+            <text x="324" y="186" text-anchor="middle" fill="var(--muted)" font-size="10">$1 / 1k calls</text>
+
+            <text x="200" y="232" text-anchor="middle" fill="var(--muted)" font-size="10">Divergence is purely where the call runs, never whether to use it</text>
+          </g>
+        </svg>
+        <figcaption>Theme synthesis across all 4 assigned talks</figcaption>
+      </figure>
+
+    </div>
+    <p class="talk-rail-caption" aria-live="polite"></p>
+    <div class="talk-rail-progress" aria-hidden="true"><span></span></div>
+  </aside>
+
+  <main class="talk-copy">
+
+    <section data-chapter="the-fourth-gate" data-visual="v1" data-caption="RLHF chatbots please humans; reliable decision models act as a fourth logic gate">
+      <div class="chapter">The primitive</div>
+      <h2>Why RLHF chatbots break inside software</h2>
+      <p>Conversational AI feels brilliant in chat because RLHF optimizes it to satisfy a human watching the screen. Drop that same model into unattended control flow, Diogo Almeida warns, and sporadic variance ruins automation: an unpredictable 5% failure rate forces a human reviewer back onto 100% of outputs.</p>
+      <blockquote>“I often call it you get Einstein ninety five percent of the time, but Mr Bean five.”<span class="who">Diogo Almeida · <a href="../../talks/2026-11-11-i-love-you-so-jevving-much/experience/page.html">I love you so jevving much</a> · 00:08:57</span></blockquote>
+      <p>Training specifically for narrow, dependable judgment turns model invocation from an unreliable assistant into a deterministic building block inside ordinary programs—like the blue LED transforming lighting rather than adding another filament:</p>
+      <blockquote>“This is kind of conceptually adding a fourth semantic logic gate.”<span class="who">Diogo Almeida · <a href="../../talks/2026-11-11-i-love-you-so-jevving-much/experience/page.html">I love you so jevving much</a> · 00:12:12</span></blockquote>
+      <p class="watch">Evidence: <a href="../../talks/2026-11-11-i-love-you-so-jevving-much/transcript.md">TypeSafe AI transcript</a> 00:08:57, 00:12:12</p>
+    </section>
+
+    <section data-chapter="too-much-intelligence" data-visual="v2" data-caption="Replace slow LLM loop steps with sub-second typed conditionals at $20 per 1M calls">
+      <div class="chapter">In code</div>
+      <h2>Every agent step is just a conditional</h2>
+      <p>Inspect most agent loops in production, Scott Roberts argues, and you find multi-second frontier LLMs burning tokens on simple branches that never needed open-ended generation:</p>
+      <blockquote>“So one is there's too much intelligence.”<span class="who">Scott Roberts · <a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/page.html">Autocomplete for Actions</a> · 00:00:37</span></blockquote>
+      <blockquote>“it's really just a conditional.”<span class="who">Scott Roberts · <a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/page.html">Autocomplete for Actions</a> · 00:01:42</span></blockquote>
+      <p>Exposing three zero-training primitives—probability booleans, up-to-255-way choices, and ordinal scoring—lets an application pick the right action card on every keystroke before a user ever hits Enter, while domain teams keep full control over the downstream schema:</p>
+      <blockquote>“And you know we can do this at about twenty bucks for a million judgments.”<span class="who">Scott Roberts · <a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/page.html">Autocomplete for Actions</a> · 00:06:42</span></blockquote>
+      <p class="watch">Evidence: <a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/transcript.md">Workday transcript</a> 00:00:37, 00:01:42, 00:06:42</p>
+    </section>
+
+    <section data-chapter="skip-the-vector-stack" data-visual="v3" data-caption="Run System One judgments directly as SQL functions inside DuckDB">
+      <div class="chapter">In the database</div>
+      <h2>Replace embeddings and vector DBs with SQL</h2>
+      <p>Typical retrieval stacks encode documents into embeddings, store them in a vector database, run approximate similarity search, and feed candidates to a reranker that asks a yes/no question anyway. At moderate dataset sizes, Roberts skips the entire stack and asks the decision model directly:</p>
+      <blockquote>“But with Jeff, we basically take out all the embedding steps.”<span class="who">Scott Roberts · <a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/page.html">Autocomplete for Actions</a> · 00:08:03</span></blockquote>
+      <p>Wired into DuckDB as a scalar SQL function, Jev screened 117 resumes in 2.3 seconds—catching semantic disqualifiers (like fraud-prevention work vs. actually committing fraud) that keyword and cosine retrieval miss:</p>
+      <blockquote>“So this is against a DuckDB, where we have a function.”<span class="who">Scott Roberts · <a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/page.html">Autocomplete for Actions</a> · 00:09:24</span></blockquote>
+      <p class="watch">Evidence: <a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/transcript.md">Workday transcript</a> 00:08:03, 00:09:24</p>
+    </section>
+
+    <section data-chapter="edge-tandem-models" data-visual="v4" data-caption="Cloudflare trained Clef in 48 hours to run alongside edge LLMs in one forward pass">
+      <div class="chapter">At the edge</div>
+      <h2>Clef and Clairic: single-pass models in tandem</h2>
+      <p>Cloudflare became a model neolab for the same reason: its edge Workers needed fast System One routing and extraction models that run in a single forward pass with calibrated confidence scores, taking routine triage off heavy LLMs:</p>
+      <blockquote>“We don't have to send every request to an LLM.”<span class="who">Michelle Chen · <a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">cloudflare is a neolab</a> · 00:07:50</span></blockquote>
+      <p>When the original closed-source System One model was unavailable, Cloudflare trained its own edge decision model (Clef) in a weekend and paired it with Clairic for open-ended extraction—proving the small-and-fast hypothesis only needed the right runtime:</p>
+      <blockquote>“And we ended up training the model over 48 hours over the weekend, and then we launched it the following week.”<span class="who">Michelle Chen · <a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">cloudflare is a neolab</a> · 00:09:53</span></blockquote>
+      <p class="watch">Evidence: <a href="../../talks/2026-11-11-cloudflare-is-a-neolab/transcript.md">Cloudflare transcript</a> 00:07:50, 00:09:53</p>
+    </section>
+
+    <section data-chapter="web-grounded-calibration" data-visual="v5" data-caption="Live web retrieval turns overconfident guesses into calibrated, cited answers under 1s">
+      <div class="chapter">Grounded world knowledge</div>
+      <h2>Web grounding fixes uncalibrated overconfidence</h2>
+      <p>Fast decision models still fail catastrophically when asked about current events outside their weights—returning stale guesses with misplaced certainty:</p>
+      <blockquote>“And so it's kind of crazy that you would use a decision model in your workflow that has like almost no understanding of like what. And so this is where we think that like not only is it wrong, but also its confidence is too high.”<span class="who">Devin Gupta · <a href="../../talks/2026-11-12-the-first-grounded-decision-model/experience/page.html">The first Grounded Decision Model</a> · 00:00:55</span></blockquote>
+      <p>Parallel grounds each decision call against a ~100B-page live web index, turning guesswork into calibrated probabilities and source citations under one second at <code>$1</code> per 1,000 requests—powering 100k-row market enrichment, KYC checks, and instant news routing:</p>
+      <blockquote>“What is correct is much more confident that's correct if you use actual grounding to ground your decision. So there's like a whole set of things here that unlocks, and specifically like. Calibration is the important thing about good decision models.”<span class="who">Devin Gupta · <a href="../../talks/2026-11-12-the-first-grounded-decision-model/experience/page.html">The first Grounded Decision Model</a> · 00:01:50</span></blockquote>
+      <blockquote>“It runs under a second in response time. It's one dollar per thousand requests. So. Two orders of magnitude, maybe an order of magnitude cheaper than the LLM workflow we were using to be back in April. And then it's also like an order of magnitude faster.”<span class="who">Devin Gupta · <a href="../../talks/2026-11-12-the-first-grounded-decision-model/experience/page.html">The first Grounded Decision Model</a> · 00:03:01</span></blockquote>
+      <blockquote>“Not only do we give you the answer, we also give you the citation, so you can go fact check the source yourself.”<span class="who">Devin Gupta · <a href="../../talks/2026-11-12-the-first-grounded-decision-model/experience/page.html">The first Grounded Decision Model</a> · 00:05:45</span></blockquote>
+      <p class="watch">Evidence: <a href="../../talks/2026-11-12-the-first-grounded-decision-model/transcript.md">Parallel transcript</a> 00:00:55, 00:01:50, 00:03:01, 00:05:45</p>
+    </section>
+
+    <section data-chapter="uncontested-tradeoff" data-visual="v6" data-caption="Every speaker agrees on typed sub-second calls; teams choose the surface">
+      <div class="chapter">Where it lands</div>
+      <h2>Uncontested primitive, three runtime surfaces</h2>
+      <p>System One decision models are the conference’s cleanest uncontested architectural category. Every speaker converges on sub-second latency, typed non-conversational outputs, and calibrated confidence; talks diverge solely on where the call runs—inline in UI and DuckDB SQL, inside edge Workers, or backed by a live web index.</p>
+      <ul class="key-points">
+        <li><strong>Reserve frontier LLMs for synthesis:</strong> move binary gates, multi-class routing, and row scoring onto single-pass decision calls (<code>00:01:42</code>, <code>00:07:50</code>).</li>
+        <li><strong>Delete redundant RAG plumbing at medium scale:</strong> direct SQL row judgment beats maintaining embeddings and vector indexes when sets fit in a batch query (<code>00:08:03</code>, <code>00:09:24</code>).</li>
+        <li><strong>Ground external facts live:</strong> never trust an ungrounded model’s confidence score on current world state; attach live search and citations (<code>00:01:50</code>, <code>00:05:45</code>).</li>
+      </ul>
+      <div class="reading"><b>For TheFocus.AI:</b> When auditing client workflows, inspect every LLM call inside an <code>if</code>, <code>switch</code>, or <code>filter</code> step. Replacing slow chat completions with typed System One calls inside SQL, edge routing, or web-grounded APIs cuts latency and cost by 10–100× while eliminating fragile prompt parsing.</div>
+      <p class="watch"><a href="../conference-themes/page.html">← Back to Conference Themes Overview</a></p>
+    </section>
+
+  </main>
+</div>
+
+<section class="theme-talks-dir" id="talks-in-theme">
+  <div class="dir-head">
+    <h2>Talks in this theme</h2>
+    <span class="lbl">4 talks · 13 claims · Uncontested</span>
+  </div>
+  <div class="theme-talks-grid">
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Scott Roberts</span><span>Workday</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/page.html">Autocomplete for Actions: System One from the UI to the DB</a></h3>
+        <p class="tt-thesis">A decision model fast and cheap enough to call everywhere replaces both LLM agent loops and retrieval stacks: it picks the right UI card on every keystroke and runs as a function inside a SQL query on every row.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-11-autocomplete-for-actions-system-one-from-the-ui-to-the-db.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Michelle Chen</span><span>Cloudflare</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">cloudflare is a neolab</a></h3>
+        <p class="tt-thesis">Cloudflare became a model lab because small, fast System One models (Clef for decisions, Clairic for extraction) were the missing piece that fit its edge network and agent-cloud primitives, taking routine work off large LLMs.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-11-cloudflare-is-a-neolab/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-11-cloudflare-is-a-neolab.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Diogo Almeida</span><span>TypeSafe AI</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-11-i-love-you-so-jevving-much/experience/page.html">I love you so jevving much</a></h3>
+        <p class="tt-thesis">Today's AI is too good to be true at assistance and too bad to be useful at automation because RLHF optimized it to please the human checking it; training for the right task, reliability, makes model calls a fourth logic gate inside ordinary software.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-11-i-love-you-so-jevving-much/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-11-i-love-you-so-jevving-much.html">Talk hub</a>
+      </div>
+    </article>
+
+    <article class="theme-talk-item">
+      <div>
+        <div class="tt-meta"><span>Devin Gupta</span><span>Parallel</span></div>
+        <h3 class="tt-title"><a href="../../talks/2026-11-12-the-first-grounded-decision-model/experience/page.html">The first Grounded Decision Model</a></h3>
+        <p class="tt-thesis">Grounding decision models with live web search from a large proprietary index solves uncalibrated overconfidence in ungrounded LLMs, delivering higher accuracy, verifiable citations, sub-second latency, and one-dollar-per-thousand-request pricing.</p>
+      </div>
+      <div class="tt-links">
+        <a href="../../talks/2026-11-12-the-first-grounded-decision-model/experience/page.html">Talk experience →</a>
+        <a href="../../site/talks/2026-11-12-the-first-grounded-decision-model.html">Talk hub</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer class="talk-foot">
+  Built from <a href="story.md">the theme story</a>, synthesizing 4 talks and 13 claims across the AI Engineer Code Summit corpus (verbatim Qwen3-ASR quotes, keeping ASR garbles intact and prompt-bias tokens excluded).
+</footer>
+
+<script src="../../stories/runtime/talk.js" defer></script>
+</body>
+</html>

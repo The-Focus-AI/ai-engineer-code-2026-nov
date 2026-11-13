@@ -1,0 +1,23 @@
+{
+  "title": "dex",
+  "recorded_at": "2026-11-12T17:02:24-08:00",
+  "duration_seconds": 1244.2,
+  "transcript": "transcript.qwen3-asr-1.7b.txt",
+  "transcript_word_count": 4303,
+  "transcript_locale": null,
+  "transcript_source": "qwen3-asr-1.7b",
+  "transcript_timing": "segment",
+  "source_file": "20261112 170224.m4a",
+  "audio_sha256": "81100f2a8469c39b83106443a9d10b034eb3f63d338ab3f2bab62361f3c5c625",
+  "exported_at": "2026-11-12T17:49:27-08:00",
+  "transcript_echo_segments": 0,
+  "transcript_alternates": [
+    {
+      "file": "transcript.txt",
+      "source": "voice-memos",
+      "timing": "word",
+      "word_count": 4302,
+      "locale": "en_US"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 captured_at: 2026-11-12T15:31:00-08:00
 kind: observation
 session_id: "1373480"
-talk: null
+talk: talks/2026-11-12-brownfield-factories/
 tags: [spacex, metaphor, simplification]
 ---
 

@@ -2,7 +2,7 @@
 captured_at: 2026-11-12T15:24:00-08:00
 kind: todo
 session_id: "1373480"
-talk: null
+talk: talks/2026-11-12-brownfield-factories/
 tags: [service-idea, brownfield, the-focus]
 bucket: review
 ---
